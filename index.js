@@ -42,11 +42,13 @@ bot.on('message', (payload, reply) => {
   }
 })
 
-bot.setGetStartedButton('GET_STARTED_PAYLOAD')
+bot.setGetStartedButton([{
+  "payload":"GET_STARTED_PAYLOAD"
+}])
 
 bot.on('postback', (payload, reply, actions) => {
-  if (payload === 'GET_STARTED_PAYLOAD') {
-    return startConversation(payload.sender, reply)
+  if (payload.postback.payload === 'GET_STARTED_PAYLOAD') {
+    return startConversation(payload.sender.id, reply)
   }
 })
 
@@ -85,11 +87,9 @@ function receivedMessage (payload, reply) {
     console.log('Received echo for message %s and app %d with metadata %s',
       messageId, appId, metadata)
     return
-  } else if (messageAttachments) {
-    console.log(JSON.stringify(messageAttachments))
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload
-    answerQuickReply(payload)
+    answerQuickReply(payload, reply)
     return
   }
 
@@ -97,7 +97,7 @@ function receivedMessage (payload, reply) {
     switch (parseMessage(messageText)) {
       case 'email_validated':
         reply({
-          text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos esforços, preciso que me diga qual seu estado, UF. Ou compartilhe sua localização.'
+          text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos esforços, preciso que me diga qual seu estado, usando apenas 2 letras:'
           // quick_replies: [
           //   {
           //     "content_type":"location",
@@ -129,12 +129,35 @@ function receivedMessage (payload, reply) {
         startConversation(senderID, reply)
     }
   } else if (messageAttachments) {
-    // sendTextMessage(senderID, 'Message with attachment received')
+    console.log(JSON.stringify(messageAttachments))
   }
 }
 
-function answerQuickReply (payload) {
-  console.log(payload)
+function answerQuickReply (payload, reply) {
+  const action = payload.message.quick_reply.payload
+  if (action === 'QUICK_REPLY_PRESSURE') {
+    reply({
+      text: `Os e-mails para os deputados foram enviados com sucesso.
+
+Nos vemos em outras resistências por aí!`
+      // quick_replies: [
+      //   {
+      //     content_type: 'text',
+      //     title: 'Quero pressionar mais!!',
+      //     payload: 'QUICK_REPLY_PRESSURE_AGAIN'
+      //   }
+      // ]
+    })
+  } else if (action === 'QUICK_REPLY_CANCEL_PRESSURE') {
+    reply({
+      text: `Caso mude de ideia, estarei por aqui no fronte da resistência.`
+    })
+  } else if (action === 'QUICK_REPLY_PRESSURE_AGAIN') {
+    reply({
+      text: `Que engajado você! :p Vou te dar algumas opções de acordo com seu estado: ...`
+    })
+
+  }
 }
 
 function parseMessage (text) {
@@ -171,7 +194,7 @@ function startConversation (senderId, reply) {
 }
 
 function isSenderRegistered (senderId) {
-  if (senderId === '123') { // 1236464383118507
+  if (senderId === '123') {
     return true
   }
   return false
