@@ -25,13 +25,13 @@
     "messenger-bot": "^2.4.0",
     "nodemon": "^1.11.0",
     "request": "^2.72.0",
-    "standard": "^9.0.2"
+    "standard": "^9.0.2",
+    "babel-cli": "^6.24.0",
+    "babel-register": "^6.24.0"
   },
   "engines": {
     "node": "~4.1.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-register": "^6.24.0"
   }
 }
