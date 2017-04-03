@@ -47,16 +47,6 @@ bot.setGetStartedButton('GET_STARTED_PAYLOAD')
 bot.on('postback', (payload, reply, actions) => {
   if (payload === 'GET_STARTED_PAYLOAD') {
     return startConversation(payload.sender, reply)
-  } else if (payload === 'EMAIL_VALIDATED_PAYLOAD') {
-    return reply({
-      text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos' +
-            'esforços, preciso que informe seu estado. Ex.: SP, PE, AM...'
-    })
-  } else if (payload === 'UF_VALIDATED_PAYLOAD') {
-    return reply({
-      text: 'O ESTADO tem X deputados federais. Vou mandar um e-mail' +
-        'em seu nome apra todos eles. Assim que terminar te aviso.'
-    })
   }
 })
 
@@ -95,26 +85,44 @@ function receivedMessage (payload, reply) {
     console.log('Received echo for message %s and app %d with metadata %s',
       messageId, appId, metadata)
     return
+  } else if (messageAttachments) {
+    console.log(JSON.stringify(messageAttachments))
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload
-    console.log('Quick reply for message %s with payload %s',
-      messageId, quickReplyPayload)
-
-    // sendTextMessage(senderID, 'Quick reply tapped')
+    answerQuickReply(payload)
     return
   }
 
   if (messageText) {
-    // If we receive a text message, check to see if it matches any special
-    // keywords and send back the corresponding example. Otherwise, just echo
-    // the text we received.
     switch (parseMessage(messageText)) {
       case 'email_validated':
-        reply({ text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos esforços, preciso que me diga qual seu estado, UF.' })
+        reply({
+          text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos esforços, preciso que me diga qual seu estado, UF. Ou compartilhe sua localização.'
+          // quick_replies: [
+          //   {
+          //     "content_type":"location",
+          //     "payload":"QUICK_REPLY_LOCATION_SHARED",
+          //   }
+          // ]
+        })
         break
 
       case 'uf_validated':
-        reply({ text: 'O ESTADO tem X deputados federais. Vou mandar um e-mail em seu nome apra todos eles.' })
+        reply({
+          text: `O ESTADO tem ${Math.floor(Math.random() * 100)} deputados federais. Posso mandar um e-mail em seu nome para todos eles?`,
+          quick_replies: [
+            {
+              content_type: 'text',
+              title: 'Quero pressionar!',
+              payload: 'QUICK_REPLY_PRESSURE'
+            },
+            {
+              "content_type":"text",
+              "title":"Agora não...",
+              "payload":"QUICK_REPLY_CANCEL_PRESSURE"
+            }
+          ]
+        })
         break
 
       default:
@@ -123,6 +131,10 @@ function receivedMessage (payload, reply) {
   } else if (messageAttachments) {
     // sendTextMessage(senderID, 'Message with attachment received')
   }
+}
+
+function answerQuickReply (payload) {
+  console.log(payload)
 }
 
 function parseMessage (text) {
