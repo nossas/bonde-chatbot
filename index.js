@@ -117,23 +117,23 @@ function receivedMessage (payload, reply) {
         })
         break
 
-      case 'uf_validated':
-        reply({
-          text: `O ESTADO tem ${Math.floor(Math.random() * 100)} deputados federais. Posso mandar um e-mail em seu nome para todos eles?`,
-          quick_replies: [
-            {
-              content_type: 'text',
-              title: 'Quero pressionar!',
-              payload: 'QUICK_REPLY_PRESSURE'
-            },
-            {
-              "content_type":"text",
-              "title":"Agora não...",
-              "payload":"QUICK_REPLY_CANCEL_PRESSURE"
-            }
-          ]
-        })
-        break
+      // case 'uf_validated':
+      //   reply({
+      //     text: `O ESTADO tem ${Math.floor(Math.random() * 100)} deputados federais. Posso mandar um e-mail em seu nome para todos eles?`,
+      //     quick_replies: [
+      //       {
+      //         content_type: 'text',
+      //         title: 'Quero pressionar!',
+      //         payload: 'QUICK_REPLY_PRESSURE'
+      //       },
+      //       {
+      //         "content_type":"text",
+      //         "title":"Agora não...",
+      //         "payload":"QUICK_REPLY_CANCEL_PRESSURE"
+      //       }
+      //     ]
+      //   })
+      //   break
 
       default:
         startConversation(senderID, reply, false)
@@ -229,9 +229,10 @@ function parseMessage (text) {
   if (validateEmail(text)) {
     return 'email_validated'
     // eslint-disable-next-line
-  } else if (/^[A-Za-z]{2}$/.test(text)) {
-    return 'uf_validated'
-  }
+  } 
+  // else if (/^[A-Za-z]{2}$/.test(text)) {
+  //   return 'uf_validated'
+  // }
   return 'unknown'
 }
 
