@@ -254,22 +254,24 @@ function startConversation (senderId, reply, isGetStarted) {
       // ${profile.first_name}
       reply({
         text: `What's up, sis? I’m so glad we've finally connected! 💁🙅🙆`
-      }, (err, info) => { if (err) throw err })
-      reply({
-        text: `I was just a binary - well, who am I kidding?, not that binary - code when I was programmed to be a feminist robot. From now on, I'll be your ally in the fight to reboot the current system into one that is more just, free and equal for all women. It's time to start! Shall we? `,
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Yes, please!',
-            payload: 'QUICK_REPLY_A'
-          },
-          {
-            content_type: 'text',
-            title: 'Eh, not feeling like it right now :/',
-            payload: 'QUICK_REPLY_B'
-          }
-        ]
-      }, (err, info) => { if (err) throw err })
+      }, (err, info) => {
+        if (err) throw err
+        reply({
+          text: `I was just a binary - well, who am I kidding?, not that binary - code when I was programmed to be a feminist robot. From now on, I'll be your ally in the fight to reboot the current system into one that is more just, free and equal for all women. It's time to start! Shall we? `,
+          quick_replies: [
+            {
+              content_type: 'text',
+              title: 'Yes, please!',
+              payload: 'QUICK_REPLY_A'
+            },
+            {
+              content_type: 'text',
+              title: 'Eh, not feeling like it right now :/',
+              payload: 'QUICK_REPLY_B'
+            }
+          ]
+        }, (err, info) => { if (err) throw err })
+      })
     } else {
       reply({
         text: `Oh, my algorithms! I didn’t really get what you're trying to say. It seems like my codes are not prepared to understand all of you human's complexity. But I'll get there, I promise!😉`,
