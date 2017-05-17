@@ -163,6 +163,24 @@ What we thought to be impossible may come true at any minute now! Do you wanna h
         }
       ]
     })
+  } else if (action === 'QUICK_REPLY_GET_STARTED') {
+    reply({
+      text: `Love it! Let’s start with the latest trending topic in feminist activism in Brazil.
+Not sure you heard about it, but since past March, there's a resolution to be judged by the Brazilian Supreme Court that may decriminalize abortion in the country. There is a real chance abortion will not be considered a crime in Brazil anymore. The first chance in, what?, decades!
+What we thought to be impossible may come true at any minute now! Do you wanna help make this happen?`,
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Yes! Count me in!',
+          payload: 'QUICK_REPLY_C'
+        },
+        {
+          content_type: 'text',
+          title: `Eh, I'll have to skip it for now.`,
+          payload: 'QUICK_REPLY_B'
+        }
+      ]
+    })
   } else if (action === 'QUICK_REPLY_B') {
     reply({
       text: `No problem, girl. I get it. Just drop me a line the next time you feel like chatting. I'm always here for you. 😉`
@@ -249,7 +267,14 @@ function startConversation (senderId, reply, isGetStarted) {
       }, (err, info) => { if (err) throw err })
     } else {
       reply({
-        text: `Oh, my algorithms! I didn’t really get what you're trying to say. It seems like my codes are not prepared to understand all of you human's complexity. But I'll get there, I promise!😉`
+        text: `Oh, my algorithms! I didn’t really get what you're trying to say. It seems like my codes are not prepared to understand all of you human's complexity. But I'll get there, I promise!😉`,
+        quick_replies: [
+          {
+            content_type: 'text',
+            title: 'Try again?',
+            payload: 'QUICK_REPLY_GET_STARTED'
+          }
+        ]
       }, (err, info) => { if (err) throw err })
     }
   })
