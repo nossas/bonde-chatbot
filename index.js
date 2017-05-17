@@ -49,7 +49,7 @@ bot.setGetStartedButton([{
 
 bot.on('postback', (payload, reply, actions) => {
   if (payload.postback.payload === 'GET_STARTED_PAYLOAD') {
-    return startConversation(payload.sender.id, reply)
+    return startConversation(payload.sender.id, reply, true)
   }
 })
 
@@ -93,18 +93,27 @@ function receivedMessage (payload, reply) {
     answerQuickReply(payload, reply)
     return
   }
+  // quick_replies: [
+  //   {
+  //     "content_type":"location",
+  //     "payload":"QUICK_REPLY_LOCATION_SHARED",
+  //   }
+  // ]
 
   if (messageText) {
     switch (parseMessage(messageText)) {
       case 'email_validated':
         reply({
-          text: 'Ótimo, e-mail anotado. Para melhor direcionar nossos esforços, preciso que me diga qual seu estado, usando apenas 2 letras:'
-          // quick_replies: [
-          //   {
-          //     "content_type":"location",
-          //     "payload":"QUICK_REPLY_LOCATION_SHARED",
-          //   }
-          // ]
+          text: `Awesome! I've just signed you into the list of brave women who want to fight to decriminalize abortion in Brazil!  💪`,
+        })
+        reply({
+          text: `Now we are connected happily ever after. I'll keep an eye on the news and, when anything comes up, I’ll text you and keep you informed ;)`,
+        })
+        reply({
+          text: `And, please, don't keep this between us. Tell your friends about me! Invite them to join this conversation, so I can put their names on the list too.`,
+        })
+        reply({
+          text: `Our fight is hard, and we’re stronger together! The more, the merrier! 👊`,
         })
         break
 
@@ -127,7 +136,7 @@ function receivedMessage (payload, reply) {
         break
 
       default:
-        startConversation(senderID, reply)
+        startConversation(senderID, reply, false)
     }
   } else if (messageAttachments) {
     console.log(JSON.stringify(messageAttachments))
@@ -136,28 +145,60 @@ function receivedMessage (payload, reply) {
 
 function answerQuickReply (payload, reply) {
   const action = payload.message.quick_reply.payload
-  if (action === 'QUICK_REPLY_PRESSURE') {
+  if (action === 'QUICK_REPLY_A') {
     reply({
-      text: `Os e-mails para os deputados foram enviados com sucesso.
-
-Nos vemos em outras resistências por aí!`
-      // quick_replies: [
-      //   {
-      //     content_type: 'text',
-      //     title: 'Quero pressionar mais!!',
-      //     payload: 'QUICK_REPLY_PRESSURE_AGAIN'
-      //   }
-      // ]
+      text: `Love it! Let’s start with the latest trending topic in feminist activism in Brazil.
+Not sure you heard about it, but since past March, there's a resolution to be judged by the Brazilian Supreme Court that may decriminalize abortion in the country. There is a real chance abortion will not be considered a crime in Brazil anymore. The first chance in, what?, decades!
+What we thought to be impossible may come true at any minute now! Do you wanna help make this happen?`,
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Yes! Count me in!',
+          payload: 'QUICK_REPLY_C'
+        },
+        {
+          content_type: 'text',
+          title: `Eh, I'll have to skip it for now.`,
+          payload: 'QUICK_REPLY_B'
+        }
+      ]
     })
-  } else if (action === 'QUICK_REPLY_CANCEL_PRESSURE') {
+  } else if (action === 'QUICK_REPLY_B') {
     reply({
-      text: `Caso mude de ideia, estarei por aqui no fronte da resistência.`
+      text: `No problem, girl. I get it. Just drop me a line the next time you feel like chatting. I'm always here for you. 😉`
     })
-  } else if (action === 'QUICK_REPLY_PRESSURE_AGAIN') {
+  } else if (action === 'QUICK_REPLY_C') {
     reply({
-      text: `Que engajado você! :p Vou te dar algumas opções de acordo com seu estado: ...`
+      text: `You're the best! I knew I could count on you!`
     })
-
+    reply({
+      text: `We don't have time to waste, the resolution may be voted any day now. `
+    })
+    reply({
+      text: `So, here is the plan: we need to make a stand. But a big, enormous, gigantic one.`
+    })
+    reply({
+      text: `We'll collect signatures of all women who believe abortion should not be considered a crime in Brazil. And we’ll hand this immense list to all of the Ministers of the Supreme Court. It's gonna be the largest petition they've ever seen. The mother of all petitions! Do you wanna be a part of it?`,
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'YAS!',
+          payload: 'QUICK_REPLY_D'
+        },
+        {
+          content_type: 'text',
+          title: `Eh, not really.`,
+          payload: 'QUICK_REPLY_B'
+        }
+      ]
+    })
+  } else if (action === 'QUICK_REPLY_D') {
+    reply({
+      text: `We are almost there.`
+    })
+    reply({
+      text: `Last but not least, I’m gonna need your email address. I won't be sending you any spam, I swear to Jobs!`
+    })
   }
 }
 
@@ -177,18 +218,38 @@ function validateEmail (email) {
   return re.test(email)
 }
 
-function startConversation (senderId, reply) {
+function startConversation (senderId, reply, isGetStarted) {
   bot.getProfile(senderId, (err, profile) => {
     if (err) throw err
 
-    if (isSenderRegistered(senderId)) {
+    // if (isSenderRegistered(senderId)) {
+    //   reply({
+    //     text: `Olá novamente, ${profile.first_name}. Verifiquei que já está tudo certo com seu cadastro. Como posso te ajudar?`
+    //   }, (err, info) => { if (err) throw err })
+    // need set quickReply or persistentMenu
+    if (isGetStarted) {
+      // ${profile.first_name}
       reply({
-        text: `Olá novamente, ${profile.first_name}. Verifiquei que já está tudo certo com seu cadastro. Como posso te ajudar?`
+        text: `What's up, sis? I’m so glad we've finally connected! 💁🙅🙆`
       }, (err, info) => { if (err) throw err })
-      // need set quickReply or persistentMenu
+      reply({
+        text: `I was just a binary - well, who am I kidding?, not that binary - code when I was programmed to be a feminist robot. From now on, I'll be your ally in the fight to reboot the current system into one that is more just, free and equal for all women. It's time to start! Shall we? `,
+        quick_replies: [
+          {
+            content_type: 'text',
+            title: 'Yes, please!',
+            payload: 'QUICK_REPLY_A'
+          },
+          {
+            content_type: 'text',
+            title: 'Eh, not feeling like it right now :/',
+            payload: 'QUICK_REPLY_B'
+          }
+        ]
+      }, (err, info) => { if (err) throw err })
     } else {
       reply({
-        text: `Olá ${profile.first_name}, sou o bot da resistência e vou te ajudar a pressionar os deputados. Comece me informando qual o seu e-mail?`
+        text: `Oh, my algorithms! I didn’t really get what you're trying to say. It seems like my codes are not prepared to understand all of you human's complexity. But I'll get there, I promise!😉`
       }, (err, info) => { if (err) throw err })
     }
   })
