@@ -188,27 +188,32 @@ What we thought to be impossible may come true at any minute now! Do you wanna h
   } else if (action === 'QUICK_REPLY_C') {
     reply({
       text: `You're the best! I knew I could count on you!`
-    })
-    reply({
-      text: `We don't have time to waste, the resolution may be voted any day now. `
-    })
-    reply({
-      text: `So, here is the plan: we need to make a stand. But a big, enormous, gigantic one.`
-    })
-    reply({
-      text: `We'll collect signatures of all women who believe abortion should not be considered a crime in Brazil. And we’ll hand this immense list to all of the Ministers of the Supreme Court. It's gonna be the largest petition they've ever seen. The mother of all petitions! Do you wanna be a part of it?`,
-      quick_replies: [
-        {
-          content_type: 'text',
-          title: 'YAS!',
-          payload: 'QUICK_REPLY_D'
-        },
-        {
-          content_type: 'text',
-          title: `Eh, not really.`,
-          payload: 'QUICK_REPLY_B'
-        }
-      ]
+    }, (err, info) => { if (err) throw err 
+      reply({
+        text: `We don't have time to waste, the resolution may be voted any day now. `
+      }, (err, info) => {
+        if (err) throw err
+        reply({
+          text: `So, here is the plan: we need to make a stand. But a big, enormous, gigantic one.`
+        }, (err, info) => {
+          if (err) throw err 
+          reply({
+            text: `We'll collect signatures of all women who believe abortion should not be considered a crime in Brazil. And we’ll hand this immense list to all of the Ministers of the Supreme Court. It's gonna be the largest petition they've ever seen. The mother of all petitions! Do you wanna be a part of it?`,
+            quick_replies: [
+              {
+                content_type: 'text',
+                title: 'YAS!',
+                payload: 'QUICK_REPLY_D'
+              },
+              {
+                content_type: 'text',
+                title: `Eh, not really.`,
+                payload: 'QUICK_REPLY_B'
+              }
+            ]
+          })
+        })
+      })
     })
   } else if (action === 'QUICK_REPLY_D') {
     reply({
