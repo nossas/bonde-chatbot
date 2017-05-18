@@ -105,46 +105,52 @@ function receivedMessage (payload, reply) {
       case 'email_validated':
         reply({
           text: `Awesome! I've just signed you into the list of brave women who want to fight to decriminalize abortion in Brazil!  💪`,
-        })
-        reply({
-          text: `Now we are connected happily ever after. I'll keep an eye on the news and, when anything comes up, I’ll text you and keep you informed ;)`,
-        })
-        reply({
-          text: `And, please, don't keep this between us. Tell your friends about me! Invite them to join this conversation, so I can put their names on the list too.`,
-        })
-        reply({
-          text: `Our fight is hard, and we’re stronger together! The more, the merrier! 👊`,
-          "buttons": [
-            {
-              "type": "element_share",
-              "share_contents": {
-                "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [
-                      {
-                        "title": "Beta is your new feminist ally",
-                        "subtitle": "Chat with her to take action now!",
-                        "image_url": "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=0d22e5dc04dbf35ea863ef3f8412eddf&oe=59A52285",
-                        "default_action": {
-                          "type": "web_url",
-                          "url": "https://m.me/beta.feminista?ref=invited_by"
-                        },
-                        "buttons": [
-                          {
-                            "type": "web_url",
-                            "url": "https://m.me/beta.feminista?ref=invited_by",
-                            "title": "Get started!"
-                          }
-                        ]
+        }, (err, info) => {
+          if (err) throw err
+          reply({
+            text: `Now we are connected happily ever after. I'll keep an eye on the news and, when anything comes up, I’ll text you and keep you informed ;)`,
+          }, (err, info) => { 
+            if (err) throw err 
+            reply({
+              text: `And, please, don't keep this between us. Tell your friends about me! Invite them to join this conversation, so I can put their names on the list too.`,
+            }, (err, info) => {
+              if (err) throw err 
+              reply({
+                text: `Our fight is hard, and we’re stronger together! The more, the merrier! 👊`,
+                "buttons": [
+                  {
+                    "type": "element_share",
+                    "share_contents": {
+                      "attachment": {
+                        "type": "template",
+                        "payload": {
+                          "template_type": "generic",
+                          "elements": [
+                            {
+                              "title": "Beta is your new feminist ally",
+                              "subtitle": "Chat with her to take action now!",
+                              "image_url": "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=0d22e5dc04dbf35ea863ef3f8412eddf&oe=59A52285",
+                              "default_action": {
+                                "type": "web_url",
+                                "url": "https://m.me/beta.feminista?ref=invited_by"
+                              },
+                              "buttons": [
+                                {
+                                  "type": "web_url",
+                                  "url": "https://m.me/beta.feminista?ref=invited_by",
+                                  "title": "Get started!"
+                                }
+                              ]
+                            }
+                          ]
+                        }
                       }
-                    ]
+                    }
                   }
-                }
-              }
-            }
-          ]
+                ]
+              })
+            })
+          })
         })
         break
 
