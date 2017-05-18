@@ -116,30 +116,48 @@ function receivedMessage (payload, reply) {
             }, (err, info) => {
               if (err) throw err 
               reply({
-                "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [
+                "attachment":{
+                  "type":"template",
+                  "payload":{
+                    "template_type":"generic",
+                    "elements":[
                       {
                         "title": "Beta is your new feminist ally",
                         "subtitle": "Chat with her to take action now!",
                         "image_url": "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=0d22e5dc04dbf35ea863ef3f8412eddf&oe=59A52285",
-                        "default_action": {
-                          "type": "web_url",
-                          "url": "https://m.me/beta.feminista?ref=invited_by"
-                        },
-                        "buttons": [
+                        "buttons":[
                           {
-                            "type": "web_url",
-                            "url": "https://m.me/beta.feminista?ref=invited_by",
-                            "title": "Get started!"
-                          }
+                            "type":"element_share"
+                          }              
                         ]
                       }
                     ]
                   }
                 }
+                // "attachment": {
+                //   "type": "template",
+                //   "payload": {
+                //     "template_type": "generic",
+                //     "elements": [
+                //       {
+                //         "title": "Beta is your new feminist ally",
+                //         "subtitle": "Chat with her to take action now!",
+                //         "image_url": "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=0d22e5dc04dbf35ea863ef3f8412eddf&oe=59A52285",
+                //         "default_action": {
+                //           "type": "web_url",
+                //           "url": "https://www.facebook.com/sharer.php?u=https://m.me/beta.feminista?ref=invited_by"
+                //         },
+                //         "buttons": [
+                //           {
+                //             "type": "web_url",
+                //             "url": "https://www.facebook.com/sharer.php?u=https://m.me/beta.feminista?ref=invited_by",
+                //             "title": "Get started!"
+                //           }
+                //         ]
+                //       }
+                //     ]
+                //   }
+                // }
               }, (err, info) => {
                 if (err) console.dir(err, info) 
               })
