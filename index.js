@@ -128,7 +128,10 @@ function receivedMessage (payload, reply) {
                         "buttons":[
                           {
                             "type":"element_share",
-                            "url": "https://m.me/beta.feminista?ref=invited_by"
+                            share_contents: {
+                              "url": "https://m.me/beta.feminista?ref=invited_by",
+                              "title": "Get started!"
+                            }
                           }              
                         ]
                       }
