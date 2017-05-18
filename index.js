@@ -133,7 +133,7 @@ function receivedMessage (payload, reply) {
                           {
                             "type": "web_url",
                             "url": "https://www.facebook.com/sharer.php?u=https://m.me/beta.feminista?ref=invited_by",
-                            "title": "Get started!"
+                            "title": "Share now!"
                           }
                         ]
                       }
