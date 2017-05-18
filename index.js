@@ -116,7 +116,6 @@ function receivedMessage (payload, reply) {
             }, (err, info) => {
               if (err) throw err 
               reply({
-                text: `Our fight is hard, and we’re stronger together! The more, the merrier! 👊`,
                 "attachment": {
                   "type": "template",
                   "payload": {
@@ -142,7 +141,7 @@ function receivedMessage (payload, reply) {
                   }
                 }
               }, (err, info) => {
-                if (err) throw err 
+                if (err) console.dir(err, info) 
               })
             })
           })
