@@ -127,7 +127,8 @@ function receivedMessage (payload, reply) {
                         "image_url": "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=0d22e5dc04dbf35ea863ef3f8412eddf&oe=59A52285",
                         "buttons":[
                           {
-                            "type":"element_share"
+                            "type":"element_share",
+                            "url": "https://m.me/beta.feminista?ref=invited_by"
                           }              
                         ]
                       }
