@@ -106,15 +106,15 @@ function receivedMessage (payload, reply) {
         reply({
           text: `Awesome! I've just signed you into the list of brave women who want to fight to decriminalize abortion in Brazil!  💪`,
         }, (err, info) => {
-          if (err) throw err
+          if (err) console.log(err)
           reply({
             text: `Now we are connected happily ever after. I'll keep an eye on the news and, when anything comes up, I’ll text you and keep you informed ;)`,
           }, (err, info) => { 
-            if (err) throw err 
+            if (err) console.log(err) 
             reply({
               text: `And, please, don't keep this between us. Tell your friends about me! Invite them to join this conversation, so I can put their names on the list too.`,
             }, (err, info) => {
-              if (err) throw err 
+              if (err) console.log(err) 
               reply({
                 "attachment": {
                   "type": "template",
@@ -219,15 +219,15 @@ What we thought to be impossible may come true at any minute now! Do you wanna h
   } else if (action === 'QUICK_REPLY_C') {
     reply({
       text: `You're the best! I knew I could count on you!`
-    }, (err, info) => { if (err) throw err 
+    }, (err, info) => { if (err) console.log(err) 
       reply({
         text: `We don't have time to waste, the resolution may be voted any day now. `
       }, (err, info) => {
-        if (err) throw err
+        if (err) console.log(err)
         reply({
           text: `So, here is the plan: we need to make a stand. But a big, enormous, gigantic one.`
         }, (err, info) => {
-          if (err) throw err 
+          if (err) console.log(err) 
           reply({
             text: `We'll collect signatures of all women who believe abortion should not be considered a crime in Brazil. And we’ll hand this immense list to all of the Ministers of the Supreme Court. It's gonna be the largest petition they've ever seen. The mother of all petitions! Do you wanna be a part of it?`,
             quick_replies: [
@@ -275,19 +275,19 @@ function validateEmail (email) {
 
 function startConversation (senderId, reply, isGetStarted) {
   bot.getProfile(senderId, (err, profile) => {
-    if (err) throw err
+    if (err) console.log(err)
 
     // if (isSenderRegistered(senderId)) {
     //   reply({
     //     text: `Olá novamente, ${profile.first_name}. Verifiquei que já está tudo certo com seu cadastro. Como posso te ajudar?`
-    //   }, (err, info) => { if (err) throw err })
+    //   }, (err, info) => { if (err) console.log(err) })
     // need set quickReply or persistentMenu
     if (isGetStarted) {
       // ${profile.first_name}
       reply({
         text: `What's up, sis? I’m so glad we've finally connected! 💁🙅🙆`
       }, (err, info) => {
-        if (err) throw err
+        if (err) console.log(err)
         reply({
           text: `I was just a binary - well, who am I kidding?, not that binary - code when I was programmed to be a feminist robot. From now on, I'll be your ally in the fight to reboot the current system into one that is more just, free and equal for all women. It's time to start! Shall we? `,
           quick_replies: [
@@ -302,7 +302,7 @@ function startConversation (senderId, reply, isGetStarted) {
               payload: 'QUICK_REPLY_B'
             }
           ]
-        }, (err, info) => { if (err) throw err })
+        }, (err, info) => { if (err) console.log(err) })
       })
     } else {
       reply({
@@ -314,7 +314,7 @@ function startConversation (senderId, reply, isGetStarted) {
             payload: 'QUICK_REPLY_GET_STARTED'
           }
         ]
-      }, (err, info) => { if (err) throw err })
+      }, (err, info) => { if (err) console.log(err) })
     }
   })
 }
