@@ -1,8 +1,8 @@
 {
-  "name": "messenger-get-started",
+  "name": "bonde-bot",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
-  "main": "app.js",
+  "description": "Enable activist to pressure through facebook",
+  "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r \"babel-register\" ./index.js",
     "prestart": "NODE_ENV=production babel ./index.js --out-file ./index.builded.js",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+    "url": "https://github.com/nossas/bonde-bot.git"
   },
-  "author": "Facebook",
-  "license": "ISC",
+  "author": "Lucas Pirola<pirola@nossas.org>",
+  "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.15.0",
     "config": "^1.20.4",
