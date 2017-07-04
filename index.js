@@ -1,11 +1,12 @@
 'use strict'
 const Http = require('http')
 const Bot = require('messenger-bot')
-const Script = require('./messages')
 require('dotenv').config()
 
-// Start BETA
+// Load script
+const Script = require(process.env.SCRIPT_PATH || './scripts/v0.js')
 
+// Start BETA
 const config = {
   verify: process.env.MESSENGER_VALIDATION_TOKEN,
   token: process.env.MESSENGER_PAGE_ACCESS_TOKEN,
