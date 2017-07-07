@@ -17,21 +17,23 @@
   "author": "Lucas Pirola<pirola@nossas.org>",
   "license": "GPL-3.0",
   "dependencies": {
+    "apollo-client": "^1.7.0",
+    "babel-cli": "^6.24.0",
+    "babel-register": "^6.24.0",
     "body-parser": "^1.15.0",
     "config": "^1.20.4",
     "dotenv": "^4.0.0",
     "ejs": "^2.4.2",
     "express": "^4.13.4",
+    "graphql-tag": "^2.4.2",
+    "isomorphic-fetch": "^2.2.1",
     "messenger-bot": "^2.4.0",
     "nodemon": "^1.11.0",
     "request": "^2.72.0",
-    "standard": "^9.0.2",
-    "babel-cli": "^6.24.0",
-    "babel-register": "^6.24.0"
+    "standard": "^9.0.2"
   },
   "engines": {
     "node": "~4.1.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

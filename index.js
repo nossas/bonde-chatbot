@@ -1,7 +1,17 @@
 'use strict'
+require('dotenv').config()
+
+// window.fetch pollyfill
+const fetch = require('isomorphic-fetch')
+
 const Http = require('http')
 const Bot = require('messenger-bot')
-require('dotenv').config()
+
+//
+// Apollo GraphQL client setup
+//
+const gql = require('graphql-tag').default
+const graphqlClient = require('./graphql').client
 
 // Load script
 const Script = require(process.env.SCRIPT_PATH || './scripts/v0.js')
@@ -26,17 +36,15 @@ beta.on('error', (err) => {
 })
 
 const receive = (payload, reply, action) => {
-  
   beta.getProfile(payload.sender.id, (err, profile) => {
-   
     if (err) console.log(err)
 
     const message = Script.messages[action]
-    
+
     if (typeof message === "function") reply(message(profile))
     else if (message) reply(message)
     else reply(Script.messages[Script.actions.REPLY_UNDEFINED])
-  }) 
+  })
 }
 
 // Handle postback
@@ -62,13 +70,13 @@ beta.on('message', (payload, reply) => {
     )
     return
   }
-  
+
   // Define received action
   let action = payload.message.payload
   if (payload.message.quick_reply) {
     action = payload.message.quick_reply.payload
   }
-  
+
   receive(payload, reply, action)
 })
 
