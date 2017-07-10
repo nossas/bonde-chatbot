@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 
 export default gql`
   query fetchBotConfigurations {
-    configs: allFacebookBotConfigurations {
+    configs: allFacebookBotConfigurations(orderBy: ID_ASC) {
       bots: nodes {
         id
         messengerAppSecret
