@@ -3,21 +3,34 @@
 require('dotenv').config()
 
 // window.fetch pollyfill
-const fetch = require('isomorphic-fetch')
+import fetch from 'isomorphic-fetch'
 
-const Http = require('http')
-const Bot = require('messenger-bot')
+import Http from 'http'
+import Express from 'express'
+import BodyParser from 'body-parser'
+import Bot from 'messenger-bot'
+
+//
+// Setup Express server
+//
+let App = Express()
+
+App.use(BodyParser.json())
+App.use(BodyParser.urlencoded({ extended: true }))
 
 //
 // Apollo GraphQL client setup
 //
-const gql = require('graphql-tag').default
-const graphqlClient = require('./graphql').client
+import { client as graphqlClient } from './graphql'
 
+//
 // Load script
+//
 const Script = require(process.env.SCRIPT_PATH || './scripts/v0.js')
 
+//
 // Start BETA
+//
 const config = {
   verify: process.env.MESSENGER_VALIDATION_TOKEN,
   token: process.env.MESSENGER_PAGE_ACCESS_TOKEN,
@@ -31,7 +44,9 @@ if (!(config.verify && config.token && config.app_secret)) {
 
 const beta = new Bot(config)
 
+//
 // Handle error
+//
 beta.on('error', (err) => {
   console.log('Beta handle error', err.message)
 })
@@ -48,7 +63,9 @@ const receive = (payload, reply, action) => {
   })
 }
 
+//
 // Handle postback
+//
 beta.setGetStartedButton([{
   payload: Script.actions.GET_STARTED
 }])
@@ -57,7 +74,9 @@ beta.on('postback', (payload, reply) => {
   return receive(payload, reply, payload.postback.payload)
 })
 
+//
 // Handle message
+//
 beta.on('message', (payload, reply) => {
   if (!payload.message) {
     console.log('Webhook received unknown payload: ', payload)
@@ -72,7 +91,9 @@ beta.on('message', (payload, reply) => {
     return
   }
 
+  //
   // Define received action
+  //
   let action = payload.message.payload
   if (payload.message.quick_reply) {
     action = payload.message.quick_reply.payload
@@ -81,11 +102,25 @@ beta.on('message', (payload, reply) => {
   receive(payload, reply, action)
 })
 
+//
+// Setup Express endpoints
+//
+App.get('/', (req, res) => {
+  return beta._verify(req, res)
+})
+
+App.post('/', (req, res) => {
+  beta._handleMessage(req.body)
+  res.end(JSON.stringify({ status: 'ok' }))
+})
+
+//
 // Start server
+//
 const port = process.env.PORT || 5000
 
 Http
-  .createServer(beta.middleware())
+  .createServer(App)
   .listen(port)
 
 console.log(`Echo bot server running at port ${port}`)
