@@ -3,7 +3,8 @@
 require('dotenv').config()
 
 // window.fetch pollyfill
-import fetch from 'isomorphic-fetch'
+import 'isomorphic-fetch'
+import 'colors'
 
 import Http from 'http'
 import Express from 'express'
@@ -41,7 +42,7 @@ const authenticate = graphqlClient.mutate({
   }
 })
   .then(({ data: { authenticate: { jwtToken } } }) => jwtToken)
-  .catch(error => console.error(error))
+  .catch(error => console.log(`${error}`.red))
 
 const botConfigs = authenticate.then(jwtToken => {
   global.jwtToken = jwtToken
@@ -53,7 +54,7 @@ const botConfigs = authenticate.then(jwtToken => {
     query: graphqlQueries.fetchBotConfigurations
   })
     .then(data => data)
-    .catch(error => console.error(error))
+    .catch(error => console.log(`${error}`.red))
 })
 
 //
@@ -79,7 +80,7 @@ botConfigs.then(({ data: { configs: { bots } } }) => {
     }
 
     if (!(config.verify && config.token && config.app_secret)) {
-      console.error('Missing config values')
+      console.log('Missing config values'.red)
       process.exit(1)
     }
 
@@ -94,7 +95,7 @@ botConfigs.then(({ data: { configs: { bots } } }) => {
 
     const receive = (payload, reply, action) => {
       beta.getProfile(payload.sender.id, (err, profile) => {
-        if (err) console.log(err)
+        if (err) console.log(`${err}`.red)
 
         const message = Script.messages[action]
 
@@ -120,7 +121,7 @@ botConfigs.then(({ data: { configs: { bots } } }) => {
     //
     beta.on('message', (payload, reply) => {
       if (!payload.message) {
-        console.log('Webhook received unknown payload: ', payload)
+        console.log(`Webhook received unknown payload: ${payload}`.red)
         return
       } else if (payload.message.is_echo) {
         console.log(
@@ -156,8 +157,7 @@ botConfigs.then(({ data: { configs: { bots } } }) => {
       res.end(JSON.stringify({ status: 'ok' }))
     })
 
-    console.log(`\x1b[34mBot[${id}] exposed in endpoint: /${botEndpoint}\x1b[0m`)
-
+    console.log(`Bot[${id}] exposed in endpoint: /${botEndpoint}`.blue)
   })
   //
   // Start server
