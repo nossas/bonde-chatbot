@@ -1,4 +1,4 @@
-module.exports = (title, payload) => ({
+export default (title, payload) => ({
   content_type: 'text',
   title,
   payload

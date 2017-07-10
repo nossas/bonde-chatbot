@@ -1,30 +1,22 @@
-const replyText = require('./utils/reply-text')
+import { replyText } from './utils'
 
+//
 // Constants
-// 1
+//
 const GET_STARTED = 'GET_STARTED'
 const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
-// 2
 const GET_STARTED_NOW = 'GET_STARTED_NOW'
 const GET_STARTED_LATER = 'GET_STARTED_LATER'
-// 3
 const WANT_TO_ACT = 'WANT_TO_ACT'
 const EXPLAIN_ABOUT = 'EXPLAIN_ABOUT'
-// 4
 const SEND_MAIL = 'SEND_MAIL'
 const SEND_MAIL_ERROR = 'SEND_MAIL_ERROR'
-// 5
 const SEND = 'SEND'
-// 6
 const SURE = 'SURE'
-// 7
 const SHARED_NOW = 'SHARED_NOW'
 const WHO_MAKE_YOU = 'WHO_MAKE_YOU'
 
-
-
-// Public API
-module.exports = {
+export default {
   actions: {
     [GET_STARTED]: GET_STARTED,
     [REPLY_UNDEFINED]: REPLY_UNDEFINED
@@ -54,14 +46,14 @@ module.exports = {
       ]
     },
     [WANT_TO_ACT]: {
-        text: 'Você arrasa! A ideia é a seguinte: vamos lotar a caixa de email de cada um desses senadores pedindo que não aprovem essa PEC. Com a nossa pressão direta, eles não deixarão uma medida tão absurda passar! Você não tem os emails deles? Não se preocupa, eu tenho! Vou fazer sua mensagem chegar até eles em menos de um minuto. Pra isso, eu preciso primeiro do seu e-mail. Diz aí qual é!',
-        quick_replies: [
-          replyText('Enviar e-mail correto!', SEND_MAIL),
-          replyText('Enviar e-mail incorreto!', SEND_MAIL_ERROR)
-        ]
+      text: 'Você arrasa! A ideia é a seguinte: vamos lotar a caixa de email de cada um desses senadores pedindo que não aprovem essa PEC. Com a nossa pressão direta, eles não deixarão uma medida tão absurda passar! Você não tem os emails deles? Não se preocupa, eu tenho! Vou fazer sua mensagem chegar até eles em menos de um minuto. Pra isso, eu preciso primeiro do seu e-mail. Diz aí qual é!',
+      quick_replies: [
+        replyText('Enviar e-mail correto!', SEND_MAIL),
+        replyText('Enviar e-mail incorreto!', SEND_MAIL_ERROR)
+      ]
     },
     [EXPLAIN_ABOUT]: {
-      text: 'Senta que lá vem textão!. A PEC é uma proposta que pode  modificar algum artigo da nossa Constituição. No caso da PEC 29, ela propõe alterar o artigo 5º para que ele garanta a "proteção da vida desde a concepção". Voltando às aulas de biologia: se o espermatozóide encontrou o óvulo, já era! Caso essa PEC seja aprovada, qualquer tentativa de mexer com esse óvulo fecundado será considerada crime. Isso quer dizer que podemos dar adeus à possibilidade de aborto nos casos hoje previstos por lei:  aborto quando a gravidez é fruto de estupro, em casos de anencefalia fetal ou de risco de vida para gestante. Um retrocesso enorme e inaceitável! '+
+      text: 'Senta que lá vem textão!. A PEC é uma proposta que pode  modificar algum artigo da nossa Constituição. No caso da PEC 29, ela propõe alterar o artigo 5º para que ele garanta a "proteção da vida desde a concepção". Voltando às aulas de biologia: se o espermatozóide encontrou o óvulo, já era! Caso essa PEC seja aprovada, qualquer tentativa de mexer com esse óvulo fecundado será considerada crime. Isso quer dizer que podemos dar adeus à possibilidade de aborto nos casos hoje previstos por lei:  aborto quando a gravidez é fruto de estupro, em casos de anencefalia fetal ou de risco de vida para gestante. Um retrocesso enorme e inaceitável! ' +
       'Existe uma comissão no senado que avalia se as PECs são constitucionais ou não. Precisamos garantir que os membros dessa comissão rejeitem a PEC29. Se aprovada por eles, ela segue para votação no Senado, onde vamos precisar convencer quase todos os senadores a rejeitarem a proposta. Se não agirmos agora, pode ser tarde demais.',
       quick_replies: [
         replyText('Quero fazer alguma coisa!', WANT_TO_ACT)
