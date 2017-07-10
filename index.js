@@ -41,7 +41,7 @@ const receive = (payload, reply, action) => {
 
     const message = Script.messages[action]
 
-    if (typeof message === "function") reply(message(profile))
+    if (typeof message === 'function') reply(message(profile))
     else if (message) reply(message)
     else reply(Script.messages[Script.actions.REPLY_UNDEFINED])
   })
