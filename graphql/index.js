@@ -1,8 +1,22 @@
-const ApolloClient = require('apollo-client').default
-const createNetworkInterface = require('apollo-client').createNetworkInterface
+import ApolloClient, { createNetworkInterface } from 'apollo-client'
+
+const networkInterface = createNetworkInterface({
+  uri: process.env.GRAPHQL_URL || 'http://localhost:3003/graphql'
+})
+
+networkInterface.use([{
+  applyMiddleware(req, next) {
+    console.log('global.jwtToken', global.jwtToken)
+    if (!req.options.headers) {
+      req.options.headers = {}
+    }
+    if (global.jwtToken) {
+      req.options.headers['authorization'] = `Bearer ${global.jwtToken}`
+    }
+    next()
+  }
+}])
 
 exports.client = new ApolloClient({
-  networkInterface: createNetworkInterface({
-    uri: process.env.GRAPHQL_URL || 'qqq'
-  }),
+  networkInterface
 })

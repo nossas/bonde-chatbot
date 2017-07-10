@@ -21,12 +21,41 @@ App.use(BodyParser.urlencoded({ extended: true }))
 //
 // Apollo GraphQL client setup
 //
+import * as graphqlQueries from './graphql/queries'
+import * as graphqlMutations from './graphql/mutations'
 import { client as graphqlClient } from './graphql'
 
 //
 // Load script
 //
 const Script = require(process.env.SCRIPT_PATH || './scripts/v0.js')
+
+//
+// Authenticate the server using BONDE credentials
+//
+const authenticate = graphqlClient.mutate({
+  mutation: graphqlMutations.authenticate,
+  variables: {
+    email: process.env.SERVER_AUTH_EMAIL,
+    password: process.env.SERVER_AUTH_PASSWORD
+  }
+})
+  .then(({ data: { authenticate: { jwtToken } } }) => jwtToken)
+  .catch(error => console.error(error))
+
+const botConfigs = authenticate.then(jwtToken => {
+  global.jwtToken = jwtToken
+
+  //
+  // Get the list of bot configurations
+  //
+  return graphqlClient.query({ query: graphqlQueries.fetchBotConfigurations })
+    .then(data => {
+      console.log(data);
+      return data
+    })
+    .catch(error => console.error(error))
+})
 
 //
 // Start BETA
