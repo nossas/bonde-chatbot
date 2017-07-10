@@ -11,7 +11,7 @@ export default class BotFactory {
   // @param speech {Object} Speech object that contains the messages and actions
   // @param credentials {Object} Email and password to authenticate the GraphQL requests
   //
-  constructor(speech, credentials) {
+  constructor (speech, credentials) {
     this.speech = speech
     this.credentials = credentials
   }
@@ -20,7 +20,7 @@ export default class BotFactory {
   // Authenticate the server using BONDE credentials
   // @return {Promise} The promise's result is an authenticated JWT token
   //
-  authenticate() {
+  authenticate () {
     return graphqlClient.mutate({
       mutation: graphqlMutations.authenticate,
       variables: {
@@ -36,7 +36,7 @@ export default class BotFactory {
   // Get the list of bot configurations
   // @return {Promise} The promise's result is an array of bot configurations
   //
-  botConfigs() {
+  botConfigs () {
     return this.authenticate().then(jwtToken => {
       global.jwtToken = jwtToken
 
@@ -53,7 +53,7 @@ export default class BotFactory {
   // by database using GraphQL API
   // @return {Promise} The promise's result is an array of data of fabricated bots
   //
-  fabricate() {
+  fabricate () {
     return this.botConfigs().then(({ data: { configs: { bots } } }) => {
       return bots.map(({
         id,

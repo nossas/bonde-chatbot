@@ -5,7 +5,7 @@ const networkInterface = createNetworkInterface({
 })
 
 networkInterface.use([{
-  applyMiddleware(req, next) {
+  applyMiddleware (req, next) {
     if (!req.options.headers) {
       req.options.headers = {}
     }
@@ -16,6 +16,4 @@ networkInterface.use([{
   }
 }])
 
-exports.client = new ApolloClient({
-  networkInterface
-})
+export const client = new ApolloClient({ networkInterface })
