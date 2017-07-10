@@ -6,7 +6,6 @@ const networkInterface = createNetworkInterface({
 
 networkInterface.use([{
   applyMiddleware(req, next) {
-    console.log('global.jwtToken', global.jwtToken)
     if (!req.options.headers) {
       req.options.headers = {}
     }

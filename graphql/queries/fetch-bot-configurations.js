@@ -2,12 +2,13 @@ import gql from 'graphql-tag'
 
 export default gql`
   query fetchBotConfigurations {
-    allFacebookBotConfigurations {
-      nodes {
-        id,
-        messengerAppSecret,
-        messengerValidationToken,
-        messengerPageAccessToken,
+    configs: allFacebookBotConfigurations {
+      bots: nodes {
+        id
+        messengerAppSecret
+        messengerValidationToken
+        messengerPageAccessToken
+        data
       }
     }
   }
