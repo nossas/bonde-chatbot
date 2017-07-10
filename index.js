@@ -1,4 +1,5 @@
 'use strict'
+// Load the .env file
 require('dotenv').config()
 
 // window.fetch pollyfill
