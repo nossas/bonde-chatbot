@@ -5,6 +5,17 @@ html, body {
   margin: 0;
 }
 
+.input.is-active,
+.input.is-focused,
+.input:active,
+.input:focus,
+.textarea.is-active,
+.textarea.is-focused,
+.textarea:active,
+.textarea:focus {
+  border-color:  #bbb;
+}
+
 input::placeholder {
   color: #aaa;
 }

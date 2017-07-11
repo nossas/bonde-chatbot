@@ -5,6 +5,7 @@ import 'colors'
 
 import Http from 'http'
 import Express from 'express'
+import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
 import { BotFactory } from './bot'
 import * as routes from './routes'
@@ -18,6 +19,12 @@ App.set('view engine', 'pug')
 App.use(Express.static('public'))
 App.use(BodyParser.json())
 App.use(BodyParser.urlencoded({ extended: true }))
+App.use(ExpressSession({
+  secret : 's3Cur3',
+  name : 'sessionId',
+  resave: true,
+  saveUninitialized: true
+}))
 
 //
 // Bots fabrication
@@ -49,6 +56,7 @@ const fabricated = new BotFactory(speech, credentials)
 // Express server endpoints
 //
 App.use('/login', routes.login)
+App.use('/mass-message', routes.massMessage)
 
 //
 // Up the server

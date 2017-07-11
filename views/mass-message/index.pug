@@ -1,0 +1,31 @@
+extends ../layout/index.pug
+
+block append stylesheets
+  link(rel='stylesheet' href='/login/index.css')
+
+block content
+  h1 mass message page
+
+  script(type='text/javascript').
+    new Vue({
+      el: '#login',
+      data: {
+        email: undefined,
+        emailDirty: false,
+        password: undefined,
+        passwordDirty: false
+      },
+      computed: {
+        validEmail: function () {
+          return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)
+        }
+      },
+      methods: {
+        onEmailFocus: function () { this.emailDirty = true },
+        onPasswordFocus: function () { this.passwordDirty = true },
+        onSubmit: function (event) {
+          var validation = this.validEmail && this.password
+          if (!validation) event.preventDefault()
+        }
+      }
+    })
