@@ -1,11 +1,9 @@
 import express from 'express'
-import { client as graphqlClient } from '../graphql'
-import * as graphqlQueries from '../graphql/queries'
-import * as graphqlMutations from '../graphql/mutations'
+import { isAuthenticated } from './middlewares'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
   res.render('./mass-message/index')
 })
 
