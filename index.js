@@ -13,13 +13,13 @@ import * as routes from './routes'
 //
 // Setup Express server
 //
-let App = Express()
+let app = Express()
 
-App.set('view engine', 'pug')
-App.use(Express.static('public'))
-App.use(BodyParser.json())
-App.use(BodyParser.urlencoded({ extended: true }))
-App.use(ExpressSession({
+app.set('view engine', 'pug')
+app.use(Express.static('public'))
+app.use(BodyParser.json())
+app.use(BodyParser.urlencoded({ extended: true }))
+app.use(ExpressSession({
   secret : 's3Cur3',
   name : 'sessionId',
   resave: true,
@@ -34,35 +34,19 @@ const credentials = {
   email: process.env.SERVER_AUTH_EMAIL,
   password: process.env.SERVER_AUTH_PASSWORD
 }
-const fabricated = new BotFactory(speech, credentials)
-  .fabricate()
-  .then(endpoints => {
-    //
-    // Set up bots express endpoints
-    //
-    endpoints.forEach(({ id, bot, botEndpoint }) => {
-      const endpoint = `/${botEndpoint}`
-      App.get(endpoint, (req, res) => bot._verify(req, res))
-      App.post(endpoint, (req, res) => {
-        bot._handleMessage(req.body)
-        res.end(JSON.stringify({ status: 'ok' }))
-      })
-
-      console.log(`Bot[${id}] exposed in endpoints: ${endpoint}`.blue)
-    })
-  })
+const fabricated = new BotFactory(app, speech, credentials).fabricate()
 
 //
 // Express server endpoints
 //
-App.use('/login', routes.login)
-App.use('/mass-message', routes.massMessage)
+app.use('/login', routes.login)
+app.use('/mass-message', routes.massMessage)
 
 //
 // Up the server
 //
 fabricated.then(() => {
   const port = process.env.PORT || 5000
-  Http.createServer(App).listen(port)
+  Http.createServer(app).listen(port)
   console.log(`🤖  Bot server running at port ${port}`)
 })

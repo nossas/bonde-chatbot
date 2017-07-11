@@ -27,6 +27,7 @@
     "config": "^1.20.4",
     "dotenv": "^4.0.0",
     "ejs": "^2.4.2",
+    "escape-json-node": "^1.0.8",
     "express": "^4.13.4",
     "express-session": "^1.15.3",
     "graphql-tag": "^2.4.2",

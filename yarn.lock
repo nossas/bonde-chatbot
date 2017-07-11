@@ -1409,6 +1409,10 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
+escape-json-node@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/escape-json-node/-/escape-json-node-1.0.8.tgz#db56cb150865ef4695dc07369820a50836671b6a"
+
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
