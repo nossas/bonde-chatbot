@@ -1,10 +1,106 @@
 extends ../layout/index.pug
 
 block append stylesheets
-  link(rel='stylesheet' href='/login/index.css')
+  link(rel='stylesheet' href='/mass-message/index.css')
 
 block content
-  h1 mass message page
+  section.hero.is-fullheight.is-dark
+    .hero-head
+      .container
+        nav.nav
+          .container
+            .nav-left
+              a.nav-item.branding(href='../index.html')
+                img(src='https://scontent.fcgh12-1.fna.fbcdn.net/v/t1.0-9/18485498_463912997289183_6766375779007506020_n.png?oh=d70fe6affd9b823f09c64546fb253f44&oe=59CCAF85' alt='Beta logo')
+                .brand-name BETA
+            span.nav-toggle
+              span
+              span
+              span
+            .nav-right.nav-menu
+              a.nav-item.is-active Mensagem em massa
+    .hero-body
+      .container
+        .columns.is-vcentered
+          .column.is-5
+            figure.image.promo-img.is-4by3
+
+          .column.is-6.is-offset-1
+            h1.title.is-2.is-spaced
+              | Envio de mensagem em massa
+            h2.subtitle.is-5
+              | Você pode enviar uma mensagem em massa para todas as pessoas que interagiram
+              | com a BETA pelo Messenger do Facebook.
+
+            .field
+              label.label
+                | Usuários
+                a.button.is-light.is-small.is-pulled-right expandir
+              .users-container
+                table.table.is-striped
+                  thead
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      th #
+                      th Nome
+                      th Origem
+                  tfoot
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      th id
+                      th Nome
+                      th Origem
+                  tbody
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      td 1
+                      td Usuário 01
+                      td BETA
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      td 2
+                      td Usuário 02
+                      td Quebrando o Tabu
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      td 3
+                      td Usuário 03
+                      td BETA
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      td 4
+                      td Usuário 04
+                      td BETA
+                    tr
+                      th
+                        label.checkbox
+                          input(type='checkbox')
+                      td 5
+                      td Usuário 05
+                      td BETA
+
+            .field
+              label.label Mensagem
+              p.control
+                textarea.textarea(placeholder='Exemplo:\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?')
+              br
+
+            a.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth
+              span.icon
+                i.fa.fa-envelope
+              | Enviar
 
   script(type='text/javascript').
     new Vue({
