@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r 'babel-register' ./index.js",
     "prestart": "NODE_ENV=production babel ./index.js --out-file ./index.builded.js",
-    "start": "NODE_ENV=production node ./index.builded.js",
+    "start": "NODE_ENV=production node -r 'babel-register' ./index.builded.js",
     "lint": "standard index.js ./bot/*.js ./graphql/*.js ./scripts/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "./node_modules/.bin/standard-version"
