@@ -1,11 +1,11 @@
 import 'colors'
 import Bot from 'messenger-bot'
-import escapeJSON from 'escape-json-node'
 import { client as graphqlClient } from '../graphql'
 import * as graphqlQueries from '../graphql/queries'
 import * as graphqlMutations from '../graphql/mutations'
 import * as botEvents from './events'
 import * as botConfig from './config'
+import * as botMiddlewares from './middlewares'
 
 export default class BotFactory {
   //
@@ -85,55 +85,9 @@ export default class BotFactory {
 
         const endpoint = `/${data.name || id}`
 
-        //
-        // Snippet from `messenger-bot` package to identify
-        // the received message by payload
-        //
-        this.app.use(endpoint, (req, res, next) => {
-          let entries = req.body.entry
-
-          entries.forEach((entry) => {
-            let events = entry.messaging
-
-            events.forEach((event) => {
-              if (event.message) {
-                if (!event.message.is_echo) {
-                  bot.getProfile(event.sender.id, (err, profile) => {
-                    if (err) {
-                      console.log(JSON.stringify(err).red)
-                      return next()
-                    }
-
-                    //
-                    // In this case, the `sender.id` is the user's recipient.id
-                    // and, the `recipient.id` is the page's recipient.id
-                    //
-                    const interaction = {
-                      facebook_bot_configuration_id: Number(req.originalUrl.replace(/\D/g, '')),
-                      fb_context_recipient_id: event.sender.id,
-                      fb_context_sender_id: event.recipient.id,
-                      interaction: {
-                        profile,
-                        event
-                      }
-                    }
-                    graphqlClient.mutate({
-                      mutation: graphqlMutations.createBotInteraction,
-                      variables: { interaction: escapeJSON(JSON.stringify(interaction)) }
-                    })
-                      .then(data => data)
-                      .catch(error => console.log(`${error}`.red))
-                  })
-                }
-              }
-            })
-          })
-          next()
-        })
+        this.app.use(endpoint, botMiddlewares.saveReceivedInteraction(bot))
         this.app.get(endpoint, (req, res) => bot._verify(req, res))
         this.app.post(endpoint, (req, res) => {
-          console.log('id', id)
-          console.log('req.originalUrl', req.originalUrl)
           bot._handleMessage(req.body)
           res.end(JSON.stringify({ status: 'ok' }))
         })
