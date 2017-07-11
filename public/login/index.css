@@ -9,14 +9,20 @@ input::placeholder {
   color: #aaa;
 }
 
-.input.is-active,
-.input.is-focused,
-.input:active,
-.input:focus,
-.textarea.is-active,
-.textarea.is-focused,
-.textarea:active,
-.textarea:focus {
+.input.is-success,
+.textarea.is-success {
+  border-color: #00E0C5;
+}
+
+.help.is-danger {
+  color: #FF0298;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.input.is-danger,
+.textarea.is-danger {
   border-color: #FF0298;
 }
 
@@ -26,6 +32,10 @@ input::placeholder {
   font-size: 20px;
   padding-left: 15px;
   color: #666;
+}
+
+.email-input {
+  margin-bottom: 2px;
 }
 
 .icon.user,
