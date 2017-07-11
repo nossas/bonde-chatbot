@@ -7,12 +7,15 @@ import Http from 'http'
 import Express from 'express'
 import BodyParser from 'body-parser'
 import { BotFactory } from './bot'
+import * as routes from './routes'
 
 //
 // Setup Express server
 //
 let App = Express()
 
+App.set('view engine', 'pug')
+App.use(Express.static('public'))
 App.use(BodyParser.json())
 App.use(BodyParser.urlencoded({ extended: true }))
 
@@ -41,6 +44,11 @@ const fabricated = new BotFactory(speech, credentials)
       console.log(`Bot[${id}] exposed in endpoints: ${endpoint}`.blue)
     })
   })
+
+//
+// Express server endpoints
+//
+App.use('/login', routes.login)
 
 //
 // Up the server

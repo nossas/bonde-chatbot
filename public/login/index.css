@@ -1,0 +1,96 @@
+html, body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.input.is-active,
+.input.is-focused,
+.input:active,
+.input:focus,
+.textarea.is-active,
+.textarea.is-focused,
+.textarea:active,
+.textarea:focus {
+  border-color: #FF0298;
+}
+
+.email-input,
+.password-input {
+  border-radius: 40px;
+  font-size: 20px;
+  padding-left: 15px;
+  color: #666;
+}
+
+.icon.user,
+.icon.password {
+  margin: 5px 10px 0 0;
+}
+
+.avatar img {
+  border-radius: 100px;
+  padding: 5px;
+  border: 1px solid #dbdbdb;
+}
+
+.forgot-password a {
+  color: #95A5A6;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.login {
+  padding-top: 20px;
+}
+
+.login button {
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+.hero-body .container {
+  margin-top: -150px;
+}
+
+.hero.is-dark .section {
+  background-color: transparent;
+}
+
+.hero-banner .hero {
+  background: url('https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8');
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.hero-heading .branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-heading .branding .brand-name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  position: relative;
+  top: -1px;
+}
+
+.button.is-success.is-outlined {
+  background-color: transparent;
+  border-color: #5500DD;
+  color: #5500DD;
+}
+
+.button.is-success.is-outlined:focus, .button.is-success.is-outlined:hover {
+  background-color: #5500DD;
+  border-color: #5500DD;
+  color: #fff;
+}
