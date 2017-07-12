@@ -86,9 +86,13 @@ block content
                   p.control
                     textarea.textarea(
                       autofocus
+                      v-model='message'
+                      v-bind:class="{ 'is-danger': !message && messageDirty, 'is-success': message }"
+                      v-on:keydown='onMessageKeydown'
                       name='message'
                       placeholder='Exemplo:\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?'
                     )
+                  span.help.is-danger(v-if='!message && messageDirty') * Campo obrigatório
                   br
 
                 button.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth(
@@ -101,10 +105,22 @@ block content
   script(type='text/javascript').
     new Vue({
       el: '#mass-message',
+      data: {
+        message: undefined,
+        messageDirty: false
+      },
       methods: {
+        onMessageKeydown: function () { this.messageDirty = true },
         onSubmit: function (event) {
+          var validation = this.message
           var message = 'Dá uma olhada pra ver se tá tudo certo na mensagem pois,'
                       + 'depois de enviada, não tem que voltar atrás... Posso prosseguir?'
+
+          if (!validation) {
+            event.preventDefault()
+            this.messageDirty = true
+            return
+          }
           if (!confirm(message)) event.preventDefault()
         }
       }
