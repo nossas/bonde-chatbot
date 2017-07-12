@@ -45,6 +45,8 @@ const fabricated = new BotFactory(app, speech, credentials)
       app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
       app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
       app.post(endpoint, botMiddlewares.handleMessage(bot))
+      app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot))
+
       console.log(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
   })

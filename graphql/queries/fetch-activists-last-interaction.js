@@ -12,6 +12,7 @@ query fetchActivistsLastInteraction($facebookBotConfigurationId: Int) {
       id
       activistId
       communityId
+      facebookBotConfigurationId
       fbContextRecipientId
       fbContextSenderId
       interaction
