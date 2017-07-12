@@ -37,7 +37,7 @@ block content
               action='/mass-message/send'
               v-on:submit='onSubmit($event)'
             )
-              if !activists.length
+              if !recipients.length
                 .notification.is-warning
                   b Nenhum usuário interagiu com a BETA até o momento.
                   |  Infelizmente não é possível enviar mensagem em massa.
@@ -51,35 +51,32 @@ block content
                       thead
                         tr
                           th
-                          th #
                           th Nome
                           th Origem
                           th Última Interação
                       tfoot
                         tr
                           th
-                          th #
                           th Nome
                           th Origem
                           th Última Interação
                       tbody
-                        each activist in activists
-                          - var botConfiguration = JSON.parse(activist.facebookBotConfiguration)
-                          - var interaction = JSON.parse(activist.interaction)
+                        each recipient in recipients
+                          - var botConfiguration = JSON.parse(recipient.facebookBotConfiguration)
+                          - var interaction = JSON.parse(recipient.interaction)
                           - var profile = interaction.profile
                           tr
                             th
                               label.checkbox
                                 input(
                                   type='checkbox'
-                                  name=`selected_activists['${activist.facebookBotConfigurationId}'][]`
-                                  value=activist.fbContextRecipientId
+                                  name=`selected_recipients['${recipient.facebookBotConfigurationId}'][]`
+                                  value=recipient.fbContextRecipientId
                                   checked
                                 )
-                            td= activist.id
                             td #{profile.first_name} #{profile.last_name}
                             td= botConfiguration.name
-                            td= dateformat(new Date(activist.createdAt), 'dd/mm/yyyy, H:M:ss')
+                            td= dateformat(new Date(recipient.createdAt), 'dd/mm/yyyy, H:M:ss')
 
                 .field
                   label.label Mensagem
