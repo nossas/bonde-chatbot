@@ -43,17 +43,14 @@ const fabricated = new BotFactory(app, speech, credentials)
     //
     bots.forEach(({ id, bot, endpoint }) => {
       app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
-      app.get(endpoint, (req, res) => bot._verify(req, res))
-      app.post(endpoint, (req, res) => {
-        bot._handleMessage(req.body)
-        res.end(JSON.stringify({ status: 'ok' }))
-      })
+      app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
+      app.post(endpoint, botMiddlewares.handleMessage(bot))
       console.log(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
   })
 
 //
-// Express server endpoints
+// Express server routes
 //
 app.use('/login', routes.login)
 app.use('/mass-message', routes.massMessage)
