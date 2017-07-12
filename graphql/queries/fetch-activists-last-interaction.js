@@ -6,6 +6,7 @@ query fetchActivistsLastInteraction($facebookBotConfigurationId: Int) {
     condition: {
       facebookBotConfigurationId: $facebookBotConfigurationId
     }
+    orderBy: FACEBOOK_BOT_CONFIGURATION_ID_ASC
   ) {
     activists: nodes {
       id
@@ -15,6 +16,7 @@ query fetchActivistsLastInteraction($facebookBotConfigurationId: Int) {
       fbContextSenderId
       interaction
       facebookBotConfiguration
+      createdAt
     }
   }
 }

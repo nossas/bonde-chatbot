@@ -32,75 +32,50 @@ block content
               | Você pode enviar uma mensagem em massa para todas as pessoas que interagiram
               | com a BETA pelo Messenger do Facebook.
 
-            .field
-              label.label
-                | Usuários
-                a.button.is-light.is-small.is-pulled-right expandir
-              .users-container
-                table.table.is-striped
-                  thead
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      th #
-                      th Nome
-                      th Origem
-                  tfoot
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      th id
-                      th Nome
-                      th Origem
-                  tbody
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      td 1
-                      td Usuário 01
-                      td BETA
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      td 2
-                      td Usuário 02
-                      td Quebrando o Tabu
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      td 3
-                      td Usuário 03
-                      td BETA
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      td 4
-                      td Usuário 04
-                      td BETA
-                    tr
-                      th
-                        label.checkbox
-                          input(type='checkbox')
-                      td 5
-                      td Usuário 05
-                      td BETA
+            if !activists.length
+              .notification.is-warning
+                b Nenhum usuário interagiu com a BETA até o momento.
+                |  Infelizmente não é possível enviar mensagem em massa.
+            else
+              .field
+                label.label
+                  | Usuários
+                  a.button.is-light.is-small.is-pulled-right expandir
+                .users-container
+                  table.table.is-striped
+                    thead
+                      tr
+                        th #
+                        th Nome
+                        th Origem
+                        th Última Interação
+                    tfoot
+                      tr
+                        th #
+                        th Nome
+                        th Origem
+                        th Última Interação
+                    tbody
+                      each activist in activists
+                        - var botConfiguration = JSON.parse(activist.facebookBotConfiguration)
+                        - var interaction = JSON.parse(activist.interaction)
+                        - var profile = interaction.profile
+                        tr
+                          td= activist.id
+                          td #{profile.first_name} #{profile.last_name}
+                          td= botConfiguration.name
+                          td= dateformat(new Date(activist.createdAt), 'dd/mm/yyyy, H:M:ss')
 
-            .field
-              label.label Mensagem
-              p.control
-                textarea.textarea(placeholder='Exemplo:\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?')
-              br
+              .field
+                label.label Mensagem
+                p.control
+                  textarea.textarea(placeholder='Exemplo:\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?')
+                br
 
-            a.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth
-              span.icon
-                i.fa.fa-envelope
-              | Enviar
+              a.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth
+                span.icon
+                  i.fa.fa-envelope
+                | Enviar
 
   script(type='text/javascript').
     new Vue({
