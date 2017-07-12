@@ -5,7 +5,6 @@ import * as graphqlQueries from '../graphql/queries'
 import * as graphqlMutations from '../graphql/mutations'
 import * as botEvents from './events'
 import * as botConfig from './config'
-import * as botMiddlewares from './middlewares'
 
 export default class BotFactory {
   //
@@ -77,22 +76,12 @@ export default class BotFactory {
 
         const bot = new Bot(config)
         const eventArgs = [bot, this.speech]
+        const endpoint = `/${data.endpoint || id}`
 
         bot.setGetStartedButton([{ payload: this.speech.actions.GET_STARTED }])
         bot.on('error', botEvents.error(...eventArgs))
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))
-
-        const endpoint = `/${data.endpoint || id}`
-
-        this.app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
-        this.app.get(endpoint, (req, res) => bot._verify(req, res))
-        this.app.post(endpoint, (req, res) => {
-          bot._handleMessage(req.body)
-          res.end(JSON.stringify({ status: 'ok' }))
-        })
-
-        console.log(`Bot[${id}] exposed in endpoints: ${endpoint}`.blue)
 
         return { id, bot, endpoint }
       })

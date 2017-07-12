@@ -8,6 +8,7 @@ import Express from 'express'
 import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
 import { BotFactory } from './bot'
+import * as botMiddlewares from './bot/middlewares'
 import * as routes from './routes'
 
 //
@@ -34,7 +35,22 @@ const credentials = {
   email: process.env.SERVER_AUTH_EMAIL,
   password: process.env.SERVER_AUTH_PASSWORD
 }
-const fabricated = new BotFactory(app, speech, credentials).fabricate()
+const fabricated = new BotFactory(app, speech, credentials)
+  .fabricate()
+  .then(bots => {
+    //
+    // Set up express endpoints for each for
+    //
+    bots.forEach(({ id, bot, endpoint }) => {
+      app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
+      app.get(endpoint, (req, res) => bot._verify(req, res))
+      app.post(endpoint, (req, res) => {
+        bot._handleMessage(req.body)
+        res.end(JSON.stringify({ status: 'ok' }))
+      })
+      console.log(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
+    })
+  })
 
 //
 // Express server endpoints
