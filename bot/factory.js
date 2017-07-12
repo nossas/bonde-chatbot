@@ -83,7 +83,7 @@ export default class BotFactory {
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))
 
-        const endpoint = `/${data.name || id}`
+        const endpoint = `/${data.endpoint || id}`
 
         this.app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
         this.app.get(endpoint, (req, res) => bot._verify(req, res))
