@@ -7,7 +7,7 @@ import * as graphqlQueries from '../graphql/queries'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
   graphqlClient.query({ query: graphqlQueries.fetchBotRecipients })
     .then(({ data: { botRecipients: { recipients } } }) => {
       res.render('./mass-message/index', { recipients, dateformat })
