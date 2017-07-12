@@ -6,11 +6,11 @@ import * as graphqlMutations from '../../graphql/mutations'
 export default bot => (req, res, next) => {
   //
   // Snippet from `messenger-bot` package to identify
-  // the received message via payload
+  // the received message via payload on POST request
   //
   const entries = req.body.entry
 
-  entries.forEach((entry) => {
+  entries && entries.forEach((entry) => {
     const events = entry.messaging
 
     events.forEach((event) => {
