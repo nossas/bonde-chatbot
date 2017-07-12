@@ -54,6 +54,7 @@ const fabricated = new BotFactory(app, speech, credentials)
 //
 // Express server routes
 //
+app.use('/', routes.massMessage)
 app.use('/login', routes.login)
 app.use('/mass-message', routes.massMessage)
 
