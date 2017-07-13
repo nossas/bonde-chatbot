@@ -38,7 +38,8 @@
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-rc.2",
     "request": "^2.72.0",
-    "standard": "^9.0.2"
+    "standard": "^9.0.2",
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": "~4.1.2"

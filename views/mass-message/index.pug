@@ -21,102 +21,157 @@ block content
               a.nav-item.is-active Mensagem em massa
     .hero-body
       .container
-        .columns.is-vcentered
-          .column.is-5
-            figure.image.promo-img.is-4by3
+        form#mass-message(
+          v-on:submit='onSubmit($event)'
+        )
+          .columns
+            .column.is-12
+              h1.title.is-2.is-spaced
+                | Envio de mensagem em massa
+              h2.subtitle.is-5
+                | Você pode enviar uma mensagem em massa para todas as pessoas que interagiram
+                | com a BETA pelo Messenger do Facebook.
 
-          .column.is-6.is-offset-1
-            h1.title.is-2.is-spaced
-              | Envio de mensagem em massa
-            h2.subtitle.is-5
-              | Você pode enviar uma mensagem em massa para todas as pessoas que interagiram
-              | com a BETA pelo Messenger do Facebook.
+          .columns
+            .column.is-6
+              .notification.is-warning(v-if='!bots.length')
+                b Nenhum usuário interagiu com a BETA até o momento.
+                |  Infelizmente não é possível enviar mensagem em massa.
+              .field(v-else)
+                label.label Páginas
+                .users-container
+                  table.table.is-striped.is-medium
+                    thead
+                      tr
+                        th(style='width: 1px')
+                          label.checkbox
+                            input(type='checkbox' v-model='selectAll')
+                        th(style='width: 1px') #
+                        th Nome
+                        th Criado em
+                    tbody
+                      tr(v-for='bot in bots')
+                        th
+                          label.checkbox
+                            input(
+                              type='checkbox'
+                              v-bind:name="'selected_bots[' + bot.id + '][]'"
+                              v-bind:value='bot.id'
+                              v-model='selectedBots'
+                            )
+                        td {{ bot.id }}
+                        td {{ bot.data.name }}
+                        td {{ bot.createdAt }}
+              .field
+                label.label Mensagem
+                p.control
+                  textarea.textarea(
+                    autofocus
+                    v-model='message'
+                    v-bind:class="{ 'is-danger': !message && messageDirty, 'is-success': message }"
+                    v-on:keydown='onMessageKeydown'
+                    name='message'
+                    placeholder='Exemplo:\n\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?'
+                    style='min-height: 220px'
+                  )
+                span.help.is-danger(v-if='!message && messageDirty') * Campo obrigatório
 
-            form#mass-message(
-              method='post'
-              action='/mass-message/send'
-              v-on:submit='onSubmit($event)'
-            )
+              button.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth(
+                type='submit'
+              )
+                span.icon
+                  i.fa.fa-envelope
+                | Enviar
+
+            .column.is-6
               if !recipients.length
                 .notification.is-warning
                   b Nenhum usuário interagiu com a BETA até o momento.
                   |  Infelizmente não é possível enviar mensagem em massa.
               else
                 .field
-                  label.label Usuários
+                  label.label Usuários (#{recipients.length})
                   .users-container
                     table.table.is-striped
                       thead
                         tr
-                          th
+                          th(style='width: 1px')
                           th Nome
-                          th Origem
+                          th Página
                           th Última Interação
                       tfoot
                         tr
                           th
                           th Nome
-                          th Origem
+                          th Página
                           th Última Interação
                       tbody
-                        each recipient in recipients
-                          - var botConfiguration = JSON.parse(recipient.facebookBotConfiguration)
-                          - var interaction = JSON.parse(recipient.interaction)
-                          - var profile = interaction.profile
-                          tr
-                            th
-                              label.checkbox
-                                input(
-                                  type='checkbox'
-                                  name=`selected_recipients['${recipient.facebookBotConfigurationId}'][]`
-                                  value=recipient.fbContextRecipientId
-                                  checked
-                                )
-                            td #{profile.first_name} #{profile.last_name}
-                            td= botConfiguration.name
-                            td= dateformat(new Date(recipient.createdAt), 'dd/mm/yyyy, H:M:ss')
-
-                .field
-                  label.label Mensagem
-                  p.control
-                    textarea.textarea(
-                      autofocus
-                      v-model='message'
-                      v-bind:class="{ 'is-danger': !message && messageDirty, 'is-success': message }"
-                      v-on:keydown='onMessageKeydown'
-                      name='message'
-                      placeholder='Exemplo:\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?'
-                    )
-                  span.help.is-danger(v-if='!message && messageDirty') * Campo obrigatório
-                  br
-
-                button.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth(
-                  type='submit'
-                )
-                  span.icon
-                    i.fa.fa-envelope
-                  | Enviar
+                        tr(v-for='recipient in recipients')
+                          th
+                            label.checkbox
+                              input(
+                                type='checkbox'
+                                name="'selected_recipients[' + recipient.facebookBotConfigurationId + '][]'"
+                                value='recipient.fbContextRecipientId'
+                                checked
+                              )
+                          td {{ recipient.profile.first_name }} {{ recipient.profile.last_name }}
+                          td {{ recipient.bot.name }}
+                          td {{ recipient.createdAt }}
 
   script(type='text/javascript').
+    var appDomain = '#{appDomain}'
+
     new Vue({
       el: '#mass-message',
       data: {
+        bots: !{JSON.stringify(bots)},
+        recipients: !{JSON.stringify(recipients)},
         message: undefined,
-        messageDirty: false
+        messageDirty: false,
+        selectedBots: !{JSON.stringify(bots)}.map(b => b.id),
+        selectedRecipients: !{JSON.stringify(recipients)}.map(r => ({
+          facebookBotConfigurationId: r.facebookBotConfigurationId,
+          fbContextRecipientId: r.fbContextRecipientId
+        })),
+      },
+      computed: {
+        selectAll: {
+          get: function () {
+            return this.bots
+              ? this.selectedBots.length == this.bots.length
+              : false
+          },
+          set: function (value) {
+            var selectedBots = []
+            if (value) this.bots.forEach(function (bot) { selectedBots.push(bot.id) })
+            this.selectedBots = selectedBots
+          }
+        }
       },
       methods: {
         onMessageKeydown: function () { this.messageDirty = true },
-        onSubmit: function (event) {
+        onSubmit: function(event) {
+          event.preventDefault()
           var validation = this.message
           var message = 'Dá uma olhada pra ver se tá tudo certo na mensagem pois,'
                       + 'depois de enviada, não tem que voltar atrás... Posso prosseguir?'
 
           if (!validation) {
-            event.preventDefault()
             this.messageDirty = true
             return
           }
-          if (!confirm(message)) event.preventDefault()
+          if (confirm(message)) {
+            var endpoint = appDomain + '/mass-message/send'
+            var payload = {
+              selectedRecipients: this.selectedRecipients,
+              message: this.message
+            }
+
+            this.$http.post(endpoint, payload)
+              .then(data => data)
+              .catch(err => console.error(err))
+          }
         }
       }
     })
