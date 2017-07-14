@@ -106,15 +106,15 @@ block content
                             v-model='search'
                           )
 
-                .notification.is-warning(v-if='!bots.length && !recipients.length')
+                .notification.is-warning.is-marginless(v-if='!allRecipients.length')
                   b Nenhum usuário interagiu com a BETA até o momento.
                   |  Infelizmente não é possível enviar mensagem em massa.
-                .notification.is-warning(v-if='!recipients.length')
+                .notification.is-warning.is-marginless(v-if='!recipients.length && allRecipients.length')
                   b Nenhuma página foi selecionada.
                   |  Pra poder enviar mensagem para os usuários, você precisa
                   |  selecionar uma ou mais páginas para que seja possível a listagem
                   |  dos usuários.
-                .users-container(v-else='recipients.length')
+                .users-container(v-if='recipients.length')
                   table.table.is-striped.is-marginless
                     thead
                       tr
