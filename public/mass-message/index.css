@@ -73,3 +73,9 @@ body {
     padding: 30px;
   }
 }
+.help.is-danger {
+  background-color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  font-weight: bold;
+}
