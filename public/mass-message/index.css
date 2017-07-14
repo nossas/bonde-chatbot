@@ -68,6 +68,15 @@ body {
   max-height: 500px;
   overflow: auto;
 }
+.input.is-default,
+.textarea.is-default {
+      border-color: #fff;
+}
+.is-outlined.is-default {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
 @media screen and (max-width: 768px) {
   .hero.is-dark .nav-menu .nav-item {
     padding: 30px;
