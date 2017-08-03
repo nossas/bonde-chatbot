@@ -129,32 +129,10 @@ export default {
               "buttons": [
                 {
                   "type": "element_share",
-                  "share_contents": {
-                    "attachment": {
-                      "type": "template",
-                      "payload": {
-                        "template_type": "generic",
-                        "elements": [
-                          {
-                            "title": "Chatbot - Pressão",
-                            "subtitle": "Mensagem de compartilhamento chatbot",
-                            "image_url": "https://media.npr.org/assets/img/2017/03/07/istock-483372803_wide-c63de91cb2eb048feef4c223401bef251fac0841.jpg",
-                            "default_action": {
-                              "type": "web_url",
-                              "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
-                            },
-                            "buttons": [
-                              {
-                                "type": "web_url",
-                                "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
-                                "title": "Iniciar conversar",
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    },
-                  },
+                }, {
+                  "type": "web_url",
+                  "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
+                  "title": "Iniciar conversa",
                 },
               ],
             },
@@ -162,5 +140,6 @@ export default {
         },
       },
     },
+  },
   },
 }
