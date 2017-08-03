@@ -25,8 +25,8 @@ pipeline:
     port: 22
     script:
       - sudo docker pull nossas/bonde-bot:${DRONE_BRANCH}
-      - sudo docker tag nossas/bonde-bot:${DRONE_BRANCH} dokku/bot:latest
-      - dokku tags:deploy bot latest
+      - sudo docker tag nossas/bonde-bot:${DRONE_BRANCH} dokku/beta:latest
+      - dokku tags:deploy beta latest
     when:
       status: success
       branch: [hotfix-*, release-*, feature-*, develop]
@@ -50,8 +50,8 @@ pipeline:
     port: 22
     script:
       - sudo docker pull nossas/bonde-bot:${DRONE_TAG##v}
-      - sudo docker tag nossas/bonde-bot:${DRONE_TAG##v} dokku/bot:latest
-      - dokku tags:deploy bot latest
+      - sudo docker tag nossas/bonde-bot:${DRONE_TAG##v} dokku/beta:latest
+      - dokku tags:deploy beta latest
     when:
       status: success
       event: tag
