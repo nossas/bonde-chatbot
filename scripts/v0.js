@@ -3,17 +3,20 @@ import { replyText } from './utils'
 //
 // Constants
 //
-const GET_STARTED = 'GET_STARTED'
 const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
-const GET_STARTED_NOW = 'GET_STARTED_NOW'
-const GET_STARTED_LATER = 'GET_STARTED_LATER'
-const WANT_TO_ACT = 'WANT_TO_ACT'
-const TALK_ABOUT = 'TALK_ABOUT'
-const EXPLAIN_ABOUT = 'EXPLAIN_ABOUT'
-const HOW_TO_HELP = 'HOW_TO_HELP'
-const WHO_MAKE_YOU = 'WHO_MAKE_YOU'
-const SHARED_NOW = 'SHARED_NOW'
-const IS_DONE = 'IS_DONE'
+const ERROR_CRITICAL = 'ERROR_CRITICAL'
+const GET_STARTED = 'GET_STARTED'
+const QUICK_REPLY_A = 'QUICK_REPLY_A'
+const QUICK_REPLY_B = 'QUICK_REPLY_B'
+const QUICK_REPLY_C = 'QUICK_REPLY_C'
+const QUICK_REPLY_D = 'QUICK_REPLY_D'
+const QUICK_REPLY_E = 'QUICK_REPLY_E'
+const QUICK_REPLY_F = 'QUICK_REPLY_F'
+const QUICK_REPLY_G = 'QUICK_REPLY_G'
+const QUICK_REPLY_H = 'QUICK_REPLY_H'
+const QUICK_REPLY_I = 'QUICK_REPLY_I'
+const QUICK_REPLY_J = 'QUICK_REPLY_J'
+const QUICK_REPLY_L = 'QUICK_REPLY_L'
 
 export default {
   actions: {
@@ -21,57 +24,95 @@ export default {
     [REPLY_UNDEFINED]: REPLY_UNDEFINED
   },
   messages: {
-    [GET_STARTED]: {
-      text: 'E aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?',
-      quick_replies: [
-        replyText('Vamos!', GET_STARTED_NOW),
-        replyText('Agora não vai dar :/', GET_STARTED_LATER)
-      ]
-    },
+    //
+    // Texto que Beta responde quando não entende o comando
+    //
     [REPLY_UNDEFINED]: {
-      text: 'Ai, meus algoritmos, tá rolando uma incompatibilidade entre nós. Vou dar uma atualizada e já volto!',
+      text: 'Ai, meus algoritmos. Acho que tá rolando uma incompatibilidade entre nós. Vou dar uma atualizada e já volto!',
       quick_replies: [
-        replyText('Tentar novamente', GET_STARTED)
-      ]
+        replyText('Tentar novamente', GET_STARTED),
+      ],
     },
-    [GET_STARTED_LATER]: {
-      text: 'Deve estar na correria aí, né? Sem problemas! Quando tiver tempo é só falar comigo aqui de novo.'
+    //
+    // Se dá algum bug de fato na Beta
+    //
+    [ERROR_CRITICAL]: {
+      text: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.'
     },
-    [GET_STARTED_NOW]: {
-      text: 'Oba! Mais uma aliada. Seguinte: na espreita do caos político em Brasília, os senadores ressuscitaram uma Proposta de Emenda Constitucional para impedir o aborto em qualquer circunstância - mesmo nos casos em que hoje ele é permitido. Nem preciso dizer o tamanho do retrocesso, né? Mas a gente pode impedir isso! Vamos nessa?',
+    //
+    // Usuário abre conversa com a Beta no Messenger
+    //
+    [GET_STARTED]: {
+      text: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Pra interagir comigo, é só apertar o botão abaixo. Vamos nessa?',
       quick_replies: [
-        replyText('Quero agir já!', WANT_TO_ACT)
-      ]
+        replyText('Vamos!', QUICK_REPLY_A),
+      ],
     },
-    [WANT_TO_ACT]: {
-      text: 'É isso aí, mana! A ideia é que a gente comece a se organizar agora para que, assim que a votação dessa PEC for agendada na Comissão de Constituição e Justiça (CCJ)  do Senado, milhares de pessoas já estejam preparadas para viralizar uma campanha contra esse absurdo.',
+    [QUICK_REPLY_A]: {
+      text: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode ;) Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
       quick_replies: [
-        replyText('PEC? CCJ? #AjudaBeta', EXPLAIN_ABOUT),
-        replyText('Me conta dessa campanha!', TALK_ABOUT)
-      ]
+        replyText('Conta!', QUICK_REPLY_B),
+        replyText('#SemRodeios', QUICK_REPLY_C),
+      ],
     },
-    [EXPLAIN_ABOUT]: {
-      text: 'Senta que lá vem textão!. A PEC é uma proposta que pode  modificar algum artigo da nossa Constituição. No caso da PEC 29, ela propõe alterar o artigo 5º para que ele garanta a "proteção da vida desde a concepção". Voltando às aulas de biologia: se o espermatozóide encontrou o óvulo, já era! Caso essa PEC seja aprovada, qualquer tentativa de mexer com esse óvulo fecundado será considerada crime. Isso quer dizer que podemos dar adeus à possibilidade de aborto nos casos hoje previstos por lei:  aborto quando a gravidez é fruto de estupro, em casos de anencefalia fetal ou de risco de vida para gestante. Um retrocesso enorme e inaceitável! ' +
-      'Existe uma comissão no senado que avalia se as PECs são constitucionais ou não. Precisamos garantir que os membros dessa comissão rejeitem a PEC29. Se aprovada por eles, ela segue para votação no Senado, onde vamos precisar convencer quase todos os senadores a rejeitarem a proposta. Se não agirmos agora, pode ser tarde demais.',
+    [QUICK_REPLY_B]: {
+      text: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Às vezes, fica difícil acreditar que a gente ainda vive num sistema tão desatualizado. Quer saber o que tá pegando?',
       quick_replies: [
-        replyText('Me conta dessa campanha!', TALK_ABOUT)
-      ]
+        replyText('Quero!', QUICK_REPLY_D),
+        replyText('Agora não rola.', QUICK_REPLY_C),
+      ],
     },
-    [TALK_ABOUT]: {
-      text: 'Estamos preparando uma tecnologia que permite que qualquer um envie, em dois cliques, emails diretamente pras caixas de entrada de cada um dos senadores da CCJ. Assim que a votação for agendada, eles vão receber milhares de emails pedindo a rejeição dessa PEC.',
+    [QUICK_REPLY_C]: {
+      text: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
       quick_replies: [
-        replyText('Como posso ajudar agora?', HOW_TO_HELP),
-        replyText('Quem te programou, hein?', WHO_MAKE_YOU)
-      ]
+        replyText('Topo!', QUICK_REPLY_E),
+        replyText('Agora não.', QUICK_REPLY_G),
+      ],
     },
-    [HOW_TO_HELP]: {
-      text: 'Compartilhando o meu link para sua galera. Assim, você ajuda a garantir que muita gente já esteja mobilizada por aqui para que, quando a hora chegar, eu consiga avisar todo mundo da votação da PEC e a gente bote pra quebrar.',
+    [QUICK_REPLY_D]: {
+      text: 'De cara, duas ameaças no Congresso: a PEC 29 e o Estatuto do Nascituro. Sabe o que acontece se elas passarem? 1. O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje; 2. Métodos contraceptivos que as mulheres já usam também vão passar a ser proibidos, como a pílula do dia seguinte e o DIU.',
       quick_replies: [
-        replyText('Compartilhar agora!', SHARED_NOW),
-        replyText('Feshow ;)', IS_DONE)
-      ]
+        replyText('Inacreditável!', QUICK_REPLY_F),
+        replyText('Como barrar?', QUICK_REPLY_E),
+      ],
     },
-    [SHARED_NOW]: {
+    [QUICK_REPLY_E]: {
+      text: 'Arrasou! Influenciar decisões políticas não é simples, mas meus códigos servem pra tornar esse processo muito mais fácil. Já imaginou fazer pressão política a partir do seu inbox do Face? Agora você pode! Não é feitiçaria, é tecnologia. ;) E não demora mais que alguns cliques.',
+      quick_replies: [
+        replyText('Quero saber mais!', QUICK_REPLY_H),
+        replyText('Agora não.', QUICK_REPLY_G),
+      ],
+    },
+    [QUICK_REPLY_F]: {
+      text: 'Pois é. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
+      quick_replies: [
+        replyText('Topo!', QUICK_REPLY_E),
+        replyText('Agora não.', QUICK_REPLY_G),
+      ],
+    },
+    [QUICK_REPLY_G]: {
+      text: 'Deve estar na correria aí, né? Sem problemas! Qualquer novidade pode deixar que eu te chamo por aqui ;) Enquanto isso, se quiser saber mais sobre mim, é só entrar no meu site: www.beta.org.br',
+    },
+    [QUICK_REPLY_H]: {
+      text: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Demais, né?',
+      quick_replies: [
+        replyText('Super!', QUICK_REPLY_I),
+      ],
+    },
+    [QUICK_REPLY_I]: {
+      text: 'Agora, pra transformar esse barulho num mega estrondo, a gente precisa de muuuita gente mandando mensagens. Muita gente mesmo! Vou precisar contar com você pra isso.',
+      quick_replies: [
+        replyText('Tô dentro, mana!', QUICK_REPLY_J),
+      ],
+    },
+    [QUICK_REPLY_J]: {
+      text: 'Isso aí! Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
+      quick_replies: [
+        replyText('Compartilhar', QUICK_REPLY_L),
+        replyText('Agora não.', QUICK_REPLY_G),
+      ],
+    },
+    [QUICK_REPLY_L]: {
       "attachment": {
         "type": "template",
         "payload": {
@@ -100,41 +141,26 @@ export default {
                             "image_url": "https://media.npr.org/assets/img/2017/03/07/istock-483372803_wide-c63de91cb2eb048feef4c223401bef251fac0841.jpg",
                             "default_action": {
                               "type": "web_url",
-                              "url": "https://m.me/nossaresistencia?ref=invited_by_24601"
+                              "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
                             },
                             "buttons": [
                               {
                                 "type": "web_url",
                                 "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
-                                "title": "Iniciar conversar"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    }
-                  }
+                                "title": "Iniciar conversar",
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    },
+                  },
                 },
-                {
-                  "type":"postback",
-                  "title":"Pronto, compartilhei!",
-                  "payload":"IS_DONE"
-                }
-              ]
-            }
-          ]
-        }
-      }
+              ],
+            },
+          ],
+        },
+      },
     },
-    [WHO_MAKE_YOU]: {
-      text: 'Boa pergunta, mana! Várias organizações feministas estão por trás dessa campanha. Se quiser saber mais sobre tudo isso, entra nessa página aqui, ó: www.pec29.beta.org.br',
-      quick_replies: [
-        replyText('Como posso ajudar?', HOW_TO_HELP),
-        replyText('Feshow ;)', IS_DONE)
-      ]
-    },
-    [IS_DONE]: {
-      text: 'Muito obrigada pelo seu apoio, mana. Estamos juntas nessa luta! Se tiver qualquer novidade sobre a votação, pode deixar que eu te chamo por aqui :)'
-    }
-  }
+  },
 }
