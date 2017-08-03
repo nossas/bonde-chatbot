@@ -24,6 +24,7 @@ pipeline:
     username: ubuntu
     command_timeout: 120
     port: 22
+    secrets: [ ssh_key ]
     script:
       - sudo docker pull nossas/bonde-bot:${DRONE_BRANCH}
       - sudo docker tag nossas/bonde-bot:${DRONE_BRANCH} dokku/beta:latest
@@ -50,6 +51,7 @@ pipeline:
     username: ubuntu
     command_timeout: 120
     port: 22
+    secrets: [ ssh_key ]
     script:
       - sudo docker pull nossas/bonde-bot:${DRONE_TAG##v}
       - sudo docker tag nossas/bonde-bot:${DRONE_TAG##v} dokku/beta:latest
