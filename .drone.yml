@@ -9,6 +9,7 @@ pipeline:
   publish-staging:
     image: plugins/docker
     repo: nossas/bonde-bot
+    secrets: [ docker_username, docker_password ]
     username: lpirola
     password: ${DOCKER_PASSWORD}
     tags:
@@ -34,6 +35,7 @@ pipeline:
   publish-production:
     image: plugins/docker
     repo: nossas/bonde-bot
+    secrets: [ docker_username, docker_password ]
     username: lpirola
     password: ${DOCKER_PASSWORD}
     tags:
