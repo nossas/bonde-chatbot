@@ -8,8 +8,7 @@ import * as graphqlQueries from '../graphql/queries'
 
 const router = express.Router()
 
-// router.get('/', isAuthenticated, (req, res) => {
-router.get('/', (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
   const fetchBotConfigurations = graphqlClient.query({
     fetchPolicy: 'network-only',
     query: graphqlQueries.fetchBotConfigurations
