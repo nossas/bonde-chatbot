@@ -1,6 +1,6 @@
 import 'colors'
 
-export default (bot, speech) => (payload, reply, action) => {
+export default (bot, speech, botData) => (payload, reply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) console.log(`${err}`.red)
 

@@ -4,7 +4,7 @@ import * as botHelpers from '../helpers'
 const payloadValidator = payload => {
 }
 
-export default (bot, speech) => (payload, reply) => {
+export default (bot, speech, botData) => (payload, reply) => {
   const { message } = payload
 
   //
@@ -30,5 +30,5 @@ export default (bot, speech) => (payload, reply) => {
     ? message.quick_reply.payload
     : message.payload
 
-  botHelpers.receive(bot, speech)(payload, reply, action)
+  botHelpers.receive(bot, speech, botData)(payload, reply, action)
 }

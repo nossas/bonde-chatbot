@@ -57,15 +57,18 @@ export default class BotFactory {
   //
   fabricate () {
     return this.botConfigs().then(({ data: { configs: { bots } } }) => {
-      return bots.map(({
-        id,
-        messengerAppSecret,
-        messengerValidationToken,
-        messengerPageAccessToken,
-        data: dataRaw
-      }) => {
+      return bots.map(item => {
+        const {
+          id,
+          messengerAppSecret,
+          messengerValidationToken,
+          messengerPageAccessToken,
+          data: dataRaw
+        } = item
+
         // Parse bot custom data to object
         const data = JSON.parse(dataRaw)
+        const botData = { ...item, data }
 
         // Validate and create the bot's configuration object
         const config = botConfig.validate({
@@ -75,10 +78,11 @@ export default class BotFactory {
         })
 
         const bot = new Bot(config)
-        const eventArgs = [bot, this.speech]
+        const speech = this.speech(botData)
+        const eventArgs = [bot, speech, botData]
         const endpoint = `/${data.endpoint || id}`
 
-        bot.setGetStartedButton([{ payload: this.speech.actions.GET_STARTED }])
+        bot.setGetStartedButton([{ payload: speech.actions.GET_STARTED }])
         bot.on('error', botEvents.error(...eventArgs))
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))

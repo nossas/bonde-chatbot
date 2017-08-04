@@ -18,7 +18,12 @@ const QUICK_REPLY_I = 'QUICK_REPLY_I'
 const QUICK_REPLY_J = 'QUICK_REPLY_J'
 const QUICK_REPLY_L = 'QUICK_REPLY_L'
 
-export default {
+//
+// The bot speech, based on quick replies.
+// @param {Object} The bot configuration stored in database.
+// @return {Object} The bot actions and messages.
+//
+export default botData => ({
   actions: {
     [GET_STARTED]: GET_STARTED,
     [REPLY_UNDEFINED]: REPLY_UNDEFINED
@@ -122,16 +127,12 @@ export default {
               "title": "A maior aliada feminista nas redes",
               "subtitle": "Chama a Beta no inbox",
               "image_url": "https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8",
-              "default_action": {
-                "type": "web_url",
-                "url": "https://m.me/nossaresistencia?ref=invited_by_24601"
-              },
               "buttons": [
                 {
                   "type": "element_share",
                 }, {
                   "type": "web_url",
-                  "url": "https://m.me/beta.staging",
+                  "url": botData.data.m_me || "https://m.me/beta.staging",
                   "title": "Falar com a Beta",
                 },
               ],
@@ -141,4 +142,4 @@ export default {
       },
     },
   },
-}
+})
