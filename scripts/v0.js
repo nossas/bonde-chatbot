@@ -126,7 +126,7 @@ export default botData => ({
             {
               "title": "A maior aliada feminista nas redes",
               "subtitle": "Chama a Beta no inbox",
-              "image_url": "https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8",
+              "image_url": botData.data.image_url || "https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8",
               "buttons": [
                 {
                   "type": "element_share",
