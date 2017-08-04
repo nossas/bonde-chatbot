@@ -119,9 +119,9 @@ export default {
           "template_type": "generic",
           "elements": [
             {
-              "title": "Chatbot",
-              "subtitle": "Compartilhe com seus amigos essa experiência",
-              "image_url": "https://media.npr.org/assets/img/2017/03/07/istock-483372803_wide-c63de91cb2eb048feef4c223401bef251fac0841.jpg",
+              "title": "A maior aliada feminista nas redes",
+              "subtitle": "Chama a Beta no inbox",
+              "image_url": "https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8",
               "default_action": {
                 "type": "web_url",
                 "url": "https://m.me/nossaresistencia?ref=invited_by_24601"
@@ -131,8 +131,8 @@ export default {
                   "type": "element_share",
                 }, {
                   "type": "web_url",
-                  "url": "https://m.me/nossaresistencia?ref=invited_by_24601",
-                  "title": "Iniciar conversa",
+                  "url": "https://m.me/beta.staging",
+                  "title": "Falar com a Beta",
                 },
               ],
             },
