@@ -10,8 +10,6 @@ pipeline:
     image: plugins/docker
     repo: nossas/bonde-bot
     secrets: [ docker_username, docker_password ]
-    username: lpirola
-    password: ${DOCKER_PASSWORD}
     tags:
       - ${DRONE_BRANCH}
     when:
@@ -37,8 +35,6 @@ pipeline:
     image: plugins/docker
     repo: nossas/bonde-bot
     secrets: [ docker_username, docker_password ]
-    username: lpirola
-    password: ${DOCKER_PASSWORD}
     tags:
       - ${DRONE_TAG##v}
     when:
