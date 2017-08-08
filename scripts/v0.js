@@ -6,6 +6,7 @@ import { replyText } from './utils'
 const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
 const ERROR_CRITICAL = 'ERROR_CRITICAL'
 const GET_STARTED = 'GET_STARTED'
+const HOW_IS_IT_GOING = 'HOW_IS_IT_GOING'
 const QUICK_REPLY_A = 'QUICK_REPLY_A'
 const QUICK_REPLY_B = 'QUICK_REPLY_B'
 const QUICK_REPLY_C = 'QUICK_REPLY_C'
@@ -25,8 +26,12 @@ const QUICK_REPLY_L = 'QUICK_REPLY_L'
 //
 export default botData => ({
   actions: {
+    [REPLY_UNDEFINED]: REPLY_UNDEFINED,
+    [ERROR_CRITICAL]: ERROR_CRITICAL,
     [GET_STARTED]: GET_STARTED,
-    [REPLY_UNDEFINED]: REPLY_UNDEFINED
+    [HOW_IS_IT_GOING]: HOW_IS_IT_GOING,
+    [QUICK_REPLY_B]: QUICK_REPLY_B,
+    [QUICK_REPLY_D]: QUICK_REPLY_D,
   },
   messages: {
     //
@@ -52,6 +57,9 @@ export default botData => ({
       quick_replies: [
         replyText('Vamos!', QUICK_REPLY_A),
       ],
+    },
+    [HOW_IS_IT_GOING]: {
+      text: 'Eu tô bem! Meus algoritmos estão mais afiados que nunca! ;)\nE aí, como vão as coisas? Tem um tempinho pra eu te explicar mais sobre o que tá rolando com os direitos das mulheres?',
     },
     [QUICK_REPLY_A]: {
       text: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode ;) Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
