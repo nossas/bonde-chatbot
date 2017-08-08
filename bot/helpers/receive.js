@@ -1,6 +1,6 @@
 import 'colors'
 import _ from 'underscore'
-import { Wit, log } from 'node-wit'
+import { client as aiClient } from '../ai'
 
 export default (bot, speech, botData) => (payload, reply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
@@ -11,11 +11,7 @@ export default (bot, speech, botData) => (payload, reply, action) => {
     if (typeof message === 'function') reply(message(profile))
     else if (message) reply(message)
     else {
-      const client = new Wit({
-        accessToken: process.env.WIT_SERVER_ACCESS_TOKEN,
-        logger: new log.Logger(log.DEBUG)
-      })
-      client.message(payload.message.text, {})
+      aiClient().message(payload.message.text, {})
         .then(({ entities }) => {
           const actionsMap = {
             'greeting': speech.actions.GET_STARTED,
@@ -28,7 +24,7 @@ export default (bot, speech, botData) => (payload, reply, action) => {
             ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
             : speech.actions.REPLY_UNDEFINED
 
-          console.log('reply action:', action)
+          console.log(`reply action to ${payload.sender.id}:`, action)
 
           reply(speech.messages[action])
         })
