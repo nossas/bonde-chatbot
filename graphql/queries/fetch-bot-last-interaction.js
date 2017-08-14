@@ -7,6 +7,7 @@ query fetchBotLastInteraction($recipientId: String!) {
       fbContextRecipientId: $recipientId
     }
     last: 1
+    orderBy: ID_ASC
   ) {
     interactions: nodes {
       id
