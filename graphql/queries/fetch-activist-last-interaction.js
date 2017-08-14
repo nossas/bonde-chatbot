@@ -2,22 +2,22 @@ import gql from 'graphql-tag'
 
 export default gql`
 query fetchActivistLastInteraction($recipientId: String!) {
-  activistsLastInteraction: allActivistFacebookBotInteractions(
+  activistInteractions: allFacebookActivistInteractions(
     condition: {
       fbContextRecipientId: $recipientId
-    }
+    },
+    orderBy: ID_ASC,
     last: 1
   ) {
-    activists: nodes {
+    interactions: nodes {
       id
       activistId
-      communityId
       facebookBotConfigurationId
       fbContextRecipientId
       fbContextSenderId
       interaction
-      facebookBotConfiguration
       createdAt
+      updatedAt
     }
   }
 }

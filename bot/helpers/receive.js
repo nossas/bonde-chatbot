@@ -11,6 +11,28 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) console.log(`${err}`.red)
 
+    // PRE-REPLY
+    if (process.env.SCRIPT_PATH === './scripts/v1.js') {
+      switch (action) {
+        case speech.actions.QUICK_REPLY_H:
+          graphqlClient.query({
+            fetchPolicy: 'network-only',
+            query: graphqlQueries.fetchActivistLastInteraction,
+            variables: { recipientId: payload.sender.id }
+          })
+            .then(({ data: { activistInteractions: { interactions } } }) => {
+              const [last] = interactions
+              const interaction = JSON.parse(last.interaction)
+              console.log('do the pressure!')
+              console.log('message', interaction.event.message.text)
+            })
+            .catch(error => console.log(`${error}`.red))
+          break;
+      }
+    }
+    // REPLYING
+    // POST-REPLY
+
     //
     // reply function interface to save the bot's reply text
     // before send it to user.
@@ -52,19 +74,18 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
               const interaction = JSON.parse(last.interaction)
 
               if (interaction.isBot) {
-                if (['QUICK_REPLY_X', 'EMAIL_ADDRESS_WRONG'].includes(interaction.action)) {
-                  if (!isemail.validate(payload.message.text)) {
-                    reply(
-                      speech.messages[speech.actions.EMAIL_ADDRESS_WRONG],
-                      speech.actions.EMAIL_ADDRESS_WRONG
-                    )
-                  } else {
-                    reply(
-                      speech.messages[speech.actions.EMAIL_ADDRESS_OK],
-                      speech.actions.EMAIL_ADDRESS_OK
-                    )
-                  }
-                } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
+                switch (interaction.action) {
+                  case speech.actions.QUICK_REPLY_X:
+                  case speech.actions.EMAIL_ADDRESS_WRONG:
+                    const action = !isemail.validate(payload.message.text)
+                      ? speech.actions.EMAIL_ADDRESS_WRONG
+                      : speech.actions.EMAIL_ADDRESS_OK
+                    reply(speech.messages[action], action)
+                    break;
+
+                  default:
+                    reply(speech.messages[speech.actions.REPLY_UNDEFINED])
+                }
               } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
             }
           })
