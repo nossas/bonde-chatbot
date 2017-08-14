@@ -101,12 +101,12 @@ export default botData => ({
     [QUICK_REPLY_G]: {
       text: 'Agora só preciso que me digite seu e-mail.',
     },
-    [QUICK_REPLY_H]: {
-      text: 'Arrasou, FNAME! Sua mensagem acabou de ser enviada à caixa de entrada dos deputados. Mas pra nossa pressão ser eficaz, mais pessoas precisam abrir uma conversa comigo e enviar emails também! Posso contar contigo pra espalhar o link do meu chat e chamar a galera pra ação?',
+    [QUICK_REPLY_H]: profile => ({
+      text: `Arrasou, ${profile.first_name}! Sua mensagem acabou de ser enviada à caixa de entrada dos deputados. Mas pra nossa pressão ser eficaz, mais pessoas precisam abrir uma conversa comigo e enviar emails também! Posso contar contigo pra espalhar o link do meu chat e chamar a galera pra ação?`,
       quick_replies: [
         replyText('Mas é claro!', QUICK_REPLY_J)
       ]
-    },
+    }),
     [QUICK_REPLY_J]: {
       text: 'COMPARTILHAR NA TIMELINE',
     },
