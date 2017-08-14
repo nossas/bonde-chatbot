@@ -39,57 +39,59 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     if (typeof message === 'function') reply(message(profile), action)
     else if (message) reply(message, action)
     else {
-      graphqlClient.query({
-        fetchPolicy: 'network-only',
-        query: graphqlQueries.fetchBotLastInteraction,
-        variables: { recipientId: payload.sender.id }
-      })
-        .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
-          const [last] = interactions
+      if (process.env.SCRIPT_PATH === './scripts/v1.js') {
+        graphqlClient.query({
+          fetchPolicy: 'network-only',
+          query: graphqlQueries.fetchBotLastInteraction,
+          variables: { recipientId: payload.sender.id }
+        })
+          .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
+            const [last] = interactions
 
-          if (last.interaction) {
-            const lastInteraction = JSON.parse(last.interaction)
+            if (last.interaction) {
+              const interaction = JSON.parse(last.interaction)
 
-            if (lastInteraction.isBot) {
-              if (['QUICK_REPLY_X', 'EMAIL_ADDRESS_WRONG'].includes(lastInteraction.action)) {
-                if (!isemail.validate(payload.message.text)) {
-                  reply(
-                    speech.messages[speech.actions.EMAIL_ADDRESS_WRONG],
-                    speech.actions.EMAIL_ADDRESS_WRONG
-                  )
-                } else {
-                  reply(
-                    speech.messages[speech.actions.EMAIL_ADDRESS_OK],
-                    speech.actions.EMAIL_ADDRESS_OK
-                  )
-                }
+              if (interaction.isBot) {
+                if (['QUICK_REPLY_X', 'EMAIL_ADDRESS_WRONG'].includes(interaction.action)) {
+                  if (!isemail.validate(payload.message.text)) {
+                    reply(
+                      speech.messages[speech.actions.EMAIL_ADDRESS_WRONG],
+                      speech.actions.EMAIL_ADDRESS_WRONG
+                    )
+                  } else {
+                    reply(
+                      speech.messages[speech.actions.EMAIL_ADDRESS_OK],
+                      speech.actions.EMAIL_ADDRESS_OK
+                    )
+                  }
+                } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
               } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
-            } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
-          }
-        })
-        .catch(error => console.log(`${error}`.red))
+            }
+          })
+          .catch(error => console.log(`${error}`.red))
 
-      aiClient().message(payload.message.text, {})
-        .then(({ entities }) => {
-          const actionsMap = {
-            'greeting': speech.actions.GET_STARTED,
-            'how_are_you': speech.actions.HOW_IS_IT_GOING,
-            'yes': speech.actions.QUICK_REPLY_B,
-            'explain_pec_29': speech.actions.QUICK_REPLY_D,
-          }
+        aiClient().message(payload.message.text, {})
+          .then(({ entities }) => {
+            const actionsMap = {
+              'greeting': speech.actions.GET_STARTED,
+              'how_are_you': speech.actions.HOW_IS_IT_GOING,
+              'yes': speech.actions.QUICK_REPLY_B,
+              'explain_pec_29': speech.actions.QUICK_REPLY_D,
+            }
 
-          const action = !_.isEmpty(entities)
-            ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
-            : speech.actions.REPLY_UNDEFINED
+            const action = !_.isEmpty(entities)
+              ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
+              : speech.actions.REPLY_UNDEFINED
 
-          console.log(`reply action to ${payload.sender.id}:`, action)
+            console.log(`reply action to ${payload.sender.id}:`, action)
 
-          reply(speech.messages[action])
-        })
-        .catch(err => {
-          reply(speech.messages[speech.actions.ERROR_CRITICAL])
-          console.error(`${err}`.red)
-        })
+            reply(speech.messages[action])
+          })
+          .catch(err => {
+            reply(speech.messages[speech.actions.ERROR_CRITICAL])
+            console.error(`${err}`.red)
+          })
+      }
     }
   })
 }
