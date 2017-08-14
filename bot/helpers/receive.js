@@ -80,6 +80,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     if (typeof message === 'function') reply(message(profile), action)
     else if (message) reply(message, action)
     else {
+      const replyUndefined = () => reply(speech.messages[speech.actions.REPLY_UNDEFINED])
       if (process.env.SCRIPT_PATH === './scripts/v1.js') {
         graphqlClient.query({
           fetchPolicy: 'network-only',
@@ -89,7 +90,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
           .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
             const [last] = interactions
 
-            if (last.interaction) {
+            if (last && last.interaction) {
               const interaction = JSON.parse(last.interaction)
 
               if (interaction.isBot) {
@@ -103,10 +104,10 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
                     break;
 
                   default:
-                    reply(speech.messages[speech.actions.REPLY_UNDEFINED])
+                    replyUndefined()
                 }
-              } else reply(speech.messages[speech.actions.REPLY_UNDEFINED])
-            }
+              } else replyUndefined()
+            } else replyUndefined()
           })
           .catch(error => console.log(`${error}`.red))
 
