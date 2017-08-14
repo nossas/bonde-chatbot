@@ -1,8 +1,9 @@
 import 'colors'
 import _ from 'underscore'
-import { client as aiClient } from '../ai'
 import escapeJSON from 'escape-json-node'
+import request from 'request'
 import isemail from 'isemail'
+import { client as aiClient } from '../ai'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlMutations from '../../graphql/mutations'
 import * as graphqlQueries from '../../graphql/queries'
@@ -11,7 +12,6 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) console.log(`${err}`.red)
 
-    // PRE-REPLY
     if (process.env.SCRIPT_PATH === './scripts/v1.js') {
       switch (action) {
         case speech.actions.QUICK_REPLY_H:
@@ -23,15 +23,34 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
             .then(({ data: { activistInteractions: { interactions } } }) => {
               const [last] = interactions
               const interaction = JSON.parse(last.interaction)
-              console.log('do the pressure!')
-              console.log('message', interaction.event.message.text)
+
+              const pressurePayload = {
+                "fill": {
+                  "activist": {
+                    "firstname": profile.first_name,
+                    "lastname": profile.last_name,
+                    "email": interaction.event.message.text
+                  },
+                  "mail": {
+                    "cc": [
+                      "gabriel@nossas.org",
+                      "gabrielrtakeda@gmail.com",
+                      "gabrielrtakeda@gmail.com"
+                    ],
+                    "subject": "Pressão Feita Direto Pela API",
+                    "body": "Usando client Insomnia"
+                  }
+                }
+              }
+              request.post(
+                `${process.env.API_URL}/widgets/${botData.data.pressure_widget_id}/fill`,
+                { form: pressurePayload }
+              )
             })
             .catch(error => console.log(`${error}`.red))
           break;
       }
     }
-    // REPLYING
-    // POST-REPLY
 
     //
     // reply function interface to save the bot's reply text
