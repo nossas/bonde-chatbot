@@ -29,7 +29,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
                   "activist": {
                     "firstname": profile.first_name,
                     "lastname": profile.last_name,
-                    "email": interaction.event.message.text
+                    "email": interaction.payload.message.text
                   },
                   "mail": {
                     "cc": [
@@ -57,10 +57,6 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     // before send it to user.
     //
     const reply = (message, action) => {
-      //
-      // In this case, the `sender.id` is the user's recipient.id
-      // and, the `recipient.id` is the page's recipient.id
-      //
       const interaction = {
         facebook_bot_configuration_id: botData.id,
         fb_context_recipient_id: payload.sender.id,

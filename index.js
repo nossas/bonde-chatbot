@@ -42,7 +42,6 @@ const fabricated = new BotFactory(app, speech, credentials)
     // Set up express endpoints for each for
     //
     bots.forEach(({ id, bot, endpoint }) => {
-      app.post(endpoint, botMiddlewares.saveReceivedInteraction(bot))
       app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
       app.post(endpoint, botMiddlewares.handleMessage(bot))
       app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot))
