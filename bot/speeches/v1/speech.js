@@ -75,13 +75,13 @@ export default botData => ({
         replyText('Quero agir já!', QUICK_REPLY_A),
       ],
     },
-    [QUICK_REPLY_C]: {
-      text: 'Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: [TEXTO]. Concorda?',
+    [QUICK_REPLY_C]: () => ({
+      text: `Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: *${(botData.data.pressure && global.widgets[botData.data.pressure.widget_id].settings.pressure_body.replace(/\n/g, '').slice(0, 540)) || '[TEXTO]'}* Concorda?`,
       quick_replies: [
         replyText('Concordo!', QUICK_REPLY_X),
         replyText('Não curti…', QUICK_REPLY_E),
       ],
-    },
+    }),
     [QUICK_REPLY_D]: {
       text: 'É o seguinte: eu fui programada pra disparar emails aqui mesmo, pelo inbox do Facebook. Não é feitiçaria, é tecnologia! ;) Antes de fazer seu email chegar aos deputados, eu vou te mostrar a mensagem que programei pra eles. Com o seu ok e o seu endereço de email, faço o recado chegar até lá.',
       quick_replies: [
@@ -92,13 +92,13 @@ export default botData => ({
     [QUICK_REPLY_E]: {
       text: 'Tranquilo, mana! Se mudar de ideia, me chama novamente ;)',
     },
-    [QUICK_REPLY_F]: {
-      text: 'Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: [TEXTO]. Concorda?',
+    [QUICK_REPLY_F]: () => ({
+      text: `Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: *${(botData.data.pressure && global.widgets[botData.data.pressure.widget_id].settings.pressure_body.replace(/\n/g, '').slice(0, 540)) || '[TEXTO]'}* Concorda?`,
       quick_replies: [
         replyText('Concordo!', QUICK_REPLY_G),
         replyText('Não curti…', QUICK_REPLY_E),
       ],
-    },
+    }),
     [QUICK_REPLY_G]: {
       text: 'Agora só preciso que me digite seu e-mail.',
     },
