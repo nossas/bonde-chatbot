@@ -87,7 +87,7 @@ export default class BotFactory {
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))
 
-        return { id, bot, endpoint }
+        return { id, bot, endpoint, botData }
       })
     })
   }

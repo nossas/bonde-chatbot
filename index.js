@@ -7,9 +7,15 @@ import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
+import request from 'request'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
 import * as routes from './routes'
+
+//
+// Globals
+//
+global.widgets = {}
 
 //
 // Setup Express server
@@ -38,15 +44,39 @@ const credentials = {
 const fabricated = new BotFactory(app, speech, credentials)
   .fabricate()
   .then(bots => {
-    //
-    // Set up express endpoints for each for
-    //
-    bots.forEach(({ id, bot, endpoint }) => {
+    bots.forEach(({ id, bot, endpoint, botData }) => {
+      //
+      // Set up express endpoints for each bot
+      //
       app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
       app.post(endpoint, botMiddlewares.handleMessage(bot))
       app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot))
 
-      console.log(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
+      //
+      // Set up pressure stuff
+      //
+      if (botData.data.pressure) {
+        const {
+          custom_domain: customDomain,
+          widget_id: widgetId,
+          slug,
+        } = botData.data.pressure
+
+        request({
+          url: `${process.env.API_URL}/widgets`,
+          qs: customDomain ? { custom_domain: customDomain } : { slug },
+          json: true,
+        },
+        (e, r, widgets) => {
+          if (widgets.constructor === Array) {
+            const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
+
+            global.widgets[widgetId] = widget
+          } else console.error('The API result is not an array'.red)
+        })
+      } else console.error('No pressure object defined on bot config data'.red)
+
+      console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
   })
 
@@ -63,5 +93,5 @@ app.use('/mass-message', routes.massMessage)
 fabricated.then(() => {
   const port = process.env.PORT || 5000
   Http.createServer(app).listen(port)
-  console.log(`🤖  Bot server running at port ${port}`)
+  console.info(`🤖  Bot server running at port ${port}`)
 })
