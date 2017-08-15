@@ -1,13 +1,13 @@
 import gql from 'graphql-tag'
 
 export default gql`
-query fetchActivistLastInteraction($recipientId: String!) {
+query fetchActivistLastInteraction($last: Int!, $recipientId: String!) {
   activistInteractions: allFacebookActivistInteractions(
     condition: {
       fbContextRecipientId: $recipientId
     },
     orderBy: ID_ASC,
-    last: 1
+    last: $last
   ) {
     interactions: nodes {
       id

@@ -18,7 +18,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
           graphqlClient.query({
             fetchPolicy: 'network-only',
             query: graphqlQueries.fetchActivistLastInteraction,
-            variables: { recipientId: payload.sender.id }
+            variables: { last: 2, recipientId: payload.sender.id }
           })
             .then(({ data: { activistInteractions: { interactions } } }) => {
               const [last] = interactions
