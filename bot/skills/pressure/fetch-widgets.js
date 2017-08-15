@@ -1,5 +1,6 @@
 import 'colors'
-import request from 'request'
+import axios from 'axios'
+import querystring from 'querystring'
 
 export default ({ botData }) => {
   if (botData.data.pressure) {
@@ -9,19 +10,18 @@ export default ({ botData }) => {
       slug,
     } = botData.data.pressure
 
-    const url = `${process.env.API_URL}/widgets`
     const qs = customDomain ? { custom_domain: customDomain } : { slug }
-    const callback = (error, response, widgets) => {
-      if (error) return console.error(`${error}`.red)
+    const url = `${process.env.API_URL}/widgets?${querystring.stringify(qs)}`
 
-      if (widgets.constructor === Array) {
-        const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
-        global.widgets[widgetId] = widget
-      }
-      else console.error('The API result is not an array'.red)
-    }
-
-    request({ url, qs, json: true }, callback)
+    axios(url)
+      .then(({ data: widgets }) => {
+        if (widgets.constructor === Array) {
+          const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
+          global.widgets[widgetId] = widget
+        }
+        else console.error('The API result is not an array'.red)
+      })
+      .catch(error => console.error(`${error}`.red))
   }
   else console.error('No pressure object defined on bot config data'.red)
 }

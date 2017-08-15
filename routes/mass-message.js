@@ -1,5 +1,5 @@
 import express from 'express'
-import request from 'request'
+import axios from 'axios'
 import _ from 'underscore'
 import dateformat from 'dateformat'
 import { isAuthenticated } from './middlewares'
@@ -61,7 +61,7 @@ router.post('/send', (req, res) => {
   const promises = _.toArray(_.mapObject(grouping, (value, key) => {
     const endpoint = `${process.env.APP_DOMAIN}/${key}/mass-message/send`
     const recipients = value.map(value => value.fbContextRecipientId)
-    return request.post(endpoint, { form: { recipients, message } })
+    return axios.post(endpoint, { recipients, message })
   }))
 
   Promise.all(promises)

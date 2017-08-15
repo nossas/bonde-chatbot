@@ -1,5 +1,5 @@
 import 'colors'
-import request from 'request'
+import axios from 'axios'
 
 export default ({ profile, botData, interaction }) => {
   if (botData.data.pressure) {
@@ -23,8 +23,8 @@ export default ({ profile, botData, interaction }) => {
         }
 
         const url = `${process.env.API_URL}/widgets/${widgetId}/fill`
-        const payload = { form: { fill: { activist, mail } } }
-        request.post(url, payload)
+        const payload = { fill: { activist, mail } }
+        axios.post(url, payload)
       }
       else console.error('The widget_id specified on bot config do not match'.red)
     }
