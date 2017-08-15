@@ -36,7 +36,7 @@ app.use(ExpressSession({
 //
 // Bots fabrication
 //
-const speech = require(process.env.SCRIPT_PATH || './scripts/v0.js').default
+const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
 const credentials = {
   email: process.env.SERVER_AUTH_EMAIL,
   password: process.env.SERVER_AUTH_PASSWORD

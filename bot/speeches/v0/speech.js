@@ -1,4 +1,4 @@
-import { replyText } from './utils'
+import { replyText } from '../utils'
 
 //
 // Constants
@@ -25,6 +25,7 @@ const QUICK_REPLY_L = 'QUICK_REPLY_L'
 // @return {Object} The bot actions and messages.
 //
 export default botData => ({
+  version: 'v0',
   actions: {
     [REPLY_UNDEFINED]: REPLY_UNDEFINED,
     [ERROR_CRITICAL]: ERROR_CRITICAL,

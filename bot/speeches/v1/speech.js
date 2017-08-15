@@ -1,4 +1,4 @@
-import { replyText } from './utils'
+import { replyText } from '../utils'
 
 //
 // Constants
@@ -25,6 +25,7 @@ const EMAIL_ADDRESS_OK = 'EMAIL_ADDRESS_OK'
 // @return {Object} The bot actions and messages.
 //
 export default botData => ({
+  version: 'v1',
   actions: {
     [GET_STARTED]: GET_STARTED,
     [REPLY_UNDEFINED]: REPLY_UNDEFINED,

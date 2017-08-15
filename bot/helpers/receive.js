@@ -6,51 +6,44 @@ import isemail from 'isemail'
 import { client as aiClient } from '../ai'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlQueries from '../../graphql/queries'
-import * as botInteractions from '../interactions'
+import * as botHelpers from '../helpers'
 import * as botSkills from '../skills'
+import * as botSpeeches from '../speeches'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
+  //
+  // Wraps the original reply function with the behaviour
+  // to save the user's interaction.
+  //
+  const reply = botHelpers.replyWithSave({ botData, payload, originalReply })
+
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) console.error(`${err}`.red)
 
-    if (process.env.SCRIPT_PATH === './scripts/v1.js') {
-      switch (action) {
-        case speech.actions.QUICK_REPLY_H:
-          graphqlClient.query({
-            fetchPolicy: 'network-only',
-            query: graphqlQueries.fetchActivistLastInteraction,
-            variables: { last: 2, recipientId: payload.sender.id }
-          })
-            .then(({ data: { activistInteractions: { interactions } } }) => {
-              const [last] = interactions
-              const interaction = JSON.parse(last.interaction)
-
-              botSkills.pressure.send({ profile, botData, interaction })
-            })
-            .catch(error => console.error(`${error}`.red))
-          break;
-      }
-    }
+    //
+    // Speech action strategy
+    //
+    const actions =  botSpeeches.actionStrategy({ speech, action, payload, profile, botData })
+    actions.ensure()
 
     //
-    // reply function interface to save the bot's reply text
-    // before send it to user.
+    // Speech message based on received quick reply action
     //
-    const reply = (message, action) => {
-      const interaction = { is_bot: true, message, action }
-
-      botInteractions.save({ botData, payload, interaction })
-        .then(data => { originalReply(message); return data })
-        .catch(error => console.error(`${error}`.red))
-    }
-
     const message = speech.messages[action]
+
 
     if (typeof message === 'function') reply(message(profile), action)
     else if (message) reply(message, action)
     else {
-      const replyUndefined = () => reply(speech.messages[speech.actions.REPLY_UNDEFINED])
-      if (process.env.SCRIPT_PATH === './scripts/v1.js') {
+      const replyUndefined = () => reply(
+        speech.messages[speech.actions.REPLY_UNDEFINED],
+        speech.actions.REPLY_UNDEFINED
+      )
+
+      if (process.env.SPEECH_VERSION === 'v1') {
+        //
+        // User interaction actions
+        //
         graphqlClient.query({
           fetchPolicy: 'network-only',
           query: graphqlQueries.fetchBotLastInteraction,
