@@ -5,8 +5,8 @@ import request from 'request'
 import isemail from 'isemail'
 import { client as aiClient } from '../ai'
 import { client as graphqlClient } from '../../graphql'
-import * as graphqlMutations from '../../graphql/mutations'
 import * as graphqlQueries from '../../graphql/queries'
+import * as botInteractions from '../interactions'
 import * as botSkills from '../skills'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
@@ -37,16 +37,9 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     // before send it to user.
     //
     const reply = (message, action) => {
-      const interaction = {
-        facebook_bot_configuration_id: botData.id,
-        fb_context_recipient_id: payload.sender.id,
-        fb_context_sender_id: payload.recipient.id,
-        interaction: { is_bot: true, message, action }
-      }
-      graphqlClient.mutate({
-        mutation: graphqlMutations.createBotInteraction,
-        variables: { interaction: JSON.stringify(interaction) }
-      })
+      const interaction = { is_bot: true, message, action }
+
+      botInteractions.save({ botData, payload, interaction })
         .then(data => { originalReply(message); return data })
         .catch(error => console.error(`${error}`.red))
     }

@@ -1,8 +1,6 @@
 import 'colors'
-import escapeJSON from 'escape-json-node'
-import { client as graphqlClient } from '../../graphql'
-import * as graphqlMutations from '../../graphql/mutations'
 import * as botHelpers from '../helpers'
+import * as botInteractions from '../interactions'
 import * as botMiddlewares from '../middlewares'
 
 const payloadValidator = payload => {
@@ -35,19 +33,14 @@ export default (bot, speech, botData) => (payload, reply) => {
     : message.payload
 
   //
-  // Save each user interaction
+  // Save user interaction
   //
   bot.getProfile(payload.sender.id, (err, profile) => {
-    const interaction = {
-      facebook_bot_configuration_id: botData.id,
-      fb_context_recipient_id: payload.sender.id,
-      fb_context_sender_id: payload.recipient.id,
-      interaction: { profile, payload }
-    }
-    graphqlClient.mutate({
-      mutation: graphqlMutations.createBotInteraction,
-      variables: { interaction: escapeJSON(JSON.stringify(interaction)) }
-    })
+    if (err) return console.log(`${err}`.red)
+
+    const interaction = { profile, payload }
+
+    botInteractions.save({ botData, payload, interaction })
       .then(result => {
         botHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
