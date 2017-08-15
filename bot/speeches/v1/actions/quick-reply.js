@@ -2,10 +2,19 @@ import { client as graphqlClient } from '../../../../graphql'
 import * as graphqlQueries from '../../../../graphql/queries'
 import * as botSkills from '../../../skills'
 
+//
+// Quick reply actions
+//
+// @param [required] speech {Object} Factory specified bot's speech object
+// @param [required] action {String} Quick reply action key received by Facebook Messenger webhook
+// @param [required] payload {Object} Facebook messenger API received request payload object
+// @param [required] profile {Object} User's profile object received by Facebook Messenger API
+// @param [required] botData {Object} Bot's config data object
+// @return {Boolean} Tells if any action was dispatched
+//
 export default ({ speech, action, payload, profile, botData }) => {
-  //
-  // Quick reply actions
-  //
+  let dispatched = false
+
   switch (action) {
     case speech.actions.QUICK_REPLY_H:
       graphqlClient.query({
@@ -20,6 +29,9 @@ export default ({ speech, action, payload, profile, botData }) => {
           botSkills.pressure.send({ profile, botData, interaction })
         })
         .catch(error => console.error(`${error}`.red))
+      dispatched = true
       break;
   }
+
+  return dispatched
 }

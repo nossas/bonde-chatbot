@@ -9,22 +9,41 @@ import _ from 'underscore'
 // @param [required] payload {Object} Facebook messenger API received request payload object
 // @param [required] profile {Object} User's profile object received by Facebook Messenger API
 // @param [required] botData {Object} Bot's config data object
+// @param [required] reply {Function} Messenger bot's reply function
 // @return void
 //
-export default ({ speech, action, payload, profile, botData }) => ({
-  //
-  // Ensure that the action will be dispatched even if the action
-  // is not an actio to reply the user. e.g. pressure action
-  //
-  ensure: () => {
-    const actions = require(`./${speech.version}/actions`)
+export default ({ speech, action, payload, profile, botData, reply }) => {
+  let actions
+  try { actions = require(`./${speech.version}/actions`) }
+  catch (e) {}
 
-    console.log('actions', actions)
+  return {
+    //
+    // The action will be dispatched anywhere. Even if the action
+    // is not an action to reply the user. e.g. pressure action
+    //
+    // @return {Boolean} Tells if any action was dispatched
+    //
+    anywhere: () => {
+      let result = false
+      if (actions && actions.quickReply) {
+        result = actions.quickReply({ speech, action, payload, profile, botData })
+      }
+      return result
+    },
 
-    _.map(actions, (dispatchAction, type) => {
-      dispatchAction({ speech, action, payload, profile, botData })
-    })
-  },
-
-  afterReply: () => {}
-})
+    //
+    // Ensure that the user will be replied. Even if the action
+    // is a simple undefined message.
+    //
+    // @return {Boolean} Tells if any action was dispatched
+    //
+    ensure: () => {
+      let result = Promise.resolve(false)
+      if (actions && actions.userInteraction) {
+        result = actions.userInteraction({ speech, payload, reply })
+      }
+      return result
+    }
+  }
+}
