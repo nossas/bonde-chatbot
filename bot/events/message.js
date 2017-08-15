@@ -13,10 +13,10 @@ export default (bot, speech, botData) => (payload, reply) => {
   // Validate payload
   //
   if (!message) {
-    console.log(`Webhook received unknown payload: ${payload}`.red)
+    console.error(`Webhook received unknown payload: ${payload}`.red)
     return
   } else if (message.is_echo) {
-    console.log(
+    console.info(
       'Received echo for message %s and app %d with metadata %s',
       message.mid,
       message.app_id,
@@ -36,7 +36,7 @@ export default (bot, speech, botData) => (payload, reply) => {
   // Save user interaction
   //
   bot.getProfile(payload.sender.id, (err, profile) => {
-    if (err) return console.log(`${err}`.red)
+    if (err) return console.error(`${err}`.red)
 
     const interaction = { profile, payload }
 
@@ -45,6 +45,6 @@ export default (bot, speech, botData) => (payload, reply) => {
         botHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
       })
-      .catch(error => console.log(`${error}`.red))
+      .catch(error => console.error(`${error}`.red))
   })
 }

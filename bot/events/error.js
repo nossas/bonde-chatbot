@@ -1,5 +1,5 @@
 import 'colors'
 
 export default (bot, speech, botData) => err => {
-  console.log(`Beta handle error ${err.message}`.red)
+  console.error(`Beta handle error ${err.message}`.red)
 }

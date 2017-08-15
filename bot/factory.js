@@ -31,7 +31,7 @@ export default class BotFactory {
       }
     })
       .then(({ data: { authenticate: { jwtToken } } }) => jwtToken)
-      .catch(error => console.log(`${error}`.red))
+      .catch(error => console.error(`${error}`.red))
   }
 
   //
@@ -46,7 +46,7 @@ export default class BotFactory {
         query: graphqlQueries.fetchBotConfigurations
       })
         .then(data => data)
-        .catch(error => console.log(`${error}`.red))
+        .catch(error => console.error(`${error}`.red))
     })
   }
 
