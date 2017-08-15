@@ -9,7 +9,7 @@ import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
-import * as botPressure from './bot/pressure'
+import * as botSkills from './bot/skills'
 import * as routes from './routes'
 
 //
@@ -55,7 +55,7 @@ const fabricated = new BotFactory(app, speech, credentials)
       //
       // Set up pressure stuff
       //
-      botPressure.fetchWidgets({ botData })
+      botSkills.pressure.fetchWidgets({ botData })
 
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })

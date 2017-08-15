@@ -7,7 +7,7 @@ import { client as aiClient } from '../ai'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlMutations from '../../graphql/mutations'
 import * as graphqlQueries from '../../graphql/queries'
-import * as botPressure from '../pressure'
+import * as botSkills from '../skills'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
@@ -25,7 +25,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
               const [last] = interactions
               const interaction = JSON.parse(last.interaction)
 
-              botPressure.send({ profile, botData, interaction })
+              botSkills.pressure.send({ profile, botData, interaction })
             })
             .catch(error => console.error(`${error}`.red))
           break;
