@@ -7,9 +7,9 @@ import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
-import request from 'request'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
+import * as botPressure from './bot/pressure'
 import * as routes from './routes'
 
 //
@@ -55,26 +55,7 @@ const fabricated = new BotFactory(app, speech, credentials)
       //
       // Set up pressure stuff
       //
-      if (botData.data.pressure) {
-        const {
-          custom_domain: customDomain,
-          widget_id: widgetId,
-          slug,
-        } = botData.data.pressure
-
-        request({
-          url: `${process.env.API_URL}/widgets`,
-          qs: customDomain ? { custom_domain: customDomain } : { slug },
-          json: true,
-        },
-        (e, r, widgets) => {
-          if (widgets.constructor === Array) {
-            const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
-
-            global.widgets[widgetId] = widget
-          } else console.error('The API result is not an array'.red)
-        })
-      } else console.error('No pressure object defined on bot config data'.red)
+      botPressure.fetchWidgets({ botData })
 
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })

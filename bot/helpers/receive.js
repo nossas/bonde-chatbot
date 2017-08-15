@@ -7,6 +7,7 @@ import { client as aiClient } from '../ai'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlMutations from '../../graphql/mutations'
 import * as graphqlQueries from '../../graphql/queries'
+import * as botPressure from '../pressure'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
@@ -24,36 +25,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
               const [last] = interactions
               const interaction = JSON.parse(last.interaction)
 
-              if (botData.data.pressure) {
-                const { widget_id: widgetId } = botData.data.pressure
-
-                if (widgetId) {
-                  const widget = global.widgets[widgetId]
-
-                  if (widget) {
-                    const { settings } = widget
-
-                    const activist = {
-                      firstname: profile.first_name,
-                      lastname: profile.last_name,
-                      email: interaction.payload.message.text
-                    }
-                    const mail = {
-                      "cc": settings.targets.split(';'),
-                      "subject": settings.pressure_subject,
-                      "body": settings.pressure_body
-                    }
-
-                    //
-                    // Do the pressure!
-                    //
-                    request.post(
-                      `${process.env.API_URL}/widgets/${widgetId}/fill`,
-                      { form: { fill: { activist, mail } } }
-                    )
-                  } else console.error('The widget_id specified on bot config do not match'.red)
-                } else console.error('The widget_id was not specified'.red)
-              } else console.error('No pressure object defined on bot config data'.red)
+              botPressure.send({ profile, botData, interaction })
             })
             .catch(error => console.error(`${error}`.red))
           break;
