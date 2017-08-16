@@ -6,6 +6,7 @@ import { replyText } from '../utils'
 const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
 const ERROR_CRITICAL = 'ERROR_CRITICAL'
 const GET_STARTED = 'GET_STARTED'
+const HOW_IS_IT_GOING = 'HOW_IS_IT_GOING'
 const QUICK_REPLY_A = 'QUICK_REPLY_A'
 const QUICK_REPLY_B = 'QUICK_REPLY_B'
 const QUICK_REPLY_C = 'QUICK_REPLY_C'
@@ -27,8 +28,9 @@ const EMAIL_ADDRESS_OK = 'EMAIL_ADDRESS_OK'
 export default botData => ({
   version: 'v1',
   actions: {
-    [GET_STARTED]: GET_STARTED,
     [REPLY_UNDEFINED]: REPLY_UNDEFINED,
+    [GET_STARTED]: GET_STARTED,
+    [HOW_IS_IT_GOING]: HOW_IS_IT_GOING,
     [QUICK_REPLY_H]: QUICK_REPLY_H,
     [QUICK_REPLY_X]: QUICK_REPLY_X,
     [EMAIL_ADDRESS_WRONG]: EMAIL_ADDRESS_WRONG,
@@ -59,6 +61,9 @@ export default botData => ({
         replyText('Quero agir já!', QUICK_REPLY_A),
         replyText('Conta mais?', QUICK_REPLY_B),
       ],
+    },
+    [HOW_IS_IT_GOING]: {
+      text: 'Eu tô bem! Meus algoritmos estão mais afiados que nunca! ;)\nE aí, como vão as coisas? Tem um tempinho pra eu te explicar mais sobre o que tá rolando com os direitos das mulheres?',
     },
     [QUICK_REPLY_A]: {
       text: 'A estratégia é a seguinte: vou usar meus algoritmos para inundar a caixa de emails dos 513 deputados federais com mensagens exigindo que eles votem contra esse PL cruel. Você sabe: político é que nem feijão, só funciona sob pressão. Posso disparar o seu recado para eles, aqui mesmo, do inbox. Vamos lá?',

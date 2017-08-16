@@ -1,6 +1,5 @@
 import 'colors'
-import _ from 'underscore'
-import { client as aiClient } from '../ai'
+import * as botAI from '../ai'
 import * as botHelpers from '../helpers'
 import * as botSpeeches from '../speeches'
 
@@ -31,29 +30,14 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     else {
       actions.ensure()
         .then(dispatched => {
-          if (!dispatched) {
-            aiClient().message(payload.message.text, {})
-              .then(({ entities }) => {
-                const actionsMap = {
-                  'greeting': speech.actions.GET_STARTED,
-                  'how_are_you': speech.actions.HOW_IS_IT_GOING,
-                  'yes': speech.actions.QUICK_REPLY_B,
-                  'explain_pec_29': speech.actions.QUICK_REPLY_D,
-                }
+          const { text } = payload.message
 
-                const action = !_.isEmpty(entities)
-                  ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
-                  : speech.actions.REPLY_UNDEFINED
-
-                console.log(`reply action to ${payload.sender.id}:`, action)
-
-                reply(speech.messages[action])
-              })
-              .catch(err => {
-                reply(speech.messages[speech.actions.ERROR_CRITICAL])
-                console.error(`${err}`.red)
-              })
-          }
+          !dispatched && botAI.client().message(text)
+            .then(botAI.resolvers.speechAction({ speech, reply }))
+            .catch(err => {
+              reply(speech.messages[speech.actions.ERROR_CRITICAL])
+              console.error(`${err}`.red)
+            })
         })
         .catch(error => console.error(`${error}`.red))
     }
