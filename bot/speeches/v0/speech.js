@@ -127,22 +127,21 @@ export default botData => ({
       ],
     },
     [QUICK_REPLY_L]: {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [
+      attachment: {
+        type: 'template',
+        payload: {
+          template_type: 'generic',
+          elements: [
             {
-              "title": "A maior aliada feminista nas redes",
-              "subtitle": "Chama a Beta no inbox",
-              "image_url": botData.data.image_url || "https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8",
-              "buttons": [
+              title: 'A maior aliada feminista nas redes',
+              subtitle: 'Chama a Beta no inbox',
+              image_url: botData.data.image_url || 'https://goo.gl/sboHN4',
+              buttons: [
+                { type: 'element_share' },
                 {
-                  "type": "element_share",
-                }, {
-                  "type": "web_url",
-                  "url": botData.data.m_me || "https://m.me/beta.staging",
-                  "title": "Falar com a Beta",
+                  type: 'web_url',
+                  url: botData.data.m_me || 'https://m.me/beta.feminista',
+                  title: 'Falar com a Beta',
                 },
               ],
             },

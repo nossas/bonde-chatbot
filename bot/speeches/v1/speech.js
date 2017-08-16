@@ -108,9 +108,28 @@ export default botData => ({
         replyText('Mas é claro!', QUICK_REPLY_J)
       ]
     }),
-    [QUICK_REPLY_J]: {
-      text: 'COMPARTILHAR NA TIMELINE',
-    },
+    [QUICK_REPLY_J]: ({
+      attachment: {
+        type: 'template',
+        payload: {
+          template_type: 'generic',
+          elements: [
+            {
+              title: 'A maior aliada feminista nas redes',
+              subtitle: 'Chama a Beta no inbox',
+              image_url: botData.data.image_url || 'https://goo.gl/sboHN4',
+              buttons: [
+                {
+                  type: 'web_url',
+                  url: `http://www.facebook.com/sharer.php?u=${encodeURI(`${process.env.APP_DOMAIN}/share`)}`,
+                  title: 'Compartilhar',
+                },
+              ],
+            },
+          ],
+        },
+      },
+    }),
     [QUICK_REPLY_X]: {
       text: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, isso não é um esquema pra você receber spam #realoficial. Só preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
     },
