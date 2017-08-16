@@ -30,33 +30,32 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     else if (message) reply(message, action)
     else {
       actions.ensure()
-        .then(dispatched => !dispatched && reply(
-          speech.messages[speech.actions.REPLY_UNDEFINED],
-          speech.actions.REPLY_UNDEFINED
-        ))
-        .catch(error => console.error(`${error}`.red))
+        .then(dispatched => {
+          if (!dispatched) {
+            aiClient().message(payload.message.text, {})
+              .then(({ entities }) => {
+                const actionsMap = {
+                  'greeting': speech.actions.GET_STARTED,
+                  'how_are_you': speech.actions.HOW_IS_IT_GOING,
+                  'yes': speech.actions.QUICK_REPLY_B,
+                  'explain_pec_29': speech.actions.QUICK_REPLY_D,
+                }
 
-      aiClient().message(payload.message.text, {})
-        .then(({ entities }) => {
-          const actionsMap = {
-            'greeting': speech.actions.GET_STARTED,
-            'how_are_you': speech.actions.HOW_IS_IT_GOING,
-            'yes': speech.actions.QUICK_REPLY_B,
-            'explain_pec_29': speech.actions.QUICK_REPLY_D,
+                const action = !_.isEmpty(entities)
+                  ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
+                  : speech.actions.REPLY_UNDEFINED
+
+                console.log(`reply action to ${payload.sender.id}:`, action)
+
+                reply(speech.messages[action])
+              })
+              .catch(err => {
+                reply(speech.messages[speech.actions.ERROR_CRITICAL])
+                console.error(`${err}`.red)
+              })
           }
-
-          const action = !_.isEmpty(entities)
-            ? actionsMap[entities.intent[0].value] || speech.actions.REPLY_UNDEFINED
-            : speech.actions.REPLY_UNDEFINED
-
-          console.log(`reply action to ${payload.sender.id}:`, action)
-
-          reply(speech.messages[action])
         })
-        .catch(err => {
-          reply(speech.messages[speech.actions.ERROR_CRITICAL])
-          console.error(`${err}`.red)
-        })
+        .catch(error => console.error(`${error}`.red))
     }
   })
 }
