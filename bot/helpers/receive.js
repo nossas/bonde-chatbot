@@ -11,7 +11,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
   const reply = botHelpers.replyWithSave({ botData, payload, originalReply })
 
   bot.getProfile(payload.sender.id, (err, profile) => {
-    if (err) console.error(`${err}`.red)
+    if (err) console.error(`${JSON.stringify(err)}`.red)
 
     //
     // Speech action strategy
@@ -36,10 +36,10 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
               reply(speech.messages[speech.actions.ERROR_CRITICAL])
-              console.error(`${err}`.red)
+              console.error(`${JSON.stringify(err)}`.red)
             })
         })
-        .catch(error => console.error(`${error}`.red))
+        .catch(err => console.error(`${JSON.stringify(err)}`.red))
     }
   })
 }

@@ -36,7 +36,7 @@ export default (bot, speech, botData) => (payload, reply) => {
   // Save user interaction
   //
   bot.getProfile(payload.sender.id, (err, profile) => {
-    if (err) return console.error(`${err}`.red)
+    if (err) return console.error(`${JSON.stringify(err)}`.red)
 
     const interaction = { profile, payload }
 
@@ -45,6 +45,6 @@ export default (bot, speech, botData) => (payload, reply) => {
         botHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
       })
-      .catch(error => console.error(`${error}`.red))
+      .catch(err => console.error(`${JSON.stringify(err)}`.red))
   })
 }

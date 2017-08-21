@@ -39,4 +39,4 @@ export default ({ speech, payload, reply }) => graphqlClient.query({
     }
     return dispatched
   })
-  .catch(error => console.error(`${error}`.red))
+  .catch(err => console.error(`${JSON.stringify(err)}`.red))

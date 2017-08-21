@@ -21,7 +21,7 @@ export default ({ botData }) => {
         }
         else console.error('The API result is not an array'.red)
       })
-      .catch(error => console.error(`${error}`.red))
+      .catch(err => console.error(`${JSON.stringify(err)}`.red))
   }
   else console.error('No pressure object defined on bot config data'.red)
 }

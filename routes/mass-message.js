@@ -47,7 +47,7 @@ router.get('/', isAuthenticated, (req, res) => {
 
       res.render('./mass-message/index', { bots, recipients, dateformat, appDomain })
     })
-    .catch(error => console.error(`${error}`.red))
+    .catch(err => console.error(`${JSON.stringify(err)}`.red))
 })
 
 router.post('/send', (req, res) => {
@@ -66,7 +66,7 @@ router.post('/send', (req, res) => {
 
   Promise.all(promises)
     .then(() => { res.end(JSON.stringify({ status: 'ok' })) })
-    .catch(err => console.error(`${err}`.red))
+    .catch(err => console.error(`${JSON.stringify(err)}`.red))
 })
 
 export default router

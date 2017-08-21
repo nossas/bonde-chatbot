@@ -9,5 +9,5 @@ export default ({ botData, payload, originalReply }) => (message, action) => {
 
   botInteractions.save({ botData, payload, interaction })
     .then(data => { originalReply(message); return data })
-    .catch(error => console.error(`${error}`.red))
+    .catch(err => console.error(`${JSON.stringify(err)}`.red))
 }

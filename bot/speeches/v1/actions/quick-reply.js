@@ -28,7 +28,7 @@ export default ({ speech, action, payload, profile, botData }) => {
 
           botSkills.pressure.send({ profile, botData, interaction })
         })
-        .catch(error => console.error(`${error}`.red))
+        .catch(err => console.error(`${JSON.stringify(err)}`.red))
       dispatched = true
       break;
   }
