@@ -1,5 +1,5 @@
 import { replyText } from '../utils'
-import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
+import * as botSpeeches from '../../speeches'
 
 //
 // Constants
@@ -33,73 +33,73 @@ export default botData => ({
     // Usuário abre conversa com a Beta no Messenger
     //
     [GET_STARTED]: {
-      text: aiMessages.I_AM_BETA,
+      text: botSpeeches.messages.I_AM_BETA,
       quick_replies: [
-        replyText(aiButtonTexts.LETS_GO, QUICK_REPLY_A),
+        replyText(botSpeeches.buttonTexts.LETS_GO, QUICK_REPLY_A),
       ],
     },
     [QUICK_REPLY_A]: {
-      text: aiMessages.INTRODUCE_MYSELF,
+      text: botSpeeches.messages.INTRODUCE_MYSELF,
       quick_replies: [
-        replyText(aiButtonTexts.TELL_ME, QUICK_REPLY_B),
-        replyText(aiButtonTexts.HASHTAG_BLUNTLY, QUICK_REPLY_C),
+        replyText(botSpeeches.buttonTexts.TELL_ME, QUICK_REPLY_B),
+        replyText(botSpeeches.buttonTexts.HASHTAG_BLUNTLY, QUICK_REPLY_C),
       ],
     },
     [QUICK_REPLY_B]: {
-      text: aiMessages.ASK_IF_WANT_TO_LEARN_MORE,
+      text: botSpeeches.messages.ASK_IF_WANT_TO_LEARN_MORE,
       quick_replies: [
-        replyText(aiButtonTexts.I_WANT, QUICK_REPLY_D),
-        replyText(aiButtonTexts.NOW_DOESNT_HAPPEN, QUICK_REPLY_G),
+        replyText(botSpeeches.buttonTexts.I_WANT, QUICK_REPLY_D),
+        replyText(botSpeeches.buttonTexts.NOW_DOESNT_HAPPEN, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_C]: {
-      text: aiMessages.STRAIGHT_TO_THE_WOMENS_RIGHTS,
+      text: botSpeeches.messages.STRAIGHT_TO_THE_WOMENS_RIGHTS,
       quick_replies: [
-        replyText(aiButtonTexts.IM_IN, QUICK_REPLY_E),
-        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
+        replyText(botSpeeches.buttonTexts.IM_IN, QUICK_REPLY_E),
+        replyText(botSpeeches.buttonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_D]: {
-      text: aiMessages.NASCITURO_BILL_AND_PEC_29,
+      text: botSpeeches.messages.NASCITURO_BILL_AND_PEC_29,
       quick_replies: [
-        replyText(aiButtonTexts.UNBELIEVABLE, QUICK_REPLY_F),
-        replyText(aiButtonTexts.HOW_TO_CRACK_IT_DOWN, QUICK_REPLY_E),
+        replyText(botSpeeches.buttonTexts.UNBELIEVABLE, QUICK_REPLY_F),
+        replyText(botSpeeches.buttonTexts.HOW_TO_CRACK_IT_DOWN, QUICK_REPLY_E),
       ],
     },
     [QUICK_REPLY_E]: {
-      text: aiMessages.ITS_NOT_SORCERY_ITS_TECHNOLOGY,
+      text: botSpeeches.messages.ITS_NOT_SORCERY_ITS_TECHNOLOGY,
       quick_replies: [
-        replyText(aiButtonTexts.I_WANT_TO_LEARN_MORE, QUICK_REPLY_H),
-        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
+        replyText(botSpeeches.buttonTexts.I_WANT_TO_LEARN_MORE, QUICK_REPLY_H),
+        replyText(botSpeeches.buttonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_F]: {
-      text: aiMessages.ASK_TO_HACK_THE_SYSTEM,
+      text: botSpeeches.messages.ASK_TO_HACK_THE_SYSTEM,
       quick_replies: [
-        replyText(aiButtonTexts.IM_IN, QUICK_REPLY_E),
-        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
+        replyText(botSpeeches.buttonTexts.IM_IN, QUICK_REPLY_E),
+        replyText(botSpeeches.buttonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_G]: {
-      text: aiMessages.NO_PROBLEM_CHECK_THE_WEBSITE,
+      text: botSpeeches.messages.NO_PROBLEM_CHECK_THE_WEBSITE,
     },
     [QUICK_REPLY_H]: {
-      text: aiMessages.HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH,
+      text: botSpeeches.messages.HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH,
       quick_replies: [
-        replyText(aiButtonTexts.SUPER, QUICK_REPLY_I),
+        replyText(botSpeeches.buttonTexts.SUPER, QUICK_REPLY_I),
       ],
     },
     [QUICK_REPLY_I]: {
-      text: aiMessages.NEED_MANY_PEOPLE,
+      text: botSpeeches.messages.NEED_MANY_PEOPLE,
       quick_replies: [
-        replyText(aiButtonTexts.COUNT_ME_IN_SIS, QUICK_REPLY_J),
+        replyText(botSpeeches.buttonTexts.COUNT_ME_IN_SIS, QUICK_REPLY_J),
       ],
     },
     [QUICK_REPLY_J]: {
-      text: aiMessages.ASK_TO_SHARE_UNTIL_WE_WATCH,
+      text: botSpeeches.messages.ASK_TO_SHARE_UNTIL_WE_WATCH,
       quick_replies: [
-        replyText(aiButtonTexts.SHARE, QUICK_REPLY_L),
-        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
+        replyText(botSpeeches.buttonTexts.SHARE, QUICK_REPLY_L),
+        replyText(botSpeeches.buttonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_L]: {

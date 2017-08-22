@@ -1,6 +1,6 @@
 import _ from 'underscore'
 import { replyText } from '../../speeches/utils'
-import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
+import * as botSpeeches from '../../speeches'
 
 export default ({ speech, reply }) => ({ entities }) => {
   const entity = !_.isEmpty(entities) && entities.intent[0].value
@@ -25,8 +25,8 @@ export default ({ speech, reply }) => ({ entities }) => {
   // (priority 2)
   //
   const intentRepliesMap = {
-    'how_are_you': aiMessages.HOW_IS_IT_GOING,
-    'explain_pec_29': aiMessages.NASCITURO_BILL_AND_PEC_29,
+    'how_are_you': botSpeeches.messages.HOW_IS_IT_GOING,
+    'explain_pec_29': botSpeeches.messages.NASCITURO_BILL_AND_PEC_29,
   }
   const intentEntity = intentRepliesMap[entity]
   const intentReply = !speechReply && intentEntity && { text: intentEntity }
@@ -36,9 +36,9 @@ export default ({ speech, reply }) => ({ entities }) => {
   // speech specific reply nor AI intent specific reply
   //
   const defaultReply = {
-    text: aiMessages.BACK_LATER,
+    text: botSpeeches.messages.BACK_LATER,
     quick_replies: [
-      replyText(aiButtonTexts.TRY_AGAIN, speech.actions.GET_STARTED),
+      replyText(botSpeeches.buttonTexts.TRY_AGAIN, speech.actions.GET_STARTED),
     ],
   }
 

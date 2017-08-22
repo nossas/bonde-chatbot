@@ -35,7 +35,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
           !dispatched && botAI.client().message(text)
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
-              reply({ text: botAI.messages.BUGGED_OUT })
+              reply({ text: botSpeeches.messages.BUGGED_OUT })
               console.error(`${JSON.stringify(err)}`.red)
             })
         })
