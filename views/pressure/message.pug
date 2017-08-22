@@ -14,22 +14,12 @@ block content
   section.header Mensagem aos deputados
 
   section.content
-    span.big Senhores deputados e senhoras deputadas,
-    br
-    br
-    | Uma grave ameaça aos direitos e à vida das mulheres, que tramita desde 2007 na Câmara Federal, em breve será votada. O Projeto de Lei 478, conhecido como Estatuto do Nascituro, busca garantir proteção jurídica integral à “vida” do nascituro desde o momento da concepção. Na prática, retira direitos conquistados pelas mulheres há ao menos 70 anos: interromper legalmente a gestação resultante de estupro e em casos de risco de vida para a gestante. Além de proibir o aborto em casos de fetos anencéfalos, direito reconhecido há 5 anos.
-    br
-    br
-    | A aprovação de tal projeto trará graves consequências para a vida e dignidade das mulheres: obrigar uma mulher vítima de estupro a seguir em frente com uma gestação indesejada é extremamente cruel e traumático. Pode-se dizer até que é uma segunda forma de violência contra essa mulher, dessa vez exercida pelo Estado.
-    br
-    br
-    | Tão cruel quanto isso é obrigar que uma mulher abra mão de sua própria vida e siga em frente com uma gravidez que a coloca em risco.
-    br
-    br
-    | Vale ressaltar que o Estatuto é também uma grave ameaça à liberdade de expressão, uma vez que condena criminalmente pessoas que defendem a legalização do aborto.
-    br
-    br
-    | Por isso, esperamos dos senhores e senhoras, enquanto representantes eleitos, que zelem pelo direito e pela vida de metade da população brasileira: as mulheres. Não podemos permitir tamanho retrocesso em direitos, nem deixar que o parlamento condene mulheres à morte, ao sofrimento, à tortura psicológica e à criminalização. Por isso, contamos com os senhores e senhoras para que vetem o Estatuto do Nascituro.
+    each line, index in pressureEmailBody.split(/\n/)
+      if index === 0
+        span.big= line
+      else
+        = line
+      br
 
   section.footer
     img(
