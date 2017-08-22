@@ -27,8 +27,6 @@ export default botData => ({
   version: 'v1',
   actions: {
     [GET_STARTED]: GET_STARTED,
-    [HOW_IS_IT_GOING]: HOW_IS_IT_GOING,
-    [QUICK_REPLY_G]: QUICK_REPLY_G,
     [QUICK_REPLY_D]: QUICK_REPLY_D,
     [QUICK_REPLY_H]: QUICK_REPLY_H,
     [QUICK_REPLY_X]: QUICK_REPLY_X,
