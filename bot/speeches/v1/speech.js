@@ -60,29 +60,22 @@ export default botData => ({
       ],
     },
     [QUICK_REPLY_C]: () => ({
-      text: `Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: *${(botData.data.pressure && global.widgets[botData.data.pressure.widget_id].settings.pressure_body.replace(/\n/g, '').slice(0, 540)) || '[TEXTO]'}* Concorda?`,
+      text: botSpeeches.messages.CHECK_THE_PRESSURE_MESSAGE(botData.data.pressure.widget_id),
       quick_replies: [
-        replyText(QUICK_REPLY_X, 'Concordo!',),
-        replyText(QUICK_REPLY_E, 'Não curti…'),
+        replyText(QUICK_REPLY_X, botSpeeches.buttonTexts.I_AGREE),
+        replyText(QUICK_REPLY_E, botSpeeches.buttonTexts.DISLIKES),
       ],
     }),
     [QUICK_REPLY_D]: {
       text: botSpeeches.messages.HOW_PRESSURE_WORKS,
       quick_replies: [
-        replyText(QUICK_REPLY_F, botSpeeches.buttonTexts.COUNT_ME_IN),
+        replyText(QUICK_REPLY_C, botSpeeches.buttonTexts.COUNT_ME_IN),
         replyText(QUICK_REPLY_E, botSpeeches.buttonTexts.NOT_NOW),
       ],
     },
     [QUICK_REPLY_E]: {
       text: botSpeeches.messages.IF_YOU_CHANGE_YOUR_MIND,
     },
-    [QUICK_REPLY_F]: () => ({
-      text: `Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: *${(botData.data.pressure && global.widgets[botData.data.pressure.widget_id].settings.pressure_body.replace(/\n/g, '').slice(0, 540)) || '[TEXTO]'}* Concorda?`,
-      quick_replies: [
-        replyText(UICK_REPLY_G, 'Concordo!',),
-        replyText(QUICK_REPLY_E, 'Não curti…'),
-      ],
-    }),
     [QUICK_REPLY_G]: {
       text: botSpeeches.messages.EMAIL_ADDRESS_ASK,
     },
