@@ -38,7 +38,7 @@ export default ({ speech, reply }) => ({ entities }) => {
   const defaultReply = {
     text: botSpeeches.messages.BACK_LATER,
     quick_replies: [
-      replyText(botSpeeches.buttonTexts.TRY_AGAIN, speech.actions.GET_STARTED),
+      replyText(speech.actions.GET_STARTED, botSpeeches.buttonTexts.TRY_AGAIN),
     ],
   }
 
