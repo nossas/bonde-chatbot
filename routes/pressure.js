@@ -2,9 +2,9 @@ import express from 'express'
 
 const router = express.Router()
 
-router.get('/message-text', (req, res) => {
+router.get('/:widget_id/message', (req, res) => {
   res.render(
-    './pressure/message-text',
+    './pressure/message',
     { pageTitle: 'Mensagem aos deputados' }
   )
 })
