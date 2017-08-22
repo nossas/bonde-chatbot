@@ -1,4 +1,4 @@
-import { replyText } from '../utils'
+import { replyText, genericTemplate, buttonTemplate } from '../utils'
 import * as botSpeeches from '../../speeches'
 
 //
@@ -102,28 +102,17 @@ export default botData => ({
         replyText(QUICK_REPLY_G, botSpeeches.buttonTexts.NOT_NOW),
       ],
     },
-    [QUICK_REPLY_L]: {
-      attachment: {
-        type: 'template',
-        payload: {
-          template_type: 'generic',
-          elements: [
-            {
-              title: 'A maior aliada feminista nas redes',
-              subtitle: 'Chama a Beta no inbox',
-              image_url: botData.data.image_url || 'https://goo.gl/sboHN4',
-              buttons: [
-                { type: 'element_share' },
-                {
-                  type: 'web_url',
-                  url: botData.data.m_me || 'https://m.me/beta.feminista',
-                  title: 'Falar com a Beta',
-                },
-              ],
-            },
-          ],
-        },
-      },
-    },
+    [QUICK_REPLY_L]: genericTemplate({
+      title: 'A maior aliada feminista nas redes',
+      subtitle: 'Chama a Beta no inbox',
+      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      buttons: [
+        buttonTemplate.elementShare(),
+        buttonTemplate.webURL({
+          url: botData.data.m_me || 'https://m.me/beta.feminista',
+          title: 'Falar com a Beta',
+        })
+      ],
+    }),
   },
 })

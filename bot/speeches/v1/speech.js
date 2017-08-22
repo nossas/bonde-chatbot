@@ -1,5 +1,7 @@
-import { replyText } from '../utils'
+import { replyText, genericTemplate, buttonTemplate } from '../utils'
 import * as botSpeeches from '../../speeches'
+
+const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeURI(url)}`
 
 //
 // Constants
@@ -60,7 +62,7 @@ export default botData => ({
     [QUICK_REPLY_C]: () => ({
       text: `Sabia que podia contar com você! Essa aqui é a mensagem que vamos enviar aos deputados: *${(botData.data.pressure && global.widgets[botData.data.pressure.widget_id].settings.pressure_body.replace(/\n/g, '').slice(0, 540)) || '[TEXTO]'}* Concorda?`,
       quick_replies: [
-        replyText(UICK_REPLY_X, 'Concordo!',),
+        replyText(QUICK_REPLY_X, 'Concordo!',),
         replyText(QUICK_REPLY_E, 'Não curti…'),
       ],
     }),
@@ -90,27 +92,16 @@ export default botData => ({
         replyText(QUICK_REPLY_J, botSpeeches.buttonTexts.OF_COURSE)
       ]
     }),
-    [QUICK_REPLY_J]: ({
-      attachment: {
-        type: 'template',
-        payload: {
-          template_type: 'generic',
-          elements: [
-            {
-              title: 'A maior aliada feminista nas redes',
-              subtitle: 'Chama a Beta no inbox',
-              image_url: botData.data.image_url || 'https://goo.gl/sboHN4',
-              buttons: [
-                {
-                  type: 'web_url',
-                  url: `http://www.facebook.com/sharer.php?u=${encodeURI(`${process.env.APP_DOMAIN}/share`)}`,
-                  title: 'Compartilhar',
-                },
-              ],
-            },
-          ],
-        },
-      },
+    [QUICK_REPLY_J]: genericTemplate({
+      title: 'A maior aliada feminista nas redes',
+      subtitle: 'Chama a Beta no inbox',
+      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      buttons: [
+        buttonTemplate.webURL({
+          url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+          title: 'Compartilhar',
+        })
+      ],
     }),
     [QUICK_REPLY_X]: {
       text: botSpeeches.messages.EMAIL_ADDRESS_ASK_ISNT_SPAM,
