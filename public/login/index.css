@@ -84,10 +84,13 @@ input::placeholder {
 }
 
 .hero-banner .hero {
-  background: url('https://scontent.fcgh12-1.fna.fbcdn.net/v/t31.0-8/18518119_463961250617691_3113776709861450112_o.png?oh=95bddf40cbef1cf29ea1117623d5f591&oe=59FA58B8');
+  background: url('https://goo.gl/hzZfHA');
   background-position: center;
   background-size: cover;
   background-blend-mode: screen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-heading .branding {
