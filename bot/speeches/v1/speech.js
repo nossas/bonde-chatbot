@@ -4,7 +4,6 @@ import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
 //
 // Constants
 //
-const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
 const ERROR_CRITICAL = 'ERROR_CRITICAL'
 const GET_STARTED = 'GET_STARTED'
 const QUICK_REPLY_A = 'QUICK_REPLY_A'
@@ -28,7 +27,6 @@ const EMAIL_ADDRESS_OK = 'EMAIL_ADDRESS_OK'
 export default botData => ({
   version: 'v1',
   actions: {
-    [REPLY_UNDEFINED]: REPLY_UNDEFINED,
     [GET_STARTED]: GET_STARTED,
     [HOW_IS_IT_GOING]: HOW_IS_IT_GOING,
     [QUICK_REPLY_G]: QUICK_REPLY_G,
@@ -39,15 +37,6 @@ export default botData => ({
     [EMAIL_ADDRESS_OK]: EMAIL_ADDRESS_OK,
   },
   messages: {
-    //
-    // Texto que Beta responde quando não entende o comando
-    //
-    [REPLY_UNDEFINED]: {
-      text: aiMessages.BACK_LATER,
-      quick_replies: [
-        replyText(aiButtonTexts.TRY_AGAIN, GET_STARTED),
-      ],
-    },
     //
     // Se dá algum bug de fato na Beta
     //

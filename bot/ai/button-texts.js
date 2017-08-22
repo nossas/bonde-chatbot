@@ -1,11 +1,41 @@
 export default {
+  //
+  // Generic
+  //
   TRY_AGAIN: 'Tentar novamente',
-  I_WANT_TO_ACT_NOW: 'Quero agir já!',
+  UNBELIEVABLE: 'Inacreditável!',
+  SHARE: 'Compartilhar',
+
+  //
+  // Hashtag
+  //
+  HASHTAG_BLUNTLY: '#SemRodeios',
+
+  //
+  // Questions
+  //
   TELL_ME_MORE: 'Conta mais?',
-  LETS_GO: 'Vamos!',
   HOW_IT_WORKS: 'Como funciona?',
+  HOW_TO_CRACK_IT_DOWN: 'Como barrar?',
+
+  //
+  // Approval
+  //
+  I_WANT_TO_ACT_NOW: 'Quero agir já!',
+  I_WANT_TO_LEARN_MORE: 'Quero saber mais!',
+  TELL_ME: 'Conta!',
+  LETS_GO: 'Vamos!',
   COUNT_ME_IN: 'Tô dentro!',
-  NOT_NOW: 'Agora não.',
+  COUNT_ME_IN_SIS: 'Tô dentro, mana!',
+  IM_IN: 'Topo!',
   OF_COURSE: 'Mas é claro!',
+  I_WANT: 'Quero!',
   SEND: 'Enviar',
+  SUPER: 'Super!',
+
+  //
+  // Denial
+  //
+  NOT_NOW: 'Agora não.',
+  NOW_DOESNT_HAPPEN: 'Agora não rola.',
 }

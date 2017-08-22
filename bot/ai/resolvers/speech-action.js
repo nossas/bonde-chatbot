@@ -1,5 +1,6 @@
 import _ from 'underscore'
-import { messages as aiMessages } from '../../ai'
+import { replyText } from '../../speeches/utils'
+import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
 
 export default ({ speech, reply }) => ({ entities }) => {
   const entity = !_.isEmpty(entities) && entities.intent[0].value
@@ -16,7 +17,8 @@ export default ({ speech, reply }) => ({ entities }) => {
     //
     'yes': speech.actions.QUICK_REPLY_B,
   }
-  const speechReply = speechRepliesMap[entity]
+  const speechEntity = speechRepliesMap[entity]
+  const speechReply = speech.messages[speechEntity]
 
   //
   // AI intent specific replies
@@ -24,15 +26,21 @@ export default ({ speech, reply }) => ({ entities }) => {
   //
   const intentRepliesMap = {
     'how_are_you': aiMessages.HOW_IS_IT_GOING,
-    'explain_pec_29': speech.actions.QUICK_REPLY_D,
+    'explain_pec_29': aiMessages.NASCITURO_BILL_AND_PEC_29,
   }
-  const intentReply = !speechReply && intentRepliesMap[entity]
+  const intentEntity = intentRepliesMap[entity]
+  const intentReply = !speechReply && intentEntity && { text: intentEntity }
 
   //
   // The default reply object when there is neither
   // speech specific reply nor AI intent specific reply
   //
-  const defaultReply = { text: aiMessages.BACK_LATER }
+  const defaultReply = {
+    text: aiMessages.BACK_LATER,
+    quick_replies: [
+      replyText(aiButtonTexts.TRY_AGAIN, speech.actions.GET_STARTED),
+    ],
+  }
 
-  reply(speech.messages[speechReply || intentReply] || defaultReply)
+  reply(speechReply || intentReply || defaultReply)
 }

@@ -1,12 +1,11 @@
 import { replyText } from '../utils'
+import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
 
 //
 // Constants
 //
-const REPLY_UNDEFINED = 'REPLY_UNDEFINED'
 const ERROR_CRITICAL = 'ERROR_CRITICAL'
 const GET_STARTED = 'GET_STARTED'
-const HOW_IS_IT_GOING = 'HOW_IS_IT_GOING'
 const QUICK_REPLY_A = 'QUICK_REPLY_A'
 const QUICK_REPLY_B = 'QUICK_REPLY_B'
 const QUICK_REPLY_C = 'QUICK_REPLY_C'
@@ -27,103 +26,89 @@ const QUICK_REPLY_L = 'QUICK_REPLY_L'
 export default botData => ({
   version: 'v0',
   actions: {
-    [REPLY_UNDEFINED]: REPLY_UNDEFINED,
     [ERROR_CRITICAL]: ERROR_CRITICAL,
     [GET_STARTED]: GET_STARTED,
-    [HOW_IS_IT_GOING]: HOW_IS_IT_GOING,
     [QUICK_REPLY_B]: QUICK_REPLY_B,
     [QUICK_REPLY_D]: QUICK_REPLY_D,
   },
   messages: {
     //
-    // Texto que Beta responde quando não entende o comando
-    //
-    [REPLY_UNDEFINED]: {
-      text: 'Ai, meus algoritmos. Acho que tá rolando uma incompatibilidade entre nós. Vou dar uma atualizada e já volto!',
-      quick_replies: [
-        replyText('Tentar novamente', GET_STARTED),
-      ],
-    },
-    //
     // Se dá algum bug de fato na Beta
     //
     [ERROR_CRITICAL]: {
-      text: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.'
+      text: aiMessages.BUGGED_OUT
     },
     //
     // Usuário abre conversa com a Beta no Messenger
     //
     [GET_STARTED]: {
-      text: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Pra interagir comigo, é só apertar o botão abaixo. Vamos nessa?',
+      text: aiMessages.I_AM_BETA,
       quick_replies: [
-        replyText('Vamos!', QUICK_REPLY_A),
+        replyText(aiButtonTexts.LETS_GO, QUICK_REPLY_A),
       ],
     },
-    [HOW_IS_IT_GOING]: {
-      text: 'Eu tô bem! Meus algoritmos estão mais afiados que nunca! ;)\nE aí, como vão as coisas? Tem um tempinho pra eu te explicar mais sobre o que tá rolando com os direitos das mulheres?',
-    },
     [QUICK_REPLY_A]: {
-      text: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode ;) Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
+      text: aiMessages.INTRODUCE_MYSELF,
       quick_replies: [
-        replyText('Conta!', QUICK_REPLY_B),
-        replyText('#SemRodeios', QUICK_REPLY_C),
+        replyText(aiButtonTexts.TELL_ME, QUICK_REPLY_B),
+        replyText(aiButtonTexts.HASHTAG_BLUNTLY, QUICK_REPLY_C),
       ],
     },
     [QUICK_REPLY_B]: {
-      text: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Às vezes, fica difícil acreditar que a gente ainda vive num sistema tão desatualizado. Quer saber o que tá pegando?',
+      text: aiMessages.ASK_IF_WANT_TO_LEARN_MORE,
       quick_replies: [
-        replyText('Quero!', QUICK_REPLY_D),
-        replyText('Agora não rola.', QUICK_REPLY_C),
+        replyText(aiButtonTexts.I_WANT, QUICK_REPLY_D),
+        replyText(aiButtonTexts.NOW_DOESNT_HAPPEN, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_C]: {
-      text: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
+      text: aiMessages.STRAIGHT_TO_THE_WOMENS_RIGHTS,
       quick_replies: [
-        replyText('Topo!', QUICK_REPLY_E),
-        replyText('Agora não.', QUICK_REPLY_G),
+        replyText(aiButtonTexts.IM_IN, QUICK_REPLY_E),
+        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_D]: {
-      text: 'De cara, duas ameaças no Congresso: a PEC 29 e o Estatuto do Nascituro. Sabe o que acontece se elas passarem? 1. O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje; 2. Métodos contraceptivos que as mulheres já usam também vão passar a ser proibidos, como a pílula do dia seguinte e o DIU.',
+      text: aiMessages.NASCITURO_BILL_AND_PEC_29,
       quick_replies: [
-        replyText('Inacreditável!', QUICK_REPLY_F),
-        replyText('Como barrar?', QUICK_REPLY_E),
+        replyText(aiButtonTexts.UNBELIEVABLE, QUICK_REPLY_F),
+        replyText(aiButtonTexts.HOW_TO_CRACK_IT_DOWN, QUICK_REPLY_E),
       ],
     },
     [QUICK_REPLY_E]: {
-      text: 'Arrasou! Influenciar decisões políticas não é simples, mas meus códigos servem pra tornar esse processo muito mais fácil. Já imaginou fazer pressão política a partir do seu inbox do Face? Agora você pode! Não é feitiçaria, é tecnologia. ;) E não demora mais que alguns cliques.',
+      text: aiMessages.ITS_NOT_SORCERY_ITS_TECHNOLOGY,
       quick_replies: [
-        replyText('Quero saber mais!', QUICK_REPLY_H),
-        replyText('Agora não.', QUICK_REPLY_G),
+        replyText(aiButtonTexts.I_WANT_TO_LEARN_MORE, QUICK_REPLY_H),
+        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_F]: {
-      text: 'Pois é. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
+      text: aiMessages.ASK_TO_HACK_THE_SYSTEM,
       quick_replies: [
-        replyText('Topo!', QUICK_REPLY_E),
-        replyText('Agora não.', QUICK_REPLY_G),
+        replyText(aiButtonTexts.IM_IN, QUICK_REPLY_E),
+        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_G]: {
-      text: 'Deve estar na correria aí, né? Sem problemas! Qualquer novidade pode deixar que eu te chamo por aqui ;) Enquanto isso, se quiser saber mais sobre mim, é só entrar no meu site: www.beta.org.br',
+      text: aiMessages.NO_PROBLEM_CHECK_THE_WEBSITE,
     },
     [QUICK_REPLY_H]: {
-      text: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Demais, né?',
+      text: aiMessages.HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH,
       quick_replies: [
-        replyText('Super!', QUICK_REPLY_I),
+        replyText(aiButtonTexts.SUPER, QUICK_REPLY_I),
       ],
     },
     [QUICK_REPLY_I]: {
-      text: 'Agora, pra transformar esse barulho num mega estrondo, a gente precisa de muuuita gente mandando mensagens. Muita gente mesmo! Vou precisar contar com você pra isso.',
+      text: aiMessages.NEED_MANY_PEOPLE,
       quick_replies: [
-        replyText('Tô dentro, mana!', QUICK_REPLY_J),
+        replyText(aiButtonTexts.COUNT_ME_IN_SIS, QUICK_REPLY_J),
       ],
     },
     [QUICK_REPLY_J]: {
-      text: 'Isso aí! Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
+      text: aiMessages.ASK_TO_SHARE_UNTIL_WE_WATCH,
       quick_replies: [
-        replyText('Compartilhar', QUICK_REPLY_L),
-        replyText('Agora não.', QUICK_REPLY_G),
+        replyText(aiButtonTexts.SHARE, QUICK_REPLY_L),
+        replyText(aiButtonTexts.NOT_NOW, QUICK_REPLY_G),
       ],
     },
     [QUICK_REPLY_L]: {
