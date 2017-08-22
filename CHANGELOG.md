@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/nossas/bonde-bot/compare/v1.0.0...v1.1.0) (2017-08-22)
+
+
+### Bug Fixes
+
+* **bot-events:** pass bot data on postback event [#22](https://github.com/nossas/bonde-bot/issues/22) ([c17196e](https://github.com/nossas/bonde-bot/commit/c17196e))
+* **speeches:** include QR_G into email check flow ([67bcac0](https://github.com/nossas/bonde-bot/commit/67bcac0))
+
+
+### Features
+
+* **ai:** add artificial intelligence to bot [#31](https://github.com/nossas/bonde-bot/issues/31) ([02c5323](https://github.com/nossas/bonde-bot/commit/02c5323))
+* **bot:** integrate pressure with ai [#22](https://github.com/nossas/bonde-bot/issues/22) ([ccfa1b8](https://github.com/nossas/bonde-bot/commit/ccfa1b8))
+* **bot:** pressure and share on feed close [#22](https://github.com/nossas/bonde-bot/issues/22) ([beb352c](https://github.com/nossas/bonde-bot/commit/beb352c))
+* **routes:** render pressure email body text [#34](https://github.com/nossas/bonde-bot/issues/34) ([0d60aad](https://github.com/nossas/bonde-bot/commit/0d60aad))
+* **speeches:** map messages keys with AI intent keys close [#34](https://github.com/nossas/bonde-bot/issues/34) ([3ec100f](https://github.com/nossas/bonde-bot/commit/3ec100f))
+* **speeches:** texts consolidated in a single file close [#34](https://github.com/nossas/bonde-bot/issues/34) ([ba96a8e](https://github.com/nossas/bonde-bot/commit/ba96a8e))
+
+
+### Performance Improvements
+
+* **bot:** fetch specified widgets only on init [#22](https://github.com/nossas/bonde-bot/issues/22) ([22baea7](https://github.com/nossas/bonde-bot/commit/22baea7))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-08-04)
 
