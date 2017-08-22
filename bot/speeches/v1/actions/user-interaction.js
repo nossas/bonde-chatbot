@@ -25,6 +25,7 @@ export default ({ speech, payload, reply }) => graphqlClient.query({
 
       if (interaction.is_bot) {
         switch (interaction.action) {
+          case speech.actions.QUICK_REPLY_G:
           case speech.actions.QUICK_REPLY_X:
           case speech.actions.EMAIL_ADDRESS_WRONG:
             const action = !isemail.validate(payload.message.text)
