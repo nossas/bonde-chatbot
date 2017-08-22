@@ -4,7 +4,6 @@ import { messages as aiMessages, buttonTexts as aiButtonTexts } from '../../ai'
 //
 // Constants
 //
-const ERROR_CRITICAL = 'ERROR_CRITICAL'
 const GET_STARTED = 'GET_STARTED'
 const QUICK_REPLY_A = 'QUICK_REPLY_A'
 const QUICK_REPLY_B = 'QUICK_REPLY_B'
@@ -26,18 +25,11 @@ const QUICK_REPLY_L = 'QUICK_REPLY_L'
 export default botData => ({
   version: 'v0',
   actions: {
-    [ERROR_CRITICAL]: ERROR_CRITICAL,
     [GET_STARTED]: GET_STARTED,
     [QUICK_REPLY_B]: QUICK_REPLY_B,
     [QUICK_REPLY_D]: QUICK_REPLY_D,
   },
   messages: {
-    //
-    // Se dá algum bug de fato na Beta
-    //
-    [ERROR_CRITICAL]: {
-      text: aiMessages.BUGGED_OUT
-    },
     //
     // Usuário abre conversa com a Beta no Messenger
     //
