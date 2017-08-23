@@ -1,3 +1,4 @@
+import 'colors'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
 
 const networkInterface = createNetworkInterface({
@@ -6,12 +7,13 @@ const networkInterface = createNetworkInterface({
 
 networkInterface.use([{
   applyMiddleware (req, next) {
-    if (!req.options.headers) {
-      req.options.headers = {}
-    }
-    if (global.jwtToken) {
-      req.options.headers['authorization'] = `Bearer ${global.jwtToken}`
-    }
+    if (!req.options.headers) req.options.headers = {}
+
+    if (process.env.JWT_TOKEN)
+      req.options.headers['authorization'] = `Bearer ${process.env.JWT_TOKEN}`
+    else
+      console.error('Please specify the `JWT_TOKEN` environment variable.'.red)
+
     next()
   }
 }])

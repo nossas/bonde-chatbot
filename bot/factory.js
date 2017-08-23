@@ -10,28 +10,10 @@ export default class BotFactory {
   //
   // @param app {Object} Express server instance
   // @param speech {Object} Speech object that contains the messages and actions
-  // @param credentials {Object} Email and password to authenticate the GraphQL requests
   //
-  constructor (app, speech, credentials) {
+  constructor (app, speech) {
     this.app = app
     this.speech = speech
-    this.credentials = credentials
-  }
-
-  //
-  // Authenticate the server using BONDE credentials
-  // @return {Promise} The promise's result is an authenticated JWT token
-  //
-  authenticate () {
-    return graphqlClient.mutate({
-      mutation: graphqlMutations.authenticate,
-      variables: {
-        email: this.credentials.email,
-        password: this.credentials.password
-      }
-    })
-      .then(({ data: { authenticate: { jwtToken } } }) => jwtToken)
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
   }
 
   //
@@ -39,15 +21,7 @@ export default class BotFactory {
   // @return {Promise} The promise's result is an array of bot configurations
   //
   botConfigs () {
-    return this.authenticate().then(jwtToken => {
-      global.jwtToken = jwtToken
-
-      return graphqlClient.query({
-        query: graphqlQueries.fetchBotConfigurations
-      })
-        .then(data => data)
-        .catch(err => console.error(`${JSON.stringify(err)}`.red))
-    })
+    return graphqlClient.query({ query: graphqlQueries.fetchBotConfigurations })
   }
 
   //
@@ -90,5 +64,6 @@ export default class BotFactory {
         return { id, bot, endpoint, botData }
       })
     })
+    .catch(err => console.error(`${JSON.stringify(err)}`.red))
   }
 }
