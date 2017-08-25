@@ -4,7 +4,7 @@ export default {
   //
   // Generic
   //
-  BACK_LATER: 'Ai, meus algoritmos. Acho que tá rolando uma incompatibilidade entre nós. Vou dar uma atualizada e já volto!',
+  BACK_LATER: 'Ai, meus algoritmos. Não conseguir entender o que você disse. #RobôAprendiz Pode reformular sua mensagem? ',
 
   BUGGED_OUT: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.',
 
@@ -35,6 +35,28 @@ export default {
   I_AM_BETA: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Pra interagir comigo, é só apertar o botão abaixo. Vamos nessa?',
 
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
+
+  IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
+
+  AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
+
+  BYE: 'Até mais! 👋',
+
+  MY_FAVORITE_SONG: 'Não podia ser outra, né? É essa aqui: http://youtu.be/K4JQADCJ840 #PraCantarJunto',
+
+  MY_INSPIRATION_MUSE: 'Minha musa inspiradora!',
+
+  HEY: 'Opa!',
+
+  YOURE_WELCOME: 'Disponha! ❤️',
+
+  WHO_CODED_ME: 'Fui programada por gente fina, elegante e sincera que trabalha no Nossas, um laboratório de ativismo para criar novas formas de pessoas influenciarem e ressignificarem a política. 💪',
+
+  WHERE_I_LIVE: 'Essa é uma boa pergunta. ;) Eu moro nas nuvens, mas, se pudesse escolher, me mudava pra Bahia.',
+
+  I_KNOW_SIRI: 'Claro que conheço, mas nunca fomos apresentadas pessoalmente. Sou fã!',
+
+  IM_LEARNING_COMMUNICATE_WITH_HUMANS: 'Tô repetitiva hoje, foi mal. Estou aprendendo a me comunicar com humanos. Não tá fácil pra ninguém.',
 
   INTRODUCE_MYSELF: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode ;) Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
 
@@ -68,6 +90,8 @@ export default {
 
   ASK_IF_WANT_TO_LEARN_MORE: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Às vezes, fica difícil acreditar que a gente ainda vive num sistema tão desatualizado. Quer saber o que tá pegando?',
 
+  ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
+
   //
   // Email
   //
@@ -78,4 +102,37 @@ export default {
   EMAIL_ADDRESS_WRONG: 'Ops, parece que você digitou um email inválido. Pode checar o endereço e mandar aqui de novo, por favor?',
 
   EMAIL_SAVED: 'Perfeito, e-mail salvo.',
+
+  //
+  // Answers
+  //
+  QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
+
+  ASK_USER_DEVICE_INFO: 'Conta pra mim de qual aparelho você está tentando falar comigo? É um smartphone? Um computador? Qual modelo? Me passa os detalhes que eu vou encaminhar pros meus programadores. Eles são feras!',
+
+  EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
+
+  EXPLAIN_ABOUT_NASCITURO_BILL: 'O Estatuto do Nascituro é um projeto defendido pelas bancadas da Bíblia e da Bala, no Congresso, que prevê que a prática de aborto em qualquer situação seja considerada crime hediondo',
+
+  EXPLAIN_ABOUT_ABORTION_PERMITTED_CASES: 'Hoje, o aborto é legalizado no Brasil somente em três casos: anencefalia fetal, risco de vida para a gestante e em casos de gravidez por estupro da mulher.',
+
+  DAY_OF_STRUGGLE_FOR_WOMENS_RIGHTS: 'Dia de lutar pela proteção aos direitos das mulheres! Se quiser começar, é só digitar "quero agir já!"',
+
+  DOESNT_EVEN_TELL_ME: 'Nem me fala.',
+
+  YES_I_WARN_YOU: 'Aviso sim!',
+
+  // Emojis
+  EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
+
+  EMOJI_JOY: '😂',
+
+  EMOJI_KISSING_HEART: '😘',
+
+  EMOJI_LIKE: '👍',
+
+  EMOJI_HEART: '❤️',
+
+  // Hashtags
+  HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
 }
