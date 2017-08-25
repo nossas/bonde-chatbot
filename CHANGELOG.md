@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/nossas/bonde-bot/compare/v1.1.0...v1.1.1) (2017-08-25)
+
+
+### Bug Fixes
+
+* **graphql:** add jwt environment variable fix [#37](https://github.com/nossas/bonde-bot/issues/37) ([60594ce](https://github.com/nossas/bonde-bot/commit/60594ce))
+* add more messages to interact with AI ([845414d](https://github.com/nossas/bonde-bot/commit/845414d))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/nossas/bonde-bot/compare/v1.0.0...v1.1.0) (2017-08-22)
 
