@@ -9,7 +9,7 @@ export default {
   BUGGED_OUT: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.',
 
   IF_YOU_CHANGE_YOUR_MIND: 'Tranquilo, mana! Se mudar de ideia, me chama novamente ;)',
-
+  
   //
   // Law
   //
@@ -122,6 +122,9 @@ export default {
 
   YES_I_WARN_YOU: 'Aviso sim!',
 
+  // Haters
+  HATER_BOLSONARO_2018: 'Aquele que não deve ser nomeado. 👀',
+  
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 
