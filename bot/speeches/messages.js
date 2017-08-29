@@ -4,7 +4,7 @@ export default {
   //
   // Generic
   //
-  BACK_LATER: 'Ai, meus algoritmos. Não conseguir entender o que você disse. #RobôAprendiz Pode reformular sua mensagem? ',
+  BACK_LATER: 'Ai, meus algoritmos. Não consegui entender o que você disse. #RobôAprendiz Pode reformular sua mensagem? ',
 
   BUGGED_OUT: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.',
 
