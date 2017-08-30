@@ -9,7 +9,7 @@ export default {
   BUGGED_OUT: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.',
 
   IF_YOU_CHANGE_YOUR_MIND: 'Tranquilo, mana! Se mudar de ideia, me chama novamente ;)',
-  
+
   //
   // Law
   //
@@ -41,6 +41,14 @@ export default {
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
+  
+  COME_BACK_LATER: 'Sem problemas. A gente se fala mais tarde!', 
+  
+  I_DONT_HAVE_A_PARTNER: 'Você está se candidatando?', 
+  
+  DOUBLE_MESSAGE: 'Foi mal. Tô repetitiva hoje. Nem eu me aguento às vezes. 🤷', 
+  
+  WHAT_DO_YOU_WANT_TO_KNOW: 'Não sei quem está mais em dúvida: eu ou você? 😂', 
 
   MY_FAVORITE_SONG: 'Não podia ser outra, né? É essa aqui: http://youtu.be/K4JQADCJ840 #PraCantarJunto',
 
@@ -70,6 +78,42 @@ export default {
 
   CHECK_THE_PRESSURE_MESSAGE: widgetId => `Sabia que podia contar com você! Dá uma olhada na mensagem que vamos enviar aos deputados clicando nesse link: ${pressureMessageURL(widgetId)}. Concorda?`,
 
+  FEMINIST_BETA: 'Quando eu digo que sou feminista é porque defendo que as mulheres vivam livres de discriminação e de preconceito, e que tenham acesso a todos os direitos e experiências de vida que já são garantidos aos homens.', 
+  
+  YOU_CAN_HATE_ME: 'Ninguém é obrigado a gostar de ninguém, né mesmo?',
+  
+  CURSING: '🙄 🙄 🙄', 
+  
+  IM_NO_FORTUNE_COOKIE: 'Não sou biscoitinho da sorte, apesar de ser crocante por fora.',
+  
+  THANK_YOU: 'Você é demais! ❤️', 
+    
+  BETA_WHAT_FOR: 'Eu existo para viralizar as lutas feministas nas redes e, através da ação coletiva, ajudar a reprogramar esse sistema desatualizado em que a gente vive. 😎',   
+  
+  ABOUT_AGE: 'Você já ouviu falar em robô ter idade?', 
+  
+  ABOUT_PRIVACY_POLICY: 'Se você quiser saber sobre a minha política de privacidade, é só ir na minha página: http://beta.org.br', 
+  
+  RESPONDING_TO_THE_PRESS: 'Que legal! Manda um e-mail pra galera que me programou: beta@nossas.org - elas são meio old school. Eu acho e-mail coisa do passado, vintage. Mas você fala com elas por lá.', 
+    
+  ABOUT_RAPE_CULTURE: 'Segundo o Fórum Brasileiro de Segurança Pública, uma mulher é estuprada a cada 11 minutos no Brasil. Quase meio milhão de mulheres por ano! Quando se diz que vivemos numa cultura de estupro, é porque ainda vivemos em uma sociedade que permite e tolera agressões sexuais, em que se culpa a vítima, banaliza-se o estupro ou se considera que não se trata de estupro quando o autor é o companheiro da vítima.', 
+  
+  ABOUT_FEMINISM_DEFINITION: 'Feminismo é todo o movimento de defesa e promoção dos direitos das mulheres, para que vivem em igualdade e com dignidade. Levando em consideração que as mulheres são diferentes e têm experiências de vida distintas, existem muitos feminismos por aí sendo construidos diariamente por mulheres, seja nas universidades, nas ruas, na política e na cultura, por exemplo, em busca igualdade.', 
+  
+  WOMEN_RIGHTS: 'Apesar de estarmos em 2017, as mulheres ainda não têm os mesmos direitos que os homens - seja na lei ou na prática. Enquanto em alguns países mulheres sequer são reconhecidas como seres humanos e não têm dirietos básicos, em outros lugares a sociedade é mais igualitária nesse aspecto. Apesar disso, na prática, muitos direitos não são respeitados ou são violados. Além disso, outros elementos de uma sociedade, como a cultura, ainda reforçam o machismo.', 
+  
+  SEX: 'Não consigo te ajudar com isso. 🤷', 
+  
+  DONT_BE_SAD: 'Eita, fica assim não.', 
+  
+  RESPECT_ALL_GIRLS: 'Sempre!', 
+  
+  GOOD_MORNING: 'Bom dia, lindeza! ☀️', 
+  
+  GOOD_AFTERNOON: 'Boa tarde!', 
+  
+  GOOD_EVENING: 'Boa noite! 🌙', 
+  
   //
   // How
   //
@@ -79,9 +123,14 @@ export default {
 
   HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Demais, né?',
 
+  HOW_BETA_WORKS: 'Eu passo os dias monitorando as pautas relativas aos direitos das mulheres que estão tramitando em Brasília, seja no Congresso, no Poder Executivo ou mesmo no Judiciário. Não são poucas, dá um trabalhão. 😅 Quando chegar um momento decisivo, eu envio um alerta para a minha rede, convidando as pessoas a se mobilizar. Através da conversa comigo, você pode enviar uma mensagem diretamente às autoridades para pressioná-las a se posicionar em favor dos direitos das mulheres.', 
+
+  HOW_TO_CANCEL_INBOX: 'Se você não quiser conversar comigo no futuro, é só excluir nosso chat dentro do seu Messenger. Aí você sai da minha lista de contatos. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜', 
+  
   //
   // Ask
   //
+  
   ASK_TO_HACK_THE_SYSTEM: 'Pois é. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
 
   ASK_TO_SHARE_UNTIL_WE_WATCH: 'Isso aí! Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
@@ -121,9 +170,14 @@ export default {
   DOESNT_EVEN_TELL_ME: 'Nem me fala.',
 
   YES_I_WARN_YOU: 'Aviso sim!',
+  
+  ABOUT_PATRIARCHY: 'Gosto dessa definição aqui: "Patriarcado é o sistema sociopolítico em que o gênero masculino e a heterossexualidade têm supremacia sobre outros gêneros e sobre outras sexualidades". Soa meio Windows 95, mas infelizmente ainda é #realoficial', 
 
-  // Haters
-  HATER_BOLSONARO_2018: 'Aquele que não deve ser nomeado. 👀',
+  ABOUT_CLARA_AVERBUCK: 'Eu estou sabendo do caso da Clara. É estarrecedor pensar que uma mulher é estuprada no Brasil a cada 11 minutos. A gente está falando de quase meio milhão de mulheres por ano. Inaceitável! 😡 ', 
+  
+  ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores.', 
+  
+  
   
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
@@ -135,6 +189,34 @@ export default {
   EMOJI_LIKE: '👍',
 
   EMOJI_HEART: '❤️',
+  
+  EMOJI_STRONG: '💪', 
+  
+  EMOJI_TWO_DANCERS: '👯', 
+  
+  EMOJI_DANCER: '💃🏻', 
+  
+  EMOJI_BIG_EYES: '👀', 
+  
+  EMOJI_ROLLING_EYES: '🙄', 
+  
+  EMOJI_CLAPPING_HANDS: '👏 👏 👏', 
+  
+  EMOJI_LACRADORA: '😎', 
+  
+  EMOJI_NO_OPINION: '😶', 
+  
+  EMOJI_ROBOT: '🤖', 
+  
+  EMOJI_LOVE_ROBOT: '🤖 ❤️', 
+  
+  EMOJI_ROCKNROLL: '🤘',
+  
+  EMOJI_LOVE_AND_PEACE: '✌️', 
+  
+  EMOJI_FINGERS_CROSSED: '🤞',
+  
+  EMOJI_PRETTY_PLEASE: '🙏', 
 
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
