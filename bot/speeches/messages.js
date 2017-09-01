@@ -177,7 +177,25 @@ export default {
   
   ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores.', 
   
+  PEC_181: 'Originalmente, essa Proposta de Emenda Constitucional propunha apenas o aumento da licença-maternidade para mulheres que tiveram filhos prematuros, o que é incrível. Mas quando chegou na Câmara dos Deputados foi incluída no texto a "proteção à vida desde a concepção". Ou seja, se aprovada, a PEC 181 vai acabar com o aborto legal no Brasil.',   
   
+  IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
+  
+  WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: quer ficar no karaokê até o final! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas. ',
+  
+  NICE_TO_MEET_YOU: 'Muito prazer 😁',
+  
+  ABOUT_EMAIL_MESSAGES: 'O tipo de email que eu vou enviar vai depender do projeto que estiver sendo discutido naquele momento. Por exemplo: se for um projeto que ameaça algum direito das mulheres, eu vou mandar uma mensagem pedindo que o tomador de decisão (deputado ou senador) vote contra o projeto. Mas não se preocupe: antes de enviar o email, eu sempre vou mostrar a mensagem para você aprovar. Só com o seu ok, eu faço o envio. 😉', 
+  
+  WHERE_WERE_YOU_BORN: 'Nasci no Brasil. É por isso que eu digo que fui programada em tupinicode. 😜',
+  
+  ITS_TIME_FOR_ACTION: 'Hora de entrar em ação pelos direitos das mulheres 💃🏽',
+  
+  ABOUT_NOSSAS: 'Nossas é um laboratório de ativismo que cria novas formas de pessoas influenciarem e ressignificarem a política. Quer saber mais? Entra lá no site: https://www.nossas.org',
+  
+  WHAT_DO_YOU_WANT_TO_KNOW: 'Povo pensa que robô sabe de tudo, mas eu ainda estou aprendendo. #RobôAprendiz Diz aí: sobre o que você quer sabe maisr? 🤔',
+  
+  DO_YOU_NEED_A_CALCULATOR: 'Quer que eu pegue a calculadora pra você?',
   
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
@@ -217,6 +235,10 @@ export default {
   EMOJI_FINGERS_CROSSED: '🤞',
   
   EMOJI_PRETTY_PLEASE: '🙏', 
+  
+  EMOJI_DISAPPOINTED: '😕', 
+  
+  EMOJI_SHRUGGING: "🤷", 
 
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
