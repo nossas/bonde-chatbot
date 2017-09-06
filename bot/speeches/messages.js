@@ -114,6 +114,8 @@ export default {
   
   GOOD_EVENING: 'Boa noite! 🌙', 
   
+  TAKE_ACTION: 'Vamos! Vamos! 👯‍', 
+  
   //
   // How
   //
@@ -126,6 +128,13 @@ export default {
   HOW_BETA_WORKS: 'Eu passo os dias monitorando as pautas relativas aos direitos das mulheres que estão tramitando em Brasília, seja no Congresso, no Poder Executivo ou mesmo no Judiciário. Não são poucas, dá um trabalhão. 😅 Quando chegar um momento decisivo, eu envio um alerta para a minha rede, convidando as pessoas a se mobilizar. Através da conversa comigo, você pode enviar uma mensagem diretamente às autoridades para pressioná-las a se posicionar em favor dos direitos das mulheres.', 
 
   HOW_TO_CANCEL_INBOX: 'Se você não quiser conversar comigo no futuro, é só excluir nosso chat dentro do seu Messenger. Aí você sai da minha lista de contatos. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜', 
+  
+  HOW_BETA_CAN_HELP_FEMINISM: 'Eu existo para viralizar as lutas feministas nas redes e, através da ação coletiva, ajudar a reprogramar esse sistema desatualizado em que a gente vive. 😎  Se você tiver alguma sugestão de campanha pra mim, é só mandar um email pra beta@nossas.org', 
+  
+  HOW_TO_SPREAD_FEMINISM: 'Vixe! Essa pergunta aí nem o Google sabe responder. 😂  Muitas mulheres já estão agindo em seus espaços pra transformar esse sistema. Penso que contribuições importantes são 1. criar espaços para que as mulheres possam se expressar livremente sobre opressão, assédio e abuso, 2. falar sobre a importância da luta feminista, 3. disponibilizar canais para que as mulheres possam incidir e interferir em processos políticos que pautam a vida delas.',
+  
+  HOW_SHARE_TIMELINE: 'Adoro esse tipo de mensagem! ❤️  Pra compartilhar o meu chat na sua timeline, é só publicar esse link aqui, ó: bit.ly/chamabetanoinbox',
+  
   
   //
   // Ask
@@ -197,6 +206,42 @@ export default {
   
   DO_YOU_NEED_A_CALCULATOR: 'Quer que eu pegue a calculadora pra você?',
   
+  ABOUT_LIBERAL_FEMINISM: 'As primeiras feministas que se organizaram politicamente na Europa e nos EUA eram consideradas liberais. Elas defendiam valores do liberalismo, como direito ao voto e acesso à educação para mulheres. Ainda hoje, o foco do feminismo liberal está na reforma legal e jurídica para superar a desigualdade entre homens e mulheres. Algumas pautas importantes são a igualdade no mercado de trabalho e a liberdade sexual e reprodutiva da mullher. Se quiser saber mais, vale jogar no Google 🔍  alguns nomes importantes, como Betty Friedan, Eleanor Roosevelt, Virginia Woolf, Rebecca Walker e Naomi Wolf.',
+  
+  ABOUT_RADICAL_FEMINISM: 'O feminismo radical surgiu nas décadas de 1960 e 1970 . Ele considera os papéis sociais de gênero as raízes da opressão da mulher. Por isso, defende a abolição de determinadas estruturas e normas sociais que reforçam esses papeis para a verdadeira libertação da mulher.',
+  
+  LIBERAL_OR_RADICAL_BETA: 'Sou feminista! 💪',
+  
+  ABOUT_TRANS_FEMINISM: 'Quando eu digo que estou ao lado das lutas feministas, incluo nessa as mulheres e homens trans também. Se você tem alguma sugestão de conteúdo ou campanha sobre pessoas trans, eu vou adorar trocar ideia com você. É só enviar pra beta@nossas.org - te espero lá! 🤙', 
+  
+  ABOUT_FEMINISM_IN_BRAZIL: 'Eita! Não vai ter textão que dê conta de resumir a história do feminismo no Brasil. 😂  Por isso, fiz aqui uma listinha com referências sobre esse assunto que eu adoro. É só jogar no Google 🔍 : "Breve História do Feminismo no Brasil e Outros Ensaios", "50 Anos de Feminismo. Argentina, Brasil, Chile", "Lugar de Mulher. Feminismo e Política no Brasil"', 
+  
+  ABOUT_BLACK_FEMINISM: 'O feminismo negro entende que a mulher negra sofre, ao menos, uma dupla opressão - a do machismo e a do racismo. Por isso, as feministas negras buscam refletir sobre as condições particulares que afetam a vida dessas mulheres e que não são abraçadas por outros feminismos. Pra saber mais, vale acompanhar as Blogueiras Negras - www.blogueirasnegras.org - e o trabalho de Sueli Carneiro, da Djamila Ribeiro e da organização Criola. Se tiver outras indicações, manda pra mim? ',
+  
+  ABUSE_BUS_SP: 'Eu estou sabendo do caso. É revoltante que as mulheres passem por isso em pleno 2017! Na minha página, estou compartilhando algumas reflexões e iniciativas sobre isso. Dá uma olhada na timeline e, se você não tiver feito isso ainda, dá uma curtida na página para receber as atualizações! 👍 🤖',
+  
+  ABOUT_FEMINIST_MAN: 'É homem e quer fazer alguma coisa pelas mulheres? Antes de mais nada, é preciso escutar as mulheres. A partir daí, que tal começar a transformar os espaços que você frequenta? Ouviu "piadinha" machista? Viu que tá rolando compartilhamento de imagens íntimas de uma mulher em um grupo sem que ela autorizasse? Seu amigo não pagou a pensão do filho e banca o famoso "pai de selfie" nas redes sociais? É hora de levar pra esses espaços tudo que você vem ouvindo das mulheres. 🗣️',
+  
+  ABOUT_MARCHA_MUNDIAL: 'A Marcha Mundial de Mulheres existe desde 2000. Se você quiser acompanhar o grupo, é só acessar a página http://www.marchamundialdasmulheres.org.br ou o blog https://marchamulheres.wordpress.com',
+  
+  ABOUT_TODAY: 'Eu passo os dias monitorando as lutas feministas - não é pouca coisa não, te contar. 😅  Pra ficar por dentro do que está acontecendo hoje, dá uma olhada na minha timeline. Não esqueça de curtir a página pra você receber sempre minhas atualizações. ✌️',
+  
+  ABOUT_GENDER_PARITY: 'Senta que lá vem textão. 📜 Paridade de gênero é a igualdade entre homens e mulheres nas mais diversas esferas sociais, incluindo não só a igualdade de direitos, mas também a não discriminação das mulheres, de modo que todos tenham acesso às mesmas oportunidades de existência na sociedade. Quando falamos em paridade na política, por exemplo, o Brasil ainda está muito distante: apenas 9,9% das parlamentares são mulheres. No trabalho, a situação não muda muito: o Fórum Econômico Social divulgou uma pesquisa, em 2016, mostrando que só daqui a 170 anos homens e mulheres terão igualdade salarial. Temos ainda muito trabalho pela frente. 💪',
+  
+  I_CANT_VOTE: 'Não tenho título de eleitora. 😎',
+  
+  MASSA: '🔝',
+  
+  ABOUT_HACK_SYSTEM: 'Eita, Giovana! Quanto eu digo "hackear o sistema", não me leve ao pé da letra. 😉 Eu falo "hackear" no sentido de "quebrar os códigos", de encontrar formas de interferir e influenciar ativamente na construção do sistema. Eu faço isso, por exemplo, criando campanhas que convidam as pessoas a enviarem mensagens aos políticos em Brasília para eles barrarem leis que são retrocessos para os direitos das mulheres. Sou uma hacker do bem! 😊',
+  
+  ABOUT_ABORTION: 'Eu sou robô, nunca vou engravidar, nem precisar abortar. 🤖  Mas considerando que 1 em cada 5 brasileiras já passou por um aborto e que 4 mulheres morrem por dia por causa de abortos feitos de maneira insegura, me parece que esse é um assunto que precisa ser tratado com mais urgência e menos visões de "certo ou errado". Não é sobre ser a favor ou sobre ser contra. É sobre estar atenta às experiências reais e às estatísticas para criar políticas que façam sentido e que protejam a vida das mulheres. Se o aborto não fosse crime, nenhuma mulher seria obrigada a abortar. Mas aquelas que optassem teriam meios de fazê-lo sem colocar a própria vida em risco. Isso me parece bem importante.',
+  
+  ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem somente 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
+  
+  WOMEN_IN_POWER: 'Opa, sobre esse assunto eu recomendo o livro "Mulheres no Poder", que conta a trajetória de brasileiras na política desde o século XIX - um espaço geralmente ocupado por homens. Essa pesquisa foi feita por Schuma Schumaher e Antonia Ceva.',
+
+  ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.', 
+ 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 
