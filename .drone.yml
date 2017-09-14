@@ -18,17 +18,14 @@ pipeline:
       status: success
       branch: [hotfix-*, release-*, feature-*, develop]
 
-  deploy-staging:
-    image: appleboy/drone-ssh
-    host: staging.bonde.org
-    username: ubuntu
-    command_timeout: 120
-    port: 22
-    secrets: [ ssh_key ]
-    script:
-      - sudo docker pull nossas/bonde-bot:${DRONE_BRANCH}
-      - sudo docker tag nossas/bonde-bot:${DRONE_BRANCH} dokku/beta:latest
-      - dokku tags:deploy beta latest
+  deploy-rancher-staging:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: staging/bot
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH}
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
     when:
       status: success
       branch: [hotfix-*, release-*, feature-*, develop]
