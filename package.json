@@ -43,7 +43,7 @@
     "underscore": "^1.8.3"
   },
   "engines": {
-    "node": "~4.1.2"
+    "node": "~8"
   },
   "devDependencies": {
     "standard-version": "^4.2.0"
