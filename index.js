@@ -7,6 +7,7 @@ import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
+import cors from 'cors'
 import Queue from 'bull'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
@@ -35,6 +36,7 @@ app.set('view engine', 'pug')
 app.use(Express.static('public'))
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({ extended: true }))
+app.use(cors())
 app.use(ExpressSession({
   secret : 's3Cur3',
   name : 'sessionId',
