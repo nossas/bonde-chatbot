@@ -1,8 +1,7 @@
-import Queue from 'bull'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlQueries from '../../graphql/queries'
 
-export default redisURL => (req, res) => {
+export default queue => (req, res) => {
   const payload = req.body
 
   if (payload) {
@@ -13,8 +12,6 @@ export default redisURL => (req, res) => {
       dateIntervalStart: start,
       dateIntervalEnd: end
     } = payload
-
-    const queue = new Queue('bot-mass-message', redisURL)
 
     const isOnlyMessage         =  m && !qr && !start && !end
     const isOnlyQReply          = !m &&  qr && !start && !end
