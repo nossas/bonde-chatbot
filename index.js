@@ -11,6 +11,14 @@ import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
 import * as botSkills from './bot/skills'
 import * as routes from './routes'
+import * as routesMiddlewares from './routes/middlewares'
+
+//
+// Emvironment Variables Polyfill
+//
+const envs = {
+  redisURL: process.env.REDIS_URL || 'redis://127.0.0.1:6379'
+}
 
 //
 // Globals
@@ -65,6 +73,7 @@ app.use('/login', routes.login)
 app.use('/mass-message', routes.massMessage)
 app.use('/pressure', routes.pressure)
 app.use('/share', routes.share)
+app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(envs.redisURL))
 
 //
 // Up the server
