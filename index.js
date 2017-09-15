@@ -7,6 +7,7 @@ import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import BodyParser from 'body-parser'
+import Queue from 'bull'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
 import * as botSkills from './bot/skills'
@@ -45,7 +46,7 @@ app.use(ExpressSession({
 // Bots fabrication
 //
 const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
-const fabricated = new BotFactory(app, speech)
+const fabricated = new BotFactory(speech)
   .fabricate()
   .then(bots => {
     bots.forEach(({ id, bot, endpoint, botData }) => {
@@ -73,7 +74,9 @@ app.use('/login', routes.login)
 app.use('/mass-message', routes.massMessage)
 app.use('/pressure', routes.pressure)
 app.use('/share', routes.share)
-app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(envs.redisURL))
+
+const queue = new Queue('bot-mass-message', envs.redisURL)
+app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(queue))
 
 //
 // Up the server

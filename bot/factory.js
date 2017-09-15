@@ -8,11 +8,9 @@ import * as botConfig from './config'
 
 export default class BotFactory {
   //
-  // @param app {Object} Express server instance
   // @param speech {Object} Speech object that contains the messages and actions
   //
-  constructor (app, speech) {
-    this.app = app
+  constructor (speech) {
     this.speech = speech
   }
 
