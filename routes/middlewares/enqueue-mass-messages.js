@@ -7,6 +7,8 @@ export default queue => (req, res) => {
   if (payload) {
     const {
       text,
+      quickReplyRedirect,
+      quickReplyButtonText,
       message: m,
       quickReply: qr,
       dateIntervalStart: start,
@@ -25,7 +27,12 @@ export default queue => (req, res) => {
       graphqlClient.query({ query: query(), variables })
         .then(({ loading, data: { query: { activists } } }) => {
           activists.forEach(({ fbContextRecipientId }) => {
-            queue.add({ fbContextRecipientId, text })
+            queue.add({
+              fbContextRecipientId,
+              text,
+              quickReplyRedirect,
+              quickReplyButtonText
+            })
           })
         })
         .catch(err => console.error(err))
