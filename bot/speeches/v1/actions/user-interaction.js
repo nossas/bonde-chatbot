@@ -1,8 +1,8 @@
 import 'colors'
-import isemail from 'isemail'
 import { client as graphqlClient } from '../../../../graphql'
 import * as graphqlQueries from '../../../../graphql/queries'
 import * as botSkills from '../../../skills'
+import * as isemail from '../../../utils/isemail'
 
 //
 // User interaction actions
