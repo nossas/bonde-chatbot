@@ -33,6 +33,9 @@ export default {
   SEND: 'Enviar',
   SUPER: 'Super!',
   TELL_ME: 'Conta!',
+  COUNT_ON_ME: 'Conta comigo!',
+  SEND_NOW: 'Enviar já!',
+  SURE_BETA: 'Mas é claro, Beta!',
 
   //
   // Denial
@@ -40,4 +43,10 @@ export default {
   DISLIKES: 'Não curti…',
   NOT_NOW: 'Agora não.',
   NOW_DOESNT_HAPPEN: 'Agora não rola.',
+
+  //
+  // More
+  //
+  MORE_ABOUT_PEC: 'Saber mais sobre a PEC',
+  READ_MESSAGE: 'Ver mensagem',
 }
