@@ -25,12 +25,11 @@ export default ({ speech, payload, reply }) => graphqlClient.query({
 
       if (interaction.is_bot) {
         switch (interaction.action) {
-          case speech.actions.QUICK_REPLY_G:
-          case speech.actions.QUICK_REPLY_X:
-          case speech.actions.EMAIL_ADDRESS_WRONG:
+          case speech.actions.V1_QUICK_REPLY_I:
+          case speech.actions.V1_EMAIL_ADDRESS_WRONG:
             const action = !isemail.validate(payload.message.text)
-              ? speech.actions.EMAIL_ADDRESS_WRONG
-              : speech.actions.EMAIL_ADDRESS_OK
+              ? speech.actions.V1_EMAIL_ADDRESS_WRONG
+              : speech.actions.V1_EMAIL_ADDRESS_OK
             reply(speech.messages[action], action)
             dispatched = true
             break;
