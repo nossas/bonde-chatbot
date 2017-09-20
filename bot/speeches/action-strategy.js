@@ -41,7 +41,7 @@ export default ({ speech, action, payload, profile, botData, reply }) => {
     ensure: () => {
       let result = Promise.resolve(false)
       if (actions && actions.userInteraction) {
-        result = actions.userInteraction({ speech, payload, reply })
+        result = actions.userInteraction({ speech, payload, profile, botData, reply })
       }
       return result
     }

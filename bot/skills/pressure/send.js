@@ -1,7 +1,7 @@
 import 'colors'
 import axios from 'axios'
 
-export default ({ profile, botData, interaction }) => {
+export default ({ profile, botData, senderEmail }) => {
   if (botData.data.pressure) {
     const { widget_id: widgetId } = botData.data.pressure
 
@@ -14,7 +14,7 @@ export default ({ profile, botData, interaction }) => {
         const activist = {
           firstname: profile.first_name,
           lastname: profile.last_name,
-          email: interaction.payload.message.text,
+          email: senderEmail,
         }
         const mail = {
           cc: settings.targets.split(';'),

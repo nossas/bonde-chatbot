@@ -109,7 +109,7 @@ export default botData => ({
         })
       ],
     }),
-    [V1_EMAIL_ADDRESS_WRONG]: () => ({
+    [V1_EMAIL_ADDRESS_WRONG]: ({
       text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
     }),
     [V1_EMAIL_ADDRESS_OK]: profile => ({
