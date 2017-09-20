@@ -1,2 +1,2 @@
 web: npm start
-worker: npm start:worker
+worker: node -r 'babel-register' ./workers/process-bot-mass-message-queue.js
