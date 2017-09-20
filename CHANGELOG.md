@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/nossas/bonde-bot/compare/v1.2.2...v1.2.3) (2017-09-20)
+
+
+### Bug Fixes
+
+* **devops:** worker npm run scrip call ([102accd](https://github.com/nossas/bonde-bot/commit/102accd))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/nossas/bonde-bot/compare/v1.2.1...v1.2.2) (2017-09-20)
 
