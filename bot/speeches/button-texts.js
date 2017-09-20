@@ -36,6 +36,7 @@ export default {
   COUNT_ON_ME: 'Conta comigo!',
   SEND_NOW: 'Enviar já!',
   SURE_BETA: 'Mas é claro, Beta!',
+  MESSAGE_APPROVED: 'Mensagem aprovada!',
 
   //
   // Denial

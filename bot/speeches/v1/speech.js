@@ -83,16 +83,16 @@ export default botData => ({
       ],
     }),
     [V1_QUICK_REPLY_G]: () => ({
-      text: botSpeeches.messages.PEC_181_TROJAN_HORSE_PRESSURE_TEXT,
+      text: botSpeeches.messages.PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT,
       quick_replies: [
         replyText(V1_QUICK_REPLY_I, botSpeeches.buttonTexts.SEND_NOW),
         replyText(V1_QUICK_REPLY_H, botSpeeches.buttonTexts.READ_MESSAGE),
       ],
     }),
     [V1_QUICK_REPLY_H]: () => ({
-      text: 'Prezados(as) membros da Comissão Especial da PEC 181/2015',
+      text: botSpeeches.messages.PEC_181_TROJAN_HORSE_PRESSURE_TEXT,
       quick_replies: [
-        replyText(V1_QUICK_REPLY_I, 'Mensagem aprovada!'),
+        replyText(V1_QUICK_REPLY_I, botSpeeches.buttonTexts.MESSAGE_APPROVED),
       ],
     }),
     [V1_QUICK_REPLY_I]: () => ({
