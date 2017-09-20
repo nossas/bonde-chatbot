@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/nossas/bonde-bot/compare/v1.2.0...v1.2.1) (2017-09-20)
+
+
+### Bug Fixes
+
+* **speeches:** update pec 181 texts ([3ae8297](https://github.com/nossas/bonde-bot/commit/3ae8297))
+* **workers:** babel build process queue worker ([2481006](https://github.com/nossas/bonde-bot/commit/2481006))
+* **workers:** rollback worker babel build ([567009b](https://github.com/nossas/bonde-bot/commit/567009b))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/nossas/bonde-bot/compare/v1.1.6...v1.2.0) (2017-09-20)
 
