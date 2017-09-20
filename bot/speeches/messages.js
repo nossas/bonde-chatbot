@@ -254,7 +254,7 @@ export default {
 
   PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT: 'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/2015, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto em caso de estupro; anencefalia fetal ou risco de morte da gestante. Os direitos reprodutivos não podem em hipótese alguma ser pautados pelo viés religioso ou dogmático. Peço que V.Sa rejeite o parecer do relator e aprove o texto original da PEC 181/2015. Conto com vossa cooperação para impedir este retrocesso, reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e de todos no Brasil.',
+  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/2015, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida numa manobra para acabar com o aborto legal no Brasil. Direitos reprodutivos não devem, em hipótese alguma, ser pautados pelo viés religioso ou dogmático. Peço que V.Sa rejeite o parecer do relator e aprove o texto original da PEC, barrando esse retrocesso e reconhecendo a obrigação do Congresso em proteger e estender os direitos de todas e todos no país.',
 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',

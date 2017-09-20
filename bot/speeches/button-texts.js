@@ -48,6 +48,6 @@ export default {
   //
   // More
   //
-  MORE_ABOUT_PEC: 'Saber mais sobre a PEC',
+  MORE_ABOUT_PEC: '+ sobre a PEC',
   READ_MESSAGE: 'Ver mensagem',
 }
