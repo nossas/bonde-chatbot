@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/nossas/bonde-bot/compare/v1.1.6...v1.2.0) (2017-09-20)
+
+
+### Bug Fixes
+
+* **devops:** Move staging deploy config to cluster ([680e1cb](https://github.com/nossas/bonde-bot/commit/680e1cb))
+* **devops:** Upgrade node version ([40c7bde](https://github.com/nossas/bonde-bot/commit/40c7bde))
+* **package:** add cors package [#48](https://github.com/nossas/bonde-bot/issues/48) ([15fe766](https://github.com/nossas/bonde-bot/commit/15fe766))
+* **share:** beta cover image ([6396735](https://github.com/nossas/bonde-bot/commit/6396735))
+* **speeches:** email validation ([97b72d9](https://github.com/nossas/bonde-bot/commit/97b72d9))
+
+
+### Features
+
+* **mass-message:** enqueue mass message sending [#48](https://github.com/nossas/bonde-bot/issues/48) ([d22c8f3](https://github.com/nossas/bonde-bot/commit/d22c8f3))
+* **speeches:** add speech V1 pressure text ([74797ff](https://github.com/nossas/bonde-bot/commit/74797ff))
+* **workers:** mass message optional quick reply button [#48](https://github.com/nossas/bonde-bot/issues/48) ([d1d7931](https://github.com/nossas/bonde-bot/commit/d1d7931))
+* **workers:** process bot mass message queue close [#48](https://github.com/nossas/bonde-bot/issues/48) ([b5da575](https://github.com/nossas/bonde-bot/commit/b5da575))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/nossas/bonde-bot/compare/v1.1.5...v1.1.6) (2017-09-07)
 
