@@ -26,7 +26,11 @@ export default ({ speech, reply }) => ({ entities }) => {
   // (priority 2)
   //
   const intentEntity = messages[entity && entity.toUpperCase()]
-  const intentReply = !speechReply && intentEntity && { text: intentEntity }
+  let intentReply
+  if (!speechReply && intentEntity) {
+    if (intentEntity.constructor === Object) intentReply = intentEntity
+    else intentReply = { text: intentEntity }
+  }
 
   //
   // The default reply object when there is neither

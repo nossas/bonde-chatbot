@@ -1,3 +1,5 @@
+import { image } from './utils/content-types'
+
 const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${widgetId}/message`
 
 export default {
