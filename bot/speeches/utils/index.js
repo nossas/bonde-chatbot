@@ -1,9 +1,9 @@
 import * as buttonTemplate from './button-template'
 import genericTemplate from './generic-template'
-import replyText from './reply-text'
+import quickReply from './quick-reply'
 
 export {
   buttonTemplate,
   genericTemplate,
-  replyText,
+  quickReply,
 }

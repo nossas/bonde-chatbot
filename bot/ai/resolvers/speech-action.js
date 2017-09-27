@@ -1,5 +1,5 @@
 import _ from 'underscore'
-import { replyText } from '../../speeches/utils'
+import { quickReply } from '../../speeches/utils'
 import { messages, buttonTexts } from '../../speeches'
 
 export default ({ speech, reply }) => ({ entities }) => {
@@ -39,7 +39,7 @@ export default ({ speech, reply }) => ({ entities }) => {
   const defaultReply = {
     text: messages.BACK_LATER,
     quick_replies: [
-      replyText(speech.actions.GET_STARTED, buttonTexts.TRY_AGAIN),
+      quickReply(speech.actions.GET_STARTED, buttonTexts.TRY_AGAIN),
     ],
   }
 
