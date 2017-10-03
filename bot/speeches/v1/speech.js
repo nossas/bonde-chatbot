@@ -121,3 +121,53 @@ export default botData => ({
     }),
   }
 })
+
+    //
+    // Usuário abre conversa com a Beta via Mensagem em Massa
+    //
+
+    [VMDM_QUICK_REPLY_X]: () => ({
+      text: botSpeeches.messages.SLOW_CLAPPING,
+      quick_replies: [
+        replyText(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE_BETA),
+      ],
+    }),
+        [VMDM_QUICK_REPLY_G]: () => ({
+      text: botSpeeches.messages.PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT,
+      quick_replies: [
+        replyText(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.SEND_NOW),
+        replyText(VMDM_QUICK_REPLY_H, botSpeeches.buttonTexts.READ_MESSAGE),
+      ],
+    }),
+    [VMDM_QUICK_REPLY_H]: () => ({
+      text: botSpeeches.messages.PEC_181_TROJAN_HORSE_PRESSURE_TEXT,
+      quick_replies: [
+        replyText(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.MESSAGE_APPROVED),
+      ],
+    }),
+    [VMDM_QUICK_REPLY_I]: () => ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_ASK
+    }),
+    [VMDM_QUICK_REPLY_J]: genericTemplate({
+      title: 'A maior aliada feminista nas redes',
+      subtitle: 'Chama a Beta no inbox',
+      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      buttons: [
+        buttonTemplate.webURL({
+          url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+          title: 'Compartilhar',
+        })
+      ],
+    }),
+    [VMDM_EMAIL_ADDRESS_WRONG]: ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
+    }),
+    [VMDM_EMAIL_ADDRESS_OK]: profile => ({
+      text: botSpeeches.messages.EMAIL_SENT_PEC_181_TROJAN_HORSE(profile.first_name),
+      quick_replies: [
+        replyText(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SURE_BETA),
+        replyText(V1_QUICK_REPLY_D, botSpeeches.buttonTexts.NOT_NOW),
+      ],
+    }),
+  }
+})
