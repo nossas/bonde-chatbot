@@ -7,7 +7,7 @@ import * as botUtils from '../bot/speeches/utils'
 const speech = require(`../bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
 const queue = new Queue('bot-mass-message', process.env.REDIS_URL || 'redis://127.0.0.1:6379')
 
-
+console.log('running worker: process-bot-mass-message-queue')
 const fabricated = new BotFactory(speech)
   .fabricate()
   .then(bots => {
