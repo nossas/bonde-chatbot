@@ -30,9 +30,17 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         switch (interaction.action) {
           case speech.actions.V1_QUICK_REPLY_I:
           case speech.actions.V1_EMAIL_ADDRESS_WRONG:
-            const action = !isemail.validate(payload.message.text)
+          case speech.actions.VMDM_QUICK_REPLY_I:
+          case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
+            let action = !isemail.validate(payload.message.text)
               ? speech.actions.V1_EMAIL_ADDRESS_WRONG
               : speech.actions.V1_EMAIL_ADDRESS_OK
+
+            if (interaction.action.startsWith('VMDM_')) {
+              action = !isemail.validate(payload.message.text)
+                ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
+                : speech.actions.VMDM_EMAIL_ADDRESS_OK
+            }
 
             const replyMessage = speech.messages[action].constructor === Function
               ? speech.messages[action](profile)

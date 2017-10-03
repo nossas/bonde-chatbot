@@ -20,6 +20,13 @@ const V1_QUICK_REPLY_J = 'V1_QUICK_REPLY_J'
 const V1_QUICK_REPLY_K = 'V1_QUICK_REPLY_K'
 const V1_EMAIL_ADDRESS_WRONG = 'V1_EMAIL_ADDRESS_WRONG'
 const V1_EMAIL_ADDRESS_OK = 'V1_EMAIL_ADDRESS_OK'
+const VMDM_QUICK_REPLY_X = 'VMDM_QUICK_REPLY_X'
+const VMDM_QUICK_REPLY_G = 'VMDM_QUICK_REPLY_G'
+const VMDM_QUICK_REPLY_H = 'VMDM_QUICK_REPLY_H'
+const VMDM_QUICK_REPLY_I = 'VMDM_QUICK_REPLY_I'
+const VMDM_QUICK_REPLY_J = 'VMDM_QUICK_REPLY_J'
+const VMDM_EMAIL_ADDRESS_WRONG = 'VMDM_EMAIL_ADDRESS_WRONG'
+const VMDM_EMAIL_ADDRESS_OK = 'VMDM_EMAIL_ADDRESS_OK'
 
 //
 // The bot speech, based on quick replies.
@@ -119,20 +126,17 @@ export default botData => ({
         quickReply(V1_QUICK_REPLY_D, botSpeeches.buttonTexts.NOT_NOW),
       ],
     }),
-  }
-})
 
     //
     // Usuário abre conversa com a Beta via Mensagem em Massa
     //
-
     [VMDM_QUICK_REPLY_X]: () => ({
       text: botSpeeches.messages.SLOW_CLAPPING,
       quick_replies: [
         replyText(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE_BETA),
       ],
     }),
-        [VMDM_QUICK_REPLY_G]: () => ({
+    [VMDM_QUICK_REPLY_G]: () => ({
       text: botSpeeches.messages.PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT,
       quick_replies: [
         replyText(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.SEND_NOW),
