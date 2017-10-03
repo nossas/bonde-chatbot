@@ -306,7 +306,7 @@ export default {
 
   // Gifs
   
-  CLAPPING: image('http://gph.to/2g5tCe6'),
+  SLOW_CLAPPING: image('http://gph.is/1qPHCeJ'),
   
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
