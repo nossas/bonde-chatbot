@@ -25,7 +25,7 @@ const fabricated = new BotFactory(speech)
           let optionalMessageKeys = {}
           if (quickReplyRedirect && quickReplyButtonText) {
             optionalMessageKeys.quick_replies = [
-              botUtils.replyText(quickReplyRedirect, quickReplyButtonText)
+              botUtils.quickReply(quickReplyRedirect, quickReplyButtonText)
             ]
           }
 
