@@ -135,20 +135,20 @@ export default botData => ({
     [VMDM_QUICK_REPLY_X]: () => ({
       text: botSpeeches.messages.SLOW_CLAPPING,
       quick_replies: [
-        replyText(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE_BETA),
+        quickReply(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE_BETA),
       ],
     }),
     [VMDM_QUICK_REPLY_G]: () => ({
       text: botSpeeches.messages.PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT,
       quick_replies: [
-        replyText(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.SEND_NOW),
-        replyText(VMDM_QUICK_REPLY_H, botSpeeches.buttonTexts.READ_MESSAGE),
+        quickReply(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.SEND_NOW),
+        quickReply(VMDM_QUICK_REPLY_H, botSpeeches.buttonTexts.READ_MESSAGE),
       ],
     }),
     [VMDM_QUICK_REPLY_H]: () => ({
       text: botSpeeches.messages.PEC_181_TROJAN_HORSE_PRESSURE_TEXT,
       quick_replies: [
-        replyText(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.MESSAGE_APPROVED),
+        quickReply(VMDM_QUICK_REPLY_I, botSpeeches.buttonTexts.MESSAGE_APPROVED),
       ],
     }),
     [VMDM_QUICK_REPLY_I]: () => ({
@@ -171,8 +171,8 @@ export default botData => ({
     [VMDM_EMAIL_ADDRESS_OK]: profile => ({
       text: botSpeeches.messages.EMAIL_SENT_PEC_181_TROJAN_HORSE(profile.first_name),
       quick_replies: [
-        replyText(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SURE_BETA),
-        replyText(V1_QUICK_REPLY_D, botSpeeches.buttonTexts.NOT_NOW),
+        quickReply(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SURE_BETA),
+        quickReply(V1_QUICK_REPLY_D, botSpeeches.buttonTexts.NOT_NOW),
       ],
     }),
   }
