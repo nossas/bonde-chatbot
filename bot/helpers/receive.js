@@ -26,6 +26,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     const message = speech.messages[action]
 
     if (typeof message === 'function') reply(message(profile), action)
+    else if (typeof message === 'object') reply(message, action)
     else if (message) reply(message, action)
     else {
       actions.ensure()

@@ -133,9 +133,9 @@ export default botData => ({
     // Usuário abre conversa com a Beta via Mensagem em Massa
     //
     [VMDM_QUICK_REPLY_X]: () => ({
-      text: botSpeeches.messages.SLOW_CLAPPING,
+      ...botSpeeches.messages.SLOW_CLAPPING,
       quick_replies: [
-        quickReply(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE_BETA),
+        quickReply(VMDM_QUICK_REPLY_J, botSpeeches.buttonTexts.SHARE),
       ],
     }),
     [VMDM_QUICK_REPLY_G]: () => ({
