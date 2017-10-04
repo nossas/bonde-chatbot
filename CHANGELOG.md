@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/nossas/bonde-bot/compare/v1.2.3...v1.3.0) (2017-10-04)
+
+
+### Bug Fixes
+
+* **ci:** build mass message queue processing worker ([a2e20c6](https://github.com/nossas/bonde-bot/commit/a2e20c6))
+* **speeches:** expose email validation keys ([63f4eca](https://github.com/nossas/bonde-bot/commit/63f4eca))
+* **speeches:** mass message activist quick reply segmentation ([5249652](https://github.com/nossas/bonde-bot/commit/5249652))
+* **workers:** bot utils quick reply function ([c38cb11](https://github.com/nossas/bonde-bot/commit/c38cb11))
+* expose speech v1 VMDM ok email message ([c47c5ee](https://github.com/nossas/bonde-bot/commit/c47c5ee))
+* image reply on quick reply interaction ([b3c063c](https://github.com/nossas/bonde-bot/commit/b3c063c))
+* replyText to quickReply function on speech v1 ([5dde3a8](https://github.com/nossas/bonde-bot/commit/5dde3a8))
+
+
+### Features
+
+* **ai:** image reply [#55](https://github.com/nossas/bonde-bot/issues/55) ([72c4ad8](https://github.com/nossas/bonde-bot/commit/72c4ad8))
+* **ai:** reply video close [#55](https://github.com/nossas/bonde-bot/issues/55) ([d44ed01](https://github.com/nossas/bonde-bot/commit/d44ed01))
+* **ai:** reply with quick reply [#55](https://github.com/nossas/bonde-bot/issues/55) ([244ef05](https://github.com/nossas/bonde-bot/commit/244ef05))
+
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/nossas/bonde-bot/compare/v1.2.2...v1.2.3) (2017-09-20)
 
