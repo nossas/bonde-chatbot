@@ -311,6 +311,8 @@ export default {
 
   SLOW_CLAPPING: image('https://goo.gl/wQDF5j'),
 
+  HATER_BOLSONARO_2018: image('http://gph.is/1q18qIk'),
+
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
 }
