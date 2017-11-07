@@ -45,9 +45,6 @@
     "standard": "^9.0.2",
     "underscore": "^1.8.3"
   },
-  "engines": {
-    "node": "~8"
-  },
   "devDependencies": {
     "standard-version": "^4.2.0"
   }
