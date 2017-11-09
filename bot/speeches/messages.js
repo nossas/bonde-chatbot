@@ -197,11 +197,6 @@ export default {
 
   PEC_181: 'Originalmente, a PEC 181 propunha apenas o aumento da licença maternidade para mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, foi incluída no texto a proteção à vida desde a concepção. Ou seja, se aprovada, ela vai acabar com o aborto legal. No dia 8/11, os deputados da Comissão Especial aprovaram o relatório final da PEC 181 ⚠️ Agora, a proposta segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Não vamos desanimar: tem muita luta pela frente e gente já tá se articulando para chegar com tudo 💪🏾',
 
-  PEC_181: messageWithQuickReply(
-  'Originalmente, essa Proposta de Emenda Constitucional propunha apenas o aumento da licença-maternidade para mulheres que tiveram filhos prematuros, o que é incrível. Mas quando chegou na Câmara dos Deputados foi incluída no texto a "proteção à vida desde a concepção". Ou seja, se aprovada, a PEC 181 vai acabar com o aborto legal no Brasil.',
-    quickReply('V1_QUICK_REPLY_E', 'Quero barrar a PEC!'),
-  ),
-
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
 
   WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: quer ficar no karaokê até o final! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas. ',
