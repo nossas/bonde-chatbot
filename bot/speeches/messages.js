@@ -197,6 +197,8 @@ export default {
 
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. No dia 8/11, a Comissão Especial aprovou o relatório final da PEC ⚠️ No dia 21/11, ela voltará para a Comissão votar 11 destaques, como o pedido de supressão do trecho que determina a proteção à vida desde a concepção. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
 
+  NO_PRESSURE_PEC181: 'Hoje não tô fazendo nenhuma pressão, mas não se preocupe, é tudo estratégia! A votação da PEC 181 já passou e agora meu código está se preparando para os próximos passos, vamos chegar com tudo 😉 Pode deixar que te aviso por aqui assim que houver alguma oportunidade de ação 💪🏽',
+  
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
 
   WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: quer ficar no karaokê até o final! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas. ',
