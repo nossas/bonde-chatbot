@@ -42,7 +42,7 @@ export default queue => (req, res) => {
       .then(({ data: { query: { campaign } } }) => {
         const extraFields = ['id']
         graphqlClient.query({
-          query: graphqlQueries.fetchFacebookActivistsStrategy({ extraFields }),
+          query: graphqlQueries.fetchFacebookBotActivistsStrategy({ extraFields }),
           variables: {
             search: JSON.stringify({
               message,
