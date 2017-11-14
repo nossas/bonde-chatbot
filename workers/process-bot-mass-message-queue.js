@@ -29,11 +29,15 @@ const fabricated = new BotFactory(speech)
             ]
           }
 
-          bot.sendMessage(fbContextRecipientId, { text, ...optionalMessageKeys })
-          done()
-        } catch (e) {
-          done(new Error(e))
-        }
+          bot.sendMessage(
+            fbContextRecipientId,
+            { text, ...optionalMessageKeys },
+            (err, info) => {
+              if (err) done(new Error(JSON.stringify({ err, data: job.data })))
+              else done(null, JSON.stringify(info))
+            }
+          )
+        } catch (e) done(new Error(JSON.stringify(e)))
       })
     })
   })
