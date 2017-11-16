@@ -40,25 +40,19 @@ export default queue => (req, res) => {
       }
     })
       .then(({ data: { query: { campaign } } }) => {
-        const extraFields = ['id']
         graphqlClient.query({
-          query: graphqlQueries.fetchFacebookBotActivistsStrategy({ extraFields }),
-          variables: {
-            search: JSON.stringify({
-              message,
-              quickReply,
-              dateIntervalStart,
-              dateIntervalEnd,
-              campaignExclusionIds,
-              campaignInclusionIds
-            })
-          }
+          query: graphqlQueries.fetchFacebookBotCampaignActivistsByCampaignId(),
+          variables: { campaignId: campaign.id }
         })
           .then(({ loading, data: { query: { activists } } }) => {
-            console.log('activists', activists)
-            activists.forEach(({ id: facebookBotActivistId, fbContextRecipientId }) => {
+            activists.forEach(({
+                id: facebookBotCampaignActivistId,
+                facebookBotActivistId,
+                fbContextRecipientId
+              }) => {
               queue.add({
                 campaign,
+                facebookBotCampaignActivistId,
                 facebookBotActivistId,
                 fbContextRecipientId,
                 text,
