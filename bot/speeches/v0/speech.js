@@ -105,7 +105,7 @@ export default botData => ({
     [QUICK_REPLY_L]: genericTemplate({
       title: 'A maior aliada feminista nas redes',
       subtitle: 'Chama a Beta no inbox',
-      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
       buttons: [
         buttonTemplate.elementShare(),
         buttonTemplate.webURL({

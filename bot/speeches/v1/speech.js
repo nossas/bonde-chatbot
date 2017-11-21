@@ -111,7 +111,7 @@ export default botData => ({
     [V1_QUICK_REPLY_J]: genericTemplate({
       title: 'A maior aliada feminista nas redes',
       subtitle: 'Chama a Beta no inbox',
-      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
       buttons: [
         buttonTemplate.webURL({
           url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
@@ -158,7 +158,7 @@ export default botData => ({
     [VMDM_QUICK_REPLY_J]: genericTemplate({
       title: 'A maior aliada feminista nas redes',
       subtitle: 'Chama a Beta no inbox',
-      imageURL: botData.data.image_url || 'https://goo.gl/sboHN4',
+      imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
       buttons: [
         buttonTemplate.webURL({
           url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
