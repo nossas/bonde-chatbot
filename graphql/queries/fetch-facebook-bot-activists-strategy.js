@@ -4,14 +4,12 @@ import gql from 'graphql-tag'
 // @param Object({ extraFields: Array })
 //
 export default ({ extraFields = [] } = { extraFields: [] }) =>  gql`
-query fetchFacebookActivistsByMessageQuickReply(
-  $message: String!
-  $quickReply: String!
+query fetchFacebookBotActivistsStrategy(
+  $search: Json!
   $first: Int
 ) {
-  query: getFacebookActivistsByMessageQuickReply(
-    message: $message
-    quickReply: $quickReply
+  query: getFacebookBotActivistsStrategy(
+    search: $search
     first: $first
   ) {
     totalCount
