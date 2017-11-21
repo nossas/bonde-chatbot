@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/nossas/bonde-bot/compare/v1.3.4...v1.4.0) (2017-11-21)
+
+
+### Features
+
+* **bot:** use fetch fb activists strategy fn; save campaign [#69](https://github.com/nossas/bonde-bot/issues/69) ([8d7d7b0](https://github.com/nossas/bonde-bot/commit/8d7d7b0))
+* **queue-worker:** fetch fb activists impacted by campaign [#69](https://github.com/nossas/bonde-bot/issues/69) ([a34e42d](https://github.com/nossas/bonde-bot/commit/a34e42d))
+* **queue-worker:** save send message log close [#69](https://github.com/nossas/bonde-bot/issues/69) ([0e3a727](https://github.com/nossas/bonde-bot/commit/0e3a727))
+* **workers:** save error log into bull queue [#69](https://github.com/nossas/bonde-bot/issues/69) ([e5f5941](https://github.com/nossas/bonde-bot/commit/e5f5941))
+
+
+
 <a name="1.3.4"></a>
 ## [1.3.4](https://github.com/nossas/bonde-bot/compare/v1.3.3...v1.3.4) (2017-11-13)
 
