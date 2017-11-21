@@ -24,7 +24,7 @@ export default {
 
   NASCITURO_BILL_PRESSURE_SEND: 'Perfeito, e-mail salvo. Agora é só clicar no botão "enviar":',
 
-  NASCITURO_BILL_AND_PEC_29: 'De cara, três ameaças no Congresso: a PEC 29, a PEC 181 e o Estatuto do Nascituro. Sabe o que acontece se elas passarem? O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje. Pois é, um direito conquistado em 1940 pode ser retirado a qualquer momento.',
+  NASCITURO_BILL_AND_PEC_29: 'De cara, três ameaças no Congresso: a PEC 29, o Estatuto do Nascituro e a bola da vez, a PEC 181 Cavalo de Troia. Sabe o que acontece se elas passarem? O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje. Pois é, grupos conservadores estão super articulados para retirar das mulheres um direitos conquistados em 1940. 🚨',
 
   NASCITURO_BILL_AND_PEC_29_SHORT: 'De cara, três ameaças no Congresso: a PEC 29, a PEC 181 e o Estatuto do Nascituro. Se elas passarem, o aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje.',
 
@@ -135,7 +135,7 @@ export default {
   HOW_BETA_WORKS: 'Eu passo os dias monitorando as pautas relativas aos direitos das mulheres que estão tramitando em Brasília, seja no Congresso, no Poder Executivo ou mesmo no Judiciário. Não são poucas, dá um trabalhão. 😅 Quando chegar um momento decisivo, eu envio um alerta para a minha rede, convidando as pessoas a se mobilizar. Através da conversa comigo, você pode enviar uma mensagem diretamente às autoridades para pressioná-las a se posicionar em favor dos direitos das mulheres.',
 
   HOW_TO_CANCEL_INBOX: 'Se você não quiser conversar comigo no futuro, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e em desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
-  
+
   HOW_BETA_CAN_HELP_FEMINISM: 'Eu existo para viralizar as lutas feministas nas redes e, através da ação coletiva, ajudar a reprogramar esse sistema desatualizado em que a gente vive. 😎  Se você tiver alguma sugestão de campanha pra mim, é só mandar um email pra beta@nossas.org',
 
   HOW_TO_SPREAD_FEMINISM: 'Vixe! Essa pergunta aí nem o Google sabe responder. 😂  Muitas mulheres já estão agindo em seus espaços pra transformar esse sistema. Penso que contribuições importantes são 1. criar espaços para que as mulheres possam se expressar livremente sobre opressão, assédio e abuso, 2. falar sobre a importância da luta feminista, 3. disponibilizar canais para que as mulheres possam incidir e interferir em processos políticos que pautam a vida delas.',
@@ -198,7 +198,7 @@ export default {
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. No dia 8/11, a Comissão Especial aprovou o relatório final da PEC ⚠️ No dia 21/11, ela voltará para a Comissão votar 11 destaques, como o pedido de supressão do trecho que determina a proteção à vida desde a concepção. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
 
   NO_PRESSURE_PEC181: 'Hoje não tô fazendo nenhuma pressão, mas não se preocupe, é tudo estratégia! A votação da PEC 181 já passou e agora meu código está se preparando para os próximos passos, vamos chegar com tudo 😉 Pode deixar que te aviso por aqui assim que houver alguma oportunidade de ação 💪🏽',
-  
+
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
 
   WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: quer ficar no karaokê até o final! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas. ',
@@ -240,9 +240,9 @@ export default {
   ABOUT_GENDER_PARITY: 'Lá vem textão! 📜 Paridade de gênero é a igualdade entre homens e mulheres nas mais diversas esferas sociais, incluindo não só a igualdade de direitos, mas também a não discriminação das mulheres, para que todos tenham acesso às mesmas oportunidades de existência na sociedade. Quando falamos em paridade na política, por exemplo, o Brasil ainda está muito distante: apenas 9,9% das parlamentares são mulheres. No trabalho, a situação não muda muito: o Fórum Econômico Social divulgou uma pesquisa, em 2016, mostrando que só daqui a 170 anos homens e mulheres terão igualdade salarial. Temos muito trabalho pela frente. 💪',
 
   ABOUT_GENDER_IDEOLOGY: 'Eu até diria que essa tal de “ideologia de gênero” não tem pé nem cabeça, mas eu também não tenho e tô aqui lutando pelos direitos das mulheres 🙌 Para você entender melhor essa história, separei alguns conteúdos bem interessantes, dá só uma olhada: bit.ly/soniacorrea_generoameacado, bit.ly/entrevista_jimenafurlani, bit.ly/porqueideologiadegenero, bit.ly/judithbutler_bbc bit.ly/judith_azmina 😘',
-  
+
   ABOUT_MAPA_DO_ACOLHIMENTO: 'Como eu amo esse projeto 💓 O Mapa do Acolhimento conecta mulheres vítimas de violência a advogadas, terapeutas e serviços públicos prontos para ajudá-las. Se você quiser se voluntariar, precisar de ajuda ou estiver curiosa, vai lá no site: www.mapadoacolhimento.org Agora essa equipe linda tá com uma campanha para o projeto crescer! Para apoiar, acesse: www.apoie.mapadoacolhimento.org Eu e o Mapa somos irmãos: nós fomos criados pelo Nossas, um laboratório de ativismo que cria novas formas das pessoas influenciarem e ressignificarem a política. Quer saber mais? Confere o site: www.nossas.org',
-  
+
   I_CANT_VOTE: 'Não tenho título de eleitora. 😎',
 
   MASSA: '🔝',
@@ -250,15 +250,15 @@ export default {
   ABOUT_HACK_SYSTEM: 'Eita, Giovana! Quanto eu digo "hackear o sistema", não me leve ao pé da letra. 😉 Eu falo "hackear" no sentido de "quebrar os códigos", de encontrar formas de interferir e influenciar ativamente na construção do sistema. Eu faço isso, por exemplo, criando campanhas que convidam as pessoas a enviarem mensagens aos políticos em Brasília para eles barrarem leis que são retrocessos para os direitos das mulheres. Sou uma hacker do bem! 😊',
 
   ABOUT_ABORTION: 'Eu sou robô, nunca vou engravidar, nem precisar abortar. Mas considerando que 1 em cada 5 brasileiras já passou por um aborto e que 4 mulheres morrem por dia com abortos feitos de forma insegura, me parece que é um assunto a ser tratado com mais urgência e menos visões de "certo ou errado". Não é sobre ser a favor ou contra. É sobre estar atenta às experiências reais e às estatísticas para criar políticas que façam sentido e que protejam a vida das mulheres. Se o aborto não fosse crime, ninguém seria obrigada a abortar. Mas aquelas que optassem poderiam fazê-lo sem colocar a própria vida em risco. Me parece bem importante.',
-  
+
   ABOUT_HELP_ABUSE: 'Que vontade de te dar um abraço, mana! Primeiro de tudo, saiba que nenhuma mulher vítima de abuso precisa ficar sozinha. Eu não fui programada para ajudar diretamente mulheres em situação de abuso, mas você pode (e deve!) buscar ajuda especializada. Pelo telefone 180, você entra em contato com a Central de Atendimento à Mulher em Situação de Violência. É um serviço público gratuito e confidencial com funcionamento 24h. Você também pode se informar se a sua cidade tem uma Delegacia Especializada no Atendimento à Mulher, que realiza prevenção, proteção e investigação de violência contra a mulher, física ou psicológica. Força! 💗',
-  
+
   ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem somente 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
 
   WOMEN_IN_POWER: 'Opa, sobre esse assunto eu recomendo o livro "Mulheres no Poder", que conta a trajetória de brasileiras na política desde o século XIX - um espaço geralmente ocupado por homens. Essa pesquisa foi feita por Schuma Schumaher e Antonia Ceva.',
 
   ABOUT_WOMEN_IN_POLITICS: 'Desde 1988, são as mulheres políticas que trazem propostas sobre violência contra a mulher, saúde e maternidade. Já os projetos do bonde do retrocesso são todos feitos por homens 🙄 Segundo a Inter-Parliamentary Union, estamos em 154º entre 193 países do ranking de representatividade feminina na política 🤢 Em 2009, tornou-se obrigatório aqui que ao menos 30% dos candidatos às eleições sejam mulheres, mas não tem adiantado não 😞  Inclusive, em 2016, muitos partidos anunciaram candidatas fantasmas! Para saber mais, recomendo a série "Mulheres e Política" criada pelo Gênero e Número: http://www.generonumero.media/edicao-03/ 😘',
-  
+
   ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.',
 
   PEC_181_TROJAN_HORSE_ALERT: 'Meu primeiro alerta 🚨 é a PEC 181, a "Cavalo de Troia". A proposta era estender a licença-maternidade para mães de prematuros, mas o texto foi alterado e agora a PEC pode proibir totalmente o aborto no Brasil, mesmo nos casos em que ele é permitido hoje. É de indignar até robô! 😓 Envie agora uma mensagem para os políticos dizendo que você é contra esse retrocesso!',
