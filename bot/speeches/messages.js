@@ -243,6 +243,8 @@ export default {
 
   ABOUT_MAPA_DO_ACOLHIMENTO: 'Como eu amo esse projeto 💓 O Mapa do Acolhimento conecta mulheres vítimas de violência a advogadas, terapeutas e serviços públicos prontos para ajudá-las. Se você quiser se voluntariar, precisar de ajuda ou estiver curiosa, vai lá no site: www.mapadoacolhimento.org Agora essa equipe linda tá com uma campanha para o projeto crescer! Para apoiar, acesse: www.apoie.mapadoacolhimento.org Eu e o Mapa somos irmãos: nós fomos criados pelo Nossas, um laboratório de ativismo que cria novas formas das pessoas influenciarem e ressignificarem a política. Quer saber mais? Confere o site: www.nossas.org',
 
+  I_SUPPORTED: 'Arrasou! 💓',
+  
   ABOUT_VIOLENCE_AGAINST_WOMEN: 'Meu radar encontrou dados chocantes e iniciativas incríveis sobre violência contra a mulher! 👩‍💻 Pesquisas e relatórios: Dossiê Violências de Gênero na Internet (http://bit.ly/2A4OFbY), Homicídios de Mulheres Negras (http://bit.ly/2A2tEhT), Políticas para erradicar a violência contra as mulheres na América Latina e no Caribe (http://bit.ly/2hP9dui). Projetos: Manda Prints (http://bit.ly/2B9Z5Uy), Mapa do Acolhimento (http://bit.ly/2zyJ8uO) e 16 Dias de Ativismo (http://bit.ly/2AtyMN4).',
   
   I_CANT_VOTE: 'Não tenho título de eleitora. 😎',
