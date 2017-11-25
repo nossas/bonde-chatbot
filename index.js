@@ -88,3 +88,4 @@ fabricated.then(() => {
   Http.createServer(app).listen(port)
   console.info(`🤖  Bot server running at port ${port}`)
 })
+export default app
