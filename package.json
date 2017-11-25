@@ -10,7 +10,7 @@
     "prestart:worker": "NODE_ENV=production babel ./workers/process-bot-mass-message-queue.js --out-file ./workers/process-bot-mass-message-queue.builded.js",
     "start:worker": "NODE_ENV=production node -r 'babel-register' ./workers/process-bot-mass-message-queue.builded.js",
     "lint": "standard index.js ./bot/*.js ./graphql/*.js ./scripts/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "JWT_TOKEN=create_new_token ava",
     "release": "./node_modules/.bin/standard-version"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "apollo-client": "^1.7.0",
+    "ava": "^0.23.0",
     "axios": "^0.16.2",
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -47,5 +48,11 @@
   },
   "devDependencies": {
     "standard-version": "^4.2.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }

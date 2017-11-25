@@ -2,7 +2,9 @@ pipeline:
   build:
     image: node:latest
     commands:
+      - export GRAPHQL_URL=http://data:3001/graphql
       - yarn
+      - yarn test
     when:
       event: [push, tag]
 
@@ -65,3 +67,18 @@ pipeline:
     when:
       event: [ push, tag, build, publish, deployment, pull_request ]
       status: [ success, failure ]
+
+services:
+  database:
+    image: postgres:9.6
+    # commands:
+      # - psql -c 'create database bonde; create schema postgraphql;' -hpostgres -Upostgres
+
+  data:
+    image: nossas/bonde-graphql
+    commands:
+      - export SCHEMA_NAME=postgraphql
+      - export DATABASE_URL=postgres://postgres@database/postgres
+      - export JWT_SECRET=create_new_token
+      - export JWT_TYPE=postgraphql.jwt_token
+      - export PG_DEFAULT_ROLE=postgres
