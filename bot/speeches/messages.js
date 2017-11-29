@@ -114,12 +114,14 @@ export default {
   ABOUT_FEMINISM_DEFINITION: 'Feminismo é todo o movimento de defesa e promoção dos direitos das mulheres, para que vivem em igualdade e com dignidade. Levando em consideração que as mulheres são diferentes e têm experiências de vida distintas, existem muitos feminismos por aí sendo construidos diariamente por mulheres, seja nas universidades, nas ruas, na política e na cultura, por exemplo, em busca igualdade.',
 
   ABOUT_GENDER_DEFINITION: 'Eu gosto muito da definição de gênero da Católicas Pelo Direito de Decidir: "Podemos dizer que gênero é o sexo social definido, ou seja, gênero não é sinônimo de sexo. Enquanto o sexo é biológico, o gênero é construído historicamente, culturalmente e socialmente. Com isto quero dizer que nascemos machos ou fêmeas, mas nos fazemos homens ou mulheres". Se quiser conferir o artigo completo, vem aqui: http://catolicas.org.br/biblioteca/artigos/o-que-e-genero/',
-
+  
   WOMEN_RIGHTS: 'Apesar de estarmos em 2017, as mulheres ainda não têm os mesmos direitos que os homens - seja na lei ou na prática. Enquanto em alguns países mulheres sequer são reconhecidas como seres humanos e não têm dirietos básicos, em outros lugares a sociedade é mais igualitária nesse aspecto. Apesar disso, na prática, muitos direitos não são respeitados ou são violados. Além disso, outros elementos de uma sociedade, como a cultura, ainda reforçam o machismo.',
 
   READING_SUGGESTIONS: 'Ai, adoro gente interessada! Tem muita coisa maravilhosa por aí sobre os direitos das mulheres. 😍 Vou te passar algumas das minhas fontes preferidas: http://thinkolga.com/, http://www.naomekahlo.com/, https://www.programaria.org/category/debater/, www.cartacapital.com.br/colunistas/djamila-ribeiro, http://azmina.com.br/, http://www.generonumero.media/, http://blogueirasnegras.org/ e http://catolicas.org.br/category/biblioteca/',
 
   SEX: 'Não consigo te ajudar com isso. 🤷',
+  
+  ABOUT_ONLINE_SAFETY: 'Você precisa conhecer a Guia Prática de Estratégias e Táticas para a Segurança Digital Feminista! Seu objetivo é proporcionar mais autonomia e segurança na Internet para as mulheres, passando por senhas seguras até discursos de ódio, derrubada de página, uso de celulares e as mais diversas ameaças. Acho que você vai encontrar o que precisa nela: http://feminismo.org.br/guia/ 😍',
 
   DONT_BE_SAD: 'Eita, fica assim não.',
 
