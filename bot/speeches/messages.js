@@ -169,9 +169,15 @@ export default {
 
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
+  ASK_ACT_PEC181: messageWithQuickReply (
+    'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
+quickReply ('V1_QUICK_REPLY_I', 'Enviar já!') ('V1_QUICK_REPLY_H', 'Ver mensagem'),
+    ),
+    
   //
   // Email
   //
+
   EMAIL_ADDRESS_ASK: 'Boa! Estamos quase lá! Agora só preciso que você digite seu email. Você vai ser o remetente - e eu, a mensageira. 🤖',
 
   EMAIL_ADDRESS_ASK_ISNT_SPAM: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, não vou te mandar spam #realoficial. Preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
