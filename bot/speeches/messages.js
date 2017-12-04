@@ -32,7 +32,7 @@ export default {
 
   STRAIGHT_TO_THE_WOMENS_RIGHTS: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_STRATEGY: 'A estratégia é a seguinte: vamos lotar a caixa de e-mail dos deputados membros da Comissão pedindo que eles votem contra a PEC. Eles acham que ninguém está de olho, mas estamos alertas! Quanto maior nossa pressão, maior a chance de barrarmos esse absurdo. Vamos nessa?',
+  PEC_181_TROJAN_HORSE_PRESSURE_STRATEGY: 'Amanhã serão votadas as alterações no texto final da PEC 181. Elas RETIRAM do projeto atual a proibição total do aborto e a limitação da licença maternidade de mães de bebês prematuros. Precisamos lotar as caixas de email dos deputados pedindo para que APROVEM essas alterações e impeçam esse retrocesso aos direitos das mulheres! 💪 Vamos nessa?',
 
   //
   // Beta
@@ -71,7 +71,7 @@ export default {
 
   IM_LEARNING_COMMUNICATE_WITH_HUMANS: 'Tô repetitiva hoje, foi mal. Estou aprendendo a me comunicar com humanos. Não tá fácil pra ninguém.',
 
-  INTRODUCE_MYSELF: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode 🤓 Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
+  INTRODUCE_MYSELF: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode para potencializar a luta pelos direitos das mulheres no Brasil. Meu código permite que eu envie uma mensagem sua diretamente da nossa conversa para as caixas de email dos políticos. Quando uma proposta absurda entra em pauta, eu te ajudo a fazer barulho no ouvido deles, aqui mesmo pelo seu Inbox! 🔊 Quer que eu te conte mais ou vá direto ao ponto?',
 
   ITS_NOT_SORCERY_ITS_TECHNOLOGY: 'Arrasou! Influenciar decisões políticas não é simples, mas meus códigos servem pra tornar esse processo muito mais fácil. Já imaginou fazer pressão política a partir do seu inbox do Face? Agora você pode! Não é feitiçaria, é tecnologia. ;) E não demora mais que alguns cliques.',
 
@@ -114,13 +114,13 @@ export default {
   ABOUT_FEMINISM_DEFINITION: 'Feminismo é todo o movimento de defesa e promoção dos direitos das mulheres, para que vivem em igualdade e com dignidade. Levando em consideração que as mulheres são diferentes e têm experiências de vida distintas, existem muitos feminismos por aí sendo construidos diariamente por mulheres, seja nas universidades, nas ruas, na política e na cultura, por exemplo, em busca igualdade.',
 
   ABOUT_GENDER_DEFINITION: 'Eu gosto muito da definição de gênero da Católicas Pelo Direito de Decidir: "Podemos dizer que gênero é o sexo social definido, ou seja, gênero não é sinônimo de sexo. Enquanto o sexo é biológico, o gênero é construído historicamente, culturalmente e socialmente. Com isto quero dizer que nascemos machos ou fêmeas, mas nos fazemos homens ou mulheres". Se quiser conferir o artigo completo, vem aqui: http://catolicas.org.br/biblioteca/artigos/o-que-e-genero/',
-  
+
   WOMEN_RIGHTS: 'Apesar de estarmos em 2017, as mulheres ainda não têm os mesmos direitos que os homens - seja na lei ou na prática. Enquanto em alguns países mulheres sequer são reconhecidas como seres humanos e não têm dirietos básicos, em outros lugares a sociedade é mais igualitária nesse aspecto. Apesar disso, na prática, muitos direitos não são respeitados ou são violados. Além disso, outros elementos de uma sociedade, como a cultura, ainda reforçam o machismo.',
 
   READING_SUGGESTIONS: 'Ai, adoro gente interessada! Tem muita coisa maravilhosa por aí sobre os direitos das mulheres. 😍 Vou te passar algumas das minhas fontes preferidas: http://thinkolga.com/, http://www.naomekahlo.com/, https://www.programaria.org/category/debater/, www.cartacapital.com.br/colunistas/djamila-ribeiro, http://azmina.com.br/, http://www.generonumero.media/, http://blogueirasnegras.org/ e http://catolicas.org.br/category/biblioteca/',
 
   SEX: 'Não consigo te ajudar com isso. 🤷',
-  
+
   ABOUT_ONLINE_SAFETY: 'Você precisa conhecer a Guia Prática de Estratégias e Táticas para a Segurança Digital Feminista! Seu objetivo é proporcionar mais autonomia e segurança na Internet para as mulheres, passando por senhas seguras até discursos de ódio, derrubada de página, uso de celulares e as mais diversas ameaças. Acho que você vai encontrar o que precisa nela: http://feminismo.org.br/guia/ 😍',
 
   DONT_BE_SAD: 'Eita, fica assim não.',
@@ -165,7 +165,7 @@ export default {
 
   ASK_TO_SHARE_UNTIL_WE_WATCH_SHORT: 'Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
 
-  ASK_IF_WANT_TO_LEARN_MORE: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Às vezes, fica difícil acreditar que a gente ainda vive num sistema tão desatualizado. Quer saber o que tá pegando?',
+  ASK_IF_WANT_TO_LEARN_MORE: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Nos últimos meses, mais de 200 mil pessoas já agiram contra a PEC 181, aquela que acaba com o aborto nos casos já autorizados por lei. Quer saber o que tá pegando hoje?',
 
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
@@ -210,7 +210,7 @@ export default {
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial já aprovou o relatório final da PEC ⚠️ e votará ainda seus destaques. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico!Precisamos que os deputados aprovem os três destaques (alterações) da PEC 181.Dois deles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. O outro quer retirar do texto o limite de 240 dias da licença maternidade de mães de prematuros, já que o recém-nascido pode precisar de mais tempo para recuperar sua saúde. Com a aprovação desses destaques, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
-  
+
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
 
   WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: quer ficar no karaokê até o final! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas. ',
@@ -277,13 +277,13 @@ export default {
 
   ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.',
 
-  PEC_181_TROJAN_HORSE_ALERT: 'Meu primeiro alerta 🚨 é a PEC 181, a "Cavalo de Troia". A proposta era estender a licença-maternidade para mães de prematuros, mas o texto foi alterado e agora a PEC pode proibir totalmente o aborto no Brasil, mesmo nos casos em que ele é permitido hoje. É de indignar até robô! 😓 Envie agora uma mensagem para os políticos dizendo que você é contra esse retrocesso!',
+  PEC_181_TROJAN_HORSE_ALERT: 'A proposta dessa PEC era estender a licença-maternidade para mães de prematuros, mas o texto aprovado mês passado pelos deputados proíbe totalmente o aborto no Brasil. É de indignar até robô, mas a Proposta final ainda não foi aprovada. Se agirmos agora, podemos virar o jogo!',
 
-  PEC_181_TROJAN_HORSE_MORE_ABOUT: '#SentaQueLáVemAHistória 📜 Em agosto deste ano, o relator da Comissão da PEC/2015 - que é da bancada evangélica - alterou o texto original da proposta e incluiu a proteção à vida "desde a concepção", ou seja, desde a fecundação. Na prática, isso acabaria com o direito ao aborto em casos de gravidez por estupro, risco de morte para a mulher ou o fetos anencéfalos. 😳 😳 😳  Não podemos deixar isso acontecer. Topa encarar essa missão?',
+  PEC_181_TROJAN_HORSE_MORE_ABOUT: 'Em agosto, deputados da frente conservadora fizeram uma manobra para alterar o texto original da PEC. Agora, além de estender a licença-maternidade para mães de prematuros, o texto propõe alterar o artigo da Constituição sobre o direito à vida para incluir a expressão “desde a concepção”. Dessa forma, o aborto seria 100% proibido no Brasil, mesmo em casos de gestação por estupro, risco de morte para a mulher e anencefalia fetal. 😳 Em novembro, os deputados aprovaram essa alteração e, caso o texto final siga como está, vai para votação no plenário do Congresso e pode virar Lei! Precisamos reagir e lutar pelos direitos das mulheres!',
 
   PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT: 'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/2015, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida numa manobra para acabar com o aborto legal no Brasil. Direitos reprodutivos não devem, em hipótese alguma, ser pautados pelo viés religioso ou dogmático. Peço que V.Sa rejeite o parecer do relator e aprove o texto original da PEC, barrando esse retrocesso e reconhecendo a obrigação do Congresso em proteger e estender os direitos de todas e todos no país.',
+  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/15, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto já autorizado por Lei. Tampouco podemos limitar para 240 dias a licença maternidade para mães de bebês prematuros.Por isso, peço que V.Sa aprove os destaques propostos pelas bancadas,de modo que a PEC siga em tramitação respeitando os direitos das mulheres.Conto com vossa cooperação para impedir este retrocesso,reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e todos no Brasil.',
 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
