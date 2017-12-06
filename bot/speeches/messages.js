@@ -171,10 +171,8 @@ export default {
 
   ASK_ACT_PEC181: messageWithQuickReply (
     'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
-    [
-      quickReply('V1_QUICK_REPLY_I', 'Enviar já!'),
-      quickReply('V1_QUICK_REPLY_H', 'Ver mensagem'),
-    ]
+    quickReply('V1_QUICK_REPLY_I', 'Enviar já!'),
+    quickReply('V1_QUICK_REPLY_H', 'Ver mensagem'),
   ),
 
   //
