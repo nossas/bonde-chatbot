@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.6"></a>
+## [1.4.6](https://github.com/nossas/bonde-bot/compare/v1.4.5...v1.4.6) (2017-12-08)
+
+
+### Bug Fixes
+
+* **speeches:** ask act pec 181 intention qr message fn syntax ([f3a3f77](https://github.com/nossas/bonde-bot/commit/f3a3f77))
+
+
+
 <a name="1.4.5"></a>
 ## [1.4.5](https://github.com/nossas/bonde-bot/compare/v1.4.3...v1.4.5) (2017-12-06)
 
