@@ -32,7 +32,7 @@ export default {
 
   STRAIGHT_TO_THE_WOMENS_RIGHTS: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_STRATEGY: 'Amanhã serão votadas as alterações no texto final da PEC 181. Elas RETIRAM do projeto atual a proibição total do aborto e a limitação da licença maternidade de mães de bebês prematuros. Precisamos lotar as caixas de email dos deputados pedindo para que APROVEM essas alterações e impeçam esse retrocesso aos direitos das mulheres! 💪 Vamos nessa?',
+  PEC_181_TROJAN_HORSE_PRESSURE_STRATEGY: 'Logo mais serão votadas as alterações no texto final da PEC 181, que RETIRAM do projeto atual a proibição total do aborto. Precisamos lotar as caixas de email dos deputados pedindo para que APROVEM essas alterações e impeçam esse retrocesso aos direitos das mulheres! 💪 Vamos nessa?',
 
   //
   // Beta
@@ -284,13 +284,13 @@ export default {
 
   ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.',
 
-  PEC_181_TROJAN_HORSE_ALERT: 'A proposta dessa PEC era estender a licença-maternidade para mães de prematuros, mas o texto aprovado mês passado pelos deputados proíbe totalmente o aborto no Brasil. É de indignar até robô, mas a Proposta final ainda não foi aprovada. Se agirmos agora, podemos virar o jogo!',
+  PEC_181_TROJAN_HORSE_ALERT: 'A bola da vez continua sendo a PEC 181. Sua proposta era estender a licença-maternidade para mães de prematuros, mas o texto aprovado mês passado pelos deputados proíbe totalmente o aborto no Brasil. É de indignar até robô, mas a Proposta final ainda não foi aprovada. Se agirmos agora, podemos virar o jogo!',
 
   PEC_181_TROJAN_HORSE_MORE_ABOUT: 'Em agosto, deputados da frente conservadora fizeram uma manobra para alterar o texto original da PEC. Agora, além de estender a licença-maternidade para mães de prematuros, o texto propõe alterar o artigo da Constituição sobre o direito à vida para incluir a expressão “desde a concepção”. Dessa forma, o aborto seria 100% proibido no Brasil, mesmo em casos de gestação por estupro, risco de morte para a mulher e anencefalia fetal. 😳 Em novembro, os deputados aprovaram essa alteração e, caso o texto final siga como está, vai para votação no plenário do Congresso e pode virar Lei! Precisamos reagir e lutar pelos direitos das mulheres!',
 
   PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT: 'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/15, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto já autorizado por Lei. Por isso, peço que V.Sa aprove os destaques propostos pelas bancadas,de modo que a PEC siga em tramitação respeitando os direitos das mulheres.Conto com vossa cooperação para impedir este retrocesso,reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e todos no Brasil.',
+  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/15, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto já autorizado por Lei. Tampouco podemos limitar para 240 dias a licença maternidade para mães de bebês prematuros. Por isso, peço que V.Sa aprove os destaques propostos pelas bancadas, de modo que a PEC siga em tramitação respeitando os direitos das mulheres. Conto com vossa cooperação para impedir este retrocesso,reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e todos no Brasil.',
 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
