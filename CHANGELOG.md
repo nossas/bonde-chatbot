@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.8"></a>
+## [1.4.8](https://github.com/nossas/bonde-bot/compare/v1.4.7...v1.4.8) (2017-12-11)
+
+
+### Bug Fixes
+
+* v1 speech messages ([f8b8d96](https://github.com/nossas/bonde-bot/commit/f8b8d96))
+
+
+
 <a name="1.4.6"></a>
 ## [1.4.6](https://github.com/nossas/bonde-bot/compare/v1.4.5...v1.4.6) (2017-12-08)
 
