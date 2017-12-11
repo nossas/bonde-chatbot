@@ -290,7 +290,7 @@ export default {
 
   PEC_181_TROJAN_HORSE_READ_THE_PRESSURE_TEXT: 'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
 
-  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/15, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto já autorizado por Lei. Tampouco podemos limitar para 240 dias a licença maternidade para mães de bebês prematuros.Por isso, peço que V.Sa aprove os destaques propostos pelas bancadas,de modo que a PEC siga em tramitação respeitando os direitos das mulheres.Conto com vossa cooperação para impedir este retrocesso,reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e todos no Brasil.',
+  PEC_181_TROJAN_HORSE_PRESSURE_TEXT: 'Prezados(as) membros da Comissão Especial da PEC 181/15, não podemos permitir que uma proposta que originalmente amplia os direitos das mulheres seja revertida em um cruel Cavalo de Troia, acabando com o direito de aborto já autorizado por Lei. Por isso, peço que V.Sa aprove os destaques propostos pelas bancadas,de modo que a PEC siga em tramitação respeitando os direitos das mulheres.Conto com vossa cooperação para impedir este retrocesso,reconhecendo a obrigação do Congresso em garantir e estender os direitos de todas e todos no Brasil.',
 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
