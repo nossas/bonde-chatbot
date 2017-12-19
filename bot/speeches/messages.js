@@ -42,6 +42,8 @@ export default {
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
   IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
+  
+  NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. As votações da PEC 181 estão suspensas até 2018 e meu código está se preparando para os próximos passos. Vamos chegar com tudo 😉 Pode deixar que te aviso por aqui assim que houver alguma oportunidade de ação. 💪🏽',
 
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -169,16 +171,6 @@ export default {
 
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
-  ASK_ACT_PEC181: messageWithQuickReply (
-    'Sabia que podia contar com você! Para ver a mensagem que vamos enviar aos deputados e deputadas que vão votar a PEC 181, clique no botão abaixo. Não se assuste com a linguagem, tive que traduzir pro Politiquês, que é a língua que eles entendem 🙄:',
-    quickReply('V1_QUICK_REPLY_I', 'Enviar já!'),
-    quickReply('V1_QUICK_REPLY_H', 'Ver mensagem'),
-  ),
-
-  //
-  // Email
-  //
-
   EMAIL_ADDRESS_ASK: 'Boa! Estamos quase lá! Agora só preciso que você digite seu email. Você vai ser o remetente - e eu, a mensageira. 🤖',
 
   EMAIL_ADDRESS_ASK_ISNT_SPAM: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, não vou te mandar spam #realoficial. Preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
@@ -214,7 +206,7 @@ export default {
 
   ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores.',
 
-  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial já aprovou o relatório final da PEC ⚠️ e votará ainda seus destaques. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
+  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ e votará em 2018 seus destaques, como o pedido de supressão do trecho que determina a proteção à vida desde a concepção. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
 
@@ -278,6 +270,12 @@ export default {
 
   ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem somente 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
 
+  ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solteira, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Agora, ela enfrenta um novo desafio: a discriminação do mercado de trabalho. Não podemos deixá-la sozinha! Conheça melhor sua história e a nossa campanha aqui: http://pelavidaderebeca.org', 
+  
+  ABOUT_REBECA_CAMPAIGN: 'Com toda a exposição midiática em torno do caso de Rebeca, ela pode agora sofrer grande discriminação no mercado de trabalho. O que Rebeca fez foi por todas as brasileiras, chegou nossa hora de lutar por ela. Para isso, junto da Think Olga e da Anis, eu criei a campanha Um Emprego Para a Rebeca! Você pode oferecer ou indicar uma vaga e compartilhar a campanha na sua rede. Vamos juntas? Acesse nosso site e conheça: http://pelavidaderebeca.org', 
+  
+  ABOUT_ABORTION_IN_COLOMBIA: 'A Colômbia é mesmo um exemplo quando falamos de aborto! Foi lá que Rebeca se sentiu acolhida - meu muito obrigada às Colombianas. 💓 Para entender melhor as diferenças legislativas entre Brasil e Colômbia, dá só uma olhada no que eu preparei: bit.ly/2AS7Rqt',
+  
   WOMEN_IN_POWER: 'Opa, sobre esse assunto eu recomendo o livro "Mulheres no Poder", que conta a trajetória de brasileiras na política desde o século XIX - um espaço geralmente ocupado por homens. Essa pesquisa foi feita por Schuma Schumaher e Antonia Ceva.',
 
   ABOUT_WOMEN_IN_POLITICS: 'Desde 1988, são as mulheres políticas que trazem propostas sobre violência contra a mulher, saúde e maternidade. Já os projetos do bonde do retrocesso são todos feitos por homens 🙄 Segundo a Inter-Parliamentary Union, estamos em 154º entre 193 países do ranking de representatividade feminina na política 🤢 Em 2009, tornou-se obrigatório aqui que ao menos 30% dos candidatos às eleições sejam mulheres, mas não tem adiantado não 😞  Inclusive, em 2016, muitos partidos anunciaram candidatas fantasmas! Para saber mais, recomendo a série "Mulheres e Política" criada pelo Gênero e Número: http://www.generonumero.media/edicao-03/ 😘',
