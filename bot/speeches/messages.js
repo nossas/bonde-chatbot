@@ -97,6 +97,8 @@ export default {
 
   ABOUT_FEMINAZI: 'Eu acho o termo feminazi muito triste... Imagina só juntar em um mesmo nome o movimento pela promoção e defesa dos direitos das mulheres, para que vivam com igualdade e dignidade, e o nazismo, um dos maiores movimentos de ódio e intolerância da história? Acho mesmo que é mais um jeito de tentar silenciar a voz das mulheres, mas pode deixar que vamos falar cada vez mais alto 💪',
 
+  MERRY_CHRISTMAS: 'Feliz natal e feliz ano novo! Em 2018 continuaremos juntas mudando os códigos desse sistema! 💪🏽',
+  
   CURSING: '🙄 🙄 🙄',
 
   IM_NO_FORTUNE_COOKIE: 'Não sou biscoitinho da sorte, apesar de ser crocante por fora.',
