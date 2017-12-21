@@ -2,7 +2,6 @@ pipeline:
   build:
     image: node:latest
     commands:
-      - export GRAPHQL_URL=http://data:3001/graphql
       - yarn
       - yarn test
     when:
