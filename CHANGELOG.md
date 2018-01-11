@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.2"></a>
+## [1.5.2](https://github.com/nossas/bonde-bot/compare/v1.5.1...v1.5.2) (2018-01-11)
+
+
+### Bug Fixes
+
+* **ci:** graphql url enviroment variable ([3b139f3](https://github.com/nossas/bonde-bot/commit/3b139f3))
+
+
+
+<a name="1.5.1"></a>
+## [1.5.1](https://github.com/nossas/bonde-bot/compare/v1.5.0...v1.5.1) (2017-12-21)
+
+
+### Bug Fixes
+
+* **ci:** graphql url enviroment variable ([70a4748](https://github.com/nossas/bonde-bot/commit/70a4748))
+
+
+
+<a name="1.4.8"></a>
+## [1.4.8](https://github.com/nossas/bonde-bot/compare/v1.4.7...v1.4.8) (2017-12-11)
+
+
+### Bug Fixes
+
+* v1 speech messages ([f8b8d96](https://github.com/nossas/bonde-bot/commit/f8b8d96))
+
+
+
+<a name="1.4.6"></a>
+## [1.4.6](https://github.com/nossas/bonde-bot/compare/v1.4.5...v1.4.6) (2017-12-08)
+
+
+### Bug Fixes
+
+* **speeches:** ask act pec 181 intention qr message fn syntax ([f3a3f77](https://github.com/nossas/bonde-bot/commit/f3a3f77))
+
+
+
+<a name="1.4.5"></a>
+## [1.4.5](https://github.com/nossas/bonde-bot/compare/v1.4.3...v1.4.5) (2017-12-06)
+
+
+### Bug Fixes
+
+* speech message quick reply function syntax ([be58278](https://github.com/nossas/bonde-bot/commit/be58278))
+* speech message quick reply function syntax ([dd5bada](https://github.com/nossas/bonde-bot/commit/dd5bada))
+* **speeches:** ask act pec 181 intention qr message fn syntax ([f3a3f77](https://github.com/nossas/bonde-bot/commit/f3a3f77))
+
+
+
+<a name="1.4.4"></a>
+## [1.4.4](https://github.com/nossas/bonde-bot/compare/v1.4.3...v1.4.4) (2017-12-04)
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/nossas/bonde-bot/compare/v1.4.0...v1.4.1) (2017-11-22)
 

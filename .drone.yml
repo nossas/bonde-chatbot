@@ -2,6 +2,7 @@ pipeline:
   build:
     image: node:latest
     commands:
+      - export GRAPHQL_URL=https://data.staging.bonde.org/graphql
       - yarn
       - yarn test
     when:

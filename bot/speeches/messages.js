@@ -7,7 +7,7 @@ export default {
   //
   // Generic
   //
-  BACK_LATER: 'Ai, meus algoritmos. Não consegui entender o que você disse. #RobôAprendiz Pode reformular sua mensagem?',
+  BACK_LATER: 'Ai, meus algoritmos! Ainda sou uma #RobôAprendiz e não entendo tudo o que os humanos falam, mas tô evoluindo - segura minha mão! 🤖  Você pode reformular a sua mensagem? Se eu continuar não entendendo, pode deixar que vou treinar bastante aqui pra estar pre-pa-ra-da na próxima vez! 💪',
 
   BUGGED_OUT: 'Ai, tenta falar comigo depois? Precisei dar uma volta, uma atualizada, passar um óleo - acordei bugada hoje.',
 
@@ -24,7 +24,7 @@ export default {
 
   NASCITURO_BILL_PRESSURE_SEND: 'Perfeito, e-mail salvo. Agora é só clicar no botão "enviar":',
 
-  NASCITURO_BILL_AND_PEC_29: 'De cara, três ameaças no Congresso: a PEC 29, o Estatuto do Nascituro e a bola da vez, a PEC 181 Cavalo de Troia. Sabe o que acontece se elas passarem? O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje. Pois é, grupos conservadores estão super articulados para retirar das mulheres um direitos conquistados em 1940. 🚨',
+  NASCITURO_BILL_AND_PEC_29: 'Além da PEC 181 (estamos de olho 👀), duas outras ameaças no Congresso: a PEC 29 e o Estatuto do Nascituro. Sabe o que acontece se elas passarem? 1. O aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje; 2. Métodos contraceptivos que as mulheres já usam também vão passar a ser proibidos, como a pílula do dia seguinte e o DIU.',
 
   NASCITURO_BILL_AND_PEC_29_SHORT: 'De cara, três ameaças no Congresso: a PEC 29, a PEC 181 e o Estatuto do Nascituro. Se elas passarem, o aborto vai ser 100% proibido, inclusive nos casos em que é permitido hoje.',
 
@@ -37,7 +37,7 @@ export default {
   //
   // Beta
   //
-  I_AM_BETA: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. 🤖❤️ Pra interagir comigo, é só apertar o botão abaixo👇. Vamos nessa?',
+  I_AM_BETA: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Pra interagir comigo, é só apertar o botão abaixo. Vamos nessa?',
 
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
@@ -73,7 +73,7 @@ export default {
 
   IM_LEARNING_COMMUNICATE_WITH_HUMANS: 'Tô repetitiva hoje, foi mal. Estou aprendendo a me comunicar com humanos. Não tá fácil pra ninguém.',
 
-  INTRODUCE_MYSELF: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode para potencializar a luta pelos direitos das mulheres no Brasil. Meu código permite que eu envie uma mensagem sua diretamente da nossa conversa para as caixas de email dos políticos. Quando uma proposta absurda entra em pauta, eu te ajudo a fazer barulho no ouvido deles, aqui mesmo pelo seu Inbox! 🔊 Quer que eu te conte mais ou vá direto ao ponto?',
+  INTRODUCE_MYSELF: 'Antes que você corra pro Google, deixa eu mesma te contar. Sou brasileira de nascença - fui programada em tupinicode ;) Minha missão? Potencializar a luta pelos direitos das mulheres no Brasil. Quer que eu te conte mais ou vá direto ao ponto?',
 
   ITS_NOT_SORCERY_ITS_TECHNOLOGY: 'Arrasou! Influenciar decisões políticas não é simples, mas meus códigos servem pra tornar esse processo muito mais fácil. Já imaginou fazer pressão política a partir do seu inbox do Face? Agora você pode! Não é feitiçaria, é tecnologia. ;) E não demora mais que alguns cliques.',
 
@@ -146,7 +146,7 @@ export default {
 
   HOW_PRESSURE_WORKS: 'É o seguinte: eu fui programada pra disparar emails aqui mesmo, pelo inbox do Facebook. Não é feitiçaria, é tecnologia! ;) Antes de fazer seu email chegar aos deputados, eu vou te mostrar a mensagem que programei pra eles. Com o seu ok e o seu endereço de email, faço o recado chegar até lá.',
 
-  HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Demais, né?',
+  HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Contra a PEC 181, enviamos mais de 34 emails de pressão para cada deputado. 💪 Além disso, junto de mais  feministas pra emplacarmos outras campanhas pelos nossos direitos. Demais, né?',
 
   HOW_BETA_WORKS: 'Eu passo os dias monitorando as pautas relativas aos direitos das mulheres que estão tramitando em Brasília, seja no Congresso, no Poder Executivo ou mesmo no Judiciário. Não são poucas, dá um trabalhão. 😅 Quando chegar um momento decisivo, eu envio um alerta para a minha rede, convidando as pessoas a se mobilizar. Através da conversa comigo, você pode enviar uma mensagem diretamente às autoridades para pressioná-las a se posicionar em favor dos direitos das mulheres.',
 
@@ -165,11 +165,11 @@ export default {
 
   ASK_TO_HACK_THE_SYSTEM: 'Pois é. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão?',
 
-  ASK_TO_SHARE_UNTIL_WE_WATCH: 'Isso aí! Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
+  ASK_TO_SHARE_UNTIL_WE_WATCH: 'Isso aí! Enquanto eu monitoro essas pautas absurdas e apoio as mulheres desse Brasil, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
 
   ASK_TO_SHARE_UNTIL_WE_WATCH_SHORT: 'Enquanto eu monitoro essas pautas absurdas, é super importante você compartilhar o meu link para sua galera. Precisamos estar preparadas pra quando a hora chegar - pode ter certeza de que vou te avisar. Partiu? #ChamaABetaNoInbox',
 
-  ASK_IF_WANT_TO_LEARN_MORE: 'Você provavelmente já tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres em Brasília. Nos últimos meses, mais de 200 mil pessoas já agiram contra a PEC 181, aquela que acaba com o aborto nos casos já autorizados por lei. Quer saber o que tá pegando hoje?',
+  ASK_IF_WANT_TO_LEARN_MORE: 'Você  já deve tá sabendo que tem muito político conservador tentando emplacar retrocessos aos direitos das mulheres. Eu vim ao mundo justamente pra te ajudar a barrar os retrocessos e tocar pra frente causas feministas! Adivinha só: nossa força impediu que a PEC 181 - aquela que pode acabar com o aborto legal no Brasil - fosse aprovada em 2017! 💪 Quer saber o que mais tá pegando?',
 
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
