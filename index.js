@@ -81,6 +81,14 @@ const queue = new Queue('bot-mass-message', envs.redisURL)
 app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(queue))
 
 //
+// Version check
+//
+app.get('/_version', (req, res) => {
+  let p = require('child_process')
+  res.json({ hash: p.execSync('git rev-parse HEAD').toString().trim() })
+})
+
+//
 // Up the server
 //
 fabricated.then(() => {
