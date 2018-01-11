@@ -44,17 +44,14 @@ pipeline:
       status: success
       event: tag
 
-  deploy-production:
-    image: appleboy/drone-ssh
-    host: ssh.bonde.org
-    username: ubuntu
-    command_timeout: 120
-    port: 22
-    secrets: [ ssh_key ]
-    script:
-      - sudo docker pull nossas/bonde-bot:${DRONE_TAG##v}
-      - sudo docker tag nossas/bonde-bot:${DRONE_TAG##v} dokku/beta:latest
-      - dokku tags:deploy beta latest
+  deploy-rancher-production:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: bonde/bot
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH}
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
     when:
       status: success
       event: tag
