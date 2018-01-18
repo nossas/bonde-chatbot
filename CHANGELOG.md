@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.5"></a>
+## [1.5.5](https://github.com/nossas/bonde-bot/compare/v1.5.3...v1.5.5) (2018-01-18)
+
+
+### Bug Fixes
+
+* **ci:** graphql url enviroment variable ([ec3850b](https://github.com/nossas/bonde-bot/commit/ec3850b))
+
+
+
 <a name="1.5.4"></a>
 ## [1.5.4](https://github.com/nossas/bonde-bot/compare/v1.5.3...v1.5.4) (2018-01-11)
 
