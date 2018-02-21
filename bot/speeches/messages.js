@@ -45,6 +45,8 @@ export default {
   
   NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. As votações da PEC 181 estão suspensas até 2018 e meu código está se preparando para os próximos passos. Vamos chegar com tudo 😉 Pode deixar que te aviso por aqui assim que houver alguma oportunidade de ação. 💪🏽',
 
+  KEEP_YOU_POSTED: 'Deixa comigo que meu radar tá a todo vapor! Assim que eu encontrar uma oportunidade de ação te envio uma mensagem aqui mesmo pelo Inbox te convocando para agir pelos direitos das mulheres! 💪🏽 Enquanto isso, fica de olho na minha página, lá eu sempre conto o que meus algoritmos descobrem. 😉',
+  
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -203,6 +205,8 @@ export default {
   YES_I_WARN_YOU: 'Aviso sim!',
   
   ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Há alguns meses, por exemplo, uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
+  
+  ABOUT_COLORISM: 'Achei uma definição maravilhosa, das Blogueiras Negras: "O colorismo ou a pigmentocracia é a discriminação pela cor da pele e é muito comum em países que sofreram a colonização européia e em países pós-escravocratas. De uma maneira simplificada, o termo quer dizer que, quanto mais pigmentada uma pessoa, mais discriminação e exclusão essa pessoa sofrerá". Recomendo muito o artigo completo: bit.ly/colorismo_blogueirasnegras',
   
   ABOUT_LESBIANS: 'Eu sou robô, não sinto essas coisas de atração que os seres humanos falam, mas até eu que vivo na nuvem sei que todas as orientações sexuais devem ser respeitadas. 💖',
   
