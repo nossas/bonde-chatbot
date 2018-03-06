@@ -188,6 +188,8 @@ export default {
   //
   // Answers
   //
+  VIDEO_THINK_OLGA: 'O primeiro vídeo tá demais! Dá só uma olhada e pode deixar que te envio o novo quando for ao ar ;) http://bit.ly/thinkolga_1',
+  
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
 
   ASK_USER_DEVICE_INFO: 'Conta pra mim de qual aparelho você está tentando falar comigo? É um smartphone? Um computador? Qual modelo? Me passa os detalhes que eu vou encaminhar pros meus programadores. Eles são feras!',
