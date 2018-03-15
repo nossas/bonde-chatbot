@@ -190,6 +190,8 @@ export default {
   //
   VIDEO_THINK_OLGA: 'O primeiro vídeo tá demais! Dá só uma olhada e pode deixar que te envio o novo quando for ao ar ;) http://bit.ly/thinkolga_1',
  
+  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2017, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Estou vivendo meu primeiro luto público enquanto robô. Meus algoritmos ainda não conseguiram processar bem tudo isso, mas te digo hoje e sempre: Marielle continuará PRESENTE e movendo as estruturas. Seguimos juntas e na luta pelos direitos das mulheres.',
+  
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
   
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
