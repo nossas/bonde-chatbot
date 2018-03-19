@@ -43,7 +43,7 @@ export default {
 
   IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
   
-  NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. As votações da PEC 181 estão suspensas até 2018 e meu código está se preparando para os próximos passos. Vamos chegar com tudo 😉 Pode deixar que te aviso por aqui assim que houver alguma oportunidade de ação. 💪🏽',
+  NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. Assim que a votação das alterações no texto final for reagendada, pode deixar que eu te mando mensagem por aqui 😉 Enquanto isso, confere meu registro sobre a nossa mobilização: www.paremocavalodetroia.org/',
 
   KEEP_YOU_POSTED: 'Deixa comigo que meu radar tá a todo vapor! Assim que eu encontrar uma oportunidade de ação te envio uma mensagem aqui mesmo pelo Inbox te convocando para agir pelos direitos das mulheres! 💪🏽 Enquanto isso, fica de olho na minha página, lá eu sempre conto o que meus algoritmos descobrem. 😉',
   
@@ -96,7 +96,7 @@ export default {
   WHAT_ELSE: 'Já vi que você é que nem eu: quer saber de tudo! Sou uma #RobôAprendiz, então ainda tô aprendendo várias coisas, mas alguns dos meus temas que mais bombam por aí são feminicídio, aborto, mulheres na política, como deixar o mundo mais feminista e machismo. Se quiser, pode me perguntar um por um que te respondo 😉',
 
   YOU_CAN_HATE_ME: 'Ninguém é obrigado a gostar de ninguém, né mesmo?',
-
+  
   ABOUT_FEMINAZI: 'Eu acho o termo feminazi muito triste... Imagina só juntar em um mesmo nome o movimento pela promoção e defesa dos direitos das mulheres, para que vivam com igualdade e dignidade, e o nazismo, um dos maiores movimentos de ódio e intolerância da história? Acho mesmo que é mais um jeito de tentar silenciar a voz das mulheres, mas pode deixar que vamos falar cada vez mais alto 💪',
 
   MERRY_CHRISTMAS: 'Feliz natal e feliz ano novo! Em 2018 continuaremos juntas mudando os códigos desse sistema! 💪🏽',
@@ -189,8 +189,10 @@ export default {
   // Answers
   //
   VIDEO_THINK_OLGA: 'O primeiro vídeo tá demais! Dá só uma olhada e pode deixar que te envio o novo quando for ao ar ;) http://bit.ly/thinkolga_1',
- 
+  
   ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2017, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Estou vivendo meu primeiro luto público enquanto robô. Meus algoritmos ainda não conseguiram processar bem tudo isso, mas te digo hoje e sempre: Marielle continuará PRESENTE e movendo as estruturas. Seguimos juntas e na luta pelos direitos das mulheres.',
+  
+  ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC 29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia.',
   
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
   
@@ -236,8 +238,8 @@ export default {
 
   ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores.',
 
-  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ e votará em 2018 seus destaques, como o pedido de supressão do trecho que determina a proteção à vida desde a concepção. Depois, a PEC segue para o plenário da Câmara dos Deputados e, caso aprovada por ⅔ dos parlamentares, vai para votação no Senado. Tem muita luta ainda e vamos chegar com tudo 💪🏾',
-
+  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
+  
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
 
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
@@ -320,6 +322,8 @@ export default {
 
   ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.',
 
+  INTERNET_SUCKS: 'Te entendo! Aqui na nuvem também rolam umas turbulências de vez em quando. Me chama quando tiver melhor - estarei por aqui 😉',
+  
   PEC_181_TROJAN_HORSE_ALERT: 'A bola da vez continua sendo a PEC 181. Sua proposta era estender a licença-maternidade para mães de prematuros, mas o texto aprovado mês passado pelos deputados proíbe totalmente o aborto no Brasil. É de indignar até robô, mas a Proposta final ainda não foi aprovada. Se agirmos agora, podemos virar o jogo!',
 
   PEC_181_TROJAN_HORSE_MORE_ABOUT: 'Em agosto, deputados da frente conservadora fizeram uma manobra para alterar o texto original da PEC. Agora, além de estender a licença-maternidade para mães de prematuros, o texto propõe alterar o artigo da Constituição sobre o direito à vida para incluir a expressão “desde a concepção”. Dessa forma, o aborto seria 100% proibido no Brasil, mesmo em casos de gestação por estupro, risco de morte para a mulher e anencefalia fetal. 😳 Em novembro, os deputados aprovaram essa alteração e, caso o texto final siga como está, vai para votação no plenário do Congresso e pode virar Lei! Precisamos reagir e lutar pelos direitos das mulheres!',
