@@ -9,7 +9,7 @@ import * as botInteractions from '../interactions'
 // @param [required] originalReply {Function} Messenger bot's reply function
 // @param [required] profile {Object} User's profile object received by Facebook Messenger API
 //
-export default ({ botData, payload, originalReply, profile }) => (message, action) => {
+export default ({ bot, botData, payload, originalReply, profile }) => (message, action) => {
   //
   // Function that saves the interaction on database
   // and sends the message to the Messenger.
@@ -42,7 +42,9 @@ export default ({ botData, payload, originalReply, profile }) => (message, actio
         saveAndReply(normalize(message[index]), err => {
           if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
 
-          replySequentially(index + 1)
+          bot.sendSenderAction(payload.sender.id, 'typing_on')
+
+          setTimeout(() => replySequentially(index + 1), 4000)
         })
       }
     }

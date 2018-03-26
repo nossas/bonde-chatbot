@@ -11,7 +11,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     // Wraps the original reply function with the behaviour
     // to save the user's interaction.
     //
-    const reply = botHelpers.replyWithSave({ botData, payload, originalReply, profile })
+    const reply = botHelpers.replyWithSave({ bot, botData, payload, originalReply, profile })
 
     //
     // Speech action strategy
