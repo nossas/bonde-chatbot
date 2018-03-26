@@ -56,22 +56,8 @@ export default botData => ({
       text: botSpeeches.messages.I_AM_BETA,
       quick_replies: [
         quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO),
-        quickReply('test', 'Multi Messages'),
       ],
     },
-    'test': [
-      '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      '2. Itaque si aut requietem natura non quaereret aut eam posset alia quadam ratione consequi.',
-      '3. Hanc se tuus Epicurus omnino ignorare dicit quam aut qualem esse velint qui honestate summum bonum metiantur.',
-      '4. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus.',
-      '5. Videmus in quodam volucrium genere non nulla indicia pietatis, cognitionem, memoriam, in multis etiam desideria videmus.',
-      '6. Quae enim cupiditates a natura proficiscuntur, facile explentur sine ulla iniuria, quae autem inanes sunt, iis parendum non est.',
-      '7. Ita est quoddam commune officium sapientis et insipientis, ex quo efficitur versari in iis, quae media dicamus.',
-      messageWithQuickReply(
-        '8. Alia quaedam dicent, credo, magna antiquorum esse peccata, quae ille veri investigandi cupidus nullo modo ferre potuerit.',
-        quickReply('test', 'test')
-      )
-    ],
     [V1_QUICK_REPLY_A]: {
       text: botSpeeches.messages.INTRODUCE_MYSELF,
       quick_replies: [

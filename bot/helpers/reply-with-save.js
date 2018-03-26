@@ -43,6 +43,9 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
           if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
 
           bot.sendSenderAction(payload.sender.id, 'typing_on')
+          if (index === message.length - 1) {
+            bot.sendSenderAction(payload.sender.id, 'typing_off')
+          }
 
           setTimeout(() => replySequentially(index + 1), 4000)
         })
