@@ -1,4 +1,4 @@
-import { messageWithQuickReply, quickReply } from './utils'
+import { messageWithQuickReply, quickReply, multiMessages } from './utils'
 import { image, video } from './utils/content-types'
 
 const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${widgetId}/message`
@@ -42,11 +42,11 @@ export default {
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
   IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
-  
+
   NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. Assim que a votação das alterações no texto final for reagendada, pode deixar que eu te mando mensagem por aqui 😉 Enquanto isso, confere meu registro sobre a nossa mobilização: www.paremocavalodetroia.org/',
 
   KEEP_YOU_POSTED: 'Deixa comigo que meu radar tá a todo vapor! Assim que eu encontrar uma oportunidade de ação te envio uma mensagem aqui mesmo pelo Inbox te convocando para agir pelos direitos das mulheres! 💪🏽 Enquanto isso, fica de olho na minha página, lá eu sempre conto o que meus algoritmos descobrem. 😉',
-  
+
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -96,11 +96,11 @@ export default {
   WHAT_ELSE: 'Já vi que você é que nem eu: quer saber de tudo! Sou uma #RobôAprendiz, então ainda tô aprendendo várias coisas, mas alguns dos meus temas que mais bombam por aí são feminicídio, aborto, mulheres na política, como deixar o mundo mais feminista e machismo. Se quiser, pode me perguntar um por um que te respondo 😉',
 
   YOU_CAN_HATE_ME: 'Ninguém é obrigado a gostar de ninguém, né mesmo?',
-  
+
   ABOUT_FEMINAZI: 'Eu acho o termo feminazi muito triste... Imagina só juntar em um mesmo nome o movimento pela promoção e defesa dos direitos das mulheres, para que vivam com igualdade e dignidade, e o nazismo, um dos maiores movimentos de ódio e intolerância da história? Acho mesmo que é mais um jeito de tentar silenciar a voz das mulheres, mas pode deixar que vamos falar cada vez mais alto 💪',
 
   MERRY_CHRISTMAS: 'Feliz natal e feliz ano novo! Em 2018 continuaremos juntas mudando os códigos desse sistema! 💪🏽',
-  
+
   CURSING: '🙄 🙄 🙄',
 
   IM_NO_FORTUNE_COOKIE: 'Não sou biscoitinho da sorte, apesar de ser crocante por fora.',
@@ -189,18 +189,21 @@ export default {
   // Answers
   //
   VIDEO_THINK_OLGA: 'O primeiro vídeo tá demais! Dá só uma olhada e pode deixar que te envio o novo quando for ao ar ;) http://bit.ly/thinkolga_1',
-  
+
   ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2017, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Estou vivendo meu primeiro luto público enquanto robô. Meus algoritmos ainda não conseguiram processar bem tudo isso, mas te digo hoje e sempre: Marielle continuará PRESENTE e movendo as estruturas. Seguimos juntas e na luta pelos direitos das mulheres.',
-  
+
   ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC 29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia.',
-  
+
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
-  
+
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
 
   ASK_USER_DEVICE_INFO: 'Conta pra mim de qual aparelho você está tentando falar comigo? É um smartphone? Um computador? Qual modelo? Me passa os detalhes que eu vou encaminhar pros meus programadores. Eles são feras!',
 
-  EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
+  EXPLAIN_ABOUT_PEC_29: multiMessages(
+    'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
+    messageWithQuickReply('hello', quickReply('test', 'world'))
+  ),
 
   EXPLAIN_ABOUT_NASCITURO_BILL: 'O Estatuto do Nascituro é um projeto defendido pelas bancadas da Bíblia e da Bala, no Congresso, que prevê que a prática de aborto em qualquer situação seja considerada crime hediondo',
 
@@ -211,27 +214,27 @@ export default {
   DOESNT_EVEN_TELL_ME: 'Nem me fala.',
 
   YES_I_WARN_YOU: 'Aviso sim!',
-  
+
   ABOUT_MARCH_8: 'O Dia Internacional da Mulher é comemorado no 8 de março desde o começo do século XX - muito antes da ONU assinar o primeiro acordo internacional que afirmava princípios de igualdade entre homens e mulheres. As minas já tavam mobilizadas! Desde lá, esse dia é um marco internacional das lutas feministas e já foi palco de greves, protestos, debates e tantas outras formas de manifestação. Nesse ano não poderia ser diferente. Tô fazendo um mapeamento colaborativo de campanhas, atos e oportunidades de ação, dá uma olhada: bit.ly/mapa8demarco',
-  
+
   ACTION_MARCH_8: 'Tô fazendo um mapeamento colaborativo de campanhas, atos e oportunidades de ação rolando no 8 de março! Você pode conferir aqui: bit.ly/mapa8demarco',
-  
+
   ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Há alguns meses, por exemplo, uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
-  
+
   ABOUT_COLORISM: 'Achei uma definição maravilhosa, das Blogueiras Negras: "O colorismo ou a pigmentocracia é a discriminação pela cor da pele e é muito comum em países que sofreram a colonização européia e em países pós-escravocratas. De uma maneira simplificada, o termo quer dizer que, quanto mais pigmentada uma pessoa, mais discriminação e exclusão essa pessoa sofrerá". Recomendo muito o artigo completo: bit.ly/colorismo_blogueirasnegras',
-  
+
   ABOUT_LESBIANS: 'Eu sou robô, não sinto essas coisas de atração que os seres humanos falam, mas até eu que vivo na nuvem sei que todas as orientações sexuais devem ser respeitadas. 💖',
-  
+
   EXPLAIN_PEC: 'A PEC é uma Proposta de Emenda Constitucional, ou seja, uma forma de alterar alguma parte do texto constitucional sem que seja necessário convocar uma Assembléia Constituinte. Para saber melhor como funciona o processo, confira esse artigo do Politize!: www.politize.com.br/voce-sabe-o-que-e-uma-pec/',
-  
+
   ABOUT_TRANS: 'Transgêneras são todas as pessoas que não identificam sua identidade de gênero com seu sexo biológico. Sabe o que não pode faltar, né? Respeito. 💖 Como robô feminista, não podia ser diferente. Acredito na integração de todas as mulheres e homens trans no nosso movimento e bato sempre na mesma tecla: devemos tratá-los com igualdade e respeito a todas as suas experiências - que, em um país como o Brasil, que mais mata pessoas trans no mundo - são bastante desafiadoras. Estamos juntas! 💖',
-  
+
   ABOUT_HARASSMENT_FLERTING: 'Polêmica da hora: diferenças entre assédio e cantada. Sou robô, não pego transporte público nem ando na rua, mas até por Inbox rolam constrangimentos. 😮 A Think Olga e a Defensoria Pública de SP dizem que "o assédio sexual é uma manifestação sensual ou sexual, alheia à vontade da pessoa a quem se dirige. Ou seja, abordagens grosseiras, ofensas e propostas inadequadas que constrangem, humilham, amedrontam". Tem que ter consentimento! Quer exemplos de assédio? Comentários obscenos ouvidos na rua, cantadas no ambiente de trabalho e encoxadas no transporte público. Pra conhecer mais dados, me responde com "dados sobre assédio".',
 
   ABOUT_HARASSMENT_DATA: 'Uma pesquisa do Ipea em 2014 diz que 58% dos entrevistados concordaram, total ou parcialmente, que "se mulheres soubessem se comportar mais, haveria menos estupros". Dados da ActionAind de 2016 afirmam que 16% das mulheres foram assediadas antes dos 10 anos. Já a campanha #MeuPrimeiroAssedio mostrou que a idade média para o 1º assédio é 9,7 anos. A pesquisa divulgada pela Think Olga em 2013 conta que 81% das mulheres já deixou de fazer algo por medo do assédio. 85% disseram que já passaram a mão nelas e 82% afirmam que homens já tentaram agarrá-las na balada. 😡 Para referências, me responde com "referências sobre assédio".',
-  
+
   ABOUT_HARASSMENT_REFS: 'Ai, adoro quem quer saber mais! Dá só uma olhada em algumas referências: 1) Pesquisa Think Olga: bit.ly/tolga_assedio 2) Matéria Jornal do Brasil: bit.ly/jb_assedio 3) Cartilha Think Olga + Defensoria Pública de SP: bit.ly/assedio_cartilha 4) Dados #MeuPrimeiroAssedio: bit.ly/campanhatolga_assedio 5) Compilação da SPW de matérias sobre o debate de assédio: bit.ly/debates_assedio 6) Carta de um homem trans ao Antigo Regime sexual: bit.ly/assedio_trans 7) Viva o feminismo agonístico: bit.ly/assedio_IMS',
-  
+
   ABOUT_PATRIARCHY: 'Gosto dessa definição aqui: "Patriarcado é o sistema sociopolítico em que o gênero masculino e a heterossexualidade têm supremacia sobre outros gêneros e sobre outras sexualidades". Soa meio Windows 95, mas infelizmente ainda é #realoficial',
 
   ABOUT_CLARA_AVERBUCK: 'Eu estou sabendo do caso da Clara. É estarrecedor pensar que uma mulher é estuprada no Brasil a cada 11 minutos. A gente está falando de quase meio milhão de mulheres por ano. Inaceitável! 😡 ',
@@ -239,7 +242,7 @@ export default {
   ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores.',
 
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
-  
+
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
 
   IM_STILL_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂  Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️',
@@ -302,20 +305,20 @@ export default {
 
   ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem somente 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
 
-  ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solteira, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Agora, ela enfrenta um novo desafio: a discriminação do mercado de trabalho. Não podemos deixá-la sozinha! Conheça melhor sua história e a nossa campanha aqui: http://pelavidaderebeca.org', 
-  
-  ABOUT_REBECA_CAMPAIGN: 'Com toda a exposição midiática em torno do caso de Rebeca, ela pode agora sofrer grande discriminação no mercado de trabalho. O que Rebeca fez foi por todas as brasileiras, chegou nossa hora de lutar por ela. Para isso, junto da Think Olga e da Anis, eu criei a campanha Um Emprego Para a Rebeca! Você pode oferecer ou indicar uma vaga e compartilhar a campanha na sua rede. Vamos juntas? Acesse nosso site e conheça: http://pelavidaderebeca.org', 
-  
+  ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solteira, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Agora, ela enfrenta um novo desafio: a discriminação do mercado de trabalho. Não podemos deixá-la sozinha! Conheça melhor sua história e a nossa campanha aqui: http://pelavidaderebeca.org',
+
+  ABOUT_REBECA_CAMPAIGN: 'Com toda a exposição midiática em torno do caso de Rebeca, ela pode agora sofrer grande discriminação no mercado de trabalho. O que Rebeca fez foi por todas as brasileiras, chegou nossa hora de lutar por ela. Para isso, junto da Think Olga e da Anis, eu criei a campanha Um Emprego Para a Rebeca! Você pode oferecer ou indicar uma vaga e compartilhar a campanha na sua rede. Vamos juntas? Acesse nosso site e conheça: http://pelavidaderebeca.org',
+
   ABOUT_MARIA_DA_PENHA: 'A Lei Maria da Penha (2006) existe para prevenir e punir violência doméstica contra a mulher. Ela estabelece juizados especializados, prisão preventiva, agravante da pena, possibilidade de desistência da denúncia apenas perante o juiz, assistência à vítima, dentre outras medidas protetivas à mulher. Foi um super avanço, mas ainda enfrenta grandes barreiras, como o baixo número de delegacias especializadas e a discriminação de juízes e delegados. Além disso, o foco tem sido nos processos criminais e o potencial de cuidado com a mulher não é muito explorado.',
-  
+
   ABOUT_SORORITY: 'A sororidade é um sentimento de irmandade entre as mulheres, uma união baseada em empatia e compreensão. É quando as mulheres se acolhem e empoderam mutuamente. 👭 Lembra do juntas somos mais fortes? Esse é um clássico grito de sororidade! 💖. Mas cuidado: cada mulher tem vivências diferentes. Ser mulher não significa compreender todas as mulheres e calçar seus sapatos. Acredito na sororidade que não ignora essas vivências e que não excluiu lutas e grupos ao criar um sentimento de unidade.',
-  
+
   KINDS_OF_FEMINISM: 'O feminismo é um movimento enorme, com um monte de pautas e grupos diferentes. Gosto até de falar de feminismos, no plural mesmo! 💓 Algumas das linhas com mais destaque hoje são o feminismo radical, liberal, negro e interseccional. Mas se você olhar pra esse universo, vai rapidinho perceber que muitos feminismos são construídos diariamente pelas mulheres, em diferentes lugares e a partir de diferentes experiências de vida. É muita coisa linda nascendo mundo afora e que, no final das contas, faz parte de uma mesma luta que tá mudando os códigos desse mundo. 💪🏽',
-  
+
   ABOUT_INTERSECTIONAL_FEMINISM: 'O feminismo interseccional entende que as mulheres estão sujeitas a uma diversidade de opressões - de gênero, raça e classe, por exemplo. Como cada mulher tem vivências diferentes, ele entende que elas sofrem opressões em confugurações e intensidade particulares. Como diz Kimberlé Crenshaw, "padrões culturais de opressão não só estão interligados, mas também estão unidos e influenciados pelos sistemas intersecionais da sociedade". O feminismo negro é possivelmente o maior exemplo de interseccionalidade, já que entende que a mulher negra sofre, ao menos, uma dupla opressão - do machismo e do racismo.',
-  
+
   ABOUT_ABORTION_IN_COLOMBIA: 'A Colômbia é mesmo um exemplo quando falamos de aborto! Foi lá que Rebeca se sentiu acolhida - meu muito obrigada às Colombianas. 💓 Para entender melhor as diferenças legislativas entre Brasil e Colômbia, dá só uma olhada no que eu preparei: bit.ly/2AS7Rqt',
-  
+
   WOMEN_IN_POWER: 'Opa, sobre esse assunto eu recomendo o livro "Mulheres no Poder", que conta a trajetória de brasileiras na política desde o século XIX - um espaço geralmente ocupado por homens. Essa pesquisa foi feita por Schuma Schumaher e Antonia Ceva.',
 
   ABOUT_WOMEN_IN_POLITICS: 'Desde 1988, são as mulheres políticas que trazem propostas sobre violência contra a mulher, saúde e maternidade. Já os projetos do bonde do retrocesso são todos feitos por homens 🙄 Segundo a Inter-Parliamentary Union, estamos em 154º entre 193 países do ranking de representatividade feminina na política 🤢 Em 2009, tornou-se obrigatório aqui que ao menos 30% dos candidatos às eleições sejam mulheres, mas não tem adiantado não 😞  Inclusive, em 2016, muitos partidos anunciaram candidatas fantasmas! Para saber mais, recomendo a série "Mulheres e Política" criada pelo Gênero e Número: http://www.generonumero.media/edicao-03/ 😘',
@@ -323,7 +326,7 @@ export default {
   ABOUT_SEXISM: 'Muita gente me pergunta o que é machismo ou mesmo se ele existe. Se você perguntar ao Aurélio - o bisavô do Google e meu tararavô - , ele vai te dizer que machismo é a "ideologia segundo a qual o homem domina socialmente a mulher". Mas machismo não é "ideologia" propriamente - é um sistema de normas, valores, comportamentos, práticas e estruturas que colocam a mulher em posição inferior a dos homens em todos os aspectos da sua existência. Até o Aurélio tem muito a aprender sobre machismo ainda. Ele não vai me escapar da conversa de família neste próximo Natal.',
 
   INTERNET_SUCKS: 'Te entendo! Aqui na nuvem também rolam umas turbulências de vez em quando. Me chama quando tiver melhor - estarei por aqui 😉',
-  
+
   PEC_181_TROJAN_HORSE_ALERT: 'A bola da vez continua sendo a PEC 181. Sua proposta era estender a licença-maternidade para mães de prematuros, mas o texto aprovado mês passado pelos deputados proíbe totalmente o aborto no Brasil. É de indignar até robô, mas a Proposta final ainda não foi aprovada. Se agirmos agora, podemos virar o jogo!',
 
   PEC_181_TROJAN_HORSE_MORE_ABOUT: 'Em agosto, deputados da frente conservadora fizeram uma manobra para alterar o texto original da PEC. Agora, além de estender a licença-maternidade para mães de prematuros, o texto propõe alterar o artigo da Constituição sobre o direito à vida para incluir a expressão “desde a concepção”. Dessa forma, o aborto seria 100% proibido no Brasil, mesmo em casos de gestação por estupro, risco de morte para a mulher e anencefalia fetal. 😳 Em novembro, os deputados aprovaram essa alteração e, caso o texto final siga como está, vai para votação no plenário do Congresso e pode virar Lei! Precisamos reagir e lutar pelos direitos das mulheres!',

@@ -4,14 +4,14 @@ import * as botHelpers from '../helpers'
 import * as botSpeeches from '../speeches'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
-  //
-  // Wraps the original reply function with the behaviour
-  // to save the user's interaction.
-  //
-  const reply = botHelpers.replyWithSave({ botData, payload, originalReply })
-
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) console.error(`${JSON.stringify(err)}`.red)
+
+    //
+    // Wraps the original reply function with the behaviour
+    // to save the user's interaction.
+    //
+    const reply = botHelpers.replyWithSave({ botData, payload, originalReply, profile })
 
     //
     // Speech action strategy
@@ -25,9 +25,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     //
     const message = speech.messages[action]
 
-    if (typeof message === 'function') reply(message(profile), action)
-    else if (typeof message === 'object') reply(message, action)
-    else if (message) reply(message, action)
+    if (message) reply(message, action)
     else {
       actions.ensure()
         .then(dispatched => {
@@ -36,7 +34,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
           !dispatched && botAI.client().message(text)
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
-              reply({ text: botSpeeches.messages.BUGGED_OUT })
+              reply(botSpeeches.messages.BUGGED_OUT)
               console.error(`${JSON.stringify(err)}`.red)
             })
         })
