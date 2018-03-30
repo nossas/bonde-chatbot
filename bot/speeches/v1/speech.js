@@ -180,7 +180,7 @@ export default botData => ({
     //
     // Carousel 
     //
-    [V1_QUICK_REPLY_CA]: carouselTemplate({
+    /*[V1_QUICK_REPLY_CA]: carouselTemplate({
       title: botSpeeches.carouselTexts.TITLE,
       subtitle: botSpeeches.carouselTexts.SUBTITLE,
       imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
@@ -206,5 +206,6 @@ export default botData => ({
           })
         ],
       }),
+    */
   }
 })
