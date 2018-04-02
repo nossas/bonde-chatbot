@@ -8,6 +8,7 @@ const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeU
 //
 const GET_STARTED = 'GET_STARTED'
 const V1_QUICK_REPLY_A = 'V1_QUICK_REPLY_A'
+const V1_QUICK_REPLY_TE = 'V1_QUICK_REPLY_TE'
 const V1_QUICK_REPLY_B = 'V1_QUICK_REPLY_B'
 const V1_QUICK_REPLY_C = 'V1_QUICK_REPLY_C'
 const V1_QUICK_REPLY_D = 'V1_QUICK_REPLY_D'
@@ -27,6 +28,7 @@ const VMDM_QUICK_REPLY_I = 'VMDM_QUICK_REPLY_I'
 const VMDM_QUICK_REPLY_J = 'VMDM_QUICK_REPLY_J'
 const VMDM_EMAIL_ADDRESS_WRONG = 'VMDM_EMAIL_ADDRESS_WRONG'
 const VMDM_EMAIL_ADDRESS_OK = 'VMDM_EMAIL_ADDRESS_OK'
+const MSG_TESTE = 'MSG_TESTE'
 
 //
 // The bot speech, based on quick replies.
@@ -56,8 +58,22 @@ export default botData => ({
       text: botSpeeches.messages.I_AM_BETA,
       quick_replies: [
         quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO),
+        quickReply(MSG_TESTE, 'Msgs divididas'),
       ],
     },
+
+    MSG_TESTE: [
+      botSpeeches.messages.MSG1,
+      botSpeeches.messages.MSG2,
+      messageWithQuickReply(
+        botSpeeches.messages.MSG3,
+        quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO)
+      )
+    ],
+
+    [V1_QUICK_REPLY_TE]: botSpeeches.messages.MSG_TESTE,
+
+
     [V1_QUICK_REPLY_A]: {
       text: botSpeeches.messages.INTRODUCE_MYSELF,
       quick_replies: [

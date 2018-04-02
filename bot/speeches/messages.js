@@ -5,6 +5,13 @@ const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${wid
 
 export default {
   //
+  // Msgs divididas
+  //
+  MSG1: 'Primeira mensagem',
+  MSG2: 'Segunda mensagem',
+  MSG3: 'Terceira mensagem',
+
+  //
   // Generic
   //
   BACK_LATER: 'Ai, meus algoritmos! Ainda sou uma #RobôAprendiz e não entendo tudo o que os humanos falam, mas tô evoluindo - segura minha mão! 🤖  Você pode reformular a sua mensagem? Se eu continuar não entendendo, pode deixar que vou treinar bastante aqui pra estar pre-pa-ra-da na próxima vez! 💪',
