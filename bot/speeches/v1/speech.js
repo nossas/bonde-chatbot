@@ -60,7 +60,9 @@ export default botData => ({
         quickReply(MSG_TESTE, 'Msgs divididas'),
       ],
     },
-
+    //
+    // Exemplo do formato de mensagem dividida
+    //
     MSG_TESTE: [
       botSpeeches.messages.MSG1,
       botSpeeches.messages.MSG2,
