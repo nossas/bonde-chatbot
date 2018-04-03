@@ -8,7 +8,6 @@ const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeU
 //
 const GET_STARTED = 'GET_STARTED'
 const V1_QUICK_REPLY_A = 'V1_QUICK_REPLY_A'
-const V1_QUICK_REPLY_TE = 'V1_QUICK_REPLY_TE'
 const V1_QUICK_REPLY_B = 'V1_QUICK_REPLY_B'
 const V1_QUICK_REPLY_C = 'V1_QUICK_REPLY_C'
 const V1_QUICK_REPLY_D = 'V1_QUICK_REPLY_D'
@@ -70,9 +69,6 @@ export default botData => ({
         quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO)
       )
     ],
-
-    [V1_QUICK_REPLY_TE]: botSpeeches.messages.MSG_TESTE,
-
 
     [V1_QUICK_REPLY_A]: {
       text: botSpeeches.messages.INTRODUCE_MYSELF,
