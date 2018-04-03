@@ -9,10 +9,11 @@ networkInterface.use([{
   applyMiddleware (req, next) {
     if (!req.options.headers) req.options.headers = {}
 
-    if (process.env.JWT_TOKEN)
+    if (process.env.JWT_TOKEN) {
       req.options.headers['authorization'] = `Bearer ${process.env.JWT_TOKEN}`
-    else
+    } else {
       console.error('Please specify the `JWT_TOKEN` environment variable.'.red)
+    }
 
     next()
   }
