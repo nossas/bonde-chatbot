@@ -6,6 +6,7 @@ import 'colors'
 import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
+import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
 import Queue from 'bull'
@@ -32,14 +33,15 @@ global.widgets = {}
 //
 let app = Express()
 
+app.use(morgan('combined'))
 app.set('view engine', 'pug')
 app.use(Express.static('public'))
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(ExpressSession({
-  secret : 's3Cur3',
-  name : 'sessionId',
+  secret: 's3Cur3',
+  name: 'sessionId',
   resave: true,
   saveUninitialized: true
 }))
