@@ -46,13 +46,7 @@ export default botData => ({
     [VMDM_EMAIL_ADDRESS_OK]: VMDM_EMAIL_ADDRESS_OK,
   },
   messages: {
-    //
-    // Usuário abre conversa com a Beta no Messenger
-    //
-    // [GET_STARTED]: multiMessages(
-    //   messageWithQuickReply('hello', quickReply('test', 'hello')),
-    //   messageWithQuickReply('world', quickReply('test', 'world'))
-    // ),
+    
     [GET_STARTED]: {
       text: botSpeeches.messages.I_AM_BETA,
       quick_replies: [
