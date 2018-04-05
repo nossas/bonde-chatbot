@@ -2,7 +2,7 @@ import 'colors'
 import Bot from 'messenger-bot'
 import { client as graphqlClient } from '../graphql'
 import * as graphqlQueries from '../graphql/queries'
-import * as graphqlMutations from '../graphql/mutations'
+
 import * as botEvents from './events'
 import * as botConfig from './config'
 

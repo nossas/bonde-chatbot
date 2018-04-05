@@ -4,6 +4,7 @@ pipeline:
     commands:
       - export GRAPHQL_URL=https://data.staging.bonde.org/graphql
       - yarn
+      - yarn lint
       - yarn test
     when:
       event: [push, tag]

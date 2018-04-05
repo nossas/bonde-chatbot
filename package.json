@@ -40,6 +40,7 @@
     "graphql-tag": "^2.4.2",
     "isomorphic-fetch": "^2.2.1",
     "messenger-bot": "^2.4.0",
+    "morgan": "^1.9.0",
     "node-wit": "^4.3.0",
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-rc.2",
