@@ -51,20 +51,20 @@ export default botData => ({
       text: botSpeeches.messages.I_AM_BETA,
       quick_replies: [
         quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO),
-        quickReply(MSG_TESTE, 'Msgs divididas'),
+        //quickReply(MSG_TESTE, 'Msgs divididas'),
       ],
     },
     //
     // Exemplo do formato de mensagem dividida
     //
-    MSG_TESTE: [
+    /*MSG_TESTE: [
       botSpeeches.messages.MSG1,
       botSpeeches.messages.MSG2,
       messageWithQuickReply(
         botSpeeches.messages.MSG3,
         quickReply(V1_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO)
       )
-    ],
+    ],*/
 
     [V1_QUICK_REPLY_A]: {
       text: botSpeeches.messages.INTRODUCE_MYSELF,
