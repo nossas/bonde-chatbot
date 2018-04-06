@@ -1,4 +1,4 @@
-import { quickReply, genericTemplate, buttonTemplate, multiMessages, messageWithQuickReply } from '../utils'
+import { quickReply, genericTemplate, carouselTemplate, buttonTemplate, multiMessages, messageWithQuickReply } from '../utils'
 import * as botSpeeches from '../../speeches'
 
 const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeURI(url)}`
@@ -8,6 +8,7 @@ const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeU
 //
 const GET_STARTED = 'GET_STARTED'
 const V1_QUICK_REPLY_A = 'V1_QUICK_REPLY_A'
+const V1_QUICK_REPLY_CA = 'V1_QUICK_REPLY_CA'
 const V1_QUICK_REPLY_B = 'V1_QUICK_REPLY_B'
 const V1_QUICK_REPLY_C = 'V1_QUICK_REPLY_C'
 const V1_QUICK_REPLY_D = 'V1_QUICK_REPLY_D'
@@ -188,5 +189,35 @@ export default botData => ({
         quickReply(V1_QUICK_REPLY_D, botSpeeches.buttonTexts.NOT_NOW),
       ],
     }),
+    //
+    // Carousel 
+    //
+    /*[V1_QUICK_REPLY_CA]: carouselTemplate({
+      title: botSpeeches.carouselTexts.TITLE,
+      subtitle: botSpeeches.carouselTexts.SUBTITLE,
+      imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
+      buttons: [
+        buttonTemplate.postback({
+          title: botSpeeches.carouselTexts.BUTTON_TITLE,
+          payload: V1_QUICK_REPLY_A
+        }),
+        buttonTemplate.webURL({
+          url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+          title: 'Compartilhar',
+        })
+      ],
+    },
+      {
+        title: 'Teste',
+        subtitle: 'Teste',
+        imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+        buttons: [
+          buttonTemplate.webURL({
+            url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+            title: 'Compartilhar',
+          })
+        ],
+      }),
+    */
   }
 })
