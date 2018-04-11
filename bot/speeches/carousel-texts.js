@@ -2,14 +2,19 @@ export default {
   //
   // Generic
   //
-  TITLE: 'A maior aliada feminista nas redes',
-  SUBTITLE: 'Chama a Beta no inbox',
-  IMAGE_URL: 'https://goo.gl/hzZfHA',
+  TITLE_RADAR: 'Radar da Beta',
+  TITLE_MORE: 'Mais sobre a Beta',
+  SUBTITLE: '',
+  IMAGE_URL: 'https://s3.amazonaws.com/hub-central/uploads/card_chat_2.png',
+  IMAGE_URL_2: 'https://s3.amazonaws.com/hub-central/uploads/card_chat_1.png',
 
   //
   // Buttons Texts
   //
 
-  BUTTON_TITLE:'Vamos!!',
+  BUTTON_RADAR:'Radar da Beta',
+  
+  BUTTON_MORE:'Mais sobre a Beta',
+
 
 }

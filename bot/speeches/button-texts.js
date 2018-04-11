@@ -5,6 +5,38 @@ export default {
   SHARE: 'Compartilhar',
   TRY_AGAIN: 'Tentar novamente',
   UNBELIEVABLE: 'Inacreditável!',
+  
+  //
+  // New script
+  //
+  EXPLAIN_MORE: 'Explica mais!',
+  WHAT_TODO: 'O que fazer agora?',
+
+  IT_WORKS: 'E funciona?', 
+  I_WANT_TO_ACT: 'Quero agir!', 
+
+  SURE: 'Com certeza!',
+
+  WHAT_HAPPENED: 'O que já rolou?',
+  BACK: 'Voltar ao menu', 
+
+  WHAT_ELSE: 'O que mais?', 
+  RADAR: 'Radar da Beta', 
+
+  CAMPAIGN: 'Sugerir campanha!',
+
+  WHAT_NOW: 'E agora?',
+
+  STATUTE: 'E o Estatuto?',
+  GOOD_NEWS: 'Tem notícia boa?!', 
+
+  LIGHT: 'Luz no fim do túnel?',
+
+  THERE_IS_MORE:'Tem mais?', 
+  ABOUT_ABORTION: 'E fora aborto?',
+
+  ACT_NOW: 'Agir agora!',
+
 
   //
   // Hashtag
