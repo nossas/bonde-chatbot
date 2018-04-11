@@ -3,6 +3,7 @@ import genericTemplate from './generic-template'
 import carouselTemplate from './carousel-template'
 import quickReply from './quick-reply'
 import messageWithQuickReply from './message-with-quick-reply'
+import messageWithGif from './message-with-gif'
 import multiMessages from './multi-messages'
 
 export {
@@ -11,5 +12,6 @@ export {
   carouselTemplate,
   quickReply,
   messageWithQuickReply,
+  messageWithGif,
   multiMessages,
 }

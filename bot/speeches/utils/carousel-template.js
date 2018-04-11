@@ -1,4 +1,4 @@
-export default (value, value1) => (console.log(value, value1), {
+export default (value, value1) => ( {
   attachment: {
     type: 'template',
     payload: {
