@@ -33,7 +33,6 @@ const V2_QUICK_REPLY_H_1 = 'V2_QUICK_REPLY_H_1'
 const V2_QUICK_REPLY_RADAR = 'V2_QUICK_REPLY_RADAR'
 const V2_QUICK_REPLY_A_2 = 'V2_QUICK_REPLY_A_2'
 const V2_QUICK_REPLY_B_2 = 'V2_QUICK_REPLY_B_2'
-const V2_QUICK_REPLY_C_2 = 'V2_QUICK_REPLY_C_2'
 const V2_QUICK_REPLY_D_2 = 'V2_QUICK_REPLY_D_2'
 const V2_QUICK_REPLY_E_2 = 'V2_QUICK_REPLY_E_2'
 const V2_QUICK_REPLY_F_2 = 'V2_QUICK_REPLY_F_2'
@@ -213,7 +212,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.STATUTE_1,
         quickReply(V2_QUICK_REPLY_B_2, botSpeeches.buttonTexts.LIGHT),
-        quickReply(V2_QUICK_REPLY_C_2, botSpeeches.buttonTexts.BACK)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK)
       )
     ],
     [V2_QUICK_REPLY_B_2]: [
