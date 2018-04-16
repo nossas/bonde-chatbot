@@ -47,7 +47,7 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
             bot.sendSenderAction(payload.sender.id, 'typing_off')
           }
 
-          setTimeout(() => replySequentially(index + 1), 3000)
+          setTimeout(() => replySequentially(index + 1), 5000)
         })
       }
     }
