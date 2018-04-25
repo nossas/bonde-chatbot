@@ -24,11 +24,14 @@ const V2_QUICK_REPLY_D = 'V2_QUICK_REPLY_D'
 
 const V2_QUICK_REPLY_MAIS = 'V2_QUICK_REPLY_MAIS'
 const V2_QUICK_REPLY_A_1 = 'V2_QUICK_REPLY_A_1'
+const V2_QUICK_REPLY_B_1 = 'V2_QUICK_REPLY_B_1'
 const V2_QUICK_REPLY_C_1 = 'V2_QUICK_REPLY_C_1'
 const V2_QUICK_REPLY_E_1 = 'V2_QUICK_REPLY_E_1'
 const V2_QUICK_REPLY_F_1 = 'V2_QUICK_REPLY_F_1'
 const V2_QUICK_REPLY_G_1 = 'V2_QUICK_REPLY_G_1'
 const V2_QUICK_REPLY_H_1 = 'V2_QUICK_REPLY_H_1'
+const V2_QUICK_REPLY_I_1 = 'V2_QUICK_REPLY_I_1'
+const V2_QUICK_REPLY_J_1 = 'V2_QUICK_REPLY_J_1'
 
 const V2_QUICK_REPLY_RADAR = 'V2_QUICK_REPLY_RADAR'
 const V2_QUICK_REPLY_A_2 = 'V2_QUICK_REPLY_A_2'
@@ -36,6 +39,30 @@ const V2_QUICK_REPLY_B_2 = 'V2_QUICK_REPLY_B_2'
 const V2_QUICK_REPLY_D_2 = 'V2_QUICK_REPLY_D_2'
 const V2_QUICK_REPLY_E_2 = 'V2_QUICK_REPLY_E_2'
 const V2_QUICK_REPLY_F_2 = 'V2_QUICK_REPLY_F_2'
+
+const V2_QUICK_REPLY_PEC = 'V2_QUICK_REPLY_PEC'
+const V2_QUICK_REPLY_STATUTE = 'V2_QUICK_REPLY_STATUTE'
+const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
+const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
+
+const V2_QUICK_REPLY_A_3 = 'V2_QUICK_REPLY_A_3'
+const V2_QUICK_REPLY_C_3 = 'V2_QUICK_REPLY_C_3'
+const V2_QUICK_REPLY_D_3 = 'V2_QUICK_REPLY_D_3'
+const V2_QUICK_REPLY_F_3 = 'V2_QUICK_REPLY_F_3'
+
+const V2_QUICK_REPLY_A_4 = 'V2_QUICK_REPLY_A_4'
+const V2_QUICK_REPLY_A_5 = 'V2_QUICK_REPLY_A_5'
+const V2_QUICK_REPLY_A_6 = 'V2_QUICK_REPLY_A_6'
+const V2_QUICK_REPLY_A_8 = 'V2_QUICK_REPLY_A_8'
+const V2_QUICK_REPLY_A_9 = 'V2_QUICK_REPLY_A_9'
+
+
+const V2_QUICK_REPLY_SHARE = 'V2_QUICK_REPLY_SHARE'
+const V2_QUICK_REPLY_ACT = 'V2_QUICK_REPLY_ACT'
+const V2_QUICK_REPLY_PRESSURE = 'V2_QUICK_REPLY_PRESSURE'
+const V2_QUICK_REPLY_VOTE = 'V2_QUICK_REPLY_VOTE'
+
+
 
 
 //
@@ -61,15 +88,14 @@ export default botData => ({
     },
 
     [V2_QUICK_REPLY_A]: [
-      botSpeeches.messages.BETA_INTRODUCTION,
-      botSpeeches.messages.BETA_INTRODUCTION_1,
-      messageWithQuickReply(
-        botSpeeches.messages.BETA_INTRODUCTION_2,
-        quickReply(V2_QUICK_REPLY_B, botSpeeches.buttonTexts.EXPLAIN_MORE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.WHAT_TODO)
+      botSpeeches.messages.CALL_INBOX,
+      botSpeeches.messages.CALL_INBOX_1,
+      messageWithGif(
+        botSpeeches.messages.CALL_INBOX_2,
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.I_WANT)
       )
     ],
-    [V2_QUICK_REPLY_B]: [
+    /*[V2_QUICK_REPLY_B]: [
       botSpeeches.messages.EXPLAIN_MORE,
       botSpeeches.messages.EXPLAIN_MORE_1,
       botSpeeches.messages.EXPLAIN_MORE_2,
@@ -84,21 +110,32 @@ export default botData => ({
       quick_replies: [
         quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.SURE),
       ],
-    },
+    },*/
 
     [V2_QUICK_REPLY_CA]: [
       botSpeeches.messages.LIST,
       carouselTemplate({
-        title: botSpeeches.carouselTexts.TITLE_RADAR,
+        title: botSpeeches.carouselTexts.TITLE_ACT,
         subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botSpeeches.carouselTexts.IMAGE_URL,
+        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
         buttons: [
           buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.BUTTON_RADAR,
-            payload: V2_QUICK_REPLY_RADAR
+            title: botSpeeches.carouselTexts.BUTTON_ACT,
+            payload: V2_QUICK_REPLY_ACT
           })
         ],
       },
+        {
+          title: botSpeeches.carouselTexts.TITLE_RADAR,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_RADAR,
+              payload: V2_QUICK_REPLY_RADAR
+            })
+          ],
+        },
         {
           title: botSpeeches.carouselTexts.TITLE_MORE,
           subtitle: botSpeeches.carouselTexts.SUBTITLE,
@@ -109,79 +146,119 @@ export default botData => ({
               payload: V2_QUICK_REPLY_MAIS
             })
           ],
-        })
+        },
+        {
+          title: botSpeeches.carouselTexts.TITLE_SHARE,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_SHARE,
+              payload: V2_QUICK_REPLY_SHARE
+            })
+          ],
+        }
+      )
     ],
 
     //
     // Mais sobre a beta
     //
-    [V2_QUICK_REPLY_MAIS]: [
-      botSpeeches.messages.MORE_ABOUT_BETA,
-      botSpeeches.messages.MORE_ABOUT_BETA_1,
-      botSpeeches.messages.MORE_ABOUT_BETA_2,
-      messageWithGif(
-        botSpeeches.messages.MORE_ABOUT_BETA_3,
-        quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.WHAT_HAPPENED),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK)
-      )
-    ],
+    [V2_QUICK_REPLY_MAIS]: {
+      text: botSpeeches.messages.MORE_ABOUT_BETA,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
+        quickReply(V2_QUICK_REPLY_B_1, botSpeeches.buttonTexts.BACK),
+      ],
+    },
 
     [V2_QUICK_REPLY_A_1]: [
-      botSpeeches.messages.WHAT_HAPPENED,
+      botSpeeches.messages.MORE_ABOUT_BETA_1,
       messageWithQuickReply(
-        botSpeeches.messages.WHAT_HAPPENED_1,
-        quickReply(V2_QUICK_REPLY_C_1, botSpeeches.buttonTexts.WHAT_ELSE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.RADAR)
+        botSpeeches.messages.MORE_ABOUT_BETA_2,
+        quickReply(V2_QUICK_REPLY_C_1, botSpeeches.buttonTexts.WHAT_NOISE),
+        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.ACT_NOW)
       )
     ],
     [V2_QUICK_REPLY_C_1]: [
-      botSpeeches.messages.BETA_WHAT_ELSE,
+      botSpeeches.messages.BETA_WHAT_NOISE,
       messageWithQuickReply(
-        botSpeeches.messages.BETA_WHAT_ELSE_1,
-        quickReply(V2_QUICK_REPLY_E_1, botSpeeches.buttonTexts.I_WANT_TO_ACT),
-        quickReply(V2_QUICK_REPLY_F_1, botSpeeches.buttonTexts.CAMPAIGN)
+        botSpeeches.messages.BETA_WHAT_NOISE_1,
+        quickReply(V2_QUICK_REPLY_E_1, botSpeeches.buttonTexts.THERE_IS_MORE),
+        quickReply(V2_QUICK_REPLY_RADAR, botSpeeches.buttonTexts.RADAR)
       )
     ],
-    [V2_QUICK_REPLY_F_1]: {
+    [V2_QUICK_REPLY_E_1]: [
+      botSpeeches.messages.THERE_IS_MORE,
+      messageWithQuickReply(
+        botSpeeches.messages.THERE_IS_MORE_1,
+        quickReply(V2_QUICK_REPLY_G_1, botSpeeches.buttonTexts.HOW_TO_HELP),
+        quickReply(V2_QUICK_REPLY_H_1, botSpeeches.buttonTexts.CAMPAIGN)
+      )
+    ],
+    [V2_QUICK_REPLY_H_1]: {
       text: botSpeeches.messages.CAMPAIGN,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_E_1, botSpeeches.buttonTexts.WHAT_NOW),
+        quickReply(V2_QUICK_REPLY_G_1, botSpeeches.buttonTexts.WHAT_NOW),
       ],
     },
-    [V2_QUICK_REPLY_E_1]: [
-      botSpeeches.messages.DO_SOMETHING,
+    [V2_QUICK_REPLY_G_1]: [
+      botSpeeches.messages.HOW_TO_HELP,
       messageWithQuickReply(
-        botSpeeches.messages.DO_SOMETHING_1,
-        quickReply(V2_QUICK_REPLY_G_1, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_H_1, botSpeeches.buttonTexts.NOT_NOW)
+        botSpeeches.messages.HOW_TO_HELP_1,
+        quickReply(V2_QUICK_REPLY_I_1, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_J_1, botSpeeches.buttonTexts.NOT_NOW)
       )
     ],
-    [V2_QUICK_REPLY_H_1]: [
+    [V2_QUICK_REPLY_J_1]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_THE_WEBSITE,
       carouselTemplate({
-        title: botSpeeches.carouselTexts.TITLE_RADAR,
+        title: botSpeeches.carouselTexts.TITLE_ACT,
         subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
+        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
         buttons: [
           buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.BUTTON_RADAR,
-            payload: V2_QUICK_REPLY_RADAR
+            title: botSpeeches.carouselTexts.BUTTON_ACT,
+            payload: V2_QUICK_REPLY_ACT
           })
         ],
       },
         {
+          title: botSpeeches.carouselTexts.TITLE_RADAR,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_RADAR,
+              payload: V2_QUICK_REPLY_RADAR
+            })
+          ],
+        },
+        {
           title: botSpeeches.carouselTexts.TITLE_MORE,
           subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2,
           buttons: [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_MORE,
               payload: V2_QUICK_REPLY_MAIS
             })
           ],
-        })
+        },
+        {
+          title: botSpeeches.carouselTexts.TITLE_SHARE,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_SHARE,
+              payload: V2_QUICK_REPLY_F_3
+            })
+          ],
+        }
+      )
     ],
-    [V2_QUICK_REPLY_G_1]: [
+    [V2_QUICK_REPLY_I_1]: [
       botSpeeches.messages.YOU_ROCK,
       //TODO: Add gif
       genericTemplate({
@@ -194,61 +271,239 @@ export default botData => ({
             title: 'Compartilhar',
           })
         ],
-      }), 
+      }),
     ],
     //
     // Radar da Beta
     //
-    [V2_QUICK_REPLY_RADAR]: [
-      botSpeeches.messages.RADAR,
-      messageWithQuickReply(
-        botSpeeches.messages.RADAR_1,
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.STATUTE),
-        quickReply(V2_QUICK_REPLY_B_2, botSpeeches.buttonTexts.GOOD_NEWS)
+    [V2_QUICK_REPLY_RADAR]: {
+      text: botSpeeches.messages.RADAR,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.YES),
+      ],
+    },
+    [V2_QUICK_REPLY_A_2]: [
+      carouselTemplate({
+        title: botSpeeches.carouselTexts.PEC,
+        subtitle: botSpeeches.carouselTexts.SUBTITLE,
+        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
+        buttons: [
+          buttonTemplate.postback({
+            title: botSpeeches.carouselTexts.PEC,
+            payload: V2_QUICK_REPLY_PEC
+          })
+        ],
+      },
+        {
+          title: botSpeeches.carouselTexts.STATUTE,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.STATUTE,
+              payload: V2_QUICK_REPLY_STATUTE
+            })
+          ],
+        },
+        {
+          title: botSpeeches.carouselTexts.SUG,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2,
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.SUG,
+              payload: V2_QUICK_REPLY_SUG
+            })
+          ],
+        },
+        {
+          title: botSpeeches.carouselTexts.ADPF,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.ADPF,
+              payload: V2_QUICK_REPLY_ADPF
+            })
+          ],
+        }
       )
     ],
-    [V2_QUICK_REPLY_A_2]: [
+    //
+    // Radar da Beta - PEC 181
+    //
+    [V2_QUICK_REPLY_PEC]: {
+      text: botSpeeches.messages.RADAR_PEC,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_3, botSpeeches.buttonTexts.WHAT_YOU_DID),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1),
+      ],
+    },
+    [V2_QUICK_REPLY_A_3]: {
+      text: botSpeeches.messages.BETA_DID,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_C_3, botSpeeches.buttonTexts.WHAT_NOW),
+        quickReply(V2_QUICK_REPLY_D_3, botSpeeches.buttonTexts.PEC),
+      ],
+    },
+    [V2_QUICK_REPLY_C_3]: [
+      botSpeeches.messages.PEC,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_1,
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+      )
+    ],
+    [V2_QUICK_REPLY_D_3]: [
+      botSpeeches.messages.PEC_HISTORY,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_HISTORY_1,
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+      )
+    ],
+    [V2_QUICK_REPLY_F_3]: [
+      botSpeeches.messages.YOU_ROCK_1,
+      //TODO: Add gif
+      genericTemplate({
+        title: 'A maior aliada feminista nas redes',
+        subtitle: 'Chama a Beta no inbox',
+        imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+        buttons: [
+          buttonTemplate.webURL({
+            url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+            title: 'Compartilhar',
+          })
+        ],
+      }),
+    ],
+
+    //
+    // Radar da Beta - STATUTE
+    //
+    [V2_QUICK_REPLY_STATUTE]: [
       botSpeeches.messages.STATUTE,
       messageWithQuickReply(
         botSpeeches.messages.STATUTE_1,
-        quickReply(V2_QUICK_REPLY_B_2, botSpeeches.buttonTexts.LIGHT),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK)
+        quickReply(V2_QUICK_REPLY_A_4, botSpeeches.buttonTexts.STOPED),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
       )
     ],
-    [V2_QUICK_REPLY_B_2]: [
-      botSpeeches.messages.LIGHT,
-      botSpeeches.messages.LIGHT_1,
-      messageWithQuickReply(
-        botSpeeches.messages.LIGHT_2,
-        quickReply(V2_QUICK_REPLY_D_2, botSpeeches.buttonTexts.THERE_IS_MORE),
-        quickReply(V2_QUICK_REPLY_E_2, botSpeeches.buttonTexts.ABOUT_ABORTION)
-      )
-    ],
-    [V2_QUICK_REPLY_D_2]: [
-      botSpeeches.messages.THERE_IS_MORE,
-      botSpeeches.messages.THERE_IS_MORE_1,
-      botSpeeches.messages.THERE_IS_MORE_2,
+    [V2_QUICK_REPLY_A_4]: [
+      botSpeeches.messages.STATUTE_2,
+      botSpeeches.messages.STATUTE_3,
       messageWithGif(
-        botSpeeches.messages.THERE_IS_MORE_3,
-        quickReply(V2_QUICK_REPLY_E_2, botSpeeches.buttonTexts.WHAT_ELSE),
-        quickReply(V2_QUICK_REPLY_F_2, botSpeeches.buttonTexts.ACT_NOW)
+        botSpeeches.messages.STATUTE_4,
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
       )
     ],
-    [V2_QUICK_REPLY_E_2]: {
-      text: botSpeeches.messages.REPRODUCTIVE_RIGHTS,
+    //
+    // Radar da Beta - SUG 15
+    //
+    [V2_QUICK_REPLY_SUG]: [
+      botSpeeches.messages.SUG,
+      messageWithQuickReply(
+        botSpeeches.messages.SUG_1,
+        quickReply(V2_QUICK_REPLY_A_5, botSpeeches.buttonTexts.I_WANT),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
+      )
+    ],
+    [V2_QUICK_REPLY_A_5]: {
+      text: botSpeeches.messages.SUG_2,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_F_2, botSpeeches.buttonTexts.WHAT_NOW),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE),
       ],
     },
-    [V2_QUICK_REPLY_F_2]: {
-      text: botSpeeches.messages.ACT_NOW,
+    //
+    // Radar da Beta - ADPF 442
+    //
+    [V2_QUICK_REPLY_ADPF]: [
+      botSpeeches.messages.ADPF,
+      botSpeeches.messages.ADPF_1,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_2,
+        quickReply(V2_QUICK_REPLY_A_6, botSpeeches.buttonTexts.I_WANT),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
+      )
+    ],
+    [V2_QUICK_REPLY_A_6]: {
+      text: botSpeeches.messages.ADPF_3,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_G_1, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_H_1, botSpeeches.buttonTexts.NOT_NOW),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE),
       ],
     },
+    //
+    // Quero agir agora
+    //
+    [V2_QUICK_REPLY_ACT]: [
+      botSpeeches.messages.ACT_NOW,
+      carouselTemplate({
+        title: botSpeeches.carouselTexts.PRESSURE,
+        subtitle: botSpeeches.carouselTexts.SUBTITLE,
+        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
+        buttons: [
+          buttonTemplate.postback({
+            title: botSpeeches.carouselTexts.PRESSURE,
+            payload: V2_QUICK_REPLY_PRESSURE
+          })
+        ],
+      },
+        {
+          title: botSpeeches.carouselTexts.VOTE,
+          subtitle: botSpeeches.carouselTexts.SUBTITLE,
+          imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          buttons: [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.VOTE,
+              payload: V2_QUICK_REPLY_VOTE
+            })
+          ],
+        },
+        {},{}
+      )
+    ],
+    //
+    // Violência Contra a Mulher
+    //
+    [V2_QUICK_REPLY_PRESSURE]: [
+      botSpeeches.messages.PRESSURE,
+      messageWithQuickReply(
+        botSpeeches.messages.PRESSURE_1,
+        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.I_WANT_DATA),
+        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
+      )
+    ],
+    [V2_QUICK_REPLY_A_8]: {
+      text: botSpeeches.messages.ADPF_3,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
+      ],
+    },
+    //
+    // Descriminalização do Aborto
+    //
+    [V2_QUICK_REPLY_VOTE]: [
+      botSpeeches.messages.VOTE,
+      messageWithQuickReply(
+        botSpeeches.messages.VOTE_1,
+        quickReply(V2_QUICK_REPLY_A_9, botSpeeches.buttonTexts.EXPLAIN_MORE),
+        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
+      )
+    ],
+    [V2_QUICK_REPLY_A_9]: [
+      botSpeeches.messages.VOTE_MORE,
+      messageWithQuickReply(
+        botSpeeches.messages.VOTE_MORE_1,
+        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
+      )
+    ],
 
-    
+
     //
     // Usuário abre conversa com a Beta via Mensagem em Massa
     //
