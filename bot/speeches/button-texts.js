@@ -92,8 +92,8 @@ export default {
   // Denial
   //
   DISLIKES: 'Não curti…',
-  NOT_NOW: 'Agora não.',
-  NOW_DOESNT_HAPPEN: 'Agora não rola.',
+  NOT_NOW: 'Agora não',
+  NOW_DOESNT_HAPPEN: 'Agora não rola',
 
   //
   // More
