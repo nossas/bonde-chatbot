@@ -5,6 +5,7 @@ import quickReply from './quick-reply'
 import messageWithQuickReply from './message-with-quick-reply'
 import messageWithGif from './message-with-gif'
 import multiMessages from './multi-messages'
+import elements from './elements'
 
 export {
   buttonTemplate,
@@ -14,4 +15,5 @@ export {
   messageWithQuickReply,
   messageWithGif,
   multiMessages,
+  elements,
 }
