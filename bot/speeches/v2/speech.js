@@ -1,4 +1,4 @@
-import { quickReply, genericTemplate, carouselTemplate, buttonTemplate, multiMessages, messageWithQuickReply, messageWithGif } from '../utils'
+import { quickReply, elements, genericTemplate, carouselTemplate, buttonTemplate, multiMessages, messageWithQuickReply, messageWithGif } from '../utils'
 import { image, video } from '../utils/content-types'
 import * as botSpeeches from '../../speeches'
 
@@ -114,50 +114,51 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       botSpeeches.messages.LIST,
-      carouselTemplate({
-        title: botSpeeches.carouselTexts.TITLE_ACT,
-        subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
-        buttons: [
-          buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.BUTTON_ACT,
-            payload: V2_QUICK_REPLY_ACT
-          })
-        ],
-      },
-        {
-          title: botSpeeches.carouselTexts.TITLE_RADAR,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
-          buttons: [
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ACT,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ACT,
+              payload: V2_QUICK_REPLY_ACT
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_RADAR,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL,
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR,
               payload: V2_QUICK_REPLY_RADAR
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.TITLE_MORE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2,
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_MORE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2,
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_MORE,
               payload: V2_QUICK_REPLY_MAIS
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.TITLE_SHARE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_SHARE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
               payload: V2_QUICK_REPLY_SHARE
             })
           ],
-        }
+        ),
       )
     ],
 
@@ -212,50 +213,51 @@ export default botData => ({
     ],
     [V2_QUICK_REPLY_J_1]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_THE_WEBSITE,
-      carouselTemplate({
-        title: botSpeeches.carouselTexts.TITLE_ACT,
-        subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
-        buttons: [
-          buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.BUTTON_ACT,
-            payload: V2_QUICK_REPLY_ACT
-          })
-        ],
-      },
-        {
-          title: botSpeeches.carouselTexts.TITLE_RADAR,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL,
-          buttons: [
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ACT,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ACT,
+              payload: V2_QUICK_REPLY_ACT
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_RADAR,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL,
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR,
               payload: V2_QUICK_REPLY_RADAR
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.TITLE_MORE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2,
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_MORE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2,
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_MORE,
               payload: V2_QUICK_REPLY_MAIS
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.TITLE_SHARE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_SHARE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_F_3
+              payload: V2_QUICK_REPLY_SHARE
             })
           ],
-        }
+        ),
       )
     ],
     [V2_QUICK_REPLY_I_1]: [
@@ -283,50 +285,51 @@ export default botData => ({
       ],
     },
     [V2_QUICK_REPLY_A_2]: [
-      carouselTemplate({
-        title: botSpeeches.carouselTexts.PEC,
-        subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
-        buttons: [
-          buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.PEC,
-            payload: V2_QUICK_REPLY_PEC
-          })
-        ],
-      },
-        {
-          title: botSpeeches.carouselTexts.STATUTE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL, //TODO
-          buttons: [
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.PEC,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.PEC,
+              payload: V2_QUICK_REPLY_PEC
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.STATUTE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.STATUTE,
               payload: V2_QUICK_REPLY_STATUTE
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.SUG,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2,
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.SUG,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.SUG,
               payload: V2_QUICK_REPLY_SUG
             })
           ],
-        },
-        {
-          title: botSpeeches.carouselTexts.ADPF,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botData.data.image_url || botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
-          buttons: [
+        ),
+        elements(
+          botSpeeches.carouselTexts.ADPF,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.ADPF,
               payload: V2_QUICK_REPLY_ADPF
             })
           ],
-        }
+        )
       )
     ],
     //
@@ -440,29 +443,29 @@ export default botData => ({
     //
     [V2_QUICK_REPLY_ACT]: [
       botSpeeches.messages.ACT_NOW,
-      carouselTemplate({
-        title: botSpeeches.carouselTexts.PRESSURE,
-        subtitle: botSpeeches.carouselTexts.SUBTITLE,
-        imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
-        buttons: [
-          buttonTemplate.postback({
-            title: botSpeeches.carouselTexts.PRESSURE,
-            payload: V2_QUICK_REPLY_PRESSURE
-          })
-        ],
-      },
-        {
-          title: botSpeeches.carouselTexts.VOTE,
-          subtitle: botSpeeches.carouselTexts.SUBTITLE,
-          imageURL: botSpeeches.carouselTexts.IMAGE_URL, //TODO
-          buttons: [
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.PRESSURE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.PRESSURE,
+              payload: V2_QUICK_REPLY_PRESSURE
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.VOTE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.VOTE,
               payload: V2_QUICK_REPLY_VOTE
             })
           ],
-        },
-        {},{}
+        )
       )
     ],
     //
