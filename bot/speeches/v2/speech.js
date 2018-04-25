@@ -168,7 +168,7 @@ export default botData => ({
       text: botSpeeches.messages.MORE_ABOUT_BETA,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
-        quickReply(V2_QUICK_REPLY_B_1, botSpeeches.buttonTexts.BACK),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK),
       ],
     },
 
