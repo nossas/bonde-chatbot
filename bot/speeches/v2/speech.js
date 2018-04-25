@@ -480,7 +480,7 @@ export default botData => ({
       )
     ],
     [V2_QUICK_REPLY_A_8]: {
-      text: botSpeeches.messages.ADPF_3,
+      text: botSpeeches.messages.PRESSURE_DATA,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
