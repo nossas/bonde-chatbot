@@ -114,7 +114,7 @@ export default {
   //
   // Radar da Beta - STATUTE
   //
-  STATUTE: 'O Estatuto do Nascituro é mais um Projeto de Lei que veio criminalizar totalmente o aborto - mesmo nos casos já permitidos. E pior: ele dificulta o acesso à pílula do dia seguinte e ao DIU,, e pode proibir até pesquisas com células tronco  😱😱😱',
+  STATUTE: 'O Estatuto do Nascituro é mais um Projeto de Lei que veio criminalizar totalmente o aborto - mesmo nos casos já permitidos. E pior: ele dificulta o acesso à pílula do dia seguinte e ao DIU, e pode proibir até pesquisas com células tronco  😱😱😱',
   STATUTE_1: 'Pra completar, ele propõe que as mulheres que engravidarem de estupradores não possam mais interromper a gravidez. A solução? Ganhar um tipo de "bolsa estupro" do agressor ou do governo. #SOS  🤢',
 
   STATUTE_2: 'Ainda não, mas te garanto que quando chegar a hora nossa pressão vai bater recorde - promessa de robô!  🤖',
