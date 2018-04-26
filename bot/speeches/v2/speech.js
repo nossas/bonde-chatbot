@@ -118,7 +118,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -129,7 +129,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL,
+          botSpeeches.carouselTexts.IMAGE_RADAR,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR,
@@ -140,7 +140,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_MORE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2,
+          botSpeeches.carouselTexts.IMAGE_MORE,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_MORE,
@@ -151,7 +151,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_SHARE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          botSpeeches.carouselTexts.IMAGE_SHARE, //TODO
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
@@ -217,7 +217,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -228,7 +228,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL,
+          botSpeeches.carouselTexts.IMAGE_RADAR,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR,
@@ -239,7 +239,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_MORE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2,
+          botSpeeches.carouselTexts.IMAGE_MORE,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_MORE,
@@ -250,7 +250,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_SHARE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          botSpeeches.carouselTexts.IMAGE_SHARE,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
@@ -289,7 +289,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.PEC,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_PEC, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.PEC,
@@ -300,7 +300,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.STATUTE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_STATUTE, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.STATUTE,
@@ -311,7 +311,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.SUG,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          botSpeeches.carouselTexts.IMAGE_SUG, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.SUG,
@@ -322,7 +322,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL_2, //TODO
+          botSpeeches.carouselTexts.IMAGE_ADPF, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.ADPF,
@@ -447,7 +447,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.PRESSURE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_VIOLENCE, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.PRESSURE,
@@ -458,7 +458,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.VOTE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_URL, //TODO
+          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.VOTE,
