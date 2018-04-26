@@ -40,8 +40,8 @@ export default {
 
   I_AM_BETA: 'Quem me chamou? 🎤 Meu nome é Betânia, mas pode me chamar de Beta - a robô feminista! 💜 Vim ao mundo com uma missão: usar nossos códigos feministas para reprogramar esse sistema. Vamos nessa? É só apertar o botão abaixo.👇',
 
-  CALL_INBOX: 'Você me chama no inbox para saber o que tá rolando na política que pode impactar a vida das mulheres, e fazer sua voz chegar até os políticos quando chegar a hora de barrar ou aprovar uma proposta!',
-  CALL_INBOX_1: 'Assim que meu radar encontrar uma oportunidade de ação, eu mando um alerta por aqui te convocando pra fazer barulho - tudo sem precisar sair do chat!  📣  Quer ser minha aliada na luta pelos direitos das mulheres?',
+  CALL_INBOX: 'Você me chama no inbox para 1) saber o que tá rolando na política e pode impactar a vida das mulheres; 2) fazer sua voz chegar até os políticos quando for hora de barrar ou aprovar uma proposta; 3) ajudar a mobilizar mais mulheres em defesa de seus direitos! 💪',
+  CALL_INBOX_1: 'Assim que meu radar encontrar uma oportunidade de ação, eu mando um alerta por aqui te convocando pra fazer barulho 📣  Quer ser minha aliada na luta pelos direitos das mulheres?',
   CALL_INBOX_2: gif('https://goo.gl/Rao6n1'),
 
   /*BETA_INTRODUCTION: 'Fui programada para ajudar mulheres na luta pelos seus direitos. 🤖💜',

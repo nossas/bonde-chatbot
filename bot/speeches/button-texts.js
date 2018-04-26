@@ -24,7 +24,7 @@ export default {
   WHAT_NOISE: 'Que barulho?',
   RADAR: 'Radar Político',
 
-  HOW_TO_HELP: 'Beta, como te ajudar?',
+  HOW_TO_HELP: 'Como te ajudar?',
   CAMPAIGN: 'Sugerir campanha!',
 
   WHAT_NOW: 'E agora?',
@@ -72,7 +72,7 @@ export default {
   COUNT_ME_IN: 'Tô dentro!',
   COUNT_ME_IN_SIS: 'Tô dentro, mana!',
   I_AGREE: 'Concordo!',
-  I_WANT: 'Quero! \o/',
+  I_WANT: 'Quero! \\o/',
   I_WANT_1: 'Querooo!',
   I_WANT_DATA: 'Quero dados!',
   I_WANT_TO_ACT_NOW: 'Quero agir já!',
