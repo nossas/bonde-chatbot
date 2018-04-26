@@ -11,6 +11,7 @@ export default ({ speech, reply }) => ({ entities }) => {
   //
   const speechRepliesMap = {
     'greeting': speech.actions.GET_STARTED,
+    'menu': speech.actions.V2_QUICK_REPLY_CA,
     //
     // TODO: Need to handle via previous message context
     //       Switch to AI intent specific replies
