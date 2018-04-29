@@ -50,10 +50,8 @@ export default {
 
   IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
 
-  NO_PRESSURE_PEC181: 'Meu modo #pressão está desativado por ora. Assim que a votação das alterações no texto final for reagendada, pode deixar que eu te mando mensagem por aqui 😉 Enquanto isso, confere meu registro sobre a nossa mobilização: www.paremocavalodetroia.org/',
-
-  KEEP_YOU_POSTED: 'Deixa comigo que meu radar tá a todo vapor! Assim que eu encontrar uma oportunidade de ação te envio uma mensagem aqui mesmo pelo Inbox te convocando para agir pelos direitos das mulheres! 💪🏽 Enquanto isso, fica de olho na minha página, lá eu sempre conto o que meus algoritmos descobrem. 😉',
-
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando os vereadores do Rio de Janeiro a aprovarem 7 projetos de lei de Marielle Franco, vereadora assassinada no dia 14 de março. Ela fez um mandato comprometido com os direitos das mulheres, agora é a nossa ver de manter vivo seu legado! Entre em ação aqui: bit.ly/pelolegadode_marielle',
+  
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -197,10 +195,10 @@ export default {
   //
   VIDEO_THINK_OLGA: 'O primeiro vídeo tá demais! Dá só uma olhada e pode deixar que te envio o novo quando for ao ar ;) http://bit.ly/thinkolga_1',
   
-  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Estou vivendo meu primeiro luto público enquanto robô. Meus algoritmos ainda não conseguiram processar bem tudo isso, mas te digo hoje e sempre: Marielle continuará PRESENTE e movendo as estruturas. Seguimos juntas e na luta pelos direitos das mulheres.',
+  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Em breve, 7 de seus projetos de leis serão votados e nós vamos pressionar os vereadores do Rio de Janeiro para que os aprovem. Pressione já: bit.ly/pelolegadode_marielle',
   
-  ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC 29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia.',
-
+  ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas: o Estatuto Nascituro e a PEC 181 - duas graves ameaças aos direitos reprodutivos das mulheres -, e a ADPF 442 e a SUG 15 - duas propostas de avanço à questão do aborto no Brasil!',
+  
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
 
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
@@ -218,11 +216,9 @@ export default {
   DOESNT_EVEN_TELL_ME: 'Nem me fala.',
 
   YES_I_WARN_YOU: 'Aviso sim!',
-
-  ABOUT_MARCH_8: 'O Dia Internacional da Mulher é comemorado no 8 de março desde o começo do século XX - muito antes da ONU assinar o primeiro acordo internacional que afirmava princípios de igualdade entre homens e mulheres. As minas já tavam mobilizadas! Desde lá, esse dia é um marco internacional das lutas feministas e já foi palco de greves, protestos, debates e tantas outras formas de manifestação. Nesse ano não poderia ser diferente. Tô fazendo um mapeamento colaborativo de campanhas, atos e oportunidades de ação, dá uma olhada: bit.ly/mapa8demarco',
-
-  ACTION_MARCH_8: 'Tô fazendo um mapeamento colaborativo de campanhas, atos e oportunidades de ação rolando no 8 de março! Você pode conferir aqui: bit.ly/mapa8demarco',
-
+  
+  ABOUT_MARCH_8: 'O Dia Internacional da Mulher é comemorado no 8 de março desde o começo do século XX - muito antes da ONU assinar o primeiro acordo internacional que afirmava princípios de igualdade entre homens e mulheres. As minas já tavam mobilizadas! Desde lá, esse dia é um marco internacional das lutas feministas e já foi palco de greves, protestos, debates e tantas outras formas de manifestação.',
+  
   ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Há alguns meses, por exemplo, uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
 
   ABOUT_COLORISM: 'Achei uma definição maravilhosa, das Blogueiras Negras: "O colorismo ou a pigmentocracia é a discriminação pela cor da pele e é muito comum em países que sofreram a colonização européia e em países pós-escravocratas. De uma maneira simplificada, o termo quer dizer que, quanto mais pigmentada uma pessoa, mais discriminação e exclusão essa pessoa sofrerá". Recomendo muito o artigo completo: bit.ly/colorismo_blogueirasnegras',
