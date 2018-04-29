@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.4"></a>
+## [1.6.4](https://github.com/nossas/bonde-bot/compare/v1.6.3...v1.6.4) (2018-04-29)
+
+
+### Features
+
+* reply with multiple message ([709395d](https://github.com/nossas/bonde-bot/commit/709395d))
+* **reply:** set typing_on with multi messages reply ([58f92e4](https://github.com/nossas/bonde-bot/commit/58f92e4))
+
+
+
 <a name="1.6.3"></a>
 ## [1.6.3](https://github.com/nossas/bonde-bot/compare/v1.6.2...v1.6.3) (2018-04-04)
 
