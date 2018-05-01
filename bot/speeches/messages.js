@@ -58,7 +58,7 @@ export default {
   YES_IT_WORKS: 'Opa! Funciona super! Ano passado, por exemplo, enviamos 35 mil emails para cada um dos deputados da Comissão da PEC 181 - que pode acabar com o aborto no Brasil até em casos de estupro. Quer saber o que você pode fazer agora?',
   */
 
-  LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar:',
+  LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar - para voltar a este menu digite a qualquer momento a palavra "menu" e eu te trarei de volta:',
   //
   // Mais sobre a Beta
   //  
@@ -109,7 +109,7 @@ export default {
   PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
   PEC_HISTORY_1: '➡️ www.paremocavalodetroia.org/',
 
-  YOU_ROCK_1: 'Arrasou! <3 Sua missão é compartilhar o meu chat com 5 amigues. Quanto mais gente me chamar por inbox, mais pessoas vão entrar em ação em defesa dos direitos das mulheres 💪 #ChamaBetaNoInbox',
+  YOU_ROCK_1: 'Arrasou! <3 Sua missão é compartilhar o meu chat com 5 amigues. Quanto mais gente me chamar por inbox, mais pessoas vão entrar em ação pelos direitos das mulheres 💪 #ChamaBetaNoInbox',
 
   //
   // Radar da Beta - STATUTE
