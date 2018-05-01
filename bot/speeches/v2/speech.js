@@ -57,7 +57,7 @@ const V2_QUICK_REPLY_A_8 = 'V2_QUICK_REPLY_A_8'
 const V2_QUICK_REPLY_A_9 = 'V2_QUICK_REPLY_A_9'
 
 
-const V2_QUICK_REPLY_SHARE = 'V2_QUICK_REPLY_SHARE'
+//const V2_QUICK_REPLY_SHARE = 'V2_QUICK_REPLY_SHARE'
 const V2_QUICK_REPLY_ACT = 'V2_QUICK_REPLY_ACT'
 const V2_QUICK_REPLY_PRESSURE = 'V2_QUICK_REPLY_PRESSURE'
 const V2_QUICK_REPLY_VOTE = 'V2_QUICK_REPLY_VOTE'
@@ -156,7 +156,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_SHARE
+              payload: V2_QUICK_REPLY_F_3
             })
           ],
         ),
@@ -255,7 +255,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_SHARE
+              payload: V2_QUICK_REPLY_F_3
             })
           ],
         ),
@@ -377,6 +377,10 @@ export default botData => ({
           buttonTemplate.webURL({
             url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
             title: 'Compartilhar',
+          }), 
+          buttonTemplate.postback({
+            title: botSpeeches.buttonTexts.BACK,
+            payload: V2_QUICK_REPLY_CA
           })
         ],
       }),
