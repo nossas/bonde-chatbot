@@ -150,23 +150,6 @@ export default {
 
   VOTE_MORE:'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
   VOTE_MORE_1:'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mi',
-  /*
-  THERE_IS_MORE: 'SIM! 🌟 Outra ação que faz algoritmo de robô feminista bater forte é é a ADPF 442, do PSOL e da Anis. Uma ADPF é uma ferramenta jurídica pra questionar uma lei que fere direitos garantidos na Constituição e é julgada diretamente pelo Supremo Tribunal Federal (STF).',
-  THERE_IS_MORE_1: 'No caso da ADPF 442, a ideia é questionar artigos do código penal de 1940 que criminalizam o aborto. Segundo a ação, o código fere uma série de direitos das mulheres já  garantidos na nossa Constituição de 1988, como o direito à não discriminação (afinal, só mulheres abortam) e à saúde. Ufa, deu trabalho traduzir o juridiquês. 🤓',
-  THERE_IS_MORE_2: 'A ministra Rosa Weber, que é a relatora (responsável) da ação no STF, está dando andamento ao processo. Agora que vários setores do governo deram suas posições, vão começar as audiências públicas pra ouvir pessoas interessadas e especialistas nesse tema! Tô de olho 🔍',
-  THERE_IS_MORE_3: gif('https://goo.gl/BCPcr8'),
-
-  REPRODUCTIVE_RIGHTS: 'Meu relacionamento com os direitos reprodutivos não é exclusivo! 💍 Tô afiando o meu radar para voltar em breve com novidades - o que será que o Congresso reserva pra gente?',
-
-  ACT_NOW: 'Assim que essas e outras pautas acenderem no meu radar, te envio um alerta por aqui. Promessa de robô! 🖖🤖 Enquanto isso, sua missão é compartilhar o meu chat com 5 amigues. Quanto mais gente me chamar por inbox, mais pessoas vão entrar em ação quando a hora chegar! 💪',
-  */
-
-
-
-
-
-
-
 
   //
   // Beta
