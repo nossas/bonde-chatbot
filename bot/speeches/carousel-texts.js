@@ -35,10 +35,10 @@ export default {
   // Buttons Texts
   //
 
-  BUTTON_ACT:'Quero agir agora!',
-  BUTTON_RADAR:'Radar Político',
-  BUTTON_SHARE:'Compartilhar a Beta',
-  BUTTON_MORE:'Mais sobre a Beta',
+  BUTTON_ACT:'Clique aqui 💪',
+  BUTTON_RADAR:'Clique aqui 🔎',
+  BUTTON_SHARE:'Clique aqui 🔮',
+  BUTTON_MORE:'Clique aqui 💜',
 
 
 
