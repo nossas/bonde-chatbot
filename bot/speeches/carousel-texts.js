@@ -2,10 +2,10 @@ export default {
   //
   // Generic
   //
-  TITLE_RADAR: 'Radar Político',
-  TITLE_MORE: 'Mais sobre a Beta',
-  TITLE_ACT: 'Quero agir agora!',
-  TITLE_SHARE: 'Compartilhar a Beta',
+  TITLE_RADAR: 'Pautas que estou monitorando',
+  TITLE_MORE: 'Tudo sobre mim',
+  TITLE_ACT: 'Oportunidades de ação',
+  TITLE_SHARE: 'Envie um #ChamaBetaNoInbox',
   SUBTITLE: '',
   
   IMAGE_RADAR: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta2.png',
@@ -37,8 +37,8 @@ export default {
 
   BUTTON_ACT:'Clique aqui 💪',
   BUTTON_RADAR:'Clique aqui 🔎',
-  BUTTON_SHARE:'Clique aqui 🔮',
-  BUTTON_MORE:'Clique aqui 💜',
+  BUTTON_SHARE:'Clique aqui 💜',
+  BUTTON_MORE:'Clique aqui 🔮',
 
 
 
