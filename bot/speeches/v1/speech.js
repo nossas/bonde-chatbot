@@ -1,4 +1,4 @@
-import { quickReply, genericTemplate, buttonTemplate, multiMessages, messageWithQuickReply } from '../utils'
+import { quickReply, genericTemplate, carouselTemplate, buttonTemplate, multiMessages, messageWithQuickReply } from '../utils'
 import * as botSpeeches from '../../speeches'
 
 const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeURI(url)}`
