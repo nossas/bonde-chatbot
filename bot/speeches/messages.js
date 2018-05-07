@@ -1,16 +1,9 @@
 import { messageWithQuickReply, quickReply, multiMessages } from './utils'
-import { image, video } from './utils/content-types'
+import { image, video, gif } from './utils/content-types'
 
 const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${widgetId}/message`
 
 export default {
-  //
-  // Msgs divididas
-  //
-  MSG1: 'Primeira mensagem',
-  MSG2: 'Segunda mensagem',
-  MSG3: 'Terceira mensagem',
-
   //
   // Generic
   //
@@ -42,9 +35,126 @@ export default {
   PEC_181_TROJAN_HORSE_PRESSURE_STRATEGY: 'Logo mais serão votadas as alterações no texto final da PEC 181, que RETIRAM do projeto atual a proibição total do aborto. Precisamos lotar as caixas de email dos deputados pedindo para que APROVEM essas alterações e impeçam esse retrocesso aos direitos das mulheres! 💪 Vamos nessa?',
 
   //
+  // New Script
+  //
+
+  I_AM_BETA: 'Quem me chamou? 🎤 Meu nome é Betânia, mas pode me chamar de Beta - a robô feminista! 💜 Vim ao mundo com uma missão: usar nossos códigos feministas para reprogramar esse sistema. Vamos nessa? É só apertar o botão abaixo.👇',
+
+  CALL_INBOX: 'Você me chama no inbox para 1) saber o que tá rolando na política e pode impactar a vida das mulheres; 2) fazer sua voz chegar até os políticos quando for hora de barrar ou aprovar uma proposta; 3) ajudar a mobilizar mais mulheres em defesa de seus direitos! 💪',
+  CALL_INBOX_1: 'Assim que meu radar encontrar uma oportunidade de ação, eu mando um alerta por aqui te convocando pra fazer barulho 📣  Quer ser minha aliada na luta pelos direitos das mulheres?',
+  CALL_INBOX_2: gif('https://goo.gl/Rao6n1'),
+
+  /*BETA_INTRODUCTION: 'Fui programada para ajudar mulheres na luta pelos seus direitos. 🤖💜',
+  BETA_INTRODUCTION_1: 'Meus algoritmos monitoram constantemente o que tá rolando no campo político brasileiro pra identificar votações e discussões que podem impactar a vida das mulheres. Projetos de lei, PECs, ações no STF… Tem de tudo, viu?',
+  BETA_INTRODUCTION_2: 'Quando uma dessas propostas entra em pauta, eu traduzo o politiquês pro Português, mando um alerta pra você aqui no inbox e te convido a fazer a sua opinião chegar até os políticos em Brasília - ou onde quer que seja 📣📣📣 ',
+  BETA_INTRODUCTION_3: 'Juntas, temos força para barrar retrocessos e pressionar por avanços!',
+  
+
+  EXPLAIN_MORE: 'Uma das minhas táticas preferidas é fazer pressão direta: lotar a caixa de e-mail dos políticos com mensagens de milhares de mulheres. 📧📧📧 Fica bem difícil ignorar a nossa voz quando estamos em coro.',
+  EXPLAIN_MORE_1: 'A parte boa é que você não precisa nem abrir seu e-mail pra fazer isso. Eu posso enviar sua mensagem pra eles aqui mesmo, pelo inbox do Facebook.',
+  EXPLAIN_MORE_2: 'Funciona assim: eu te mostro a mensagem que eles vão receber, você dá ok e eu envio direto para o email deles - você é a remetente e eu, a mensageira. Não é feitiçaria, é tecnologia!',
+  EXPLAIN_MORE_3: gif('https://goo.gl/Rao6n1'),
+
+  YES_IT_WORKS: 'Opa! Funciona super! Ano passado, por exemplo, enviamos 35 mil emails para cada um dos deputados da Comissão da PEC 181 - que pode acabar com o aborto no Brasil até em casos de estupro. Quer saber o que você pode fazer agora?',
+  */
+
+  LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar - para voltar a este menu digite a qualquer momento a palavra "menu" e eu te trarei de volta:',
+  //
+  // Mais sobre a Beta
+  //  
+  MORE_ABOUT_BETA: 'Uuuh, quer me conhecer melhor? Adoro! Minha história começou no Nossas, o laboratório de ativismo que me criou como novo canal de participação política.  Quer saber exatamente o que eu faço? #misteriosa',
+
+  /*
+  MORE_ABOUT_BETA_1: 'Comecei a ser programada no início de 2017, quando uma série de pautas avançavam no Congresso para retirar direitos das mulheres. Ao mesmo tempo, entrou no STF uma ação que propõe descriminalizar o aborto até a 12a semana de gestação. Brasil, tá difícil te decifrar!',
+  MORE_ABOUT_BETA_2: 'Uma coisa ficou clara: era hora de agir! Por isso, decidimos criar um canal acessível de ação das mulheres pela defesa dos seus direitos. Quer coisa mais prática do que poder fazer pressão nas autoridades a partir de uma  conversa pelo Messenger?',
+  MORE_ABOUT_BETA_3: gif('https://goo.gl/7b8XRb'),
+  */
+
+  MORE_ABOUT_BETA_1: 'Meu radar monitora a política brasileira pra identificar votações e discussões que impactam os direitos das mulheres. Quando uma delas entra em pauta, eu traduzo o politiquês e te convido a fazer sua opinião chegar até os políticos.',
+  MORE_ABOUT_BETA_2: 'Uma das minhas táticas preferidas é a pressão direta: lotar a caixa de e-mail dos políticos com mensagens de milhares de pessoas. Funciona assim: eu te mostro a mensagem, você dá ok e eu envio direto da nossa conversa para o email deles. Spoiler: já fizemos muito barulho! 📣📣📣',
+
+  BETA_WHAT_NOISE: 'Nossa primeira campanha - e primeira vitória! -  foi contra a PEC 181, proposta que pode acabar com o aborto legal no Brasil, mesmo em casos de estupro. 😱😤⚠️',
+  BETA_WHAT_NOISE_1: 'Enviamos 35 mil emails para cada deputado e eles não seguraram a pressão: adiaram as votações 7 vezes! O futuro da PEC ainda tá que nem o futuro do bitcoin - incerto!  Te falo mais sobre ela no meu radar!  🕵️‍♀️',
+
+  THERE_IS_MORE: 'Junto da Anis e da Think Olga, lancei a campanha "Um Emprego Para para Rebeca". Ela foi a primeira mulher a pedir ao STF o direito a um aborto seguro e, ao contar sua história, sofreu muita discriminação, especialmente na busca por um emprego.',
+  THERE_IS_MORE_1: 'Agora, Rebeca está desempregada e é hora de lutarmos com ela. 💖 Você pode saber mais e ajudar Rebeca aqui: www.pelavidaderebeca.org 💪🏽',
+
+  CAMPAIGN: 'AMO! Pra propor uma campanha, mande um email pra as mulheres por trás de mim em beta@nossas.org. Elas não são robô, mas respondem rapidinho!',
+
+  HOW_TO_HELP: 'Não tá se aguentando de vontade de fazer alguma coisa, né? Sei bem como é! #soudessas. Então, aí vai um pedido #nuncatepedinada',
+  HOW_TO_HELP_1: 'Compartilhe o meu link com suas amigas - e amigos! Quanto mais pessoas falarem comigo agora, mais pessoas vou conseguir mobilizar para entrar em ação! Vamos nessa? #ChamaBetaNoInbox',
+
+  YOU_ROCK: 'Arrasou! <3',
+  //
+  // Radar da Beta
+  //
+
+  RADAR: 'Aqui eu te conto mais a fundo o que o meu radar tá monitorando. Projetos de lei, PECs, ações no STF… Tem de tudo! Quer saber o que tá rolando sem precisar falar politiquês?',
+  RADAR_1: 'As PECs estão numa situação esquisita: em momentos de Intervenção Federal, como acontece agora no RJ, alterações na Constituição (PECs) ficam suspensas. Mas o Rodrigo Maia (DEM), presidente da Câmara dos Deputados, já avisou que elas podem avançar dentro das comissões, só não podem ser votadas em plenário - capítulo final da tramitação de uma proposta. Ou seja, continuo atenta!  👀',
+
+  LIGHT: 'TEEEM! 💡Esse ano, a SUG 15 fez meu radar aqui disparar aqui. #aloka 🚨 Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas.',
+  LIGHT_1: 'A SUG 15 pode virar um Projeto de Lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
+  LIGHT_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei:  bit.ly/sug15_consulta2 #RumoAos20mil',
+
+  //
+  // Radar da Beta - PEC 181
+  //
+  RADAR_PEC: 'A PEC 181 foi criada para aumentar a licença maternidade de mães de prematuros, mas teve seu texto alterado e agora pode acabar com o aborto legal no Brasil, mesmo em caso de estupro. 😱😱 Eu não ia ficar parada, né?',
+
+  BETA_DID: 'Muito barulho! Convoquei todo mundo que já falou comigo pra enviar emails pros deputados da Comissão Especial. Foram 35.000 mensagens pra cada político! E eles não seguraram a pressão: adiaram as votações 7 vezes. As definições de arraso foram atualizadas! 💪💪💪 Mas essa foi só a 1a temporada.',
+
+  PEC: 'As PECs estão numa situação esquisita: em momentos de Intervenção Federal, como está acontecendo agora no RJ, alterações na Constituição (PECs) ficam suspensas. ',
+  PEC_1: 'Mas o Rodrigo Maia (DEM), presidente da Câmara dos Deputados, já avisou que elas podem avançar dentro das comissões, só não podem ser votadas em plenário - capítulo final da tramitação de uma proposta. Ou seja, continuo atenta!  👀',
+
+  PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
+  PEC_HISTORY_1: '➡️ www.paremocavalodetroia.org/',
+
+  YOU_ROCK_1: 'Arrasou! <3 Sua missão é compartilhar o meu chat com 5 amigues. Quanto mais gente me chamar por inbox, mais pessoas vão entrar em ação pelos direitos das mulheres 💪 #ChamaBetaNoInbox',
+
+  //
+  // Radar da Beta - STATUTE
+  //
+  STATUTE: 'O Estatuto do Nascituro é mais um Projeto de Lei que veio criminalizar totalmente o aborto - mesmo nos casos já permitidos. E pior: ele dificulta o acesso à pílula do dia seguinte e ao DIU, e pode proibir até pesquisas com células tronco  😱😱😱',
+  STATUTE_1: 'Pra completar, ele propõe que as mulheres que engravidarem de estupradores não possam mais interromper a gravidez. A solução? Ganhar um tipo de "bolsa estupro" do agressor ou do governo. #SOS  🤢',
+
+  STATUTE_2: 'Ainda não, mas te garanto que quando chegar a hora nossa pressão vai bater recorde - promessa de robô!  🤖',
+  STATUTE_3: 'Neste momento o Estatuto já tá pronto para ser analisado pela Comissão de Constituição e Justiça e de Cidadania (CCJC) da Câmara dos Deputados, que dá o ok final pro projeto ser votado.  Antes disso, ele só precisa de um novo relator, ou seja, de um responsável pelo Projeto. Tô de olho! 🔍.',
+  STATUTE_4: gif('https://goo.gl/BCPcr8'),
+  //
+  // Radar da Beta - SUG 15
+  //
+  SUG: 'Notícia boa: temos! Meu radar disparou aqui com uma sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime: a SUG 15 🔝',
+  SUG_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas - isso lá em 2016. Quer saber o status 2018?',
+
+  SUG_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei. Partiu? Vote sim:  bit.ly/sug15_consulta2 #RumoAos20mil',
+  //
+  // Radar da Beta - ADPF 442
+  //
+  ADPF: 'Essa é pra fazer algoritmo de robô feminista bater forte! 💓💓 Uma ADPF é uma ferramenta jurídica pra questionar uma lei que fere direitos garantidos na Constituição - julgada diretamente pelo Supremo Tribunal Federal (STF).',
+  ADPF_1: 'A ADPF 442, criada pela Anis e PSOL, questiona artigos do código penal de 1940 que criminalizam o aborto. Segundo a ação, o código fere uma série de direitos das mulheres já garantidos na nossa Constituição de 1988, como o direito à não discriminação (afinal, só mulheres abortam) e à saúde.',
+  ADPF_2: 'É a nossa maior chance de descriminalizar o aborto no Brasil. Quer saber como anda?',
+
+  ADPF_3: 'A ministra Rosa Weber, a relatora (responsável) da ação no STF, está dando andamento ao processo. Agora que vários setores do governo deram suas posições, vão começar as audiências públicas pra ouvir pessoas interessadas e especialistas nesse tema!',
+  //
+  // Quero agir agora
+  //
+  ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
+  // Violência Contra a Mulher
+  PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando porque o novo Governador, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal. #deuerro',
+  PRESSURE_1:'ALOU MÁRCIO, #NãoÉBrigaDeCasal, é violência contra a mulher! Clique no link e pressione agora para lotar a caixa de email de França com nossas vozes dizendo que não vamos deixar pra lá: bit.ly/issoefeminicidio_betamsp',
+  
+  PRESSURE_DATA:'1 mulher morre a cada 4 dias em São Paulo e 63% delas são assassinadas dentro de suas próprias casas. AI MEUS ALGORITMOS! 🚨 Mesmo assim, o feminicídio ainda é tratado com descaso pelo Estado. Clique no link e não deixe que isso continue: bit.ly/issoefeminicidio_mspbeta',
+  // Descriminalização do Aborto
+  VOTE:'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
+  VOTE_1:'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
+
+  VOTE_MORE:'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
+  VOTE_MORE_1:'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mi',
+
+  //
   // Beta
   //
-  I_AM_BETA: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Pra interagir comigo, é só apertar o botão abaixo. Vamos nessa?',
+
 
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
