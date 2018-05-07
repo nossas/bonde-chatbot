@@ -8,6 +8,7 @@ const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeU
 // Constants
 //
 const GET_STARTED = 'GET_STARTED'
+const PERSISTENT_MENU = 'PERSISTENT_MENU'
 
 const VMDM_QUICK_REPLY_X = 'VMDM_QUICK_REPLY_X'
 const VMDM_QUICK_REPLY_G = 'VMDM_QUICK_REPLY_G'
@@ -80,6 +81,28 @@ export default botData => ({
     [VMDM_EMAIL_ADDRESS_OK]: VMDM_EMAIL_ADDRESS_OK,
   },
   messages: {
+
+    [PERSISTENT_MENU]: {
+      locale: 'default',
+      composer_input_disabled: false,
+      call_to_actions: [
+        {
+          title: "Quero agir agora!",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_ACT"
+        },
+        {
+          title: "Radar Político",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_RADAR"
+        },
+        {
+          title: "Mais sobre a Beta",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_MAIS"
+        }
+      ]
+    },
 
     [GET_STARTED]: {
       text: botSpeeches.messages.I_AM_BETA,
