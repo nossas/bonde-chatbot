@@ -243,19 +243,19 @@ export default botData => ({
         {
           title: "Parem a PEC 29!",
           type: "postback",
-          payload: V2_QUICK_REPLY_O_1
+          payload: V2_QUICK_REPLY_O_1,
         },
         {
           title: "Outras Ações",
           type: "postback",
-          payload: V2_QUICK_REPLY_ACT
+          payload: V2_QUICK_REPLY_ACT,
         },
         {
           title: "Mais sobre a Beta",
           type: "postback",
-          payload: V2_QUICK_REPLY_MAIS
-        }
-      ]
+          payload: V2_QUICK_REPLY_MAIS,
+        },
+      ],
     },
 
     [GET_STARTED]: {
