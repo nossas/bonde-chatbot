@@ -55,6 +55,7 @@ export default class BotFactory {
         const endpoint = `/${data.endpoint || id}`
 
         bot.setGetStartedButton({ payload: speech.actions.GET_STARTED })
+        bot.setPersistentMenu([speech.messages.PERSISTENT_MENU])
         bot.on('error', botEvents.error(...eventArgs))
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))
