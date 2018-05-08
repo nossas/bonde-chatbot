@@ -27,32 +27,35 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
       const interaction = JSON.parse(last.interaction)
 
       if (interaction.is_bot) {
-        switch (interaction.action) {
-          case speech.actions.V1_QUICK_REPLY_I:
-          case speech.actions.V1_EMAIL_ADDRESS_WRONG:
-          case speech.actions.VMDM_QUICK_REPLY_I:
-          case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
-            let action = !isemail.validate(payload.message.text)
-              ? speech.actions.V1_EMAIL_ADDRESS_WRONG
-              : speech.actions.V1_EMAIL_ADDRESS_OK
+        if (interaction.action == undefined) dispatched = false
+        else {
+          switch (interaction.action) {
+            case speech.actions.V1_QUICK_REPLY_I:
+            case speech.actions.V1_EMAIL_ADDRESS_WRONG:
+            case speech.actions.VMDM_QUICK_REPLY_I:
+            case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
+              let action = !isemail.validate(payload.message.text)
+                ? speech.actions.V1_EMAIL_ADDRESS_WRONG
+                : speech.actions.V1_EMAIL_ADDRESS_OK
 
-            if (interaction.action.startsWith('VMDM_')) {
-              action = !isemail.validate(payload.message.text)
-                ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
-                : speech.actions.VMDM_EMAIL_ADDRESS_OK
-            }
+              if (interaction.action.startsWith('VMDM_')) {
+                action = !isemail.validate(payload.message.text)
+                  ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
+                  : speech.actions.VMDM_EMAIL_ADDRESS_OK
+              }
 
-            const replyMessage = speech.messages[action].constructor === Function
-              ? speech.messages[action](profile)
-              : speech.messages[action]
+              const replyMessage = speech.messages[action].constructor === Function
+                ? speech.messages[action](profile)
+                : speech.messages[action]
 
-            if (action === speech.actions.V1_EMAIL_ADDRESS_OK) {
-              botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
-            }
+              if (action === speech.actions.V1_EMAIL_ADDRESS_OK) {
+                botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
+              }
 
-            reply(replyMessage, action)
-            dispatched = true
-            break;
+              reply(replyMessage, action)
+              dispatched = true
+              break;
+          }
         }
       }
     }
