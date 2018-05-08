@@ -280,7 +280,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT,
+          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -317,7 +317,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_FRIENDS
+              payload: V2_QUICK_REPLY_F_3
             })
           ],
         ),
