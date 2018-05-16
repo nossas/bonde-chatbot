@@ -2,38 +2,38 @@ pipeline:
   build:
     image: node:latest
     commands:
-      - export GRAPHQL_URL=https://data.staging.bonde.org/graphql
+      - export GRAPHQL_URL=https://api-v2.staging.bonde.org/graphql
       - yarn
       - yarn lint
       - yarn test
     when:
       event: [push, tag]
 
-  publish-staging:
+  staging-publish:
     image: plugins/docker
     repo: nossas/bonde-bot
     secrets: [ docker_username, docker_password ]
     username: lpirola
     password: ${DOCKER_PASSWORD}
     tags:
-      - ${DRONE_BRANCH}
+      - ${DRONE_BRANCH/\//-}
     when:
       status: success
-      branch: [hotfix-*, release-*, feature-*, develop]
+      branch: [hotfix/*, release/*, feature/*, develop]
 
-  deploy-rancher-staging:
+  staging-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
-    service: staging/bot
-    docker_image: nossas/bonde-bot:${DRONE_BRANCH}
+    service: webservers/beta
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
     timeout: 360
     confirm: true
     secrets: [ rancher_access_key, rancher_secret_key ]
     when:
       status: success
-      branch: [hotfix-*, release-*, feature-*, develop]
+      branch: [hotfix/*, release/*, feature/*, develop]
 
-  publish-production:
+  production-publish:
     image: plugins/docker
     repo: nossas/bonde-bot
     secrets: [ docker_username, docker_password ]
@@ -45,10 +45,10 @@ pipeline:
       status: success
       event: tag
 
-  deploy-rancher-production:
+  production-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
-    service: bonde/bot
+    service: webservers/beta
     docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
     timeout: 360
     confirm: true
@@ -72,7 +72,7 @@ services:
     # commands:
       # - psql -c 'create database bonde; create schema postgraphql;' -hpostgres -Upostgres
 
-  data:
+  api-v2:
     image: nossas/bonde-graphql
     commands:
       - export SCHEMA_NAME=postgraphql
