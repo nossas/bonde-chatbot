@@ -59,6 +59,7 @@ export default class BotFactory {
         bot.on('error', botEvents.error(...eventArgs))
         bot.on('postback', botEvents.postback(...eventArgs))
         bot.on('message', botEvents.message(...eventArgs))
+        bot.on('referral', botEvents.referral(...eventArgs))
 
         return { id, bot, endpoint, botData }
       })
