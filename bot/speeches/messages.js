@@ -254,7 +254,9 @@ export default {
   
   ABOUT_THIESSITA: 'Ai meus algoritmos, como eu amo essa mulher! A Thiessita é uma mulher maravilhosa que tem um canal no Youtube para compartilhar um pouquinho do seu mundo - especialmente da vida como uma mulher trans. #MelhorQueNetflix, corre lá: http://bit.ly/thiessita_youtube',
 
-  TEST_THIESSITA_3: ['"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox! Você pode conferir a resposta completa aqui mesmo:', video('https://www.facebook.com/beta.feminista/videos/1623519051042554/'), 'E depois olha tudo o que ela contou no canal:', videoTemplate('https://bit.ly/thiessita__beta')],
+  TEST_THIESSITA_1: ['"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox ;) Olha só a resposta completa, tá demais <3', videoTemplate('https://youtu.be/0c2v-CDGMJk?t=1m1s')],
+
+  TEST_THIESSITA_3: ['"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox! Você pode conferir a resposta completa aqui mesmo:', video('https://fake-s3.nossas.org/beta/Thiessita_menor.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=admin%2F20180521%2F%2Fs3%2Faws4_request&X-Amz-Date=20180521T201608Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Signature=fb94ce3b2822076263e298e6e77c7e68a322b8e81cfe3451a205236b15e6416d'), 'E depois olha tudo o que ela contou no canal: https://youtu.be/0c2v-CDGMJk?t=1m1s'],
 
   
   //
