@@ -1,5 +1,5 @@
 import { messageWithQuickReply, quickReply, multiMessages } from './utils'
-import { image, video, gif } from './utils/content-types'
+import { image, video, videoTemplate, gif } from './utils/content-types'
 
 const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${widgetId}/message`
 
