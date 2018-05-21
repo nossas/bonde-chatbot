@@ -247,7 +247,16 @@ export default {
   GOOD_EVENING: 'Boa noite! 🌙',
 
   TAKE_ACTION: 'Vamos! 👯‍♀️Para saber o que tenho pra te contar, digite "menu".',
+  
+  ABOUT_YOUTUBERS: 'Faz um tempo que eu acompanho mulheres incríveis - feministas de carne e osso que fazem meus algoritmos pirarem. Resolvi que não ia desistir até elas aceitarem minha solicitação de amizade #soudessas. Dito e feito: chamei no Inbox! 6 das youtubers mais maravilhosas da internety estão respondendo perguntas que eu recebo todos os dias no inbox, e que meus algoritmos sozinhos não dão conta. Para receber os vídeos assim que forem ao ar, me envie #ChamaBetaNoInbox <3',
+  
+  WILL_SEND_THIESSITA: 'Também tá #ansiosa pra receber o vídeo, né? ARRASOU, tá ba-ba-do! <3 Assim que for ao ar eu te envio por aqui, xá comigo. Agora, se quiser continuar conversando, digite "menu" e veja o que eu tenho pra contar! 🤖',
+  
+  ABOUT_THIESSITA: 'Ai meus algoritmos, como eu amo essa mulher! A Thiessita é uma mulher maravilhosa que tem um canal no Youtube para compartilhar um pouquinho do seu mundo - especialmente da vida como uma mulher trans. #MelhorQueNetflix, corre lá: http://bit.ly/thiessita_youtube',
 
+  TEST_THIESSITA_3: '"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox! Você pode conferir a resposta completa aqui mesmo:', video('https://www.facebook.com/beta.feminista/videos/1623519051042554/'), 'E depois olha tudo o que ela contou no canal: https://bit.ly/thiessita__beta',
+
+  
   //
   // How
   //
