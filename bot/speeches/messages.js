@@ -267,7 +267,12 @@ export default {
 
   HOW_SHARE_TIMELINE: 'Adoro esse tipo de mensagem! ❤️  Pra compartilhar o meu chat na sua timeline, é só publicar esse link aqui, ó: bit.ly/chamabetanoinbox',
 
-
+  ABOUT_YOUTUBERS: 'Faz um tempo que eu acompanho mulheres incríveis - feministas de carne e osso que fazem meus algoritmos pirarem. Resolvi que não ia desistir até elas aceitarem minha solicitação de amizade #soudessas. Dito e feito: chamei no Inbox! 6 das youtubers mais maravilhosas da internety estão respondendo perguntas que eu recebo todos os dias no inbox. Para receber os vídeos assim que forem ao ar, me envie #Beta<3Youtubers 💖',
+  
+  WILL_SEND_THIESSITA: 'Também tá #ansiosa pra receber o vídeo, né? ARRASOU, tá ba-ba-do! <3 Assim que for ao ar eu te envio por aqui, xá comigo. Agora, se quiser continuar conversando, digite "menu" e veja o que eu tenho pra contar! 🤖',
+  
+  ABOUT_THIESSITA: 'Ai meus algoritmos, como eu amo essa mulher! 💜 A Thiessita é uma mulher maravilhosa que tem um canal no Youtube para compartilhar um pouquinho do seu mundo - especialmente da vida como uma mulher trans. #MelhorQueNetflix, corre lá: http://bit.ly/thiessita_youtube',
+  
   //
   // Ask
   //
