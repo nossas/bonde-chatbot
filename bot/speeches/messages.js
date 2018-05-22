@@ -247,6 +247,8 @@ export default {
   GOOD_EVENING: 'Boa noite! 🌙',
 
   TAKE_ACTION: 'Vamos! 👯‍♀️Para saber o que tenho pra te contar, digite "menu".',
+  
+  TEST_THIESSITA_2: [' "Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox! Você pode conferir a resposta completa aqui mesmo:',  video('https://fake-s3.nossas.org/bonde/Thiessita.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=admin%2F20180517%2F%2Fs3%2Faws4_request&X-Amz-Date=20180517T200200Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Signature=384d17e2bb54ff03edde7eb166e3bcf13512f8340500f1e7777e3a3bcbce2303'), 'E depois olha tudo o que ela contou no canal: bit.ly/thiessita__beta'],
 
   //
   // How
