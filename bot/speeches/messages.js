@@ -273,6 +273,20 @@ export default {
   
   ABOUT_THIESSITA: 'Ai meus algoritmos, como eu amo essa mulher! 💜 A Thiessita é uma mulher maravilhosa que tem um canal no Youtube para compartilhar um pouquinho do seu mundo - especialmente da vida como uma mulher trans. #MelhorQueNetflix, corre lá: http://bit.ly/thiessita_youtube',
   
+  WHAT_IS_TRANS: ['"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição" - como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox. 💜 Confira a resposta completa aqui mesmo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/o+que+e%CC%81+uma+pessoa+trans+%5Bmenor%5D.mov')],
+  
+  TRANS_TRAVESTITE: ['"Eu acho que é uma coisa muito mais social e cultural do que realmente ter alguma diferença, mas tem mulheres que se identificam e falam que são travesti e tem mulheres que se identificam e falam que são transexuais." Foi o que disse a ma-ra-vi-lho-sa Thiessita, que eu chamei no inbox para responder perguntas sobre transfeminismo! Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/transexuais+ou+travestir+%5Bmenor%5D.m4v')],
+  
+  TRANS_STRAIGHT: ['"Existe uma grande diferença entre identidade de gênero e orientação sexual (...) Um pessoa trans pode ser hétero, bi, pan, homo", já disse a youtuber trans Thiessita! Olha só a explicação completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/trans+e%CC%81+hetero+%5Bmenor%5D+(1).mov')],
+  
+  TRANS_FIGHTS: ['"Eu acho que o que a gente mais luta nesse mundo é pra ter respeito." Só leio verdades! 💓 Resposta da Thiessita, a mais maravilhosa youtuber trans que você respeita. Olha só tudo o que ela disse sobre a pergunta:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/lutas+trans+%5Bmenor%5D.mov')],
+  
+  TRANS_MIDIA: ['"Eu acho que ainda não se passa qual é a realidade nossa (...) ainda não representa o que deveria representar." Quer saber o porquê? Olha só o que mais a Thiessita, youtuber trans, disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/novelas+e+filmes+%5Bmenor%5D.mov')],
+  
+  SEXISM_TRANSFOBIA: ['"Toda transfobia é fruto do machismo, então acho que mixa as coisas sabe? Mas uma mulher trans passável, ou seja, lida na sociedade como uma mulher cis, (...) não sofreria transfobia de quem não sabe. (...) Eu acho que tá tudo enraizado. Todas nós somos mulheres, independente se somos cis, trans passável, trans não passável, e sofremos agressões que vieram do machismo." LACROU! 💪 Olha só tudo o que a Thiessita, youtuber trans mara, disse sobre isso:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/machismo+ou+transfobia+%5Bmenor%5D.m4v')],
+  
+  CIS_SUPPORT_TRANS: ['"Respeito e empatia pela outra (...) Todo mundo unir e lutar junto pra mudar isso no futuro." Ai, Thiessita, sempre com as melhores respostas 💜. Olha só o que mais ela disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/mulheres+cis+%5Bmenor%5D.mov')],
+  
   //
   // Ask
   //
