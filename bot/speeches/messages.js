@@ -283,9 +283,9 @@ export default {
   
   TRANS_MIDIA: ['"Eu acho que ainda não se passa qual é a realidade nossa (...) ainda não representa o que deveria representar." Quer saber o porquê? Olha só o que mais a Thiessita, youtuber trans, disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/novelas+e+filmes+%5Bmenor%5D.mov')],
   
-  SEXISM_TRANSFOBIA: ['"Toda transfobia é fruto do machismo, então acho que mixa as coisas sabe? Mas uma mulher trans passável, ou seja, lida na sociedade como uma mulher cis, (...) não sofreria transfobia de quem não sabe. (...) Eu acho que tá tudo enraizado. Todas nós somos mulheres, independente e somos cis, trans passável, trans não passável, e sofremos agressões que vieram do machismo." LACROU! 💪 Olha só tudo o que a Thiessita, youtuber trans mara, disse sobre isso:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/machismo+ou+transfobia+%5Bmenor%5D.m4v')],
+  SEXISM_TRANSFOBIA: ['"Toda transfobia é fruto do machismo, então acho que mixa as coisas sabe? Mas uma mulher trans passável, ou seja, lida na sociedade como uma mulher cis, (...) não sofreria transfobia de quem não sabe. (...) Eu acho que tá tudo enraizado. Todas nós somos mulheres, independente se somos cis, trans passável, trans não passável, e sofremos agressões que vieram do machismo." LACROU! 💪 Olha só tudo o que a Thiessita, youtuber trans mara, disse sobre isso:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/machismo+ou+transfobia+%5Bmenor%5D.m4v')],
   
-  CIS_SUPPORT_TRANS: ['""Respeito e empatia pela outra (...) Todo mundo unir e lutar junto pra mudar isso no futuro." Ai, Thiessita, sempre com as melhores respostas 💜. Olha só o que mais ela disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/mulheres+cis+%5Bmenor%5D.mov')],
+  CIS_SUPPORT_TRANS: ['"Respeito e empatia pela outra (...) Todo mundo unir e lutar junto pra mudar isso no futuro." Ai, Thiessita, sempre com as melhores respostas 💜. Olha só o que mais ela disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/mulheres+cis+%5Bmenor%5D.mov')],
   
   //
   // Ask
