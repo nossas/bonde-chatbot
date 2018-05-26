@@ -36,7 +36,7 @@ pipeline:
   production-build:
     image: node:latest
     commands:
-      - export GRAPHQL_URL=https://data.bonde.org/graphql
+      - export GRAPHQL_URL=https://api-v2.bonde.org/graphql
       - yarn
       - yarn lint
       - yarn test
@@ -58,8 +58,19 @@ pipeline:
   production-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
-    service: bonde/bot
-    sidekick: "bot-worker nossas/bonde-bot:${DRONE_TAG##v}"
+    service: webservers/beta
+    docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    when:
+      status: success
+      event: tag
+
+  production-deploy-worker:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: workers/bot-worker
     docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
     timeout: 360
     confirm: true
