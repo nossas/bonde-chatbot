@@ -289,6 +289,10 @@ export default {
   
   TRANS_THIESSITA: 'Eu chamei no inbox a Thiessita, youtuber trans mais maravilhosa da internet, para responder perguntas que eu recebo sobre mulheres trans e feminismo! Confira o vídeo completo e o canal dela para saber mais sobre um tema tão importante do feminismo: http://bit.ly/beta_thiessita',
   
+  WILL_SEND_LUIZA: 'Tô sentindo que vai ter muita mulher ainda mais empoderada depois desse vídeo! 💪💪 Spoiler: tá demais! ✨ Assim que for ao ar, te envio por aqui. Enquanto isso, digite "menu" para saber o que mais tenho a te dizer!',
+  
+  ABOUT_LUIZA_JUNQUEIRA: 'Quem é Luiza Junqueira? Uma diva, simplesmente! Ela tem o canal "Tá Querida" no Youtube, para falar sobre autoestima e empoderamento feminino e mostrar que tá tudo bem você ser do jeitinho que você é! ✨Corre lá: http://bit.ly/ta_querida',
+  
   //
   // Ask
   //
