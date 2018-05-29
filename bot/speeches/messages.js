@@ -247,6 +247,10 @@ export default {
   GOOD_EVENING: 'Boa noite! 🌙',
 
   TAKE_ACTION: 'Vamos! 👯‍♀️Para saber o que tenho pra te contar, digite "menu".',
+  
+  ABOUT_NEWSLETTER: 'Periodicamente, eu envio aqui pelo inbox o Radar Feminista do Congresso Nacional - um boletim feminista sobre os babados que rolam por lá, feito junto das mujeres maravilhosas do Cfemea. Para receber o próximo assim que for ao ar, me responda com #RadarFeminista 💪💪',
+  
+  RADAR_FEMINISTA: 'Informação é poder! 💪 Assim que o próximo Radar Feminista do Congresso Nacional for ao ar, eu te envio por aqui ;) Enquanto isso, digite "menu" para saber o que mais eu tenho pra contar!',
 
   //
   // How
