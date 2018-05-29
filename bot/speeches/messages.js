@@ -293,6 +293,16 @@ export default {
   
   ABOUT_LUIZA_JUNQUEIRA: 'Quem é Luiza Junqueira? Uma diva, simplesmente! Ela tem o canal "Tá Querida" no Youtube, para falar sobre autoestima e empoderamento feminino e mostrar que tá tudo bem você ser do jeitinho que você é! ✨Corre lá: http://bit.ly/ta_querida',
   
+  BODY_JUDGMENT: ['"A gente não pode deixar nossa autoestima na mão dos outros (...) A gente tem que saber que as pessoas vão olhar, que não vão ter sororidade. Ela nem sabem o que é isso, elas reproduzem o que elas sofrem." Foi o que disse a maravilhosa Luiza Junqueira. Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/sororidade_menor.m4v')],
+  
+  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v')],
+  
+  ABOUT_GORDOFOBIA: ['"Existe mesmo gordofobia, é uma realidade e tem a ver com esse preconceito que toda a sociedade tem com corpos gordos, com corpos que tão fora do padrão magro." Luiza Junqueira sempre incrível e didática <3. Não deixe de conferir a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/gordofobia_menor.m4v')],
+  
+  BODY_IMAGE_DISTORTION: ['"Eu acredito que a distorção da imagem corporal acontece quando a gente é tão bombardeado de informações e imagens de corpos photoshopados (...) que daí a gente acha que o nosso corpo, que é natural, tudo ok com ele, tá distorcido." Acontece #realoficial. Olha só o que mais a Luiza Junqueira falou sobre essa lavagem cerebral:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/distorc%CC%A7a%CC%83o_img_corporal_menor.m4v')],
+  
+  SELF_LOVE: ['"Eu acredito que sim. O sistema que a gente tá vivendo impõe que as pessoas não gostem delas mesmas (...) A partir do momento que a gente se empodera da gente mesma (...), você tá lutando, se empoderando e lutando pelo jeito de ser quem você é". SIM, SIM E SIM! Olha só que mais a Luiza Junqueira disse sobre amor próprio 💖:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/amor+pro%CC%81prio_menor.m4v')],
+  
   //
   // Ask
   //
