@@ -307,6 +307,8 @@ export default {
   
   SELF_LOVE: ['"O sistema que a gente tá vivendo impõe que as pessoas não gostem delas mesmas (...) A partir do momento que a gente se empodera da gente mesma (...), você tá lutando, se empoderando e lutando pelo jeito de ser quem você é". SIM, SIM E SIM! Olha só que mais a Luiza Junqueira disse sobre amor próprio 💖:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/amor+pro%CC%81prio_menor.m4v'), 'E não deixe de ver que outras perguntas ela respondeu pra gente sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
   
+  WILL_SEND_YOUTUBERS: 'Deixa, comigo! Assim que o próximo vídeo for ao ar, te envio por aqui ;) Enquanto isso, digite "menu" e veja o que tenho para te contar.',
+  
   //
   // Ask
   //
