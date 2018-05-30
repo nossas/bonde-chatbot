@@ -247,6 +247,10 @@ export default {
   GOOD_EVENING: 'Boa noite! 🌙',
 
   TAKE_ACTION: 'Vamos! 👯‍♀️Para saber o que tenho pra te contar, digite "menu".',
+  
+  ABOUT_NEWSLETTER: 'Periodicamente, eu envio aqui pelo inbox o Radar Feminista do Congresso Nacional - um boletim feminista sobre os babados que rolam por lá, feito junto das mujeres maravilhosas do Cfemea. Para receber o próximo assim que for ao ar, me responda com #RadarFeminista 💪💪',
+  
+  RADAR_FEMINISTA: 'Informação é poder! Assim que o próximo Radar Feminista do Congresso Nacional for ao ar, eu te envio por aqui ;) Enquanto isso, digite "menu" para saber o que mais eu tenho pra contar!',
 
   //
   // How
@@ -289,19 +293,21 @@ export default {
   
   TRANS_THIESSITA: 'Eu chamei no inbox a Thiessita, youtuber trans mais maravilhosa da internet, para responder perguntas que eu recebo sobre mulheres trans e feminismo! Confira o vídeo completo e o canal dela para saber mais sobre um tema tão importante do feminismo: http://bit.ly/beta_thiessita',
   
-  WILL_SEND_LUIZA: 'Tô sentindo que vai ter muita mulher ainda mais empoderada depois desse vídeo! 💪💪 Spoiler: tá demais! ✨ Assim que for ao ar, te envio por aqui. Enquanto isso, digite "menu" para saber o que mais tenho a te dizer!',
+  WILL_SEND_LUIZA: 'Chamei no inbox essa mulier maravilhosa chamada Luiza Junqueira para falar sobre autoestima, corpo e amor próprio no seu canal do Youtuber, o Tá, Querida. Corre lá que tá um arraso: http://bit.ly/beta_luiza_',
   
-  ABOUT_LUIZA_JUNQUEIRA: 'Quem é Luiza Junqueira? Uma diva, simplesmente! Ela tem o canal "Tá Querida" no Youtube, para falar sobre autoestima e empoderamento feminino e mostrar que tá tudo bem você ser do jeitinho que você é! ✨Corre lá: http://bit.ly/ta_querida',
+  ABOUT_LUIZA_JUNQUEIRA: 'Quem é Luiza Junqueira? Uma diva, simplesmente! Ela tem o canal "Tá Querida" no Youtube, para falar sobre autoestima e empoderamento feminino e mostrar que tá tudo bem você ser do jeitinho que você é! ✨Corre lá: http://bit.ly/beta_luiza_',
   
-  BODY_JUDGMENT: ['"A gente não pode deixar nossa autoestima na mão dos outros (...) A gente tem que saber que as pessoas vão olhar, que não vão ter sororidade. Ela nem sabem o que é isso, elas reproduzem o que elas sofrem." Foi o que disse a maravilhosa Luiza Junqueira. Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/sororidade_menor.m4v')],
+  BODY_JUDGMENT: ['"A gente não pode deixar nossa autoestima na mão dos outros (...) A gente tem que saber que as pessoas vão olhar, que não vão ter sororidade. Ela nem sabem o que é isso, elas reproduzem o que elas sofrem." Foi o que disse a maravilhosa Luiza Junqueira. Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/sororidade_menor.m4v'), 'Arrasou! Assista o vídeo na íntegra 🎥: http://bit.ly/beta_luiza_'],
   
-  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v')],
+  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v'),' Essa mulher arrasa! 💓 Quer ver todas as perguntas que ela respondeu pra gente sobre autoestima, corpo e amor próprio? Vem comigo: http://bit.ly/beta_luiza_'],
   
-  ABOUT_GORDOFOBIA: ['"Existe mesmo gordofobia, é uma realidade e tem a ver com esse preconceito que toda a sociedade tem com corpos gordos, com corpos que tão fora do padrão magro." Luiza Junqueira sempre incrível e didática <3. Não deixe de conferir a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/gordofobia_menor.m4v')],
+  ABOUT_GORDOFOBIA: ['"Existe mesmo gordofobia, é uma realidade e tem a ver com esse preconceito que toda a sociedade tem com corpos gordos, com corpos que tão fora do padrão magro." Luiza Junqueira sempre incrível e didática <3. Não deixe de conferir a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/gordofobia_menor.m4v'), 'Meus algoritmos ficam bobos com essa mulier! 🤖 Não deixe de conferir o vídeo completo - ela respondeu 5 perguntas que chegam pra mim todos os dias sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
   
-  BODY_IMAGE_DISTORTION: ['"Eu acredito que a distorção da imagem corporal acontece quando a gente é tão bombardeado de informações e imagens de corpos photoshopados (...) que daí a gente acha que o nosso corpo, que é natural, tudo ok com ele, tá distorcido." Acontece #realoficial. Olha só o que mais a Luiza Junqueira falou sobre essa lavagem cerebral:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/distorc%CC%A7a%CC%83o_img_corporal_menor.m4v')],
+  BODY_IMAGE_DISTORTION: ['"Eu acredito que a distorção da imagem corporal acontece quando a gente é tão bombardeado de informações e imagens de corpos photoshopados (...) que daí a gente acha que o nosso corpo, que é natural, tudo ok com ele, tá distorcido." Acontece #realoficial. Olha só o que mais a Luiza Junqueira falou sobre essa lavagem cerebral:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/distorc%CC%A7a%CC%83o_img_corporal_menor.m4v'), 'E aproveite pra ver o vídeo completo  🎥: http://bit.ly/beta_luiza_'],
   
-  SELF_LOVE: ['"Eu acredito que sim. O sistema que a gente tá vivendo impõe que as pessoas não gostem delas mesmas (...) A partir do momento que a gente se empodera da gente mesma (...), você tá lutando, se empoderando e lutando pelo jeito de ser quem você é". SIM, SIM E SIM! Olha só que mais a Luiza Junqueira disse sobre amor próprio 💖:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/amor+pro%CC%81prio_menor.m4v')],
+  SELF_LOVE: ['"O sistema que a gente tá vivendo impõe que as pessoas não gostem delas mesmas (...) A partir do momento que a gente se empodera da gente mesma (...), você tá lutando, se empoderando e lutando pelo jeito de ser quem você é". SIM, SIM E SIM! Olha só que mais a Luiza Junqueira disse sobre amor próprio 💖:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/amor+pro%CC%81prio_menor.m4v'), 'E não deixe de ver que outras perguntas ela respondeu pra gente sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
+  
+  WILL_SEND_YOUTUBERS: 'Deixa, comigo! Assim que o próximo vídeo for ao ar, te envio por aqui ;) Enquanto isso, digite "menu" e veja o que tenho pra te contar!',
   
   //
   // Ask
