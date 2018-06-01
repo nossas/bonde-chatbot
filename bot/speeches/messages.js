@@ -309,6 +309,10 @@ export default {
   
   WILL_SEND_YOUTUBERS: 'Deixa, comigo! Assim que o próximo vídeo for ao ar, te envio por aqui ;) Enquanto isso, digite "menu" e veja o que tenho pra te contar!',
   
+  WILL_SEND_LOUIE: 'Também tô #ansiosa! Esse vídeo vai ser tudooo! Te envio direto por inbox assim que for ao ar. Enquanto isso, digite "menu" para saber o que mais tenho a te dizer 😉',
+  
+  ABOUT_LOUIE: 'A Louie Ponto é uma mulher incrível que tem um dos meus canais preferidos do Youtube! Lá ela fala sobre feminismo, sobre suas vivências como mulher lésbica e muito mais. Não perde essa: http://bit.ly/Louie_Ponto',
+  
   //
   // Ask
   //
