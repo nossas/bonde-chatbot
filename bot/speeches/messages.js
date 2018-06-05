@@ -313,6 +313,28 @@ export default {
   
   ABOUT_LOUIE: 'A Louie Ponto é uma mulher incrível que tem um dos meus canais preferidos do Youtube! Lá ela fala sobre feminismo, sobre suas vivências como mulher lésbica e muito mais. Não perde essa: http://bit.ly/Louie_Ponto',
   
+  LESBIAN_FIGHTS: ['"Se eu fosse dar uma resposta geral sobre qual é a maior luta das mulheres lésbicas hoje, eu acho que a gente precisa pensar que o Brasil é o país que mais mata pessoas LGBT do mundo. Então, nesse contexto, a gente luta pelo simples direito de existir". Quer saber o que mais a incrível Louie Ponto disse sobre as lutas das mulheres lésbicas? 💪 Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/lutas_menor.m4v')],
+  
+  LESBIAN_LGBT: ['"A nossa sociedade é machista, é misógina, e essa violência vai ser reproduzida dentro dos espaços LGBT também, e vai provocar o apagamento e o silenciamento de muitos sujeitos, nesse caso das mulheres lésbicas." Foi o que disse a maravilhosa Louie Ponto. Quer ver a resposta toda?', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/mov+lgbt_menor.m4v')],
+  
+  WOMAN_MAN_LGBT: ['"No caso das mulheres lésbicas, o que acontece é uma fetichização dos nossos relacionamentos. (...) Fetichização não é aceitação, muito pelo contrário, é uma violência que provoca outras violências, como assédio, abuso e estupro." Quer saber o que mais a Louie Ponto tem a dizer sobre isso? Confira aqui mesmo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/mulheresxhomens_menor.m4v')],
+  
+  LESBIAN_GAY: ['"Eu achava mais leve e mais discreto usar a palavra gay. É muito difícil se posicionar como uma mulher lésbica em uma sociedade machista, misógina e dominada por homens. Pra mim hoje é uma atitude de resistência me colocar como mulher lésbica, e não como mulher gay". Foi o que disse a maravilhosa Louie Ponto! Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/palavra+lesbica_menor.m4v')],
+  
+  LESBIAN_LOOK_MAN: ['"Nenhuma lésbica parece homem porque não existe isso de parecer homem." VRAU! 👊 Quer ouvir a explicação completa da Louie Ponto? Olha essa maravilhosa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/parece+homem_menor.m4v')],
+  
+  SEXUAL_HEALTH_LESBIAN: ['"Eu nem tenho muito pra falar sobre isso, porque a resposta é não." A Louie Ponto deu uma resposta incrível para a problemática da saúde sexual das mulheres lésbicas. Olha só:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/saude_menor.m4v')],
+  
+  LESBIAN_VISIBILITY: ['"Justamente por causa do apagamento das mulheres lésbicas, não só no contexto geral da sociedade, mas também dentro do próprio movimento LGBT". Saiba mais da importância da visibilidade lésbica com a ma-ra-vi-lho-sa Louie Ponto:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/visibilidade_menor.m4v')],
+  
+  LESBOFOBIA_HOMOFOBIA: ['"As violências são diferentes. A gente vive num contexto em que uma mulher sofre várias violências pelo fato de ser mulher. Então homens gays e mulheres lésbicas têm vivências muito diferente." Quer saber o que mais a Louie Ponto tem pra dizer sobre essas vivências? Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/lesbofobia_menor.m4v')],
+  
+  STRAIGHT_SUPPORT_LESBIAN: ['"A primeira coisa que você deve saber pra apoiar uma luta que não é sua é ouvir (...) E uma postura que as mulheres heterossexuais podem assumir pra apoiar a luta das mulheres lésbicas é apontar e criticar lesbofobia nos discursos e atitudes das pessoas." Sempre incrível, Louie Ponto 💖 Confira a resposta toda:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/heteros+apoiar_menor.m4v')],
+  
+  DAUGHTER_LESBIAN: ['"Nenhuma mulher vira lésbica, assim como ninguém vira hétero. Se a orientação sexual fosse tão frágil que pudesse ser alterada por conta da influência externa, todo mundo seria heterosexual, porque a gente é ensinada que esse é o único caminho possível." Só li verdades! Olha só o que mais a Louie Ponto disse ✨:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/filha+lesbica_menor.m4v')],
+  
+  DITADURA_GAYZISTA: ['"Quem diz esse tipo de coisa é desonesto e quer assustar as pessoas (...) O que a gente quer é que toda forma de existência seja respeitada." Essa explicação da Louie Ponto tá incrível, dá só uma olhada:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/ditadura_menor.m4v')],
+
   //
   // Ask
   //
