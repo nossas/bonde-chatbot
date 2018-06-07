@@ -28,7 +28,7 @@ export default {
   PRESSURE:'Pressionar SP Trans',
   VOTE:'Votar pela SUG 15!',
 
-  IMAGE_VIOLENCE: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta9.png',
+  IMAGE_VIOLENCE: 'https://s3.amazonaws.com/chatbox-beta/carousel-fb/-beta-cards_beta11.png',
   IMAGE_DECRIMINALIZATION: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta10.png',
 
   //
