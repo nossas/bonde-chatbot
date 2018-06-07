@@ -25,7 +25,7 @@ export default {
   IMAGE_ADPF:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png', 
   
   //Agir agora
-  PRESSURE:'Pressionar o Governador de São Paulo',
+  PRESSURE:'Pressionar SP Trans',
   VOTE:'Votar pela SUG 15!',
 
   IMAGE_VIOLENCE: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta9.png',

@@ -131,11 +131,12 @@ export default {
   // Quero agir agora
   //
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
-  // Violência Contra a Mulher
-  PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando porque o novo Governador, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal. #deuerro',
-  PRESSURE_1:'ALOU MÁRCIO, #NãoÉBrigaDeCasal, é violência contra a mulher! Clique no link e pressione agora para lotar a caixa de email de França com nossas vozes dizendo que não vamos deixar pra lá: bit.ly/issoefeminicidio_betamsp',
+  // Pressionar SP Trans
+  PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
+  PRESSURE_1:'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios: bit.ly/placanobusao_beta_msp',
   
-  PRESSURE_DATA:'1 mulher morre a cada 4 dias em São Paulo e 63% delas são assassinadas dentro de suas próprias casas. AI MEUS ALGORITMOS! 🚨 Mesmo assim, o feminicídio ainda é tratado com descaso pelo Estado. Clique no link e não deixe que isso continue: bit.ly/issoefeminicidio_mspbeta',
+  PRESSURE_R:'Andar pelas ruas de São Paulo é rotina de milhares de mulheres, mas o assédio continua invadindo seus caminhos. Se conseguirem descer fora do ponto depois das 22h, as mulheres poderão escolher caminhos mais seguros durante a noite.',
+  PRESSURE_R1:'80% das mulheres não sabem que podem descer fora do ponto depois das 22h, e entre as que sabem, muitas têm medo de pedir e sofrer com a resposta dos motoristas - já que 54% deles nem conhece a lei! #SOS 🚨 Vamos mudar essa realidade? Entre em ação agora:  bit.ly/placanobusao_beta_msp',
   // Descriminalização do Aborto
   VOTE:'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
   VOTE_1:'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
