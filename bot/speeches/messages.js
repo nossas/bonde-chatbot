@@ -335,6 +335,10 @@ export default {
   
   DITADURA_GAYZISTA: ['"Quem diz esse tipo de coisa é desonesto e quer assustar as pessoas (...) O que a gente quer é que toda forma de existência seja respeitada." Essa explicação da Louie Ponto tá incrível, dá só uma olhada:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/ditadura_menor.m4v'), 'Que mulier, Braseeel! Confira o vídeo todo: http://bit.ly/beta_louie'],
 
+  WILL_SEND_ANA: 'A Ana Paula Xongani fez um vídeo in-crí-vel sobre feminismo negro, respondendo a perguntas que chegam no meu inbox. Assim que for ao ar, te envio por aqui!',
+  
+  ABOUT_ANA_PAULA: 'A Ana Paula Xongani tem um canal incrível no Youtube sobre feminismo negro e empoderamento de mulheres. Clica aqui pra conhecer essa diva: http://bit.ly/anapaula_yt',
+  
   //
   // Ask
   //
