@@ -21,10 +21,24 @@ pipeline:
       status: success
       branch: [hotfix/*, release/*, feature/*, develop]
 
-  staging-deploy:
+  staging-webserver-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: webservers/beta
+    group: deploying
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    when:
+      status: success
+      branch: [hotfix/*, release/*, feature/*, develop]
+
+  staging-worker-deploy:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: workers/bot-worker
+    group: deploying
     docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
     timeout: 360
     confirm: true
@@ -55,7 +69,7 @@ pipeline:
       status: success
       event: tag
 
-  production-deploy:
+  production-webservers-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: webservers/beta
@@ -67,7 +81,7 @@ pipeline:
       status: success
       event: tag
 
-  production-deploy-worker:
+  production-webservers-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: workers/bot-worker
