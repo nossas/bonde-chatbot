@@ -83,7 +83,11 @@ pipeline:
       status: success
       event: tag
 
+<<<<<<< HEAD
   production-deploy-worker:
+=======
+  production-webservers-deploy:
+>>>>>>> resolving merge conflicts
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: workers/bot-worker
