@@ -5,7 +5,7 @@ export default (bot, speech, botData) => (payload, reply) => {
     var message = '';
 
     switch (ref) {
-        case 'violencia_contra_a_mulher':
+        case 'sp_para_mulheres':
             message = speech.messages.V2_QUICK_REPLY_PRESSURE
             break;
         case 'discriminalizacao_do_aborto':
@@ -20,7 +20,7 @@ export default (bot, speech, botData) => (payload, reply) => {
         case 'pec_181':
             message = speech.messages.V2_QUICK_REPLY_PEC
             break;
-        case 'estatuto_nasciturno':
+        case 'estatuto_nascituro':
             message = speech.messages.V2_QUICK_REPLY_STATUTE
             break;
         case 'sug_15':
