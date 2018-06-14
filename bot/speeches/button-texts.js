@@ -64,6 +64,7 @@ export default {
   //
   HOW_IT_WORKS: 'Como funciona?',
   HOW_TO_CRACK_IT_DOWN: 'Como barrar?',
+  WHY_IS_IMPORTANT: 'Por que é importante?',
   TELL_ME_MORE: 'Conta mais?',
 
   //

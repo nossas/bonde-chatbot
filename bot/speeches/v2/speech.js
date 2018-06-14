@@ -116,28 +116,61 @@ export default botData => ({
       botSpeeches.messages.CALL_INBOX_1,
       messageWithGif(
         botSpeeches.messages.CALL_INBOX_2,
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.I_WANT)
+        quickReply(V2_QUICK_REPLY_B, botSpeeches.buttonTexts.I_WANT)
       )
     ],
-    /*[V2_QUICK_REPLY_B]: [
-      botSpeeches.messages.EXPLAIN_MORE,
-      botSpeeches.messages.EXPLAIN_MORE_1,
-      botSpeeches.messages.EXPLAIN_MORE_2,
-      messageWithGif(
-        botSpeeches.messages.EXPLAIN_MORE_3,
-        quickReply(V2_QUICK_REPLY_D, botSpeeches.buttonTexts.IT_WORKS),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.I_WANT_TO_ACT)
+
+    [V2_QUICK_REPLY_B]: [
+      botSpeeches.messages.LIST,
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ACT,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ACT,
+              payload: V2_QUICK_REPLY_ACT
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_RADAR,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_RADAR,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_RADAR,
+              payload: V2_QUICK_REPLY_RADAR
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_MORE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_MORE,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_MORE,
+              payload: V2_QUICK_REPLY_MAIS
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_SHARE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_SHARE, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_SHARE,
+              payload: V2_QUICK_REPLY_F_3
+            })
+          ],
+        ),
       )
     ],
-    [V2_QUICK_REPLY_D]: {
-      text: botSpeeches.messages.YES_IT_WORKS,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.SURE),
-      ],
-    },*/
 
     [V2_QUICK_REPLY_CA]: [
-      botSpeeches.messages.LIST,
       carouselTemplate(
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
@@ -503,17 +536,19 @@ export default botData => ({
       botSpeeches.messages.PRESSURE,
       messageWithQuickReply(
         botSpeeches.messages.PRESSURE_1,
-        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.I_WANT_DATA),
+        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.WHY_IS_IMPORTANT),
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
       )
     ],
-    [V2_QUICK_REPLY_A_8]: {
-      text: botSpeeches.messages.PRESSURE_DATA,
-      quick_replies: [
+    [V2_QUICK_REPLY_A_8]: [
+      botSpeeches.messages.PRESSURE_R,
+      messageWithQuickReply(
+        botSpeeches.messages.PRESSURE_R1,
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
-      ],
-    },
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+      )
+    ],
+    
     //
     // Descriminalização do Aborto
     //
