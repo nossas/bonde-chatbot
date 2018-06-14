@@ -4,7 +4,7 @@ export default gql`
 mutation updateFacebookBotCampaignActivists(
   $facebookBotCampaignActivistId: Int!
   $received: Boolean!
-  $log: Json!
+  $log: JSON!
 ) {
   updateFacebookBotCampaignActivists(input: {
     facebookBotCampaignActivistId: $facebookBotCampaignActivistId,
