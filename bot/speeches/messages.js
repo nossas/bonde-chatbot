@@ -335,9 +335,9 @@ export default {
   
   DITADURA_GAYZISTA: ['"Quem diz esse tipo de coisa é desonesto e quer assustar as pessoas (...) O que a gente quer é que toda forma de existência seja respeitada." Essa explicação da Louie Ponto tá incrível, dá só uma olhada:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/ditadura_menor.m4v'), 'Que mulier, Braseeel! Confira o vídeo todo: http://bit.ly/beta_louie'],
 
-  WILL_SEND_ANA: 'A Ana Paula Xongani fez um vídeo in-crí-vel sobre feminismo negro, respondendo a perguntas que chegam no meu inbox. Assim que for ao ar, te envio por aqui!',
+  WILL_SEND_ANA: 'A Ana Paula Xongani fez um vídeo in-crí-vel sobre feminismo negro, respondendo a perguntas que chegam aqui no meu inbox. Confira aqui: http://bit.ly/xongani_beta',
   
-  ABOUT_ANA_PAULA: 'A Ana Paula Xongani tem um canal incrível no Youtube sobre feminismo negro e empoderamento de mulheres. Clica aqui pra conhecer essa diva: http://bit.ly/anapaula_yt',
+  ABOUT_ANA_PAULA: 'A Ana Paula Xongani tem um canal incrível no Youtube sobre feminismo negro e empoderamento de mulheres. Clica aqui pra conhecer essa diva: http://bit.ly/xongani_beta',
   
   MARIELLE_IMPORTANT: ['"Marielle era uma mulher negra, favelada, lésbica e mãe. E eleita, eleita com muitos votos. Mulheres como Marielle não ocupam aquele espaço, mas ela ocupou." Saiba mais o que a Ana Paula Xongani tem para dizer sobre a importância da Marielle, e repita comigo: #MariellePresente hoje e sempre!', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/marielle_menor.m4v'), 'Que Marielle continue sempre GIGANTE! Confira o vídeo completo aqui: http://bit.ly/xongani_beta'],
   
