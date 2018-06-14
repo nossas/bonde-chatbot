@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
 export default gql`
-mutation createBotInteraction($interaction: JSON!) {
+mutation createBotInteraction($interaction: Json!) {
   createBotInteraction(input: {
     botData: $interaction
   }) {
