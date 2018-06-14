@@ -4,7 +4,7 @@ export default gql`
 mutation createFacebookBotCampaign(
   $facebookBotConfigurationId: Int!
   $name: String!
-  $segmentFilters: JSON!
+  $segmentFilters: Json!
   $totalImpactedActivists: Int!
 ) {
   query: createFacebookBotCampaign(input: {

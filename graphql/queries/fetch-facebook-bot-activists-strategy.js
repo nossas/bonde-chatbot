@@ -5,7 +5,7 @@ import gql from 'graphql-tag'
 //
 export default ({ extraFields = [] } = { extraFields: [] }) => gql`
 query fetchFacebookBotActivistsStrategy(
-  $search: JSON!
+  $search: Json!
   $first: Int
 ) {
   query: getFacebookBotActivistsStrategy(
