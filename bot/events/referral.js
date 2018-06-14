@@ -1,4 +1,4 @@
-import * as botHelpers from '../helpers'
+import * as botHelpers from '../helpers' 
 
 export default (bot, speech, botData) => (payload, reply) => {
     var ref = payload.referral.ref
