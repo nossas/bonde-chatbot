@@ -84,6 +84,18 @@ pipeline:
   production-webservers-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
+    service: webservers/beta
+    docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    when:
+      status: success
+      event: tag
+
+  production-deploy-worker:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
     service: workers/bot-worker
     docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
     timeout: 360
