@@ -536,17 +536,19 @@ export default botData => ({
       botSpeeches.messages.PRESSURE,
       messageWithQuickReply(
         botSpeeches.messages.PRESSURE_1,
-        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.I_WANT_DATA),
+        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.WHY_IS_IMPORTANT),
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
       )
     ],
-    [V2_QUICK_REPLY_A_8]: {
-      text: botSpeeches.messages.PRESSURE_DATA,
-      quick_replies: [
+    [V2_QUICK_REPLY_A_8]: [
+      botSpeeches.messages.PRESSURE_R,
+      messageWithQuickReply(
+        botSpeeches.messages.PRESSURE_R1,
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
-      ],
-    },
+        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+      )
+    ],
+    
     //
     // Descriminalização do Aborto
     //
