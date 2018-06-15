@@ -62,6 +62,7 @@ const V2_QUICK_REPLY_A_9 = 'V2_QUICK_REPLY_A_9'
 const V2_QUICK_REPLY_ACT = 'V2_QUICK_REPLY_ACT'
 const V2_QUICK_REPLY_PRESSURE = 'V2_QUICK_REPLY_PRESSURE'
 const V2_QUICK_REPLY_VOTE = 'V2_QUICK_REPLY_VOTE'
+const V2_QUICK_REPLY_FRIENDS = 'V2_QUICK_REPLY_FRIENDS'
 
 
 
@@ -163,7 +164,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_F_3
+              payload: V2_QUICK_REPLY_FRIENDS
             })
           ],
         ),
@@ -212,7 +213,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_F_3
+              payload: V2_QUICK_REPLY_FRIENDS
             })
           ],
         ),
@@ -311,7 +312,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_SHARE,
-              payload: V2_QUICK_REPLY_F_3
+              payload: V2_QUICK_REPLY_FRIENDS
             })
           ],
         ),
@@ -325,10 +326,7 @@ export default botData => ({
         subtitle: 'Chama a Beta no inbox',
         imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
         buttons: [
-          buttonTemplate.webURL({
-            url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
-            title: 'Compartilhar',
-          })
+          buttonTemplate.elementShare()
         ],
       }),
     ],
@@ -411,7 +409,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.PEC_1,
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
       )
     ],
     [V2_QUICK_REPLY_D_3]: [
@@ -419,7 +417,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.PEC_HISTORY_1,
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
       )
     ],
     [V2_QUICK_REPLY_F_3]: [
@@ -459,7 +457,7 @@ export default botData => ({
       messageWithGif(
         botSpeeches.messages.STATUTE_4,
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
       )
     ],
     //
@@ -477,7 +475,7 @@ export default botData => ({
       text: botSpeeches.messages.SUG_2,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
     },
     //
@@ -496,7 +494,7 @@ export default botData => ({
       text: botSpeeches.messages.ADPF_3,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
     },
     //
@@ -567,6 +565,22 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
       )
+    ],
+
+    //
+    // Compartilhamento com amigos
+    //
+
+    [V2_QUICK_REPLY_FRIENDS]: [
+      botSpeeches.messages.YOU_ROCK_1,
+      genericTemplate({
+        title: 'A maior aliada feminista nas redes',
+        subtitle: 'Chama a Beta no inbox',
+        imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+        buttons: [
+          buttonTemplate.elementShare()
+        ],
+      }),
     ],
 
 
