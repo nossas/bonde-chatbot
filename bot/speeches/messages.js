@@ -354,6 +354,8 @@ export default {
   
   BLACK_WOMEN_BUILD_POLITICS: ['"Políticas públicas voltadas pra mulheres, ou pra população negra, ou pra mulheres negras, não precisam necessariamentes ser assinadas por uma mulher negra. Podem ser assinadas por qualquer pessoa que seja sensível a essas questões. Mas como sensibilidade anda difícil, é importante que tenhamos mulheres, mulheres negras, galera preta, nesses espaços de poder, disputando essa narrativa e facilitando a inserção dessas pautas tão importantes pra gente." Não deixe de conferir a resposta completa da Xongani:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/construc%CC%A7a%CC%83o_menor.m4v'), 'E veja o vídeo na íntegra 🎥: http://bit.ly/xongani_beta'],
   
+  WILL_SEND_JOUTJOUT: 'Ai essa Jout Jout! Ela fez um daqueles vídeos de fazer até robô morrer de rir. Amo! <3 Assim que for ao ar, te envio por aqui. Enquanto isso, digite "menu" para saber o que mais eu tenho pra contar!',
+  
   //
   // Ask
   //
