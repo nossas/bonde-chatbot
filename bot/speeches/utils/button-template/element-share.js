@@ -11,12 +11,12 @@ export default () => ({
                     image_url: 'https://goo.gl/hzZfHA',
                     default_action: {
                         type: 'web_url',
-                        url: "https://m.me/beta.staging"
+                        url: "https://m.me/beta.feminista"
                     },
                     buttons: [
                         {
                             type: "web_url",
-                            url: "https://m.me/beta.staging",
+                            url: "https://m.me/beta.feminista",
                             title: "Chama a Beta no inbox"
                         }
                     ]
