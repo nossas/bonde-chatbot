@@ -511,7 +511,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.EDUCATION,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_VIOLENCE, 
+          botSpeeches.carouselTexts.IMAGE_EDUCATION, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.EDUCATION_1,
@@ -530,7 +530,7 @@ export default botData => ({
             })
           ],
         ),
-        elements(
+        /* elements(
           botSpeeches.carouselTexts.VOTE,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
@@ -540,7 +540,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_VOTE
             })
           ],
-        )
+        ) */
       )
     ],
     //
@@ -606,15 +606,23 @@ export default botData => ({
     }),
     //Share campaign
     [V2_QUICK_REPLY_H_10]: [
-      botSpeeches.messages.YOU_ROCK_1,
-      //TODO: Add gif
       genericTemplate({
         title: 'Clique aqui para impedir mais um retrocesso na educação',
         subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-        imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        buttons: [
+          buttonTemplate.shareCampaign()
+        ],
+      }),
+    ],
+    /* [V2_QUICK_REPLY_H_10]: [
+      genericTemplate({
+        title: 'Clique aqui para impedir mais um retrocesso na educação',
+        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
         buttons: [
           buttonTemplate.webURL({
-            url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
+            url: facebookFeedShare('https://m.me/beta.staging?ref=escola-sem-partido'),
             title: 'Compartilhar',
           }), 
           buttonTemplate.postback({
@@ -623,7 +631,8 @@ export default botData => ({
           })
         ],
       }),
-    ],
+    ], */
+    
     //Not now: facebook page + carousel
     [V2_QUICK_REPLY_E_10]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE,
@@ -697,7 +706,7 @@ export default botData => ({
     //
     // Descriminalização do Aborto
     //
-    [V2_QUICK_REPLY_VOTE]: [
+    /* [V2_QUICK_REPLY_VOTE]: [
       botSpeeches.messages.VOTE,
       messageWithQuickReply(
         botSpeeches.messages.VOTE_1,
@@ -712,7 +721,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
       )
-    ],
+    ], */
 
     //
     // Compartilhamento com amigos

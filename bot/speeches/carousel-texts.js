@@ -26,10 +26,11 @@ export default {
   
   //Agir agora
   EDUCATION:'Pressionar deputados/as!',
-  EDUCATION_1:'Envie aqui sua pressão',
+  EDUCATION_1:'Enviar pressão',
   PRESSURE:'Pressionar SP Trans',
   VOTE:'Votar pela SUG 15!',
 
+  IMAGE_EDUCATION: 'https://s3.amazonaws.com/chatbox-beta/carousel-fb/-beta-cards_beta6_escola2.png',
   IMAGE_VIOLENCE: 'https://s3.amazonaws.com/chatbox-beta/carousel-fb/-beta-cards_beta11.png',
   IMAGE_DECRIMINALIZATION: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta10.png',
 
