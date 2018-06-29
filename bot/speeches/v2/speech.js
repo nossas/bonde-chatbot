@@ -89,6 +89,7 @@ export default botData => ({
   actions: {
     [GET_STARTED]: GET_STARTED,
     [V2_QUICK_REPLY_CA]: V2_QUICK_REPLY_CA,
+    [V2_QUICK_REPLY_EDUCATION]: V2_QUICK_REPLY_EDUCATION,
     [V2_QUICK_REPLY_G_10]: V2_QUICK_REPLY_G_10,
     [V2_EMAIL_ADDRESS_WRONG]: V2_EMAIL_ADDRESS_WRONG,
     [V2_EMAIL_ADDRESS_OK]: V2_EMAIL_ADDRESS_OK,
@@ -513,7 +514,7 @@ export default botData => ({
           botSpeeches.carouselTexts.IMAGE_VIOLENCE, 
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.EDUCATION,
+              title: botSpeeches.carouselTexts.EDUCATION_1,
               payload: V2_QUICK_REPLY_EDUCATION
             })
           ],
@@ -573,8 +574,7 @@ export default botData => ({
       botSpeeches.messages.EDUCATION_MORE_1,
       messageWithQuickReply(
         botSpeeches.messages.EDUCATION_MORE_2,
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION),
-        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW) 
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION), 
       )
     ],
     [V2_QUICK_REPLY_C_10]: [

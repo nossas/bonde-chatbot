@@ -42,7 +42,7 @@ export default {
   STOPED: 'Diz que foi barrado!',
 
   PRESSURE_OTHER: 'Pressionar outro!',
-  PRESSURE_NOW: 'Quero pressionar agora!',
+  PRESSURE_NOW: 'Pressionar agora!',
 
   STATUTE: 'E o Estatuto?',
   GOOD_NEWS: 'Tem notícia boa?!',
