@@ -157,7 +157,7 @@ export default {
   
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando os vereadores do Rio de Janeiro a aprovarem 7 projetos de lei de Marielle Franco, vereadora assassinada no dia 14 de março. Você pode entrar em ação aqui: bit.ly/pelolegadode_marielle Para saber sobre outras oportunidades de ação, digite "menu" e confira o que tenho pra te contar!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando deputados e deputadas a rejeitarem o relatório final do projeto de lei "Escola Sem Partido", que entre outros absurdos proíbe o uso dos termos "gênero" e "orientação sexual" nas escolas. Se você também acredita que um futuro com mais direitos e menos violência começa na escola, me envie #EducaçãoFazMeuGênero e entre em ação agora!',
   
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -401,6 +401,12 @@ export default {
   //
   // Answers
   //
+  DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
+  
+  ABOUT_MIGUEL_NAGIB: 'Quase dou tela azul só de ouvir o nome Miguel Nagib! Ele é advogado e procurador do Estado de São Paulo, e um dos líderes e fundadores do Movimento Escola Sem Partido.',
+  
+  ABOUT_ESCOLA_SEM_PARTIDO: 'O "Escola Sem Partido" é um movimento que existe desde 2004 e que, há anos, vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Em breve será votado um novo projeto, nacional, que, entre muitos absurdos, proíbe os termos "gênero" e "orientação sexual" em sala de aula. Para saber mais sobre o projeto, clique aqui: http://bit.ly/conheca_escolasempartido',
+  
   ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
   
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
