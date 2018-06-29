@@ -131,6 +131,22 @@ export default {
   // Quero agir agora
   //
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
+  
+  // Escola sem partido
+  EDUCATION:'Nesta quarta-feira (04/07), o Congresso vai votar uma proposta que pode condenar as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. 🚨#SOS  Juntas, podemos impedir esse retrocesso! Tá comigo? 💪',
+  EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
+  EDUCATION_2:'No Brasil,uma mulher é assassinada a cada 2 horas - também somos um dos países que mais mata pessoas LGBTs no mundo. Apesar disso, os defensores do projeto dizem que educar crianças e jovens nas escolas a respeito dessas violências fere valores morais e religiosos. 😨',
+  EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
+  IF_APPROVED:'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
+  IF_APPROVED_1:'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
+  EDUCATION_MORE:'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
+  EDUCATION_MORE_1:'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
+  EDUCATION_MORE_2:'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
+  EDUCATION_ACTION:'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final, que vai a votação nesta quarta-feira.',
+  EDUCATION_ACTION_1:'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email que sai em seu nome para cada um dos deputados e deputadas - tudo aqui mesmo pelo chat. 🤖 Eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
+  EDUCATION_MESSAGE:'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBT’s e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (IBOPE ,2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
+  EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO: name => `Arrasou, ${name}! 👏👏 Pra saber ainda mais sobre essa campanha, acesse: www.educacaofazmeugenero.beta.org.br. Temos uma última missão: pra nossa voz ser ouvida, precisamos potencializar o coro: #EducaçãoFazMeuGênero! Compartilhe e convide seus amigues para que se juntem ao nosso bonde de pressão! 🚂 💪`,
+
   // Pressionar SP Trans
   PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
   PRESSURE_1:'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios: bit.ly/placanobusao_beta_msp',
@@ -387,6 +403,8 @@ export default {
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
   EMAIL_ADDRESS_ASK: 'Boa! Estamos quase lá! Agora só preciso que você digite seu email. Você vai ser o remetente - e eu, a mensageira. 🤖',
+  
+  EMAIL_ADDRESS_ASK_1: 'Estamos quase lá! Agora só preciso que você digite seu email - você é a remetente e eu, a mensageira! 🤖',
 
   EMAIL_ADDRESS_ASK_ISNT_SPAM: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, não vou te mandar spam #realoficial. Preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
 

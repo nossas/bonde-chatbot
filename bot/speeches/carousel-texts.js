@@ -25,6 +25,7 @@ export default {
   IMAGE_ADPF:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png', 
   
   //Agir agora
+  EDUCATION:'Educação Faz Meu Gênero',
   PRESSURE:'Pressionar SP Trans',
   VOTE:'Votar pela SUG 15!',
 
