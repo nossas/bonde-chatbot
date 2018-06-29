@@ -125,7 +125,7 @@ export default {
   ADPF_1: 'A ADPF 442, criada pela Anis e PSOL, questiona artigos do código penal de 1940 que criminalizam o aborto. Segundo a ação, o código fere uma série de direitos das mulheres já garantidos na nossa Constituição de 1988, como o direito à não discriminação (afinal, só mulheres abortam) e à saúde.',
   ADPF_2: 'É a nossa maior chance de descriminalizar o aborto no Brasil. Quer saber como anda?',
 
-  ADPF_3: 'A ministra Rosa Weber, a relatora (responsável) da ação no STF, está dando andamento ao processo. Agora que vários setores do governo deram suas posições, vão começar as audiências públicas pra ouvir pessoas interessadas e especialistas nesse tema!',
+  ADPF_3: 'A ministra Rosa Weber, a relatora (responsável) da ação no STF, está dando andamento ao processo. As audiências públicas pra ouvir especialistas no tema vão acontecer nos dias 4 e 6 de agosto! Algo me diz que vem ação feminista por aí 👀 Pode deixar que te aviso 😉',
   //
   // Quero agir agora
   //
