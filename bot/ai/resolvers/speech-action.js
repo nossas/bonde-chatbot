@@ -16,7 +16,7 @@ export default ({ speech, reply }) => ({ entities }) => {
     // TODO: Need to handle via previous message context
     //       Switch to AI intent specific replies
     //
-    'yes': speech.actions.QUICK_REPLY_B,
+    'education_hashtag': speech.actions.V2_QUICK_REPLY_EDUCATION,
   }
   const speechEntity = speechRepliesMap[entity]
   const speechReply = speech.messages[speechEntity]
