@@ -593,7 +593,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.EDUCATION_ACTION_1,
         quickReply(V2_QUICK_REPLY_F_10, botSpeeches.buttonTexts.READ_EMAIL),
-        quickReply(V2_QUICK_REPLY_D_10, botSpeeches.buttonTexts.SEND_NOW_1)
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.SEND_NOW_1)
       )
     ],
     [V2_QUICK_REPLY_F_10]: {

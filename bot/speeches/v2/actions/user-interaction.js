@@ -30,13 +30,13 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         if (interaction.action == undefined) dispatched = false
         else {
           switch (interaction.action) {
-            case speech.actions.V1_QUICK_REPLY_I:
-            case speech.actions.V1_EMAIL_ADDRESS_WRONG:
+            case speech.actions.V2_QUICK_REPLY_G_10:
+            case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
             case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
               let action = !isemail.validate(payload.message.text)
-                ? speech.actions.V1_EMAIL_ADDRESS_WRONG
-                : speech.actions.V1_EMAIL_ADDRESS_OK
+                ? speech.actions.V2_EMAIL_ADDRESS_WRONG
+                : speech.actions.V2_EMAIL_ADDRESS_OK
 
               if (interaction.action.startsWith('VMDM_')) {
                 action = !isemail.validate(payload.message.text)
@@ -48,7 +48,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 ? speech.messages[action](profile)
                 : speech.messages[action]
 
-              if (action === speech.actions.V1_EMAIL_ADDRESS_OK) {
+              if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
                 botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
               }
 
