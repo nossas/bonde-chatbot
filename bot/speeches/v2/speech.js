@@ -43,7 +43,7 @@ const V2_QUICK_REPLY_F_2 = 'V2_QUICK_REPLY_F_2'
 
 const V2_QUICK_REPLY_PEC = 'V2_QUICK_REPLY_PEC'
 const V2_QUICK_REPLY_STATUTE = 'V2_QUICK_REPLY_STATUTE'
-const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
+//const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
 const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
 
 const V2_QUICK_REPLY_A_3 = 'V2_QUICK_REPLY_A_3'
@@ -379,17 +379,6 @@ export default botData => ({
           ],
         ),
         elements(
-          botSpeeches.carouselTexts.SUG,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SUG, 
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.SUG,
-              payload: V2_QUICK_REPLY_SUG
-            })
-          ],
-        ),
-        elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_ADPF, 
@@ -478,7 +467,7 @@ export default botData => ({
     //
     // Radar da Beta - SUG 15
     //
-    [V2_QUICK_REPLY_SUG]: [
+    /* [V2_QUICK_REPLY_SUG]: [
       botSpeeches.messages.SUG,
       messageWithQuickReply(
         botSpeeches.messages.SUG_1,
@@ -492,7 +481,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
-    },
+    }, */
     //
     // Radar da Beta - ADPF 442
     //
