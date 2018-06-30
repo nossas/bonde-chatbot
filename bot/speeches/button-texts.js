@@ -42,6 +42,7 @@ export default {
   STOPED: 'Diz que foi barrado!',
 
   PRESSURE_OTHER: 'Pressionar outro!',
+  PRESSURE_NOW: 'Pressionar agora!',
 
   STATUTE: 'E o Estatuto?',
   GOOD_NEWS: 'Tem notícia boa?!',
@@ -66,6 +67,7 @@ export default {
   HOW_TO_CRACK_IT_DOWN: 'Como barrar?',
   WHY_IS_IMPORTANT: 'Por que é importante?',
   TELL_ME_MORE: 'Conta mais?',
+  IF_APPROVED: 'E se for aprovado?',
 
   //
   // Approval
@@ -86,8 +88,10 @@ export default {
   TELL_ME: 'Conta!',
   COUNT_ON_ME: 'Conta comigo!',
   SEND_NOW: 'Enviar já!',
+  SEND_NOW_1: 'Enviar agora',
   SURE_BETA: 'Mas é claro, Beta!',
   MESSAGE_APPROVED: 'Mensagem aprovada!',
+  TAKE_ACTION: 'Entrar em ação!',
 
   //
   // Denial
@@ -101,4 +105,6 @@ export default {
   //
   MORE_ABOUT_PEC: '+ sobre a PEC',
   READ_MESSAGE: 'Ver mensagem',
+  MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
+  READ_EMAIL: 'Ler email',
 }

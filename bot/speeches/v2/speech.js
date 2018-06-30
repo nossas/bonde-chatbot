@@ -43,7 +43,7 @@ const V2_QUICK_REPLY_F_2 = 'V2_QUICK_REPLY_F_2'
 
 const V2_QUICK_REPLY_PEC = 'V2_QUICK_REPLY_PEC'
 const V2_QUICK_REPLY_STATUTE = 'V2_QUICK_REPLY_STATUTE'
-const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
+//const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
 const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
 
 const V2_QUICK_REPLY_A_3 = 'V2_QUICK_REPLY_A_3'
@@ -64,6 +64,18 @@ const V2_QUICK_REPLY_PRESSURE = 'V2_QUICK_REPLY_PRESSURE'
 const V2_QUICK_REPLY_VOTE = 'V2_QUICK_REPLY_VOTE'
 const V2_QUICK_REPLY_FRIENDS = 'V2_QUICK_REPLY_FRIENDS'
 
+const V2_QUICK_REPLY_EDUCATION = 'V2_QUICK_REPLY_EDUCATION'
+const V2_QUICK_REPLY_A_10 = 'V2_QUICK_REPLY_A_10'
+const V2_QUICK_REPLY_B_10 = 'V2_QUICK_REPLY_B_10'
+const V2_QUICK_REPLY_C_10 = 'V2_QUICK_REPLY_C_10'
+const V2_QUICK_REPLY_D_10 = 'V2_QUICK_REPLY_D_10'
+const V2_QUICK_REPLY_F_10 = 'V2_QUICK_REPLY_F_10'
+const V2_QUICK_REPLY_G_10 = 'V2_QUICK_REPLY_G_10'
+const V2_QUICK_REPLY_E_10 = 'V2_QUICK_REPLY_E_10'
+const V2_QUICK_REPLY_H_10 = 'V2_QUICK_REPLY_H_10'
+const V2_EMAIL_ADDRESS_WRONG = 'V2_EMAIL_ADDRESS_WRONG'
+const V2_EMAIL_ADDRESS_OK = 'V2_EMAIL_ADDRESS_OK'
+
 
 
 
@@ -77,6 +89,10 @@ export default botData => ({
   actions: {
     [GET_STARTED]: GET_STARTED,
     [V2_QUICK_REPLY_CA]: V2_QUICK_REPLY_CA,
+    [V2_QUICK_REPLY_EDUCATION]: V2_QUICK_REPLY_EDUCATION,
+    [V2_QUICK_REPLY_G_10]: V2_QUICK_REPLY_G_10,
+    [V2_EMAIL_ADDRESS_WRONG]: V2_EMAIL_ADDRESS_WRONG,
+    [V2_EMAIL_ADDRESS_OK]: V2_EMAIL_ADDRESS_OK,
     [VMDM_QUICK_REPLY_I]: VMDM_QUICK_REPLY_I,
     [VMDM_EMAIL_ADDRESS_WRONG]: VMDM_EMAIL_ADDRESS_WRONG,
     [VMDM_EMAIL_ADDRESS_OK]: VMDM_EMAIL_ADDRESS_OK,
@@ -364,17 +380,6 @@ export default botData => ({
           ],
         ),
         elements(
-          botSpeeches.carouselTexts.SUG,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SUG, 
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.SUG,
-              payload: V2_QUICK_REPLY_SUG
-            })
-          ],
-        ),
-        elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_ADPF, 
@@ -463,7 +468,7 @@ export default botData => ({
     //
     // Radar da Beta - SUG 15
     //
-    [V2_QUICK_REPLY_SUG]: [
+    /* [V2_QUICK_REPLY_SUG]: [
       botSpeeches.messages.SUG,
       messageWithQuickReply(
         botSpeeches.messages.SUG_1,
@@ -477,7 +482,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
-    },
+    }, */
     //
     // Radar da Beta - ADPF 442
     //
@@ -504,6 +509,17 @@ export default botData => ({
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
         elements(
+          botSpeeches.carouselTexts.EDUCATION,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_EDUCATION, 
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.EDUCATION_1,
+              payload: V2_QUICK_REPLY_EDUCATION
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.PRESSURE,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_VIOLENCE, 
@@ -514,7 +530,7 @@ export default botData => ({
             })
           ],
         ),
-        elements(
+        /* elements(
           botSpeeches.carouselTexts.VOTE,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
@@ -524,7 +540,147 @@ export default botData => ({
               payload: V2_QUICK_REPLY_VOTE
             })
           ],
-        )
+        ) */
+      )
+    ],
+    //
+    // Escola sem partido
+    //
+    [V2_QUICK_REPLY_EDUCATION]: {
+      text: botSpeeches.messages.EDUCATION,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_10, botSpeeches.buttonTexts.YES),
+      ],
+    },
+    [V2_QUICK_REPLY_A_10]: [
+      botSpeeches.messages.EDUCATION_1,
+      botSpeeches.messages.EDUCATION_2,
+      messageWithQuickReply(
+        botSpeeches.messages.EDUCATION_3,
+        quickReply(V2_QUICK_REPLY_B_10, botSpeeches.buttonTexts.IF_APPROVED),
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.PRESSURE_NOW) 
+      )
+    ],
+    [V2_QUICK_REPLY_B_10]: [
+      botSpeeches.messages.IF_APPROVED,
+      messageWithQuickReply(
+        botSpeeches.messages.IF_APPROVED_1,
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_QUICK_REPLY_D_10, botSpeeches.buttonTexts.MORE_ABOUT_PROJECT)
+      )
+    ],
+    [V2_QUICK_REPLY_D_10]: [
+      botSpeeches.messages.EDUCATION_MORE,
+      botSpeeches.messages.EDUCATION_MORE_1,
+      messageWithQuickReply(
+        botSpeeches.messages.EDUCATION_MORE_2,
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION), 
+      )
+    ],
+    [V2_QUICK_REPLY_C_10]: [
+      botSpeeches.messages.EDUCATION_ACTION,
+      messageWithQuickReply(
+        botSpeeches.messages.EDUCATION_ACTION_1,
+        quickReply(V2_QUICK_REPLY_F_10, botSpeeches.buttonTexts.READ_EMAIL),
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.SEND_NOW_1)
+      )
+    ],
+    [V2_QUICK_REPLY_F_10]: {
+      text: botSpeeches.messages.EDUCATION_MESSAGE,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.SEND_NOW_1),
+      ],
+    },
+    [V2_QUICK_REPLY_G_10]: () => ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
+    }),
+    [V2_EMAIL_ADDRESS_WRONG]: ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
+    }),
+    [V2_EMAIL_ADDRESS_OK]: profile => ({
+      text: botSpeeches.messages.EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO(profile.first_name),
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_H_10, botSpeeches.buttonTexts.SHARE), 
+        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW), 
+      ],
+    }),
+    //Share campaign
+    [V2_QUICK_REPLY_H_10]: [
+      genericTemplate({
+        title: 'Clique aqui para impedir mais um retrocesso na educação',
+        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        buttons: [
+          buttonTemplate.shareCampaign()
+        ],
+      }),
+    ],
+    /* [V2_QUICK_REPLY_H_10]: [
+      genericTemplate({
+        title: 'Clique aqui para impedir mais um retrocesso na educação',
+        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        buttons: [
+          buttonTemplate.webURL({
+            url: facebookFeedShare('https://m.me/beta.staging?ref=escola-sem-partido'),
+            title: 'Compartilhar',
+          }), 
+          buttonTemplate.postback({
+            title: botSpeeches.buttonTexts.BACK,
+            payload: V2_QUICK_REPLY_CA
+          })
+        ],
+      }),
+    ], */
+    
+    //Not now: facebook page + carousel
+    [V2_QUICK_REPLY_E_10]: [
+      botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE,
+      carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ACT,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ACT,
+              payload: V2_QUICK_REPLY_ACT
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_RADAR,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_RADAR,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_RADAR,
+              payload: V2_QUICK_REPLY_RADAR
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_MORE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_MORE,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_MORE,
+              payload: V2_QUICK_REPLY_MAIS
+            })
+          ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_SHARE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_SHARE,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_SHARE,
+              payload: V2_QUICK_REPLY_FRIENDS
+            })
+          ],
+        ),
       )
     ],
     //
@@ -550,7 +706,7 @@ export default botData => ({
     //
     // Descriminalização do Aborto
     //
-    [V2_QUICK_REPLY_VOTE]: [
+    /* [V2_QUICK_REPLY_VOTE]: [
       botSpeeches.messages.VOTE,
       messageWithQuickReply(
         botSpeeches.messages.VOTE_1,
@@ -565,7 +721,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
       )
-    ],
+    ], */
 
     //
     // Compartilhamento com amigos
