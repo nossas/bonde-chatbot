@@ -106,5 +106,5 @@ export default {
   MORE_ABOUT_PEC: '+ sobre a PEC',
   READ_MESSAGE: 'Ver mensagem',
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
-  READ_EMAIL: 'Ler email',
+  READ_EMAIL: 'Ver email',
 }
