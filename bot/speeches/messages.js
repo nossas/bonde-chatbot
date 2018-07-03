@@ -115,10 +115,9 @@ export default {
   //
   // Radar da Beta - SUG 15
   //
-  SUG: 'Notícia boa: temos! Meu radar disparou aqui com uma sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime: a SUG 15 🔝',
-  SUG_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas - isso lá em 2016. Quer saber o status 2018?',
-
-  SUG_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei. Partiu? Vote sim:  bit.ly/sug15_consulta2 #RumoAos20mil',
+  //SUG: 'Notícia boa: temos! Meu radar disparou aqui com uma sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime: a SUG 15 🔝',
+  //SUG_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas - isso lá em 2016. Quer saber o status 2018?',
+  //SUG_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei. Partiu? Vote sim:  bit.ly/sug15_consulta2 #RumoAos20mil',
   //
   // Radar da Beta - ADPF 442
   //
@@ -126,11 +125,27 @@ export default {
   ADPF_1: 'A ADPF 442, criada pela Anis e PSOL, questiona artigos do código penal de 1940 que criminalizam o aborto. Segundo a ação, o código fere uma série de direitos das mulheres já garantidos na nossa Constituição de 1988, como o direito à não discriminação (afinal, só mulheres abortam) e à saúde.',
   ADPF_2: 'É a nossa maior chance de descriminalizar o aborto no Brasil. Quer saber como anda?',
 
-  ADPF_3: 'A ministra Rosa Weber, a relatora (responsável) da ação no STF, está dando andamento ao processo. Agora que vários setores do governo deram suas posições, vão começar as audiências públicas pra ouvir pessoas interessadas e especialistas nesse tema!',
+  ADPF_3: 'A ministra Rosa Weber, a relatora (responsável) da ação no STF, está dando andamento ao processo. As audiências públicas pra ouvir especialistas no tema vão acontecer nos dias 4 e 6 de agosto! Algo me diz que vem ação feminista por aí 👀 Pode deixar que te aviso 😉',
   //
   // Quero agir agora
   //
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
+  
+  // Escola sem partido
+  EDUCATION:'#SOS 🚨 Nesta quarta-feira (04/07), o Congresso vai votar uma proposta que pode condenar as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
+  EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
+  EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos. 😨',
+  EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
+  IF_APPROVED:'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
+  IF_APPROVED_1:'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
+  EDUCATION_MORE:'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
+  EDUCATION_MORE_1:'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
+  EDUCATION_MORE_2:'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
+  EDUCATION_ACTION:'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final, que vai a votação nesta quarta-feira.',
+  EDUCATION_ACTION_1:'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos deputados e deputadas. Tudo aqui mesmo pelo chat. Se eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
+  EDUCATION_MESSAGE:'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBTs e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (Ibope, 2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
+  EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO: name => `Arrasou, ${name}! 👏👏 Pra saber ainda mais sobre essa campanha, acesse: www.educacaofazmeugenero.beta.org.br. Temos uma última missão: pra nossa voz ser ouvida, precisamos potencializar o coro: #EducaçãoFazMeuGênero! Compartilhe e convide seus amigues para que se juntem ao nosso bonde de pressão! 🚂 💪`,
+
   // Pressionar SP Trans
   PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
   PRESSURE_1:'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios: bit.ly/placanobusao_beta_msp',
@@ -157,7 +172,7 @@ export default {
   
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando os vereadores do Rio de Janeiro a aprovarem 7 projetos de lei de Marielle Franco, vereadora assassinada no dia 14 de março. Você pode entrar em ação aqui: bit.ly/pelolegadode_marielle Para saber sobre outras oportunidades de ação, digite "menu" e confira o que tenho pra te contar!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando deputados e deputadas a rejeitarem o relatório final do projeto de lei "Escola Sem Partido", que entre outros absurdos proíbe o uso dos termos "gênero" e "orientação sexual" nas escolas. Se você também acredita que um futuro com mais direitos e menos violência começa na escola, me envie #EducaçãoFazMeuGênero e entre em ação agora!',
   
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -387,6 +402,8 @@ export default {
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
   EMAIL_ADDRESS_ASK: 'Boa! Estamos quase lá! Agora só preciso que você digite seu email. Você vai ser o remetente - e eu, a mensageira. 🤖',
+  
+  EMAIL_ADDRESS_ASK_1: 'Estamos quase lá! Agora só preciso que você digite seu email - você é a remetente e eu, a mensageira! 🤖',
 
   EMAIL_ADDRESS_ASK_ISNT_SPAM: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, não vou te mandar spam #realoficial. Preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
 
@@ -401,6 +418,12 @@ export default {
   //
   // Answers
   //
+  DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
+  
+  ABOUT_MIGUEL_NAGIB: 'Quase dou tela azul só de ouvir o nome Miguel Nagib! Ele é advogado e procurador do Estado de São Paulo, e um dos líderes e fundadores do Movimento Escola Sem Partido.',
+  
+  ABOUT_ESCOLA_SEM_PARTIDO: 'O "Escola Sem Partido" é um movimento que existe desde 2004 e que, há anos, vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Em breve será votado um novo projeto, nacional, que, entre muitos absurdos, proíbe os termos "gênero" e "orientação sexual" em sala de aula. Para saber mais sobre o projeto, clique aqui: http://bit.ly/conheca_escolasempartido',
+  
   ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
   
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',

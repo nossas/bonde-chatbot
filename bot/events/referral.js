@@ -21,8 +21,8 @@ export default (bot, speech, botData) => (payload, reply) => {
         case 'estatuto_nascituro':
             message = speech.messages.V2_QUICK_REPLY_STATUTE
             break;
-        case 'sug_15':
-            message = speech.messages.V2_QUICK_REPLY_SUG
+        case 'escola-sem-partido':
+            message = speech.messages.V2_QUICK_REPLY_EDUCATION
             break;
         case 'adpf_442':
             message = speech.messages.V2_QUICK_REPLY_ADPF
