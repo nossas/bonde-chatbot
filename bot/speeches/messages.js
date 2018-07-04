@@ -132,7 +132,7 @@ export default {
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
   
   // Escola sem partido
-  EDUCATION:'#SOS 🚨 Nesta quarta-feira (04/07), o Congresso vai votar uma proposta que pode condenar as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
+  EDUCATION:'#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e a 1ª votação foi cancelada, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
   EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
   EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos. 😨',
   EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
