@@ -29,7 +29,14 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
       if (interaction.is_bot) {
         if (interaction.action == undefined) dispatched = false
         else {
+          //Set the widget according to the action for each campaign 
+          const widgetId = interaction.action == speech.actions.V2_QUICK_REPLY_FK1_1
+            ? global.widgets[botData.data.pressure[1].widget_id].id
+            : global.widgets[botData.data.pressure[0].widget_id].id
+
           switch (interaction.action) {
+            case speech.actions.V2_QUICK_REPLY_FK1_1:
+            case speech.actions.V2_QUICK_REPLY_FK2_2:
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
@@ -49,7 +56,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 : speech.messages[action]
 
               if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
-                botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
+                botSkills.pressure.send({ profile, botData, widgetId, senderEmail: payload.message.text })
               }
 
               reply(replyMessage, action)

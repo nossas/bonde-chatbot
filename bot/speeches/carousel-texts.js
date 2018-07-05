@@ -42,7 +42,16 @@ export default {
   BUTTON_RADAR:'Clique aqui 🔎',
   BUTTON_SHARE:'Clique aqui 💜',
   BUTTON_MORE:'Clique aqui 🔮',
+// ---------------- CAMPANHAS FAKES ------------------------
+  //
 
+  //
+  // CAVALO DE TROIA
+  //
+  FK1: 'PEC 181',
+  FK2: 'Casamento Infantil',
+  //
+  // ---------------- FIM CAMPANHAS FAKES ------------------------
 
 
 }

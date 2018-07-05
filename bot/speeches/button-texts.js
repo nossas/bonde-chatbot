@@ -107,4 +107,16 @@ export default {
   READ_MESSAGE: 'Ver mensagem',
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
   READ_EMAIL: 'Ver email',
+
+  //
+  // ---------------- CAMPANHAS FAKES ------------------------
+  //
+
+  //
+  // CAVALO DE TROIA
+  //
+  FK1: 'Quero pressionar!',
+  //
+  // ---------------- FIM CAMPANHAS FAKES ------------------------
+  //
 }

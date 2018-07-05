@@ -19,7 +19,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     const strategyArgs = { speech, action, payload, profile, botData, reply }
     const actions = botSpeeches.actionStrategy(strategyArgs)
     actions.anywhere()
-
+    //console.log('global widget:', global.widgets)
     //
     // Speech message based on received quick reply action
     //

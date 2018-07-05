@@ -76,8 +76,14 @@ const V2_QUICK_REPLY_H_10 = 'V2_QUICK_REPLY_H_10'
 const V2_EMAIL_ADDRESS_WRONG = 'V2_EMAIL_ADDRESS_WRONG'
 const V2_EMAIL_ADDRESS_OK = 'V2_EMAIL_ADDRESS_OK'
 
+//
+// ---------------- CAMPANHAS FAKES ------------------------
+//
+const V2_QUICK_REPLY_FK1 = 'V2_QUICK_REPLY_FK1'
+const V2_QUICK_REPLY_FK1_1 = 'V2_QUICK_REPLY_FK1_1'
 
-
+const V2_QUICK_REPLY_FK2 = 'V2_QUICK_REPLY_FK2'
+const V2_QUICK_REPLY_FK2_2 = 'V2_QUICK_REPLY_FK2_2'
 
 //
 // The bot speech, based on quick replies.
@@ -88,6 +94,8 @@ export default botData => ({
   version: 'v2',
   actions: {
     [GET_STARTED]: GET_STARTED,
+    [V2_QUICK_REPLY_FK1_1]: V2_QUICK_REPLY_FK1_1,
+    [V2_QUICK_REPLY_FK2_2]: V2_QUICK_REPLY_FK2_2,
     [V2_QUICK_REPLY_CA]: V2_QUICK_REPLY_CA,
     [V2_QUICK_REPLY_EDUCATION]: V2_QUICK_REPLY_EDUCATION,
     [V2_QUICK_REPLY_G_10]: V2_QUICK_REPLY_G_10,
@@ -360,7 +368,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.PEC,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_PEC, 
+          botSpeeches.carouselTexts.IMAGE_PEC,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.PEC,
@@ -371,7 +379,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.STATUTE,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_STATUTE, 
+          botSpeeches.carouselTexts.IMAGE_STATUTE,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.STATUTE,
@@ -382,7 +390,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF, 
+          botSpeeches.carouselTexts.IMAGE_ADPF,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.ADPF,
@@ -436,7 +444,7 @@ export default botData => ({
           buttonTemplate.webURL({
             url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
             title: 'Compartilhar',
-          }), 
+          }),
           buttonTemplate.postback({
             title: botSpeeches.buttonTexts.BACK,
             payload: V2_QUICK_REPLY_CA
@@ -509,24 +517,24 @@ export default botData => ({
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.EDUCATION,
+          botSpeeches.carouselTexts.FK1,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_EDUCATION, 
+          botSpeeches.carouselTexts.IMAGE_EDUCATION,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.EDUCATION_1,
-              payload: V2_QUICK_REPLY_EDUCATION
+              payload: V2_QUICK_REPLY_FK1
             })
           ],
         ),
         elements(
-          botSpeeches.carouselTexts.PRESSURE,
+          botSpeeches.carouselTexts.FK2,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_VIOLENCE, 
+          botSpeeches.carouselTexts.IMAGE_VIOLENCE,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.PRESSURE,
-              payload: V2_QUICK_REPLY_PRESSURE
+              title: botSpeeches.carouselTexts.FK2,
+              payload: V2_QUICK_REPLY_FK2
             })
           ],
         ),
@@ -544,6 +552,40 @@ export default botData => ({
       )
     ],
     //
+    // ---------------- CAMPANHAS FAKES ------------------------
+    //
+
+    //
+    // CAVALO DE TROIA 
+    //
+    [V2_QUICK_REPLY_FK1]: {
+      text: botSpeeches.messages.FK1,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_FK1_1, botSpeeches.buttonTexts.FK1),
+      ],
+    },
+    [V2_QUICK_REPLY_FK1_1]: () => ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
+    }),
+
+    //
+    // CASAMENTO INFANTIL
+    //
+    [V2_QUICK_REPLY_FK2]: {
+      text: botSpeeches.messages.FK2,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_FK2_2, botSpeeches.buttonTexts.FK1),
+      ],
+    },
+    [V2_QUICK_REPLY_FK2_2]: () => ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
+    }),
+
+    //
+    // ---------------- FIM CAMPANHAS FAKES ------------------------
+    //
+
+    //
     // Escola sem partido
     //
     [V2_QUICK_REPLY_EDUCATION]: {
@@ -558,7 +600,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.EDUCATION_3,
         quickReply(V2_QUICK_REPLY_B_10, botSpeeches.buttonTexts.IF_APPROVED),
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.PRESSURE_NOW) 
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.PRESSURE_NOW)
       )
     ],
     [V2_QUICK_REPLY_B_10]: [
@@ -574,7 +616,7 @@ export default botData => ({
       botSpeeches.messages.EDUCATION_MORE_1,
       messageWithQuickReply(
         botSpeeches.messages.EDUCATION_MORE_2,
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION), 
+        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION),
       )
     ],
     [V2_QUICK_REPLY_C_10]: [
@@ -600,8 +642,8 @@ export default botData => ({
     [V2_EMAIL_ADDRESS_OK]: profile => ({
       text: botSpeeches.messages.EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO(profile.first_name),
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_H_10, botSpeeches.buttonTexts.SHARE), 
-        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW), 
+        quickReply(V2_QUICK_REPLY_H_10, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW),
       ],
     }),
     //Share campaign
@@ -632,7 +674,7 @@ export default botData => ({
         ],
       }),
     ], */
-    
+
     //Not now: facebook page + carousel
     [V2_QUICK_REPLY_E_10]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE,
@@ -702,7 +744,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
       )
     ],
-    
+
     //
     // Descriminalização do Aborto
     //

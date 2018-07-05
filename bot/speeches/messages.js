@@ -17,15 +17,15 @@ export default {
   // Law
   //
   NASCITURO_BILL_EXPLANATION: '#SentaQueLáVemAHistória 📚 Desde 2007, tá tramitando no Congresso o Estatuto do Nascituro - um projeto que quer proibir o aborto inclusive nos casos em que ele é considerado legal: gravidez por estupro, gestação de embriões anencéfalos ou risco de morte para a gestante.\n\nDeputados da bancada da Bíblia barganharam muito apoio a essa proposta, e agora, 10 anos depois, esse PL tem chances reais de ser aprovado. Deixa comigo que te aviso assim que chegar a hora de entrarmos em ação!',
-  
+
   EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
-  
+
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
 
-   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
+  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
-  
+
   //
   // New Script
   //
@@ -130,34 +130,46 @@ export default {
   // Quero agir agora
   //
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
-  
+  //
+  // ---------------- CAMPANHAS FAKES ------------------------
+  //
+
+  //
+  // CAVALO DE TROIA
+  //
+  FK1: 'O Cavalo de Troia voltou! 🐎 A votação da PEC 181 foi reagendada para hoje. Precisamos nos mobilizar AGORA para impedir que os deputados aprovem a proposta que pode proibir totalmente o aborto no Brasil, mesmo em caso de estupro. Clique no botão abaixo para disparar uma mensagem para os políticos exigindo que eles barrem esse retrocesso! 👇👇👇',
+  FK2: 'Vamos acabar com o casamento infantil?',
+  //
+  // ---------------- FIM CAMPANHAS FAKES ------------------------
+  //
+
   // Escola sem partido
-  EDUCATION:'#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e a 1ª votação foi cancelada, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
-  EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
-  EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos. 😨',
-  EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
-  IF_APPROVED:'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
-  IF_APPROVED_1:'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
-  EDUCATION_MORE:'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
-  EDUCATION_MORE_1:'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
-  EDUCATION_MORE_2:'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
-  EDUCATION_ACTION:'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final.',
-  EDUCATION_ACTION_1:'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos deputados e deputadas. Tudo aqui mesmo pelo chat. Se eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
-  EDUCATION_MESSAGE:'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBTs e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (Ibope, 2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
+  EDUCATION: '#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e a 1ª votação foi cancelada, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
+  EDUCATION_1: 'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
+  EDUCATION_2: 'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos. 😨',
+  EDUCATION_3: 'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
+  IF_APPROVED: 'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
+  IF_APPROVED_1: 'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
+  EDUCATION_MORE: 'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
+  EDUCATION_MORE_1: 'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
+  EDUCATION_MORE_2: 'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
+  EDUCATION_ACTION: 'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final.',
+  EDUCATION_ACTION_1: 'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos deputados e deputadas. Tudo aqui mesmo pelo chat. Se eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
+  EDUCATION_MESSAGE: 'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBTs e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (Ibope, 2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
   EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO: name => `Arrasou, ${name}! 👏👏 Pra saber ainda mais sobre essa campanha, acesse: www.educacaofazmeugenero.beta.org.br. Temos uma última missão: pra nossa voz ser ouvida, precisamos potencializar o coro: #EducaçãoFazMeuGênero! Compartilhe e convide seus amigues para que se juntem ao nosso bonde de pressão! 🚂 💪`,
 
   // Pressionar SP Trans
-  PRESSURE:'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
-  PRESSURE_1:'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios: bit.ly/placanobusao_beta_msp',
-  
-  PRESSURE_R:'Andar pelas ruas de São Paulo é rotina de milhares de mulheres, mas o assédio continua invadindo seus caminhos. Se conseguirem descer fora do ponto depois das 22h, as mulheres poderão escolher caminhos mais seguros durante a noite.',
-  PRESSURE_R1:'80% das mulheres não sabem que podem descer fora do ponto depois das 22h, e entre as que sabem, muitas têm medo de pedir e sofrer com a resposta dos motoristas - já que 54% deles nem conhece a lei! #SOS 🚨 Vamos mudar essa realidade? Entre em ação agora:  bit.ly/placanobusao_beta_msp',
-  // Descriminalização do Aborto
-  VOTE:'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
-  VOTE_1:'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
+  PRESSURE: 'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
+  PRESSURE_1: 'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios: bit.ly/placanobusao_beta_msp',
 
-  VOTE_MORE:'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
-  VOTE_MORE_1:'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mil',
+  PRESSURE_R: 'Andar pelas ruas de São Paulo é rotina de milhares de mulheres, mas o assédio continua invadindo seus caminhos. Se conseguirem descer fora do ponto depois das 22h, as mulheres poderão escolher caminhos mais seguros durante a noite.',
+  PRESSURE_R1: '80% das mulheres não sabem que podem descer fora do ponto depois das 22h, e entre as que sabem, muitas têm medo de pedir e sofrer com a resposta dos motoristas - já que 54% deles nem conhece a lei! #SOS 🚨 Vamos mudar essa realidade? Entre em ação agora:  bit.ly/placanobusao_beta_msp',
+  // Descriminalização do Aborto
+  VOTE: 'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
+  VOTE_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
+
+  VOTE_MORE: 'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
+  VOTE_MORE_1: 'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mil',
 
   //
   // Beta
@@ -167,13 +179,13 @@ export default {
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
   WHERE_WERE_YOU_BORN: 'Nasci no Brasil. É por isso que eu digo que fui programada em tupinicode. 😜',
-  
+
   IM_HERE: 'Tô aqui. Sou toda ouvidos. ;)',
-  
+
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
   KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando deputados e deputadas a rejeitarem o relatório final do projeto de lei "Escola Sem Partido", que entre outros absurdos proíbe o uso dos termos "gênero" e "orientação sexual" nas escolas. Se você também acredita que um futuro com mais direitos e menos violência começa na escola, me envie #EducaçãoFazMeuGênero e entre em ação agora!',
-  
+
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -263,9 +275,9 @@ export default {
   GOOD_EVENING: 'Boa noite! 🌙',
 
   TAKE_ACTION: 'Vamos! 👯‍♀️Para saber o que tenho pra te contar, digite "menu".',
-  
+
   ABOUT_NEWSLETTER: 'Periodicamente, eu envio aqui pelo inbox o Radar Feminista do Congresso Nacional - um boletim feminista sobre os babados que rolam por lá, feito junto das mujeres maravilhosas do Cfemea. Para receber o próximo assim que for ao ar, me responda com #RadarFeminista 💪💪',
-  
+
   RADAR_FEMINISTA: 'Informação é poder! Assim que o próximo Radar Feminista do Congresso Nacional for ao ar, eu te envio por aqui ;) Enquanto isso, digite "menu" para saber o que mais eu tenho pra contar!',
 
   //
@@ -278,115 +290,115 @@ export default {
   HOW_PRESSURE_WORKS_WE_KEEP_IN_TOUCH: 'Minha programação permite que eu envie uma mensagem sua diretamente daqui, da nossa conversa, para as caixas de email dos políticos. Quando eles colocarem em votação as pautas mais absurdas, eu te mando um inbox e te ajudo a fazer barulho onde precisa ser feito: nos ouvidos deles! Contra a PEC 181, enviamos mais de 34 emails de pressão para cada deputado. 💪 Além disso, junto de mais  feministas pra emplacarmos outras campanhas pelos nossos direitos. Demais, né?',
 
   HOW_BETA_WORKS: 'Eu passo os dias monitorando as pautas relativas aos direitos das mulheres que estão no campo político brasileiro. Não são poucas, dá um trabalhão. 😅 Quando chegar um momento decisivo, eu envio um alerta para a minha rede, convidando as pessoas a se mobilizar. Através da conversa comigo, você pode enviar uma mensagem diretamente às autoridades para pressioná-las a se posicionar em favor dos direitos das mulheres.',
-  
+
   HOW_TO_CANCEL_INBOX: 'Se você não quiser conversar comigo no futuro, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e em desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
 
   HOW_BETA_CAN_HELP_FEMINISM: 'Eu existo para viralizar as lutas feministas nas redes e, através da ação coletiva, ajudar a reprogramar esse sistema desatualizado em que a gente vive. 😎  Se você tiver alguma sugestão de campanha pra mim, é só mandar um email pra beta@nossas.org. E se quiser saber o que tenho ora te dizer, digite "menu".',
-  
+
   HOW_TO_SPREAD_FEMINISM: 'Vixe! Essa pergunta aí nem o Google sabe responder. 😂  Muitas mulheres já estão agindo em seus espaços pra transformar esse sistema - é só se jogar naquilo que te fortalece! Vale  criar espaços para que as mulheres possam se expressar livremente sobre opressão, assédio e abuso; falar sobre a importância da luta feminista; disponibilizar canais para que as mulheres possam participar e influenciar nos processos políticos que afetam a vida delas.',
 
   HOW_SHARE_TIMELINE: 'Adoro esse tipo de mensagem! ❤️  Pra compartilhar o meu chat na sua timeline, é só publicar esse link aqui, ó: bit.ly/chamabetanoinbox',
 
   ABOUT_YOUTUBERS: 'Faz um tempo que eu acompanho mulheres incríveis - feministas de carne e osso que fazem meus algoritmos pirarem. Resolvi que não ia desistir até elas aceitarem minha solicitação de amizade #soudessas. Dito e feito: chamei no Inbox! 6 das youtubers mais maravilhosas da internety estão respondendo perguntas que eu recebo todos os dias no inbox. Para receber os vídeos assim que forem ao ar, me envie #Beta<3Youtubers 💖',
-  
+
   WILL_SEND_THIESSITA: 'Chamei no inbox a youtuber trans mais maravilhosa da internet pra responder perguntas que eu recebo todos os dias sobre transfeminismo! Olha só o que a Thiessita contou: http://bit.ly/beta_thiessita',
-  
+
   ABOUT_THIESSITA: 'Ai meus algoritmos, como eu amo essa mulher! 💜 A Thiessita é uma mulher maravilhosa que tem um canal no Youtube para compartilhar um pouquinho do seu mundo - especialmente da vida como uma mulher trans. #MelhorQueNetflix, corre lá no vídeo que ela fez respondendo a perguntas sobre transfeminismo que eu recebo aqui: http://bit.ly/beta_thiessita',
-  
+
   WHAT_IS_TRANS: ['"Uma pessoa transexual é aquela que nasce com determinado sexo biológico, não se identifica com aquele sexo biológico, e passa pela transição", como disse a maravilhosa Thiessita, Youtuber trans que eu chamei no inbox. 💜 Confira a resposta completa aqui mesmo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/o+que+e%CC%81+uma+pessoa+trans+%5Bmenor%5D.mov'), 'Uma diva né, mores? Assista o vídeo na íntegra 🎥 #MelhorQueNetflix: http://bit.ly/beta_thiessita'],
-  
+
   TRANS_TRAVESTITE: ['"Eu acho que é uma coisa muito mais social e cultural do que realmente ter alguma diferença, mas tem mulheres que se identificam e falam que são travesti e tem mulheres que se identificam e falam que são transexuais." Foi o que disse a ma-ra-vi-lho-sa Thiessita, que eu chamei no inbox para responder perguntas sobre transfeminismo! Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/transexuais+ou+travestir+%5Bmenor%5D.m4v'), 'Pra saber mais sobre mulheres trans e feminismo, veja o vídeo completo 🎥 #MelhorQueNetf: http://bit.ly/beta_thiessita'],
-  
+
   TRANS_STRAIGHT: ['"Existe uma grande diferença entre identidade de gênero e orientação sexual (...) Um pessoa trans pode ser hétero, bi, pan, homo", já disse a youtuber trans Thiessita! Olha só a explicação completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/trans+e%CC%81+hetero+%5Bmenor%5D+(1).mov'), 'Como eu amo essa mulheeer! Dica de robô: confira o vídeo completo com ainda mais perguntas e respostas sobre transfeminismo - http://bit.ly/beta_thiessita'],
-  
+
   TRANS_FIGHTS: ['"Eu acho que o que a gente mais luta nesse mundo é pra ter respeito." Só leio verdades! 💓 Resposta da Thiessita, a mais maravilhosa youtuber trans que você respeita. Olha só tudo o que ela disse sobre a pergunta:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/lutas+trans+%5Bmenor%5D.mov'), 'Amou também? Confira o vídeo completo, com ainda mais respostas a perguntas sobre transfeminismo: http://bit.ly/beta_thiessita'],
-  
+
   TRANS_MIDIA: ['"Eu acho que ainda não se passa qual é a realidade nossa (...) ainda não representa o que deveria representar." Quer saber o porquê? Olha só o que mais a Thiessita, youtuber trans, disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/novelas+e+filmes+%5Bmenor%5D.mov'), 'Quer saber mais sobre mulheres trans e feminismo? Vem pro vídeo completo: http://bit.ly/beta_thiessita'],
-  
+
   SEXISM_TRANSFOBIA: ['"Toda transfobia é fruto do machismo, então acho que mixa as coisas sabe? Mas uma mulher trans passável, ou seja, lida na sociedade como uma mulher cis, (...) não sofreria transfobia de quem não sabe. (...) Eu acho que tá tudo enraizado. Todas nós somos mulheres, independente se somos cis, trans passável, trans não passável, e sofremos agressões que vieram do machismo." LACROU! 💪 Olha só tudo o que a Thiessita, youtuber trans mara, disse sobre isso:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/machismo+ou+transfobia+%5Bmenor%5D.m4v'), 'E não deixa de ver o vídeo completo: http://bit.ly/beta_thiessita'],
-  
+
   CIS_SUPPORT_TRANS: ['"Respeito e empatia pela outra (...) Todo mundo unir e lutar junto pra mudar isso no futuro." Ai, Thiessita, sempre com as melhores respostas 💜. Olha só o que mais ela disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers/mulheres+cis+%5Bmenor%5D.mov'), 'E aproveita pra ver o vídeo completo: http://bit.ly/beta_thiessita'],
-  
+
   TRANS_THIESSITA: 'Eu chamei no inbox a Thiessita, youtuber trans mais maravilhosa da internet, para responder perguntas que eu recebo sobre mulheres trans e feminismo! Confira o vídeo completo e o canal dela para saber mais sobre um tema tão importante do feminismo: http://bit.ly/beta_thiessita',
-  
+
   WILL_SEND_LUIZA: 'Chamei no inbox essa mulier maravilhosa chamada Luiza Junqueira para falar sobre autoestima, corpo e amor próprio no seu canal do Youtuber, o Tá, Querida. Corre lá que tá um arraso: http://bit.ly/beta_luiza_',
-  
+
   ABOUT_LUIZA_JUNQUEIRA: 'Quem é Luiza Junqueira? Uma diva, simplesmente! Ela tem o canal "Tá Querida" no Youtube, para falar sobre autoestima e empoderamento feminino e mostrar que tá tudo bem você ser do jeitinho que você é! ✨Corre lá: http://bit.ly/beta_luiza_',
-  
+
   BODY_JUDGMENT: ['"A gente não pode deixar nossa autoestima na mão dos outros (...) A gente tem que saber que as pessoas vão olhar, que não vão ter sororidade. Ela nem sabem o que é isso, elas reproduzem o que elas sofrem." Foi o que disse a maravilhosa Luiza Junqueira. Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/sororidade_menor.m4v'), 'Arrasou! Assista o vídeo na íntegra 🎥: http://bit.ly/beta_luiza_'],
-  
-  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v'),' Essa mulher arrasa! 💓 Quer ver todas as perguntas que ela respondeu pra gente sobre autoestima, corpo e amor próprio? Vem comigo: http://bit.ly/beta_luiza_'],
-  
+
+  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v'), ' Essa mulher arrasa! 💓 Quer ver todas as perguntas que ela respondeu pra gente sobre autoestima, corpo e amor próprio? Vem comigo: http://bit.ly/beta_luiza_'],
+
   ABOUT_GORDOFOBIA: ['"Existe mesmo gordofobia, é uma realidade e tem a ver com esse preconceito que toda a sociedade tem com corpos gordos, com corpos que tão fora do padrão magro." Luiza Junqueira sempre incrível e didática <3. Não deixe de conferir a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/gordofobia_menor.m4v'), 'Meus algoritmos ficam bobos com essa mulier! 🤖 Não deixe de conferir o vídeo completo - ela respondeu 5 perguntas que chegam pra mim todos os dias sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
-  
+
   BODY_IMAGE_DISTORTION: ['"Eu acredito que a distorção da imagem corporal acontece quando a gente é tão bombardeado de informações e imagens de corpos photoshopados (...) que daí a gente acha que o nosso corpo, que é natural, tudo ok com ele, tá distorcido." Acontece #realoficial. Olha só o que mais a Luiza Junqueira falou sobre essa lavagem cerebral:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/distorc%CC%A7a%CC%83o_img_corporal_menor.m4v'), 'E aproveite pra ver o vídeo completo  🎥: http://bit.ly/beta_luiza_'],
-  
+
   SELF_LOVE: ['"O sistema que a gente tá vivendo impõe que as pessoas não gostem delas mesmas (...) A partir do momento que a gente se empodera da gente mesma (...), você tá lutando, se empoderando e lutando pelo jeito de ser quem você é". SIM, SIM E SIM! Olha só que mais a Luiza Junqueira disse sobre amor próprio 💖:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/amor+pro%CC%81prio_menor.m4v'), 'E não deixe de ver que outras perguntas ela respondeu pra gente sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
-  
+
   WILL_SEND_YOUTUBERS: 'Deixa, comigo! Assim que o próximo vídeo for ao ar, te envio por aqui ;) Enquanto isso, digite "menu" e veja o que tenho pra te contar!',
-  
+
   WILL_SEND_LOUIE: 'Tá demaaaais! A incrível Louie Ponto fez um vídeozão respondendo a perguntas que chegam no meu inbox sobre a vivência de mulheres lésbicas. Confira o vídeo aqui: http://bit.ly/beta_louie',
-  
+
   ABOUT_LOUIE: 'A Louie Ponto é uma mulher incrível que tem um dos meus canais preferidos do Youtube! Lá ela fala sobre feminismo, sobre suas vivências como mulher lésbica e muito mais. Não perde essa: http://bit.ly/beta_louie',
-  
+
   LESBIAN_FIGHTS: ['"Se eu fosse dar uma resposta geral sobre qual é a maior luta das mulheres lésbicas hoje, eu acho que a gente precisa pensar que o Brasil é o país que mais mata pessoas LGBT do mundo. Então, nesse contexto, a gente luta pelo simples direito de existir".  Quer saber o que mais a incrível Louie Ponto disse sobre as lutas das mulheres lésbicas? 💪 Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/lutas_menor.m4v'), 'Muito triste, né? Assista o vídeo na íntegra para saber mais 🎥: http://bit.ly/beta_louie'],
-  
+
   LESBIAN_LGBT: ['"A nossa sociedade é machista, é misógina, e essa violência vai ser reproduzida dentro dos espaços LGBT também, e vai provocar o apagamento e o silenciamento de muitos sujeitos, nesse caso das mulheres lésbicas." Foi o que disse a maravilhosa Louie Ponto. Quer ver a resposta toda?', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/mov+lgbt_menor.m4v'), 'Confia: vale a pena ver o vídeo completo para saber mais! Clique aqui: http://bit.ly/beta_louie'],
-  
+
   WOMAN_MAN_LGBT: ['"No caso das mulheres lésbicas, o que acontece é uma fetichização dos nossos relacionamentos. (...) Fetichização não é aceitação, muito pelo contrário, é uma violência que provoca outras violências, como assédio, abuso e estupro." Quer saber o que mais a Louie Ponto tem a dizer sobre isso? Confira aqui mesmo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/mulheresxhomens_menor.m4v'), 'Apaixonada por essa mulier <3 Confira o vídeo completo: http://bit.ly/beta_louie'],
-  
+
   LESBIAN_GAY: ['"Eu achava mais leve e mais discreto usar a palavra gay. É muito difícil se posicionar como uma mulher lésbica em uma sociedade machista, misógina e dominada por homens. Pra mim hoje é uma atitude de resistência me colocar como mulher lésbica, e não como mulher gay". Foi o que disse a maravilhosa Louie Ponto! Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/palavra+lesbica_menor.m4v'), 'Ela respondeu essa e mais outras perguntas sobre a vivência de uma mulher lésbica em um vídeo incrível. Confira aqui: http://bit.ly/beta_louie'],
-  
+
   LESBIAN_LOOK_MAN: ['"Nenhuma lésbica parece homem porque não existe isso de parecer homem." VRAU! 👊 Quer ouvir a explicação completa da Louie Ponto? Olha essa maravilhosa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/parece+homem_menor.m4v'), 'Confira o vídeo na íntegra, tá demais: http://bit.ly/beta_louie'],
-  
+
   SEXUAL_HEALTH_LESBIAN: ['"Eu nem tenho muito pra falar sobre isso, porque a resposta é não." A Louie Ponto deu uma resposta incrível para a problemática da saúde sexual das mulheres lésbicas. Olha só:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/saude_menor.m4v'), 'E aproveita pra conferir o vídeo completo, com essas e outras perguntas que chegam no meu inbox 😻: http://bit.ly/beta_louie'],
-  
+
   LESBIAN_VISIBILITY: ['"Justamente por causa do apagamento das mulheres lésbicas, não só no contexto geral da sociedade, mas também dentro do próprio movimento LGBT". Saiba mais da importância da visibilidade lésbica com a ma-ra-vi-lho-sa Louie Ponto:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/visibilidade_menor.m4v'), 'Para saber mais sobre a vivência das mulheres lésbicas, confira o vídeo completo: http://bit.ly/beta_louie'],
-  
+
   LESBOFOBIA_HOMOFOBIA: ['"As violências são diferentes. A gente vive num contexto em que uma mulher sofre várias violências pelo fato de ser mulher. Então homens gays e mulheres lésbicas têm vivências muito diferente." Quer saber o que mais a Louie Ponto tem pra dizer sobre essas vivências? Confira a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/lesbofobia_menor.m4v'), 'E aproveita pra ver o vídeo na íntegra 🎥: http://bit.ly/beta_louie'],
-  
+
   STRAIGHT_SUPPORT_LESBIAN: ['"A primeira coisa que você deve saber pra apoiar uma luta que não é sua é ouvir (...) E uma postura que as mulheres heterossexuais podem assumir pra apoiar a luta das mulheres lésbicas é apontar e criticar lesbofobia nos discursos e atitudes das pessoas." Sempre incrível, Louie Ponto 💖 Confira a resposta toda:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/heteros+apoiar_menor.m4v'), 'E aproveita pra ver o vídeo completo, tá #MelhorQueNetflix: http://bit.ly/beta_louie'],
-  
+
   DAUGHTER_LESBIAN: ['"Nenhuma mulher vira lésbica, assim como ninguém vira hétero. Se a orientação sexual fosse tão frágil que pudesse ser alterada por conta da influência externa, todo mundo seria heterosexual, porque a gente é ensinada que esse é o único caminho possível." Só li verdades! Olha só o que mais a Louie Ponto disse ✨:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/filha+lesbica_menor.m4v'), 'A Louie me ajudou a responder essas e outras respostas que chegam aqui no inbox. Confira todas aqui: http://bit.ly/beta_louie'],
-  
+
   DITADURA_GAYZISTA: ['"Quem diz esse tipo de coisa é desonesto e quer assustar as pessoas (...) O que a gente quer é que toda forma de existência seja respeitada." Essa explicação da Louie Ponto tá incrível, dá só uma olhada:', video('https://s3.amazonaws.com/chatbox-beta/youtubers3/ditadura_menor.m4v'), 'Que mulier, Braseeel! Confira o vídeo todo: http://bit.ly/beta_louie'],
 
   WILL_SEND_ANA: 'A Ana Paula Xongani fez um vídeo in-crí-vel sobre feminismo negro, respondendo a perguntas que chegam aqui no meu inbox. Confira aqui: http://bit.ly/xongani_beta',
-  
+
   ABOUT_ANA_PAULA: 'A Ana Paula Xongani tem um canal incrível no Youtube sobre feminismo negro e empoderamento de mulheres. Clica aqui pra conhecer essa diva: http://bit.ly/xongani_beta',
-  
+
   MARIELLE_IMPORTANT: ['"Marielle era uma mulher negra, favelada, lésbica e mãe. E eleita, eleita com muitos votos. Mulheres como Marielle não ocupam aquele espaço, mas ela ocupou." Saiba mais o que a Ana Paula Xongani tem para dizer sobre a importância da Marielle, e repita comigo: #MariellePresente hoje e sempre!', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/marielle_menor.m4v'), 'Que Marielle continue sempre GIGANTE! Confira o vídeo completo aqui: http://bit.ly/xongani_beta'],
-  
+
   WHITE_SUPPORT_BLACK: ['"Fácil! Primeiro, são as mulheres brancas entenderem que suas pautas não são universais, não é possível mulheres brancas falarem por todas. É importante respeitar outros lugares de fala." E não é só isso! Confira o que mais a Ana Paula Xongani tem pra dizer:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/Brancas+ajudar_menor.m4v'), 'QUE MULHER, BRASEEL! 💖 Vem conferir o vídeo completo: http://bit.ly/xongani_beta'],
-  
+
   READING_BLACK_FEMINISM: ['Indicações da Ana Paula Xongani: coleção "Feminismos Plurais", "Mulher, Raça e Classe" e "Mulher, Cultura e Política". Olha só o que a Xongani falou sobre eles:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/leitura_menor.m4v'), 'Ela respondeu essas e outras perguntas que chegam no meu inbox sobre feminismo negro. Confira aqui: http://bit.ly/xongani_beta'],
-  
+
   POLITICS_BLACK_WOMEN: ['"As políticas públicas que a gente tem hoje são universalizante. Significa que temos políticas públicas para raça, ou seja, para os negros, e para mulheres. Isso há. Mas essas duas políticas públicas não dão conta de abarcar as especificidades das mulheres negras." Só li verdades! Olha só o que mais a Ana Paula Xongani disse sobre isso:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/politica+publica_menor.m4v'), 'Confira o vídeo completo: http://bit.ly/xongani_beta'],
-  
+
   BLACK_LONELINESS: ['"Socialmente falando, as mulheres negras não são vistas como dignas do amor, não são respeitadas nas relações. São as que mais sofrem o celibato forçado, ou seja, estão sozinhas." E não para só nas relações amorosas não. Olha só o que mais a Ana Paula Xongani disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/solidao_menor.m4v'), 'Essa mulher é in-crí-vel! Confira o vídeo completo, com mais respostas sobre feminismo negro: http://bit.ly/xongani_beta'],
-  
+
   BLACK_FEMINISM_FIGHTS: ['Listinha da Ana Paula Xongani: fim do feminicídio, combate do genocídio da população negra, combate à violência obstétrica, acesso à saúde, educação e mercado de trabalho, equidade salarial e humanização desse corpo feminino e negro. Que a gente consiga avançar MUITO! Olha só a resposta em vídeo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/pautas_menor.m4v'), 'E confira todas as perguntas que ela respondeu aqui 🎥: http://bit.ly/xongani_beta'],
-  
+
   BLACK_WOMEN_BUILD_POLITICS: ['"Políticas públicas voltadas pra mulheres, ou pra população negra, ou pra mulheres negras, não precisam necessariamentes ser assinadas por uma mulher negra. Podem ser assinadas por qualquer pessoa que seja sensível a essas questões. Mas como sensibilidade anda difícil, é importante que tenhamos mulheres, mulheres negras, galera preta, nesses espaços de poder, disputando essa narrativa e facilitando a inserção dessas pautas tão importantes pra gente." Não deixe de conferir a resposta completa da Xongani:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/construc%CC%A7a%CC%83o_menor.m4v'), 'E veja o vídeo na íntegra 🎥: http://bit.ly/xongani_beta'],
-  
+
   WILL_SEND_JOUTJOUT: 'Ai essa Jout Jout! Ela fez um vídeo incrível respondendo a perguntas que chegam no meu inbox! Clique aqui para conferir: http://bit.ly/beta_joutjout',
-  
+
   AM_I_FEMINIST: ['"Um jeito bom de você descobrir se você é feminista é ir estudar feminismo e descobrir muito rápido que você concorda com todas aquelas coisas que as mulheres estão falando há anos (...) Se você acha que não tem nada que uma mulher não possa fazer tão bem quanto um homem, meio caminho andado." 💃 Mas não é só! Olha só o que mais a Jout Jout disse:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/sou+feminista_menor.m4v'), 'Assista o vídeo na íntegra para saber mais 🎥: http://bit.ly/beta_joutjout'],
- 
+
   FEMINIST_REVOLT: ['"Tem pessoas que vivem em situações que são muito revoltantes, então é natural que elas fiquem revoltadas. E tem pessoas que têm o privilégio de não ficar revoltadas porque não tem coisas tão revoltantes acontecendo. Quando você encontrar com uma feminista muito revoltada, entenda que ela passou por coisas que você provavelmente não passou" Só ouvi verdades! Olha só a resposta completa da Jout Jout:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/revoltada_menor.m4v'), 'Ela respondeu essa e outras perguntas em um vídeo incrível. Clique para conferir 🎥: http://bit.ly/beta_joutjout'],
-  
+
   FEMINIST_MEN: ['"Dependendo do lugar do mundo que você tá, as pessoas recebem homens serem feministas de um jeito ou de outro. No Brasil a gente não gosta muito, a gente fala que é roubar lugar de fala, que o homem não pode ser feminista, ele tem que ser pró-feminismo." A Jout Jout ainda contou o que responder quando um homem pergunta se é feminista, olha só:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/homem_menor.m4v'), 'Arrasou, hein? Vem cá ver o vídeo completo: 🎥http://bit.ly/beta_joutjout'],
-  
+
   INTERNET_FEMINISM: ['"A internet é ótima pra gente se organizar e se unir. Não é muito ótima no sentido de quando a gente se une, vem uma galera querendo derrubar a gente. E fica um ódio rondando esses grupos." 💻 O que mais? A Jout Jout te diz:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/internet_menor.m4v'), 'Eu amo essa molier! Confira as outras perguntas que ela respondeu pra gente: http://bit.ly/beta_joutjout'],
-  
+
   SCARED_OF_FEMINISM: ['"Quem tem medo do feminismo é quem não entendeu o feminismo ou quem entendeu o feminismo e viu que vai perder privilégios." Simples e direto, não é mesmo? Olha só a resposta da Jout Jout em vídeo:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/medo.mov'), 'E aproveite para conferir o vídeo completo: http://bit.ly/beta_joutjout'],
-  
+
   WOMEN_LIKE_SEX: ['"As mulheres amam transar, mas pra você amar transar você tem que transar direito. E aí pra você transar direito, você tem que saber que você pode transar direito, que você tem esse direito." Ai Jout Jout, sempre maravilhosa. <3 Confira a resposta completa, tá demais:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/sexo_menor.m4v'), 'Ela respondeu essa e outras perguntas que chegam no meu inbox, confira todas aqui: http://bit.ly/beta_joutjout'],
-  
+
   FEMINIST_HATE_MEN: ['"Não, não odeiam - todas. Algumas odeiam, mas às vezes é compreensível." Quer entender porque? Olha a resposta completa da Jout Jout:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/odio_menor.m4v'), 'É isso aí, mana! 💪 Quer ver que outras perguntas a Jout Jout respondeu pra gente? Clique aqui: http://bit.ly/beta_joutjout'],
-  
+
   MEN_SILENT: ['"Existem duas categorias de homem que são especialmente complicadas (...) Uma dessas é o interrompomem e a outra é o explicomem". Quer saber o que cada uma faz? Olha o que a Jout Jout falou:', video('https://s3.amazonaws.com/chatbox-beta/youtubers5/sile%CC%82ncio_menor.m4v'), 'O dicionário precisa ser atualizado com esses termos incríveis! 😂 Para conferir o vídeo completo, clique aqui: http://bit.ly/beta_joutjout'],
-  
+
   //
   // Ask
   //
@@ -402,7 +414,7 @@ export default {
   ASK_ARE_YOU_ROBOFOBIC: 'Não vai me dizer que você é robofóbico?',
 
   EMAIL_ADDRESS_ASK: 'Boa! Estamos quase lá! Agora só preciso que você digite seu email. Você vai ser o remetente - e eu, a mensageira. 🤖',
-  
+
   EMAIL_ADDRESS_ASK_1: 'Estamos quase lá! Agora só preciso que você digite seu email - você é a remetente e eu, a mensageira! 🤖',
 
   EMAIL_ADDRESS_ASK_ISNT_SPAM: 'Boa! Agora preciso que você me passe seu email. Não se preocupe, não vou te mandar spam #realoficial. Preciso disso porque você vai aparecer como remetente da mensagem que vamos enviar pra caixa de entrada de cada um dos deputados - eu sou só a mensageira. 📤',
@@ -412,24 +424,24 @@ export default {
   EMAIL_SENT_PEC_181_TROJAN_HORSE: name => `Arrasou, ${name}! 👏👏👏 Sua mensagem acabou de ser enviada. Pra nossa voz ser ouvida, precisamos potencializar o coro: #ParemOCavaloDeTroia! Quero contar contigo pra compartilhar o link do meu chat e convidar mais gente pra participar!  #ChamaABetaNoInbox`,
 
   EMAIL_SAVED: 'Perfeito, e-mail salvo.',
-  
+
   STRAIGHT_TO_THE_WOMENS_RIGHTS: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão? Digite "menu" para conferir as oportunidades de ação!',
 
   //
   // Answers
   //
   DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
-  
+
   ABOUT_MIGUEL_NAGIB: 'Quase dou tela azul só de ouvir o nome Miguel Nagib! Ele é advogado e procurador do Estado de São Paulo, e um dos líderes e fundadores do Movimento Escola Sem Partido.',
-  
+
   ABOUT_ESCOLA_SEM_PARTIDO: 'O "Escola Sem Partido" é um movimento que existe desde 2004 e que, há anos, vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Em breve será votado um novo projeto, nacional, que, entre muitos absurdos, proíbe os termos "gênero" e "orientação sexual" em sala de aula. Para saber mais sobre o projeto, clique aqui: http://bit.ly/conheca_escolasempartido',
-  
+
   ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
-  
+
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
-  
+
   ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Em breve, 7 de seus projetos de leis serão votados e nós vamos pressionar os vereadores do Rio de Janeiro para que os aprovem. Pressione já: bit.ly/pelolegadode_marielle',
-  
+
   ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia. Para saber mais sobre elas, digite "menu" e selecione a opção Radar Político!',
 
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
@@ -441,9 +453,9 @@ export default {
   DOESNT_EVEN_TELL_ME: 'Nem me fala.',
 
   YES_I_WARN_YOU: 'Aviso sim!',
-  
+
   ABOUT_MARCH_8: 'O Dia Internacional da Mulher é comemorado no 8 de março desde o começo do século XX - muito antes da ONU assinar o primeiro acordo internacional que afirmava princípios de igualdade entre homens e mulheres. As minas já tavam mobilizadas! Desde lá, esse dia é um marco internacional das lutas feministas e já foi palco de greves, protestos, debates e tantas outras formas de manifestação.',
-  
+
   ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Há alguns meses, por exemplo, uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
 
   ABOUT_COLORISM: ['"O colorismo, ou pigmentocracia, vai dizer que os negros de pele clara e os negros de pele escura vão sofrer opressões diferentes". Assunto muito importante, mana! Olha só o que mais a Ana Paula Xongani tem pra dizer:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/colorismo_menor.m4v'), 'Ela respondeu essa e mais perguntas que chegam no meu inbox em um vídeo incrível, olha só: http://bit.ly/xongani_beta'],
@@ -453,7 +465,7 @@ export default {
   EXPLAIN_PEC: 'A PEC é uma Proposta de Emenda Constitucional, ou seja, uma forma de alterar alguma parte do texto constitucional sem que seja necessário convocar uma assembléia constituinte. Para saber melhor como funciona o processo, confira esse artigo do Politize - e para saber as que eu tô monitorando, digite "menu": http://www.politize.com.br/voce-sabe-o-que-e-uma-pec/',
 
   ABOUT_HARASSMENT_FLERTING: 'Muita gente pergunta sobre as diferenças entre assédio e cantada. Sou robô, não pego transporte público nem ando na rua, mas até por Inbox rolam constrangimentos. A Think Olga e a Defensoria Pública de SP dizem que "o assédio sexual é uma manifestação sensual ou sexual, alheia à vontade da pessoa a quem se dirige. Ou seja, abordagens grosseiras, ofensas e propostas inadequadas que constrangem, humilham, amedrontam". Tem que ter consentimento! Quer exemplos de assédio? Comentários obscenos na rua, cantadas no trabalho e encoxadas no transporte público. Pra conhecer mais dados, me responde com "dados sobre assédio".',
-  
+
   ABOUT_HARASSMENT_DATA: 'Uma pesquisa do Ipea em 2014 diz que 58% dos entrevistados concordaram, total ou parcialmente, que "se mulheres soubessem se comportar mais, haveria menos estupros". Dados da ActionAind de 2016 afirmam que 16% das mulheres foram assediadas antes dos 10 anos. Já a campanha #MeuPrimeiroAssedio mostrou que a idade média para o 1º assédio é 9,7 anos. A pesquisa divulgada pela Think Olga em 2013 conta que 81% das mulheres já deixou de fazer algo por medo do assédio. 85% disseram que já passaram a mão nelas e 82% afirmam que homens já tentaram agarrá-las na balada. 😡 Para referências, me responde com "referências sobre assédio".',
 
   ABOUT_HARASSMENT_REFS: 'Ai, adoro quem quer saber mais! Dá só uma olhada em algumas referências: 1) Pesquisa Think Olga: bit.ly/tolga_assedio 2) Matéria Jornal do Brasil: bit.ly/jb_assedio 3) Cartilha Think Olga + Defensoria Pública de SP: bit.ly/assedio_cartilha 4) Dados #MeuPrimeiroAssedio: bit.ly/campanhatolga_assedio 5) Compilação da SPW de matérias sobre o debate de assédio: bit.ly/debates_assedio 6) Carta de um homem trans ao Antigo Regime sexual: bit.ly/assedio_trans 7) Viva o feminismo agonístico: bit.ly/assedio_IMS',
@@ -463,7 +475,7 @@ export default {
   ABOUT_FEMINICIDE: 'Feminicídio é quando uma mulher é assassinada justamente por ser mulher. Em 2015, foi sancionada a Lei do Feminicídio no Brasil. Hoje, o assassinato de mulheres cis e trans é considerado crime hediondo quando envolver violência doméstica e familiar e/ou menosprezo ou discriminação à condição de mulher como motivadores. Pra saber como ajudar a combater o feminicídio, acesse www.issoefeminicidio.org',
 
   WHAT_YOU_CAN_DO: 'Tô vendo que você é que nem eu: #InimigasdoFim! 😂 Além de compartilhar minha página com a galera, você pode sugerir conteúdos ou campanhas pra serem divulgados aqui! É só mandar email pra beta@nossas.org - Eu sei que email é meio vintage, mas a galera que me programa é das antigas.',
-  
+
   NICE_TO_MEET_YOU: 'Muito prazer. 😁 Para saber o que tenho pra te contar, digite "menu".',
 
   ABOUT_EMAIL_MESSAGES: 'O tipo de email que eu vou enviar vai depender do projeto que estiver sendo discutido naquele momento. Por exemplo: se for um projeto que ameaça algum direito das mulheres, eu vou mandar uma mensagem pedindo que o(s) tomador(es) de decisão vote(m) contra o projeto. Mas não se preocupe: antes de enviar o email, eu vou te mostrar a mensagem para você aprovar. Só com o seu ok, eu faço o envio. 😉',
@@ -493,7 +505,7 @@ export default {
   ABOUT_MARCHA_MUNDIAL: 'A Marcha Mundial de Mulheres existe desde 2000. Se você quiser acompanhar o grupo, é só acessar a página http://www.marchamundialdasmulheres.org.br ou o blog https://marchamulheres.wordpress.com',
 
   ABOUT_GENDER_PARITY: 'Lá vem textão! 📜 Paridade de gênero é a igualdade entre homens e mulheres nas mais diversas esferas sociais, incluindo não só a igualdade de direitos, mas também a não discriminação das mulheres, para que todes tenham acesso às mesmas oportunidades de existência na sociedade. Quando falamos em paridade na política, por exemplo, o Brasil ainda está muito distante: apenas 9,9% das parlamentares são mulheres. No trabalho, a situação não muda muito: o Fórum Econômico Social divulgou uma pesquisa, em 2016, mostrando que só daqui a 170 anos homens e mulheres terão igualdade salarial. Temos muito trabalho pela frente. 💪',
-  
+
   ABOUT_GENDER_IDEOLOGY: 'Eu até diria que essa tal de “ideologia de gênero” não tem pé nem cabeça, mas eu também não tenho e tô aqui lutando pelos direitos das mulheres 🙌 Para você entender melhor essa história, separei alguns conteúdos bem interessantes, dá só uma olhada: bit.ly/soniacorrea_generoameacado, bit.ly/entrevista_jimenafurlani, bit.ly/porqueideologiadegenero, bit.ly/judithbutler_bbc bit.ly/judith_azmina 😘',
 
   ABOUT_MAPA_DO_ACOLHIMENTO: 'Como eu amo esse projeto 💓 O Mapa do Acolhimento conecta mulheres vítimas de violência a advogadas, terapeutas e serviços públicos prontos para ajudá-las. Se você quer se voluntariar, precisa de ajuda ou está curiosa, vai lá no site: www.mapadoacolhimento.org/ Eu e o Mapa somos irmãos: nós fomos criados pelo Nossas, um laboratório de ativismo que cria novas formas das pessoas influenciarem e ressignificarem a política. Quer saber mais? Confere o site: www.nossas.org',
@@ -509,11 +521,11 @@ export default {
   ABOUT_HACK_SYSTEM: 'Eita, Giovana! Quanto eu digo "hackear o sistema", não me leve ao pé da letra. 😉 Eu falo "hackear" no sentido de "quebrar os códigos", de encontrar formas de interferir e influenciar ativamente na construção do sistema. Eu faço isso, por exemplo, criando campanhas que convidam as pessoas a enviarem mensagens aos políticos em Brasília para eles barrarem leis que são retrocessos para os direitos das mulheres. Sou uma hacker do bem! 😊',
 
   ABOUT_ABORTION: 'Eu sou robô, nunca vou engravidar, nem precisar abortar. Mas considerando que 1 em cada 5 brasileiras já passou por um aborto e que 1 mulher morre a cada 2 dias por abortos feitos de forma insegura, me parece que é um assunto a ser tratado com mais urgência e menos visões de "certo ou errado". Não é sobre ser a favor ou contra. É sobre estar atenta às experiências reais e às estatísticas para criar políticas que façam sentido e que protejam a vida das mulheres. Se o aborto não fosse crime, ninguém seria obrigada a abortar. Mas aquelas que optassem poderiam fazê-lo sem colocar a própria vida em risco. Me parece bem importante.',
-  
+
   ABOUT_HELP_ABUSE: 'Que vontade de te dar um abraço, mana! Primeiro de tudo, saiba que nenhuma mulher vítima de abuso precisa ficar sozinha. Eu não fui programada para ajudar diretamente mulheres em situação de abuso, mas você pode (e deve!) buscar ajuda especializada. Pelo telefone 180, você entra em contato com a Central de Atendimento à Mulher em Situação de Violência. É um serviço público gratuito e confidencial com funcionamento 24h. Você também pode se informar se a sua cidade tem uma Delegacia Especializada no Atendimento à Mulher, que realiza prevenção, proteção e investigação de violência contra a mulher, física ou psicológica. Força! 💗',
 
   ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem só 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
-  
+
   ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solteira, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Agora, ela enfrenta um novo desafio: a discriminação do mercado de trabalho. Não podemos deixá-la sozinha! Conheça melhor sua história e a nossa campanha aqui: http://pelavidaderebeca.org',
 
   ABOUT_REBECA_CAMPAIGN: 'Com toda a exposição midiática em torno do caso de Rebeca, ela pode agora sofrer grande discriminação no mercado de trabalho. O que Rebeca fez foi por todas as brasileiras, chegou nossa hora de lutar por ela. Para isso, junto da Think Olga e da Anis, eu criei a campanha Um Emprego Para a Rebeca! Você pode oferecer ou indicar uma vaga e compartilhar a campanha na sua rede. Vamos juntas? Acesse nosso site e conheça: http://pelavidaderebeca.org',

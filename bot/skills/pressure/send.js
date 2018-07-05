@@ -1,9 +1,9 @@
 import 'colors'
 import axios from 'axios'
 
-export default ({ profile, botData, senderEmail }) => {
+export default ({ profile, botData, widgetId, senderEmail }) => {
   if (botData.data.pressure) {
-    const { widget_id: widgetId } = botData.data.pressure
+    //const { widget_id: widgetId } = botData.data.pressure
 
     if (widgetId) {
       const widget = global.widgets[widgetId]
