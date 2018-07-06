@@ -133,12 +133,10 @@ export default {
   //
   // ---------------- CAMPANHAS FAKES ------------------------
   //
-
-  //
-  // CAVALO DE TROIA
-  //
   FK1: 'O Cavalo de Troia voltou! 🐎 A votação da PEC 181 foi reagendada para hoje. Precisamos nos mobilizar AGORA para impedir que os deputados aprovem a proposta que pode proibir totalmente o aborto no Brasil, mesmo em caso de estupro. Clique no botão abaixo para disparar uma mensagem para os políticos exigindo que eles barrem esse retrocesso! 👇👇👇',
   FK2: 'Vamos acabar com o casamento infantil?',
+  FK3: 'Eu tenho uma irmã incrível: a Minha Sampa, outro projeto do Nossas. As manas de lá estão se mobilizando para que as mulheres tenham um direito já garantido por lei respeitado na prática: desembarcar dos ônibus fora do ponto depois das 22h.',
+  FK3_1: 'Queremos que a SPTrans instale placas informativas nos ônibus, conscientizando motoristas e passageiras  sobre a lei da lei.  Entre em ação por uma cidade mais segura para as mulheres, que já carregam assédio e violência na lista de receios!',
   //
   // ---------------- FIM CAMPANHAS FAKES ------------------------
   //

@@ -30,13 +30,19 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         if (interaction.action == undefined) dispatched = false
         else {
           //Set the widget according to the action for each campaign 
+          let widgetsOpts = [
+            global.widgets[botData.data.pressure[0].widget_id].id, //casamento
+            global.widgets[botData.data.pressure[1].widget_id].id, //sp trans
+            global.widgets[botData.data.pressure[2].widget_id].id, // pec 181
+          ]
           const widgetId = interaction.action == speech.actions.V2_QUICK_REPLY_FK1_1
-            ? global.widgets[botData.data.pressure[1].widget_id].id
-            : global.widgets[botData.data.pressure[0].widget_id].id
+            ? widgetsOpts[2]
+            : interaction.action == speech.actions.V2_QUICK_REPLY_FK2_2 ? widgetsOpts[0] : widgetsOpts[1]
 
           switch (interaction.action) {
             case speech.actions.V2_QUICK_REPLY_FK1_1:
             case speech.actions.V2_QUICK_REPLY_FK2_2:
+            case speech.actions.V2_QUICK_REPLY_FK3_1:
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
@@ -50,7 +56,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                   ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
                   : speech.actions.VMDM_EMAIL_ADDRESS_OK
               }
-
+              console.log('widgetId', widgetId)
               const replyMessage = speech.messages[action].constructor === Function
                 ? speech.messages[action](profile)
                 : speech.messages[action]

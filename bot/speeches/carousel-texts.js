@@ -50,6 +50,7 @@ export default {
   //
   FK1: 'PEC 181',
   FK2: 'Casamento Infantil',
+  FK3: 'SP para mulheres',
   //
   // ---------------- FIM CAMPANHAS FAKES ------------------------
 

@@ -85,6 +85,9 @@ const V2_QUICK_REPLY_FK1_1 = 'V2_QUICK_REPLY_FK1_1'
 const V2_QUICK_REPLY_FK2 = 'V2_QUICK_REPLY_FK2'
 const V2_QUICK_REPLY_FK2_2 = 'V2_QUICK_REPLY_FK2_2'
 
+const V2_QUICK_REPLY_FK3 = 'V2_QUICK_REPLY_FK3'
+const V2_QUICK_REPLY_FK3_1 = 'V2_QUICK_REPLY_FK3_1'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -96,6 +99,7 @@ export default botData => ({
     [GET_STARTED]: GET_STARTED,
     [V2_QUICK_REPLY_FK1_1]: V2_QUICK_REPLY_FK1_1,
     [V2_QUICK_REPLY_FK2_2]: V2_QUICK_REPLY_FK2_2,
+    [V2_QUICK_REPLY_FK3_1]: V2_QUICK_REPLY_FK3_1,
     [V2_QUICK_REPLY_CA]: V2_QUICK_REPLY_CA,
     [V2_QUICK_REPLY_EDUCATION]: V2_QUICK_REPLY_EDUCATION,
     [V2_QUICK_REPLY_G_10]: V2_QUICK_REPLY_G_10,
@@ -528,6 +532,17 @@ export default botData => ({
           ],
         ),
         elements(
+          botSpeeches.carouselTexts.FK3,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.FK3,
+              payload: V2_QUICK_REPLY_FK3
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.FK2,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_VIOLENCE,
@@ -537,18 +552,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_FK2
             })
           ],
-        ),
-        /* elements(
-          botSpeeches.carouselTexts.VOTE,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.VOTE,
-              payload: V2_QUICK_REPLY_VOTE
-            })
-          ],
-        ) */
+        )
       )
     ],
     //
@@ -565,6 +569,19 @@ export default botData => ({
       ],
     },
     [V2_QUICK_REPLY_FK1_1]: () => ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
+    }),
+    //
+    // SP para mulheres 
+    //
+    [V2_QUICK_REPLY_FK3]: [
+      botSpeeches.messages.FK3,
+      messageWithQuickReply(
+        botSpeeches.messages.FK3_1,
+        quickReply(V2_QUICK_REPLY_FK3_1, botSpeeches.buttonTexts.FK1),
+      )
+    ],
+    [V2_QUICK_REPLY_FK3_1]: () => ({
       text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
     }),
 
