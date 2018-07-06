@@ -523,7 +523,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.FK1,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_EDUCATION,
+          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.EDUCATION_1,
@@ -534,7 +534,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.FK3,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
+          botSpeeches.carouselTexts.IMAGE_VIOLENCE,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.FK3,
@@ -545,7 +545,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.FK2,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_VIOLENCE,
+          botSpeeches.carouselTexts.IMAGE_EDUCATION,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.FK2,
@@ -656,8 +656,8 @@ export default botData => ({
     [V2_EMAIL_ADDRESS_WRONG]: ({
       text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
     }),
-    [V2_EMAIL_ADDRESS_OK]: profile => ({
-      text: botSpeeches.messages.EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO(profile.first_name),
+    [V2_EMAIL_ADDRESS_OK]: (profile, count) => ({
+      text: botSpeeches.messages.EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO(profile.first_name, count),
       quick_replies: [
         quickReply(V2_QUICK_REPLY_H_10, botSpeeches.buttonTexts.SHARE),
         quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW),

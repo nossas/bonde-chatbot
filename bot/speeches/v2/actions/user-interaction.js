@@ -56,14 +56,18 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                   ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
                   : speech.actions.VMDM_EMAIL_ADDRESS_OK
               }
-              console.log('widgetId', widgetId)
-              const replyMessage = speech.messages[action].constructor === Function
-                ? speech.messages[action](profile)
-                : speech.messages[action]
 
-              if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
+              /* if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
                 botSkills.pressure.send({ profile, botData, widgetId, senderEmail: payload.message.text })
-              }
+              } */
+              
+              botSkills.pressure.fetchWidgets({ botData })
+              const count = global.widgets[widgetId].count
+
+              const replyMessage = speech.messages[action].constructor === Function
+                ? speech.messages[action](profile, count)
+                : speech.messages[action]
+                
 
               reply(replyMessage, action)
               dispatched = true
