@@ -35,10 +35,12 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
             global.widgets[botData.data.pressure[1].widget_id].id, //sp trans
             global.widgets[botData.data.pressure[2].widget_id].id, // pec 181
           ]
+          console.log('widget options: ', widgetsOpts)
           const widgetId = interaction.action == speech.actions.V2_QUICK_REPLY_FK1_1
             ? widgetsOpts[2]
             : interaction.action == speech.actions.V2_QUICK_REPLY_FK2_2 ? widgetsOpts[0] : widgetsOpts[1]
 
+          console.log(widgetId)
           switch (interaction.action) {
             case speech.actions.V2_QUICK_REPLY_FK1_1:
             case speech.actions.V2_QUICK_REPLY_FK2_2:
