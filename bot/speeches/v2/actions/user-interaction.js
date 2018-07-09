@@ -57,10 +57,6 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                   : speech.actions.VMDM_EMAIL_ADDRESS_OK
               }
 
-              if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
-                botSkills.pressure.send({ profile, botData, widgetId, senderEmail: payload.message.text })
-              }
-              
               botSkills.pressure.fetchWidgets({ botData })
               const count = global.widgets[widgetId].count
 
@@ -68,6 +64,10 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 ? speech.messages[action](profile, count)
                 : speech.messages[action]
 
+                
+              if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
+                botSkills.pressure.send({ profile, botData, widgetId, senderEmail: payload.message.text })
+              }
 
               reply(replyMessage, action)
               dispatched = true
