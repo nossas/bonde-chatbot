@@ -29,6 +29,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
       if (interaction.is_bot) {
         if (interaction.action == undefined) dispatched = false
         else {
+          console.log('interaction action: ', interaction.action)
           //Set the widget according to the action for each campaign 
           let widgetsOpts = [
             global.widgets[botData.data.pressure[0].widget_id].id, //casamento
