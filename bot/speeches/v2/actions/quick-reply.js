@@ -1,6 +1,7 @@
 import { client as graphqlClient } from '../../../../graphql'
 import * as graphqlQueries from '../../../../graphql/queries'
 import * as botSkills from '../../../skills'
+import sendForm from './send-form'
 
 //
 // Quick reply actions (EXAMPLE)
@@ -14,12 +15,20 @@ import * as botSkills from '../../../skills'
 //
 export default ({ speech, action, payload, profile, botData }) => {
   let dispatched = false
-
+  console.log('action no QR: ',action)
   switch (action) {
     //
     // Execute an action based on quick reply
     //
-    case speech.actions.QUICK_REPLY_H:
+    case speech.actions.V2_QUICK_REPLY_M6_NAME:
+      console.log('Entrou no reply name!')
+      sendForm({ profile, botData, senderName: payload.message.text })
+      const replyMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME]
+      let action = V2_QUICK_REPLY_M6_SURNAME
+      reply(replyMessage, action)
+      dispatched = true
+      break;
+    /* case speech.actions.QUICK_REPLY_H:
       graphqlClient.query({
         fetchPolicy: 'network-only',
         query: graphqlQueries.fetchActivistLastInteraction,
@@ -33,7 +42,7 @@ export default ({ speech, action, payload, profile, botData }) => {
         })
         .catch(err => Promise.reject(`Speeches Quick Reply Error: ${JSON.stringify(err)}`.red))
       dispatched = true
-      break;
+      break; */
   }
 
   return dispatched

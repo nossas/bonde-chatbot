@@ -3,6 +3,7 @@ import { client as graphqlClient } from '../../../../graphql'
 import * as graphqlQueries from '../../../../graphql/queries'
 import * as botSkills from '../../../skills'
 import * as isemail from '../../../utils/isemail'
+import sendForm from './send-form'
 
 //
 // User interaction actions
@@ -22,7 +23,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
   .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
     const [last] = interactions
     let dispatched = false
-
+    var userInfo = []
     if (last && last.interaction) {
       const interaction = JSON.parse(last.interaction)
 
@@ -30,6 +31,23 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         if (interaction.action == undefined) dispatched = false
         else {
           switch (interaction.action) {
+            case speech.actions.V2_QUICK_REPLY_M6_NAME:
+              //sendForm({ profile, botData, senderName: payload.message.text })
+              const nameMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME]
+              const nameAction = speech.actions.V2_QUICK_REPLY_M6_SURNAME
+              userInfo.push(payload.message.text)
+              reply(nameMessage, nameAction)
+              dispatched = true
+              break;
+            case speech.actions.V2_QUICK_REPLY_M6_SURNAME:
+              console.log('Entrou no reply name!')
+              const surnameMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_EMAIL]
+              const surnameAction = speech.actions.V2_QUICK_REPLY_M6_EMAIL
+              userInfo.push(payload.message.text) 
+              sendForm({ profile, botData, userInfo })
+              reply(surnameMessage, surnameAction)
+              dispatched = true
+              break;
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:

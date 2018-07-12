@@ -52,6 +52,16 @@ export default {
 
   LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar - para voltar a este menu digite a qualquer momento a palavra "menu" e eu te trarei de volta:',
   //
+  // Mapa do acolhimento
+  //  
+  MAP: 'Sofreu violência sexual? Inscreva-se no Mapa do Acolhimento para receber informações sobre a rede de acolhimento. Contamos com com mais de 400 terapeutas inscritas de diferentes cidades do Brasil dispostas a oferecer seus serviços gratuitos a você.  X mulheres já buscaram apoio na rede de acolhimento.',
+  MAP_1: 'Querida, você vai entrar agora no modo de preenchimento de formulário. As suas informações só serão salvas quando você responder todas as 6 perguntas. Caso você queira sair antes, envie a mensagem “parar preenchimento do formulário”',
+  MAP_NAME: 'Nome: ',
+  MAP_SURNAME: 'Sobrenome: ',
+  MAP_EMAIL: 'Email: ',
+  MAP_CITY: 'Cidade: ',
+  MAP_REGISTERED: 'Você registrou o caso? Sim ou não',
+  //
   // Mais sobre a Beta
   //  
   MORE_ABOUT_BETA: 'Uuuh, quer me conhecer melhor? Adoro! Minha história começou no Nossas, o laboratório de ativismo que me criou como novo canal de participação política.  Quer saber exatamente o que eu faço? #misteriosa',

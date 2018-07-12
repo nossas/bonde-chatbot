@@ -107,4 +107,11 @@ export default {
   READ_MESSAGE: 'Ver mensagem',
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
   READ_EMAIL: 'Ver email',
+  //
+  // Mapa do acolhimento
+  //
+  I_WANT_SUPPORT: 'Quero apoio!',
+  I_WANT_TO_SUPPORT: 'Quero apoiar!',
+  UNDERSTOOD: 'Entendido, Beta!',
+  
 }
