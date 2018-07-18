@@ -589,4 +589,20 @@ export default {
 
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
+
+  //
+  // Argentina
+  //
+  ARG: '¿Quién me está llamando?! Soy Beta - la robot feminista! 💚 Fui creada por brasileñas para ser una herramienta de acción de mujeres por sus derechos.',
+  ARG_1: 'He traducido mi código respondiendo a un pedido de la Campaña Nacional por el Derecho al Aborto Legal, Seguro y Gratuito para movilizarte a ti y a miles de personas por la aprobación del proyecto de ley que puede legalizar el aborto en Argentina! ¿Vamos juntas?',
+  ARG_A: 'El proyecto de ley para legalizar el aborto hasta la 14a semana de embarazo ya ha sido aprobada en la Cámara de Representantes y ahora debe ser aprobada en el Senado! Todo gracias a años de movilización de las mujeres argentinas. 😍 El Presidente ya ha dicho que va a sancionar la ley si el Senado la aprueba - falta poco!',
+  ARG_A_1: 'Tenemos hasta el 8 de Agosto - fecha en que la votación sucederá en el Senado - para llenar el buzón de correo de los senadores y de las senadoras con miles de mensajes pidiendo la aprobación de ese Proyecto de Ley. Las personas que están en contra del proyecto ya están en contacto con los congresistas, ahora es nuestra vez - y vamos a llegar con todo! 💪 ¿Estás conmigo?',
+  ARG_C: 'El proyecto asegura la posibilidad de interrupción del embarazo hasta las 14 semanas, excepto en casos especiales; que el procedimiento deberá ser garantizado en todos los centros de salud públicos o privados, a partir de cinco días de hecha la solicitud; y prevé el acceso a las niñas hasta los 16 años, considerando la legislación existente, pero respetando el derecho de que sean oídas.',
+  ARG_C_1: 'La objeción de conciencia está garantizada, pero la no atención podrá ser penalizada. El proyecto prevé la creación de políticas para la prevención del embarazo no deseado y de fortalecimiento de la salud sexual y reproductiva de la población, lo que incluye programas de educación sexual integral y creación de registro estadístico para monitoreo y evaluación.',
+  ARG_B: 'ME GUSTA! Nuestra acción funciona de esta manera: te enseño el mensaje que vamos enviar, tú lo apruebas y yo envio un correo electrónico, que sale en tu nombre, para cada uno de los senadores y cada una de las  senadoras. Todo aquí desde este chat. ¡A ver si pueden con nuestra presión! 📩📩',
+  ARG_E: 'Estimados senadores y senadores de la República, esperamos de ustedes la reparación de una deuda del Estado democrático con todas las mujeres en la Argentina: la garantía del derecho a la salud, la dignidad, a la igualdad, a la autonomía y en la igualdad - derechos violados mientras la interrupción voluntaria de la gestación es criminalizada. Queremos, por lo tanto, la aprobación integral del Proyecto de Ley de Interrupción Voluntaria del Embarazo (IVE).',
+  ARG_G: 'Debe estar ocupada allí, ¿verdad? ¡Sin problemas! Para obtener más información, visita la Campaña Nacional por el Derecho al Aborto Legal, Seguro y Gratuito: http://www.abortolegal.com.ar/',
+  ARG_EMAIL_ADDRESS_ASK: 'Estamos casi terminando! Ahora sólo necesito que me escribas tu dirección de correo - tu serás la remitente y yo, la mensajera! 🤖',
+  ARG_EMAIL_ADDRESS_WRONG: 'Vaya, parece que introduciste un correo electrónico inválido. Puedes chequear la dirección y enviarmela aquí de nuevo, por favor? 🙈',
+  ARG_EMAIL_ADDRESS_OK: name => `Buena, ${name}! 👏👏 Tenemos una última misión: para que nuestra voz sea escuchada, necesitamos potencializar nuestro coro! ¡Comparte e invita a tus amigas para que se unan a nuestro campaña de presión! 🚂 💪`,
 }

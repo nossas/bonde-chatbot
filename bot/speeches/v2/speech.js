@@ -76,6 +76,17 @@ const V2_QUICK_REPLY_H_10 = 'V2_QUICK_REPLY_H_10'
 const V2_EMAIL_ADDRESS_WRONG = 'V2_EMAIL_ADDRESS_WRONG'
 const V2_EMAIL_ADDRESS_OK = 'V2_EMAIL_ADDRESS_OK'
 
+//Argentina campaing 
+const V2_QUICK_REPLY_ARG = 'V2_QUICK_REPLY_ARG'
+const V2_QUICK_REPLY_ARG_A = 'V2_QUICK_REPLY_ARG_A'
+const V2_QUICK_REPLY_ARG_B = 'V2_QUICK_REPLY_ARG_B'
+const V2_QUICK_REPLY_ARG_C = 'V2_QUICK_REPLY_ARG_C'
+const V2_QUICK_REPLY_ARG_D = 'V2_QUICK_REPLY_ARG_D'
+const V2_QUICK_REPLY_ARG_E = 'V2_QUICK_REPLY_ARG_E'
+const V2_QUICK_REPLY_ARG_F = 'V2_QUICK_REPLY_ARG_F'
+const V2_QUICK_REPLY_ARG_G = 'V2_QUICK_REPLY_ARG_G'
+const V2_ARG_EMAIL_ADDRESS_WRONG = 'V2_ARG_EMAIL_ADDRESS_WRONG'
+const V2_ARG_EMAIL_ADDRESS_OK = 'V2_ARG_EMAIL_ADDRESS_OK'
 
 
 
@@ -96,6 +107,9 @@ export default botData => ({
     [VMDM_QUICK_REPLY_I]: VMDM_QUICK_REPLY_I,
     [VMDM_EMAIL_ADDRESS_WRONG]: VMDM_EMAIL_ADDRESS_WRONG,
     [VMDM_EMAIL_ADDRESS_OK]: VMDM_EMAIL_ADDRESS_OK,
+    [V2_QUICK_REPLY_ARG_D]: V2_QUICK_REPLY_ARG_D,
+    [V2_ARG_EMAIL_ADDRESS_WRONG]: V2_ARG_EMAIL_ADDRESS_WRONG,
+    [V2_ARG_EMAIL_ADDRESS_OK]: V2_ARG_EMAIL_ADDRESS_OK,
   },
   messages: {
 
@@ -141,9 +155,20 @@ export default botData => ({
       botSpeeches.messages.LIST,
       carouselTemplate(
         elements(
+          botSpeeches.carouselTexts.TITLE_ARG,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ARG, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ARG,
+              payload: V2_QUICK_REPLY_ARG
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT, //TODO
+          botSpeeches.carouselTexts.IMAGE_ACT, 
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -190,6 +215,17 @@ export default botData => ({
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
         elements(
+          botSpeeches.carouselTexts.TITLE_ARG,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ARG, //TODO
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ARG,
+              payload: V2_QUICK_REPLY_ARG
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_ACT, //TODO
@@ -236,6 +272,72 @@ export default botData => ({
       )
     ],
 
+    //
+    // Argentina
+    //
+    [V2_QUICK_REPLY_ARG]: [
+      botSpeeches.messages.ARG,
+      messageWithQuickReply(
+        botSpeeches.messages.ARG_1,
+        quickReply(V2_QUICK_REPLY_ARG_A, botSpeeches.buttonTexts.ARG_VAMOS),
+      )
+    ],
+    [V2_QUICK_REPLY_ARG_A]: [
+      botSpeeches.messages.ARG_A,
+      messageWithQuickReply(
+        botSpeeches.messages.ARG_A_1,
+        quickReply(V2_QUICK_REPLY_ARG_B, botSpeeches.buttonTexts.ARG_ACTUAR),
+        quickReply(V2_QUICK_REPLY_ARG_C, botSpeeches.buttonTexts.ARG_MAS),
+      )
+    ],
+    [V2_QUICK_REPLY_ARG_C]: [
+      botSpeeches.messages.ARG_C,
+      messageWithQuickReply(
+        botSpeeches.messages.ARG_C_1,
+        quickReply(V2_QUICK_REPLY_ARG_B, botSpeeches.buttonTexts.ARG_ACTUAR),
+      )
+    ],
+    [V2_QUICK_REPLY_ARG_B]: {
+      text: botSpeeches.messages.ARG_B,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_ARG_D, botSpeeches.buttonTexts.ARG_ENVIAR),
+        quickReply(V2_QUICK_REPLY_ARG_E, botSpeeches.buttonTexts.ARG_MESSAJE),
+      ],
+    },
+    [V2_QUICK_REPLY_ARG_E]: {
+      text: botSpeeches.messages.ARG_E,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_ARG_D, botSpeeches.buttonTexts.ARG_ENVIAR_AHORA),
+      ],
+    },
+    [V2_QUICK_REPLY_ARG_D]: () => ({
+      text: botSpeeches.messages.ARG_EMAIL_ADDRESS_ASK
+    }),
+    [V2_ARG_EMAIL_ADDRESS_WRONG]: ({
+      text: botSpeeches.messages.ARG_EMAIL_ADDRESS_WRONG
+    }),
+    [V2_ARG_EMAIL_ADDRESS_OK]: profile => ({
+      text: botSpeeches.messages.ARG_EMAIL_ADDRESS_OK(profile.first_name),
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_ARG_F, botSpeeches.buttonTexts.ARG_COMPARTE), 
+        quickReply(V2_QUICK_REPLY_ARG_G, botSpeeches.buttonTexts.ARG_AHORA_NO), 
+      ],
+    }),
+    //Share campaign
+    [V2_QUICK_REPLY_ARG_F]: [
+      genericTemplate({
+        title: 'Campaña Nacional por el Derecho al Aborto Legal, Seguro y Gratuito',
+        subtitle: '',
+        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        buttons: [
+          buttonTemplate.elementShare()
+        ],
+      }),
+    ],
+    [V2_QUICK_REPLY_ARG_G]: {
+      text: botSpeeches.messages.ARG_G,
+    },
+    
     //
     // Mais sobre a beta
     //

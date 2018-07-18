@@ -42,7 +42,12 @@ export default {
   BUTTON_RADAR:'Clique aqui 🔎',
   BUTTON_SHARE:'Clique aqui 💜',
   BUTTON_MORE:'Clique aqui 🔮',
-
-
+  
+  //
+  // Argentina
+  //
+  TITLE_ARG: 'Aborto legal en Argentina',
+  BUTTON_ARG:'Aborto legal en Argentina',
+  IMAGE_ARG: 'https://i0.wp.com/s3-sa-east-1.amazonaws.com/b-s3.desacato/wp-content/uploads/2018/06/14202954/D%C3%A9bora.jpg?fit=1050%2C700',
 
 }

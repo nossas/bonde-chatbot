@@ -107,4 +107,16 @@ export default {
   READ_MESSAGE: 'Ver mensagem',
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
   READ_EMAIL: 'Ver email',
+
+  //
+  // Argentina
+  //
+  ARG_VAMOS: '¡Vamos!',
+  ARG_ACTUAR: 'Quiero actúar!',
+  ARG_MAS: 'Más sobre el proyecto de ley',
+  ARG_ENVIAR: 'Enviar ahora!',
+  ARG_MESSAJE: 'Leer el mensaje',
+  ARG_ENVIAR_AHORA: 'Enviar mensaje ahora!',
+  ARG_COMPARTE: 'Comparte!',
+  ARG_AHORA_NO: 'Ahora no',
 }

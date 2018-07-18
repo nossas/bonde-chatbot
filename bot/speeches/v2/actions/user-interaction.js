@@ -30,6 +30,23 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         if (interaction.action == undefined) dispatched = false
         else {
           switch (interaction.action) {
+            case speech.actions.V2_QUICK_REPLY_ARG_D:
+            case speech.actions.V2_ARG_EMAIL_ADDRESS_WRONG:
+              let argAction = !isemail.validate(payload.message.text)
+                ? speech.actions.V2_ARG_EMAIL_ADDRESS_WRONG
+                : speech.actions.V2_ARG_EMAIL_ADDRESS_OK
+
+              const argReplyMessage = speech.messages[argAction].constructor === Function
+                ? speech.messages[argAction](profile)
+                : speech.messages[argAction]
+
+              if (argAction === speech.actions.V2_ARG_EMAIL_ADDRESS_OK) {
+                botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
+              }
+
+              reply(argReplyMessage, argAction)
+              dispatched = true
+              break;
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
