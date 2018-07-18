@@ -113,5 +113,6 @@ export default {
   I_WANT_SUPPORT: 'Quero apoio!',
   I_WANT_TO_SUPPORT: 'Quero apoiar!',
   UNDERSTOOD: 'Entendido, Beta!',
+  SHARE_FRIENDS: 'Compartilhar com amigues',
   
 }
