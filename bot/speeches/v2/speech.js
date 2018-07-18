@@ -328,7 +328,7 @@ export default botData => ({
       genericTemplate({
         title: 'Campaña Nacional por el Derecho al Aborto Legal, Seguro y Gratuito',
         subtitle: '',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        imageURL: 'https://i0.wp.com/s3-sa-east-1.amazonaws.com/b-s3.desacato/wp-content/uploads/2018/06/14202954/D%C3%A9bora.jpg?fit=1050%2C700',
         buttons: [
           buttonTemplate.elementShare()
         ],
