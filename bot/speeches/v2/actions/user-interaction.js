@@ -23,29 +23,52 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
   .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
     const [last] = interactions
     let dispatched = false
-    var userInfo = []
+    //console.log('interactions:', interactions)
     if (last && last.interaction) {
       const interaction = JSON.parse(last.interaction)
-
       if (interaction.is_bot) {
         if (interaction.action == undefined) dispatched = false
         else {
           switch (interaction.action) {
             case speech.actions.V2_QUICK_REPLY_M6_NAME:
-              //sendForm({ profile, botData, senderName: payload.message.text })
-              const nameMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME]
               const nameAction = speech.actions.V2_QUICK_REPLY_M6_SURNAME
-              userInfo.push(payload.message.text)
+              const nameMessage = speech.messages[nameAction]
+              //userInfo.push(payload.message.text)
+              //sendForm({ payload, profile, botData, userInfo })
               reply(nameMessage, nameAction)
               dispatched = true
               break;
             case speech.actions.V2_QUICK_REPLY_M6_SURNAME:
-              console.log('Entrou no reply name!')
-              const surnameMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_EMAIL]
               const surnameAction = speech.actions.V2_QUICK_REPLY_M6_EMAIL
-              userInfo.push(payload.message.text) 
-              sendForm({ profile, botData, userInfo })
+              const surnameMessage = speech.messages[surnameAction]
+              //userInfo.push(payload.message.text) 
               reply(surnameMessage, surnameAction)
+              dispatched = true
+              break;
+            case speech.actions.V2_QUICK_REPLY_M6_EMAIL:
+            case speech.actions.V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG:
+              //const emailAction = speech.actions.V2_QUICK_REPLY_M6_CITY
+              let emailAction = !isemail.validate(payload.message.text)
+                ? speech.actions.V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG
+                : speech.actions.V2_QUICK_REPLY_M6_CITY
+              const emailMessage = speech.messages[emailAction]
+              //userInfo.push(payload.message.text) 
+              reply(emailMessage, emailAction)
+              dispatched = true
+              break;
+            case speech.actions.V2_QUICK_REPLY_M6_CITY:
+              const cityAction = speech.actions.V2_QUICK_REPLY_M6_REGISTERED
+              const cityMessage = speech.messages[cityAction]
+              //userInfo.push(payload.message.text) 
+              reply(cityMessage, cityAction)
+              dispatched = true
+              break;
+            case speech.actions.V2_QUICK_REPLY_M6_REGISTERED:
+              const registerAction = speech.actions.V2_QUICK_REPLY_M7
+              const registerMessage = speech.messages[registerAction]
+              //userInfo.push(payload.message.text) 
+              //sendForm({ payload })
+              reply(registerMessage, registerMessage)
               dispatched = true
               break;
             case speech.actions.V2_QUICK_REPLY_G_10:
