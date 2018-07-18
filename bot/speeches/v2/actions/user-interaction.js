@@ -60,6 +60,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
             case speech.actions.V2_QUICK_REPLY_M6_REGISTERED:
               const registerAction = speech.actions.V2_QUICK_REPLY_M7
               const registerMessage = speech.messages[registerAction]
+              sendForm({ payload })
               reply(registerMessage, registerMessage)
               dispatched = true
               break;
