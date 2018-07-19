@@ -40,9 +40,9 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 ? speech.messages[argAction](profile)
                 : speech.messages[argAction]
 
-              /* if (argAction === speech.actions.V2_ARG_EMAIL_ADDRESS_OK) {
+              if (argAction === speech.actions.V2_ARG_EMAIL_ADDRESS_OK) {
                 botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
-              } */
+              }
 
               reply(argReplyMessage, argAction)
               dispatched = true
