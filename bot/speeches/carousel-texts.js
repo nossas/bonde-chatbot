@@ -36,6 +36,11 @@ export default {
   IMAGE_DECRIMINALIZATION: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta10.png',
 
   //
+  // ADPF442
+  //
+  TITLE_ADPF442: 'ADPF 442',
+  BUTTON_ADPF442:'Clique e participe',
+  //
   // Buttons Texts
   //
 

@@ -108,11 +108,24 @@ export default {
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
   READ_EMAIL: 'Ver email',
   //
+  // ADPF442
+  //
+  WHATS_ADPF442: 'O que é a ADPF 442',
+  MORE_ABOUT_ABORTION: 'Mais sobre aborto',
+  SURE_BETA_1: 'Claro, Beta!',
+  ABOUT_ACTION: 'Sobre a ação',
+  ADPF442_NOW: 'É pra já!',
+  SIGN: 'Assinar',
+
+
+  //
   // Mapa do acolhimento
   //
   I_WANT_SUPPORT: 'Quero apoio!',
   I_WANT_TO_SUPPORT: 'Quero apoiar!',
   UNDERSTOOD: 'Entendido, Beta!',
   SHARE_FRIENDS: 'Compartilhar com amigues',
+  I_WANT_TO_GO: 'Quero ir!',
+  OTHER_ACTIONS: 'Outras ações',
   
 }

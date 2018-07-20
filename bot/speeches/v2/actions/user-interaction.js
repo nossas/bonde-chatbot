@@ -30,28 +30,32 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
         if (interaction.action == undefined) dispatched = false
         else {
           switch (interaction.action) {
-            case speech.actions.V2_QUICK_REPLY_M6_NAME:
-              const nameAction = speech.actions.V2_QUICK_REPLY_M6_SURNAME
+            case speech.actions.V2_QUICK_REPLY_PETITION_NAME:
+              const nameAction = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME
               const nameMessage = speech.messages[nameAction]
               reply(nameMessage, nameAction)
               dispatched = true
               break;
-            case speech.actions.V2_QUICK_REPLY_M6_SURNAME:
-              const surnameAction = speech.actions.V2_QUICK_REPLY_M6_EMAIL
+            case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME:
+              const surnameAction = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL
               const surnameMessage = speech.messages[surnameAction]
               reply(surnameMessage, surnameAction)
               dispatched = true
               break;
-            case speech.actions.V2_QUICK_REPLY_M6_EMAIL:
-            case speech.actions.V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG:
+            case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL:
+            case speech.actions.V2_PETITION_EMAIL_WRONG:
               let emailAction = !isemail.validate(payload.message.text)
-                ? speech.actions.V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG
-                : speech.actions.V2_QUICK_REPLY_M6_CITY
+                ? speech.actions.V2_PETITION_EMAIL_WRONG
+                : speech.actions.V2_PETITION_EMAIL_OK
               const emailMessage = speech.messages[emailAction]
+              
+              if (action === speech.actions.V2_PETITION_EMAIL_OK) {
+                sendForm({ payload })
+              }
               reply(emailMessage, emailAction)
               dispatched = true
               break;
-            case speech.actions.V2_QUICK_REPLY_M6_CITY:
+            /* case speech.actions.V2_QUICK_REPLY_M6_CITY:
               const cityAction = speech.actions.V2_QUICK_REPLY_M6_REGISTERED
               const cityMessage = speech.messages[cityAction]
               reply(cityMessage, cityAction)
@@ -63,7 +67,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
               sendForm({ payload })
               reply(registerMessage, registerMessage)
               dispatched = true
-              break;
+              break; */
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:

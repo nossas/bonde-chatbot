@@ -9,7 +9,7 @@ export default ({ payload }) => graphqlClient.query({
     fetchPolicy: 'network-only',
     query: graphqlQueries.fetchFacebookActivistInteractions,
     variables: {
-      first: 5,
+      first: 3,
       fbContextRecipientId: payload.sender.id
     }
   })
@@ -20,16 +20,18 @@ export default ({ payload }) => graphqlClient.query({
       }
     }
   }) => {
-    const [registeredInteraction, cityInteraction, emailInteraction, surnameInteraction, nameInteraction] = nodes //JSON.parse(nodes[0].interaction)
+    const [emailInteraction, surnameInteraction, nameInteraction] = nodes //JSON.parse(nodes[0].interaction)
     const name = JSON.parse(nameInteraction.interaction)
     const surname = JSON.parse(surnameInteraction.interaction)
     const email = JSON.parse(emailInteraction.interaction)
-    const city = JSON.parse(cityInteraction.interaction)
-    const registerd = JSON.parse(registeredInteraction.interaction)
+    /* const city = JSON.parse(cityInteraction.interaction)
+    const registerd = JSON.parse(registeredInteraction.interaction) */
     
     //setup the widget info
-    const moblizationtId = 939
-    const widget_id = 15693
+    /* const moblizationtId = 960
+    const widget_id = 17116 */
+    const moblizationtId = 942
+    const widget_id = 15699
     const fields = JSON.stringify([{
         label: "Nome",
         value: name.payload.message.text
@@ -41,17 +43,9 @@ export default ({ payload }) => graphqlClient.query({
       {
         label: "Email",
         value: email.payload.message.text
-      },
-      {
-        label: "Cidade",
-        value: city.payload.message.text
-      },
-      {
-        label: "Você registrou o caso? Sim ou não",
-        value: registerd.payload.message.text
       }
     ])
-
+    console.log('fields', fields)
     
     const url = `${process.env.API_URL}/mobilizations/${moblizationtId}/form_entries`
     const payload = {

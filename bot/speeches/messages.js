@@ -52,6 +52,25 @@ export default {
 
   LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar - para voltar a este menu digite a qualquer momento a palavra "menu" e eu te trarei de volta:',
   //
+  // ADPF442
+  //  
+  ADPF442: 'Arrasou! Meus algoritmos tão se tremendo todos com essa novidade! 😍 🤖  Clique e confira o que tenho pra te contar:',
+  ADPF_TAKE_ACTION: 'OBA! É o seguinte: nos dias 3 e 6 de agosto, o Supremo Tribunal Federal (STF) vai ouvir mais de 40 especialistas e discutir uma ação (ADPF 442) que propõe a descriminalização do aborto até a 12ª semana de gestação. Babado, né?',
+  ADPF_TAKE_ACTION_1: 'Nessa data a ação ainda não será votada, mas é um momento super importante: tudo que for falado lá vai ser essencial para o futuro julgamento. É a maior chance da sociedade participar desse processo! Quer saber o que você pode fazer?',
+  ADPF_TAKE_ACTION_A: 'Infelizmente a participação do público não vai ser permitida, mas eu tô aqui exatamente pra hackear o sistema, né? Tenho um jeito de fazer as vozes das mulheres chegarem até o ministros! 🔊',
+  ADPF_TAKE_ACTION_A1: 'Coloquei no ar uma petição pra gente mostrar que uma multidão apoia a ação - e vou fazer de tudo pra que ela chegue lá no Distrito Federal com milhares de assinaturas! #BetaHolograma. Pra ver a mensagem da petição e assinar, é só clicar no botão abaixo. Tá comigo?',
+  ADPF_TAKE_ACTION_C: 'O texto da petição é esse aqui, mana:',
+  ADPF_TAKE_ACTION_G: 'Adoro feminista sem fronteiras! Pra conferir a programação completa do Festival é só entrar no evento que elas criaram aqui no Face: http://bit.ly/festpelavidadasmulheresDF . Mesmo que você não esteja em Brasília no dia, compartilhe cazamiga o convite - é importante lotarmos o Festival pra reforçar que estamos juntas pela descriminalização do aborto! Vai ter show, DJ, feira livre feminista e transmissão da audiência em tempo real - só babado. 🎉',
+  ADPF_TAKE_ACTION_H: 'Entre os dias 3 e 6 de agosto, outras cidades também vão ter ações para marcar o período das Audiências Públicas. Aqui nesse site você pode ver todos os lugares que já têm atividades confirmadas! Se quiser inserir no mapa alguma atividade, manda um email pras molieres maravilhosas que estão por trás dos meus códigos: beta@nossas.org',
+  ADPF_PETITION_TEXT: 'Excelentíssimos(as) senhores(as) ministros(as) do STF, nós cidadãos e cidadãs viemos por meio desta petição demonstrar apoio à ADPF 442. Entendemos que a descriminalização do aborto até a 12ª semana é fundamental para garantir dignidade, autonomia e acesso à saúde às mulheres brasileiras. Mais ainda: é uma maneira de reparar uma dívida democrática do Estado brasileiro com as mulheres. A criminalização da interrupção voluntária da gestação provoca altas taxas de morbidade e mortalidade materna, além de sofrimento mental e físico. Pedimos que as mulheres brasileiras tenham, enfim, o direito de decidir sobre seus corpos e suas vidas.',
+
+  ADPF_PETITION_NAME: 'Falta pouco! Agora eu preciso de alguns dados, prometo que só serão usados na assinatura da petição. Primeiro, me envia seu primeiro nome:',
+  ADPF_PETITION_SURNAME: 'Qual o seu sobrenome?',
+  ADPF_PETITION_EMAIL: 'Estamos quase lá! Me fala seu email.',
+  EMAIL_SENT_PETITION_ADPF442: name => `Arrasou, ${name}! 👏👏 sua missão agora é compartilhar essa oportunidade de ação com seus amigues: quanto mais assinaturas, mais forte será nossa mensagem!  💪  Posso contar com você pra espalhar nossa mensagem?`,
+  ADPF_PETITION_NOT_NOW: 'Além de assinar a petição, tem mais maneiras de mostrar ao STF que apoiamos a ADPF 442: chegando junto no Festival pela Vida das Mulheres, que vai acontecer no Museu da República, em Brasília.',
+
+  //
   // Mapa do acolhimento
   //  
   MAP: 'Sofreu violência sexual? Inscreva-se no Mapa do Acolhimento para receber informações sobre a rede de acolhimento. Contamos com com mais de 400 terapeutas inscritas de diferentes cidades do Brasil dispostas a oferecer seus serviços gratuitos a você.  X mulheres já buscaram apoio na rede de acolhimento.',
