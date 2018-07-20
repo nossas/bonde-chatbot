@@ -2,6 +2,7 @@ export default {
   //
   // Generic
   //
+  TITLE_MAP: 'Mapa do Acolhimento',
   TITLE_RADAR: 'Pautas que estou monitorando',
   TITLE_MORE: 'Tudo sobre mim',
   TITLE_ACT: 'Oportunidades de ação',

@@ -4,3 +4,4 @@ export { default as fetchBotLastInteraction } from './fetch-bot-last-interaction
 export { default as fetchBotRecipients } from './fetch-bot-recipients'
 export { default as fetchFacebookBotActivistsStrategy } from './fetch-facebook-bot-activists-strategy'
 export { default as fetchFacebookBotCampaignActivistsByCampaignId } from './fetch-facebook-bot-campaign-activists-by-campaign-id'
+export { default as fetchFacebookActivistInteractions } from './fetch-facebook-activist-interactions'

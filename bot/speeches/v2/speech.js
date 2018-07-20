@@ -76,6 +76,16 @@ const V2_QUICK_REPLY_H_10 = 'V2_QUICK_REPLY_H_10'
 const V2_EMAIL_ADDRESS_WRONG = 'V2_EMAIL_ADDRESS_WRONG'
 const V2_EMAIL_ADDRESS_OK = 'V2_EMAIL_ADDRESS_OK'
 
+const V2_QUICK_REPLY_MAP = 'V2_QUICK_REPLY_MAP'
+const V2_QUICK_REPLY_M4 = 'V2_QUICK_REPLY_M4'
+const V2_QUICK_REPLY_M5 = 'V2_QUICK_REPLY_M5'
+const V2_QUICK_REPLY_M6_NAME = 'V2_QUICK_REPLY_M6_NAME'
+const V2_QUICK_REPLY_M6_SURNAME = 'V2_QUICK_REPLY_M6_SURNAME'
+const V2_QUICK_REPLY_M6_EMAIL = 'V2_QUICK_REPLY_M6_EMAIL'
+const V2_QUICK_REPLY_M6_CITY = 'V2_QUICK_REPLY_M6_CITY'
+const V2_QUICK_REPLY_M6_REGISTERED = 'V2_QUICK_REPLY_M6_REGISTERED'
+const V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG = 'V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG'
+const V2_QUICK_REPLY_M7 = 'V2_QUICK_REPLY_M7'
 
 
 
@@ -96,6 +106,13 @@ export default botData => ({
     [VMDM_QUICK_REPLY_I]: VMDM_QUICK_REPLY_I,
     [VMDM_EMAIL_ADDRESS_WRONG]: VMDM_EMAIL_ADDRESS_WRONG,
     [VMDM_EMAIL_ADDRESS_OK]: VMDM_EMAIL_ADDRESS_OK,
+    [V2_QUICK_REPLY_M6_NAME]: V2_QUICK_REPLY_M6_NAME,
+    [V2_QUICK_REPLY_M6_SURNAME]: V2_QUICK_REPLY_M6_SURNAME,
+    [V2_QUICK_REPLY_M6_EMAIL]: V2_QUICK_REPLY_M6_EMAIL,
+    [V2_QUICK_REPLY_M6_CITY]: V2_QUICK_REPLY_M6_CITY,
+    [V2_QUICK_REPLY_M6_REGISTERED]: V2_QUICK_REPLY_M6_REGISTERED,
+    [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG,
+    [V2_QUICK_REPLY_M7]: V2_QUICK_REPLY_M7,
   },
   messages: {
 
@@ -174,6 +191,17 @@ export default botData => ({
           ],
         ),
         elements(
+          botSpeeches.carouselTexts.TITLE_MAP,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_MORE,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_MORE,
+              payload: V2_QUICK_REPLY_MAP
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.TITLE_SHARE,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_SHARE, //TODO
@@ -235,6 +263,51 @@ export default botData => ({
         ),
       )
     ],
+
+    //
+    // Mapa do Acolhimento
+    //
+
+    // TODO adcionar menu carrossel
+
+    [V2_QUICK_REPLY_MAP]: {
+      text: botSpeeches.messages.MAP,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_M4, botSpeeches.buttonTexts.I_WANT_SUPPORT),
+        quickReply(V2_QUICK_REPLY_M4, botSpeeches.buttonTexts.I_WANT_TO_SUPPORT),
+      ],
+    },
+    [V2_QUICK_REPLY_M4]: {
+      text: botSpeeches.messages.MAP_1,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_M6_NAME, botSpeeches.buttonTexts.UNDERSTOOD),
+      ],
+    },
+    [V2_QUICK_REPLY_M6_NAME]: () => ({
+      text: botSpeeches.messages.MAP_NAME
+    }),
+    [V2_QUICK_REPLY_M6_SURNAME]: () => ({
+      text: botSpeeches.messages.MAP_SURNAME
+    }),
+    [V2_QUICK_REPLY_M6_EMAIL]: () => ({
+      text: botSpeeches.messages.MAP_EMAIL
+    }),
+    [V2_QUICK_REPLY_M6_CITY]: () => ({
+      text: botSpeeches.messages.MAP_CITY
+    }),
+    [V2_QUICK_REPLY_M6_REGISTERED]: () => ({
+      text: botSpeeches.messages.MAP_REGISTERED
+    }),
+    [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
+    }),
+
+    [V2_QUICK_REPLY_M7]: {
+      text: botSpeeches.messages.MAP_2,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE_FRIENDS),
+      ],
+    },
 
     //
     // Mais sobre a beta

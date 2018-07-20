@@ -22,7 +22,7 @@ export default {
   
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
 
-   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
+  PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
   
@@ -51,6 +51,17 @@ export default {
   */
 
   LIST: 'ARRASOU! Quero ver alguém aguentar nossa pressão. 💪💪 Clique nas opções abaixo para saber o que meus algoritmos têm pra te contar - para voltar a este menu digite a qualquer momento a palavra "menu" e eu te trarei de volta:',
+  //
+  // Mapa do acolhimento
+  //  
+  MAP: 'Sofreu violência sexual? Inscreva-se no Mapa do Acolhimento para receber informações sobre a rede de acolhimento. Contamos com com mais de 400 terapeutas inscritas de diferentes cidades do Brasil dispostas a oferecer seus serviços gratuitos a você.  X mulheres já buscaram apoio na rede de acolhimento.',
+  MAP_1: 'Querida, você vai entrar agora no modo de preenchimento de formulário. As suas informações só serão salvas quando você responder todas as 6 perguntas. Caso você queira sair antes, envie a mensagem “parar preenchimento do formulário”',
+  MAP_2: 'Você está inscrita no Mapa do Acolhimento! Você vai receber em breve um email com todas as informações sobre a rede de apoio cadastrada. Se você quiser saber mais sobre o Mapa, acesse www.mapadoacolhimento.org.br',
+  MAP_NAME: 'Nome: ',
+  MAP_SURNAME: 'Sobrenome: ',
+  MAP_EMAIL: 'Email: ',
+  MAP_CITY: 'Cidade: ',
+  MAP_REGISTERED: 'Você registrou o caso? Sim ou não',
   //
   // Mais sobre a Beta
   //  
