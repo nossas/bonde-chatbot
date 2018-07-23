@@ -172,7 +172,7 @@ export default {
   
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento estamos pressionando deputados e deputadas a rejeitarem o relatório final do projeto de lei "Escola Sem Partido", que entre outros absurdos proíbe o uso dos termos "gênero" e "orientação sexual" nas escolas. Se você também acredita que um futuro com mais direitos e menos violência começa na escola, me envie #EducaçãoFazMeuGênero e entre em ação agora!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento tô juntando assinaturas pra uma carta que vamos entregar ao Supremo Tribunal Federal pelo aborto legal no Brasil. Nos dias 3 e 6 de agosto vai rolar a Audiência Pública da ADPF 442 - ação para descriminalizar o aborto. Ela não é aberta ao público, mas temos outras formas de fazer nossa voz chegar até lá! Me envie #AçãoPelaVidaDasMulheres e entre em ação agora!',
   
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -537,7 +537,11 @@ export default {
   INTERNET_SUCKS: 'Te entendo! Aqui na nuvem também rolam umas turbulências de vez em quando. Me chama quando tiver melhor - estarei por aqui 😉',
 
   DONT_WANT_KNOW: 'Sem problemas - não te envio mais novidades da campanha #EducaçãoFazMeuGênero! Se não quiser mais receber nenhuma mensagem minha, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
-
+  
+  FESTIVAL_ADPF442: '"Durante a Audiência Pública da ADPF 442 - ação para descriminalizar o aborto no Brasil - vai rolar um festival INCRÍVEL em Brasília. Ai se eu tivesse pernas! 🏃🏾‍♀️ Serão 3 dias de rodas de conversa, espaços de acolhimento, oficinas, manifestações culturais e artísticas, projeção da audiência ao vivo e shows. Todas as infos tão aqui: bit.ly/festival_pelavidadasmulheres',
+  
+  WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪 Nos dias 3 e 6 de agosto vai rolar a Audiência Pública sobre a ação. Ministros e Ministras vão ouvir especialistas sobre o tema para, quando chegar a hora de votar, estarem muito bem informados. Será histórico! Quer saber como fazer sua voz chegar até lá também? Me responda com #AçãoPelaVidaDasMulheres',
+  
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 
