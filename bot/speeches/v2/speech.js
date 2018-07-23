@@ -324,7 +324,7 @@ export default botData => ({
     [V2_QUICK_REPLY_ADPF442]: {
       text: botSpeeches.messages.ADPF442,
       quick_replies: [
-        quickReply(V2_PETITION_SHARE, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_QUICK_REPLY_TAKE_ACTION, botSpeeches.buttonTexts.TAKE_ACTION),
         quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.WHATS_ADPF442),
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION, botSpeeches.buttonTexts.MORE_ABOUT_ABORTION),
       ],
