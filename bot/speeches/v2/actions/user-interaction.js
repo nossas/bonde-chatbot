@@ -49,7 +49,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 : speech.actions.V2_PETITION_EMAIL_OK
               const emailMessage = speech.messages[emailAction]
               
-              if (action === speech.actions.V2_PETITION_EMAIL_OK) {
+              if (emailAction === speech.actions.V2_PETITION_EMAIL_OK) {
                 sendForm({ payload })
               }
               reply(emailMessage, emailAction)

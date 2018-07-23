@@ -40,6 +40,7 @@ export default {
   //
   TITLE_ADPF442: 'ADPF 442',
   BUTTON_ADPF442:'Clique e participe',
+  IMAGE_ADPF442:'https://s3.amazonaws.com/chatbox-beta/campaigns/-beta-cards_beta_campanha.png',
   //
   // Buttons Texts
   //

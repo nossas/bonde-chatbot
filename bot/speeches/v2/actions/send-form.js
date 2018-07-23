@@ -32,6 +32,7 @@ export default ({ payload }) => graphqlClient.query({
     const widget_id = 17116 */
     const moblizationtId = 942
     const widget_id = 15699
+
     const fields = JSON.stringify([{
         label: "Nome",
         value: name.payload.message.text
@@ -45,7 +46,6 @@ export default ({ payload }) => graphqlClient.query({
         value: email.payload.message.text
       }
     ])
-    console.log('fields', fields)
     
     const url = `${process.env.API_URL}/mobilizations/${moblizationtId}/form_entries`
     const payload = {

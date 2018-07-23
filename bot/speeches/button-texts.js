@@ -116,6 +116,20 @@ export default {
   ABOUT_ACTION: 'Sobre a ação',
   ADPF442_NOW: 'É pra já!',
   SIGN: 'Assinar',
+  SIGN_NOW: 'Assinar agora!',
+  HOWS_NOW: 'Como tá agora?',
+  I_WANT_A: 'Quero!',
+  I_WANT_B: '#quero',
+  READ_LETTER: 'Ler carta',
+  STEP2: 'Passo 2',
+  STEP3: 'Passo 3',
+  STEP4: 'Passo 4',
+  SEND_MORE: 'Manda mais!',
+  ONE_MORE: 'Mais uma!',
+  ONE_MORE: 'Mais uma!',
+  I_WANT_MORE: 'Quero mais!',
+  NEXT_ROUND: 'Próxima rodada!',
+  JUST_ONE_MORE: 'Só mais um!',
 
 
   //
@@ -127,5 +141,6 @@ export default {
   SHARE_FRIENDS: 'Compartilhar com amigues',
   I_WANT_TO_GO: 'Quero ir!',
   OTHER_ACTIONS: 'Outras ações',
+  
   
 }
