@@ -324,7 +324,7 @@ export default botData => ({
     [V2_QUICK_REPLY_ADPF442]: {
       text: botSpeeches.messages.ADPF442,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_PETITION_SHARE, botSpeeches.buttonTexts.TAKE_ACTION),
         quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.WHATS_ADPF442),
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION, botSpeeches.buttonTexts.MORE_ABOUT_ABORTION),
       ],
@@ -380,11 +380,16 @@ export default botData => ({
         subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
         imageURL: 'https://goo.gl/P6MVUi',
         buttons: [
-          //buttonTemplate.shareCampaign(), // TODO passar titulo, subtitulo e url
-          buttonTemplate.webURL({
+          buttonTemplate.shareCampaign({
+            title: "Clique e entre em ação pelo direito ao aborto",
+            subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
+            imageUrl: 'https://goo.gl/P6MVUi',
+            url: 'https://m.me/beta.feminista?ref=adpf_442'
+          }), // TODO passar titulo, subtitulo e url
+          /* buttonTemplate.webURL({
             url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
             title: 'Compartilhar',
-          })
+          }) */
         ],
       }),   
       messageWithQuickReply(
@@ -947,7 +952,12 @@ export default botData => ({
         subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
         imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
         buttons: [
-          buttonTemplate.shareCampaign()
+          buttonTemplate.shareCampaign({
+            title: 'Clique aqui para impedir mais um retrocesso na educação',
+            subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+            imageUrl: 'https://goo.gl/v6iX5m',
+            url: 'https://m.me/beta.feminista?ref=escola-sem-partido'
+          }),
         ],
       }),
     ],
