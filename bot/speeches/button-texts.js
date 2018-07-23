@@ -120,7 +120,7 @@ export default {
   HOWS_NOW: 'Como tá agora?',
   I_WANT_A: 'Quero!',
   I_WANT_B: '#quero',
-  READ_LETTER: 'Ler carta',
+  READ_LETTER: 'Ler petição',
   STEP2: 'Passo 2',
   STEP3: 'Passo 3',
   STEP4: 'Passo 4',
