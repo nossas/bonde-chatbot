@@ -44,7 +44,7 @@ const V2_QUICK_REPLY_F_2 = 'V2_QUICK_REPLY_F_2'
 const V2_QUICK_REPLY_PEC = 'V2_QUICK_REPLY_PEC'
 const V2_QUICK_REPLY_STATUTE = 'V2_QUICK_REPLY_STATUTE'
 //const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
-const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
+//const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
 
 const V2_QUICK_REPLY_A_3 = 'V2_QUICK_REPLY_A_3'
 const V2_QUICK_REPLY_C_3 = 'V2_QUICK_REPLY_C_3'
@@ -713,7 +713,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_STATUTE
             })
           ],
-        ),
+        )/* ,
         elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -724,7 +724,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_ADPF
             })
           ],
-        )
+        ) */
       )
     ],
     //
@@ -821,7 +821,7 @@ export default botData => ({
     //
     // Radar da Beta - ADPF 442
     //
-    [V2_QUICK_REPLY_ADPF]: [
+    /* [V2_QUICK_REPLY_ADPF]: [
       botSpeeches.messages.ADPF,
       botSpeeches.messages.ADPF_1,
       messageWithQuickReply(
@@ -836,7 +836,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
-    },
+    }, */
     //
     // Quero agir agora
     //
