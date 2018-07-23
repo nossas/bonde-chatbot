@@ -149,6 +149,7 @@ export default botData => ({
     [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG,
     [V2_QUICK_REPLY_M7]: V2_QUICK_REPLY_M7,
     //ADPF442
+    [V2_QUICK_REPLY_ADPF442]: V2_QUICK_REPLY_ADPF442,
     [V2_QUICK_REPLY_PETITION_NAME]: V2_QUICK_REPLY_PETITION_NAME,
     [V2_QUICK_REPLY_PETITION_SURNAME]: V2_QUICK_REPLY_PETITION_SURNAME,
     [V2_QUICK_REPLY_PETITION_EMAIL]: V2_QUICK_REPLY_PETITION_EMAIL,
@@ -168,9 +169,9 @@ export default botData => ({
           payload: "V2_QUICK_REPLY_ACT"
         },
         {
-          title: "Radar Político",
+          title: "ADPF 442",
           type: "postback",
-          payload: "V2_QUICK_REPLY_RADAR"
+          payload: "V2_QUICK_REPLY_ADPF442"
         },
         {
           title: "Mais sobre a Beta",
