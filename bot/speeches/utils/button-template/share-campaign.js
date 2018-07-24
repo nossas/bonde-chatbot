@@ -1,4 +1,4 @@
-export default () => ({
+export default ({title, subtitle, imageUrl, url}) => ({
     type: 'element_share',
     share_contents: {
         attachment: {
@@ -6,17 +6,17 @@ export default () => ({
             payload: {
                 template_type: 'generic',
                 elements: [{
-                    title: "Clique aqui para impedir mais um retrocesso na educação",
-                    subtitle: "Um futuro com mais direitos e menos violência começa na escola!",
-                    image_url: 'https://goo.gl/v6iX5m',
+                    title,
+                    subtitle,
+                    image_url: imageUrl,
                     default_action: {
                         type: 'web_url',
-                        url: "https://m.me/beta.feminista?ref=escola-sem-partido"
+                        url
                     },
                     buttons: [
                         {
                             type: "web_url",
-                            url: "https://m.me/beta.feminista?ref=escola-sem-partido",
+                            url,
                             title: "Clique aqui"
                         }
                     ]

@@ -17,6 +17,7 @@ export default ({ speech, reply }) => ({ entities }) => {
     //       Switch to AI intent specific replies
     //
     'education_hashtag': speech.actions.V2_QUICK_REPLY_EDUCATION,
+    'adpf_hashtag': speech.actions.V2_QUICK_REPLY_ADPF442,
   }
   const speechEntity = speechRepliesMap[entity]
   const speechReply = speech.messages[speechEntity]

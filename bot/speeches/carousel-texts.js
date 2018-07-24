@@ -2,6 +2,7 @@ export default {
   //
   // Generic
   //
+  TITLE_MAP: 'Mapa do Acolhimento',
   TITLE_RADAR: 'Pautas que estou monitorando',
   TITLE_MORE: 'Tudo sobre mim',
   TITLE_ACT: 'Oportunidades de ação',
@@ -34,6 +35,12 @@ export default {
   IMAGE_VIOLENCE: 'https://s3.amazonaws.com/chatbox-beta/carousel-fb/-beta-cards_beta11.png',
   IMAGE_DECRIMINALIZATION: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta10.png',
 
+  //
+  // ADPF442
+  //
+  TITLE_ADPF442: 'ADPF 442',
+  BUTTON_ADPF442:'Clique e participe',
+  IMAGE_ADPF442:'https://s3.amazonaws.com/chatbox-beta/campaigns/-beta-cards_beta_campanha.png',
   //
   // Buttons Texts
   //
