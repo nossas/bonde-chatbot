@@ -124,6 +124,13 @@ const V2_PETITION_EMAIL_WRONG = 'V2_PETITION_EMAIL_WRONG'
 const V2_PETITION_SHARE = 'V2_PETITION_SHARE'
 const V2_PETITION_NOT_NOW = 'V2_PETITION_NOT_NOW'
 
+const V2_QUICK_REPLY_PETITION_NAME1 = 'V2_QUICK_REPLY_PETITION_NAME1'
+const V2_QUICK_REPLY_PETITION_SURNAME1 = 'V2_QUICK_REPLY_PETITION_SURNAME1'
+const V2_QUICK_REPLY_PETITION_EMAIL1 = 'V2_QUICK_REPLY_PETITION_EMAIL1'
+const V2_PETITION_EMAIL_OK1 = 'V2_PETITION_EMAIL_OK1'
+const V2_PETITION_EMAIL_WRONG1 = 'V2_PETITION_EMAIL_WRONG1'
+const V2_PETITION_SHARE_1 = 'V2_PETITION_SHARE_1'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -155,6 +162,12 @@ export default botData => ({
     [V2_QUICK_REPLY_PETITION_EMAIL]: V2_QUICK_REPLY_PETITION_EMAIL,
     [V2_PETITION_EMAIL_WRONG]: V2_PETITION_EMAIL_WRONG,
     [V2_PETITION_EMAIL_OK]: V2_PETITION_EMAIL_OK,
+
+    [V2_QUICK_REPLY_PETITION_NAME1]: V2_QUICK_REPLY_PETITION_NAME1,
+    [V2_QUICK_REPLY_PETITION_SURNAME1]: V2_QUICK_REPLY_PETITION_SURNAME1,
+    [V2_QUICK_REPLY_PETITION_EMAIL1]: V2_QUICK_REPLY_PETITION_EMAIL1,
+    [V2_PETITION_EMAIL_WRONG1]: V2_PETITION_EMAIL_WRONG1,
+    [V2_PETITION_EMAIL_OK1]: V2_PETITION_EMAIL_OK1,
 
   },
   messages: {
@@ -351,10 +364,10 @@ export default botData => ({
       botSpeeches.messages.ADPF_TAKE_ACTION_C,
       messageWithQuickReply(
         botSpeeches.messages.ADPF_PETITION_TEXT,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN)
+        quickReply(V2_QUICK_REPLY_PETITION_NAME1, botSpeeches.buttonTexts.SIGN)
       )
     ],
-    //ADPF442 - PETIÇÃO
+    //ADPF442 - PETIÇÃO - (O que é ADPF e Mais sobre o aborto)
     [V2_QUICK_REPLY_PETITION_NAME]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_NAME
     }),
@@ -371,7 +384,7 @@ export default botData => ({
       text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
       quick_replies: [
         quickReply(V2_PETITION_SHARE, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW), // TODO
+        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1), 
       ],
     }),
     [V2_PETITION_SHARE]: [
@@ -385,11 +398,48 @@ export default botData => ({
             subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
             imageUrl: 'https://goo.gl/P6MVUi',
             url: 'https://m.me/beta.feminista?ref=adpf_442'
-          }), // TODO passar titulo, subtitulo e url
-          /* buttonTemplate.webURL({
-            url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
-            title: 'Compartilhar',
-          }) */
+          }),
+          
+        ],
+      }), 
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_PETITION_NOT_NOW,
+        quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
+        quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
+      )
+    ],
+    //ADPF442 - PETIÇÃO
+    [V2_QUICK_REPLY_PETITION_NAME1]: () => ({
+      text: botSpeeches.messages.ADPF_PETITION_NAME
+    }),
+    [V2_QUICK_REPLY_PETITION_SURNAME1]: () => ({
+      text: botSpeeches.messages.ADPF_PETITION_SURNAME
+    }),
+    [V2_QUICK_REPLY_PETITION_EMAIL1]: () => ({
+      text: botSpeeches.messages.ADPF_PETITION_EMAIL
+    }),
+    [V2_PETITION_EMAIL_WRONG1]: ({
+      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
+    }),
+    [V2_PETITION_EMAIL_OK1]: profile => ({
+      text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
+      quick_replies: [
+        quickReply(V2_PETITION_SHARE_1, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_PETITION_NOT_NOW, botSpeeches.buttonTexts.NOT_NOW), 
+      ],
+    }),
+    [V2_PETITION_SHARE_1]: [
+      genericTemplate({
+        title: 'Clique e entre em ação pelo direito ao aborto',
+        subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
+        imageURL: 'https://goo.gl/P6MVUi',
+        buttons: [
+          buttonTemplate.shareCampaign({
+            title: "Clique e entre em ação pelo direito ao aborto",
+            subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
+            imageUrl: 'https://goo.gl/P6MVUi',
+            url: 'https://m.me/beta.feminista?ref=adpf_442'
+          })
         ],
       }),   
       messageWithQuickReply(

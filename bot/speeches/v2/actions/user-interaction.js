@@ -55,19 +55,32 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
               reply(emailMessage, emailAction)
               dispatched = true
               break;
-            /* case speech.actions.V2_QUICK_REPLY_M6_CITY:
-              const cityAction = speech.actions.V2_QUICK_REPLY_M6_REGISTERED
-              const cityMessage = speech.messages[cityAction]
-              reply(cityMessage, cityAction)
+            // Petição caso 2
+            case speech.actions.V2_QUICK_REPLY_PETITION_NAME1:
+              const nameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1
+              const nameMessage1 = speech.messages[nameAction1]
+              reply(nameMessage1, nameAction1)
               dispatched = true
               break;
-            case speech.actions.V2_QUICK_REPLY_M6_REGISTERED:
-              const registerAction = speech.actions.V2_QUICK_REPLY_M7
-              const registerMessage = speech.messages[registerAction]
-              sendForm({ payload })
-              reply(registerMessage, registerMessage)
+            case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1:
+              const surnameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1
+              const surnameMessage1 = speech.messages[surnameAction1]
+              reply(surnameMessage1, surnameAction1)
               dispatched = true
-              break; */
+              break;
+            case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1:
+            case speech.actions.V2_PETITION_EMAIL_WRONG1:
+              let emailAction1 = !isemail.validate(payload.message.text)
+                ? speech.actions.V2_PETITION_EMAIL_WRONG1
+                : speech.actions.V2_PETITION_EMAIL_OK1
+              const emailMessage1 = speech.messages[emailAction1]
+              
+              if (emailAction1 === speech.actions.V2_PETITION_EMAIL_OK1) {
+                sendForm({ payload })
+              }
+              reply(emailMessage1, emailAction1)
+              dispatched = true
+              break;
             case speech.actions.V2_QUICK_REPLY_G_10:
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
