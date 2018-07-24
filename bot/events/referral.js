@@ -25,7 +25,7 @@ export default (bot, speech, botData) => (payload, reply) => {
             message = speech.messages.V2_QUICK_REPLY_EDUCATION
             break;
         case 'adpf_442':
-            message = speech.messages.V2_QUICK_REPLY_ADPF
+            message = speech.messages.V2_QUICK_REPLY_ADPF442
             break;
         default:
             message = speech.messages.GET_STARTED

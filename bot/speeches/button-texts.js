@@ -107,4 +107,40 @@ export default {
   READ_MESSAGE: 'Ver mensagem',
   MORE_ABOUT_PROJECT: 'Mais sobre o projeto',
   READ_EMAIL: 'Ver email',
+  //
+  // ADPF442
+  //
+  WHATS_ADPF442: 'O que é a ADPF 442',
+  MORE_ABOUT_ABORTION: 'Mais sobre aborto',
+  SURE_BETA_1: 'Claro, Beta!',
+  ABOUT_ACTION: 'Sobre a ação',
+  ADPF442_NOW: 'É pra já!',
+  SIGN: 'Assinar',
+  SIGN_NOW: 'Assinar agora!',
+  HOWS_NOW: 'Como tá agora?',
+  I_WANT_A: 'Quero!',
+  I_WANT_B: '#quero',
+  READ_LETTER: 'Ler petição',
+  STEP2: 'Passo 2',
+  STEP3: 'Passo 3',
+  STEP4: 'Passo 4',
+  SEND_MORE: 'Manda mais!',
+  ONE_MORE: 'Mais uma!',
+  ONE_MORE: 'Mais uma!',
+  I_WANT_MORE: 'Quero mais!',
+  NEXT_ROUND: 'Próxima rodada!',
+  JUST_ONE_MORE: 'Só mais um!',
+
+
+  //
+  // Mapa do acolhimento
+  //
+  I_WANT_SUPPORT: 'Quero apoio!',
+  I_WANT_TO_SUPPORT: 'Quero apoiar!',
+  UNDERSTOOD: 'Entendido, Beta!',
+  SHARE_FRIENDS: 'Compartilhar com amigues',
+  I_WANT_TO_GO: 'Quero ir!',
+  OTHER_ACTIONS: 'Outras ações',
+  
+  
 }
