@@ -28,10 +28,10 @@ export default ({ payload }) => graphqlClient.query({
     const registerd = JSON.parse(registeredInteraction.interaction) */
     
     //setup the widget info
-    /* const moblizationtId = 960
-    const widget_id = 17116 */
-    const moblizationtId = 942
-    const widget_id = 15699
+    const moblizationtId = 960
+    const widget_id = 17116
+    /* const moblizationtId = 942
+    const widget_id = 15699 */
 
     const fields = JSON.stringify([{
         label: "Nome",
