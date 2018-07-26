@@ -67,6 +67,7 @@ const fabricated = new BotFactory(speech)
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
   })
+  .catch(err => console.error('GRAPHQL API ERROR: ', `${JSON.stringify(err)}`))
 
 //
 // Express server routes
