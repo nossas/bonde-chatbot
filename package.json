@@ -21,7 +21,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "apollo-client": "^1.7.0",
-    "ava": "^0.23.0",
+    "ava": "^0.25.0",
     "axios": "^0.16.2",
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
