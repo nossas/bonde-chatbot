@@ -18,6 +18,7 @@ export default ({ botData }) => {
         if (widgets.constructor === Array) {
           const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
           global.widgets[widgetId] = widget
+          console.log('WIDGET INFO SAVED')
         }
         else console.error('The API result is not an array'.red)
       })

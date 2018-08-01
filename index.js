@@ -48,6 +48,7 @@ app.use(ExpressSession({
 // Bots fabrication
 //
 const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
+console.log('SPEECH LOADED, VERSION: ', process.env.SPEECH_VERSION)
 const fabricated = new BotFactory(speech)
   .fabricate()
   .then(bots => {
@@ -63,7 +64,7 @@ const fabricated = new BotFactory(speech)
       // Set up pressure stuff
       //
       botSkills.pressure.fetchWidgets({ botData })
-
+      console.log('BOT CREATED')
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
   })
