@@ -11,7 +11,7 @@ mutation updateFacebookBotCampaignActivists(
     ctxReceived: $received,
     ctxLog: $log
   }) {
-    facebookBotCampaignActivists {
+    facebookBotCampaignActivist {
       id
       facebookBotCampaignId
       facebookBotActivistId
