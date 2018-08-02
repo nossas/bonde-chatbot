@@ -11,6 +11,7 @@ export default class BotFactory {
   // @param speech {Object} Speech object that contains the messages and actions
   //
   constructor (speech) {
+    if(typeof speech !== 'function') throw 'invalid speech'
     this.speech = speech
   }
 
@@ -48,7 +49,7 @@ export default class BotFactory {
           token: messengerPageAccessToken,
           verify: messengerValidationToken
         })
-
+        
         const bot = new Bot(config)
         const speech = this.speech(botData)
         const eventArgs = [bot, speech, botData]
@@ -61,7 +62,7 @@ export default class BotFactory {
         bot.on('message', botEvents.message(...eventArgs))
         bot.on('referral', botEvents.referral(...eventArgs))
 
-        return { id, bot, endpoint, botData }
+        return { id, bot, endpoint, botData }        
       })
     })
     .catch(err => console.error(`${JSON.stringify(err)}`.red))
