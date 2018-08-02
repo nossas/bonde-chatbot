@@ -15,7 +15,7 @@ mutation createFacebookBotCampaign(
       totalImpactedActivists: $totalImpactedActivists
     }
   }) {
-    campaign: facebookBotCampaigns {
+    campaign: facebookBotCampaign {
       id
       facebookBotConfigurationId
       name
