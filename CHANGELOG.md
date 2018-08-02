@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.4.4"></a>
+## [2.4.4](https://github.com/nossas/bonde-bot/compare/v2.4.3...v2.4.4) (2018-08-02)
+
+
+### Bug Fixes
+
+* **graphql:** Fix typo in query facebook create campaign ([#200](https://github.com/nossas/bonde-bot/issues/200)) ([58ad271](https://github.com/nossas/bonde-bot/commit/58ad271))
+
+
+
 <a name="2.4.3"></a>
 ## [2.4.3](https://github.com/nossas/bonde-bot/compare/v2.4.2...v2.4.3) (2018-07-27)
 
