@@ -11,7 +11,7 @@ export default class BotFactory {
   // @param speech {Object} Speech object that contains the messages and actions
   //
   constructor (speech) {
-    if(typeof speech !== 'function') throw 'invalid speech'
+    if (typeof speech !== 'function') throw new Error('invalid speech')
     this.speech = speech
   }
 
