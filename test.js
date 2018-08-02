@@ -5,20 +5,19 @@ import axios from 'axios'
 /* test('arrays are equal',t => {
     t.deepEqual([1, 2], [1, 2]);
 }); */
-const speech = './bot/speeches/v2';
-const fabricated = new BotFactory(speech);
+
+test.beforeEach(t => {
+    const speech = require('./bot/speeches/v2').speech
+    t.context.fabricated = new BotFactory(speech);
+});
+
 test('fetch botConfigs', async t => {
-    /* const speech = './bot/speeches/v2';
-    const fabricated = new BotFactory(speech); */
-    const bot =  await fabricated.botConfigs();
+    const bot =  await t.context.fabricated.botConfigs();
     t.is(typeof bot.data, 'object');
 
 });
 test('fabricate bot', async t => {
-
-    /* const speech = './bot/speeches/v2';
-    const fabricated = new BotFactory(speech); */
-    const bot =  await fabricated.fabricate();
-    t.is(bot, true);
+    const bot =  await t.context.fabricated.fabricate();
+    t.is(typeof bot, 'object');
 
 });
