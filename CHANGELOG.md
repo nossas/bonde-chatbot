@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.4.5"></a>
+## [2.4.5](https://github.com/nossas/bonde-bot/compare/v2.4.4...v2.4.5) (2018-08-03)
+
+
+### Bug Fixes
+
+* **speech:** update ADPF442 first message ([#202](https://github.com/nossas/bonde-bot/issues/202)) ([49cbed7](https://github.com/nossas/bonde-bot/commit/49cbed7))
+
+
+
 <a name="2.4.4"></a>
 ## [2.4.4](https://github.com/nossas/bonde-bot/compare/v2.4.3...v2.4.4) (2018-08-02)
 
