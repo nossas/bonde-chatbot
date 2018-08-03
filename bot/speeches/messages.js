@@ -54,7 +54,7 @@ export default {
   //
   // ADPF442
   //  
-  ADPF442: 'Arrasou! Meus algoritmos tão se tremendo todos com essa novidade! 😍 🤖  Clique e confira o que tenho pra te contar:',
+  ADPF442: 'É hora de nos mobilizarmos pelo direito ao aborto no Brasil! Juntas vamos apoiar a ADPF 442, nossa maior chance de garantir que mulheres possam interromper uma gravidez indesejada até a 12ª semana de gestação. 💪 Escolha uma das opções abaixo e clique para agir pela vida das mulheres:',
   ADPF_TAKE_ACTION: 'OBA! É o seguinte: nos dias 3 e 6 de agosto, o Supremo Tribunal Federal (STF) vai ouvir mais de 40 especialistas e discutir uma ação (ADPF 442) que propõe a descriminalização do aborto até a 12ª semana de gestação. Babado, né?',
   ADPF_TAKE_ACTION_1: 'Nessa data a ação ainda não será votada, mas é um momento super importante: tudo que for falado lá vai ser essencial para o futuro julgamento. É a maior chance da sociedade participar desse processo! Quer saber o que você pode fazer?',
   ADPF_TAKE_ACTION_A: 'Infelizmente a participação do público não vai ser permitida, mas eu tô aqui exatamente pra hackear o sistema, né? Tenho um jeito de fazer as vozes das mulheres chegarem até o ministros! 🔊',
