@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.4.6"></a>
+## [2.4.6](https://github.com/nossas/bonde-bot/compare/v2.4.5...v2.4.6) (2018-08-07)
+
+
+### Bug Fixes
+
+* **speech:** update 'escola-sem-partido' message ([#205](https://github.com/nossas/bonde-bot/issues/205)) ([bf4eeab](https://github.com/nossas/bonde-bot/commit/bf4eeab))
+
+
+
 <a name="2.4.5"></a>
 ## [2.4.5](https://github.com/nossas/bonde-bot/compare/v2.4.4...v2.4.5) (2018-08-03)
 
