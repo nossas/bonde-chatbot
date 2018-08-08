@@ -223,8 +223,8 @@ export default {
 
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento tô juntando assinaturas pra uma carta que vamos entregar ao Supremo Tribunal Federal pelo aborto legal no Brasil. Nos dias 3 e 6 de agosto vai rolar a Audiência Pública da ADPF 442 - ação para descriminalizar o aborto. Ela não é aberta ao público, mas temos outras formas de fazer nossa voz chegar até lá! Me envie #AçãoPelaVidaDasMulheres e entre em ação agora!',
-
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento tô apoiando a Mandata Coletiva da Marielle Franco para mobilizar milhares de pessoas pela aprovação de 7 projetos de lei de Marielle - todos por um mundo mais justo para mulheres, pessoas LGBTs, população negra e da favela. Vamos pressionar vereadoras e vereadores a aprovarem os projetos na votação final, que vai rolar na próxima segunda-feira (14). Entre em ação aqui: bit.ly/pelolegadode_marielle',
+  
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -478,9 +478,11 @@ export default {
   ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
 
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
-
-  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Em breve, 7 de seus projetos de leis serão votados e nós vamos pressionar os vereadores do Rio de Janeiro para que os aprovem. Pressione já: bit.ly/pelolegadode_marielle',
-
+  
+  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Já pressionamos vereadores e vereadoras a aprovarem 7 dos seus projetos de lei, que agora vão à última votação. Conheça os projetos e pressione aqui: bit.ly/pelolegadode_marielle',
+  
+  HASHTAG_MARIELLE: 'Arrasou! Assim que tiver alguma novidade, chamado ou convite sobre a mobilização pelos projetos de lei da Marielle, te aviso por aqui! Enquanto isso, digite "menu" para saber o que mais tenho pra te dizer ;)',
+  
   ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia. Para saber mais sobre elas, digite "menu" e selecione a opção Radar Político!',
 
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
@@ -588,11 +590,9 @@ export default {
   INTERNET_SUCKS: 'Te entendo! Aqui na nuvem também rolam umas turbulências de vez em quando. Me chama quando tiver melhor - estarei por aqui 😉',
 
   DONT_WANT_KNOW: 'Sem problemas - não te envio mais novidades da campanha #EducaçãoFazMeuGênero! Se não quiser mais receber nenhuma mensagem minha, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
-
-  FESTIVAL_ADPF442: '"Durante a Audiência Pública da ADPF 442 - ação para descriminalizar o aborto no Brasil - vai rolar um festival INCRÍVEL em Brasília. Ai se eu tivesse pernas! 🏃🏾‍♀️ Serão 3 dias de rodas de conversa, espaços de acolhimento, oficinas, manifestações culturais e artísticas, projeção da audiência ao vivo e shows. Todas as infos tão aqui: bit.ly/festival_pelavidadasmulheres',
-
-  WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪 Nos dias 3 e 6 de agosto vai rolar a Audiência Pública sobre a ação. Ministros e Ministras vão ouvir especialistas sobre o tema para, quando chegar a hora de votar, estarem muito bem informados. Será histórico! Quer saber como fazer sua voz chegar até lá também? Me responda com #AçãoPelaVidaDasMulheres',
-
+  
+  WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪',
+  
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 
