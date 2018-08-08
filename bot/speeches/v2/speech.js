@@ -909,18 +909,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_EDUCATION
             })
           ],
-        ),
-        elements(
-          botSpeeches.carouselTexts.PRESSURE,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_VIOLENCE,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.PRESSURE,
-              payload: V2_QUICK_REPLY_PRESSURE
-            })
-          ],
-        ),
+        )
         /* elements(
           botSpeeches.carouselTexts.VOTE,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -1079,26 +1068,6 @@ export default botData => ({
         ),
       )
     ],
-    //
-    // Violência Contra a Mulher
-    //
-    [V2_QUICK_REPLY_PRESSURE]: [
-      botSpeeches.messages.PRESSURE,
-      messageWithQuickReply(
-        botSpeeches.messages.PRESSURE_1,
-        quickReply(V2_QUICK_REPLY_A_8, botSpeeches.buttonTexts.WHY_IS_IMPORTANT),
-        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
-      )
-    ],
-    [V2_QUICK_REPLY_A_8]: [
-      botSpeeches.messages.PRESSURE_R,
-      messageWithQuickReply(
-        botSpeeches.messages.PRESSURE_R1,
-        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE)
-      )
-    ],
-
     //
     // Descriminalização do Aborto
     //
