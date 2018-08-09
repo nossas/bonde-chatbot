@@ -176,7 +176,7 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Quero agir agora!",
+          title: "Outras Ações",
           type: "postback",
           payload: "V2_QUICK_REPLY_ACT"
         },
@@ -226,7 +226,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT, 
+          botSpeeches.carouselTexts.IMAGE_ACT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -286,7 +286,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT, 
+          botSpeeches.carouselTexts.IMAGE_ACT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ACT,
@@ -349,7 +349,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.ADPF_TAKE_ACTION_1,
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_A, botSpeeches.buttonTexts.SURE_BETA_1),
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.ABOUT_ACTION) 
+        quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.ABOUT_ACTION)
       )
     ],
     [V2_QUICK_REPLY_TAKE_ACTION_A]: [
@@ -383,7 +383,7 @@ export default botData => ({
       text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
       quick_replies: [
         quickReply(V2_PETITION_SHARE, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1), 
+        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1),
       ],
     }),
     [V2_PETITION_SHARE]: [
@@ -398,9 +398,9 @@ export default botData => ({
             imageUrl: 'https://goo.gl/P6MVUi',
             url: 'https://m.me/beta.feminista?ref=adpf_442'
           }),
-          
+
         ],
-      }), 
+      }),
       messageWithQuickReply(
         botSpeeches.messages.ADPF_PETITION_NOT_NOW,
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
@@ -424,7 +424,7 @@ export default botData => ({
       text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
       quick_replies: [
         quickReply(V2_PETITION_SHARE_1, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_PETITION_NOT_NOW, botSpeeches.buttonTexts.NOT_NOW), 
+        quickReply(V2_PETITION_NOT_NOW, botSpeeches.buttonTexts.NOT_NOW),
       ],
     }),
     [V2_PETITION_SHARE_1]: [
@@ -440,7 +440,7 @@ export default botData => ({
             url: 'https://m.me/beta.feminista?ref=adpf_442'
           })
         ],
-      }),   
+      }),
       messageWithQuickReply(
         botSpeeches.messages.ADPF_PETITION_NOT_NOW,
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
@@ -1008,7 +1008,7 @@ export default botData => ({
           buttonTemplate.webURL({
             url: facebookFeedShare('https://m.me/beta.staging?ref=escola-sem-partido'),
             title: 'Compartilhar',
-          }), 
+          }),
           buttonTemplate.postback({
             title: botSpeeches.buttonTexts.BACK,
             payload: V2_QUICK_REPLY_CA
