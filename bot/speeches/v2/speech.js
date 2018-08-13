@@ -181,11 +181,6 @@ export default botData => ({
           payload: "V2_QUICK_REPLY_ACT"
         },
         {
-          title: "ADPF 442",
-          type: "postback",
-          payload: "V2_QUICK_REPLY_ADPF442"
-        },
-        {
           title: "Mais sobre a Beta",
           type: "postback",
           payload: "V2_QUICK_REPLY_MAIS"
