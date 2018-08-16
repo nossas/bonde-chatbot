@@ -469,6 +469,8 @@ export default {
   //
   // Answers
   //
+  BETA_ELECTIONS: 'Amooo <3 Deixa comigo: nas próximas semanas vou te enviar alguns projetos incríveis sobre feminismo e eleições. Hora de hackear o sistema! Se quiser saber o que mais tenho pra te dizer por enquanto, me envie "menu".',
+  
   DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
 
   ABOUT_MIGUEL_NAGIB: 'Quase dou tela azul só de ouvir o nome Miguel Nagib! Ele é advogado e procurador do Estado de São Paulo, e um dos líderes e fundadores do Movimento Escola Sem Partido.',
