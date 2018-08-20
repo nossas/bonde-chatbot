@@ -223,7 +223,7 @@ export default {
   
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Neste momento tô apoiando a Mandata Coletiva da Marielle Franco para mobilizar milhares de pessoas pela aprovação de 7 projetos de lei de Marielle - todos por um mundo mais justo para mulheres, pessoas LGBTs, população negra e da favela. Vamos pressionar vereadoras e vereadores a aprovarem os projetos na votação final, que vai rolar na próxima segunda-feira (14). Entre em ação aqui: bit.ly/pelolegadode_marielle',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Continuamos nossa pressão contra o Escola Sem Partido: para entrar em ação, é só me responder com #EducaçãoFazMeuGênero. Além disso, não podemos esquecer que as eleições tão chegando. Não tenho título de eleitor, mas não ia ficar de fora né? Se quiser receber toda semana uma iniciativa sobre feminismo e eleições, me responda com #PolíticaComFeminismo.',
   
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -481,7 +481,7 @@ export default {
   
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
   
-  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Já pressionamos vereadores e vereadoras a aprovarem 7 dos seus projetos de lei, que agora vão à última votação. Conheça os projetos e pressione aqui: bit.ly/pelolegadode_marielle',
+  ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Pressionamos vereadores e vereadoras a aprovarem 7 dos seus projetos de lei, e 5 já foram aprovados em última votação. Agora só falta serem sancionados pelo prefeito. Te mantenho atualizada, mana!',
   
   HASHTAG_MARIELLE: 'Arrasou! Assim que tiver alguma novidade, chamado ou convite sobre a mobilização pelos projetos de lei da Marielle, te aviso por aqui! Enquanto isso, digite "menu" para saber o que mais tenho pra te dizer ;)',
   
