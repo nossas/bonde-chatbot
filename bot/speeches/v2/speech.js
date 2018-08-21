@@ -210,7 +210,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF442,
+          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ADPF442,
@@ -270,7 +270,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF442,
+          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ADPF442,
@@ -736,7 +736,7 @@ export default botData => ({
         elements(
           botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_PEC,
+          botSpeeches.carouselTexts.IMAGE_ADPF442_2,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.ADPF_BUTTON,
