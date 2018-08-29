@@ -478,7 +478,7 @@ export default botData => ({
       botSpeeches.messages.WHATS_ADPF442_A,
       messageWithQuickReply(
         botSpeeches.messages.WHATS_ADPF442_A1,
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.KEEP_ME_UPDATED),
+        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.I_WANT_A),
       )
     ],
     [V2_QUICK_REPLY_WHATS_ADPF442_C]: {
