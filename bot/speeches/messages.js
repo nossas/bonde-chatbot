@@ -64,12 +64,12 @@ export default {
   ADPF_TAKE_ACTION_H: 'Entre os dias 3 e 6 de agosto, outras cidades também vão ter ações para marcar o período da Audiência Pública. Aqui nesse site você pode ver todos os lugares que já têm atividades confirmadas e inserir a sua: www.nempresanemmorta.bonde.org',
   ADPF_PETITION_TEXT: 'Excelentíssimos(as) senhores(as) ministros(as) do STF, nós cidadãos e cidadãs viemos por meio desta petição demonstrar apoio à ADPF 442. Entendemos que a descriminalização do aborto até a 12ª semana é fundamental para garantir dignidade, autonomia e acesso à saúde às mulheres brasileiras. Mais ainda: é uma maneira de reparar uma dívida democrática do Estado brasileiro com as mulheres. A criminalização da interrupção voluntária da gestação provoca altas taxas de morbidade e mortalidade materna, além de sofrimento mental e físico. Pedimos que as mulheres brasileiras tenham, enfim, o direito de decidir sobre seus corpos e suas vidas.',
 
-  WHATS_ADPF442: 'Vou começar causando: é a nossa maior chance de descriminalizar o aborto no Brasil! Senta que eu te explico. 💺 Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF).',
+  WHATS_ADPF442: 'Vou começar causando: a ADPF 442 é a nossa maior chance de descriminalizar o aborto no Brasil! Senta que eu te explico. 💺 Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF).',
   WHATS_ADPF442_1: 'A ADPF do momento é a de número 442. Ela foi protocolada pela Anis e pelo PSOL para questionar artigos do código penal de 1940 que criminalizam  a mulher que aborta e profissionais que fazem aborto (mesmo com consentimento da gestante).',
   WHATS_ADPF442_2: 'Ela diz que o código fere uma série de direitos das mulheres já garantidos na nossa Constituição de 1988, como o direito à não discriminação (afinal, só mulheres abortam), à saúde (já que muitas mal conseguem atendimento médico com medo da discriminação e possibilidade de irem presas) e até direito à vida, já que a criminalização do aborto mata uma mulher a cada dois dias - sobretudo as negras e pobres.',
-  WHATS_ADPF442_A: 'Ela tá andando! 🏃🏾‍ Depois de vários setores do governo darem suas posições, a ministra Rosa Weber, relatora (responsável) da ação, chamou uma Audiência Pública pra ouvir especialistas sobre o tema. Vai entrar pra história!',
-  WHATS_ADPF442_A1: 'A Audiência vai acontecer nos dias 3 e 6 de agosto em Brasília e promete fazer o STF tremer! Foram convidadas tantas especialistas incríveis que defendem a descriminalização, fico boba e cheia de crushes. 😻 Quer saber como fazer sua opinião chegar até lá também?',
-  WHATS_ADPF442_C: 'Vamos entregar aos Ministros e Ministras do STF uma petição com milhares de assinaturas apoiando a descriminalização do aborto no Brasil. É nosso jeitinho de mostrar que a população está atenta e mobilizada pela vida das mulheres. 🔊 E você pode assinar aqui mesmo, pelo chat! Tá comigo?',
+  WHATS_ADPF442_A: 'Ela tá andando! 🏃🏾‍ Depois de vários setores do governo darem suas posições, a ministra Rosa Weber, relatora (responsável) da ação, chamou uma Audiência Pública pra ouvir especialistas sobre o tema. Ela aconteceu nos dias 3 e 6 de agosto e entrou pra história! Foram convidadas tantas especialistas incríveis que defendem a descriminalização, fiquei boba e cheia de crushes. 😻',
+  WHATS_ADPF442_A1: 'O próximo passo é a votação #realoficial, mas não temos previsão de data. Pode levar anos, e eu não sou robô feminista de ficar parada. Se quiser que eu te mande novidades e oportunidades de ação pela ADPF 442, clique abaixo:',
+  WHATS_ADPF442_C: 'Arrasou! Assim que tiver alguma novidade, te chamo por aqui! Enquanto isso, confira no que mais meu radar anda de olho:',
 
   ADPF_PETITION_NAME: 'Falta pouco! Agora eu preciso de alguns dados, prometo que só serão usados na assinatura da petição. Me envia seu primeiro nome:',
   ADPF_PETITION_SURNAME: 'Qual o seu sobrenome?',
@@ -93,7 +93,7 @@ export default {
   ADPF_MORE_ABOUT_ABORTION_H: '"Por que não dá pra adoção?". Um CLÁSSICO, não é mesmo? Se é obrigatório manter a gravidez, a barriga vai crescer, o corpo vai mudar, a mulher vai dar à luz. Depois de 9 meses, socialmente ela será mãe e vai ser questionada sobre a criança. A mulher não é um repositório de gravidez: não é simples passar pela gestação de um bebê que não ficará com você, isso sim causa sofrimento. A própria gestação já é um processo intenso, mental e fisicamente, imagina quando a mulher não quer?',
   ADPF_MORE_ABOUT_ABORTION_I: '"Mas é uma vida!" A biologia não sabe resolver o grande dilema de se a vida começa a concepção. As leis brasileiras apontam que não, tanto que permitem o aborto em 3 casos. Mas essa nem é a grande questão! Cada um é livre pra acreditar no que quiser, mas não é justo exigir a proibição do aborto com base nisso. E sabe o que é inegável? A mulher gestante tem vida e deveria ter o direito de decidir sobre ela.',
   ADPF_MORE_ABOUT_ABORTION_J: '"Mas ninguém é a favor do aborto!". Na verdade, uma pesquisa feita em 2017 pelas Católicas Pelo Direito de Decidir e pelo Ibope mostra que 64% dos brasileiros entendem que a decisão sobre o aborto deve ser da própria mulher - 65% dos católicos e 58% dos evangélicos também. Além disso, 64% discordam total ou em parte que uma mulher que abortou deve ser presa. Parece que o jogo virou, não é mesmo?',
-  ADPF_MORE_ABOUT_ABORTION_J1: 'UFA! Já viu que tem muita coisa pra dizer sobre aborto né? Em geral o ódio e a ignorância reinam nessas discussões. Por isso, a informação é nossa maior arma! ✊',
+  ADPF_MORE_ABOUT_ABORTION_J1: 'UFA! Já viu que tem muita coisa pra dizer sobre aborto né? Em geral o ódio e a ignorância reinam nessas discussões. Por isso, a informação é nossa maior arma! ✊ Como eu sou robô de ação política, não podia deixar de te contar da ADPF 442, uma ação no Supremo Tribunal Federal que propõe a descriminalização do aborto no Brasil. Quer saber mais? Confira meu radar político:',
   ADPF_MORE_ABOUT_ABORTION_C: 'Existe hoje uma ação no Supremo Tribunal Federal (STF), a ADPF 442, para descriminalizar o aborto no Brasil! Nos dias 3 e 6 de agosto vai rolar uma Audiência Pública no STF com especialistas sobre o tema - histórico!',
   ADPF_MORE_ABOUT_ABORTION_C1: 'Para fazer nossa opinião chegar até lá, vamos entregar aos Ministros e Ministras do STF uma petição com milhares de assinaturas apoiando a descriminalização do aborto no Brasil. É nosso jeitinho de mostrar que a população está atenta e mobilizada pela vida das mulheres. 🔊 E você pode assinar aqui mesmo, pelo chat! Tá comigo?',
 
@@ -224,7 +224,7 @@ export default {
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
   KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Continuamos nossa pressão contra o Escola Sem Partido: para entrar em ação, é só me responder com #EducaçãoFazMeuGênero. Além disso, não podemos esquecer que as eleições tão chegando. Não tenho título de eleitor, mas não ia ficar de fora né? Se quiser receber toda semana uma iniciativa sobre feminismo e eleições, me responda com #PolíticaComFeminismo.',
-  
+
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
   BYE: 'Até mais! 👋',
@@ -470,7 +470,7 @@ export default {
   // Answers
   //
   BETA_ELECTIONS: 'Amooo <3 Deixa comigo: nas próximas semanas vou te enviar alguns projetos incríveis sobre feminismo e eleições. Hora de hackear o sistema! Se quiser saber o que mais tenho pra te dizer por enquanto, me envie "menu".',
-  
+
   DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
 
   ABOUT_MIGUEL_NAGIB: 'Quase dou tela azul só de ouvir o nome Miguel Nagib! Ele é advogado e procurador do Estado de São Paulo, e um dos líderes e fundadores do Movimento Escola Sem Partido.',
@@ -480,11 +480,11 @@ export default {
   ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
 
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
-  
+
   ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Pressionamos vereadores e vereadoras a aprovarem 7 dos seus projetos de lei, e 5 já foram aprovados em última votação. Agora só falta serem sancionados pelo prefeito. Te mantenho atualizada, mana!',
-  
+
   HASHTAG_MARIELLE: 'Arrasou! Assim que tiver alguma novidade, chamado ou convite sobre a mobilização pelos projetos de lei da Marielle, te aviso por aqui! Enquanto isso, digite "menu" para saber o que mais tenho pra te dizer ;)',
-  
+
   ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia. Para saber mais sobre elas, digite "menu" e selecione a opção Radar Político!',
 
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
@@ -592,9 +592,9 @@ export default {
   INTERNET_SUCKS: 'Te entendo! Aqui na nuvem também rolam umas turbulências de vez em quando. Me chama quando tiver melhor - estarei por aqui 😉',
 
   DONT_WANT_KNOW: 'Sem problemas - não te envio mais novidades da campanha #EducaçãoFazMeuGênero! Se não quiser mais receber nenhuma mensagem minha, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
-  
+
   WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪',
-  
+
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 

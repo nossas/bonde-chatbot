@@ -207,17 +207,17 @@ export default botData => ({
     [V2_QUICK_REPLY_B]: [
       botSpeeches.messages.LIST,
       carouselTemplate(
-        /* elements(
+        elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF442,
+          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_ADPF442
+              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
             })
           ],
-        ), */
+        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -267,17 +267,17 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
-        /* elements(
+        elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF442,
+          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_ADPF442
+              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
             })
           ],
-        ), */
+        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -465,13 +465,13 @@ export default botData => ({
     //
     // ADPF 442 - O que é a ADPF 442
     //
-    /* [V2_QUICK_REPLY_WHATS_ADPF442]: [
+    [V2_QUICK_REPLY_WHATS_ADPF442]: [
       botSpeeches.messages.WHATS_ADPF442,
       botSpeeches.messages.WHATS_ADPF442_1,
       messageWithQuickReply(
         botSpeeches.messages.WHATS_ADPF442_2,
         quickReply(V2_QUICK_REPLY_WHATS_ADPF442_A, botSpeeches.buttonTexts.HOWS_NOW),
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1)
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_WHATS_ADPF442_A]: [
@@ -479,20 +479,18 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.WHATS_ADPF442_A1,
         quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.I_WANT_A),
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_WHATS_ADPF442_C]: {
       text: botSpeeches.messages.WHATS_ADPF442_C,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN_NOW),
-        quickReply(V2_QUICK_REPLY_ADPF_PETITION_TEXT, botSpeeches.buttonTexts.READ_LETTER)
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR)
       ],
-    }, */
+    },
     //
     // ADPF 442 - Mais sobre aborto
     //
-    /* [V2_QUICK_REPLY_MORE_ABOUT_ABORTION]: {
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION]: {
       text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A, botSpeeches.buttonTexts.I_WANT_B)
@@ -504,7 +502,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A2,
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B, botSpeeches.buttonTexts.STEP2),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B]: [
@@ -512,7 +510,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B1,
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D, botSpeeches.buttonTexts.STEP3),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D]: [
@@ -521,7 +519,7 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D2,
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E, botSpeeches.buttonTexts.STEP4),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E]: [
@@ -529,52 +527,45 @@ export default botData => ({
       messageWithQuickReply(
         botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E1,
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F, botSpeeches.buttonTexts.SEND_MORE),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       )
     ],
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F]: {
       text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_F,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G, botSpeeches.buttonTexts.ONE_MORE),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       ],
     },
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G]: {
       text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_G,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H, botSpeeches.buttonTexts.I_WANT_MORE),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       ],
     },
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H]: {
       text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_H,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I, botSpeeches.buttonTexts.NEXT_ROUND),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       ],
     },
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I]: {
       text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_I,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J, botSpeeches.buttonTexts.JUST_ONE_MORE),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       ],
     },
     [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J]: [
       botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J,
       messageWithQuickReply(
         botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J1,
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C, botSpeeches.buttonTexts.TAKE_ACTION)
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
       )
     ],
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_C]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_C,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_C1,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN_NOW),
-        quickReply(V2_QUICK_REPLY_ADPF_PETITION_TEXT, botSpeeches.buttonTexts.READ_LETTER)
-      )
-    ], */
 
     //
     // Mapa do Acolhimento
@@ -743,6 +734,17 @@ export default botData => ({
     [V2_QUICK_REPLY_A_2]: [
       carouselTemplate(
         elements(
+          botSpeeches.carouselTexts.ADPF,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ADPF442_2,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.ADPF_BUTTON,
+              payload: V2_QUICK_REPLY_WHATS_ADPF442
+            })
+          ],
+        ),
+        elements(
           botSpeeches.carouselTexts.PEC,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_PEC,
@@ -763,18 +765,7 @@ export default botData => ({
               payload: V2_QUICK_REPLY_STATUTE
             })
           ],
-        )/* ,
-        elements(
-          botSpeeches.carouselTexts.ADPF,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.ADPF,
-              payload: V2_QUICK_REPLY_ADPF
-            })
-          ],
-        ) */
+        )
       )
     ],
     //
