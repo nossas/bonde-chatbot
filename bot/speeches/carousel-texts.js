@@ -8,7 +8,7 @@ export default {
   TITLE_ACT: 'Oportunidades de ação',
   TITLE_SHARE: 'Envie um #ChamaBetaNoInbox',
   SUBTITLE: '',
-  
+
   IMAGE_RADAR: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta2.png',
   IMAGE_MORE: 'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta1+(1).png',
   IMAGE_ACT:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta3.png',
@@ -18,13 +18,16 @@ export default {
   PEC:'#Retrocesso PEC 181',
   STATUTE:'#Retrocesso Estatuto Nascituro',
   SUG:'#Avanço SUG 15',
-  ADPF:'#Avanço ADPF 442',
+  ADPF:'Descriminalização do Aborto',
+  ADPF_BUTTON:'Clique aqui! 🤖',
 
-  IMAGE_PEC:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta5.png', 
-  IMAGE_STATUTE:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta6.png', 
-  IMAGE_SUG:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta7.png', 
-  IMAGE_ADPF:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png', 
-  
+
+  IMAGE_PEC:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta5.png',
+  IMAGE_ADPF442_2:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png',
+  IMAGE_STATUTE:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta6.png',
+  IMAGE_SUG:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta7.png',
+  IMAGE_ADPF:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png',
+
   //Agir agora
   EDUCATION:'Pressionar deputados/as!',
   EDUCATION_1:'Enviar pressão',
@@ -38,9 +41,10 @@ export default {
   //
   // ADPF442
   //
-  TITLE_ADPF442: 'ADPF 442',
-  BUTTON_ADPF442:'Clique e participe',
+  TITLE_ADPF442: 'Aborto no Brasil ',
+  BUTTON_ADPF442:'Clique aqui! ✊',
   IMAGE_ADPF442:'https://s3.amazonaws.com/chatbox-beta/campaigns/-beta-cards_beta_campanha.png',
+  IMAGE_SPECIAL_CONTENT:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta13.png',
   //
   // Buttons Texts
   //

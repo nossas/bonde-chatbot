@@ -126,10 +126,10 @@ export default {
   STEP4: 'Passo 4',
   SEND_MORE: 'Manda mais!',
   ONE_MORE: 'Mais uma!',
-  ONE_MORE: 'Mais uma!',
   I_WANT_MORE: 'Quero mais!',
   NEXT_ROUND: 'Próxima rodada!',
   JUST_ONE_MORE: 'Só mais um!',
+  KEEP_ME_UPDATED: 'Mantenha-me informada!',
 
 
   //
@@ -141,6 +141,6 @@ export default {
   SHARE_FRIENDS: 'Compartilhar com amigues',
   I_WANT_TO_GO: 'Quero ir!',
   OTHER_ACTIONS: 'Outras ações',
-  
-  
+
+
 }
