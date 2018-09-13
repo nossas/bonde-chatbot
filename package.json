@@ -4,7 +4,7 @@
   "description": "Enable activist to pressure through facebook",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r 'babel-register' ./index.js",
+    "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r 'babel-register' -r dotenv/config ./index.js",
     "prestart": "NODE_ENV=production babel ./index.js --out-file ./index.builded.js",
     "start": "NODE_ENV=production node -r 'babel-register' ./index.builded.js",
     "prestart:worker": "NODE_ENV=production babel ./workers/process-bot-mass-message-queue.js --out-file ./workers/process-bot-mass-message-queue.builded.js",
