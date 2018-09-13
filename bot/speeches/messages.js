@@ -223,7 +223,7 @@ export default {
 
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Continuamos nossa pressão contra o Escola Sem Partido: para entrar em ação, é só me responder com #EducaçãoFazMeuGênero. Além disso, não podemos esquecer que as eleições tão chegando. Não tenho título de eleitor, mas não ia ficar de fora né? Se quiser receber toda semana uma iniciativa sobre feminismo e eleições, me responda com #PolíticaComFeminismo.',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Continuamos nossa pressão contra o Escola Sem Partido: para entrar em ação, é só me responder com #EducaçãoFazMeuGênero. Além disso, não podemos esquecer que as eleições tão chegando. Não tenho título de eleitor, mas não ia ficar de fora né? Me juntei a parceiras incríveis em uma ação contra discurso de ódio nas eleições. Para saber como apoiar, me responda com #tretaqui!',
 
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -469,6 +469,10 @@ export default {
   //
   // Answers
   //
+  ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
+  
+  ABOUT_DISCURSO_DE_ODIO: 'A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. Viu algum discurso de ódio nas eleições? Me responda com #tretaquique eu te digo como denunciar!',
+  
   BETA_ELECTIONS: 'Amooo <3 Deixa comigo: nas próximas semanas vou te enviar alguns projetos incríveis sobre feminismo e eleições. Hora de hackear o sistema! Se quiser saber o que mais tenho pra te dizer por enquanto, me envie "menu".',
 
   DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',
