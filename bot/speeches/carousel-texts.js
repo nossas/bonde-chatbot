@@ -56,7 +56,7 @@ export default {
   //
   // Discurso de ódio
   //
-  TITLE_ODIO: 'Discurso de ódio nas eleições',
+  TITLE_ODIO: 'Discurso de ódio nas eleições não dá!',
   IMAGE_ODIO: 'https://s3.amazonaws.com/chatbox-beta/campaigns/%5Btretaqui%5D+card_01.jpg',
   BUTTON_ODIO: 'Clique aqui!',
 }

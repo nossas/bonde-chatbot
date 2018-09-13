@@ -30,6 +30,15 @@ export default (bot, speech, botData) => (payload, reply) => {
         case 'mais_sobre_aborto':
             message = speech.messages.V2_QUICK_REPLY_MORE_ABOUT_ABORTION
             break;
+        case 'treta_aqui':
+            message = speech.messages.V2_QUICK_REPLY_DISCURSO_ODIO
+            break;
+        case 'treta_aqui_denuciar':
+            message = speech.messages.V2_QUICK_REPLY_K_1
+            break;
+        case 'treta_aqui_mais_conteudo':
+            message = speech.messages.V2_QUICK_REPLY_K_2
+            break;
         default:
             message = speech.messages.GET_STARTED
             break;
@@ -49,12 +58,12 @@ export default (bot, speech, botData) => (payload, reply) => {
             if (index < message.length) {
               reply(normalize(message[index]), err => {
                 if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
-      
+
                 bot.sendSenderAction(payload.sender.id, 'typing_on')
                 if (index === message.length - 1) {
                   bot.sendSenderAction(payload.sender.id, 'typing_off')
                 }
-                
+
                 setTimeout(() => replySequentially(index + 1), 5000)
               })
             }

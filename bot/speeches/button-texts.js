@@ -146,7 +146,7 @@ export default {
   // Discurso de ódio
   //
   COMPLAINT: 'Denunciar!',
-  MORE_ABOUT_HATE_SPEECH: 'Mais sobre discurso de ódio',
+  MORE_ABOUT_HATE_SPEECH: 'Sobre discurso de ódio',
   I_WANT_COMPLAINT: 'Quero denunciar!',
   I_WANT_COMPLAINT_STEP_2: 'Passo 2!',
   I_WANT_COMPLAINT_STEP_3: 'Passo 3!',
