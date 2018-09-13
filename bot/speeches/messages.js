@@ -192,6 +192,18 @@ export default {
   // Discurso de ódio
   //
   DISCURSO_ODIO: 'Eu não tenho título de eleitor, mas também não sou robô de ficar de fora das eleições! 🤖  Me juntei a alguns crushes incríveis para criar uma ação conjunta de combate ao discurso de ódio praticado por candidaturas e partidos no período eleitoral: não podemos deixar que esses discursos sejam estratégia pra ganhar eleitores! Criamos um jeitinho bem prático de você denunciar conteúdos de ódio e garantir uma rede mais segura. Vem tretar comigo? 😝',
+  DISCURSO_ODIO_1: '#AlertaTreta 🚨 Viu alguma candidatura sendo atacada por outra ou dizendo o que não deveria? Tá certíssima em denunciar, mana! Candidaturas e partidos têm usado discursos de ódio para ganhar apoio político. São discursos racistas, machistas, LGBTfóbicos e outros ataques só para chamar atenção. #realoficial antidemocrático, contra os direitos humanos e responsável por aumentar a violência contra grupos minorizados. Não podemos deixar que isso aconteça! (...)',
+  DISCURSO_ODIO_2: 'Como uma boa robô feminista, tenho um caminho rápido para sua denúncia ser analisada pelo Ministério Público Federal: um sistema criado pela ONG SaferNet e adaptado pela Coding Rights. É fácil, anônimo e é denúncia! 🤫 Vamos lá?',
+  DISCURSO_ODIO_3: 'Para denunciar, é só acessar este link! São só 3 clicks e sua denúncia tá feita! https://bit.ly/denuncie_tretaqui',
+  DISCURSO_ODIO_4: 'Pode ter certeza que a sua denúncia vai ajudar a criar uma internet mais segura! Ah, se todo mundo denunciasse quando visse uma candidatura usando discurso de ódio nas eleições... Seria meu sonho? 😍 Compartilhe meu link com a sua galera pra mostrar que é possível, e super fácil! 💪 ',
+  DISCURSO_ODIO_5: 'WikiBeta: ativar! 🤖 Agora vou te contar um pouco sobre o que é discurso de ódio, porque é tão importante falar sobre isso nas eleições e como denunciar. Ah, e é claro que vou te dar umas dicas pra ficar #protegida na internet - aqui tem robô feminista, mas também tá cheio de algoritmos desatualizados. Criei uma jornada de 3 passos, tá comigo?',
+  DISCURSO_ODIO_6: '👉 Passo 1: o que é discurso de ódio. 🔊  A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. (...)',
+  DISCURSO_ODIO_7: 'Você já deve ter visto alguma treta dessas na internet! Não é raro um post viralizar e ser alvo de comentários racistas, machistas ou que incitam violência. De 2006 a 2017, a SaferNet recebeu mais de 2 milhões de denúncias de discursos de ódio. Em tempos de eleição então, o #AlertaTreta não para! 🚨 (...)',
+  DISCURSO_ODIO_8: 'Mas é importante lembrar que nem tudo é discurso de ódio. Não é qualquer disputa de opinião que precisa ser tirada do ar - afinal, as pessoas têm mesmo pontos de vista diferentes. A liberdade de expressão é essencial, o que não pode é restringir a liberdade e os direitos de alguém ou incitar violência e discriminação.',
+  DISCURSO_ODIO_9: '👉 Passo 2: por que denunciar discurso de ódio nas eleições? Muitos partidos e candidaturas têm usado o discurso de ódio como estratégia para ganhar apoio político. É #realoficial, eles usam discursos machistas, racistas e LGBTfóbicos pra chamar atenção. Dá pra acreditar? Isso sim é alerta de um sistema desatualizado! ⚠️ (...)',
+  DISCURSO_ODIO_10: 'Denunciar discursos de ódio é um ato político, uma forma de criar um ambiente político mais seguro, que não seja usado para discriminar e incitar violência.',
+  DISCURSO_ODIO_11: '👉 Passo 3: como é que faz pra se proteger? 🤔 Discursos de ódio podem e devem ser banidos da internet. Além do caminho de denúncia, a gente juntou algumas dicas pra tornar a internet um lugar mais seguro. 💪 É nosso jeitinho de hackear o sistema. 😉 (...)',
+  DISCURSO_ODIO_12: 'Aqui você encontra dicas para ficar mais segura nas redes e para facilitar os corres jurídicos: https://bit.ly/dicas_tretaqui Quando o ódio e a discriminação reinam nas discussões, informação é nossa maior arma. Por isso sua missão agora é compartilhar meu link com seus amigues e mostrar pra eles que, se organizar direitinho, podemos criar uma internet mais segura nas eleições! ✊',
 
   // Escola sem partido
   EDUCATION:'#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e as duas votações foram cancelada, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
@@ -475,9 +487,9 @@ export default {
   // Answers
   //
   ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
-  
+
   ABOUT_DISCURSO_DE_ODIO: 'A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. Viu algum discurso de ódio nas eleições? Me responda com #tretaquique eu te digo como denunciar!',
-  
+
   BETA_ELECTIONS: 'Amooo <3 Deixa comigo: nas próximas semanas vou te enviar alguns projetos incríveis sobre feminismo e eleições. Hora de hackear o sistema! Se quiser saber o que mais tenho pra te dizer por enquanto, me envie "menu".',
 
   DATA_ESCOLA_SEM_PARTIDO: 'Juntei aqui alguns dados super importantes sobre violência contra mulheres, violência contra LGBTs e a opinião da população brasileira sobre discutir gênero nas escolas. Confere só: 👉http://bit.ly/violencia_lgbt  👉 http://bit.ly/violencia_contra_mulher1  👉http://bit.ly/violencia_contra_mulher2  👉http://bit.ly/ibope_escolasempartido',

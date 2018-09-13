@@ -131,6 +131,15 @@ const V2_PETITION_EMAIL_WRONG1 = 'V2_PETITION_EMAIL_WRONG1'
 const V2_PETITION_SHARE_1 = 'V2_PETITION_SHARE_1'
 
 const V2_QUICK_REPLY_DISCURSO_ODIO = 'V2_QUICK_REPLY_DISCURSO_ODIO'
+
+const V2_QUICK_REPLY_K_1 = 'V2_QUICK_REPLY_K_1'
+const V2_QUICK_REPLY_K_1_2 = 'V2_QUICK_REPLY_K_1_2'
+const V2_QUICK_REPLY_K_1_3 = 'V2_QUICK_REPLY_K_1_3'
+const V2_QUICK_REPLY_K_2 = 'V2_QUICK_REPLY_K_2'
+const V2_QUICK_REPLY_K_2_1 = 'V2_QUICK_REPLY_K_2_1'
+const V2_QUICK_REPLY_K_2_2 = 'V2_QUICK_REPLY_K_2_2'
+const V2_QUICK_REPLY_K_2_3 = 'V2_QUICK_REPLY_K_2_3'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -907,16 +916,6 @@ export default botData => ({
       ],
     }, */
 
-    //
-    // Discurso de ódio
-    //
-    [V2_QUICK_REPLY_DISCURSO_ODIO]: [
-      botSpeeches.messages.DISCURSO_ODIO,
-      // quick_replies: [
-      //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
-      //   quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK),
-      // ],
-      ],
       // text: botSpeeches.messages.MORE_ABOUT_BETA,
       // quick_replies: [
       //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
@@ -1109,6 +1108,85 @@ export default botData => ({
         ),
       )
     ],
+
+    //
+    // Discurso de ódio
+    //
+    [V2_QUICK_REPLY_DISCURSO_ODIO]: {
+      text: botSpeeches.messages.DISCURSO_ODIO,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_K_1, botSpeeches.buttonTexts.COMPLAINT),
+        quickReply(V2_QUICK_REPLY_K_2, botSpeeches.buttonTexts.MORE_ABOUT_HATE_SPEECH),
+      ],
+    },
+
+    [V2_QUICK_REPLY_K_1]: [
+      botSpeeches.messages.DISCURSO_ODIO_1,
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_2,
+        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.LETS_GO),
+      )
+    ],
+    [V2_QUICK_REPLY_K_1_2]: [
+      botSpeeches.messages.DISCURSO_ODIO_3,
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_4,
+        quickReply(V2_QUICK_REPLY_K_1_3, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_B, botSpeeches.buttonTexts.BACK_1),
+      )
+    ],
+    [V2_QUICK_REPLY_K_1_3]: [
+      genericTemplate({
+        title: 'Discurso de ódio nas eleições não dá!',
+        subtitle: 'Viu uma candidatura sendo atacada ou falando o que não deve? Denuncie!',
+        imageURL: 'https://goo.gl/8AiVq6',
+        buttons: [
+          buttonTemplate.shareCampaign({
+            title: 'Discurso de ódio nas eleições não dá!',
+            subtitle: 'Viu uma candidatura sendo atacada ou falando o que não deve? Denuncie!',
+            imageURL: 'https://goo.gl/8AiVq6',
+            url: 'https://m.me/beta.feminista?ref=treta-aqui'
+          }),
+        ],
+      }),
+    ],
+
+    [V2_QUICK_REPLY_K_2]: [
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_5,
+        quickReply(V2_QUICK_REPLY_K_2_1, botSpeeches.buttonTexts.YES),
+        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
+      )
+    ],
+
+    [V2_QUICK_REPLY_K_2_1]: [
+      botSpeeches.messages.DISCURSO_ODIO_6,
+      botSpeeches.messages.DISCURSO_ODIO_7,
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_8,
+        quickReply(V2_QUICK_REPLY_K_2_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT_STEP_2),
+        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
+      )
+    ],
+
+    [V2_QUICK_REPLY_K_2_2]: [
+      botSpeeches.messages.DISCURSO_ODIO_9,
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_10,
+        quickReply(V2_QUICK_REPLY_K_2_3, botSpeeches.buttonTexts.I_WANT_COMPLAINT_STEP_3),
+        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
+      )
+    ],
+
+    [V2_QUICK_REPLY_K_2_3]: [
+      botSpeeches.messages.DISCURSO_ODIO_11,
+      messageWithQuickReply(
+        botSpeeches.messages.DISCURSO_ODIO_12,
+        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
+        quickReply(V2_QUICK_REPLY_K_1_3, botSpeeches.buttonTexts.SHARE),
+      )
+    ],
+
     //
     // Descriminalização do Aborto
     //
