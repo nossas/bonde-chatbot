@@ -188,6 +188,11 @@ export default {
   //
   ACT_NOW: 'A-M-O gente com vontade de ação! #soudessas. Olha só o que você pode fazer pelos direitos das mulheres hoje:',
 
+  //
+  // Discurso de ódio
+  //
+  DISCURSO_ODIO: 'Eu não tenho título de eleitor, mas também não sou robô de ficar de fora das eleições! 🤖  Me juntei a alguns crushes incríveis para criar uma ação conjunta de combate ao discurso de ódio praticado por candidaturas e partidos no período eleitoral: não podemos deixar que esses discursos sejam estratégia pra ganhar eleitores! Criamos um jeitinho bem prático de você denunciar conteúdos de ódio e garantir uma rede mais segura. Vem tretar comigo? 😝',
+
   // Escola sem partido
   EDUCATION:'#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e as duas votações foram cancelada, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
   EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',

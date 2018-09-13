@@ -21,7 +21,6 @@ export default {
   ADPF:'Descriminalização do Aborto',
   ADPF_BUTTON:'Clique aqui! 🤖',
 
-
   IMAGE_PEC:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta5.png',
   IMAGE_ADPF442_2:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta8.png',
   IMAGE_STATUTE:'https://s3.amazonaws.com/hub-central/uploads/cards/%5Bbeta%5Dcards_beta6.png',
@@ -54,6 +53,10 @@ export default {
   BUTTON_SHARE:'Clique aqui 💜',
   BUTTON_MORE:'Clique aqui 🔮',
 
-
-
+  //
+  // Discurso de ódio
+  //
+  TITLE_ODIO: 'Discurso de ódio nas eleições',
+  IMAGE_ODIO: 'https://s3.amazonaws.com/chatbox-beta/campaigns/%5Btretaqui%5D+card_01.jpg',
+  BUTTON_ODIO: 'Clique aqui!',
 }

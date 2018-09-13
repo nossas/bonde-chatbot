@@ -130,6 +130,7 @@ const V2_PETITION_EMAIL_OK1 = 'V2_PETITION_EMAIL_OK1'
 const V2_PETITION_EMAIL_WRONG1 = 'V2_PETITION_EMAIL_WRONG1'
 const V2_PETITION_SHARE_1 = 'V2_PETITION_SHARE_1'
 
+const V2_QUICK_REPLY_DISCURSO_ODIO = 'V2_QUICK_REPLY_DISCURSO_ODIO'
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -184,6 +185,11 @@ export default botData => ({
           title: "Mais sobre a Beta",
           type: "postback",
           payload: "V2_QUICK_REPLY_MAIS"
+        },
+        {
+          title: "Discurso de Ódio",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_DISCURSO_ODIO"
         }
       ]
     },
@@ -207,6 +213,17 @@ export default botData => ({
     [V2_QUICK_REPLY_B]: [
       botSpeeches.messages.LIST,
       carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ODIO,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ODIO,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ODIO,
+              payload: V2_QUICK_REPLY_DISCURSO_ODIO
+            })
+          ],
+        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -267,6 +284,17 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
+        elements(
+          botSpeeches.carouselTexts.TITLE_ODIO,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_ODIO,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_ODIO,
+              payload: V2_QUICK_REPLY_DISCURSO_ODIO
+            })
+          ],
+        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ADPF442,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -878,6 +906,34 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
     }, */
+
+    //
+    // Discurso de ódio
+    //
+    [V2_QUICK_REPLY_DISCURSO_ODIO]: [
+      botSpeeches.messages.DISCURSO_ODIO,
+      // quick_replies: [
+      //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
+      //   quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK),
+      // ],
+      ],
+      // text: botSpeeches.messages.MORE_ABOUT_BETA,
+      // quick_replies: [
+      //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
+      //   quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK),
+      // ],
+
+        /* elements(
+          botSpeeches.carouselTexts.VOTE,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.VOTE,
+              payload: V2_QUICK_REPLY_VOTE
+            })
+          ],
+        ) */
     //
     // Quero agir agora
     //
