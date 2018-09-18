@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import 'isomorphic-fetch' // window.fetch pollyfill
 import 'colors'
 

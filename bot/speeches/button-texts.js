@@ -142,5 +142,13 @@ export default {
   I_WANT_TO_GO: 'Quero ir!',
   OTHER_ACTIONS: 'Outras ações',
 
+  //
+  // Discurso de ódio
+  //
+  COMPLAINT: 'Denunciar!',
+  MORE_ABOUT_HATE_SPEECH: 'Sobre discurso de ódio',
+  I_WANT_COMPLAINT: 'Quero denunciar!',
+  I_WANT_COMPLAINT_STEP_2: 'Passo 2!',
+  I_WANT_COMPLAINT_STEP_3: 'Passo 3!',
 
 }
