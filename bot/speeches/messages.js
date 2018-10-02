@@ -240,7 +240,7 @@ export default {
 
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Estamos pressionando os deputados e deputadas do Rio de Janeiro para rejeitarem um projeto que aumenta ainda mais a repressão ao aborto. Ao invés de tratar o aborto como uma questão de saúde, eles querem aumentar as punições. Me envie #PldoAboro para saber mais sobre o projeto e entrar em ação!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Estamos pressionando os deputados e deputadas do Rio de Janeiro para rejeitarem um projeto que aumenta ainda mais a repressão ao aborto. Ao invés de tratar o aborto como uma questão de saúde, eles querem aumentar as punições. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
 
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -486,7 +486,7 @@ export default {
   //
   // Answers
   //
-  ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAboro para saber mais sobre o projeto e entrar em ação!',
+  ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
   
   ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
 
