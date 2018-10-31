@@ -206,9 +206,9 @@ export default {
   DISCURSO_ODIO_12: 'Aqui você encontra dicas para ficar mais segura nas redes e para facilitar os corres jurídicos: https://bit.ly/dicas_tretaqui Quando o ódio e a discriminação reinam nas discussões, informação é nossa maior arma. Por isso sua missão agora é compartilhar meu link com seus amigues e mostrar pra eles que, se organizar direitinho, podemos criar uma internet mais segura nas eleições! ✊',
 
   // Escola sem partido
-  EDUCATION:'#SOS 🚨 O Congresso pode votar a qualquer momento uma proposta que condena as próximas gerações a mais desigualdade de gênero, mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos. Já fizemos muita pressão e as duas votações foram canceladas, mas tudo indica que ela em breve volta à pauta. Precisamos nos unir para barrar esse retrocesso! Tá comigo? 💪',
-  EDUCATION_1:'A proposta é conhecida como "Escola Sem Partido" (PL 7180/2014). O que tá em jogo é o relatório final desse projeto de lei, que, entre outros retrocessos, quer proibir o uso dos termos "gênero" e "orientação sexual" nas escolas brasileiras.',
-  EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos. 😨',
+  EDUCATION:'Mana, tá atenta? 🚨🧐 O Congresso marcou pra HOJE, às 14h30min, a votação do relatório do “Escola sem Partido”, que quer proibir as expressões “gênero” e “orientação sexual” de TODO ensino brasileiro - lembra desse projeto? Olha que 2019 nem começou. Mas a gente tá atenta há muuuito tempo, já enviou mais de 31 mil emails de pressão - em julho e em agosto - e vai mostrar que continua na luta pra fazer a votação cair de novo. 💪Tá comigo?',
+  EDUCATION_1:'O projeto ficou conhecido como Escola sem Partido (PL 7180/2014), mas na prática ele representa mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos.',
+  EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos.😨',
   EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
   IF_APPROVED:'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
   IF_APPROVED_1:'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
@@ -240,7 +240,7 @@ export default {
 
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Continuamos nossa pressão contra o Escola Sem Partido: para entrar em ação, é só me responder com #EducaçãoFazMeuGênero. Além disso, não podemos esquecer que as eleições tão chegando. Não tenho título de eleitor, mas não ia ficar de fora né? Me juntei a parceiras incríveis em uma ação contra discurso de ódio nas eleições. Para saber como apoiar, me responda com #tretaqui!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Estamos pressionando os deputados e deputadas do Rio de Janeiro para rejeitarem um projeto que aumenta ainda mais a repressão ao aborto. Ao invés de tratar o aborto como uma questão de saúde, eles querem aumentar as punições. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
 
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -486,6 +486,8 @@ export default {
   //
   // Answers
   //
+  ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
+
   ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
 
   ABOUT_DISCURSO_DE_ODIO: 'A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. Viu algum discurso de ódio nas eleições? Me responda com #tretaquique eu te digo como denunciar!',

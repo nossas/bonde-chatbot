@@ -188,6 +188,11 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
+          title: "Escola Sem Partido",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_EDUCATION"
+        },
+        {
           title: "Outras Ações",
           type: "postback",
           payload: "V2_QUICK_REPLY_ACT"
@@ -196,11 +201,6 @@ export default botData => ({
           title: "Mais sobre a Beta",
           type: "postback",
           payload: "V2_QUICK_REPLY_MAIS"
-        },
-        {
-          title: "Discurso de Ódio",
-          type: "postback",
-          payload: "V2_QUICK_REPLY_DISCURSO_ODIO"
         }
       ]
     },
@@ -224,28 +224,6 @@ export default botData => ({
     [V2_QUICK_REPLY_B]: [
       botSpeeches.messages.LIST,
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ODIO,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ODIO,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ODIO,
-              payload: V2_QUICK_REPLY_DISCURSO_ODIO
-            })
-          ],
-        ),
-        elements(
-          botSpeeches.carouselTexts.TITLE_ADPF442,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
-            })
-          ],
-        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -295,28 +273,6 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ODIO,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ODIO,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ODIO,
-              payload: V2_QUICK_REPLY_DISCURSO_ODIO
-            })
-          ],
-        ),
-        elements(
-          botSpeeches.carouselTexts.TITLE_ADPF442,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
-            })
-          ],
-        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
