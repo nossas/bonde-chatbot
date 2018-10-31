@@ -188,6 +188,11 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
+          title: "Escola Sem Partido",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_EDUCATION"
+        },
+        {
           title: "Outras Ações",
           type: "postback",
           payload: "V2_QUICK_REPLY_ACT"
@@ -196,11 +201,6 @@ export default botData => ({
           title: "Mais sobre a Beta",
           type: "postback",
           payload: "V2_QUICK_REPLY_MAIS"
-        },
-        {
-          title: "Discurso de Ódio",
-          type: "postback",
-          payload: "V2_QUICK_REPLY_DISCURSO_ODIO"
         }
       ]
     },
