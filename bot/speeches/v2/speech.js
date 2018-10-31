@@ -225,28 +225,6 @@ export default botData => ({
       botSpeeches.messages.LIST,
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.TITLE_ODIO,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ODIO,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ODIO,
-              payload: V2_QUICK_REPLY_DISCURSO_ODIO
-            })
-          ],
-        ),
-        elements(
-          botSpeeches.carouselTexts.TITLE_ADPF442,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
-            })
-          ],
-        ),
-        elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_ACT,
@@ -295,28 +273,6 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ODIO,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ODIO,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ODIO,
-              payload: V2_QUICK_REPLY_DISCURSO_ODIO
-            })
-          ],
-        ),
-        elements(
-          botSpeeches.carouselTexts.TITLE_ADPF442,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_SPECIAL_CONTENT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ADPF442,
-              payload: V2_QUICK_REPLY_MORE_ABOUT_ABORTION
-            })
-          ],
-        ),
         elements(
           botSpeeches.carouselTexts.TITLE_ACT,
           botSpeeches.carouselTexts.SUBTITLE,
