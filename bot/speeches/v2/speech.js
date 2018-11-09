@@ -335,7 +335,7 @@ export default botData => ({
     [V2_QUICK_REPLY_STF_ALLOUT]: {
       text: botSpeeches.messages.STF_ALLOUT,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_L_1, botSpeeches.buttonTexts.YES),
+        quickReply(V2_QUICK_REPLY_L_1, botSpeeches.buttonTexts.YES)
       ],
     },
     [V2_QUICK_REPLY_L_1]: [
@@ -358,7 +358,7 @@ export default botData => ({
     [V2_QUICK_REPLY_L_3]: [
       messageWithQuickReply(
         botSpeeches.messages.STF_ALLOUT_9,
-        quickReply(V2_QUICK_REPLY_L_6, botSpeeches.buttonTexts.SIGN),
+        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
         quickReply(V2_QUICK_REPLY_L_7, botSpeeches.buttonTexts.READ_PETITION)
       )
     ],
@@ -382,16 +382,9 @@ export default botData => ({
       )
     ],
 
-    [V2_QUICK_REPLY_L_6]: [
-      botSpeeches.messages.STF_ALLOUT_11,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_PETITION_TEXT,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME1, botSpeeches.buttonTexts.SIGN)
-      )
-    ],
     // ADPF 442: Assinar petição (O que é ADPF e Mais sobre o aborto)
     [V2_QUICK_REPLY_PETITION_NAME]: () => ({
-      text: botSpeeches.messages.ADPF_PETITION_NAME
+      text: botSpeeches.messages.STF_ALLOUT_11
     }),
     [V2_QUICK_REPLY_PETITION_SURNAME]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_SURNAME
@@ -412,13 +405,13 @@ export default botData => ({
     // ADPF 442: Compartilhamento
     [V2_QUICK_REPLY_L_8]: [
       genericTemplate({
-        title: 'Clique e entre em ação pelo direito ao aborto',
-        subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
+        title: 'Proteja a vida das pessoas LGBT+',
+        subtitle: 'A hora de agir é agora!',
         imageURL: 'https://s3.amazonaws.com/chatbox-beta/campaigns/Share-Beta-AllOut.jpg',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: 'Clique e entre em ação pelo direito ao aborto',
-            subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
+            title: 'Proteja a vida das pessoas LGBT+',
+            subtitle: 'A hora de agir é agora!',
             imageUrl: 'https://s3.amazonaws.com/chatbox-beta/campaigns/Share-Beta-AllOut.jpg',
             url: 'https://m.me/beta.feminista?ref=stf_lgbt'
           })
@@ -679,12 +672,12 @@ export default botData => ({
           ],
         ),
         elements(
-          botSpeeches.carouselTexts.STF_TITLE,
-          '',
-          botSpeeches.carouselTexts.STF_IMAGE,
+          botSpeeches.carouselTexts.TITLE_STF,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_STF,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.STF_BUTTON,
+              title: botSpeeches.carouselTexts.BUTTON_STF,
               payload: V2_QUICK_REPLY_STF_ALLOUT
             })
           ],

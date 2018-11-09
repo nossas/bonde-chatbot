@@ -39,6 +39,8 @@ export default (bot, speech, botData) => (payload, reply) => {
         case 'treta_aqui_mais_conteudo':
             message = speech.messages.V2_QUICK_REPLY_K_2
             break;
+        case 'stf_lgbt':
+            message = speech.messages.V2_QUICK_REPLY_STF_ALLOUT
         default:
             message = speech.messages.GET_STARTED
             break;
