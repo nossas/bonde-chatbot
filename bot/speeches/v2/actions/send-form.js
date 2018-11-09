@@ -26,12 +26,10 @@ export default ({ payload }) => graphqlClient.query({
     const email = JSON.parse(emailInteraction.interaction)
     /* const city = JSON.parse(cityInteraction.interaction)
     const registerd = JSON.parse(registeredInteraction.interaction) */
-    
+
     //setup the widget info
-    const moblizationtId = 960
-    const widget_id = 17116
-    /* const moblizationtId = 942
-    const widget_id = 15699 */
+    const moblizationtId = 1024
+    const widget_id = 18679
 
     const fields = JSON.stringify([{
         label: "Nome",
@@ -46,7 +44,7 @@ export default ({ payload }) => graphqlClient.query({
         value: email.payload.message.text
       }
     ])
-    
+
     const url = `${process.env.API_URL}/mobilizations/${moblizationtId}/form_entries`
     const payload = {
       form_entry: {
