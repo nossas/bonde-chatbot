@@ -164,7 +164,7 @@ export default botData => ({
     [V2_QUICK_REPLY_M6_REGISTERED]: V2_QUICK_REPLY_M6_REGISTERED,
     [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG,
     [V2_QUICK_REPLY_M7]: V2_QUICK_REPLY_M7,
-    //ADPF442
+    // ADPF442 - Usando formulário de envio
     [V2_QUICK_REPLY_ADPF442]: V2_QUICK_REPLY_ADPF442,
     [V2_QUICK_REPLY_PETITION_NAME]: V2_QUICK_REPLY_PETITION_NAME,
     [V2_QUICK_REPLY_PETITION_SURNAME]: V2_QUICK_REPLY_PETITION_SURNAME,
@@ -193,15 +193,20 @@ export default botData => ({
           payload: "V2_QUICK_REPLY_EDUCATION"
         },
         {
+          title: "ADPF 442",
+          type: "postback",
+          payload: "V2_QUICK_REPLY_ADPF442"
+        },
+        {
           title: "Outras Ações",
           type: "postback",
           payload: "V2_QUICK_REPLY_ACT"
         },
-        {
+        /*{
           title: "Mais sobre a Beta",
           type: "postback",
           payload: "V2_QUICK_REPLY_MAIS"
-        }
+        }*/
       ]
     },
 
@@ -320,21 +325,17 @@ export default botData => ({
       )
     ],
 
-    //
-    // ADPF 442
-    //
-    /* [V2_QUICK_REPLY_ADPF442]: {
+    // ADPF 442: Chamada
+    [V2_QUICK_REPLY_ADPF442]: {
       text: botSpeeches.messages.ADPF442,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_TAKE_ACTION, botSpeeches.buttonTexts.TAKE_ACTION),
         quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.WHATS_ADPF442),
         quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION, botSpeeches.buttonTexts.MORE_ABOUT_ABORTION),
       ],
-    }, */
-    //
-    // ADPF 442 - Entrar em ação
-    //
-    /* [V2_QUICK_REPLY_TAKE_ACTION]: [
+    },
+    // ADPF 442: Introdução
+    [V2_QUICK_REPLY_TAKE_ACTION]: [
       botSpeeches.messages.ADPF_TAKE_ACTION,
       messageWithQuickReply(
         botSpeeches.messages.ADPF_TAKE_ACTION_1,
@@ -355,9 +356,9 @@ export default botData => ({
         botSpeeches.messages.ADPF_PETITION_TEXT,
         quickReply(V2_QUICK_REPLY_PETITION_NAME1, botSpeeches.buttonTexts.SIGN)
       )
-    ], */
-    //ADPF442 - PETIÇÃO - (O que é ADPF e Mais sobre o aborto)
-    /* [V2_QUICK_REPLY_PETITION_NAME]: () => ({
+    ],
+    // ADPF 442: Assinar petição (O que é ADPF e Mais sobre o aborto)
+    [V2_QUICK_REPLY_PETITION_NAME]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_NAME
     }),
     [V2_QUICK_REPLY_PETITION_SURNAME]: () => ({
@@ -376,6 +377,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1),
       ],
     }),
+    // ADPF 442: Compartilhamento
     [V2_PETITION_SHARE]: [
       genericTemplate({
         title: 'Clique e entre em ação pelo direito ao aborto',
@@ -396,7 +398,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
       )
-    ], */
+    ],
     //ADPF442 - PETIÇÃO
     /* [V2_QUICK_REPLY_PETITION_NAME1]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_NAME
