@@ -1,7 +1,7 @@
 export default (bot, speech, botData) => (payload, reply) => {
     var ref = payload.referral.ref
     var message = '';
-
+    console.log(payload.referral);
     switch (ref) {
         case 'sp_para_mulheres':
             message = speech.messages.V2_QUICK_REPLY_PRESSURE
@@ -41,6 +41,7 @@ export default (bot, speech, botData) => (payload, reply) => {
             break;
         case 'stf_lgbt':
             message = speech.messages.V2_QUICK_REPLY_STF_ALLOUT
+            break;
         default:
             message = speech.messages.GET_STARTED
             break;

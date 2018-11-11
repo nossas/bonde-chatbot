@@ -377,7 +377,7 @@ export default botData => ({
     [V2_QUICK_REPLY_L_7]: [
       messageWithQuickReply(
         botSpeeches.messages.STF_ALLOUT_10,
-        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
         quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.NOT_NOW)
       )
     ],
