@@ -2,6 +2,250 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.5.4"></a>
+## [2.5.4](https://github.com/nossas/bonde-bot/compare/v2.5.3...v2.5.4) (2018-11-12)
+
+
+
+<a name="2.5.2"></a>
+## [2.5.2](https://github.com/nossas/bonde-bot/compare/v2.5.1...v2.5.2) (2018-11-01)
+
+
+
+<a name="2.5.1"></a>
+## [2.5.1](https://github.com/nossas/bonde-bot/compare/v2.5.0...v2.5.1) (2018-10-31)
+
+
+
+<a name="2.5.0"></a>
+# [2.5.0](https://github.com/nossas/bonde-bot/compare/v2.4.15...v2.5.0) (2018-09-18)
+
+
+### Bug Fixes
+
+* **speech:** Add action to array of actions ([5a0249b](https://github.com/nossas/bonde-bot/commit/5a0249b))
+
+
+
+<a name="2.4.15"></a>
+## [2.4.15](https://github.com/nossas/bonde-bot/compare/v2.4.14...v2.4.15) (2018-08-29)
+
+
+
+<a name="2.4.14"></a>
+## [2.4.14](https://github.com/nossas/bonde-bot/compare/v2.4.13...v2.4.14) (2018-08-20)
+
+
+
+<a name="2.4.13"></a>
+## [2.4.13](https://github.com/nossas/bonde-bot/compare/v2.4.12...v2.4.13) (2018-08-16)
+
+
+
+<a name="2.4.12"></a>
+## [2.4.12](https://github.com/nossas/bonde-bot/compare/v2.4.11...v2.4.12) (2018-08-13)
+
+
+
+<a name="2.4.11"></a>
+## [2.4.11](https://github.com/nossas/bonde-bot/compare/v2.4.10...v2.4.11) (2018-08-09)
+
+
+
+<a name="2.4.10"></a>
+## [2.4.10](https://github.com/nossas/bonde-bot/compare/v2.4.9...v2.4.10) (2018-08-08)
+
+
+
+<a name="2.4.9"></a>
+## [2.4.9](https://github.com/nossas/bonde-bot/compare/v2.4.8...v2.4.9) (2018-08-08)
+
+
+
+<a name="2.4.8"></a>
+## [2.4.8](https://github.com/nossas/bonde-bot/compare/v2.4.7...v2.4.8) (2018-08-08)
+
+
+
+<a name="2.4.7"></a>
+## [2.4.7](https://github.com/nossas/bonde-bot/compare/v2.4.6...v2.4.7) (2018-08-08)
+
+
+
+<a name="2.4.6"></a>
+## [2.4.6](https://github.com/nossas/bonde-bot/compare/v2.4.5...v2.4.6) (2018-08-07)
+
+
+
+<a name="2.4.5"></a>
+## [2.4.5](https://github.com/nossas/bonde-bot/compare/v2.4.4...v2.4.5) (2018-08-03)
+
+
+
+<a name="2.4.4"></a>
+## [2.4.4](https://github.com/nossas/bonde-bot/compare/v2.4.3...v2.4.4) (2018-08-02)
+
+
+
+<a name="2.4.3"></a>
+## [2.4.3](https://github.com/nossas/bonde-bot/compare/v2.4.2...v2.4.3) (2018-07-27)
+
+
+
+<a name="2.4.2"></a>
+## [2.4.2](https://github.com/nossas/bonde-bot/compare/v2.4.1...v2.4.2) (2018-07-26)
+
+
+
+<a name="2.4.1"></a>
+## [2.4.1](https://github.com/nossas/bonde-bot/compare/v2.4.0...v2.4.1) (2018-07-25)
+
+
+
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/nossas/bonde-bot/compare/v2.3.4...v2.4.0) (2018-07-24)
+
+
+
+<a name="2.3.4"></a>
+## [2.3.4](https://github.com/nossas/bonde-bot/compare/v2.3.3...v2.3.4) (2018-07-12)
+
+
+
+<a name="2.3.3"></a>
+## [2.3.3](https://github.com/nossas/bonde-bot/compare/v2.3.2...v2.3.3) (2018-07-09)
+
+
+
+<a name="2.3.2"></a>
+## [2.3.2](https://github.com/nossas/bonde-bot/compare/v2.3.1...v2.3.2) (2018-07-06)
+
+
+
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/nossas/bonde-bot/compare/v2.3.0...v2.3.1) (2018-07-04)
+
+
+
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/nossas/bonde-bot/compare/v2.2.4...v2.3.0) (2018-07-03)
+
+
+
+<a name="2.2.4"></a>
+## [2.2.4](https://github.com/nossas/bonde-bot/compare/v2.2.3...v2.2.4) (2018-06-21)
+
+
+
+<a name="2.2.3"></a>
+## [2.2.3](https://github.com/nossas/bonde-bot/compare/v2.2.2...v2.2.3) (2018-06-19)
+
+
+
+<a name="2.2.2"></a>
+## [2.2.2](https://github.com/nossas/bonde-bot/compare/v2.2.1...v2.2.2) (2018-06-19)
+
+
+
+<a name="2.2.1"></a>
+## [2.2.1](https://github.com/nossas/bonde-bot/compare/v2.2.0...v2.2.1) (2018-06-18)
+
+
+
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/nossas/bonde-bot/compare/v2.1.16...v2.2.0) (2018-06-14)
+
+
+
+<a name="2.1.16"></a>
+## [2.1.16](https://github.com/nossas/bonde-bot/compare/v2.1.15...v2.1.16) (2018-06-14)
+
+
+
+<a name="2.1.15"></a>
+## [2.1.15](https://github.com/nossas/bonde-bot/compare/v2.1.14...v2.1.15) (2018-06-14)
+
+
+
+<a name="2.1.14"></a>
+## [2.1.14](https://github.com/nossas/bonde-bot/compare/v2.1.13...v2.1.14) (2018-06-11)
+
+
+
+<a name="2.1.13"></a>
+## [2.1.13](https://github.com/nossas/bonde-bot/compare/v2.1.12...v2.1.13) (2018-06-07)
+
+
+
+<a name="2.1.12"></a>
+## [2.1.12](https://github.com/nossas/bonde-bot/compare/v2.1.11...v2.1.12) (2018-06-05)
+
+
+
+<a name="2.1.11"></a>
+## [2.1.11](https://github.com/nossas/bonde-bot/compare/v2.1.10...v2.1.11) (2018-06-01)
+
+
+
+<a name="2.1.10"></a>
+## [2.1.10](https://github.com/nossas/bonde-bot/compare/v2.1.9...v2.1.10) (2018-05-30)
+
+
+
+<a name="2.1.9"></a>
+## [2.1.9](https://github.com/nossas/bonde-bot/compare/v2.1.8...v2.1.9) (2018-05-29)
+
+
+
+<a name="2.1.8"></a>
+## [2.1.8](https://github.com/nossas/bonde-bot/compare/v2.1.7...v2.1.8) (2018-05-29)
+
+
+
+<a name="2.1.7"></a>
+## [2.1.7](https://github.com/nossas/bonde-bot/compare/v2.1.6...v2.1.7) (2018-05-26)
+
+
+
+<a name="2.1.6"></a>
+## [2.1.6](https://github.com/nossas/bonde-bot/compare/v2.1.5...v2.1.6) (2018-05-25)
+
+
+
+<a name="2.1.5"></a>
+## [2.1.5](https://github.com/nossas/bonde-bot/compare/v2.1.4...v2.1.5) (2018-05-24)
+
+
+
+<a name="2.1.4"></a>
+## [2.1.4](https://github.com/nossas/bonde-bot/compare/v2.1.3...v2.1.4) (2018-05-23)
+
+
+
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/nossas/bonde-bot/compare/v2.1.2...v2.1.3) (2018-05-22)
+
+
+
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/nossas/bonde-bot/compare/v2.1.1...v2.1.2) (2018-05-21)
+
+
+
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/nossas/bonde-bot/compare/v2.1.0...v2.1.1) (2018-05-08)
+
+
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/nossas/bonde-bot/compare/v2.0.1...v2.1.0) (2018-05-08)
+
+
+
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/nossas/bonde-bot/compare/v2.0.0...v2.0.1) (2018-05-08)
+
+
 
 <a name="2.5.3"></a>
 ## [2.5.3](https://github.com/nossas/bonde-bot/compare/v2.0.0...v2.5.3) (2018-11-12)
