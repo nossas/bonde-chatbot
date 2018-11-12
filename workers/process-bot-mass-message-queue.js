@@ -28,7 +28,7 @@ queue.on('completed', (job, result) => {
   const { facebookBotCampaignActivistId } = result.data
   const received = true
   const log = result.info
-  saveLog({ facebookBotCampaignActivistId, received, log })
+  // saveLog({ facebookBotCampaignActivistId, received, log })
   job.remove()
 })
 
