@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.5.3"></a>
+## [2.5.3](https://github.com/nossas/bonde-bot/compare/v2.0.0...v2.5.3) (2018-11-12)
+
+
+### Bug Fixes
+
+* **campaign:** Quick reply after show peition text ([62c0f70](https://github.com/nossas/bonde-bot/commit/62c0f70))
+* **campaign:** Update current campaign status ([046f0d3](https://github.com/nossas/bonde-bot/commit/046f0d3))
+* **graphql:** Fix typo in query facebook create campaign ([#200](https://github.com/nossas/bonde-bot/issues/200)) ([58ad271](https://github.com/nossas/bonde-bot/commit/58ad271))
+* **message:** update 'escola-sem-partido' message ([#209](https://github.com/nossas/bonde-bot/issues/209)) ([1f02c0f](https://github.com/nossas/bonde-bot/commit/1f02c0f))
+* **speech:** Add action to array of actions ([fed0d70](https://github.com/nossas/bonde-bot/commit/fed0d70))
+* **speech:** update 'escola-sem-partido' message ([#205](https://github.com/nossas/bonde-bot/issues/205)) ([bf4eeab](https://github.com/nossas/bonde-bot/commit/bf4eeab))
+* **speech:** update ADPF442 first message ([#202](https://github.com/nossas/bonde-bot/issues/202)) ([49cbed7](https://github.com/nossas/bonde-bot/commit/49cbed7))
+
+
+
 <a name="2.1.10"></a>
 ## [2.1.10](https://github.com/nossas/bonde-bot/compare/v2.1.9...v2.1.10) (2018-05-30)
 
