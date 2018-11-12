@@ -59,4 +59,11 @@ export default {
   TITLE_ODIO: 'Discurso de ódio nas eleições não dá!',
   IMAGE_ODIO: 'https://s3.amazonaws.com/chatbox-beta/campaigns/%5Btretaqui%5D+card_01.jpg',
   BUTTON_ODIO: 'Clique aqui!',
+
+  //
+  // STF e All Out
+  //
+  TITLE_STF: 'Assine a petição',
+  IMAGE_STF: 'https://s3.amazonaws.com/chatbox-beta/campaigns/card-stf-allout.jpg',
+  BUTTON_STF: 'Assinar!'
 }

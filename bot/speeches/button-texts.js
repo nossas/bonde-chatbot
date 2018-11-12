@@ -151,4 +151,9 @@ export default {
   I_WANT_COMPLAINT_STEP_2: 'Passo 2!',
   I_WANT_COMPLAINT_STEP_3: 'Passo 3!',
 
+  //
+  // STF - All Out
+  //
+  REALLY_NECESSARY: 'Mas é necessário?',
+  READ_PETITION: 'Ver texto da petição'
 }

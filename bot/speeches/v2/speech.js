@@ -140,6 +140,17 @@ const V2_QUICK_REPLY_K_2_1 = 'V2_QUICK_REPLY_K_2_1'
 const V2_QUICK_REPLY_K_2_2 = 'V2_QUICK_REPLY_K_2_2'
 const V2_QUICK_REPLY_K_2_3 = 'V2_QUICK_REPLY_K_2_3'
 
+const V2_QUICK_REPLY_STF_ALLOUT = 'V2_QUICK_REPLY_STF_ALLOUT'
+
+const V2_QUICK_REPLY_L_1 = 'V2_QUICK_REPLY_L_1'
+const V2_QUICK_REPLY_L_2 = 'V2_QUICK_REPLY_L_2'
+const V2_QUICK_REPLY_L_3 = 'V2_QUICK_REPLY_L_3'
+const V2_QUICK_REPLY_L_4 = 'V2_QUICK_REPLY_L_4'
+const V2_QUICK_REPLY_L_5 = 'V2_QUICK_REPLY_L_5'
+const V2_QUICK_REPLY_L_6 = 'V2_QUICK_REPLY_L_6'
+const V2_QUICK_REPLY_L_7 = 'V2_QUICK_REPLY_L_7'
+const V2_QUICK_REPLY_L_8 = 'V2_QUICK_REPLY_L_8'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -164,7 +175,7 @@ export default botData => ({
     [V2_QUICK_REPLY_M6_REGISTERED]: V2_QUICK_REPLY_M6_REGISTERED,
     [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG,
     [V2_QUICK_REPLY_M7]: V2_QUICK_REPLY_M7,
-    //ADPF442
+    // ADPF442 - Usando formulário de envio
     [V2_QUICK_REPLY_ADPF442]: V2_QUICK_REPLY_ADPF442,
     [V2_QUICK_REPLY_PETITION_NAME]: V2_QUICK_REPLY_PETITION_NAME,
     [V2_QUICK_REPLY_PETITION_SURNAME]: V2_QUICK_REPLY_PETITION_SURNAME,
@@ -178,8 +189,8 @@ export default botData => ({
     [V2_PETITION_EMAIL_WRONG1]: V2_PETITION_EMAIL_WRONG1,
     [V2_PETITION_EMAIL_OK1]: V2_PETITION_EMAIL_OK1,
 
-    [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO,
-
+    [V2_QUICK_REPLY_STF_ALLOUT]: V2_QUICK_REPLY_STF_ALLOUT,
+    [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO
   },
   messages: {
 
@@ -320,45 +331,60 @@ export default botData => ({
       )
     ],
 
-    //
-    // ADPF 442
-    //
-    /* [V2_QUICK_REPLY_ADPF442]: {
-      text: botSpeeches.messages.ADPF442,
+    // Chamada para assinar formulário
+    [V2_QUICK_REPLY_STF_ALLOUT]: {
+      text: botSpeeches.messages.STF_ALLOUT,
       quick_replies: [
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION, botSpeeches.buttonTexts.TAKE_ACTION),
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.WHATS_ADPF442),
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION, botSpeeches.buttonTexts.MORE_ABOUT_ABORTION),
+        quickReply(V2_QUICK_REPLY_L_1, botSpeeches.buttonTexts.YES)
       ],
-    }, */
-    //
-    // ADPF 442 - Entrar em ação
-    //
-    /* [V2_QUICK_REPLY_TAKE_ACTION]: [
-      botSpeeches.messages.ADPF_TAKE_ACTION,
+    },
+    [V2_QUICK_REPLY_L_1]: [
+      botSpeeches.messages.STF_ALLOUT_1,
       messageWithQuickReply(
-        botSpeeches.messages.ADPF_TAKE_ACTION_1,
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_A, botSpeeches.buttonTexts.SURE_BETA_1),
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442, botSpeeches.buttonTexts.ABOUT_ACTION)
+        botSpeeches.messages.STF_ALLOUT_2,
+        quickReply(V2_QUICK_REPLY_L_2, botSpeeches.buttonTexts.TELL_ME_MORE),
+        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.PRESSURE_NOW)
       )
     ],
-    [V2_QUICK_REPLY_TAKE_ACTION_A]: [
-      botSpeeches.messages.ADPF_TAKE_ACTION_A,
+    [V2_QUICK_REPLY_L_2]: [
+      botSpeeches.messages.STF_ALLOUT_3,
+      botSpeeches.messages.STF_ALLOUT_4,
       messageWithQuickReply(
-        botSpeeches.messages.ADPF_TAKE_ACTION_A1,
-        quickReply(V2_QUICK_REPLY_ADPF_PETITION_TEXT, botSpeeches.buttonTexts.ADPF442_NOW)
+        botSpeeches.messages.STF_ALLOUT_5,
+        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_QUICK_REPLY_L_4, botSpeeches.buttonTexts.REALLY_NECESSARY)
       )
     ],
-    [V2_QUICK_REPLY_ADPF_PETITION_TEXT]: [
-      botSpeeches.messages.ADPF_TAKE_ACTION_C,
+    [V2_QUICK_REPLY_L_3]: [
       messageWithQuickReply(
-        botSpeeches.messages.ADPF_PETITION_TEXT,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME1, botSpeeches.buttonTexts.SIGN)
+        botSpeeches.messages.STF_ALLOUT_9,
+        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
+        quickReply(V2_QUICK_REPLY_L_7, botSpeeches.buttonTexts.READ_PETITION)
       )
-    ], */
-    //ADPF442 - PETIÇÃO - (O que é ADPF e Mais sobre o aborto)
-    /* [V2_QUICK_REPLY_PETITION_NAME]: () => ({
-      text: botSpeeches.messages.ADPF_PETITION_NAME
+    ],
+    [V2_QUICK_REPLY_L_4]: [
+      botSpeeches.messages.STF_ALLOUT_6,
+      botSpeeches.messages.STF_ALLOUT_7,
+      messageWithQuickReply(
+        botSpeeches.messages.STF_ALLOUT_8,
+        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.TAKE_ACTION),
+        quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.NOT_NOW)
+      )
+    ],
+    [V2_QUICK_REPLY_L_5]: [
+      botSpeeches.messages.STF_ALLOUT_13
+    ],
+    [V2_QUICK_REPLY_L_7]: [
+      messageWithQuickReply(
+        botSpeeches.messages.STF_ALLOUT_10,
+        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
+        quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.NOT_NOW)
+      )
+    ],
+
+    // ADPF 442: Assinar petição (O que é ADPF e Mais sobre o aborto)
+    [V2_QUICK_REPLY_PETITION_NAME]: () => ({
+      text: botSpeeches.messages.STF_ALLOUT_11
     }),
     [V2_QUICK_REPLY_PETITION_SURNAME]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_SURNAME
@@ -370,242 +396,33 @@ export default botData => ({
       text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
     }),
     [V2_PETITION_EMAIL_OK]: profile => ({
-      text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
+      text: botSpeeches.messages.STF_ALLOUT_12,
       quick_replies: [
-        quickReply(V2_PETITION_SHARE, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1),
-      ],
+        quickReply(V2_QUICK_REPLY_L_8, botSpeeches.buttonTexts.SHARE),
+        quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.BACK_1)
+      ]
     }),
-    [V2_PETITION_SHARE]: [
+    // ADPF 442: Compartilhamento
+    [V2_QUICK_REPLY_L_8]: [
       genericTemplate({
-        title: 'Clique e entre em ação pelo direito ao aborto',
-        subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
-        imageURL: 'https://goo.gl/P6MVUi',
+        title: 'Proteja a vida das pessoas LGBT+',
+        subtitle: 'A hora de agir é agora!',
+        imageURL: 'https://s3.amazonaws.com/chatbox-beta/campaigns/Share-Beta-AllOut.jpg',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: "Clique e entre em ação pelo direito ao aborto",
-            subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
-            imageUrl: 'https://goo.gl/P6MVUi',
-            url: 'https://m.me/beta.feminista?ref=adpf_442'
-          }),
-
-        ],
-      }),
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_PETITION_NOT_NOW,
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
-      )
-    ], */
-    //ADPF442 - PETIÇÃO
-    /* [V2_QUICK_REPLY_PETITION_NAME1]: () => ({
-      text: botSpeeches.messages.ADPF_PETITION_NAME
-    }),
-    [V2_QUICK_REPLY_PETITION_SURNAME1]: () => ({
-      text: botSpeeches.messages.ADPF_PETITION_SURNAME
-    }),
-    [V2_QUICK_REPLY_PETITION_EMAIL1]: () => ({
-      text: botSpeeches.messages.ADPF_PETITION_EMAIL
-    }),
-    [V2_PETITION_EMAIL_WRONG1]: ({
-      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
-    }),
-    [V2_PETITION_EMAIL_OK1]: profile => ({
-      text: botSpeeches.messages.EMAIL_SENT_PETITION_ADPF442(profile.first_name),
-      quick_replies: [
-        quickReply(V2_PETITION_SHARE_1, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_PETITION_NOT_NOW, botSpeeches.buttonTexts.NOT_NOW),
-      ],
-    }),
-    [V2_PETITION_SHARE_1]: [
-      genericTemplate({
-        title: 'Clique e entre em ação pelo direito ao aborto',
-        subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
-        imageURL: 'https://goo.gl/P6MVUi',
-        buttons: [
-          buttonTemplate.shareCampaign({
-            title: "Clique e entre em ação pelo direito ao aborto",
-            subtitle: 'Nem presa nem morta, é pela vida das mulheres!',
-            imageUrl: 'https://goo.gl/P6MVUi',
-            url: 'https://m.me/beta.feminista?ref=adpf_442'
+            title: 'Proteja a vida das pessoas LGBT+',
+            subtitle: 'A hora de agir é agora!',
+            imageUrl: 'https://s3.amazonaws.com/chatbox-beta/campaigns/Share-Beta-AllOut.jpg',
+            url: 'https://m.me/beta.feminista?ref=stf_lgbt'
           })
-        ],
-      }),
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_PETITION_NOT_NOW,
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
-      )
+        ]
+      })
+      // messageWithQuickReply(
+      //   botSpeeches.messages.ADPF_PETITION_NOT_NOW,
+      //   quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
+      //   quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
+      // )
     ],
-    [V2_PETITION_NOT_NOW]: {
-      text: botSpeeches.messages.ADPF_PETITION_NOT_NOW,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_G, botSpeeches.buttonTexts.I_WANT_TO_GO),
-        quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
-      ],
-    }, */
-    //Fim ações da petição
-    /* [V2_QUICK_REPLY_TAKE_ACTION_G]: {
-      text: botSpeeches.messages.ADPF_TAKE_ACTION_G,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1)
-      ],
-    },
-    [V2_QUICK_REPLY_TAKE_ACTION_H]: {
-      text: botSpeeches.messages.ADPF_TAKE_ACTION_H,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1)
-      ],
-    }, */
-    //
-    // ADPF 442 - O que é a ADPF 442
-    //
-    [V2_QUICK_REPLY_WHATS_ADPF442]: [
-      botSpeeches.messages.WHATS_ADPF442,
-      botSpeeches.messages.WHATS_ADPF442_1,
-      messageWithQuickReply(
-        botSpeeches.messages.WHATS_ADPF442_2,
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_A, botSpeeches.buttonTexts.HOWS_NOW),
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-    [V2_QUICK_REPLY_WHATS_ADPF442_A]: [
-      botSpeeches.messages.WHATS_ADPF442_A,
-      messageWithQuickReply(
-        botSpeeches.messages.WHATS_ADPF442_A1,
-        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.I_WANT_A),
-      )
-    ],
-    [V2_QUICK_REPLY_WHATS_ADPF442_C]: {
-      text: botSpeeches.messages.WHATS_ADPF442_C,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR)
-      ],
-    },
-    //
-    // ADPF 442 - Mais sobre aborto
-    //
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION]: {
-      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A, botSpeeches.buttonTexts.I_WANT_B)
-      ],
-    },
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A,
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A1,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A2,
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B, botSpeeches.buttonTexts.STEP2),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B1,
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D, botSpeeches.buttonTexts.STEP3),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D,
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D1,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D2,
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E, botSpeeches.buttonTexts.STEP4),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E1,
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F, botSpeeches.buttonTexts.SEND_MORE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F]: {
-      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_F,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G, botSpeeches.buttonTexts.ONE_MORE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      ],
-    },
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G]: {
-      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_G,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H, botSpeeches.buttonTexts.I_WANT_MORE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      ],
-    },
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H]: {
-      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_H,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I, botSpeeches.buttonTexts.NEXT_ROUND),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      ],
-    },
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I]: {
-      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_I,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J, botSpeeches.buttonTexts.JUST_ONE_MORE),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      ],
-    },
-    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J]: [
-      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J1,
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR),
-        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-      )
-    ],
-
-    //
-    // Mapa do Acolhimento
-    //
-
-    // TODO adcionar menu carrossel
-
-    [V2_QUICK_REPLY_MAP]: {
-      text: botSpeeches.messages.MAP,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_M4, botSpeeches.buttonTexts.I_WANT_SUPPORT),
-        quickReply(V2_QUICK_REPLY_M4, botSpeeches.buttonTexts.I_WANT_TO_SUPPORT),
-      ],
-    },
-    [V2_QUICK_REPLY_M4]: {
-      text: botSpeeches.messages.MAP_1,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_M6_NAME, botSpeeches.buttonTexts.UNDERSTOOD),
-      ],
-    },
-    [V2_QUICK_REPLY_M6_NAME]: () => ({
-      text: botSpeeches.messages.MAP_NAME
-    }),
-    [V2_QUICK_REPLY_M6_SURNAME]: () => ({
-      text: botSpeeches.messages.MAP_SURNAME
-    }),
-    [V2_QUICK_REPLY_M6_EMAIL]: () => ({
-      text: botSpeeches.messages.MAP_EMAIL
-    }),
-    [V2_QUICK_REPLY_M6_CITY]: () => ({
-      text: botSpeeches.messages.MAP_CITY
-    }),
-    [V2_QUICK_REPLY_M6_REGISTERED]: () => ({
-      text: botSpeeches.messages.MAP_REGISTERED
-    }),
-    [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: ({
-      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
-    }),
-
-    [V2_QUICK_REPLY_M7]: {
-      text: botSpeeches.messages.MAP_2,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE_FRIENDS),
-      ],
-    },
 
     //
     // Mais sobre a beta
@@ -836,61 +653,7 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
       )
     ],
-    //
-    // Radar da Beta - SUG 15
-    //
-    /* [V2_QUICK_REPLY_SUG]: [
-      botSpeeches.messages.SUG,
-      messageWithQuickReply(
-        botSpeeches.messages.SUG_1,
-        quickReply(V2_QUICK_REPLY_A_5, botSpeeches.buttonTexts.I_WANT),
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
-      )
-    ],
-    [V2_QUICK_REPLY_A_5]: {
-      text: botSpeeches.messages.SUG_2,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
-      ],
-    }, */
-    //
-    // Radar da Beta - ADPF 442
-    //
-    /* [V2_QUICK_REPLY_ADPF]: [
-      botSpeeches.messages.ADPF,
-      botSpeeches.messages.ADPF_1,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_2,
-        quickReply(V2_QUICK_REPLY_A_6, botSpeeches.buttonTexts.I_WANT),
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
-      )
-    ],
-    [V2_QUICK_REPLY_A_6]: {
-      text: botSpeeches.messages.ADPF_3,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
-      ],
-    }, */
 
-      // text: botSpeeches.messages.MORE_ABOUT_BETA,
-      // quick_replies: [
-      //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
-      //   quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK),
-      // ],
-
-        /* elements(
-          botSpeeches.carouselTexts.VOTE,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_DECRIMINALIZATION,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.VOTE,
-              payload: V2_QUICK_REPLY_VOTE
-            })
-          ],
-        ) */
     //
     // Quero agir agora
     //
@@ -907,6 +670,17 @@ export default botData => ({
               payload: V2_QUICK_REPLY_EDUCATION
             })
           ],
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_STF,
+          botSpeeches.carouselTexts.SUBTITLE,
+          botSpeeches.carouselTexts.IMAGE_STF,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_STF,
+              payload: V2_QUICK_REPLY_STF_ALLOUT
+            })
+          ],
         )
         /* elements(
           botSpeeches.carouselTexts.VOTE,
@@ -921,100 +695,6 @@ export default botData => ({
         ) */
       )
     ],
-    //
-    // Escola sem partido
-    //
-    [V2_QUICK_REPLY_EDUCATION]: {
-      text: botSpeeches.messages.EDUCATION,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_A_10, botSpeeches.buttonTexts.YES),
-      ],
-    },
-    [V2_QUICK_REPLY_A_10]: [
-      botSpeeches.messages.EDUCATION_1,
-      botSpeeches.messages.EDUCATION_2,
-      messageWithQuickReply(
-        botSpeeches.messages.EDUCATION_3,
-        quickReply(V2_QUICK_REPLY_B_10, botSpeeches.buttonTexts.IF_APPROVED),
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.PRESSURE_NOW)
-      )
-    ],
-    [V2_QUICK_REPLY_B_10]: [
-      botSpeeches.messages.IF_APPROVED,
-      messageWithQuickReply(
-        botSpeeches.messages.IF_APPROVED_1,
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION),
-        quickReply(V2_QUICK_REPLY_D_10, botSpeeches.buttonTexts.MORE_ABOUT_PROJECT)
-      )
-    ],
-    [V2_QUICK_REPLY_D_10]: [
-      botSpeeches.messages.EDUCATION_MORE,
-      botSpeeches.messages.EDUCATION_MORE_1,
-      messageWithQuickReply(
-        botSpeeches.messages.EDUCATION_MORE_2,
-        quickReply(V2_QUICK_REPLY_C_10, botSpeeches.buttonTexts.TAKE_ACTION),
-      )
-    ],
-    [V2_QUICK_REPLY_C_10]: [
-      botSpeeches.messages.EDUCATION_ACTION,
-      messageWithQuickReply(
-        botSpeeches.messages.EDUCATION_ACTION_1,
-        quickReply(V2_QUICK_REPLY_F_10, botSpeeches.buttonTexts.READ_EMAIL),
-        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.SEND_NOW_1)
-      )
-    ],
-    [V2_QUICK_REPLY_F_10]: {
-      text: botSpeeches.messages.EDUCATION_MESSAGE,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.SEND_NOW_1),
-      ],
-    },
-    [V2_QUICK_REPLY_G_10]: () => ({
-      text: botSpeeches.messages.EMAIL_ADDRESS_ASK_1
-    }),
-    [V2_EMAIL_ADDRESS_WRONG]: ({
-      text: botSpeeches.messages.EMAIL_ADDRESS_WRONG
-    }),
-    [V2_EMAIL_ADDRESS_OK]: profile => ({
-      text: botSpeeches.messages.EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO(profile.first_name),
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_H_10, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_E_10, botSpeeches.buttonTexts.NOT_NOW),
-      ],
-    }),
-    //Share campaign
-    [V2_QUICK_REPLY_H_10]: [
-      genericTemplate({
-        title: 'Clique aqui para impedir mais um retrocesso na educação',
-        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-        buttons: [
-          buttonTemplate.shareCampaign({
-            title: 'Clique aqui para impedir mais um retrocesso na educação',
-            subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-            imageUrl: 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=escola-sem-partido'
-          }),
-        ],
-      }),
-    ],
-    /* [V2_QUICK_REPLY_H_10]: [
-      genericTemplate({
-        title: 'Clique aqui para impedir mais um retrocesso na educação',
-        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-        buttons: [
-          buttonTemplate.webURL({
-            url: facebookFeedShare('https://m.me/beta.staging?ref=escola-sem-partido'),
-            title: 'Compartilhar',
-          }),
-          buttonTemplate.postback({
-            title: botSpeeches.buttonTexts.BACK,
-            payload: V2_QUICK_REPLY_CA
-          })
-        ],
-      }),
-    ], */
 
     //Not now: facebook page + carousel
     [V2_QUICK_REPLY_E_10]: [
@@ -1068,104 +748,6 @@ export default botData => ({
     ],
 
     //
-    // Discurso de ódio
-    //
-    [V2_QUICK_REPLY_DISCURSO_ODIO]: {
-      text: botSpeeches.messages.DISCURSO_ODIO,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_K_1, botSpeeches.buttonTexts.COMPLAINT),
-        quickReply(V2_QUICK_REPLY_K_2, botSpeeches.buttonTexts.MORE_ABOUT_HATE_SPEECH),
-      ],
-    },
-
-    [V2_QUICK_REPLY_K_1]: [
-      botSpeeches.messages.DISCURSO_ODIO_1,
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_2,
-        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.LETS_GO),
-      )
-    ],
-    [V2_QUICK_REPLY_K_1_2]: [
-      botSpeeches.messages.DISCURSO_ODIO_3,
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_4,
-        quickReply(V2_QUICK_REPLY_K_1_3, botSpeeches.buttonTexts.SHARE),
-        quickReply(V2_QUICK_REPLY_B, botSpeeches.buttonTexts.BACK_1),
-      )
-    ],
-    [V2_QUICK_REPLY_K_1_3]: [
-      genericTemplate({
-        title: 'Discurso de ódio nas eleições não dá!',
-        subtitle: 'Viu uma candidatura sendo atacada ou falando o que não deve? Denuncie!',
-        imageURL: 'https://goo.gl/8AiVq6',
-        buttons: [
-          buttonTemplate.shareCampaign({
-            title: 'Discurso de ódio nas eleições não dá!',
-            subtitle: 'Viu uma candidatura sendo atacada ou falando o que não deve? Denuncie!',
-            imageURL: 'https://goo.gl/8AiVq6',
-            url: 'https://m.me/beta.feminista?ref=treta-aqui'
-          }),
-        ],
-      }),
-    ],
-
-    [V2_QUICK_REPLY_K_2]: [
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_5,
-        quickReply(V2_QUICK_REPLY_K_2_1, botSpeeches.buttonTexts.YES),
-        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
-      )
-    ],
-
-    [V2_QUICK_REPLY_K_2_1]: [
-      botSpeeches.messages.DISCURSO_ODIO_6,
-      botSpeeches.messages.DISCURSO_ODIO_7,
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_8,
-        quickReply(V2_QUICK_REPLY_K_2_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT_STEP_2),
-        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
-      )
-    ],
-
-    [V2_QUICK_REPLY_K_2_2]: [
-      botSpeeches.messages.DISCURSO_ODIO_9,
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_10,
-        quickReply(V2_QUICK_REPLY_K_2_3, botSpeeches.buttonTexts.I_WANT_COMPLAINT_STEP_3),
-        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
-      )
-    ],
-
-    [V2_QUICK_REPLY_K_2_3]: [
-      botSpeeches.messages.DISCURSO_ODIO_11,
-      messageWithQuickReply(
-        botSpeeches.messages.DISCURSO_ODIO_12,
-        quickReply(V2_QUICK_REPLY_K_1_2, botSpeeches.buttonTexts.I_WANT_COMPLAINT),
-        quickReply(V2_QUICK_REPLY_K_1_3, botSpeeches.buttonTexts.SHARE),
-      )
-    ],
-
-    //
-    // Descriminalização do Aborto
-    //
-    /* [V2_QUICK_REPLY_VOTE]: [
-      botSpeeches.messages.VOTE,
-      messageWithQuickReply(
-        botSpeeches.messages.VOTE_1,
-        quickReply(V2_QUICK_REPLY_A_9, botSpeeches.buttonTexts.EXPLAIN_MORE),
-        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.OTHER_1)
-      )
-    ],
-    [V2_QUICK_REPLY_A_9]: [
-      botSpeeches.messages.VOTE_MORE,
-      messageWithQuickReply(
-        botSpeeches.messages.VOTE_MORE_1,
-        quickReply(V2_QUICK_REPLY_ACT, botSpeeches.buttonTexts.PRESSURE_OTHER),
-        quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
-      )
-    ], */
-
-    //
     // Compartilhamento com amigos
     //
 
@@ -1180,7 +762,6 @@ export default botData => ({
         ],
       }),
     ],
-
 
     //
     // Usuário abre conversa com a Beta via Mensagem em Massa
