@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.5.5"></a>
+## [2.5.5](https://github.com/nossas/bonde-bot/compare/v2.5.4...v2.5.5) (2018-11-21)
+
+
+### Bug Fixes
+
+* **campaign:** Make script escola sem partido work ([#232](https://github.com/nossas/bonde-bot/issues/232)) ([9926f1e](https://github.com/nossas/bonde-bot/commit/9926f1e))
+
+
+
 <a name="2.5.4"></a>
 ## [2.5.4](https://github.com/nossas/bonde-bot/compare/v2.5.3...v2.5.4) (2018-11-12)
 
