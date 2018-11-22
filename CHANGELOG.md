@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.5.6"></a>
+## [2.5.6](https://github.com/nossas/bonde-bot/compare/v2.5.5...v2.5.6) (2018-11-22)
+
+
+
 <a name="2.5.5"></a>
 ## [2.5.5](https://github.com/nossas/bonde-bot/compare/v2.5.4...v2.5.5) (2018-11-21)
 
