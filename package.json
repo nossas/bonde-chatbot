@@ -1,6 +1,6 @@
 {
   "name": "bonde-bot",
-  "version": "2.5.8",
+  "version": "2.5.9",
   "description": "Enable activist to pressure through facebook",
   "main": "index.js",
   "scripts": {
