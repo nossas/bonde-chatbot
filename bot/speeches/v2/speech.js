@@ -884,9 +884,9 @@ export default botData => ({
     }),
     [VMDM_QUICK_REPLY_J]: genericTemplate({
 
-      title: 'A maior aliada feminista nas redes',
-      subtitle: 'Chama a Beta no inbox',
-      imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
+      title: 'Clique aqui para conversar com a Beta no inbox!',
+      subtitle: 'A maior aliada feminista nas redes.',
+      imageURL: botData.data.image_url || 'https://s3.amazonaws.com/chatbox-beta/carousel-fb/%5Bbeta%5Dshare.png',
       buttons: [
         buttonTemplate.webURL({
           url: facebookFeedShare(`${process.env.APP_DOMAIN}/share`),
