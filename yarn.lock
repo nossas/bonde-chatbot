@@ -4142,9 +4142,9 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-messenger-bot@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/messenger-bot/-/messenger-bot-2.5.0.tgz#09f104851008d322ad41764d736f9be9ecabfaab"
+messenger-bot@nossas/messenger-bot#master:
+  version "2.4.0"
+  resolved "https://codeload.github.com/nossas/messenger-bot/tar.gz/ec75c7e9a6f9b7b00e93f4f6255587ce600e9ea8"
   dependencies:
     request "^2.71.0"
     request-promise "^4.1.1"
