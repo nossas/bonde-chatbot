@@ -25,7 +25,9 @@ export default {
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
-
+  
+  ABOUT_LBGTFOBIA: 'O Brasil é um dos países mais perigosos pra essa galera e está prestes a ter um presidente que prefere “filho morto a filho gay” - não por acaso são cada vez mais frequentes as notícias de pessoas LGBT+ vítimas do ódio e da intolerância. Mas existe uma luz no fim do túnel 💡: em fevereiro, o Supremo Tribunal Federal (STF) vai decidir se a discriminação contra pessoas LGBT+ deve ser considerada crime - assim como já acontece com discriminação por raça, nacionalidade ou religião, por exemplo. É nossa chance de começar o 2019 com mais garantias de que essas pessoas estarão amparadas! Assine agora a petição pra fazer sua voz chegar até os ministros e ministras do STF: bit.ly/a_hora_e_agora ',
+  
   //
   // New Script
   //
