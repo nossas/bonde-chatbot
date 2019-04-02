@@ -16,8 +16,11 @@ export default {
   //
   // Law
   //
-  NASCITURO_BILL_EXPLANATION: '#SentaQueLáVemAHistória 📚 Desde 2007, tá tramitando no Congresso o Estatuto do Nascituro - um projeto que quer proibir o aborto inclusive nos casos em que ele é considerado legal: gravidez por estupro, gestação de embriões anencéfalos ou risco de morte para a gestante.\n\nDeputados da bancada da Bíblia barganharam muito apoio a essa proposta, e agora, 10 anos depois, esse PL tem chances reais de ser aprovado. Deixa comigo que te aviso assim que chegar a hora de entrarmos em ação!',
 
+  NASCITURO_BILL_EXPLANATION: '#SentaQueLáVemAHistória 📚 Desde 2007, tá tramitando no Congresso o Estatuto do Nascituro - um projeto que quer proibir o aborto inclusive nos casos em que ele é considerado legal. Deputados conservadores barganharam muito apoio a essa proposta, e agora, 10 anos depois, esse PL tem chances reais de ser aprovado. No Rio de Janeiro, os deputados vão votar uma versão estadual desse projeto, mas meu radar já tá sintonizado e prontíssimo pra gente botar pressão contra o PL. Me envie #EstatutoDoNascituroRJNão para saber mais sobre esse Estatuto e entrar em ação! 👊',
+ 
+  EXPLAIN_ABOUT_NASCITURO_RJ: 'Pois é, o RJ tem um Estatuto do Nascituro pra chamar de seu 🤮. O PL é de 2016 mas agora voltou pra pauta da ALERJ e nós PRECISAMOS barrar esse retrocesso! Tá pronta? Então digita #EstatudoDoNascituroRJNão que eu te mostro como pressionar os deputados pra deter o PL!', 
+ 
   EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
 
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
@@ -258,7 +261,7 @@ export default {
 
   IM_LEARNING: 'Eu ainda estou aprendendo a interagir com humanos. E vou te dizer uma coisa: não é facil não! 😂 Pode ser que eu não entenda exatamente o que você está querendo dizer neste momento, mas aprendo com cada mensagem que recebo - mesmo com as dos haters. ✌️Para continuar a conversar comigo, digite "menu" e veja o que tenho pra te contar.',
 
-  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Estamos pressionando os deputados e deputadas do Rio de Janeiro para rejeitarem um projeto que aumenta ainda mais a repressão ao aborto. Ao invés de tratar o aborto como uma questão de saúde, eles querem aumentar as punições. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
+  KEEP_YOU_POSTED: 'A-m-o gente com vontade de ação! Estamos pressionando os deputados e deputadas do Rio de Janeiro para rejeitarem um projeto que aumenta ainda mais a repressão ao aborto. Ao invés de tratar o assunto como uma questão de saúde, o Estatudo do Nascituro quer proibir todo e qualquer caso de aborto, mesmo os já garantidos por lei. Me envie #EstatutoDoNascituroRJNão para saber mais sobre o projeto e entrar em ação! 👊',
 
   AGREE_THAT_ITS_NOT_EASY: 'Tá fácil pra ninguém.',
 
@@ -526,7 +529,7 @@ export default {
 
   HASHTAG_MARIELLE: 'Arrasou! Assim que tiver alguma novidade, chamado ou convite sobre a mobilização pelos projetos de lei da Marielle, te aviso por aqui! Enquanto isso, digite "menu" para saber o que mais tenho pra te dizer ;)',
 
-  ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando 4 pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil: a SUG 15, a PEC29, o Estatuto do Nascituro e a PEC 181, também conhecida como Cavalo de Troia. Para saber mais sobre elas, digite "menu" e selecione a opção Radar Político!',
+  ABOUT_CURRENT_DEBATE: 'No momento, estou monitorando algumas pautas que representam ameaças graves aos direitos reprodutivos das mulheres no Brasil. Para saber mais sobre elas, digite "menu" e selecione a opção Radar Político!',
 
   QUICK_REPLY_BUTTONS_POSITION: 'Meus botões sempre vêm aqui embaixo, ó. 👇 Se não estiver aparecendo pra você, manda uma mensagem com a palavra "bug" pra eu tentar resolver?',
 
