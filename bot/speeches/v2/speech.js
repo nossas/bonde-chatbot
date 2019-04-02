@@ -199,9 +199,9 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Escola Sem Partido",
+          title: "Estatuto Nascituro RJ",
           type: "postback",
-          payload: "V2_QUICK_REPLY_EDUCATION"
+          payload: "NASCITURO_QUICK_REPLY_A"
         },
         {
           title: "Outras Ações",
