@@ -75,6 +75,14 @@ const V2_QUICK_REPLY_H_10 = 'V2_QUICK_REPLY_H_10'
 const V2_EMAIL_ADDRESS_WRONG = 'V2_EMAIL_ADDRESS_WRONG'
 const V2_EMAIL_ADDRESS_OK = 'V2_EMAIL_ADDRESS_OK'
 
+// REPLY NASCITURO RJ
+const NASCITURO_QUICK_REPLY_A = 'NASCITURO_QUICK_REPLY_A'
+const NASCITURO_QUICK_REPLY_YES = 'NASCITURO_QUICK_REPLY_YES'
+const NASCITURO_QUICK_REPLY_BORA = 'NASCITURO_QUICK_REPLY_BORA'
+const NASCITURO_QUICK_REPLY_SAIBA_MAIS = 'NASCITURO_QUICK_REPLY_SAIBA_MAIS'
+const NASCITURO_QUICK_REPLY_NOW = 'NASCITURO_QUICK_REPLY_NOW'
+const NASCITURO_QUICK_REPLY_READ = 'NASCITURO_QUICK_REPLY_READ'
+
 // Mapa do acolhimento
 const V2_QUICK_REPLY_MAP = 'V2_QUICK_REPLY_MAP'
 const V2_QUICK_REPLY_M4 = 'V2_QUICK_REPLY_M4'
@@ -190,7 +198,14 @@ export default botData => ({
     [V2_PETITION_EMAIL_OK1]: V2_PETITION_EMAIL_OK1,
 
     [V2_QUICK_REPLY_STF_ALLOUT]: V2_QUICK_REPLY_STF_ALLOUT,
-    [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO
+    [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO,
+    // ACTIONS NASCITURO RJ
+    [NASCITURO_QUICK_REPLY_A]: NASCITURO_QUICK_REPLY_A,
+    [NASCITURO_QUICK_REPLY_YES]: NASCITURO_QUICK_REPLY_YES,
+    [NASCITURO_QUICK_REPLY_BORA]: NASCITURO_QUICK_REPLY_BORA,
+    [NASCITURO_QUICK_REPLY_SAIBA_MAIS]: NASCITURO_QUICK_REPLY_SAIBA_MAIS,
+    [NASCITURO_QUICK_REPLY_NOW]: NASCITURO_QUICK_REPLY_NOW,
+    [NASCITURO_QUICK_REPLY_READ]: NASCITURO_QUICK_REPLY_READ,
   },
   messages: {
 
@@ -201,17 +216,17 @@ export default botData => ({
         {
           title: "Escola Sem Partido",
           type: "postback",
-          payload: "V2_QUICK_REPLY_EDUCATION"
+          payload: V2_QUICK_REPLY_EDUCATION
         },
         {
           title: "Outras Ações",
           type: "postback",
-          payload: "V2_QUICK_REPLY_ACT"
+          payload: V2_QUICK_REPLY_ACT
         },
         {
           title: "Mais sobre a Beta",
           type: "postback",
-          payload: "V2_QUICK_REPLY_MAIS"
+          payload: V2_QUICK_REPLY_MAIS
         }
       ]
     },
@@ -749,12 +764,53 @@ export default botData => ({
     ],
 
     //
+    // CAMPANHA NASCITURO RJ
+    //
+    [NASCITURO_QUICK_REPLY_A]: {
+      text: botSpeeches.messages.NASCITURO_MESSAGE_A,
+      quick_replies: [
+        quickReply(NASCITURO_QUICK_REPLY_YES, botSpeeches.buttonTexts.YES),
+      ],
+    },
+    [NASCITURO_QUICK_REPLY_YES]: {
+      text: botSpeeches.messages.NASCITURO_QUICK_REPLY_YES,
+      quick_replies: [
+        quickReply(NASCITURO_QUICK_REPLY_BORA, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_BORA),
+        quickReply(NASCITURO_QUICK_REPLY_SAIBA_MAIS, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_SAIBA_MAIS),
+      ],
+    },
+    [NASCITURO_QUICK_REPLY_BORA]: {
+      text: botSpeeches.messages.NASCITURO_QUICK_REPLY_BORA,
+      quick_replies: [
+        quickReply(NASCITURO_QUICK_REPLY_NOW, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
+        quickReply(NASCITURO_QUICK_REPLY_READ, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ),
+      ],
+    },
+    [NASCITURO_QUICK_REPLY_SAIBA_MAIS]: [
+      botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_1,
+      botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_2,
+      messageWithQuickReply(
+        botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_3,
+        quickReply(NASCITURO_QUICK_REPLY_BORA, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_GO)
+      )
+    ],
+    [NASCITURO_QUICK_REPLY_READ]: {
+      text: botSpeeches.messages.NASCITURO_QUICK_REPLY_READ,
+      quick_replies: [
+        quickReply(NASCITURO_QUICK_REPLY_NOW, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
+      ]
+    },
+    [NASCITURO_QUICK_REPLY_NOW]: [
+      botSpeeches.messages.NASCITURO_QUICK_REPLY_NOW,
+    ],
+
+    //
     // Quero agir agora
     //
     [V2_QUICK_REPLY_ACT]: [
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
-        elements(
+        /*elements(
           botSpeeches.carouselTexts.EDUCATION,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_EDUCATION,
@@ -762,6 +818,18 @@ export default botData => ({
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.EDUCATION_1,
               payload: V2_QUICK_REPLY_EDUCATION
+            })
+          ],
+        ),*/
+        // CARROSEL NASCITURO RJ
+        elements(
+          botSpeeches.carouselTexts.TITLE_NASCITURO,
+          botSpeeches.carouselTexts.SUBTITLE_NASCITURO,
+          botSpeeches.carouselTexts.IMAGE_NASCITURO,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_NASCITURO,
+              payload: NASCITURO_QUICK_REPLY_A
             })
           ],
         ),

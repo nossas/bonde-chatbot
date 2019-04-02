@@ -65,5 +65,13 @@ export default {
   //
   TITLE_STF: 'Assine a petição',
   IMAGE_STF: 'https://s3.amazonaws.com/chatbox-beta/campaigns/card-stf-allout.jpg',
-  BUTTON_STF: 'Assinar!'
+  BUTTON_STF: 'Assinar!',
+
+  //
+  // NASCITURO RJ
+  //
+  TITLE_NASCITURO: 'Estatuto do Nascituro RJ NÃO!',
+  SUBTITLE_NASCITURO: 'Pressionar deputados/as!',
+  IMAGE_NASCITURO: 'https://s3.amazonaws.com/chatbox-beta/nascituro-rj-nao/carrossel_estatutorjnao.jpg',
+  BUTTON_NASCITURO: 'Enviar pressão'
 }
