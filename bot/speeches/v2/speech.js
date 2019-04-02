@@ -782,7 +782,7 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_BORA]: {
       text: botSpeeches.messages.NASCITURO_QUICK_REPLY_BORA,
       quick_replies: [
-        quickReply(NASCITURO_QUICK_REPLY_NOW, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
+        quickReply(EMAIL_ADDRESS_ASK, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
         quickReply(NASCITURO_QUICK_REPLY_READ, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ),
       ],
     },
@@ -797,12 +797,9 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_READ]: {
       text: botSpeeches.messages.NASCITURO_QUICK_REPLY_READ,
       quick_replies: [
-        quickReply(NASCITURO_QUICK_REPLY_NOW, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
+        quickReply(EMAIL_ADDRESS_ASK, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
       ]
     },
-    [NASCITURO_QUICK_REPLY_NOW]: [
-      botSpeeches.messages.NASCITURO_QUICK_REPLY_NOW,
-    ],
 
     //
     // Quero agir agora
