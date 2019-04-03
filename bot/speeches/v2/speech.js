@@ -151,13 +151,6 @@ const V2_QUICK_REPLY_L_6 = 'V2_QUICK_REPLY_L_6'
 const V2_QUICK_REPLY_L_7 = 'V2_QUICK_REPLY_L_7'
 const V2_QUICK_REPLY_L_8 = 'V2_QUICK_REPLY_L_8'
 
-// REPLY NASCITURO RJ
-// const NASCITURO_QUICK_REPLY_A = 'NASCITURO_QUICK_REPLY_A'
-// const NASCITURO_QUICK_REPLY_YES = 'NASCITURO_QUICK_REPLY_YES'
-// const NASCITURO_QUICK_REPLY_BORA = 'NASCITURO_QUICK_REPLY_BORA'
-// const NASCITURO_QUICK_REPLY_SAIBA_MAIS = 'NASCITURO_QUICK_REPLY_SAIBA_MAIS'
-// const NASCITURO_QUICK_REPLY_NOW = 'NASCITURO_QUICK_REPLY_NOW'
-// const NASCITURO_QUICK_REPLY_READ = 'NASCITURO_QUICK_REPLY_READ' 
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -199,12 +192,6 @@ export default botData => ({
     [V2_QUICK_REPLY_STF_ALLOUT]: V2_QUICK_REPLY_STF_ALLOUT,
     [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO
 
-    // [NASCITURO_QUICK_REPLY_A]: NASCITURO_QUICK_REPLY_A,
-    // [NASCITURO_QUICK_REPLY_YES]: NASCITURO_QUICK_REPLY_YES,
-    // [NASCITURO_QUICK_REPLY_BORA]: NASCITURO_QUICK_REPLY_BORA,
-    // [NASCITURO_QUICK_REPLY_SAIBA_MAIS]: NASCITURO_QUICK_REPLY_SAIBA_MAIS,
-    // [NASCITURO_QUICK_REPLY_NOW]: NASCITURO_QUICK_REPLY_NOW,
-    // [NASCITURO_QUICK_REPLY_READ]: NASCITURO_QUICK_REPLY_READ
   },
   messages: {
 
@@ -212,11 +199,11 @@ export default botData => ({
       locale: 'default',
       composer_input_disabled: false,
       call_to_actions: [
-        {
-          title: "Estatuto Nascituro RJ",
-          type: "postback",
-          payload: NASCITURO_QUICK_REPLY_A
-        },
+        // {
+        //   title: "Estatuto Nascituro RJ",
+        //   type: "postback",
+        //   payload: NASCITURO_QUICK_REPLY_A
+        // },
         {
           title: "Outras Ações",
           type: "postback",
