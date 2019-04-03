@@ -503,15 +503,15 @@ export default botData => ({
     //Share campaign
     [V2_QUICK_REPLY_H_10]: [
       genericTemplate({
-        title: 'Clique aqui para impedir mais um retrocesso na educação',
-        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+        title: 'Clique aqui pra pressionar os deputados da ALERJ agora.',
+        subtitle: 'Ajude a barrar o Estatuto do Nascituro no RJ!',
         imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: 'Clique aqui para impedir mais um retrocesso na educação',
-            subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-            imageUrl: 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=escola-sem-partido'
+            title: 'Clique aqui pra pressionar os deputados da ALERJ agora.',
+            subtitle: 'Ajude a barrar o Estatuto do Nascituro no RJ!',
+            imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+            url: 'https://m.me/beta.feminista?ref=nascituro_rj_action'
           }),
         ],
       }),
