@@ -807,17 +807,6 @@ export default botData => ({
     [V2_QUICK_REPLY_ACT]: [
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
-        /*elements(
-          botSpeeches.carouselTexts.EDUCATION,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_EDUCATION,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.EDUCATION_1,
-              payload: V2_QUICK_REPLY_EDUCATION
-            })
-          ],
-        ),*/
         // CARROSEL NASCITURO RJ
         elements(
           botSpeeches.carouselTexts.TITLE_NASCITURO,
