@@ -4,10 +4,10 @@ export default (bot, speech, botData) => (payload, reply) => {
   console.log(payload.referral)
   switch (ref) {
     case 'nascituro_rj_intro':
-      message = speech.message.NASCITURO_MESSAGE_A
+      message = speech.messages.NASCITURO_QUICK_REPLY_A
       break
     case 'nascituro_rj_action':
-      message = speech.message.NASCITURO_QUICK_REPLY_YES
+      message = speech.messages.NASCITURO_QUICK_REPLY_YES
       break
     case 'sp_para_mulheres':
       message = speech.messages.V2_QUICK_REPLY_PRESSURE
