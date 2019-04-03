@@ -155,5 +155,15 @@ export default {
   // STF - All Out
   //
   REALLY_NECESSARY: 'Mas é necessário?',
-  READ_PETITION: 'Ver texto da petição'
+  READ_PETITION: 'Ver texto da petição',
+
+  //
+  // CAMPANHA NASCITURO RJ
+  //
+  NASCITURO_QUICK_REPLY_BORA: 'BORA!',
+  NASCITURO_QUICK_REPLY_SAIBA_MAIS: 'Mais sobre o projeto',
+  NASCITURO_QUICK_REPLY_NOW: 'Enviar agora',
+  NASCITURO_QUICK_REPLY_READ: 'Ler mensagem',
+  NASCITURO_QUICK_REPLY_GO: 'VAMO!',
+  NASCITURO_QUICK_REPLY_NOW_2: 'Enviar mensagem'
 }
