@@ -23,14 +23,13 @@ export default {
  
   EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
 
-  ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Eis que no início do ano, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
+  ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Em 2018, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
 
   PEC_181: 'A PEC 181 propunha o aumento da licença maternidade de mulheres com filhos prematuros. Era incrível, mas, quando chegou na Câmara dos Deputados, incluíram no texto a proteção à vida desde a concepção, que proíbe o aborto legal. A Comissão Especial aprovou o relatório final da PEC ⚠️ - agora falta votar seus destaques. Com a Intervenção Federal no Rio, a PEC 181 está suspensa por 2018, já que não pode haver nenhuma mudança na Constituição nesse período, mas continuo de olho! Você pode saber mais sobre a nossa pressão aqui: www.paremocavalodetroia.org/ 💪🏾',
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
 
   ABOUT_LBGTFOBIA: 'O Brasil é um dos países mais perigosos pra essa galera e está prestes a ter um presidente que prefere “filho morto a filho gay” - não por acaso são cada vez mais frequentes as notícias de pessoas LGBT+ vítimas do ódio e da intolerância. Mas existe uma luz no fim do túnel 💡: em fevereiro, o Supremo Tribunal Federal (STF) vai decidir se a discriminação contra pessoas LGBT+ deve ser considerada crime - assim como já acontece com discriminação por raça, nacionalidade ou religião, por exemplo. É nossa chance de começar o 2019 com mais garantias de que essas pessoas estarão amparadas! Assine agora a petição pra fazer sua voz chegar até os ministros e ministras do STF: bit.ly/a_hora_e_agora ',
-
   //
   // New Script
   //
@@ -331,7 +330,7 @@ export default {
 
   ABOUT_GENDER_DEFINITION: 'Eu gosto muito da definição de gênero da Católicas Pelo Direito de Decidir: "Podemos dizer que gênero é o sexo social definido, ou seja, gênero não é sinônimo de sexo. Enquanto o sexo é biológico, o gênero é construído historicamente, culturalmente e socialmente. Com isto quero dizer que nascemos machos ou fêmeas, mas nos fazemos homens ou mulheres". Se quiser conferir o artigo completo, vem aqui: http://catolicas.org.br/biblioteca/artigos/o-que-e-genero/',
 
-  WOMEN_RIGHTS: 'Apesar de estarmos em 2018, as mulheres ainda não têm os mesmos direitos que os homens - seja na lei ou na prática. Enquanto em alguns países mulheres sequer são reconhecidas como seres humanos e não têm dirietos básicos, em outros lugares a sociedade é mais igualitária nesse aspecto. Apesar disso, na prática, muitos direitos não são respeitados ou são violados. Além disso, outros elementos de uma sociedade, como a cultura, ainda reforçam o machismo. Quer saber como entrar em ação pelos direitos das mulheres? Digite "menu"!',
+  WOMEN_RIGHTS: 'Apesar de estarmos em 2019, as mulheres ainda não têm os mesmos direitos que os homens - seja na lei ou na prática. Enquanto em alguns países mulheres sequer são reconhecidas como seres humanos e não têm dirietos básicos, em outros lugares a sociedade é mais igualitária nesse aspecto. Apesar disso, na prática, muitos direitos não são respeitados ou são violados. Além disso, outros elementos de uma sociedade, como a cultura, ainda reforçam o machismo. Quer saber como entrar em ação pelos direitos das mulheres? Digite "menu"!',
 
   READING_SUGGESTIONS: 'Ai, adoro gente interessada! Tem muita coisa maravilhosa por aí sobre os direitos das mulheres. 😍 Vou te passar algumas das minhas fontes preferidas: http://thinkolga.com/, http://www.naomekahlo.com/, https://www.programaria.org/category/debater/, www.cartacapital.com.br/colunistas/djamila-ribeiro, http://azmina.com.br/, http://www.generonumero.media/, http://blogueirasnegras.org/ e http://catolicas.org.br/category/biblioteca/',
 
@@ -502,6 +501,8 @@ export default {
 
   STRAIGHT_TO_THE_WOMENS_RIGHTS: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão? Digite "menu" para conferir as oportunidades de ação!',
 
+  IMPRISONED_WOMEN: 'Em 16 anos, o número de mulheres encarceradas cresceu 698% no Brasil, segundo dados do Depen. Já temos a quarta maior população carcerária feminina do mundo, acredita? E pior: em nenhum outro país esse número aumentou tanto! 😥Óbvio que a maioria delas, 62%, é negra e 3 em cada 5 respondem por crimes relacionados ao comércio ilegal de drogas. Se quiser saber mais sobre o tema, dá uma olhada no Infopen Mulheres que lá tem tudinho: http://bit.ly/2UkM1Ji',
+  
   //
   // Answers
   //
@@ -519,7 +520,9 @@ export default {
 
   ABOUT_ESCOLA_SEM_PARTIDO: 'O "Escola Sem Partido" é um movimento que existe desde 2004 e que, há anos, vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Em breve será votado um novo projeto, nacional, que, entre muitos absurdos, proíbe os termos "gênero" e "orientação sexual" em sala de aula. Para saber mais sobre o projeto, clique aqui: http://bit.ly/conheca_escolasempartido',
 
-  ABOUT_MSP_PRESSURE: 'Acredita que o Governador de São Paulo, Márcio França, declarou que a PM não precisa necessariamente atender a chamados de briga de casal? EM PLENO 2018, GENTE! #deuerro ⚠️ As manas da Minha Sampa se mobilizaram rapidinho pra dizer que #NãoÉBrigaDeCasal, é violência contra a mulher! Pressione agora e ajude lotar a caixa de email de França: bit.ly/beta-msp_issoefeminicidio',
+  WHATS_VAGINISMUS: 'Mana, o assunto é sério, então vamo lá: o vaginismo é uma disfunção que causa contrações involuntárias dos músculos da vagina, o que pode gerar muita dor e atrapalhar bastante na hora do sexo 😨 . Os especialistas dizem que 3% a 5% das mulheres convivem com esse problema. Mas como tudo que envolve nosso corpo, esse assunto ainda é um tabu e, por isso, muitas nem sabem do que se trata! Se você ou alguém que você conhece sofre desse problema, procure uma ginecologista de confiança e não esqueça: tamo juntas! 👩‍❤️‍💋‍👩',
+  
+  
 
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
 
@@ -541,7 +544,7 @@ export default {
 
   ABOUT_MARCH_8: 'O Dia Internacional da Mulher é comemorado no 8 de março desde o começo do século XX - muito antes da ONU assinar o primeiro acordo internacional que afirmava princípios de igualdade entre homens e mulheres. As minas já tavam mobilizadas! Desde lá, esse dia é um marco internacional das lutas feministas e já foi palco de greves, protestos, debates e tantas outras formas de manifestação.',
 
-  ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Há alguns meses, por exemplo, uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
+  ABOUT_REPRODUCTIVE_PLANNING: 'O acesso limitado ao planejamento reprodutivo reflete em 89 milhões de gravidezes não intencionais por ano em países em desenvolvimento. Segundo o Ministério da Saúde, dos 2,8 milhões de bebês nascidos em 2016, 23,9 mil são de mães entre 10 e 14 anos. É, manas, os direitos das mulheres à saúde, educação e informação não são garantidos. As consequências vão longe! Uma pesquisa da FGV mostrou que metade das mulheres que tiram licença-maternidade não está mais no emprego um ano após o início do benefício.😣',
 
   ABOUT_COLORISM: ['"O colorismo, ou pigmentocracia, vai dizer que os negros de pele clara e os negros de pele escura vão sofrer opressões diferentes". Assunto muito importante, mana! Olha só o que mais a Ana Paula Xongani tem pra dizer:', video('https://s3.amazonaws.com/chatbox-beta/youtubers4/colorismo_menor.m4v'), 'Ela respondeu essa e mais perguntas que chegam no meu inbox em um vídeo incrível, olha só: http://bit.ly/xongani_beta'],
 
@@ -577,6 +580,11 @@ export default {
 
   ABOUT_RADICAL_FEMINISM: 'A luta das feministas radicais considera os papéis sociais de gênero como as raízes da opressão da mulher. Por isso, defende a abolição de determinadas estruturas e normas sociais que reforçam esses papéis para a alcançar a verdadeira libertação da mulher.',
 
+  WHATS_PARENTAL_ALIENATION: 'Ai, os problemas familiares... Sabe quando você passava as férias com o seu pai e ele não parava de falar mal da sua mãe? 🙄 A alienação parental nada mais é do que a conduta dos pais (ou mães e até mesmo avôs e avós) de "fazer a cabeça" da criança contra o outro genitor. A alienação parental é crime desde 2010, mas tem causado polêmica porque tem casos de pais que usam esse assunto tão sério como desculpa pra se livrarem de acusações de abusos e maus tratos contra seus filhos. É aquela coisa: o que começou com uma boa intenção, tem sido usado para o mal. 😥', 
+ 
+  EXPLAIN_ABOUT_PEC_DA_VIDA: 'PEC da Vida? Ah, tá! Nem me engana que eu não gosto! É que os fundamentalistas tão chamando assim a PEC 29 - lembra dela? Isso mesmo, aquela que, além de retroceder nos casos de aborto já considerados legais no Brasil, ainda pode proibir o uso do DIU e da pílula do dia seguinte. Isso no país onde uma mulher morre a cada dois dias em consequência de abortos clandestinos. Surreal, né? Aff! #ÉPelaVidaDasMulheres', 
+
+  
   LIBERAL_OR_RADICAL_BETA: 'Sou feminista! 💪',
 
   ABOUT_TRANS_FEMINISM: 'Quando eu digo que estou ao lado das lutas feministas, incluo nessa as mulheres e homens trans também. Se você tem alguma sugestão de conteúdo ou campanha sobre pessoas trans, eu vou adorar trocar ideia com você. É só enviar pra beta@nossas.org - te espero lá! 🤙 E se quiser saber mais sobre transfeminismo, confere esse vídeo incrível que a Thiessita fez respondendo a perguntas que chegam pra mim: http://bit.ly/beta_thiessita',
@@ -611,9 +619,7 @@ export default {
 
   ABOUT_WANT_TO_MAKE_AN_ABORTION: 'Hoje, existem só 3 casos em que a mulher pode buscar o aborto legal no Brasil: quando a gravidez é resultado de um estupro, quando a gravidez apresenta risco de morte para a gestante ou quando o feto é anencéfalo. Pela lei, todo hospital do SUS deveria realizar o procedimento em mulheres que se encaixem em uma dessas três condições, sem a necessidade de Boletim de Ocorrência, laudo do IML ou autorização judicial.',
 
-  ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solteira, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Agora, ela enfrenta um novo desafio: a discriminação do mercado de trabalho. Não podemos deixá-la sozinha! Conheça melhor sua história e a nossa campanha aqui: http://pelavidaderebeca.org',
-
-  ABOUT_REBECA_CAMPAIGN: 'Com toda a exposição midiática em torno do caso de Rebeca, ela pode agora sofrer grande discriminação no mercado de trabalho. O que Rebeca fez foi por todas as brasileiras, chegou nossa hora de lutar por ela. Para isso, junto da Think Olga e da Anis, eu criei a campanha Um Emprego Para a Rebeca! Você pode oferecer ou indicar uma vaga e compartilhar a campanha na sua rede. Vamos juntas? Acesse nosso site e conheça: http://pelavidaderebeca.org',
+  ABOUT_REBECA: 'Rebeca Mendes foi a primeira mulher a pedir ao STF o direito a um aborto seguro. Com o pedido negado, recorreu à Justiça de SP e, sem resposta, interrompeu a gravidez na Colômbia, onde o aborto é permitido quando coloca a saúde mental da mulher em risco. Mãe solo, estudante de direito e empregada em uma vaga temporária até fevereiro, Rebeca não tinha condições emocionais e financeiras para prosseguir com a gestação. Hoje Rebeca é um símbolo da luta pela legalização do aborto no Brasil.',
 
   ABOUT_MARIA_DA_PENHA: 'A Lei Maria da Penha (2006) existe para prevenir e punir violência doméstica contra a mulher. Ela estabelece juizados especializados, prisão preventiva, agravante da pena, possibilidade de desistência da denúncia apenas perante o juiz, assistência à vítima, dentre outras medidas protetivas à mulher. Foi um super avanço, mas ainda enfrenta grandes barreiras, como o baixo número de delegacias especializadas e a discriminação de juízes e delegados. Além disso, o foco tem sido nos processos criminais e o potencial de cuidado com a mulher não é muito explorado.',
 
