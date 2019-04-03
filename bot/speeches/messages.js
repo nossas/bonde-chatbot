@@ -26,6 +26,8 @@ export default {
 
   ABOUT_PEC181_HIGHLIGHTS: 'É muito politiquês, né? Mas pode deixar que te explico! Precisamos que os deputados aprovem os dois destaques (alterações) ainda não votados da PEC 181. Eles pedem a supressão do texto que defende a proteção da vida desde a concepção, ou seja, que ameaça o aborto legal no Brasil. Com sua aprovação, o projeto volta à sua forma original, ou seja, apenas amplia a licença maternidade para mães de bebês prematuros e não acaba com o aborto legal no Brasil.',
 
+  ABOUT_LBGTFOBIA: 'O Brasil é um dos países mais perigosos pra essa galera e está prestes a ter um presidente que prefere “filho morto a filho gay” - não por acaso são cada vez mais frequentes as notícias de pessoas LGBT+ vítimas do ódio e da intolerância. Mas existe uma luz no fim do túnel 💡: em fevereiro, o Supremo Tribunal Federal (STF) vai decidir se a discriminação contra pessoas LGBT+ deve ser considerada crime - assim como já acontece com discriminação por raça, nacionalidade ou religião, por exemplo. É nossa chance de começar o 2019 com mais garantias de que essas pessoas estarão amparadas! Assine agora a petição pra fazer sua voz chegar até os ministros e ministras do STF: bit.ly/a_hora_e_agora ',
+
   //
   // New Script
   //
@@ -36,11 +38,10 @@ export default {
   CALL_INBOX_1: 'Assim que meu radar encontrar uma oportunidade de ação, eu mando um alerta por aqui te convocando pra fazer barulho 📣  Quer ser minha aliada na luta pelos direitos das mulheres?',
   CALL_INBOX_2: gif('https://goo.gl/Rao6n1'),
 
-  /*BETA_INTRODUCTION: 'Fui programada para ajudar mulheres na luta pelos seus direitos. 🤖💜',
+  /* BETA_INTRODUCTION: 'Fui programada para ajudar mulheres na luta pelos seus direitos. 🤖💜',
   BETA_INTRODUCTION_1: 'Meus algoritmos monitoram constantemente o que tá rolando no campo político brasileiro pra identificar votações e discussões que podem impactar a vida das mulheres. Projetos de lei, PECs, ações no STF… Tem de tudo, viu?',
   BETA_INTRODUCTION_2: 'Quando uma dessas propostas entra em pauta, eu traduzo o politiquês pro Português, mando um alerta pra você aqui no inbox e te convido a fazer a sua opinião chegar até os políticos em Brasília - ou onde quer que seja 📣📣📣 ',
   BETA_INTRODUCTION_3: 'Juntas, temos força para barrar retrocessos e pressionar por avanços!',
-
 
   EXPLAIN_MORE: 'Uma das minhas táticas preferidas é fazer pressão direta: lotar a caixa de e-mail dos políticos com mensagens de milhares de mulheres. 📧📧📧 Fica bem difícil ignorar a nossa voz quando estamos em coro.',
   EXPLAIN_MORE_1: 'A parte boa é que você não precisa nem abrir seu e-mail pra fazer isso. Eu posso enviar sua mensagem pra eles aqui mesmo, pelo inbox do Facebook.',
@@ -172,9 +173,9 @@ export default {
   //
   // Radar da Beta - SUG 15
   //
-  //SUG: 'Notícia boa: temos! Meu radar disparou aqui com uma sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime: a SUG 15 🔝',
-  //SUG_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas - isso lá em 2016. Quer saber o status 2018?',
-  //SUG_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei. Partiu? Vote sim:  bit.ly/sug15_consulta2 #RumoAos20mil',
+  // SUG: 'Notícia boa: temos! Meu radar disparou aqui com uma sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime: a SUG 15 🔝',
+  // SUG_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Como a SUG 15 recebeu mais de 20 mil cliques favoráveis, aconteceram várias audiências públicas com especialistas - isso lá em 2016. Quer saber o status 2018?',
+  // SUG_2: 'Eis que no início do ano, o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. 🙄🙄🙄  As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei. Partiu? Vote sim:  bit.ly/sug15_consulta2 #RumoAos20mil',
   //
   // Radar da Beta - ADPF 442
   //
@@ -222,31 +223,30 @@ export default {
   // EMAIL_SENT_PETITION_ADPF442: name => `Arrasou, ${name}! 👏👏 sua missão agora é compartilhar essa oportunidade de ação com seus amigues: quanto mais assinaturas, mais forte será nossa mensagem!  💪  Posso contar com você pra espalhar nossa mensagem?`,
 
   // Escola sem partido
-  EDUCATION:'Mana, tá atenta? 🚨🧐 O Congresso pode votar a qualquer momento o relatório do “Escola sem Partido”, que quer proibir as expressões “gênero” e “orientação sexual” de TODO ensino brasileiro - lembra desse projeto? Olha que 2019 nem começou. Mas a gente tá atenta há muuuito tempo, já enviou 42 mil emails de pressão e vai mostrar que continua na luta pra fazer a votação cair de novo. 💪 Tá comigo?',
-  EDUCATION_1:'O projeto ficou conhecido como Escola sem Partido (PL 7180/2014), mas na prática ele representa mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos.',
-  EDUCATION_2:'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos.😨',
-  EDUCATION_3:'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
-  IF_APPROVED:'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
-  IF_APPROVED_1:'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
-  EDUCATION_MORE:'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
-  EDUCATION_MORE_1:'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
-  EDUCATION_MORE_2:'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
-  EDUCATION_ACTION:'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final.',
-  EDUCATION_ACTION_1:'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos deputados e deputadas. Tudo aqui mesmo pelo chat. Se eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
-  EDUCATION_MESSAGE:'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBTs e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (Ibope, 2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
+  EDUCATION: 'Mana, tá atenta? 🚨🧐 O Congresso pode votar a qualquer momento o relatório do “Escola sem Partido”, que quer proibir as expressões “gênero” e “orientação sexual” de TODO ensino brasileiro - lembra desse projeto? Olha que 2019 nem começou. Mas a gente tá atenta há muuuito tempo, já enviou 42 mil emails de pressão e vai mostrar que continua na luta pra fazer a votação cair de novo. 💪 Tá comigo?',
+  EDUCATION_1: 'O projeto ficou conhecido como Escola sem Partido (PL 7180/2014), mas na prática ele representa mais violência contra a mulher, mais violência contra LGBTs e tantos outros absurdos.',
+  EDUCATION_2: 'No Brasil, um dos países que mais mata pessoas LGBTs do mundo e onde uma mulher é assassinada a cada 2 horas, os defensores do projeto dizem que educar crianças e jovens nas escolas contra essas violências fere valores morais e religiosos.😨',
+  EDUCATION_3: 'E fica pior: mesmo com 84% da população a favor de discutir gênero nas escolas (Ibope, 2017), os deputados da Comissão Especial do projeto insistem em aprovar esse absurdo - e estão quase conseguindo. 👀',
+  IF_APPROVED: 'Imagine só você mulher, pessoa negra ou LGBT, saber que a educação das futuras gerações não vai poder mais falar de violência doméstica, igualdade de gênero, LGBTfobia e respeito às religiões de matriz africana, por exemplo.😳',
+  IF_APPROVED_1: 'Vai ser impossível programarmos um futuro melhor e mais justo se a educação não estiver comprometida com essas questões. Por isso, precisamos enterrar a proposta o quanto antes. Vamos nessa?',
+  EDUCATION_MORE: 'O Escola Sem Partido é um movimento que existe desde 2004 e que vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Bem Windows 95! ⚠️ Muitos projetos que foram propostos em municípios e estados já foram barrados pela justiça por serem considerados inconstitucionais.',
+  EDUCATION_MORE_1: 'Isso porque a Constituição garante "a liberdade de aprender, ensinar, pesquisar e divulgar o pensamento, a arte e o saber, além de pluralismo de ideias e de concepções pedagógicas".',
+  EDUCATION_MORE_2: 'Pensa comigo: tanto professor mal remunerado, tanta falta de estrutura pra dar aula, tanta vaga faltando nas redes de ensino e os caras defendem que o problema da educação é ensinar sobre direitos? E pior: esse mesmo Congresso aprovou em 2016 uma Proposta que congela por 20 anos os investimentos em educação! Desconfio dessas ‘boas intenções’! 🤔',
+  EDUCATION_ACTION: 'AMO! Funciona assim: vamos lotar a caixa de email dos deputados e deputadas da Comissão Especial do projeto exigindo que REJEITEM o relatório final.',
+  EDUCATION_ACTION_1: 'Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos deputados e deputadas. Tudo aqui mesmo pelo chat. Se eles ainda não entenderam que a sociedade não apoia esse projeto, precisamos fazer nossas vozes chegarem até Brasília!',
+  EDUCATION_MESSAGE: 'Senhores/as deputados/as, no país em que mulheres são vítimas de violências a cada 2 segundos, em que mais se matam pessoas LGBTs e onde tantas desigualdades acometem boa parte da população, defendemos a educação como essencial para o combate às opressões, comprometida com a ampliação de direitos, com a formação cidadã das futuras gerações e com a livre docência. Por acreditar no compromisso de vocês como representantes da população, majoritariamente a favor de discussões de gênero nas escolas (Ibope, 2017), pedimos que rejeitem o relatório final do PL 7180/14. Para responder publicamente, envie um email para beta@nossas.org',
   EMAIL_SENT_CONTRA_ESCOLA_SEM_PARTIDO: name => `Arrasou, ${name}! 👏👏 Pra saber ainda mais sobre essa campanha, acesse: www.educacaofazmeugenero.beta.org.br. Temos uma última missão: pra nossa voz ser ouvida, precisamos potencializar o coro: #EducaçãoFazMeuGênero! Compartilhe e convide seus amigues para que se juntem ao nosso bonde de pressão! 🚂 💪`,
 
   // Descriminalização do Aborto
-  VOTE:'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
-  VOTE_1:'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
+  VOTE: 'Tem muita proposta por aí querendo proibir totalmente o aborto, mas têm algumas pra salvar coração de robô! Uma delas é a SUG 15: a sugestão de projeto de lei que faz com que o aborto até a 12a semana de gestação deixe de ser considerado crime. 🔝',
+  VOTE_1: 'Uma SUG é uma sugestão de projeto de lei que qualquer pessoa pode criar no site do Senado. Recebendo mais de 20 mil cliques favoráveis, ela precisa ser oficialmente analisada! Sua missão? Votar agora: bit.ly/sug15_consulta',
 
-  VOTE_MORE:'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
-  VOTE_MORE_1:'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mil',
+  VOTE_MORE: 'A SUG 15 foi proposta lá em 2014. Rapidinho teve mais de 20 mil votos - e foram realizadas uma série de audiências públicas sobre o tema. Foi incrível!',
+  VOTE_MORE_1: 'Mas sempre tem um pra dar bug no sistema: o senador Magno Malta (PR-ES) propôs o arquivamento da SUG no Senado. Mal sabia que a gente não para nunca! A segunda votação já tá no ar pedindo que a SUG vire lei. Vote sim:  bit.ly/sug15_consulta #RumoAos20mil',
 
   //
   // Beta
   //
-
 
   I_AM_BETA_SHORT: 'Quem me chamou? Ai, eu não me aguento! ;) Meu nome é Betânia, mas pode me chamar de Beta. Prazer! Sou uma robô feminista até o último código. Vamos nessa?',
 
@@ -399,7 +399,7 @@ export default {
 
   BODY_JUDGMENT: ['"A gente não pode deixar nossa autoestima na mão dos outros (...) A gente tem que saber que as pessoas vão olhar, que não vão ter sororidade. Ela nem sabem o que é isso, elas reproduzem o que elas sofrem." Foi o que disse a maravilhosa Luiza Junqueira. Confere só a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/sororidade_menor.m4v'), 'Arrasou! Assista o vídeo na íntegra 🎥: http://bit.ly/beta_luiza_'],
 
-  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v'),' Essa mulher arrasa! 💓 Quer ver todas as perguntas que ela respondeu pra gente sobre autoestima, corpo e amor próprio? Vem comigo: http://bit.ly/beta_luiza_'],
+  WOMAN_MAN_FAT: ['"Eu acho que ser mulher é mais difícil que ser homem, ponto. (...) Mas acredito sim que as mulheres gordas sofrem algo a mais, em relação a uma pressão estética muito mais forte", com bem disse a youtuber Luiza Junqueira. Quer saber mais? Olha só a resposta na íntegra:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/mulher+gorda+x+homem+gordo.m4v'), ' Essa mulher arrasa! 💓 Quer ver todas as perguntas que ela respondeu pra gente sobre autoestima, corpo e amor próprio? Vem comigo: http://bit.ly/beta_luiza_'],
 
   ABOUT_GORDOFOBIA: ['"Existe mesmo gordofobia, é uma realidade e tem a ver com esse preconceito que toda a sociedade tem com corpos gordos, com corpos que tão fora do padrão magro." Luiza Junqueira sempre incrível e didática <3. Não deixe de conferir a resposta completa:', video('https://s3.amazonaws.com/chatbox-beta/youtubers2/gordofobia_menor.m4v'), 'Meus algoritmos ficam bobos com essa mulier! 🤖 Não deixe de conferir o vídeo completo - ela respondeu 5 perguntas que chegam pra mim todos os dias sobre corpo e autoestima: http://bit.ly/beta_luiza_'],
 
@@ -675,7 +675,7 @@ export default {
 
   EMOJI_DISAPPOINTED: '😕',
 
-  EMOJI_SHRUGGING: "🤷",
+  EMOJI_SHRUGGING: '🤷',
 
   // Gifs
 
@@ -685,4 +685,13 @@ export default {
 
   // Hashtags
   HASHTAG_IM_NOT_OBLIGATED: '#NãoSouObrigada',
+
+  // CAMPANHA NASCITURO RJ
+  NASCITURO_MESSAGE_A: '⚠️ #BetaAlerta ⚠️ Manas e monas, hoje eu não tô nem com tempo de fazer gracinha: em poucas horas, a Assembleia Legislativa do Rio de Janeiro vai votar o projeto conhecido como Estatuto do Nascituro. A proposta é dar ao embrião direitos de uma pessoa nascida. O resultado disso você já sabe: proibir todo e qualquer caso de aborto, mesmo os já garantidos por lei. É isso mesmo: mulheres que engravidaram em decorrência de estupro, que correm risco de vida e que gestam fetos anencéfalos não poderão interromper a gravidez se o projeto for aprovado. 🚨 E já que não dá pra cancelar 2019, preciso de você pra barrar mais essa. Tá comigo?',
+  NASCITURO_QUICK_REPLY_YES: 'VAMO! 🕐 O projeto tá na pauta de hoje, mas eu tenho um plano: antes de ser votado por toda a Alerj, ele tem que ser aprovado por cinco comissões. Para garantir que não avance e acabe com o aborto legal, precisamos lotar a caixa de e-mail dos presidentes dessas comissões exigindo que rejeitem esse absurdo. A gente corta as asinhas deles antes que a coisa fique ainda pior! 🙌 Bora?',
+  NASCITURO_QUICK_REPLY_BORA: 'É AGORA! Eu chamo isso de pressão direta: te mostro a mensagem que vamos enviar e mando um email, que sai em seu nome, para cada um dos presidentes das comissões. Tudo aqui mesmo pelo chat! Quando eles abrirem o email e virem que somos MILHARES de pessoas atentas e mobilizadas, vão ter que barrar o projeto. 💪 ',
+  NASCITURO_QUICK_REPLY_SAIBA_MAIS_1: 'O autor do Estatuto do Nascituro do RJ (PL 1761/2016) é o deputado Marcos Muller (PHS) - duvido que se ele engravidasse ele iria propor um absurdo desses 😒. Como em 2018 o ano legislativo terminou sem que as cinco comissões tivessem analisado o PL, pelas regras da casa os presidentes das comissões agora tem que dar o parecer direto no plenário da ALERJ. Ou seja: em poucos minutos, sem muita discussão, a gente pode perder direitos que levaram um tempão pra conquistarmos.',
+  NASCITURO_QUICK_REPLY_SAIBA_MAIS_2: 'Há uma grande discussão sobre o momento em que a vida começa real oficial, e o que o Estatuto do Nascituro faz? Usa esse impasse pra emplacar a ideia de que a vida começa assim que o óvulo encontra o espermatozóide. Eles dizem que o feto tem uma “personalidade virtual” e que, por isso, precisa de políticas públicas que garantam seus direitos 🙄.',
+  NASCITURO_QUICK_REPLY_SAIBA_MAIS_3: 'Na vida real, o que eles fazem é ignorar que uma mulher morre a cada dois dias em consequência de abortos clandestinos no Brasil e fogem da responsa de cuidar da vida dessas mulheres! Não bastasse não evoluírem nos debates sobre direitos sexuais e direitos reprodutivos, ainda ficam querendo tirar direitos já garantidos pela lei. É retrocesso que chama, né? Vamo barrar esse PL comigo? 💪',
+  NASCITURO_QUICK_REPLY_READ: 'Prezados(as) deputados e deputadas, a criminalização do aborto mata uma brasileira a cada 2 dias. Levando em consideração que o direito à vida protegido pelo artigo 5º da Constituição refere-se exclusivamente a pessoas NASCIDAS, deve-se prezar legislações que garantam a vida das mulheres. Nesta quarta, vocês serão responsáveis pelo parecer ao PL 1761/2016, que cria o Estatuto do Nascituro. Caso esse projeto seja aprovado, mulheres que engravidarem em decorrência de estupro, que correm risco de vida e que gestam fetos anencéfalos (casos previsto em lei) não poderão mais interromper a gravidez. Exigimos que rejeitem o PL 1761/2016.'
 }
