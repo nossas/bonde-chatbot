@@ -632,6 +632,7 @@ export default botData => ({
         ),
       )
     ],
+
     [V2_QUICK_REPLY_I_1]: [
       botSpeeches.messages.YOU_ROCK,
       //TODO: Add gif
@@ -664,7 +665,7 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_BORA]: {
       text: botSpeeches.messages.NASCITURO_QUICK_REPLY_BORA,
       quick_replies: [
-        quickReply(botSpeeches.messages.EMAIL_ADDRESS_ASK, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
         quickReply(NASCITURO_QUICK_REPLY_READ, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ),
       ],
     },
@@ -679,7 +680,7 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_READ]: {
       text: botSpeeches.messages.NASCITURO_QUICK_REPLY_READ,
       quick_replies: [
-        quickReply(botSpeeches.messages.EMAIL_ADDRESS_ASK, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
       ]
     },
   
