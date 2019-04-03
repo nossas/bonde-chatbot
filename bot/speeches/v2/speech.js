@@ -214,11 +214,11 @@ export default botData => ({
       locale: 'default',
       composer_input_disabled: false,
       call_to_actions: [
-        // {
-        //   title: "Estatuto Nascituro RJ",
-        //   type: "postback",
-        //   payload: NASCITURO_QUICK_REPLY_A
-        // },
+        {
+          title: "Estatuto Nascituro RJ",
+          type: "postback",
+          payload: NASCITURO_QUICK_REPLY_A
+        },
         {
           title: "Outras Ações",
           type: "postback",
