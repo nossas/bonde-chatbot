@@ -3,5 +3,5 @@ import * as resolvers from './resolvers'
 
 export {
   client,
-  resolvers,
+  resolvers
 }

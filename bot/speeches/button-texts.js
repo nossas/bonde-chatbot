@@ -54,7 +54,6 @@ export default {
 
   ACT_NOW: 'Agir agora!',
 
-
   //
   // Hashtag
   //
@@ -130,7 +129,6 @@ export default {
   NEXT_ROUND: 'Próxima rodada!',
   JUST_ONE_MORE: 'Só mais um!',
   KEEP_ME_UPDATED: 'Mantenha-me informada!',
-
 
   //
   // Mapa do acolhimento

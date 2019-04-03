@@ -9,9 +9,9 @@ const payloadValidator = payload => {
 export default (bot, speech, botData) => (payload, reply) => {
   const { message } = payload
 
-  //Set the sender action: When the bot receives the message show the "typing on" sign to the user
+  // Set the sender action: When the bot receives the message show the "typing on" sign to the user
   bot.sendSenderAction(payload.sender.id, 'typing_on')
-  
+
   //
   // Validate payload
   //

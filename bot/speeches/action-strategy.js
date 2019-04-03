@@ -14,8 +14,7 @@ import _ from 'underscore'
 //
 export default ({ speech, action, payload, profile, botData, reply }) => {
   let actions
-  try { actions = require(`./${speech.version}/actions`) }
-  catch (e) {}
+  try { actions = require(`./${speech.version}/actions`) } catch (e) {}
 
   return {
     //
