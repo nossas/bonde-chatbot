@@ -511,7 +511,7 @@ export default botData => ({
             title: 'Ajude a barrar o Estatuto do Nascituro no RJ!',
             subtitle: 'Clique aqui pra pressionar os deputados da ALERJ agora.',
             imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=nascituro_rj_action'
+            url: 'https://m.me/beta.feminista?ref=nascituro_rj_intro'
           }),
         ],
       }),
