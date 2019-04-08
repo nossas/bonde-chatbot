@@ -3,6 +3,12 @@ export default (bot, speech, botData) => (payload, reply) => {
   var message = ''
   console.log(payload.referral)
   switch (ref) {
+    case 'cotas_intro':
+      message = speech.message.COTAS_A_1
+      break
+    case 'cotas_action':
+      message = speech.message.COTAS_A_2
+      break
     case 'nascituro_rj_intro':
       message = speech.message.NASCITURO_MESSAGE_A
       break
