@@ -720,7 +720,7 @@ export default botData => ({
       botSpeeches.messages.COTAS_C_1,
       messageWithQuickReply(
         botSpeeches.messages.COTAS_C_2,
-        quickReply(V2_QUICK_REPLY_N_3, botSpeeches.buttonTexts.COTAS_GOGO)
+        quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_GOGO)
       )
     ],
     [V2_QUICK_REPLY_N_2]: {
