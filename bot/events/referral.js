@@ -4,16 +4,16 @@ export default (bot, speech, botData) => (payload, reply) => {
   console.log(payload.referral)
   switch (ref) {
     case 'cotas_intro':
-      message = speech.message.COTAS_A_1
+      message = speech.messages.V2_QUICK_REPLY_N_1
       break
     case 'cotas_action':
-      message = speech.message.COTAS_A_2
+      message = speech.messages.V2_QUICK_REPLY_N_3
       break
     case 'nascituro_rj_intro':
-      message = speech.message.NASCITURO_MESSAGE_A
+      message = speech.messages.NASCITURO_MESSAGE_A
       break
     case 'nascituro_rj_action':
-      message = speech.message.NASCITURO_QUICK_REPLY_YES
+      message = speech.messages.NASCITURO_QUICK_REPLY_YES
       break
     case 'sp_para_mulheres':
       message = speech.messages.V2_QUICK_REPLY_PRESSURE
