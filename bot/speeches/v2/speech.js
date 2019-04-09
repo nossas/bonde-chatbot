@@ -516,15 +516,15 @@ export default botData => ({
     //Share campaign
     [V2_QUICK_REPLY_H_10]: [
       genericTemplate({
-        title: 'Clique aqui para impedir mais um retrocesso na educação',
-        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
+        title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
+        subtitle: 'Pressione por mais mulheres no poder!',
         imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: 'Clique aqui para impedir mais um retrocesso na educação',
-            subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-            imageUrl: 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=escola-sem-partido'
+            title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
+            subtitle: 'Pressione por mais mulheres no poder!',
+            imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+            url: 'https://m.me/beta.feminista?ref=cotas_intro'
           }),
         ],
       }),
