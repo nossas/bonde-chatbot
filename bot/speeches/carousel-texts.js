@@ -73,5 +73,10 @@ export default {
   TITLE_NASCITURO: 'Estatuto do Nascituro RJ NÃO!',
   SUBTITLE_NASCITURO: 'Pressionar deputados/as!',
   IMAGE_NASCITURO: 'https://s3.amazonaws.com/chatbox-beta/nascituro-rj-nao/carrossel_estatutorjnao.jpg',
-  BUTTON_NASCITURO: 'Enviar pressão'
+  BUTTON_NASCITURO: 'Enviar pressão',
+
+  TITLE_COTAS: 'Nem 1% a menos',
+  SUBTITLE_COTAS: 'Pressionar senadores/as',
+  IMAGE_COTAS: 'https://s3.amazonaws.com/chatbox-beta/cotas/sharefb-02.jpg',
+  BUTTON_COTAS: 'Clique aqui!!'
 }

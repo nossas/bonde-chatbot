@@ -148,7 +148,7 @@ const NASCITURO_QUICK_REPLY_YES = 'NASCITURO_QUICK_REPLY_YES'
 const NASCITURO_QUICK_REPLY_BORA = 'NASCITURO_QUICK_REPLY_BORA'
 const NASCITURO_QUICK_REPLY_SAIBA_MAIS = 'NASCITURO_QUICK_REPLY_SAIBA_MAIS'
 const NASCITURO_QUICK_REPLY_NOW = 'NASCITURO_QUICK_REPLY_NOW'
-const NASCITURO_QUICK_REPLY_READ = 'NASCITURO_QUICK_REPLY_READ' 
+const NASCITURO_QUICK_REPLY_READ = 'NASCITURO_QUICK_REPLY_READ'
 
 const V2_QUICK_REPLY_L_1 = 'V2_QUICK_REPLY_L_1'
 const V2_QUICK_REPLY_L_2 = 'V2_QUICK_REPLY_L_2'
@@ -158,6 +158,12 @@ const V2_QUICK_REPLY_L_5 = 'V2_QUICK_REPLY_L_5'
 const V2_QUICK_REPLY_L_6 = 'V2_QUICK_REPLY_L_6'
 const V2_QUICK_REPLY_L_7 = 'V2_QUICK_REPLY_L_7'
 const V2_QUICK_REPLY_L_8 = 'V2_QUICK_REPLY_L_8'
+
+const V2_QUICK_REPLY_N_1 = 'V2_QUICK_REPLY_N_1'
+const V2_QUICK_REPLY_N_2 = 'V2_QUICK_REPLY_N_2'
+const V2_QUICK_REPLY_N_3 = 'V2_QUICK_REPLY_N_3'
+const V2_QUICK_REPLY_N_4 = 'V2_QUICK_REPLY_N_4'
+const V2_QUICK_REPLY_N_5 = 'V2_QUICK_REPLY_N_5'
 
 //
 // The bot speech, based on quick replies.
@@ -206,7 +212,14 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_BORA]: NASCITURO_QUICK_REPLY_BORA,
     [NASCITURO_QUICK_REPLY_SAIBA_MAIS]: NASCITURO_QUICK_REPLY_SAIBA_MAIS,
     [NASCITURO_QUICK_REPLY_NOW]: NASCITURO_QUICK_REPLY_NOW,
-    [NASCITURO_QUICK_REPLY_READ]: NASCITURO_QUICK_REPLY_READ
+    [NASCITURO_QUICK_REPLY_READ]: NASCITURO_QUICK_REPLY_READ,
+
+    // ACTIONS COTAS
+    [V2_QUICK_REPLY_N_1]: V2_QUICK_REPLY_N_1,
+    [V2_QUICK_REPLY_N_2]: V2_QUICK_REPLY_N_2,
+    [V2_QUICK_REPLY_N_3]: V2_QUICK_REPLY_N_3,
+    [V2_QUICK_REPLY_N_4]: V2_QUICK_REPLY_N_4,
+    [V2_QUICK_REPLY_N_5]: V2_QUICK_REPLY_N_5
   },
   messages: {
 
@@ -215,9 +228,9 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Estatuto Nascituro RJ",
+          title: "Nem 1% a menos",
           type: "postback",
-          payload: NASCITURO_QUICK_REPLY_A
+          payload: V2_QUICK_REPLY_N_1
         },
         {
           title: "Outras Ações",
@@ -683,7 +696,47 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
       ]
     },
-  
+
+    //
+    // CAMPANHA COTAS
+    //
+    [V2_QUICK_REPLY_N_1]: [
+      botSpeeches.messages.COTAS_A_1,
+      messageWithQuickReply(
+        botSpeeches.messages.COTAS_A_2,
+        quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_SURE),
+        quickReply(V2_QUICK_REPLY_N_3, botSpeeches.buttonTexts.COTAS_KNOW_MORE)
+      )
+    ],
+    [V2_QUICK_REPLY_N_3]: [
+      botSpeeches.messages.COTAS_B_1,
+      messageWithQuickReply(
+        botSpeeches.messages.COTAS_B_2,
+        quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_GOGO),
+        quickReply(V2_QUICK_REPLY_N_4, botSpeeches.buttonTexts.COTAS_WHAT_THEY_SAY)
+      )
+    ],
+    [V2_QUICK_REPLY_N_4]: [
+      botSpeeches.messages.COTAS_C_1,
+      messageWithQuickReply(
+        botSpeeches.messages.COTAS_C_2,
+        quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_GOGO)
+      )
+    ],
+    [V2_QUICK_REPLY_N_2]: {
+      text: botSpeeches.messages.COTAS_D,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.COTAS_NOW),
+        quickReply(V2_QUICK_REPLY_N_5, botSpeeches.buttonTexts.COTAS_READ)
+      ]
+    },
+    [V2_QUICK_REPLY_N_5]: {
+      text: botSpeeches.messages.COTAS_E,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.COTAS_NOW)
+      ]
+    },
+
     //
     // Radar da Beta
     //
@@ -811,15 +864,15 @@ export default botData => ({
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.TITLE_NASCITURO,
-          botSpeeches.carouselTexts.SUBTITLE_NASCITURO,
-          botSpeeches.carouselTexts.IMAGE_NASCITURO,
+          botSpeeches.carouselTexts.TITLE_COTAS,
+          botSpeeches.carouselTexts.SUBTITLE_COTAS,
+          botSpeeches.carouselTexts.IMAGE_COTAS,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_NASCITURO,
-              payload: NASCITURO_QUICK_REPLY_A
+              title: botSpeeches.carouselTexts.BUTTON_COTAS,
+              payload: V2_QUICK_REPLY_N_1
             })
-          ],
+          ]
         ),
         elements(
           botSpeeches.carouselTexts.TITLE_STF,

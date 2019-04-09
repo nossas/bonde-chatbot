@@ -1,4 +1,4 @@
-import { messageWithQuickReply, quickReply, multiMessages } from './utils'
+// import { messageWithQuickReply, quickReply, multiMessages } from './utils'
 import { image, video, gif } from './utils/content-types'
 
 const pressureMessageURL = widgetId => `${process.env.APP_DOMAIN}/pressure/${widgetId}/message`
@@ -18,9 +18,9 @@ export default {
   //
 
   NASCITURO_BILL_EXPLANATION: '#SentaQueLáVemAHistória 📚 Desde 2007, tá tramitando no Congresso o Estatuto do Nascituro - um projeto que quer proibir o aborto inclusive nos casos em que ele é considerado legal. Deputados conservadores barganharam muito apoio a essa proposta, e agora, 10 anos depois, esse PL tem chances reais de ser aprovado. No Rio de Janeiro, os deputados vão votar uma versão estadual desse projeto, mas meu radar já tá sintonizado e prontíssimo pra gente botar pressão contra o PL. Me envie #EstatutoDoNascituroRJNão para saber mais sobre esse Estatuto e entrar em ação! 👊',
- 
-  EXPLAIN_ABOUT_NASCITURO_RJ: 'Pois é, o RJ tem um Estatuto do Nascituro pra chamar de seu 🤮. O PL é de 2016 mas agora voltou pra pauta da ALERJ e nós PRECISAMOS barrar esse retrocesso! Tá pronta? Então digita #EstatudoDoNascituroRJNão que eu te mostro como pressionar os deputados pra deter o PL!', 
- 
+
+  EXPLAIN_ABOUT_NASCITURO_RJ: 'Pois é, o RJ tem um Estatuto do Nascituro pra chamar de seu 🤮. O PL é de 2016 mas agora voltou pra pauta da ALERJ e nós PRECISAMOS barrar esse retrocesso! Tá pronta? Então digita #EstatudoDoNascituroRJNão que eu te mostro como pressionar os deputados pra deter o PL!',
+
   EXPLAIN_ABOUT_PEC_29: 'A PEC 29 é uma Proposta de Emenda Constitucional que pretende mudar o 5o artigo da nossa Constituição para garantir o direito à vida desde a concepção. Se ela for aprovada, o aborto passa a ser 100% proibido, inclusive nos casos em que ele é considerado legal hoje.',
 
   ABOUT_SUG_15: 'A SUG15 foi apresentada em 2014 pela sociedade civil, propondo a legalização do aborto até 12º semana. De lá pra cá, audiências públicas foram feitas no Congresso e o próximo passo seria a transformação da SUG em Projeto de Lei. Em 2018, o senador Magno Malta (PR) propôs o arquivamento da SUG no Senado. As mulheres não tão de bobeira e já colocaram no ar uma votação pedindo que a SUG vire lei! Agora é com a gente: vamos votar para que a SUG vire PL antes que os conservadores consigam arquivar a proposta. Com 20 mil votos favoráveis, eles serão obrigados a analisar a nossa proposta! Vote SIM: bit.ly/sug15_consulta2',
@@ -270,8 +270,6 @@ export default {
 
   DOUBLE_MESSAGE: 'Foi mal. Tô repetitiva hoje. Nem eu me aguento às vezes. 🤷',
 
-  WHAT_DO_YOU_WANT_TO_KNOW: 'Não sei quem está mais em dúvida: eu ou você? 😂',
-
   MY_FAVORITE_SONG: 'Não podia ser outra, né? É essa aqui: http://youtu.be/K4JQADCJ840 #PraCantarJunto',
 
   MY_INSPIRATION_MUSE: 'Minha musa inspiradora!',
@@ -502,7 +500,7 @@ export default {
   STRAIGHT_TO_THE_WOMENS_RIGHTS: 'Já vi que você tá com pressa, então vou direto ao assunto. Se quisermos proteger os direitos das mulheres, não nos resta outra opção: precisamos hackear e reconfigurar esse sistema! As ameaças são fortes, e só juntas poderemos barrá-las. Topa encarar essa missão? Digite "menu" para conferir as oportunidades de ação!',
 
   IMPRISONED_WOMEN: 'Em 16 anos, o número de mulheres encarceradas cresceu 698% no Brasil, segundo dados do Depen. Já temos a quarta maior população carcerária feminina do mundo, acredita? E pior: em nenhum outro país esse número aumentou tanto! 😥Óbvio que a maioria delas, 62%, é negra e 3 em cada 5 respondem por crimes relacionados ao comércio ilegal de drogas. Se quiser saber mais sobre o tema, dá uma olhada no Infopen Mulheres que lá tem tudinho: http://bit.ly/2UkM1Ji',
-  
+
   //
   // Answers
   //
@@ -521,8 +519,6 @@ export default {
   ABOUT_ESCOLA_SEM_PARTIDO: 'O "Escola Sem Partido" é um movimento que existe desde 2004 e que, há anos, vem propondo uma série de projetos de lei para emplacar retrocessos na educação. Em breve será votado um novo projeto, nacional, que, entre muitos absurdos, proíbe os termos "gênero" e "orientação sexual" em sala de aula. Para saber mais sobre o projeto, clique aqui: http://bit.ly/conheca_escolasempartido',
 
   WHATS_VAGINISMUS: 'Mana, o assunto é sério, então vamo lá: o vaginismo é uma disfunção que causa contrações involuntárias dos músculos da vagina, o que pode gerar muita dor e atrapalhar bastante na hora do sexo 😨 . Os especialistas dizem que 3% a 5% das mulheres convivem com esse problema. Mas como tudo que envolve nosso corpo, esse assunto ainda é um tabu e, por isso, muitas nem sabem do que se trata! Se você ou alguém que você conhece sofre desse problema, procure uma ginecologista de confiança e não esqueça: tamo juntas! 👩‍❤️‍💋‍👩',
-  
-  
 
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
 
@@ -580,11 +576,10 @@ export default {
 
   ABOUT_RADICAL_FEMINISM: 'A luta das feministas radicais considera os papéis sociais de gênero como as raízes da opressão da mulher. Por isso, defende a abolição de determinadas estruturas e normas sociais que reforçam esses papéis para a alcançar a verdadeira libertação da mulher.',
 
-  WHATS_PARENTAL_ALIENATION: 'Ai, os problemas familiares... Sabe quando você passava as férias com o seu pai e ele não parava de falar mal da sua mãe? 🙄 A alienação parental nada mais é do que a conduta dos pais (ou mães e até mesmo avôs e avós) de "fazer a cabeça" da criança contra o outro genitor. A alienação parental é crime desde 2010, mas tem causado polêmica porque tem casos de pais que usam esse assunto tão sério como desculpa pra se livrarem de acusações de abusos e maus tratos contra seus filhos. É aquela coisa: o que começou com uma boa intenção, tem sido usado para o mal. 😥', 
- 
-  EXPLAIN_ABOUT_PEC_DA_VIDA: 'PEC da Vida? Ah, tá! Nem me engana que eu não gosto! É que os fundamentalistas tão chamando assim a PEC 29 - lembra dela? Isso mesmo, aquela que, além de retroceder nos casos de aborto já considerados legais no Brasil, ainda pode proibir o uso do DIU e da pílula do dia seguinte. Isso no país onde uma mulher morre a cada dois dias em consequência de abortos clandestinos. Surreal, né? Aff! #ÉPelaVidaDasMulheres', 
+  WHATS_PARENTAL_ALIENATION: 'Ai, os problemas familiares... Sabe quando você passava as férias com o seu pai e ele não parava de falar mal da sua mãe? 🙄 A alienação parental nada mais é do que a conduta dos pais (ou mães e até mesmo avôs e avós) de "fazer a cabeça" da criança contra o outro genitor. A alienação parental é crime desde 2010, mas tem causado polêmica porque tem casos de pais que usam esse assunto tão sério como desculpa pra se livrarem de acusações de abusos e maus tratos contra seus filhos. É aquela coisa: o que começou com uma boa intenção, tem sido usado para o mal. 😥',
 
-  
+  EXPLAIN_ABOUT_PEC_DA_VIDA: 'PEC da Vida? Ah, tá! Nem me engana que eu não gosto! É que os fundamentalistas tão chamando assim a PEC 29 - lembra dela? Isso mesmo, aquela que, além de retroceder nos casos de aborto já considerados legais no Brasil, ainda pode proibir o uso do DIU e da pílula do dia seguinte. Isso no país onde uma mulher morre a cada dois dias em consequência de abortos clandestinos. Surreal, né? Aff! #ÉPelaVidaDasMulheres',
+
   LIBERAL_OR_RADICAL_BETA: 'Sou feminista! 💪',
 
   ABOUT_TRANS_FEMINISM: 'Quando eu digo que estou ao lado das lutas feministas, incluo nessa as mulheres e homens trans também. Se você tem alguma sugestão de conteúdo ou campanha sobre pessoas trans, eu vou adorar trocar ideia com você. É só enviar pra beta@nossas.org - te espero lá! 🤙 E se quiser saber mais sobre transfeminismo, confere esse vídeo incrível que a Thiessita fez respondendo a perguntas que chegam pra mim: http://bit.ly/beta_thiessita',
@@ -702,5 +697,15 @@ export default {
   NASCITURO_QUICK_REPLY_SAIBA_MAIS_1: 'O autor do Estatuto do Nascituro do RJ (PL 1761/2016) é o deputado Marcos Muller (PHS) - duvido que se ele engravidasse ele iria propor um absurdo desses 😒. Como em 2018 o ano legislativo terminou sem que as cinco comissões tivessem analisado o PL, pelas regras da casa os presidentes das comissões agora tem que dar o parecer direto no plenário da ALERJ. Ou seja: quando o projeto entrar na pauta, a gente pode perder direitos que levaram um tempão pra conquistarmos, sem muita discussão.',
   NASCITURO_QUICK_REPLY_SAIBA_MAIS_2: 'Há uma grande discussão sobre o momento em que a vida começa real oficial, e o que o Estatuto do Nascituro faz? Usa esse impasse pra emplacar a ideia de que a vida começa assim que o óvulo encontra o espermatozóide. Eles dizem que o feto tem uma “personalidade virtual” e que, por isso, precisa de políticas públicas que garantam seus direitos 🙄.',
   NASCITURO_QUICK_REPLY_SAIBA_MAIS_3: 'Na vida real, o que eles fazem é ignorar que uma mulher morre a cada dois dias em consequência de abortos clandestinos no Brasil e fogem da responsa de cuidar da vida dessas mulheres! Não bastasse não evoluírem nos debates sobre direitos sexuais e direitos reprodutivos, ainda ficam querendo tirar direitos já garantidos pela lei. É retrocesso que chama, né? Vamo barrar esse PL comigo? 💪',
-  NASCITURO_QUICK_REPLY_READ: 'Prezados(as) deputados e deputadas, a criminalização do aborto mata uma brasileira a cada 2 dias. Levando em consideração que o direito à vida protegido pelo artigo 5º da Constituição refere-se exclusivamente a pessoas NASCIDAS, deve-se prezar legislações que garantam a vida das mulheres. Vocês são responsáveis pelo parecer ao PL 1761/2016, que cria o Estatuto do Nascituro. Caso esse projeto seja aprovado, mulheres que engravidarem em decorrência de estupro, que correm risco de vida e que gestam fetos anencéfalos (casos previsto em lei) não poderão mais interromper a gravidez. Exigimos que rejeitem o PL 1761/2016.'
+  NASCITURO_QUICK_REPLY_READ: 'Prezados(as) deputados e deputadas, a criminalização do aborto mata uma brasileira a cada 2 dias. Levando em consideração que o direito à vida protegido pelo artigo 5º da Constituição refere-se exclusivamente a pessoas NASCIDAS, deve-se prezar legislações que garantam a vida das mulheres. Vocês são responsáveis pelo parecer ao PL 1761/2016, que cria o Estatuto do Nascituro. Caso esse projeto seja aprovado, mulheres que engravidarem em decorrência de estupro, que correm risco de vida e que gestam fetos anencéfalos (casos previsto em lei) não poderão mais interromper a gravidez. Exigimos que rejeitem o PL 1761/2016.',
+
+  COTAS_A_1: 'Juro que queria tá diboas apoiando um projeto legal, mas o Brasil não deixa.  🙄 Agora os senadores vão votar um projeto de lei pra acabar com a reserva de 30% das vagas e dos recursos para candidaturas de mulheres. 😱😱😱',
+  COTAS_A_2: 'Se já temos poucas representantes dentro das estruturas de poder político, imagina sem a lei que obriga os partidos a reforçarem essas candidaturas! Lugar de mulher é na política! 💪💪💪 Podemos impedir que eles aprovem esse absurdo, mas precisamos agir AGORA!  A votação é quarta, bora juntes? 👊',
+  COTAS_B_1: 'O projeto de lei (PL 1256/2019) de autoria do senador Angelo Coronel (PSD-BA) vai ser votado na Comissão de Constituição e Justiça do Senado nos próximos dias, em "caráter terminativo". Traduzindo o politiquês: se aprovado, o PL vai direto pra Câmara dos Deputados, sem nem precisar passar pelos outros senadores, com grandes chances de isso aí ser aprovado por lá também, taoquei? #socorro 🆘',
+  COTAS_B_2: 'Só pra se ter uma ideia: o Brasil tá hoje em 134º no ranking de representatividade feminina no Congresso, atrás até da Arábia Saudita. E olha que as manas de lá só puderam votar em 2015!  🤯 Eu não postava essa foto no insta, Brasil, tá feio demais. E se for aprovado na CCJ, vai ficar ainda pior. PRECISAMOS barrar esse PL! Partiu?',
+  COTAS_C_1: 'Você deve estar ligada no escândalo que rolou agora no início do ano sobre desvio de recursos dos 30% do fundo partidário que, por lei, deveriam ser pra candidaturas femininas para - tcharã - candidatos homens! Estavam usando as mulheres como laranjas, vejam só. 😤😤😤',
+  COTAS_C_2: 'Em vez de aumentar a fiscalização e combater a corrupção, ficou mais fácil colocar a culpa do laranjal na lei que garante que as mulheres tenham seu espaço na política. Eu fico revoltada, viu? O que eles não querem é ter que levantar a bunda pras mulheres sentarem. Mas eles não vão tomar nosso lugar. Vem comigo pra gente enviar uma mensagem bem direta pra eles: vai ter mulher no poder, sim!',
+  COTAS_D: 'Eu AMO! O relator e a presidenta da CCJ já mostraram que são contra o projeto, mas eles são só 2 dos 27 senadores que compõem a Comissão. Precisamos fazer pressão direta entupindo a caixa de email dos outros senadores para conseguir derrubar o projeto. Preparei uma mensagem padrão, ela já está prontinha. Vou usar meus dotes de bot 🤖 pra enviá-la em seu nome pra cada um deles. Temos pouco tempo pra pressioná-los e garantir que não aprovem esse retrocesso. A HORA É AGORA:',
+  COTAS_E: 'Prezados(as) senadores, a revogação da garantia de 30% das candidaturas dos partidos e dos recursos de campanha destinados às mulheres é um enorme retrocesso de direitos. Foi justamente em 2018 que começamos a avançar na quantidade de mulheres dentro do Congresso com a aprovação do repasse de recursos do fundo partidário para candidaturas femininas. O escândalo envolvendo candidatas laranjas deve ser investigado junto aos partidos, e não com a extinção das cotas. Vocês são responsáveis pelo parecer ao PL 1256/2019 que extingue essas garantias. Sua aprovação prejudicará ainda mais a representatividade feminina no legislativo. Exigimos que rejeitem o PL 1256/2019.',
+
 }

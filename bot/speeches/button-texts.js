@@ -163,5 +163,12 @@ export default {
   NASCITURO_QUICK_REPLY_NOW: 'Enviar agora',
   NASCITURO_QUICK_REPLY_READ: 'Ler mensagem',
   NASCITURO_QUICK_REPLY_GO: 'VAMO!',
-  NASCITURO_QUICK_REPLY_NOW_2: 'Enviar mensagem'
+  NASCITURO_QUICK_REPLY_NOW_2: 'Enviar mensagem',
+
+  COTAS_SURE: 'COM CERTEZA!',
+  COTAS_KNOW_MORE: 'Saber Mais',
+  COTAS_GOGO: 'VAMO!',
+  COTAS_WHAT_THEY_SAY: 'O que eles dizem?',
+  COTAS_NOW: 'Enviar já',
+  COTAS_READ: 'Ler Mensagem'
 }
