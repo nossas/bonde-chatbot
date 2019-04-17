@@ -9,6 +9,9 @@ export default (bot, speech, botData) => (payload, reply) => {
     case 'cotas_action':
       message = speech.messages.V2_QUICK_REPLY_N_3
       break
+    case 'cotas_deeper_action':
+      message = speech.messages.V2_QUICK_REPLY_N_2
+      break
     case 'nascituro_rj_intro':
       message = speech.messages.NASCITURO_MESSAGE_A
       break
