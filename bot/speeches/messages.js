@@ -506,6 +506,8 @@ export default {
   //
   ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
 
+  ABOUT_PL_1256: 'Menina, o PL 1256/2019 é mais uma tentativa deles de tirar a gente do rolê! Esse projeto é do senador Angelo Coronel (PSD/BA) e, basicamente, acaba com a reserva de vagas e recursos do fundo partidário pras mulheres que saem candidatas. Já somos poucas nos espaços de poder, né? Agora imagina eles decidindo sozinhos sobre temas como aborto e maternidade, sem a gente tá lá pra colocar nossa voz! 🤮 Fico até enjoada - e olhe que eu sou robô! Mas eu sou antenadíssima e já tô com campanha no ar pra barrar esse absurdo. Se quiser saber mais, manda #NemUmPorCentoAMenos pra mim e vem somar nessa pressão! 💪',
+  
   ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
 
   ABOUT_DISCURSO_DE_ODIO: 'A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. Viu algum discurso de ódio nas eleições? Me responda com #tretaquique eu te digo como denunciar!',
@@ -520,6 +522,8 @@ export default {
 
   WHATS_VAGINISMUS: 'Mana, o assunto é sério, então vamo lá: o vaginismo é uma disfunção que causa contrações involuntárias dos músculos da vagina, o que pode gerar muita dor e atrapalhar bastante na hora do sexo 😨 . Os especialistas dizem que 3% a 5% das mulheres convivem com esse problema. Mas como tudo que envolve nosso corpo, esse assunto ainda é um tabu e, por isso, muitas nem sabem do que se trata! Se você ou alguém que você conhece sofre desse problema, procure uma ginecologista de confiança e não esqueça: tamo juntas! 👩‍❤️‍💋‍👩',
 
+  EXPLAIN_ABOUT_PEC_29: 'Mana, obrigada pela força 💪 É assim, fazendo muito barulho, que a gente vai conseguir barrar esse e outros retrocessos! Pode deixar que eu não sou tímida: se eu precisar da sua ajuda, dou um grito e te chamo pelo messenger! Eu fico aqui no chat 24h, #bemgaroutah e antenada, monitorando as principais pautas que envolvem os nossos direitos. Vamos nos conhecer melhor? Digita "menu" e eu te mostro o que eu ando acompanhando 🧐🔍',
+  
   VIDEO_THINK_OLGA: 'A Think Olga fez uma série de vídeos incríveis sobre direitos que todas as mulhers têm, mas muitas vezes não conhecem. Dá só uma olhada no primeiro: http://bit.ly/thinkolga_1',
 
   ABOUT_MARIELLE: 'Marielle Franco foi a quinta vereadora mais votada no Rio de Janeiro em 2016. Na noite do dia 14 de março de 2018, ela foi assassinada a tiros, junto de seu motorista, Anderson Gomes. Marielle fez um mandato comprometido com os direitos das mulheres, agora precisamos mostrar que sua voz não será interrompida. Pressionamos vereadores e vereadoras a aprovarem 7 dos seus projetos de lei, e 5 já foram aprovados em última votação. Agora só falta serem sancionados pelo prefeito. Te mantenho atualizada, mana!',
