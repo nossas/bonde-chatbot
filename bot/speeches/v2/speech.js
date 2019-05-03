@@ -529,15 +529,15 @@ export default botData => ({
     //Share campaign
     [V2_QUICK_REPLY_H_10]: [
       genericTemplate({
-        title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
-        subtitle: 'Pressione por mais mulheres no poder!',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        title: 'Uma mulher que foi estuprada não pode ser obrigada permanecer grávida! ',
+        subtitle: 'Pressione contra a PEC 29! ',
+        imageURL: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
-            subtitle: 'Pressione por mais mulheres no poder!',
-            imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=cotas_intro'
+            title: 'Uma mulher que foi estuprada não pode ser obrigada permanecer grávida! ',
+            subtitle: 'Pressione contra a PEC 29! ',
+            imageURL: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
+            url: 'https://m.me/beta.feminista?ref=pec_29'
           }),
         ],
       }),
