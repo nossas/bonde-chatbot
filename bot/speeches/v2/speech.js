@@ -165,6 +165,12 @@ const V2_QUICK_REPLY_N_3 = 'V2_QUICK_REPLY_N_3'
 const V2_QUICK_REPLY_N_4 = 'V2_QUICK_REPLY_N_4'
 const V2_QUICK_REPLY_N_5 = 'V2_QUICK_REPLY_N_5'
 
+const V2_QUICK_REPLY_O_1 = 'V2_QUICK_REPLY_N_1'
+const V2_QUICK_REPLY_O_2 = 'V2_QUICK_REPLY_N_2'
+const V2_QUICK_REPLY_O_3 = 'V2_QUICK_REPLY_N_3'
+const V2_QUICK_REPLY_O_4 = 'V2_QUICK_REPLY_N_4'
+const V2_QUICK_REPLY_O_5 = 'V2_QUICK_REPLY_N_5'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -220,6 +226,13 @@ export default botData => ({
     [V2_QUICK_REPLY_N_3]: V2_QUICK_REPLY_N_3,
     [V2_QUICK_REPLY_N_4]: V2_QUICK_REPLY_N_4,
     [V2_QUICK_REPLY_N_5]: V2_QUICK_REPLY_N_5
+
+    // ACTIONS COTAS
+    [V2_QUICK_REPLY_O_1]: V2_QUICK_REPLY_O_1,
+    [V2_QUICK_REPLY_O_2]: V2_QUICK_REPLY_O_2,
+    [V2_QUICK_REPLY_O_3]: V2_QUICK_REPLY_O_3,
+    [V2_QUICK_REPLY_O_4]: V2_QUICK_REPLY_O_4,
+    [V2_QUICK_REPLY_O_5]: V2_QUICK_REPLY_O_5
   },
   messages: {
 
@@ -228,9 +241,9 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Nem 1% a menos",
+          title: "Parem a PEC 29!",
           type: "postback",
-          payload: V2_QUICK_REPLY_N_1
+          payload: V2_QUICK_REPLY_O_1
         },
         {
           title: "Outras Ações",
@@ -736,6 +749,18 @@ export default botData => ({
         quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.COTAS_NOW)
       ]
     },
+
+    //
+    // CAMPANHA COTAS
+    //
+    [V2_QUICK_REPLY_O_1]: [
+      botSpeeches.messages.PEC29_A_1,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC29_A_2,
+        quickReply(V2_QUICK_REPLY_O_2, botSpeeches.buttonTexts.COTAS_SURE),
+        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.COTAS_KNOW_MORE)
+      )
+    ],
 
     //
     // Radar da Beta
