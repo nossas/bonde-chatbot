@@ -78,5 +78,12 @@ export default {
   TITLE_COTAS: 'Nem 1% a menos',
   SUBTITLE_COTAS: 'Pressionar senadores/as',
   IMAGE_COTAS: 'https://s3.amazonaws.com/chatbox-beta/cotas/sharefb-02.jpg',
-  BUTTON_COTAS: 'Clique aqui!!'
+  BUTTON_COTAS: 'Clique aqui!!',
+
+
+  TITLE_PEC_29: 'Parem a PEC 29!',
+  SUBTITLE_PEC_29: 'Pressionar senadores/as',
+  IMAGE_PEC_29: 'https://s3.amazonaws.com/chatbox-beta/pec29/pec29.jpg',
+  BUTTON_PEC_29: 'Clique aqui!!',
+
 }
