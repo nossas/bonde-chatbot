@@ -160,7 +160,7 @@ export default {
   //
   NASCITURO_QUICK_REPLY_BORA: 'BORA!',
   NASCITURO_QUICK_REPLY_SAIBA_MAIS: 'Mais sobre o projeto',
-  NASCITURO_QUICK_REPLY_NOW: 'Enviar agora',
+  NASCITURO_QUICK_REPLY_NOW: 'Enviar agora!',
   NASCITURO_QUICK_REPLY_READ: 'Ler mensagem',
   NASCITURO_QUICK_REPLY_GO: 'VAMO!',
   NASCITURO_QUICK_REPLY_NOW_2: 'Enviar mensagem',
@@ -170,5 +170,11 @@ export default {
   COTAS_GOGO: 'VAMO!',
   COTAS_WHAT_THEY_SAY: 'O que eles dizem?',
   COTAS_NOW: 'Enviar já',
-  COTAS_READ: 'Ler Mensagem'
+  COTAS_READ: 'Ler Mensagem',
+
+  PEC_29_ACT_NOW: 'AGIR AGORA!',
+  PEC_29_KNOW_MORE: 'Saber mais',
+  PEC_29_GO: 'VAMOS!',
+  PEC_29_WANT: 'Quero Enviar!'
+
 }

@@ -754,13 +754,33 @@ export default botData => ({
     // CAMPANHA COTAS
     //
     [V2_QUICK_REPLY_O_1]: [
-      botSpeeches.messages.PEC29_A_1,
+      botSpeeches.messages.PEC_29_A_1,
       messageWithQuickReply(
-        botSpeeches.messages.PEC29_A_2,
-        quickReply(V2_QUICK_REPLY_O_2, botSpeeches.buttonTexts.COTAS_SURE),
-        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.COTAS_KNOW_MORE)
+        botSpeeches.messages.PEC_29_A_2,
+        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_ACT_NOW),
+        quickReply(V2_QUICK_REPLY_O_2, botSpeeches.buttonTexts.PEC_29_KNOW_MORE)
       )
     ],
+    [V2_QUICK_REPLY_O_2]: [
+      botSpeeches.messages.PEC_29_B_1,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_29_B_2,
+        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_GO),
+      )
+    ],
+    [V2_QUICK_REPLY_O_3]: {
+      text: botSpeeches.messages.PEC_29_C,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
+        quickReply(V2_QUICK_REPLY_O_4, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ),
+      ]
+    },
+    [V2_QUICK_REPLY_O_4]: {
+      text: botSpeeches.messages.PEC_29_D,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.PEC_29_WANT)
+      ]
+    },
 
     //
     // Radar da Beta
