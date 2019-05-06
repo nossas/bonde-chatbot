@@ -165,6 +165,12 @@ const V2_QUICK_REPLY_N_3 = 'V2_QUICK_REPLY_N_3'
 const V2_QUICK_REPLY_N_4 = 'V2_QUICK_REPLY_N_4'
 const V2_QUICK_REPLY_N_5 = 'V2_QUICK_REPLY_N_5'
 
+const V2_QUICK_REPLY_O_1 = 'V2_QUICK_REPLY_O_1'
+const V2_QUICK_REPLY_O_2 = 'V2_QUICK_REPLY_O_2'
+const V2_QUICK_REPLY_O_3 = 'V2_QUICK_REPLY_O_3'
+const V2_QUICK_REPLY_O_4 = 'V2_QUICK_REPLY_O_4'
+const V2_QUICK_REPLY_O_5 = 'V2_QUICK_REPLY_O_5'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -219,7 +225,14 @@ export default botData => ({
     [V2_QUICK_REPLY_N_2]: V2_QUICK_REPLY_N_2,
     [V2_QUICK_REPLY_N_3]: V2_QUICK_REPLY_N_3,
     [V2_QUICK_REPLY_N_4]: V2_QUICK_REPLY_N_4,
-    [V2_QUICK_REPLY_N_5]: V2_QUICK_REPLY_N_5
+    [V2_QUICK_REPLY_N_5]: V2_QUICK_REPLY_N_5,
+
+    // ACTIONS COTAS
+    [V2_QUICK_REPLY_O_1]: V2_QUICK_REPLY_O_1,
+    [V2_QUICK_REPLY_O_2]: V2_QUICK_REPLY_O_2,
+    [V2_QUICK_REPLY_O_3]: V2_QUICK_REPLY_O_3,
+    [V2_QUICK_REPLY_O_4]: V2_QUICK_REPLY_O_4,
+    [V2_QUICK_REPLY_O_5]: V2_QUICK_REPLY_O_5
   },
   messages: {
 
@@ -228,9 +241,9 @@ export default botData => ({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Nem 1% a menos",
+          title: "Parem a PEC 29!",
           type: "postback",
-          payload: V2_QUICK_REPLY_N_1
+          payload: V2_QUICK_REPLY_O_1
         },
         {
           title: "Outras Ações",
@@ -516,15 +529,15 @@ export default botData => ({
     //Share campaign
     [V2_QUICK_REPLY_H_10]: [
       genericTemplate({
-        title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
-        subtitle: 'Pressione por mais mulheres no poder!',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
+        title: 'Uma mulher que foi estuprada não pode ser obrigada permanecer grávida! ',
+        subtitle: 'Pressione contra a PEC 29! ',
+        imageURL: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
         buttons: [
           buttonTemplate.shareCampaign({
-            title: 'Não aceitamos nem 1% a menos. Vamos garantir a cota de 30% de candidaturas feministas ',
-            subtitle: 'Pressione por mais mulheres no poder!',
-            imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-            url: 'https://m.me/beta.feminista?ref=cotas_intro'
+            title: 'Uma mulher que foi estuprada não pode ser obrigada permanecer grávida! ',
+            subtitle: 'Pressione contra a PEC 29! ',
+            imageURL: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
+            url: 'https://m.me/beta.feminista?ref=pec_29'
           }),
         ],
       }),
@@ -738,6 +751,38 @@ export default botData => ({
     },
 
     //
+    // CAMPANHA COTAS
+    //
+    [V2_QUICK_REPLY_O_1]: [
+      botSpeeches.messages.PEC_29_A_1,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_29_A_2,
+        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_ACT_NOW),
+        quickReply(V2_QUICK_REPLY_O_2, botSpeeches.buttonTexts.PEC_29_KNOW_MORE)
+      )
+    ],
+    [V2_QUICK_REPLY_O_2]: [
+      botSpeeches.messages.PEC_29_B_1,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_29_B_2,
+        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_GO),
+      )
+    ],
+    [V2_QUICK_REPLY_O_3]: {
+      text: botSpeeches.messages.PEC_29_C,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
+        quickReply(V2_QUICK_REPLY_O_4, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ),
+      ]
+    },
+    [V2_QUICK_REPLY_O_4]: {
+      text: botSpeeches.messages.PEC_29_D,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.PEC_29_WANT)
+      ]
+    },
+
+    //
     // Radar da Beta
     //
     [V2_QUICK_REPLY_RADAR]: {
@@ -864,13 +909,13 @@ export default botData => ({
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.TITLE_COTAS,
-          botSpeeches.carouselTexts.SUBTITLE_COTAS,
-          botSpeeches.carouselTexts.IMAGE_COTAS,
+          botSpeeches.carouselTexts.TITLE_PEC_29,
+          botSpeeches.carouselTexts.SUBTITLE_PEC_29,
+          botSpeeches.carouselTexts.IMAGE_PEC_29,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_COTAS,
-              payload: V2_QUICK_REPLY_N_1
+              title: botSpeeches.carouselTexts.BUTTON_PEC_29,
+              payload: V2_QUICK_REPLY_O_1
             })
           ]
         ),
