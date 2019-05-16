@@ -4,7 +4,7 @@
   "description": "Enable activist to pressure through facebook",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r 'babel-register' ./index.js",
+    "dev": "NODE_ENV=development NEW_RELIC_ENABLED=false nodemon -r 'babel-register' -r dotenv/config ./index.js",
     "prestart": "NODE_ENV=production babel ./index.js --out-file ./index.builded.js",
     "start": "NODE_ENV=production node -r 'babel-register' ./index.builded.js",
     "prestart:worker": "NODE_ENV=production babel ./workers/process-bot-mass-message-queue.js --out-file ./workers/process-bot-mass-message-queue.builded.js",
@@ -35,11 +35,13 @@
     "dateformat": "^2.0.0",
     "dotenv": "^4.0.0",
     "ejs": "^2.6.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.3",
     "graphql-tag": "^2.9.2",
     "isomorphic-fetch": "^2.2.1",
-    "messenger-bot": "^2.5.0",
+    "messenger-bot": "nossas/messenger-bot#master",
     "morgan": "^1.9.0",
     "node-wit": "^4.3.0",
     "nodemon": "^1.18.3",
@@ -48,6 +50,10 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "standard-version": "^4.4.0"
   },
   "ava": {

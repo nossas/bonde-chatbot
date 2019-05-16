@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 //
 // @param Object({ extraFields: Array })
 //
-export default ({ extraFields = [] } = { extraFields: [] }) =>  gql`
+export default ({ extraFields = [] } = { extraFields: [] }) => gql`
 query fetchFacebookBotCampaignActivistsByCampaignId($campaignId: Int!) {
   query: getFacebookBotCampaignActivistsByCampaignId(campaignId: $campaignId) {
     totalCount
