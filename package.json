@@ -10,7 +10,7 @@
     "prestart:worker": "NODE_ENV=production babel ./workers/process-bot-mass-message-queue.js --out-file ./workers/process-bot-mass-message-queue.builded.js",
     "start:worker": "NODE_ENV=production node -r 'babel-register' ./workers/process-bot-mass-message-queue.builded.js",
     "lint": "standard index.js ./bot/*.js ./graphql/*.js ./scripts/*.js",
-    "test": "JWT_TOKEN=create_new_token ava",
+    "test": "ava",
     "release": "./node_modules/.bin/standard-version"
   },
   "repository": {
@@ -20,8 +20,9 @@
   "author": "Lucas Pirola<pirola@nossas.org>",
   "license": "GPL-3.0",
   "dependencies": {
+    "@babel/preset-env": "^7.4.4",
     "apollo-client": "^1.7.0",
-    "ava": "^0.25.0",
+    "ava": "^1.4.1",
     "axios": "^0.16.2",
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -57,9 +58,21 @@
     "standard-version": "^4.4.0"
   },
   "ava": {
-    "require": [
-      "babel-register"
+    "files": [
+      "bot/**/*.spec.js"
     ],
-    "babel": "inherit"
+    "require": [
+      "babel-register",
+      "./bot/setupTests.js"
+    ],
+    "babel": {
+      "testOptions": {
+        "babelrc": false,
+        "configFile": false,
+        "presets": [
+          "@babel/preset-env"
+        ]
+      }
+    }
   }
 }
