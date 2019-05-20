@@ -5,7 +5,6 @@ import { client as GraphqlAPI } from '../graphql'
 import * as botConfig from '../bot/config'
 import * as botEvents from '../bot/events'
 import { writeSpeech } from './speech'
-import { message, postback } from './events'
 
 
 export const fetchBots = () => {
