@@ -54,7 +54,6 @@ export default {
 
   ACT_NOW: 'Agir agora!',
 
-
   //
   // Hashtag
   //
@@ -126,11 +125,10 @@ export default {
   STEP4: 'Passo 4',
   SEND_MORE: 'Manda mais!',
   ONE_MORE: 'Mais uma!',
-  ONE_MORE: 'Mais uma!',
   I_WANT_MORE: 'Quero mais!',
   NEXT_ROUND: 'Próxima rodada!',
   JUST_ONE_MORE: 'Só mais um!',
-
+  KEEP_ME_UPDATED: 'Mantenha-me informada!',
 
   //
   // Mapa do acolhimento
@@ -141,6 +139,42 @@ export default {
   SHARE_FRIENDS: 'Compartilhar com amigues',
   I_WANT_TO_GO: 'Quero ir!',
   OTHER_ACTIONS: 'Outras ações',
-  
-  
+
+  //
+  // Discurso de ódio
+  //
+  COMPLAINT: 'Denunciar!',
+  MORE_ABOUT_HATE_SPEECH: 'Sobre discurso de ódio',
+  I_WANT_COMPLAINT: 'Quero denunciar!',
+  I_WANT_COMPLAINT_STEP_2: 'Passo 2!',
+  I_WANT_COMPLAINT_STEP_3: 'Passo 3!',
+
+  //
+  // STF - All Out
+  //
+  REALLY_NECESSARY: 'Mas é necessário?',
+  READ_PETITION: 'Ver texto da petição',
+
+  //
+  // CAMPANHA NASCITURO RJ
+  //
+  NASCITURO_QUICK_REPLY_BORA: 'BORA!',
+  NASCITURO_QUICK_REPLY_SAIBA_MAIS: 'Mais sobre o projeto',
+  NASCITURO_QUICK_REPLY_NOW: 'Enviar agora!',
+  NASCITURO_QUICK_REPLY_READ: 'Ler mensagem',
+  NASCITURO_QUICK_REPLY_GO: 'VAMO!',
+  NASCITURO_QUICK_REPLY_NOW_2: 'Enviar mensagem',
+
+  COTAS_SURE: 'COM CERTEZA!',
+  COTAS_KNOW_MORE: 'Saber Mais',
+  COTAS_GOGO: 'VAMO!',
+  COTAS_WHAT_THEY_SAY: 'O que eles dizem?',
+  COTAS_NOW: 'Enviar já',
+  COTAS_READ: 'Ler Mensagem',
+
+  PEC_29_ACT_NOW: 'AGIR AGORA!',
+  PEC_29_KNOW_MORE: 'Saber mais',
+  PEC_29_GO: 'VAMOS!',
+  PEC_29_WANT: 'Quero Enviar!'
+
 }

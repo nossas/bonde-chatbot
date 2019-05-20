@@ -46,7 +46,7 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
           if (index === message.length - 1) {
             bot.sendSenderAction(payload.sender.id, 'typing_off')
           }
-          
+
           setTimeout(() => replySequentially(index + 1), 5000)
         })
       }
@@ -56,6 +56,5 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
     // Start replying with index 0 of message array.
     //
     replySequentially(0)
-  }
-  else saveAndReply(normalize(message))
+  } else saveAndReply(normalize(message))
 }

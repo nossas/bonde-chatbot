@@ -18,6 +18,7 @@ export default ({ speech, reply }) => ({ entities }) => {
     //
     'education_hashtag': speech.actions.V2_QUICK_REPLY_EDUCATION,
     'adpf_hashtag': speech.actions.V2_QUICK_REPLY_ADPF442,
+    'tretaaqui_hashtag': speech.actions.V2_QUICK_REPLY_DISCURSO_ODIO,
   }
   const speechEntity = speechRepliesMap[entity]
   const speechReply = speech.messages[speechEntity]
