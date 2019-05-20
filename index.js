@@ -1,4 +1,5 @@
 import 'isomorphic-fetch' // window.fetch pollyfill
+import 'babel-polyfill'
 import 'colors'
 
 import Http from 'http'
@@ -8,8 +9,8 @@ import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
 import Queue from 'bull'
-import { BotFactory } from './bot'
-import * as botMiddlewares from './bot/middlewares'
+import BotFactory from './beta/factory'
+import * as botMiddlewares from './beta/middlewares'
 import * as botSkills from './bot/skills'
 import * as routes from './routes'
 import * as routesMiddlewares from './routes/middlewares'
@@ -62,7 +63,8 @@ const fabricated = new BotFactory(speech)
       //
       // Set up pressure stuff
       //
-      botSkills.pressure.fetchWidgets({ botData })
+      // TODO: pressure action on message
+      /*botSkills.pressure.fetchWidgets({ botData })*/
 
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
