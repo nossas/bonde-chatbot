@@ -11,7 +11,7 @@ import cors from 'cors'
 import Queue from 'bull'
 import BotFactory from './beta/factory'
 import * as botMiddlewares from './beta/middlewares'
-import * as botSkills from './bot/skills'
+/* import * as botSkills from './bot/skills' */
 import * as routes from './routes'
 import * as routesMiddlewares from './routes/middlewares'
 
@@ -64,7 +64,7 @@ const fabricated = new BotFactory(speech)
       // Set up pressure stuff
       //
       // TODO: pressure action on message
-      /*botSkills.pressure.fetchWidgets({ botData })*/
+      /* botSkills.pressure.fetchWidgets({ botData }) */
 
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })

@@ -14,8 +14,12 @@ export default ({ botData, payload, interaction }) => {
     fb_context_sender_id: payload.recipient.id,
     interaction
   }
-  return graphqlClient.mutate({
+  return new Promise((resolve) => {
+    console.log('mock interactions.save')
+    return resolve()
+  })
+  /*return graphqlClient.mutate({
     mutation: graphqlMutations.createBotInteraction,
     variables: { interaction: JSON.stringify(interactionEntity) }
-  })
+  })*/
 }
