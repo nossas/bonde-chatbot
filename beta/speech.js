@@ -12,17 +12,24 @@ const hasTalks = (children) => {
   return false
 }
 
-const messageWithGif = (node, edges) => ({
-  attachment: {
-    type: 'image',
-    payload: { url: node.text }
-  },
-  quick_replies: node.children.edges.map((edge) => ({
-    content_type: 'text',
-    payload: edge.node.action,
-    title: edge.node.text
-  }))
-})
+const messageWithGif = (node, edges) => {
+  const message = {
+    attachment: {
+      type: 'image',
+      payload: { url: node.text }
+    }
+  }
+  
+  if (edges && edges.length > 0) {
+    message.quick_replies = node.children.edges.map((edge) => ({
+      content_type: 'text',
+      payload: edge.node.action,
+      title: edge.node.text
+    }))
+  }
+
+  return message
+}
 
 const messageWithQuickReply = (node, edges) => ({
   text: node.text,
@@ -47,6 +54,8 @@ export const writeSpeech = (messages) => {
             return message.node.kind === 'gif'
               ? messageWithGif(message.node, message.node.children.edges)
               : messageWithQuickReply(message.node, message.node.children.edges)
+          } else if (message.node.kind === 'gif') {
+            return messageWithGif(message.node)
           } else {
             return message.node.text
           }
