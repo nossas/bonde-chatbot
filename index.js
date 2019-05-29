@@ -76,6 +76,7 @@ app.use('/login', routes.login)
 app.use('/mass-message', routes.massMessage)
 app.use('/pressure', routes.pressure)
 app.use('/share', routes.share)
+app.use('/health', routes.health)
 
 const queue = new Queue('bot-mass-message', envs.redisURL)
 app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(queue))
