@@ -62,7 +62,7 @@ export default class BotFactory {
         bot.on('message', botEvents.message(...eventArgs))
         bot.on('referral', botEvents.referral(...eventArgs))
 
-        return { id, bot, endpoint, botData }        
+        return { id, bot, endpoint, botData }
       })
     })
     .catch(err => console.error(`${JSON.stringify(err)}`.red))
