@@ -20,9 +20,6 @@ router.get('/', (req, res) => {
         res.status(500).send('Token expirado')
     }
     res.end(JSON.stringify({ status: 'ok' }))
-
-    
-    
 })
 
 export default router
