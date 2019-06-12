@@ -49,7 +49,7 @@ export default class BotFactory {
           token: messengerPageAccessToken,
           verify: messengerValidationToken
         })
-        
+
         const bot = new Bot(config)
         const speech = this.speech(botData)
         const eventArgs = [bot, speech, botData]
