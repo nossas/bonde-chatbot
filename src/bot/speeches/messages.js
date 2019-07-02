@@ -155,8 +155,8 @@ export default {
 
   BETA_DID: 'Muito barulho! Convoquei todo mundo que já falou comigo pra enviar emails pros deputados da Comissão Especial. Foram 35.000 mensagens pra cada político! E eles não seguraram a pressão: adiaram as votações 7 vezes. As definições de arraso foram atualizadas! 💪💪💪 Mas essa foi só a 1a temporada.',
 
-  PEC: 'As PECs estão numa situação esquisita: em momentos de Intervenção Federal, como está acontecendo agora no RJ, alterações na Constituição (PECs) ficam suspensas. ',
-  PEC_1: 'Mas o Rodrigo Maia (DEM), presidente da Câmara dos Deputados, já avisou que elas podem avançar dentro das comissões, só não podem ser votadas em plenário - capítulo final da tramitação de uma proposta. Ou seja, continuo atenta!  👀',
+  PEC: 'Em 2018, com a Intervenção Federal no RJ, alterações na Constituição (PECs) ficaram suspensas. Mas 2019 mal apontou no horizonte e os deputados trataram de desengavetar esse show de horrores. ',
+  PEC_1: 'Agora, a tramitação da proposta depende da criação de uma Comissão Especial para proferir parecer à PEC 181/2015. O último status é de abril desse ano 🙄, ou seja, continuo atenta! 🚨',
 
   PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
   PEC_HISTORY_1: '➡️ www.paremocavalodetroia.org/',
