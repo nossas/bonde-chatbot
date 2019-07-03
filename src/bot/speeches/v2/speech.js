@@ -772,6 +772,109 @@ export default botData => ({
         )
       )
     ],
+
+    // Radar da BETA - ADPF 442
+    [V2_QUICK_REPLY_WHATS_ADPF442]: [
+      botSpeeches.messages.WHATS_ADPF442,
+      botSpeeches.messages.WHATS_ADPF442_1,
+      messageWithQuickReply(
+        botSpeeches.messages.WHATS_ADPF442_2,
+        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_A, botSpeeches.buttonTexts.HOWS_NOW),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
+    [V2_QUICK_REPLY_WHATS_ADPF442_A]: [
+      botSpeeches.messages.WHATS_ADPF442_A,
+      messageWithQuickReply(
+        botSpeeches.messages.WHATS_ADPF442_A1,
+        quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.I_WANT_A),
+      )
+    ],
+    [V2_QUICK_REPLY_WHATS_ADPF442_C]: {
+      text: botSpeeches.messages.WHATS_ADPF442_C,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR)
+      ],
+    },
+    //
+    // ADPF 442 - Mais sobre aborto
+    //
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION]: {
+      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A, botSpeeches.buttonTexts.I_WANT_B)
+      ],
+    },
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A]: [
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A,
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A1,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A2,
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B, botSpeeches.buttonTexts.STEP2),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B]: [
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B1,
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D, botSpeeches.buttonTexts.STEP3),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D]: [
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D,
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D1,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D2,
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E, botSpeeches.buttonTexts.STEP4),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E]: [
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E1,
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F, botSpeeches.buttonTexts.SEND_MORE),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F]: {
+      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_F,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G, botSpeeches.buttonTexts.ONE_MORE),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      ],
+    },
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G]: {
+      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_G,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H, botSpeeches.buttonTexts.I_WANT_MORE),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      ],
+    },
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H]: {
+      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_H,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I, botSpeeches.buttonTexts.NEXT_ROUND),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      ],
+    },
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I]: {
+      text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_I,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J, botSpeeches.buttonTexts.JUST_ONE_MORE),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      ],
+    },
+    [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J]: [
+      botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J1,
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR),
+        quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
+      )
+    ],
     //
     // Radar da Beta - PEC 181
     //
