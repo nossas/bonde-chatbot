@@ -21,7 +21,7 @@ pipeline:
       status: success
       branch: [hotfix/*, release/*, feature/*, develop]
 
-  staging-webserver-deploy:
+  staging-deploy-webserver:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: webservers/beta
@@ -34,7 +34,7 @@ pipeline:
       status: success
       branch: [hotfix/*, release/*, feature/*, develop]
 
-  staging-worker-deploy:
+  staging-deploy-worker:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: workers/bot-worker
@@ -69,29 +69,10 @@ pipeline:
       status: success
       event: tag
 
-  production-webservers-deploy:
+  production-deploy-webserver:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
     service: webservers/beta
-<<<<<<< HEAD
-=======
-    docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
-    timeout: 360
-    confirm: true
-    secrets: [ rancher_access_key, rancher_secret_key ]
-    when:
-      status: success
-      event: tag
-
-<<<<<<< HEAD
-  production-deploy-worker:
-=======
-  production-webservers-deploy:
->>>>>>> resolving merge conflicts
-    image: peloton/drone-rancher
-    url: http://cluster.bonde.org
-    service: workers/bot-worker
->>>>>>> chore(devops): Update services strategy to deploy
     docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
     timeout: 360
     confirm: true
