@@ -10,7 +10,7 @@ export default class BotFactory {
   //
   // @param speech {Object} Speech object that contains the messages and actions
   //
-  constructor (speech) {
+  constructor (speech: any) {
     this.speech = speech
   }
 

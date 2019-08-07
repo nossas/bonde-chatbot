@@ -1,10 +1,10 @@
 import 'colors'
 
 import Queue from 'bull'
-import { BotFactory } from '../bot'
-import * as botUtils from '../bot/speeches/utils'
-import { client as graphqlClient } from '../graphql'
-import * as graphqlMutations from '../graphql/mutations'
+import BotFactory from 'bot/factory'
+import * as botUtils from 'bot/speeches/utils'
+import { client as graphqlClient } from 'graphql'
+import * as graphqlMutations from 'graphql/mutations'
 
 require('dotenv').config()
 const speech = require(`../bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
@@ -25,9 +25,9 @@ queue.on('error', (error) => console.error(`event:error ${JSON.stringify(error)}
 queue.on('completed', (job, result) => {
   console.info(`bull:bot-mass-message:${job.id} ~> status [completed]`.green)
 
-  const { facebookBotCampaignActivistId } = result.data
-  const received = true
-  const log = result.info
+  // const { facebookBotCampaignActivistId } = result.data
+  // const received = true
+  // const log = result.info
   // saveLog({ facebookBotCampaignActivistId, received, log })
   job.remove()
 })
@@ -46,15 +46,13 @@ queue.on('failed', (job, err) => {
 // Process Queue
 //
 console.info('running worker: process-bot-mass-message-queue'.green)
-const fabricated = new BotFactory(speech)
+new BotFactory(speech)
   .fabricate()
   .then(bots => {
     bots.forEach(({ id, bot, endpoint, botData }) => {
       queue.process(({ data }, done) => {
         try {
           const {
-            facebookBotCampaignActivistId,
-            facebookBotActivistId,
             fbContextRecipientId,
             text,
             quickReplyRedirect,

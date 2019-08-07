@@ -1,5 +1,5 @@
-import { quickReply, genericTemplate, carouselTemplate, buttonTemplate, multiMessages, messageWithQuickReply } from '../utils'
-import * as botSpeeches from '../../speeches'
+import { quickReply, genericTemplate, buttonTemplate } from 'utils' //  carouselTemplate, multiMessages, messageWithQuickReply
+import * as botSpeeches from 'speeches'
 
 const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeURI(url)}`
 
@@ -8,7 +8,7 @@ const facebookFeedShare = url => `http://www.facebook.com/sharer.php?u=${encodeU
 //
 const GET_STARTED = 'GET_STARTED'
 const V1_QUICK_REPLY_A = 'V1_QUICK_REPLY_A'
-const V1_QUICK_REPLY_CA = 'V1_QUICK_REPLY_CA'
+// const V1_QUICK_REPLY_CA = 'V1_QUICK_REPLY_CA'
 const V1_QUICK_REPLY_B = 'V1_QUICK_REPLY_B'
 const V1_QUICK_REPLY_C = 'V1_QUICK_REPLY_C'
 const V1_QUICK_REPLY_D = 'V1_QUICK_REPLY_D'
@@ -18,7 +18,7 @@ const V1_QUICK_REPLY_G = 'V1_QUICK_REPLY_G'
 const V1_QUICK_REPLY_H = 'V1_QUICK_REPLY_H'
 const V1_QUICK_REPLY_I = 'V1_QUICK_REPLY_I'
 const V1_QUICK_REPLY_J = 'V1_QUICK_REPLY_J'
-const V1_QUICK_REPLY_K = 'V1_QUICK_REPLY_K'
+// const V1_QUICK_REPLY_K = 'V1_QUICK_REPLY_K'
 const V1_EMAIL_ADDRESS_WRONG = 'V1_EMAIL_ADDRESS_WRONG'
 const V1_EMAIL_ADDRESS_OK = 'V1_EMAIL_ADDRESS_OK'
 const VMDM_QUICK_REPLY_X = 'VMDM_QUICK_REPLY_X'
@@ -28,7 +28,7 @@ const VMDM_QUICK_REPLY_I = 'VMDM_QUICK_REPLY_I'
 const VMDM_QUICK_REPLY_J = 'VMDM_QUICK_REPLY_J'
 const VMDM_EMAIL_ADDRESS_WRONG = 'VMDM_EMAIL_ADDRESS_WRONG'
 const VMDM_EMAIL_ADDRESS_OK = 'VMDM_EMAIL_ADDRESS_OK'
-const MSG_TESTE = 'MSG_TESTE'
+// const MSG_TESTE = 'MSG_TESTE'
 
 //
 // The bot speech, based on quick replies.

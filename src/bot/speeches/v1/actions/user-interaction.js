@@ -1,8 +1,8 @@
 import 'colors'
-import { client as graphqlClient } from '../../../../graphql'
-import * as graphqlQueries from '../../../../graphql/queries'
-import * as botSkills from '../../../skills'
-import * as isemail from '../../../utils/isemail'
+import { client as graphqlClient } from 'graphql'
+import * as graphqlQueries from 'graphql/queries'
+import * as botSkills from 'skills'
+import * as isemail from 'utils/isemail'
 
 //
 // User interaction actions
@@ -32,7 +32,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
           case speech.actions.V1_EMAIL_ADDRESS_WRONG:
           case speech.actions.VMDM_QUICK_REPLY_I:
           case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
-            let action = !isemail.validate(payload.message.text)
+            let action = !isemail.validate(payload.message.text) // eslint-disable-line
               ? speech.actions.V1_EMAIL_ADDRESS_WRONG
               : speech.actions.V1_EMAIL_ADDRESS_OK
 
@@ -42,7 +42,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                 : speech.actions.VMDM_EMAIL_ADDRESS_OK
             }
 
-            const replyMessage = speech.messages[action].constructor === Function
+            const replyMessage = speech.messages[action].constructor === Function // eslint-disable-line
               ? speech.messages[action](profile)
               : speech.messages[action]
 

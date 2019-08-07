@@ -70,14 +70,14 @@ export default (bot, speech, botData) => (payload, reply) => {
 
   const normalize = msg => {
     switch (msg.constructor) {
-      case Function: return msg(profile)
+      case Function: return msg() // msg(profile)
       case String: return { text: msg }
       case Object: return msg
       default: throw new TypeError('The type of message variable is not supported.')
     }
   }
 
-  if (message.constructor == Array) {
+  if (message.constructor === Array) {
     const replySequentially = index => {
       if (index < message.length) {
         reply(normalize(message[index]), err => {

@@ -1,6 +1,6 @@
-import { client as graphqlClient } from '../../../../graphql'
-import * as graphqlQueries from '../../../../graphql/queries'
-import * as botSkills from '../../../skills'
+// import { client as graphqlClient } from 'graphql'
+// import * as graphqlQueries from 'graphql/queries'
+// import * as botSkills from 'skills'
 import sendForm from './send-form'
 
 //
@@ -23,9 +23,9 @@ export default ({ speech, action, payload, profile, botData }) => {
     case speech.actions.V2_QUICK_REPLY_M6_NAME:
       console.log('Entrou no reply name!')
       sendForm({ profile, botData, senderName: payload.message.text })
-      const replyMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME]
-      const action = V2_QUICK_REPLY_M6_SURNAME
-      reply(replyMessage, action)
+      const replyMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME] // eslint-disable-line
+      // const action = V2_QUICK_REPLY_M6_SURNAME
+      reply(replyMessage, action) // eslint-disable-line
       dispatched = true
       break
     /* case speech.actions.QUICK_REPLY_H:

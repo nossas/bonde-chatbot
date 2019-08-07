@@ -1,5 +1,4 @@
-import _ from 'underscore'
-
+// import _ from 'underscore'
 //
 // Strategy function to dispatch reply actions based on
 // quick replies and user interactions.
@@ -14,7 +13,11 @@ import _ from 'underscore'
 //
 export default ({ speech, action, payload, profile, botData, reply }) => {
   let actions
-  try { actions = require(`./${speech.version}/actions`) } catch (e) {}
+  try {
+    actions = require(`./${speech.version}/actions`)
+  } catch (e) {
+    throw new TypeError(`Actions not found - ./${speech.version}/actions`)
+  }
 
   return {
     //
