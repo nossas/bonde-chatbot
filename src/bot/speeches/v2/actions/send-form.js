@@ -1,7 +1,7 @@
 import 'colors'
 import axios from 'axios'
-import { client as graphqlClient } from '../../../../graphql'
-import * as graphqlQueries from '../../../../graphql/queries'
+import { client as graphqlClient } from 'graphql'
+import * as graphqlQueries from 'graphql/queries'
 
 export default ({ payload }) =>
   graphqlClient
@@ -21,7 +21,7 @@ export default ({ payload }) =>
 
       // setup the widget info
       const moblizationtId = process.env.FORM_MOBILIZATION_ID || 0
-      const widget_id = process.env.FORM_WIDGET_ID || 0
+      const widgetId = process.env.FORM_WIDGET_ID || 0
 
       const fields = JSON.stringify([
         {
@@ -43,7 +43,7 @@ export default ({ payload }) =>
       }/mobilizations/${moblizationtId}/form_entries`
       const payload = {
         form_entry: {
-          widget_id,
+          widget_id: widgetId,
           fields
         }
       }

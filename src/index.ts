@@ -1,6 +1,3 @@
-import 'isomorphic-fetch' // window.fetch pollyfill
-import 'colors'
-
 import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
@@ -14,6 +11,9 @@ import * as botSkills from './bot/skills'
 import * as routes from './routes'
 import * as routesMiddlewares from './routes/middlewares'
 
+require('isomorphic-fetch')
+require('colors')
+
 //
 // Emvironment Variables Polyfill
 //
@@ -24,7 +24,7 @@ const envs = {
 //
 // Globals
 //
-global.widgets = {}
+// global.widgets = {}
 
 //
 // Setup Express server
@@ -50,8 +50,9 @@ app.use(ExpressSession({
 const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
 const fabricated = new BotFactory(speech)
   .fabricate()
-  .then(bots => {
-    bots.forEach(({ id, bot, endpoint, botData }) => {
+  .then((bots: any) => {
+    bots.forEach((data: any) => {
+      const { id, bot, endpoint, botData } = data
       //
       // Set up express endpoints for each bot
       //

@@ -1,6 +1,6 @@
-export default (title, subtitle, imageUrl, buttons) => ({
+export default (title, subtitle, image_url, buttons) => ({ // eslint-disable-line
   title,
   subtitle,
-  imageUrl,
+  image_url,
   buttons: buttons
 })

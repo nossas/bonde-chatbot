@@ -1,10 +1,9 @@
 import 'colors'
 import * as botHelpers from '../helpers'
 import * as botInteractions from '../interactions'
-import * as botMiddlewares from '../middlewares'
+// import * as botMiddlewares from '../middlewares'
 
-const payloadValidator = payload => {
-}
+// const payloadValidator = payload => {}
 
 export default (bot, speech, botData) => (payload, reply) => {
   const { message } = payload

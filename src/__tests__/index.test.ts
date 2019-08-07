@@ -1,5 +1,5 @@
-import sayHello from '../src/index_old.js'
-import app from '../src'
+import sayHello from '../index_old'
+import app from '../'
 
 test('sayHello', () => {
   expect(typeof app).toBe('function')

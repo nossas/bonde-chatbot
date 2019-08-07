@@ -1,7 +1,7 @@
 
-const a = [
+// const a = [
 // ADPF442 - PETIÇÃO
-  /* [V2_QUICK_REPLY_PETITION_NAME1]: () => ({
+/* [V2_QUICK_REPLY_PETITION_NAME1]: () => ({
       text: botSpeeches.messages.ADPF_PETITION_NAME
     }),
     [V2_QUICK_REPLY_PETITION_SURNAME1]: () => ({
@@ -47,8 +47,8 @@ const a = [
         quickReply(V2_QUICK_REPLY_TAKE_ACTION_H, botSpeeches.buttonTexts.OTHER_ACTIONS)
       ],
     }, */
-  // Fim ações da petição
-  /* [V2_QUICK_REPLY_TAKE_ACTION_G]: {
+// Fim ações da petição
+/* [V2_QUICK_REPLY_TAKE_ACTION_G]: {
       text: botSpeeches.messages.ADPF_TAKE_ACTION_G,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_ADPF442, botSpeeches.buttonTexts.BACK_1)
@@ -227,10 +227,10 @@ const a = [
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
       ],
     }, */
-  //
-  // Radar da Beta - ADPF 442
-  //
-  /* [V2_QUICK_REPLY_ADPF]: [
+//
+// Radar da Beta - ADPF 442
+//
+/* [V2_QUICK_REPLY_ADPF]: [
       botSpeeches.messages.ADPF,
       botSpeeches.messages.ADPF_1,
       messageWithQuickReply(
@@ -362,5 +362,4 @@ const a = [
         quickReply(V2_QUICK_REPLY_F_3, botSpeeches.buttonTexts.SHARE), //TODO: new share message
       )
     ], */
-
-]
+// ]

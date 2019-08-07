@@ -1,8 +1,8 @@
 import 'colors'
-import { client as graphqlClient } from '../../../../graphql'
-import * as graphqlQueries from '../../../../graphql/queries'
-import * as botSkills from '../../../skills'
-import * as isemail from '../../../utils/isemail'
+import { client as graphqlClient } from 'graphql'
+import * as graphqlQueries from 'graphql/queries'
+import * as botSkills from 'skills'
+import * as isemail from 'utils/isemail'
 import sendForm from './send-form'
 
 //
@@ -27,27 +27,27 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
     if (last && last.interaction) {
       const interaction = JSON.parse(last.interaction)
       if (interaction.is_bot) {
-        if (interaction.action == undefined) dispatched = false
+        if (interaction.action === undefined) dispatched = false
         else {
           switch (interaction.action) {
             case speech.actions.V2_QUICK_REPLY_PETITION_NAME:
-              const nameAction = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME
-              const nameMessage = speech.messages[nameAction]
+              const nameAction = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME // eslint-disable-line
+              const nameMessage = speech.messages[nameAction] // eslint-disable-line
               reply(nameMessage, nameAction)
               dispatched = true
               break
             case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME:
-              const surnameAction = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL
-              const surnameMessage = speech.messages[surnameAction]
+              const surnameAction = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL // eslint-disable-line
+              const surnameMessage = speech.messages[surnameAction] // eslint-disable-line
               reply(surnameMessage, surnameAction)
               dispatched = true
               break
             case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL:
             case speech.actions.V2_PETITION_EMAIL_WRONG:
-              const emailAction = !isemail.validate(payload.message.text)
+              const emailAction = !isemail.validate(payload.message.text) // eslint-disable-line
                 ? speech.actions.V2_PETITION_EMAIL_WRONG
                 : speech.actions.V2_PETITION_EMAIL_OK
-              const emailMessage = speech.messages[emailAction]
+              const emailMessage = speech.messages[emailAction] // eslint-disable-line
 
               if (emailAction === speech.actions.V2_PETITION_EMAIL_OK) {
                 sendForm({ payload })
@@ -57,23 +57,23 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
               break
             // Petição caso 2
             case speech.actions.V2_QUICK_REPLY_PETITION_NAME1:
-              const nameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1
-              const nameMessage1 = speech.messages[nameAction1]
+              const nameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1 // eslint-disable-line
+              const nameMessage1 = speech.messages[nameAction1] // eslint-disable-line
               reply(nameMessage1, nameAction1)
               dispatched = true
               break
             case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1:
-              const surnameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1
-              const surnameMessage1 = speech.messages[surnameAction1]
+              const surnameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1 // eslint-disable-line
+              const surnameMessage1 = speech.messages[surnameAction1] // eslint-disable-line
               reply(surnameMessage1, surnameAction1)
               dispatched = true
               break
             case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1:
             case speech.actions.V2_PETITION_EMAIL_WRONG1:
-              const emailAction1 = !isemail.validate(payload.message.text)
+              const emailAction1 = !isemail.validate(payload.message.text) // eslint-disable-line
                 ? speech.actions.V2_PETITION_EMAIL_WRONG1
                 : speech.actions.V2_PETITION_EMAIL_OK1
-              const emailMessage1 = speech.messages[emailAction1]
+              const emailMessage1 = speech.messages[emailAction1] // eslint-disable-line
 
               if (emailAction1 === speech.actions.V2_PETITION_EMAIL_OK1) {
                 sendForm({ payload })
@@ -85,7 +85,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
             case speech.actions.V2_EMAIL_ADDRESS_WRONG:
             case speech.actions.VMDM_QUICK_REPLY_I:
             case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
-              let action = !isemail.validate(payload.message.text)
+              let action = !isemail.validate(payload.message.text) // eslint-disable-line
                 ? speech.actions.V2_EMAIL_ADDRESS_WRONG
                 : speech.actions.V2_EMAIL_ADDRESS_OK
 
@@ -95,7 +95,7 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
                   : speech.actions.VMDM_EMAIL_ADDRESS_OK
               }
 
-              const replyMessage = speech.messages[action].constructor === Function
+              const replyMessage = speech.messages[action].constructor === Function // eslint-disable-line
                 ? speech.messages[action](profile)
                 : speech.messages[action]
 
