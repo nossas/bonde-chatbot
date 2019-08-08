@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
   // test graphql connection
   fetchBotConfigurations
-    .then(console.log('graphql ok'))
+    .then(() => console.log('graphql ok'))
     .catch(err => res.status(500).send(`${JSON.stringify(err)}`.red))
 
   // test token expiration
