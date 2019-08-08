@@ -1,5 +1,7 @@
 import 'colors'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const networkInterface = createNetworkInterface({
   uri: process.env.GRAPHQL_URL || 'http://data.bonde.devel:3001/graphql'
