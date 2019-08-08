@@ -20,7 +20,7 @@
     "postdocs": "git add README.md",
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
-    "build": "tsc && babel src -d dist -x .js,.ts,.tsx",
+    "build": "tsc",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
@@ -68,13 +68,6 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/plugin-proposal-class-properties": "7.5.5",
-    "@babel/plugin-proposal-numeric-separator": "7.2.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "@babel/preset-typescript": "7.3.3",
     "@types/bull": "3.10.2",
     "@types/cors": "2.8.5",
     "@types/dateformat": "3.0.0",
@@ -88,7 +81,6 @@
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",
     "babel-eslint": "10.0.2",
-    "babel-jest": "24.8.0",
     "documentation": "12.1.1",
     "dotenv": "^8.0.0",
     "eslint": "6.1.0",
