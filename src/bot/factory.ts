@@ -7,6 +7,8 @@ import * as botEvents from './events'
 import * as botConfig from './config'
 
 export default class BotFactory {
+  speech: any
+
   //
   // @param speech {Object} Speech object that contains the messages and actions
   //
@@ -28,7 +30,7 @@ export default class BotFactory {
   // @return {Promise} The promise's result is an array of data of fabricated bots
   //
   fabricate () {
-    return this.botConfigs().then(({ data: { configs: { bots } } }) => {
+    return this.botConfigs().then(({ data: { configs: { bots } } }: any) => {
       return bots.map(item => {
         const {
           id,
@@ -51,7 +53,7 @@ export default class BotFactory {
 
         const bot = new Bot(config)
         const speech = this.speech(botData)
-        const eventArgs = [bot, speech, botData]
+        const eventArgs = [bot, speech, botData] as [string, string, string]
         const endpoint = `/${data.endpoint || id}`
 
         bot.setGetStartedButton({ payload: speech.actions.GET_STARTED })

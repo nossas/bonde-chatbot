@@ -16,7 +16,7 @@ router.post('/authenticate', (req, res) => {
     mutation: graphqlMutations.authenticate,
     variables: { email, password }
   })
-    .then(({ data: { authenticate: { jwtToken } } }) => {
+    .then(({ data: { authenticate: { jwtToken } } }: any) => {
       if (jwtToken) {
         req.session.login = { email, password, token: jwtToken }
         res.redirect('/mass-message')
