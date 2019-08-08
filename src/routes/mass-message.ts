@@ -21,8 +21,8 @@ router.get('/', isAuthenticated, (req, res) => {
   Promise.all([fetchBotConfigurations, fetchBotRecipients])
     .then(values => {
       const [botConfiguration, botRecipients] = values
-      const { data: { configs: { bots: botsRaw } } } = botConfiguration
-      const { data: { botRecipients: { recipients: recipientsRaw } } } = botRecipients
+      const { data: { configs: { bots: botsRaw } } }: any = botConfiguration
+      const { data: { botRecipients: { recipients: recipientsRaw } } }: any = botRecipients
       const date = date => dateformat(date, 'dd/mm/yyyy')
       const time = date => dateformat(date, 'HH:MM')
       const createAt = value => `${date(value)} às ${time(value)}`
