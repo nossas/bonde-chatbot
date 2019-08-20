@@ -9,6 +9,10 @@ networkInterface.use([{
   applyMiddleware (req, next) {
     if (!req.options.headers) req.options.headers = {}
 
+    if (process.env.HASURA_SECRET) {
+      req.options.headers['x-hasura-admin-secret'] = process.env.HASURA_SECRET
+    }
+
     if (process.env.JWT_TOKEN) {
       req.options.headers['authorization'] = `Bearer ${process.env.JWT_TOKEN}`
     } else {
