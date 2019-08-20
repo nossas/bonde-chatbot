@@ -11,13 +11,10 @@
 // @param [required] reply {Function} Messenger bot's reply function
 // @return void
 //
-export default ({ speech, action, payload, profile, botData, reply }) => {
-  let actions
-  try {
-    actions = require(`./${speech.version}/actions`)
-  } catch (e) {
-    throw new TypeError(`Actions not found - ./${speech.version}/actions`)
-  }
+export default async ({ speech, action, payload, profile, botData, reply }) => {
+  const actions = await import(`./${speech.version}/actions`)
+
+  console.log(actions, speech, action, payload, profile, botData, reply)
 
   return {
     //

@@ -18,6 +18,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     //
     const strategyArgs = { speech, action, payload, profile, botData, reply }
     const actions = botSpeeches.actionStrategy(strategyArgs)
+    console.log(actions)
     actions.anywhere()
 
     //
