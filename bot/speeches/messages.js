@@ -504,6 +504,8 @@ export default {
   //
   // Answers
   //
+  ABOUT_COTAS_AGOSTO: 'Logo menos será votado na Câmara dos Deputados um projeto de lei que acaba com a obrigatoriedade dos partidos de destinarem 30% das vagas e dos recursos do fundo partidário para candidaturas de mulheres! Pois é, é só aumentar o número de mulheres eleitas que o patricarcado pira. Até parece que vamos deixar que nos tirem de lá! Clique no link agora para saber mais e ajudar a barrar esse absurdo: http://www.nem1porcentoamenos.beta.org.br/',
+  
   ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
 
   ABOUT_PL_1256: 'Menina, o PL 1256/2019 é mais uma tentativa deles de tirar a gente do rolê! Esse projeto é do senador Angelo Coronel (PSD/BA) e, basicamente, acaba com a reserva de vagas e recursos do fundo partidário pras mulheres que saem candidatas. Já somos poucas nos espaços de poder, né? Agora imagina eles decidindo sozinhos sobre temas como aborto e maternidade, sem a gente tá lá pra colocar nossa voz! 🤮 Fico até enjoada - e olhe que eu sou robô! Mas eu sou antenadíssima e já tô com campanha no ar pra barrar esse absurdo. Se quiser saber mais, manda #NemUmPorCentoAMenos pra mim e vem somar nessa pressão! 💪',
