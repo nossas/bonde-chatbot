@@ -1,5 +1,5 @@
-import { client as graphqlClient } from 'graphql'
-import * as graphqlQueries from 'graphql/queries'
+import { client as graphqlClient } from '../../../../graphql'
+import * as graphqlQueries from '../../../../graphql/queries'
 import * as botSkills from 'skills'
 
 //

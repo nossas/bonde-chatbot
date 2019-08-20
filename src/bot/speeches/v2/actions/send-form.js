@@ -1,7 +1,7 @@
 import 'colors'
 import axios from 'axios'
-import { client as graphqlClient } from 'graphql'
-import * as graphqlQueries from 'graphql/queries'
+import { client as graphqlClient } from '../../../../graphql'
+import * as graphqlQueries from '../../../../graphql/queries'
 
 export default ({ payload }) =>
   graphqlClient

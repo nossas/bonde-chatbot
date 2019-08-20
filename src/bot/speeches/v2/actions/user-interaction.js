@@ -1,8 +1,8 @@
 import 'colors'
-import { client as graphqlClient } from 'graphql'
-import * as graphqlQueries from 'graphql/queries'
-import * as botSkills from 'skills'
-import * as isemail from 'utils/isemail'
+import { client as graphqlClient } from '../../../../graphql'
+import * as graphqlQueries from './../../../../graphql/queries'
+import * as botSkills from '../../../skills'
+import * as isemail from '../../../utils/isemail'
 import sendForm from './send-form'
 
 //
