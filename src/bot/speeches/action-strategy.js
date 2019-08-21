@@ -14,8 +14,6 @@
 export default async ({ speech, action, payload, profile, botData, reply }) => {
   const actions = await import(`./${speech.version}/actions`)
 
-  console.log(actions, speech, action, payload, profile, botData, reply)
-
   return {
     //
     // The action will be dispatched anywhere. Even if the action
