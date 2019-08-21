@@ -4,7 +4,7 @@ import * as botHelpers from '../helpers'
 import * as botSpeeches from '../speeches'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
-  bot.getProfile(payload.sender.id, (err, profile) => {
+  bot.getProfile(payload.sender.id, async (err, profile) => {
     if (err) console.error(`${JSON.stringify(err)}`.red)
 
     //
@@ -17,8 +17,8 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
     // Speech action strategy
     //
     const strategyArgs = { speech, action, payload, profile, botData, reply }
-    const actions = botSpeeches.actionStrategy(strategyArgs)
-    console.log(actions)
+    const actions = await botSpeeches.actionStrategy(strategyArgs)
+
     actions.anywhere()
 
     //
