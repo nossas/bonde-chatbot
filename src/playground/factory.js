@@ -1,8 +1,8 @@
 import Bot from 'messenger-bot'
 import { subscribeChatbots } from './actions'
 import { writeSpeech } from './speech'
+import * as botEvents from './events'
 import * as botConfig from '../bot/config'
-import * as botEvents from '../bot/events'
 
 class Factory {
   constructor () {
@@ -87,7 +87,14 @@ class Factory {
       // bot.setPersistentMenu([speech.messages.PERSISTENT_MENU])
 
       // Configure events
-      const eventArgs = [bot, { version: 'v2', messages: chatbot.speech.messages }, botData]
+      const eventArgs = [
+        bot,
+        () => {
+          const chatbot = this.globalState[chatbotId]
+          return { version: 'v2', messages: chatbot.speech.messages }
+        },
+        botData
+      ]
       bot.on('error', (err) => {
         console.error(`--- ${chatbot.name} bot error: `.red, err)
       })

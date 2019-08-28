@@ -32,7 +32,8 @@ async function delay (ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-const sleep = 100
+const sleep = 200
+
 delay(sleep)
   .then(() => {
     console.info(`--- checking before ${sleep}ms on factory state`.blue)
