@@ -1,7 +1,6 @@
 import 'colors'
 import * as botHelpers from '../bot/helpers'
 import * as botInteractions from '../bot/interactions'
-import * as botMiddlewares from '../bot/middlewares'
 
 // const payloadValidator = payload => {}
 
@@ -47,7 +46,7 @@ export const message = (bot, getSpeech, botData) => (payload, reply) => {
         botHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
       })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red)) 
+      .catch(err => console.error(`${JSON.stringify(err)}`.red))
   })
 }
 

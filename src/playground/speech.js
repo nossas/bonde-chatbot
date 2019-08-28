@@ -17,18 +17,19 @@
   return message
 } */
 
+const reply = (port, campaign) => {
+  const newLinks = campaign.links.filter((link) => port.links[0] === link.id)
+  return {
+    content_type: 'text',
+    // WARN: target should be null and there is crashed request
+    payload: newLinks.length !== 0 ? newLinks[0].target : 'payload default sem resposta',
+    title: port.text
+  }
+}
+
 const quickReply = (node, campaign) => ({
   text: node.text,
-  quick_replies: node.ports.filter(p => !p.in).map((port) => {
-    const newLinks = campaign.links.filter((link) => port.links[0] === link.id)
-    return {
-      content_type: 'text',
-      // Payload é o identificador do link de uma relação entre ports
-      // e nodes
-      payload: newLinks.length !== 0 ? newLinks[0].target : 'payload default sem resposta',
-      title: port.text
-    }
-  })
+  quick_replies: node.ports.filter(p => !p.in).map((port) => reply(port, campaign))
 })
 
 const hasQuickReply = (node) => node && node.kind === 'quick_reply'

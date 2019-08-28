@@ -66,7 +66,6 @@ class Factory {
     const chatbots = Object.keys(this.globalState)
     return Promise.all(chatbots.map(chatbotId => {
       const chatbot = this.globalState[chatbotId]
-
       // Validate and settings messenger-bot
       const settings = botConfig.validate(chatbot.settings)
       const bot = new Bot(settings)
@@ -84,7 +83,18 @@ class Factory {
 
       // Configure started button and persistent menu
       bot.setGetStartedButton({ payload: chatbot.speech.started })
-      // bot.setPersistentMenu([speech.messages.PERSISTENT_MENU])
+      const persistentMenu = {
+        locale: 'default',
+        composer_input_disabled: false,
+        call_to_actions: [
+          {
+            title: 'Reiniciar conversa',
+            type: 'postback',
+            payload: chatbot.speech.started
+          }
+        ]
+      }
+      bot.setPersistentMenu([persistentMenu])
 
       // Configure events
       const eventArgs = [
