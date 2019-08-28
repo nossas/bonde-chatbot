@@ -6,7 +6,6 @@ import * as botConfig from '../bot/config'
 import * as botEvents from '../bot/events'
 import { writeSpeech } from './speech'
 
-
 export const fetchBots = () => {
   // Recupera todos os chatbots relacionado a uma comunidade, e
   // seus respectivos dados de configuração
@@ -49,25 +48,23 @@ export const fetchMessages = ({ chatbotId }) => {
   return GraphqlAPI.query({ query: campaignsQuery, variables: { chatbotId } })
 }
 
-
 class Factory {
-
   async fabricate () {
     try {
       // Buscar todos as comunidades e suas configurações
       const { data: { chatbots } } = await fetchBots()
-      
+
       return await Promise.all(chatbots.map(async (chatbot) => {
         const { settings } = chatbot.chatbot_settings[0]
         // TODO: Pensar onde deve ser configurado esses dados
         const data = {
-          "pressure": {
-            "slug": "abortemesseabsurdo",
-            "widget_id": 21044
+          pressure: {
+            slug: 'abortemesseabsurdo',
+            widget_id: 21044
           },
-          "image_url": "https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg",
-          "name": "BETA",
-          "m_me": "https://m.me/beta.feminista"
+          image_url: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
+          name: 'BETA',
+          m_me: 'https://m.me/beta.feminista'
         }
         const botData = { ...settings, data }
 
@@ -81,8 +78,12 @@ class Factory {
         const bot = new Bot(config)
         const endpoint = `/${data.endpoint || chatbot.id}`
 
+        // TODO: transformar em subscription
+        // todo momento que precisar de uma atualização de mensagens,
+        // o modelo utilizado deve ser recarregado.
+
         // TODO: Criar uma seleção configuravel
-        const { data: { chatbot_campaigns }} = await fetchMessages({ chatbotId: chatbot.id })     
+        const { data: { chatbot_campaigns } } = await fetchMessages({ chatbotId: chatbot.id })
 
         // TODO: Precisa entender melhor o contexto de múltiplas campanhas
         const conversation = JSON.parse(chatbot_campaigns[0].diagram)
@@ -104,7 +105,7 @@ class Factory {
         // TODO: criar configuração de menu persistent
         // buscar a primeira mensagem de cada campanha que for configurada
         // como menu
-        /*bot.setPersistentMenu([speech.messages.PERSISTENT_MENU])*/
+        /* bot.setPersistentMenu([speech.messages.PERSISTENT_MENU]) */
         bot.on('error', (err) => {
           console.error(`Beta handle error ${err.message}`.red)
         })

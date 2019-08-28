@@ -48,7 +48,8 @@ app.use(ExpressSession({
 // Bots fabrication
 //
 const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
-const fabricated = new BotFactory(speech)
+/* const fabricated = new BotFactory(speech) */
+const fabricated = new BotFactory()
   .fabricate()
   .then((bots: any) => {
     bots.forEach((data: any) => {

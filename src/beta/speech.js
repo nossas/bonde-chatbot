@@ -5,7 +5,7 @@ const messageWithGif = (node, edges) => {
       payload: { url: node.text }
     }
   }
-  
+
   if (edges && edges.length > 0) {
     message.quick_replies = node.children.edges.map((edge) => ({
       content_type: 'text',
@@ -58,7 +58,6 @@ const messageSequential = (node, campaign, store) => {
   } else {
     store.push(node.text)
   }
-
 }
 
 export const writeSpeech = (campaign) => {

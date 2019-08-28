@@ -18,8 +18,8 @@ export default ({ botData, payload, interaction }) => {
     console.log('mock interactions.save')
     return resolve()
   })
-  /*return graphqlClient.mutate({
+  /* return graphqlClient.mutate({
     mutation: graphqlMutations.createBotInteraction,
     variables: { interaction: JSON.stringify(interactionEntity) }
-  })*/
+  }) */
 }
