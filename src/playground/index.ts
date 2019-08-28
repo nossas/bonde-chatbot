@@ -27,9 +27,9 @@ app.use(ExpressSession({
 
 const bot = new BotFactory()
 
-async function delay(ms) {
+async function delay (ms) {
   // return await for better async stack trace support in case of errors.
-  return await new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 const sleep = 100
@@ -45,7 +45,7 @@ delay(sleep)
         //
         app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
         app.post(endpoint, botMiddlewares.handleMessage(bot))
-        /*app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot))*/
+        /* app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot)) */
         console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
       })
     })
@@ -65,9 +65,9 @@ app.get('/', (req, res) => {
   `)
 })
 
-/*app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
   res.send('Hello!!')
-})*/
+}) */
 
 app.listen(5000, () => {
   console.log('Example app listening on port 5000!')

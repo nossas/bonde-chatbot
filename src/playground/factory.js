@@ -5,7 +5,6 @@ import * as botConfig from '../bot/config'
 import * as botEvents from '../bot/events'
 
 class Factory {
-
   constructor () {
     this.globalState = {}
     this.observer = subscribeChatbots()
@@ -63,7 +62,6 @@ class Factory {
     }
   }
 
-
   fabricate () {
     const chatbots = Object.keys(this.globalState)
     return Promise.all(chatbots.map(chatbotId => {
@@ -83,7 +81,7 @@ class Factory {
         m_me: 'https://m.me/beta.feminista'
       }
       const botData = { ...settings, data }
-      
+
       // Configure started button and persistent menu
       bot.setGetStartedButton({ payload: chatbot.speech.started })
       // bot.setPersistentMenu([speech.messages.PERSISTENT_MENU])
@@ -95,7 +93,7 @@ class Factory {
       })
       bot.on('message', botEvents.message(...eventArgs))
       bot.on('postback', botEvents.postback(...eventArgs))
-      
+
       return { bot, botData, id: chatbotId }
     }))
   }

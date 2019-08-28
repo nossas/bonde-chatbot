@@ -83,10 +83,14 @@ class Factory {
         // o modelo utilizado deve ser recarregado.
 
         // TODO: Criar uma seleção configuravel
-        const { data: { chatbot_campaigns } } = await fetchMessages({ chatbotId: chatbot.id })
+        const {
+          data: {
+            chatbot_campaigns: chatbotCampaigns
+          }
+        } = await fetchMessages({ chatbotId: chatbot.id })
 
         // TODO: Precisa entender melhor o contexto de múltiplas campanhas
-        const conversation = JSON.parse(chatbot_campaigns[0].diagram)
+        const conversation = JSON.parse(chatbotCampaigns[0].diagram)
         const speech = writeSpeech(conversation)
 
         // Transforma a lista de mensagens em um objeto, para melhor interação

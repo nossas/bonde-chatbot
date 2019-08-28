@@ -4,7 +4,7 @@ export const error = (bot, conversation, botData) => err => {
   console.error(`Beta handle error ${err.message}`.red)
 }
 
-const replyStrategy = (bot, conversation, payload, reply) => {
+/* const replyStrategy = (bot, conversation, payload, reply) => {
   const action = payload.message.quick_reply
     ? payload.message.quick_reply.payload
     : payload.message.payload
@@ -30,7 +30,7 @@ const replyStrategy = (bot, conversation, payload, reply) => {
 
     return replyStrategy(newTask, reply, conversation)
   }
-}
+} */
 
 export const message = (bot, speech, botData) => (payload, reply, actions) => {
   console.log('message payload', payload)

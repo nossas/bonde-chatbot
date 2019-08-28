@@ -1,4 +1,4 @@
-const messageWithGif = (node, edges) => {
+/* const messageWithGif = (node, edges) => {
   const message = {
     attachment: {
       type: 'image',
@@ -15,7 +15,7 @@ const messageWithGif = (node, edges) => {
   }
 
   return message
-}
+} */
 
 const quickReply = (node, campaign) => ({
   text: node.text,
