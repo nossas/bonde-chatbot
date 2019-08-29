@@ -11,10 +11,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const graphqlUrl = (protocol) => `${protocol}://${process.env.GRAPHQL_URL || 'data.bonde.devel:3001/graphql'}`
-
 const httpLink = createHttpLink({
-  uri: graphqlUrl('http'),
+  uri: process.env.GRAPHQL_URL || 'data.bonde.devel:3001/graphql',
   fetch
 })
 
@@ -38,7 +36,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 
 // Create a WebSocket link:
 const wsLink = new WebSocketLink({
-  uri: 'ws://localhost:5007/v1/graphql',
+  uri: process.env.WS_GRAPHQL_URL || 'ws://localhost:5007/v1/graphql',
   options: {
     reconnect: true,
     connectionParams: {
