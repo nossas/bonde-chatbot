@@ -7,11 +7,16 @@ import * as botConfig from '../bot/config'
 class Factory {
   constructor () {
     this.globalState = {}
-    this.observer = subscribeChatbots()
-      .subscribe({
-        next: this.next.bind(this),
-        error: this.error.bind(this)
-      })
+    this.observer = null
+    try {
+      this.observer = subscribeChatbots()
+        .subscribe({
+          next: this.next.bind(this),
+          error: this.error.bind(this)
+        })
+    } catch (error) {
+      console.error('--- factory subscribe error: '.red, error)
+    }
   }
 
   next ({ data }) {

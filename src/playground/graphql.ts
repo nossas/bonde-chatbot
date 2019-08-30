@@ -20,6 +20,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   // add authorization to the headers
   const headers = {}
   if (process.env.HASURA_SECRET) {
+    console.log('teste auth middleware')
     headers['x-hasura-admin-secret'] = process.env.HASURA_SECRET
   }
 
