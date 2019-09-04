@@ -3,11 +3,13 @@ import { subscribeChatbots } from './actions'
 import { writeSpeech } from './speech'
 import * as botEvents from './events'
 import * as botConfig from '../bot/config'
+import * as botMiddlewares from '../beta/middlewares'
 
 class Factory {
-  constructor () {
+  constructor (app) {
     this.globalState = {}
     this.observer = null
+    this.app = app
     try {
       this.observer = subscribeChatbots()
         .subscribe({
@@ -21,6 +23,10 @@ class Factory {
 
   next ({ data }) {
     console.info('--- receiving notification of subscription!'.blue)
+    let updateRouting = false
+    if (Object.keys(this.globalState).length !== data.chatbots.length) {
+      updateRouting = true
+    }
     // TODO: a todo momento em que acontece uma inclusão, atualização em qualquer
     // atributo ou query relacionada a chabots esse evento é disparado.
     data.chatbots.forEach((chatbot) => {
@@ -33,6 +39,25 @@ class Factory {
         console.error(`--- ${chatbot.name} has no settings or campaigns!`.red)
       }
     })
+
+    if (updateRouting) {
+      console.info('--- change routing on app server.'.blue)
+      this.fabricate()
+        .then((bots) => {
+          bots.forEach((data) => {
+            // eslint-disable-next-line no-unused-vars
+            const { id, bot, botData } = data
+            const endpoint = `/v2/${id}`
+            //
+            // Set up express endpoints for each bot
+            //
+            this.app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
+            this.app.post(endpoint, botMiddlewares.handleMessage(bot))
+            /* app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot)) */
+            console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
+          })
+        })
+    }
   }
 
   error (err) {
