@@ -21,8 +21,8 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   const headers = {}
 
   if (process.env.JWT_TOKEN) {
-    console.log('Logged on GraphQL application with: ', process.env.JWT_TOKEN)
-    headers['authorization'] = `Bearer ${process.env.JWT_TOKEN}`
+    console.log('Logged on GraphQL application with:', process.env.JWT_TOKEN)
+    headers['Authorization'] = `Bearer ${process.env.JWT_TOKEN}`
   } else {
     console.error('Please specify the `JWT_TOKEN` environment variable.'.red)
   }
