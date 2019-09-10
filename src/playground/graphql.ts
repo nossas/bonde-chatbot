@@ -11,6 +11,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+if (!process.env.JWT_TOKEN) throw new Error('Please specify the `JWT_TOKEN` environment variable.')
+
 const httpLink = createHttpLink({
   uri: process.env.GRAPHQL_URL || 'data.bonde.devel:3001/graphql',
   fetch
@@ -21,14 +23,12 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   const headers = {}
 
   if (process.env.JWT_TOKEN) {
-    console.log('Logged on GraphQL application with:', process.env.JWT_TOKEN)
     headers['Authorization'] = `Bearer ${process.env.JWT_TOKEN}`
   } else {
     console.error('Please specify the `JWT_TOKEN` environment variable.'.red)
   }
 
   operation.setContext({ headers })
-  console.log('Operation set context headers', headers)
   return forward(operation)
 })
 
@@ -39,7 +39,7 @@ const wsLink = new WebSocketLink({
     reconnect: true,
     connectionParams: {
       headers: {
-        'x-hasura-admin-secret': process.env.HASURA_SECRET
+        authorization: `Bearer ${process.env.JWT_TOKEN}`
       }
     }
   },
