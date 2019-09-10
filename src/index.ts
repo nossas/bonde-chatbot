@@ -5,9 +5,9 @@ import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
 import Queue from 'bull'
-import { BotFactory } from './bot'
-import * as botMiddlewares from './bot/middlewares'
-import * as botSkills from './bot/skills'
+import BotFactory from './beta/factory'
+import * as botMiddlewares from './beta/middlewares'
+/* import * as botSkills from './bot/skills' */
 import * as routes from './routes'
 import * as routesMiddlewares from './routes/middlewares'
 
@@ -48,7 +48,8 @@ app.use(ExpressSession({
 // Bots fabrication
 //
 const speech = require(`./bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
-const fabricated = new BotFactory(speech)
+/* const fabricated = new BotFactory(speech) */
+const fabricated = new BotFactory()
   .fabricate()
   .then((bots: any) => {
     bots.forEach((data: any) => {
@@ -63,7 +64,8 @@ const fabricated = new BotFactory(speech)
       //
       // Set up pressure stuff
       //
-      botSkills.pressure.fetchWidgets({ botData })
+      // TODO: pressure action on message
+      /* botSkills.pressure.fetchWidgets({ botData }) */
 
       console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
     })
