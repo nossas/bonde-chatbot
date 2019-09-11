@@ -28,6 +28,14 @@ class Factory {
     let updateRouting = false
     if (chatbotsStoreKeys.length !== data.chatbots.length) {
       updateRouting = true
+    } else {
+      // TODO: Remove Chatbot on server
+      const chatbotsUpdated = chatbotsStoreKeys.filter(key => {
+        const chatbot = data.chatbots.filter(chatbot => Number(chatbot.id) === Number(key))[0]
+        if (!chatbot) return false
+        return this.globalState[key].updatedAt !== chatbot.updated_at
+      })
+      updateRouting = chatbotsUpdated.length > 0
     }
     // TODO: a todo momento em que acontece uma inclusão, atualização em qualquer
     // atributo ou query relacionada a chabots esse evento é disparado.
