@@ -59,14 +59,14 @@ class Factory {
           bots.forEach((data) => {
             // eslint-disable-next-line no-unused-vars
             const { id, bot, botData } = data
-            const endpoint = `${process.env.APP_DOMAIN}/v2/${id}`
+            const endpoint = `/v2/${id}`
             //
             // Set up express endpoints for each bot
             //
             this.app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
             this.app.post(endpoint, botMiddlewares.handleMessage(bot))
             /* app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot)) */
-            console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
+            console.info(`Bot[${id}] exposed in endpoint: ${process.env.APP_DOMAIN}${endpoint}`.blue)
           })
         })
     }
