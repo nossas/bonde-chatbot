@@ -10,6 +10,7 @@ export const subscribeChatbots = (next, error) => {
         community_id
         created_at
         updated_at
+        persistent_menu
         chatbot_campaigns (where: { status: { _eq: "active" } }, order_by: { updated_at: asc }) {
           id
           diagram
