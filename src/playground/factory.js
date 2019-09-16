@@ -23,17 +23,29 @@ class Factory {
 
   next ({ data }) {
     console.info('--- receiving notification of subscription!'.blue)
+    const chatbotsStoreKeys = Object.keys(this.globalState)
+
     let updateRouting = false
-    if (Object.keys(this.globalState).length !== data.chatbots.length) {
+    if (chatbotsStoreKeys.length !== data.chatbots.length) {
       updateRouting = true
+    } else {
+      // TODO: Remove Chatbot on server
+      const chatbotsUpdated = chatbotsStoreKeys.filter(key => {
+        const chatbot = data.chatbots.filter(chatbot => Number(chatbot.id) === Number(key))[0]
+        if (!chatbot) return false
+        return this.globalState[key].updatedAt !== chatbot.updated_at
+      })
+      updateRouting = chatbotsUpdated.length > 0
     }
     // TODO: a todo momento em que acontece uma inclusão, atualização em qualquer
     // atributo ou query relacionada a chabots esse evento é disparado.
     data.chatbots.forEach((chatbot) => {
       if (chatbot.chatbot_settings.length > 0 && chatbot.chatbot_campaigns.length > 0) {
         this.globalState[chatbot.id] = {
+          persistentMenu: chatbot.persistent_menu,
           speech: this.handleNextSpeech(chatbot),
-          settings: this.handleNextSettings(chatbot)
+          settings: this.handleNextSettings(chatbot),
+          updatedAt: chatbot.updated_at
         }
       } else {
         console.error(`--- ${chatbot.name} has no settings or campaigns!`.red)
@@ -54,7 +66,7 @@ class Factory {
             this.app.get(endpoint, botMiddlewares.verifyValidationToken(bot))
             this.app.post(endpoint, botMiddlewares.handleMessage(bot))
             /* app.post(`${endpoint}/mass-message/send`, botMiddlewares.sendMassMessage(bot)) */
-            console.info(`Bot[${id}] exposed in endpoint: ${endpoint}`.blue)
+            console.info(`Bot[${id}] exposed in endpoint: ${process.env.APP_DOMAIN}${endpoint}`.blue)
           })
         })
     }
@@ -111,12 +123,22 @@ class Factory {
       }
       const botData = { ...settings, data }
 
-      // Configure started button and persistent menu
+      // Configure started button
       bot.setGetStartedButton({ payload: chatbot.speech.started })
-      const persistentMenu = {
-        locale: 'default',
-        composer_input_disabled: false,
-        call_to_actions: [
+
+      // Configure persistent menu based on database
+      const persistentMenu = { locale: 'default', composer_input_disabled: false }
+
+      if (chatbot.persistentMenu) {
+        // Menu configured on admin-canary
+        persistentMenu['call_to_actions'] = chatbot.persistentMenu.map(({ title, payload }) => ({
+          title,
+          payload,
+          type: 'postback'
+        }))
+      } else {
+        // Menu default with started message
+        persistentMenu['call_to_actions'] = [
           {
             title: 'Reiniciar conversa',
             type: 'postback',
@@ -124,6 +146,7 @@ class Factory {
           }
         ]
       }
+
       bot.setPersistentMenu([persistentMenu])
 
       // Configure events
