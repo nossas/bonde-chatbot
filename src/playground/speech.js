@@ -32,10 +32,10 @@ const quickReply = (node, campaign) => ({
   quick_replies: node.ports.filter(p => !p.in).map((port) => reply(port, campaign))
 })
 
-const hasQuickReply = (node) => node && node.kind === 'quick_reply'
+const hasQuickReply = (node) => node && node.kind === 'reply'
 
 const hasTexts = (node, campaign) => {
-  const hasText = node && node.kind === 'text'
+  const hasText = node && node.type === 'message'
   // verifica se possue mensagens subsequentes
   const ports = node.ports.filter(p => !p.in && !!p.links[0])
   return hasText && ports.length > 0
@@ -49,7 +49,7 @@ const messageSequential = (node, campaign, store) => {
     const target = campaign.links.filter(l => l.id === link)[0].target
     const child = campaign.nodes.filter(node => node.id === target)[0]
 
-    if (node.kind === 'text') {
+    if (node.type === 'message') {
       store.push(node.text)
       messageSequential(child, campaign, store)
     } else {
@@ -61,7 +61,21 @@ const messageSequential = (node, campaign, store) => {
   }
 }
 
-export const writeSpeech = (campaign) => {
+export const writeSpeech = (diagram) => {
+  const links = Object.values(
+    diagram
+      .layers
+      .filter(m => m.type === 'diagram-links')[0]
+      .models
+  )
+  const nodes = Object.values(
+    diagram
+      .layers
+      .filter(m => m.type === 'diagram-nodes')[0]
+      .models
+  )
+
+  const campaign = { links, nodes }
   const speech = campaign.nodes.map(node => {
     if (hasQuickReply(node)) {
       return {
@@ -80,5 +94,6 @@ export const writeSpeech = (campaign) => {
       }
     }
   })
-  return speech
+
+  return { speech, campaign }
 }

@@ -88,8 +88,9 @@ class Factory {
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
     // TODO: Criar uma seleção configuravel
-    const conversation = JSON.parse(chatbotCampaigns[0].diagram)
-    const speech = writeSpeech(conversation)
+    const { speech, campaign } = writeSpeech(
+      JSON.parse(chatbotCampaigns[0].diagram)
+    )
     // Change speech list to messages object
     const messages = {}
     speech.forEach(node => {
@@ -100,7 +101,7 @@ class Factory {
     // TODO: Criar flag para identificar get_started
     return {
       messages,
-      started: conversation.nodes[0].id
+      started: campaign.nodes[0].id
     }
   }
 
