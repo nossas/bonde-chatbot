@@ -61,7 +61,11 @@ const messageSequential = (node, campaign, store) => {
   }
 }
 
-export const writeSpeech = (diagram) => {
+export const writeSpeech = (campaign) => {
+  // Parse to JSON
+  const diagram = JSON.parse(campaign.diagram)
+
+  // Filter links and nodes on bonde-diagram
   const links = Object.values(
     diagram
       .layers
@@ -75,16 +79,16 @@ export const writeSpeech = (diagram) => {
       .models
   )
 
-  const campaign = { links, nodes }
-  const speech = campaign.nodes.map(node => {
+  // Parse diagram to speech structure
+  const speech = nodes.map(node => {
     if (hasQuickReply(node)) {
       return {
-        [node.id]: quickReply(node, campaign)
+        [node.id]: quickReply(node, { links, nodes })
       }
-    } else if (hasTexts(node, campaign)) {
+    } else if (hasTexts(node, { links, nodes })) {
       // TODO: retornar lista de mensagens até checar no próximo quick_reply
       const store = []
-      messageSequential(node, campaign, store)
+      messageSequential(node, { links, nodes }, store)
       return {
         [node.id]: store
       }
@@ -95,5 +99,16 @@ export const writeSpeech = (diagram) => {
     }
   })
 
-  return { speech, campaign }
+  // Change speech list to messages object.
+  const messages = {}
+  speech.forEach(node => {
+    Object.keys(node).forEach(uuid => {
+      messages[uuid] = node[uuid]
+    })
+  })
+
+  return {
+    messages,
+    started: campaign.get_started ? nodes[0].id : false
+  }
 }

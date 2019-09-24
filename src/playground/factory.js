@@ -87,22 +87,28 @@ class Factory {
   }
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
-    // TODO: Criar uma seleção configuravel
-    const { speech, campaign } = writeSpeech(
-      JSON.parse(chatbotCampaigns[0].diagram)
-    )
-    // Change speech list to messages object
-    const messages = {}
-    speech.forEach(node => {
-      Object.keys(node).forEach(key => {
-        messages[key] = node[key]
-      })
-    })
-    // TODO: Criar flag para identificar get_started
+    const speech = chatbotCampaigns.map(writeSpeech)
+    // Merge all messages
+    const messages = speech.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
+    const node = speech.filter(s => !!s.started)[0]
+
     return {
       messages,
-      started: campaign.nodes[0].id
+      started: this._getStarted(node, chatbotCampaigns)
     }
+  }
+
+  _getStarted (node, campaigns) {
+    if (!node) {
+      const nodes = Object.values(
+        JSON.parse(campaigns[0].diagram)
+          .layers
+          .filter(m => m.type === 'diagram-nodes')[0]
+          .models
+      )
+      return nodes[0].id
+    }
+    return node.id
   }
 
   fabricate () {
