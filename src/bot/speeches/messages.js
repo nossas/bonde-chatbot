@@ -351,7 +351,7 @@ export default {
   ABOUT_NEWSLETTER: 'Periodicamente, eu envio aqui pelo inbox o Radar Feminista do Congresso Nacional - um boletim feminista sobre os babados que rolam por lá, feito junto das mujeres maravilhosas do Cfemea. Para receber o próximo assim que for ao ar, me responda com #RadarFeminista 💪💪',
 
   RADAR_FEMINISTA: 'Informação é poder! Assim que o próximo Radar Feminista do Congresso Nacional for ao ar, eu te envio por aqui ;) Enquanto isso, digite "menu" para saber o que mais eu tenho pra contar!',
-
+  I_PRESSED: 'AMO! Bem-vinda, maravilhosa. 🌈 Tenho certeza que vamos nos dar muito bem! Por aqui vou traduzir o politiquês e te deixar por dentro de tudo que rola no Congresso Nacional (e no país!) que impacte na vida das mulheres. Se quiser conhecer melhor essa robôzinha que vos fala, manda um "Começar" e vamos juntas! 👯‍♀️',   
   //
   // How
   //
@@ -639,8 +639,9 @@ export default {
   DONT_WANT_KNOW: 'Sem problemas - não te envio mais novidades da campanha #EducaçãoFazMeuGênero! Se não quiser mais receber nenhuma mensagem minha, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
 
   WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪',
-
-  // Emojis
+  ABOUT_PL_3723: 'Miga, o PL 3723/2019 é pane to-tal! Esse projeto de lei do Bolsonaro facilita a posse e o porte de armas no Brasil, retirando a necessidade de comprovação de capacidade técnica e até o laudo psicológico para ter uma arma! É pra dar tilt né?⚠️O Brasil é o 5º país em feminicídios no mundo e 40% das mulheres assassinadas em casa são mortas por arma de fogo. Nem precisa de inteligência artificial pra saber que se o PL 3723/2019 for aprovado, as mulheres vão estar ainda mais vulneráveis! 😨 A gente não pode deixar isso acontecer!',  
+  
+// Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',
 
   EMOJI_JOY: '😂',
