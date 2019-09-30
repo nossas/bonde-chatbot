@@ -51,7 +51,7 @@ const messageSequential = (node, campaign, store) => {
 
     if (node.type === 'message') {
       store.push(node.text)
-      if (!!child) {
+      if (child) {
         // continue with flux only if link exists
         messageSequential(child, campaign, store)
       }

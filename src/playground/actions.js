@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import { client as GraphQLAPI } from './graphql'
 
-export const subscribeChatbots = (next, error) => {
+export const subscribeChatbots = () => {
   const chatbotsQuery = gql`
     subscription Chatbots {
       chatbots {

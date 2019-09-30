@@ -128,7 +128,7 @@ class Factory {
         name: 'BETA',
         m_me: 'https://m.me/beta.feminista'
       }
-      const botData = { ...settings, data }
+      const botData = { ...settings, id: chatbotId, data }
 
       // Configure started button
       bot.setGetStartedButton({ payload: chatbot.speech.started })
@@ -175,36 +175,5 @@ class Factory {
     }))
   }
 }
-
-/*
-[PERSISTENT_MENU]: {
-  locale: 'default',
-  composer_input_disabled: false,
-  call_to_actions: [
-    {
-      title: 'Parem a PEC 29!',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_O_1
-    },
-    {
-      title: 'Outras Ações',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_ACT
-    },
-    {
-      title: 'Mais sobre a Beta',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_MAIS
-    }
-  ]
-},
-
-[GET_STARTED]: {
-  text: botSpeeches.messages.I_AM_BETA,
-  quick_replies: [
-    quickReply(V2_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO)
-  ]
-}
-*/
 
 export default Factory
