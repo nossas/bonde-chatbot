@@ -907,12 +907,12 @@ export default botData => ({
       botSpeeches.messages.ACT_NOW,
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.TITLE_PEC_29,
-          botSpeeches.carouselTexts.SUBTITLE_PEC_29,
-          botSpeeches.carouselTexts.IMAGE_PEC_29,
+          botSpeeches.carouselTexts.TITLE_PL_3723,
+          botSpeeches.carouselTexts.SUBTITLE_PL_3723,
+          botSpeeches.carouselTexts.IMAGE_PL_3723,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_PEC_29,
+              title: botSpeeches.carouselTexts.BUTTON_PL_3723,
               payload: V2_QUICK_REPLY_O_1
             })
           ]
