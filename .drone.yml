@@ -55,6 +55,7 @@ pipeline:
       - yarn
       - yarn lint
       - yarn test
+      - yarn build
     when:
       event: tag
 
