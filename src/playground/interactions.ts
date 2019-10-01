@@ -31,7 +31,7 @@ export const insert = async (opts: ChatbotInteractionOpts): Promise => {
         chatbot_id: chatbotId,
         context_recipient_id: recipientId,
         context_sender_id: senderId,
-        interaction: JSON.stringify(interaction)
+        interaction: interaction
       }
     }
   })
@@ -43,6 +43,9 @@ export interface ChatbotLastInteractionOpts {
 }
 
 export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise => {
+  // in this case the last interaction will always be the penultimate
+  // database record, as interaction is recorded in the database before
+  // processing any message
   const { chatbotId, recipientId } = opts
 
   const chatbotInteractionsQuery = gql`
@@ -53,6 +56,7 @@ export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise
           chatbot_id: { _eq: $chatbotId }
         },
         limit: 1,
+        offset: 1,
         order_by: { created_at: desc }
       ) {
         context_recipient_id

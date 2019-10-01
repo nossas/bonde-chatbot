@@ -90,9 +90,11 @@ class Factory {
     const speech = chatbotCampaigns.map(writeSpeech)
     // Merge all messages
     const messages = speech.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
+    const actions = speech.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
     const node = speech.filter(s => !!s.started)[0]
 
     return {
+      actions,
       messages,
       started: this._getStarted(node, chatbotCampaigns)
     }
@@ -161,7 +163,11 @@ class Factory {
         bot,
         () => {
           const chatbot = this.globalState[chatbotId]
-          return { version: 'v2', messages: chatbot.speech.messages }
+          return {
+            version: 'v2',
+            messages: chatbot.speech.messages,
+            actions: chatbot.speech.actions
+          }
         },
         botData
       ]

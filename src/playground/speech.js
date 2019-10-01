@@ -35,13 +35,13 @@ const quickReply = (node, campaign) => ({
 const hasQuickReply = (node) => node && node.kind === 'reply'
 
 const hasTexts = (node, campaign) => {
-  const hasText = node && node.type === 'message'
+  const hasText = node && (node.type === 'message' || node.type === 'action')
   // verifica se possue mensagens subsequentes
   const ports = node.ports.filter(p => !p.in && !!p.links[0])
   return hasText && ports.length > 0
 }
 
-const messageSequential = (node, campaign, store) => {
+const messageSequential = (node, campaign, store, actions) => {
   // TODO: verificar se existem mensagens subsequentes
   const ports = node.ports.filter(p => !p.in && !!p.links[0])
   if (ports.length > 0) {
@@ -55,12 +55,19 @@ const messageSequential = (node, campaign, store) => {
         // continue with flux only if link exists
         messageSequential(child, campaign, store)
       }
-    } else {
+    } else if (node.type === 'reply') {
       const reply = quickReply(node, campaign)
       store.push(reply)
+    } else if (node.type === 'action') {
+      // TODO: configure on diagram
+      store.push(node.text)
+      actions.push({ [node.id]: node })
+    } else {
+      throw new Error(`${node.type} message node type not supported.`)
     }
   } else {
     store.push(node.text)
+
   }
 }
 
@@ -81,9 +88,9 @@ export const writeSpeech = (campaign) => {
       .filter(m => m.type === 'diagram-nodes')[0]
       .models
   )
-
+  const actionList = []
   // Parse diagram to speech structure
-  const speech = nodes.map(node => {
+  const messageList = nodes.map(node => {
     if (hasQuickReply(node)) {
       return {
         [node.id]: quickReply(node, { links, nodes })
@@ -91,9 +98,15 @@ export const writeSpeech = (campaign) => {
     } else if (hasTexts(node, { links, nodes })) {
       // TODO: retornar lista de mensagens até checar no próximo quick_reply
       const store = []
-      messageSequential(node, { links, nodes }, store)
+      messageSequential(node, { links, nodes }, store, actionList)
       return {
         [node.id]: store
+      }
+    } else if (node.type === 'action') {
+      // register action
+      actionList.push({ [node.id]: node })
+      return {
+        [node.id]: node.text
       }
     } else {
       return {
@@ -103,14 +116,22 @@ export const writeSpeech = (campaign) => {
   })
 
   // Change speech list to messages object.
-  const messages = {}
-  speech.forEach(node => {
-    Object.keys(node).forEach(uuid => {
-      messages[uuid] = node[uuid]
+  const toOBJ = (array, obj) => {
+    array.forEach(node => {
+      Object.keys(node).forEach(uuid => {
+        obj[uuid] = node[uuid]
+      })
     })
-  })
+  }
+
+  const messages = {}
+  toOBJ(messageList, messages)
+
+  const actions = {}
+  toOBJ(actionList, actions)
 
   return {
+    actions,
     messages,
     started: campaign.get_started ? nodes[0].id : false
   }

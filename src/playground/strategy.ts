@@ -12,102 +12,36 @@ export interface EnsureOpts {
   reply: any
 }
 
+/*const */
+
 const handleEnsure = (opts: EnsureOpts) => () => {
   const { speech, payload, profile, botData, reply } = opts
   return UserInteractions
     .lastInteraction({ chatbotId: botData.id, recipientId: payload.recipient.id })
     .then((interactions) => {
       const last = interactions[0]
-      let dispatched = false
-      // console.log('interactions:', interactions)
       if (last && last.interaction) {
-        const interaction = JSON.parse(last.interaction)
-        if (interaction.is_bot) {
-          if (interaction.action === undefined) dispatched = false
-          else console.log('implement logic to context message')
-          // TODO: implement logic this get context message
+        const interaction = last.interaction
+        if (interaction.is_bot && interaction.action !== undefined) {
+          const action = speech.actions[interaction.action]
+          if (action) {
+            console.log('Implement your action configured.')
+            if (!isemail.validate(payload.message.text)) {
+              reply('Esse e-mail não é válido, inseria novamente', interaction.action)
+              return Promise.resolve(true)
+            } else {
+              // TODO:
+              // - Submit action
+              // - Next mensagem on success
+              reply('E-mail válido, pressão confirmada', interaction.action)
+              return Promise.resolve(true)
+            }
+          }
+        } else {
+          console.log('last interaction not bot', interaction)
         }
       }
-      /* switch (interaction.action) {
-            case speech.actions.V2_QUICK_REPLY_PETITION_NAME:
-              const nameAction = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME // eslint-disable-line
-              const nameMessage = speech.messages[nameAction] // eslint-disable-line
-              reply(nameMessage, nameAction)
-              dispatched = true
-              break
-            case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME:
-              const surnameAction = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL // eslint-disable-line
-              const surnameMessage = speech.messages[surnameAction] // eslint-disable-line
-              reply(surnameMessage, surnameAction)
-              dispatched = true
-              break
-            case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL:
-            case speech.actions.V2_PETITION_EMAIL_WRONG:
-              const emailAction = !isemail.validate(payload.message.text) // eslint-disable-line
-                ? speech.actions.V2_PETITION_EMAIL_WRONG
-                : speech.actions.V2_PETITION_EMAIL_OK
-              const emailMessage = speech.messages[emailAction] // eslint-disable-line
-
-              if (emailAction === speech.actions.V2_PETITION_EMAIL_OK) {
-                sendForm({ payload })
-              }
-              reply(emailMessage, emailAction)
-              dispatched = true
-              break
-            // Petição caso 2
-            case speech.actions.V2_QUICK_REPLY_PETITION_NAME1:
-              const nameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1 // eslint-disable-line
-              const nameMessage1 = speech.messages[nameAction1] // eslint-disable-line
-              reply(nameMessage1, nameAction1)
-              dispatched = true
-              break
-            case speech.actions.V2_QUICK_REPLY_PETITION_SURNAME1:
-              const surnameAction1 = speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1 // eslint-disable-line
-              const surnameMessage1 = speech.messages[surnameAction1] // eslint-disable-line
-              reply(surnameMessage1, surnameAction1)
-              dispatched = true
-              break
-            case speech.actions.V2_QUICK_REPLY_PETITION_EMAIL1:
-            case speech.actions.V2_PETITION_EMAIL_WRONG1:
-              const emailAction1 = !isemail.validate(payload.message.text) // eslint-disable-line
-                ? speech.actions.V2_PETITION_EMAIL_WRONG1
-                : speech.actions.V2_PETITION_EMAIL_OK1
-              const emailMessage1 = speech.messages[emailAction1] // eslint-disable-line
-
-              if (emailAction1 === speech.actions.V2_PETITION_EMAIL_OK1) {
-                sendForm({ payload })
-              }
-              reply(emailMessage1, emailAction1)
-              dispatched = true
-              break
-            case speech.actions.V2_QUICK_REPLY_G_10:
-            case speech.actions.V2_EMAIL_ADDRESS_WRONG:
-            case speech.actions.VMDM_QUICK_REPLY_I:
-            case speech.actions.VMDM_EMAIL_ADDRESS_WRONG:
-              let action = !isemail.validate(payload.message.text) // eslint-disable-line
-                ? speech.actions.V2_EMAIL_ADDRESS_WRONG
-                : speech.actions.V2_EMAIL_ADDRESS_OK
-
-              if (interaction.action.startsWith('VMDM_')) {
-                action = !isemail.validate(payload.message.text)
-                  ? speech.actions.VMDM_EMAIL_ADDRESS_WRONG
-                  : speech.actions.VMDM_EMAIL_ADDRESS_OK
-              }
-
-              const replyMessage = speech.messages[action].constructor === Function // eslint-disable-line
-                ? speech.messages[action](profile)
-                : speech.messages[action]
-
-              if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
-                botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
-              }
-
-              reply(replyMessage, action)
-              dispatched = true
-              break
-          }
-        } */
-      return dispatched
+      return Promise.resolve(false)
     })
     .catch(err => {
       console.error(err)

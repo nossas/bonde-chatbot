@@ -30,7 +30,7 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
         reply(msg, callback)
       })
       .catch(err => {
-        console.error(err)
+        console.error('helpers.ts :: handleReplyWithSave :: saveAndReplay ->', err)
       })
   }
 
@@ -95,7 +95,8 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
 
     if (message) replyWithSave(message, action)
     else {
-      actions.ensure()
+      actions
+        .ensure()
         .then(dispatched => {
           if (!dispatched && payload.message && payload.message.text) {
             botAI
@@ -103,15 +104,16 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
               .message(text)
               .then(botAI.resolvers.speechAction({ speech, reply: replyWithSave }))
               .catch(err => {
+                console.error('helpers.ts :: receive :: BotAI ->', err)
                 replyWithSave(botSpeeches.messages.BUGGED_OUT)
-                console.error(`${JSON.stringify(err)}`.red)
               })
-          } else {
+          } else if (!dispatched) {
             replyWithSave(botSpeeches.messages.BUGGED_OUT)
           }
         })
         .catch(err => {
-          console.error(err)
+          console.error('helpers.ts :: receive :: ensure ->', err)
+          replyWithSave(botSpeeches.messages.BUGGED_OUT)
         })
     }
   })
