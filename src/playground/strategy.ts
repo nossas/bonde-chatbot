@@ -4,6 +4,12 @@ import * as botSkills from '../bot/skills'
 import sendForm from '../bot/speeches/v2/actions/send-form'
 import * as UserInteractions from './interactions'
 
+const EMAIL_ADDRESS_WRONG = `
+Ops, parece que você digitou um email inválido. 
+Pode checar o endereço e mandar aqui de novo, por favor? 
+#NuncaTePediNada 🙈
+`
+
 export interface EnsureOpts {
   speech: any,
   payload: any,
@@ -12,28 +18,27 @@ export interface EnsureOpts {
   reply: any
 }
 
-/*const */
-
 const handleEnsure = (opts: EnsureOpts) => () => {
   const { speech, payload, profile, botData, reply } = opts
   return UserInteractions
     .lastInteraction({ chatbotId: botData.id, recipientId: payload.recipient.id })
     .then((interactions) => {
       const last = interactions[0]
+
       if (last && last.interaction) {
         const interaction = last.interaction
+
         if (interaction.is_bot && interaction.action !== undefined) {
           const action = speech.actions[interaction.action]
           if (action) {
-            console.log('Implement your action configured.')
             if (!isemail.validate(payload.message.text)) {
-              reply('Esse e-mail não é válido, inseria novamente', interaction.action)
+              // TODO: Remove snippet code
+              reply(EMAIL_ADDRESS_WRONG, interaction.action)
               return Promise.resolve(true)
             } else {
               // TODO:
               // - Submit action
-              // - Next mensagem on success
-              reply('E-mail válido, pressão confirmada', interaction.action)
+              reply(speech.messages[action.target])
               return Promise.resolve(true)
             }
           }

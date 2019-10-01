@@ -35,7 +35,7 @@ const quickReply = (node, campaign) => ({
 const hasQuickReply = (node) => node && node.kind === 'reply'
 
 const hasTexts = (node, campaign) => {
-  const hasText = node && (node.type === 'message' || node.type === 'action')
+  const hasText = node && node.type === 'message'
   // verifica se possue mensagens subsequentes
   const ports = node.ports.filter(p => !p.in && !!p.links[0])
   return hasText && ports.length > 0
@@ -59,9 +59,8 @@ const messageSequential = (node, campaign, store, actions) => {
       const reply = quickReply(node, campaign)
       store.push(reply)
     } else if (node.type === 'action') {
-      // TODO: configure on diagram
       store.push(node.text)
-      actions.push({ [node.id]: node })
+      actions.push({ [node.id]: { node, target: target } })
     } else {
       throw new Error(`${node.type} message node type not supported.`)
     }
@@ -103,10 +102,10 @@ export const writeSpeech = (campaign) => {
         [node.id]: store
       }
     } else if (node.type === 'action') {
-      // register action
-      actionList.push({ [node.id]: node })
+      const store = []
+      messageSequential(node, { links, nodes }, store, actionList)
       return {
-        [node.id]: node.text
+        [node.id]: store
       }
     } else {
       return {
