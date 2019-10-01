@@ -1,6 +1,6 @@
 import { client as graphqlClient } from '../../../../graphql'
 import * as graphqlQueries from '../../../../graphql/queries'
-import * as botSkills from 'skills'
+import * as botSkills from '../../../skills'
 
 //
 // Quick reply actions (EXAMPLE)
@@ -29,7 +29,7 @@ export default ({ speech, action, payload, profile, botData }) => {
           const [last] = interactions
           const interaction = JSON.parse(last.interaction)
 
-          Promise.resolve(botSkills.pressure.send({ profile, botData, interaction }))
+          Promise.resolve(botSkills.pressure.send({ profile, botData, senderEmail: interaction }))
         })
         .catch(err => Promise.reject(`Speeches Quick Reply Error: ${JSON.stringify(err)}`.red))
       dispatched = true

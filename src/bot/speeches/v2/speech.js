@@ -481,7 +481,7 @@ export default botData => ({
           buttonTemplate.shareCampaign({
             title: 'Uma mulher que foi estuprada não pode ser obrigada a permanecer grávida! ',
             subtitle: 'Pressione contra a PEC 29! ',
-            imageURL: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
+            imageUrl: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
             url: 'https://m.me/beta.feminista?ref=pec_29'
           })
         ]
