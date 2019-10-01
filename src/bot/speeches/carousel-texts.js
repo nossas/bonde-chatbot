@@ -83,6 +83,10 @@ export default {
   TITLE_PEC_29: 'Parem a PEC 29!',
   SUBTITLE_PEC_29: 'Pressionar senadores/as',
   IMAGE_PEC_29: 'https://s3.amazonaws.com/chatbox-beta/pec29/pec29.jpg',
-  BUTTON_PEC_29: 'Clique aqui!!'
+  BUTTON_PEC_29: 'Clique aqui!!',
 
+  TITLE_PL_3723: 'Mais Armas Mais Feminicídio',
+  SUBTITLE_PL_3723: 'Pressionar deputadas(os)',
+  IMAGE_PL_3723: 'https://chatbox-beta.s3.amazonaws.com/campaigns/carrossel-pl-3723.png',
+  BUTTON_PL_3723: 'Clique aqui'
 }
