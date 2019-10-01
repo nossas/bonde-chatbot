@@ -6,7 +6,7 @@ import jwtDecode from 'jwt-decode'
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  const decoded = jwtDecode(process.env.JWT_TOKEN)
+  const decoded: any = jwtDecode(process.env.JWT_TOKEN || '')
   const currentTime = Date.now().valueOf() / 1000
   const fetchBotConfigurations = graphqlClient.query({ query: graphqlQueries.fetchBotConfigurations })
 
