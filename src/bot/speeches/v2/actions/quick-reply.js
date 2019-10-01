@@ -1,7 +1,7 @@
 // import { client as graphqlClient } from 'graphql'
 // import * as graphqlQueries from '../../../graphql/queries'
 // import * as botSkills from 'skills'
-import sendForm from './send-form'
+// import sendForm from './send-form'
 
 //
 // Quick reply actions (EXAMPLE)
@@ -12,7 +12,9 @@ import sendForm from './send-form'
 // @param [required] profile {Object} User's profile object received by Facebook Messenger API
 // @param [required] botData {Object} Bot's config data object
 // @return {Boolean} Tells if any action was dispatched
-//
+
+// form assign not working
+
 export default ({ speech, action, payload, profile, botData }) => {
   let dispatched = false
   console.log('action no QR: ', action)
@@ -22,10 +24,10 @@ export default ({ speech, action, payload, profile, botData }) => {
     //
     case speech.actions.V2_QUICK_REPLY_M6_NAME:
       console.log('Entrou no reply name!')
-      sendForm({ profile, botData, senderName: payload.message.text })
+      // sendForm({ profile, botData, senderName: payload.message.text })
       const replyMessage = speech.messages[speech.actions.V2_QUICK_REPLY_M6_SURNAME] // eslint-disable-line
       // const action = V2_QUICK_REPLY_M6_SURNAME
-      reply(replyMessage, action) // eslint-disable-line
+      // reply(replyMessage, action) // eslint-disable-line
       dispatched = true
       break
     /* case speech.actions.QUICK_REPLY_H:

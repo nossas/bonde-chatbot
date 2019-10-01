@@ -61,5 +61,11 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
       "rootDir": "src",
       "outDir": "dist"
-  }
+  },
+  "exclude": [
+    "./jest.config.js"
+  ],
+  "include": [
+    "./src"
+  ]
 }

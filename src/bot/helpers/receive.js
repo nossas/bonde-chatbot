@@ -32,7 +32,7 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
         .then(dispatched => {
           const { text } = payload.message
 
-          !dispatched && botAI.client().message(text)
+          !dispatched && botAI.client().message(text, {})
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
               reply(botSpeeches.messages.BUGGED_OUT)
