@@ -1,10 +1,10 @@
 import 'colors'
 
 import Queue from 'bull'
-import BotFactory from 'bot/factory'
-import * as botUtils from 'bot/speeches/utils'
-import { client as graphqlClient } from 'graphql'
-import * as graphqlMutations from 'graphql/mutations'
+import BotFactory from '../bot/factory'
+import * as botUtils from '../bot/speeches/utils'
+import { client as graphqlClient } from '../graphql'
+import * as graphqlMutations from '../graphql/mutations'
 
 require('dotenv').config()
 const speech = require(`../bot/speeches/${process.env.SPEECH_VERSION || 'v0'}`).speech
@@ -32,7 +32,7 @@ queue.on('completed', (job, result) => {
   job.remove()
 })
 
-queue.on('failed', (job, err) => {
+queue.on('failed', (job, err: any) => {
   console.info(`bull:bot-mass-message:${job.id} ~> status [failed]`.red)
 
   const { facebookBotCampaignActivistId } = err.data
@@ -59,7 +59,7 @@ new BotFactory(speech)
             quickReplyButtonText
           } = data
 
-          const optionalMessageKeys = {}
+          const optionalMessageKeys: any = {}
           if (quickReplyRedirect && quickReplyButtonText) {
             optionalMessageKeys.quick_replies = [
               botUtils.quickReply(quickReplyRedirect, quickReplyButtonText)
@@ -70,7 +70,7 @@ new BotFactory(speech)
             fbContextRecipientId,
             { text, ...optionalMessageKeys },
             (err, info) => {
-              const args = err ? [{ err, data }] : [null, { info, data }]
+              const args = err ? [{ err, data, name: '', message: '' }] : [null, { info, data, name: '', message: '' }]
               done(...args)
             }
           )
