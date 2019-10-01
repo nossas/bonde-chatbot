@@ -40,6 +40,8 @@ export default {
   CALL_INBOX_1: 'Assim que meu radar encontrar uma oportunidade de ação, eu mando um alerta por aqui te convocando pra fazer barulho 📣  Quer ser minha aliada na luta pelos direitos das mulheres?',
   CALL_INBOX_2: gif('https://goo.gl/Rao6n1'),
 
+  CALL_TO_START: 'AMO! Bem-vinda, maravilhosa. 🌈 Tenho certeza que vamos nos dar muito bem! Por aqui vou traduzir o politiquês e te deixar por dentro de tudo que rola no Congresso Nacional (e no país!) que impacte na vida das mulheres. Se quiser conhecer melhor essa robôzinha que vos fala, manda um "Começar" e vamos juntas! 👯‍♀️',
+
   /* BETA_INTRODUCTION: 'Fui programada para ajudar mulheres na luta pelos seus direitos. 🤖💜',
   BETA_INTRODUCTION_1: 'Meus algoritmos monitoram constantemente o que tá rolando no campo político brasileiro pra identificar votações e discussões que podem impactar a vida das mulheres. Projetos de lei, PECs, ações no STF… Tem de tudo, viu?',
   BETA_INTRODUCTION_2: 'Quando uma dessas propostas entra em pauta, eu traduzo o politiquês pro Português, mando um alerta pra você aqui no inbox e te convido a fazer a sua opinião chegar até os políticos em Brasília - ou onde quer que seja 📣📣📣 ',
@@ -111,6 +113,17 @@ export default {
   MAP_EMAIL: 'Email: ',
   MAP_CITY: 'Cidade: ',
   MAP_REGISTERED: 'Você registrou o caso? Sim ou não',
+
+  //
+  // PL 3723
+  //
+
+  PL_3723: 'Mana, segura que trago bombas! 💣 Vai ser votado HOJE na Câmara dos Deputados o projeto de lei do Bolsonaro para facilitar a posse e o porte de armas no Brasil. No país em que 40% das mulheres assassinadas em casa foram mortas por armas de fogo, não precisa de inteligência artificial pra saber que aprovar esse projeto significa mais feminicídios, né? 😡 Mas a gente tá ligada e no que depender desta robô feminista, não vai passar! Mapeamos os deputados que ainda não decidiram seu voto e temos poucas horas pra convencê-los e impedir essa ameaça! Mas precisamos ser milhares! Tá comigo nessa?',
+  PL_3723_1: 'Pre-para pro show de horrores: o PL 3723/2019 dispensa a comprovação de capacidade técnica e de laudo psicológico pra quem quiser ter uma arma em casa! #SOS E não para por aí, viu? Ele também diminui a idade mínima pra compra de armas de fogo de 25 pra 21 anos. Quem tiver mais de 25 e comprovar que está sob ameaça ainda vai poder andar armado pelas ruas. Quero nem imaginar o impacto na vida das mulheres 😨',
+  PL_3723_1_1: 'A gente tá falando do Brasil, o 5º país em número de feminicídios NO MUNDO, e onde o número de mulheres assassinadas por armas de fogo é maior em casa do que nas ruas. E sabe quem puxa o gatilho? Muitas vezes são os próprios familiares, companheiros e ex-companheiros das vítimas. Como as mulheres vão se proteger se a violência começa dentro de casa? É pra dar tilt, né? ⚠️ Temos que fazer alguma coisa! Vem comigo?',
+  PL_3723_2: 'Sabia que podia contar com você! 😍 O PL vai ser votado na Câmara dos Deputados e temos poucas horas pra LOTAR a caixa de e-mail dos deputados que ainda estão indecisos, pra que eles vejam que estamos mobilizadas, desçam do muro e fiquem do lado das mulheres. 💪 O esquema é assim: preparei uma mensagem padrão e vou usar meus dotes de robô 🤖 pra enviá-la em seu nome pra cada um deles. Temos pouco tempo pra pressioná-los e garantir que barrem esse PL!',
+  PL_3723_3: 'Senhores/as deputados/as, uma vez que o Brasil é o 5º no ranking mundial de feminicídio, que 40% das mulheres assassinadas em casa são mortas por armas de fogo e que 83,5% dos responsáveis são seus próprios familiares e companheiros, o PL 3723/2019 representa uma ameaça para todas as mulheres brasileiras. Ao dispensar comprovação de capacidade técnica, laudo psicológico e a negativa de antecedentes criminais para a posse de armas de fogos no Brasil, o PL vulnerabiliza ainda mais as mulheres. Por isso, espero que V.Ex. rejeite o projeto em plenário! Para responder publicamente, envie um email para beta@nossas.org.',
+
   //
   // Mais sobre a Beta
   //
@@ -155,8 +168,8 @@ export default {
 
   BETA_DID: 'Muito barulho! Convoquei todo mundo que já falou comigo pra enviar emails pros deputados da Comissão Especial. Foram 35.000 mensagens pra cada político! E eles não seguraram a pressão: adiaram as votações 7 vezes. As definições de arraso foram atualizadas! 💪💪💪 Mas essa foi só a 1a temporada.',
 
-  PEC: 'As PECs estão numa situação esquisita: em momentos de Intervenção Federal, como está acontecendo agora no RJ, alterações na Constituição (PECs) ficam suspensas. ',
-  PEC_1: 'Mas o Rodrigo Maia (DEM), presidente da Câmara dos Deputados, já avisou que elas podem avançar dentro das comissões, só não podem ser votadas em plenário - capítulo final da tramitação de uma proposta. Ou seja, continuo atenta!  👀',
+  PEC: 'Em 2018, com a Intervenção Federal no RJ, alterações na Constituição (PECs) ficaram suspensas. Mas 2019 mal apontou no horizonte e os deputados trataram de desengavetar esse show de horrores. ',
+  PEC_1: 'Agora, a tramitação da proposta depende da criação de uma Comissão Especial para proferir parecer à PEC 181/2015. O último status é de abril desse ano 🙄, ou seja, continuo atenta! 🚨',
 
   PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
   PEC_HISTORY_1: '➡️ www.paremocavalodetroia.org/',
@@ -639,6 +652,8 @@ export default {
   DONT_WANT_KNOW: 'Sem problemas - não te envio mais novidades da campanha #EducaçãoFazMeuGênero! Se não quiser mais receber nenhuma mensagem minha, é só ir em configurações - dentro do nosso chat mesmo -, clicar em gerenciar mensagens e desativar todas as mensagens. Se mudar de ideia, é só puxar assunto comigo novamente. Não vou guardar mágoa, prometo. 😜',
 
   WHAT_IS_ADPF442: 'Uma ADPF é uma ferramenta jurídica feita para questionar alguma lei que fere direitos garantidos na Constituição - e que é julgada diretamente pelo Supremo Tribunal Federal (STF). A ADPF 442 propõe a descriminalização do aborto até a 12a semana de gestação, é a nossa maior chance! 💪💪',
+
+  ABOUT_PL_3723: 'Miga, o PL 3723/2019 é pane to-tal! Esse projeto de lei do Bolsonaro facilita a posse e o porte de armas no Brasil, retirando a necessidade de comprovação de capacidade técnica e até o laudo psicológico para ter uma arma! É pra dar tilt né?⚠️O Brasil é o 5º país em feminicídios no mundo e 40% das mulheres assassinadas em casa são mortas por arma de fogo. Nem precisa de inteligência artificial pra saber que se o PL 3723/2019 for aprovado, as mulheres vão estar ainda mais vulneráveis! 😨 A gente não pode deixar isso acontecer!',
 
   // Emojis
   EMOJI_MANY_HEARTS: '❤️ ❤️ ❤️',

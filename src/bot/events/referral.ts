@@ -3,10 +3,10 @@ export default (bot, speech, botData) => (payload, reply) => {
   var message = ''
   console.log(payload.referral)
   switch (ref) {
-    case 'pec_29':
+    case 'pl_3723':
       message = speech.messages.V2_QUICK_REPLY_O_1
       break
-    case 'pec_29_action':
+    case 'pl_3723_action':
       message = speech.messages.V2_QUICK_REPLY_O_3
       break
     case 'cotas_intro':
