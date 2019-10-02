@@ -4,6 +4,6 @@ MAINTAINER Nossas <tech@nossas.org>
 RUN mkdir /code
 WORKDIR /code
 
-COPY . .
+COPY . /code
 
 CMD ["yarn", "start"]
