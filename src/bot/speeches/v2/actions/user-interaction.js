@@ -23,12 +23,13 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
   .then(({ data: { fetchBotLastInteraction: { interactions } } }) => {
     const [last] = interactions
     let dispatched = false
-    // console.log('interactions:', interactions)
     if (last && last.interaction) {
       const interaction = JSON.parse(last.interaction)
       if (interaction.is_bot) {
         if (interaction.action === undefined) dispatched = false
         else {
+          console.log('payload:', payload)
+          console.log('interaction.action:', interaction.action)
           switch (interaction.action) {
             case speech.actions.V2_QUICK_REPLY_PETITION_NAME:
               const nameAction = speech.actions.V2_QUICK_REPLY_PETITION_SURNAME // eslint-disable-line
@@ -102,6 +103,9 @@ export default ({ speech, payload, profile, botData, reply }) => graphqlClient.q
               if (action === speech.actions.V2_EMAIL_ADDRESS_OK) {
                 botSkills.pressure.send({ profile, botData, senderEmail: payload.message.text })
               }
+
+              console.log('replyMessage:', replyMessage)
+              console.log('action:', action)
 
               reply(replyMessage, action)
               dispatched = true
