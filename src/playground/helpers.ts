@@ -1,6 +1,7 @@
 import 'colors'
 /* import * as botAI from '../ai' */
 /* import * as botHelpers from '../helpers' */
+import * as botAI from '../bot/ai'
 import * as botSpeeches from '../bot/speeches'
 import actionStrategy from './strategy'
 import * as ChatbotInteractions from './interactions'
@@ -17,7 +18,7 @@ import * as ChatbotInteractions from './interactions'
 export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) => (message, action) => {
   // Function that saves the interaction on database
   // and sends the message to the Messenger.
-  const saveAndReply = (msg, callback) => {
+  const saveAndReply = (msg, callback?: any) => {
     const opts = {
       chatbotId: botData.id,
       recipientId: payload.recipient.id,
@@ -102,19 +103,19 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
           if (!dispatched && payload.message && payload.message.text) {
             botAI
               .client()
-              .message(text)
+              .message(payload.message.text, {})
               .then(botAI.resolvers.speechAction({ speech, reply: replyWithSave }))
               .catch(err => {
                 console.error('helpers.ts :: receive :: BotAI ->', err)
-                replyWithSave(botSpeeches.messages.BUGGED_OUT)
+                replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
               })
           } else if (!dispatched) {
-            replyWithSave(botSpeeches.messages.BUGGED_OUT)
+            replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
           }
         })
         .catch(err => {
           console.error('helpers.ts :: receive :: ensure ->', err)
-          replyWithSave(botSpeeches.messages.BUGGED_OUT)
+          replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
         })
     }
   })

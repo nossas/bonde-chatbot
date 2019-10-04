@@ -8,7 +8,7 @@ export interface ChatbotInteractionOpts {
   interaction: any
 }
 
-export const insert = async (opts: ChatbotInteractionOpts): Promise => {
+export const insert = async (opts: ChatbotInteractionOpts): Promise<any> => {
   const { recipientId, senderId, chatbotId, interaction } = opts
 
   const insertChatbotInterationMutation = gql`
@@ -42,7 +42,7 @@ export interface ChatbotLastInteractionOpts {
   recipientId: string
 }
 
-export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise => {
+export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise<any> => {
   // in this case the last interaction will always be the penultimate
   // database record, as interaction is recorded in the database before
   // processing any message
