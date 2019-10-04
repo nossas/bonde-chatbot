@@ -33,12 +33,12 @@ const handleEnsure = (opts: EnsureOpts) => () => {
           if (action) {
             if (!isemail.validate(payload.message.text)) {
               // TODO: Remove snippet code
-              reply(EMAIL_ADDRESS_WRONG, interaction.action)
+              reply(speech.messages[action.failureTarget], action.node.id)
               return Promise.resolve(true)
             } else {
               // TODO:
               // - Submit action
-              reply(speech.messages[action.target])
+              reply(speech.messages[action.successfullyTarget])
               return Promise.resolve(true)
             }
           }

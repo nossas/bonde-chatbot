@@ -18,6 +18,7 @@ export const subscribeChatbots = () => {
           status
           created_at
           updated_at
+          get_started
         }
         chatbot_settings (where: { channel: { _eq: "facebook" } }) {
           id

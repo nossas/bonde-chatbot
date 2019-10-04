@@ -87,21 +87,23 @@ class Factory {
   }
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
-    const speech = chatbotCampaigns.map(writeSpeech)
+    const speechs = chatbotCampaigns.map(writeSpeech)
     // Merge all messages
-    const messages = speech.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
-    const actions = speech.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
-    const node = speech.filter(s => !!s.started)[0]
+    const messages = speechs.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
+    const actions = speechs.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
+    const speech = speechs.filter(s => !!s.started)[0]
+
+    const started = this._getStarted(speech, chatbotCampaigns)
 
     return {
-      actions,
-      messages,
-      started: this._getStarted(node, chatbotCampaigns)
+      actions: actions.actions,
+      messages: messages.messages,
+      started
     }
   }
 
-  _getStarted (node, campaigns) {
-    if (!node) {
+  _getStarted (speech, campaigns) {
+    if (!speech) {
       const nodes = Object.values(
         JSON.parse(campaigns[0].diagram)
           .layers
@@ -110,7 +112,7 @@ class Factory {
       )
       return nodes[0].id
     }
-    return node.id
+    return speech.started
   }
 
   fabricate () {
@@ -157,7 +159,6 @@ class Factory {
       }
 
       bot.setPersistentMenu([persistentMenu])
-
       // Configure events
       const eventArgs = [
         bot,

@@ -92,6 +92,7 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
     // Speech message based on received quick reply action
     //
     const message = speech.messages[action]
+
     if (message) {
       replyWithSave(message, action)
     } else {

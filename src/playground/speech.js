@@ -59,14 +59,18 @@ const messageSequential = (node, campaign, store, actions) => {
       const reply = quickReply(node, campaign)
       store.push(reply)
     } else if (node.type === 'action') {
+      // TODO: entendender melhor a complexidade de cada acao
+      const successfully = node.ports.filter(p => !p.in && p.success)[0].links[0]
+      const failure = node.ports.filter(p => !p.in && !p.success)[0].links[0]
+      const successfullyTarget = campaign.links.filter(l => l.id === successfully)[0].target
+      const failureTarget = campaign.links.filter(l => l.id === failure)[0].target
       store.push(node.text)
-      actions.push({ [node.id]: { node, target: target } })
+      actions.push({ [node.id]: { node, successfullyTarget, failureTarget } })
     } else {
       throw new Error(`${node.type} message node type not supported.`)
     }
   } else {
     store.push(node.text)
-
   }
 }
 
@@ -129,9 +133,10 @@ export const writeSpeech = (campaign) => {
   const actions = {}
   toOBJ(actionList, actions)
 
-  return {
+  const speech = {
     actions,
     messages,
     started: campaign.get_started ? nodes[0].id : false
   }
+  return speech
 }
