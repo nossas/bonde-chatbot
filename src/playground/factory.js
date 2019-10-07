@@ -111,7 +111,8 @@ class Factory {
           .filter(m => m.type === 'diagram-nodes')[0]
           .models
       )
-      return nodes[0].id
+      // First message always more left position x
+      return nodes.sort((a, b) => a.x - b.x)[0].id
     }
     return speech.started
   }

@@ -132,10 +132,10 @@ export const writeSpeech = (campaign) => {
   const actions = {}
   toOBJ(actionList, actions)
 
-  const speech = {
+  return {
     actions,
     messages,
-    started: campaign.get_started ? nodes[0].id : false
+    // First message always more left position x
+    started: campaign.get_started ? nodes.sort((a, b) => a.x - b.x)[0].id : false
   }
-  return speech
 }
