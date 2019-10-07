@@ -105,7 +105,8 @@ class Factory {
   _getStarted (speech, campaigns) {
     if (!speech) {
       const nodes = Object.values(
-        JSON.parse(campaigns[0].diagram)
+        campaigns[0]
+          .diagram
           .layers
           .filter(m => m.type === 'diagram-nodes')[0]
           .models

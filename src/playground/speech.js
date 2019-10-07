@@ -75,8 +75,7 @@ const messageSequential = (node, campaign, store, actions) => {
 }
 
 export const writeSpeech = (campaign) => {
-  // Parse to JSON
-  const diagram = JSON.parse(campaign.diagram)
+  const diagram = campaign.diagram
 
   // Filter links and nodes on bonde-diagram
   const links = Object.values(
