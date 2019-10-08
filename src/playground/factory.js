@@ -87,22 +87,34 @@ class Factory {
   }
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
-    // TODO: Criar uma seleção configuravel
-    const { speech, campaign } = writeSpeech(
-      JSON.parse(chatbotCampaigns[0].diagram)
-    )
-    // Change speech list to messages object
-    const messages = {}
-    speech.forEach(node => {
-      Object.keys(node).forEach(key => {
-        messages[key] = node[key]
-      })
-    })
-    // TODO: Criar flag para identificar get_started
+    const speechs = chatbotCampaigns.map(writeSpeech)
+    // Merge all messages
+    const messages = speechs.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
+    const actions = speechs.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
+    const speech = speechs.filter(s => !!s.started)[0]
+
+    const started = this._getStarted(speech, chatbotCampaigns)
+
     return {
-      messages,
-      started: campaign.nodes[0].id
+      actions: actions.actions,
+      messages: messages.messages,
+      started
     }
+  }
+
+  _getStarted (speech, campaigns) {
+    if (!speech) {
+      const nodes = Object.values(
+        campaigns[0]
+          .diagram
+          .layers
+          .filter(m => m.type === 'diagram-nodes')[0]
+          .models
+      )
+      // First message always more left position x
+      return nodes.sort((a, b) => a.x - b.x)[0].id
+    }
+    return speech.started
   }
 
   fabricate () {
@@ -122,7 +134,7 @@ class Factory {
         name: 'BETA',
         m_me: 'https://m.me/beta.feminista'
       }
-      const botData = { ...settings, data }
+      const botData = { ...settings, id: chatbotId, data }
 
       // Configure started button
       bot.setGetStartedButton({ payload: chatbot.speech.started })
@@ -149,13 +161,16 @@ class Factory {
       }
 
       bot.setPersistentMenu([persistentMenu])
-
       // Configure events
       const eventArgs = [
         bot,
         () => {
           const chatbot = this.globalState[chatbotId]
-          return { version: 'v2', messages: chatbot.speech.messages }
+          return {
+            version: 'v2',
+            messages: chatbot.speech.messages,
+            actions: chatbot.speech.actions
+          }
         },
         botData
       ]
@@ -169,36 +184,5 @@ class Factory {
     }))
   }
 }
-
-/*
-[PERSISTENT_MENU]: {
-  locale: 'default',
-  composer_input_disabled: false,
-  call_to_actions: [
-    {
-      title: 'Parem a PEC 29!',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_O_1
-    },
-    {
-      title: 'Outras Ações',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_ACT
-    },
-    {
-      title: 'Mais sobre a Beta',
-      type: 'postback',
-      payload: V2_QUICK_REPLY_MAIS
-    }
-  ]
-},
-
-[GET_STARTED]: {
-  text: botSpeeches.messages.I_AM_BETA,
-  quick_replies: [
-    quickReply(V2_QUICK_REPLY_A, botSpeeches.buttonTexts.LETS_GO)
-  ]
-}
-*/
 
 export default Factory

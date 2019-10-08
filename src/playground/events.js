@@ -1,6 +1,6 @@
 import 'colors'
-import * as botHelpers from '../bot/helpers'
-import * as botInteractions from '../bot/interactions'
+import * as ChatbotHelpers from './helpers'
+import * as ChatbotInteractions from './interactions'
 
 // const payloadValidator = payload => {}
 
@@ -40,19 +40,29 @@ export const message = (bot, getSpeech, botData) => (payload, reply) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) return console.error(`${JSON.stringify(err)}`.red)
 
-    const interaction = { profile, payload }
-    botInteractions.save({ botData, payload, interaction })
+    const opts = {
+      chatbotId: botData.id,
+      recipientId: payload.recipient.id,
+      senderId: payload.sender.id,
+      interaction: { profile, payload }
+    }
+
+    ChatbotInteractions.insert(opts)
       .then(result => {
-        botHelpers.receive(bot, speech, botData)(payload, reply, action)
+        // Only receive message when save on database
+        ChatbotHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
       })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
+      .catch(err => {
+        console.log('errr on insert')
+        console.error(err)
+      })
   })
 }
 
 export const postback = (bot, getSpeech, botData) => (payload, reply) => {
   const speech = getSpeech()
-  botHelpers.receive(bot, speech, botData)(
+  ChatbotHelpers.receive(bot, speech, botData)(
     payload,
     reply,
     payload.postback.payload
