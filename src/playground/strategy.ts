@@ -2,6 +2,7 @@ import 'colors'
 import * as isemail from '../bot/utils/isemail'
 import * as botSkills from '../bot/skills'
 import sendForm from '../bot/speeches/v2/actions/send-form'
+import * as BotActions from './actions'
 import * as UserInteractions from './interactions'
 
 const EMAIL_ADDRESS_WRONG = `
@@ -32,14 +33,27 @@ const handleEnsure = (opts: EnsureOpts) => () => {
           const action = speech.actions[interaction.action]
           if (action) {
             if (!isemail.validate(payload.message.text)) {
-              // TODO: Remove snippet code
+              // Reply failure message with payload for action input
               reply(speech.messages[action.failureTarget], action.node.id)
               return Promise.resolve(true)
             } else {
-              // TODO:
-              // - Submit action
-              reply(speech.messages[action.successfullyTarget])
-              return Promise.resolve(true)
+              const activist = {
+                first_name: profile.first_name,
+                last_name: profile.last_name,
+                name: profile.name,
+                email: payload.message.text
+              }
+              const variables = { widget_id: Number(action.node.actionId), activist }
+              return BotActions
+                .press(variables)
+                .then(() => {
+                  reply(speech.messages[action.successfullyTarget])
+                  return Promise.resolve(true)
+                })
+                .catch((err) => {
+                  console.log('pressure error', err)
+                  return Promise.resolve(false)
+                })
             }
           }
         } else {
