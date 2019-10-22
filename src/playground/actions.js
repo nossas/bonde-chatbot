@@ -31,3 +31,38 @@ export const subscribeChatbots = () => {
 
   return GraphQLAPI.subscribe({ query: chatbotsQuery })
 }
+
+export const press = (variables) => {
+  const pressMutation = gql`
+    mutation Press ($widget_id: Int!, $activist: activists_insert_input!) {
+      insert_activist_pressures (
+          objects: {
+            widget_id: $widget_id,
+            activist: {
+              data: $activist,
+              on_conflict: {
+                constraint: activists_email_key,
+                update_columns: [
+                  name,
+                  first_name,
+                  last_name
+                ]
+              },
+            }
+          }
+      ) {
+        returning {
+          id
+          activist {
+            id
+            name
+            first_name
+            last_name
+            email
+          }
+        }
+      }
+    }
+  `
+  return GraphQLAPI.mutate({ mutation: pressMutation, variables })
+}
