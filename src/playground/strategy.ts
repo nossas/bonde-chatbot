@@ -33,6 +33,8 @@ const handleEnsure = (opts: EnsureOpts) => () => {
           const action = speech.actions[interaction.action]
           if (action) {
             if (!isemail.validate(payload.message.text)) {
+              console.log('payload', payload)
+              console.log('Failure Target', action.failureTarget)
               // Reply failure message with payload for action input
               reply(speech.messages[action.failureTarget], action.node.id)
               return Promise.resolve(true)
