@@ -507,7 +507,7 @@ export default {
   ABOUT_PL2608: 'O Projeto de Lei 2608/13 é mais um retrocesso nos direitos das mulheres! Deputados do Rio de Janeiro querem aumentar a repressão ao aborto. Me envie #PldoAborto para saber mais sobre o projeto e entrar em ação!',
 
   ABOUT_PL_1256: 'Menina, o PL 1256/2019 é mais uma tentativa deles de tirar a gente do rolê! Esse projeto é do senador Angelo Coronel (PSD/BA) e, basicamente, acaba com a reserva de vagas e recursos do fundo partidário pras mulheres que saem candidatas. Já somos poucas nos espaços de poder, né? Agora imagina eles decidindo sozinhos sobre temas como aborto e maternidade, sem a gente tá lá pra colocar nossa voz! 🤮 Fico até enjoada - e olhe que eu sou robô! Mas eu sou antenadíssima e já tô com campanha no ar pra barrar esse absurdo. Se quiser saber mais, manda #NemUmPorCentoAMenos pra mim e vem somar nessa pressão! 💪',
-  
+
   ABOUT_TRETAQUI: 'Me juntei a umas crushes incríveis pra criar uma campanha para combater discurso de ódio nas eleições! Se você viu alguma candidatura falando o que não devia ou sendo atacada, me responda com #tretaqui que eu te digo como ;)',
 
   ABOUT_DISCURSO_DE_ODIO: 'A Safernet define discurso de ódio como manifestações que atacam e incitam ódio contra determinados grupos sociais - baseadas em raça, etnia, gênero, orientação sexual, religiosa ou origem nacional. Viu algum discurso de ódio nas eleições? Me responda com #tretaquique eu te digo como denunciar!',
@@ -682,6 +682,8 @@ export default {
   EMOJI_DISAPPOINTED: '😕',
 
   EMOJI_SHRUGGING: '🤷',
+
+  CFM_2232: 'Mana, você arrasa! 😍 Prometo te mandar atualizada se rolar qualquer novidade, certo? Juntas somos mais fortes!',
 
   // Gifs
 
