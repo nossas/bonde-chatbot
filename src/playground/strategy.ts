@@ -31,6 +31,7 @@ const handleEnsure = (opts: EnsureOpts) => () => {
 
         if (interaction.is_bot && interaction.action !== undefined) {
           const action = speech.actions[interaction.action]
+          console.log(`action`, action)
           if (action) {
             if (!isemail.validate(payload.message.text)) {
               console.log('payload', payload)

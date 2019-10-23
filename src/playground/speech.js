@@ -53,7 +53,7 @@ const messageSequential = (node, campaign, store, actions) => {
       store.push(node.text)
       if (child) {
         // continue with flux only if link exists
-        messageSequential(child, campaign, store)
+        messageSequential(child, campaign, store, actions)
       }
     } else if (node.type === 'reply') {
       const reply = quickReply(node, campaign)
