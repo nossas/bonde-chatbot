@@ -22,7 +22,7 @@ class Factory {
   }
 
   next ({ data }) {
-    console.info('--- receiving notification of subscription!'.blue)
+    console.info('Receiving notification of GraphQL API on update chatbots'.blue)
     const chatbotsStoreKeys = Object.keys(this.globalState)
 
     let updateRouting = false
@@ -48,12 +48,12 @@ class Factory {
           updatedAt: chatbot.updated_at
         }
       } else {
-        console.error(`--- ${chatbot.name} has no settings or campaigns!`.red)
+        console.error(`Bot[${chatbot.id}] has no settings or campaigns`.red)
       }
     })
 
     if (updateRouting) {
-      console.info('--- change routing on app server.'.blue)
+      console.info('Upgrading express routing to new chatbots'.blue)
       this.fabricate()
         .then((bots) => {
           bots.forEach((data) => {
@@ -73,7 +73,7 @@ class Factory {
   }
 
   error (err) {
-    console.error('--- receiving error of subscription: ', err)
+    console.error('Receiving error on subscription GraphQL API: ', err)
   }
 
   handleNextSettings ({ name, chatbot_settings: chatbotSettings }) {
@@ -126,10 +126,6 @@ class Factory {
       const bot = new Bot(settings)
       // TODO: configure facebook settings data
       const data = {
-        pressure: {
-          slug: 'abortemesseabsurdo',
-          widget_id: 21044
-        },
         image_url: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
         name: 'BETA',
         m_me: 'https://m.me/beta.feminista'
@@ -175,7 +171,7 @@ class Factory {
         botData
       ]
       bot.on('error', (err) => {
-        console.error(`--- ${chatbot.name} bot error: `.red, err)
+        console.error(`Bot[${chatbot.id}] bot interface error: `.red, err)
       })
       bot.on('message', botEvents.message(...eventArgs))
       bot.on('postback', botEvents.postback(...eventArgs))
