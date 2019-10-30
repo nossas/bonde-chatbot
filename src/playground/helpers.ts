@@ -104,7 +104,15 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
             botAI
               .client()
               .message(payload.message.text, {})
-              .then(botAI.resolvers.speechAction({ speech, reply: replyWithSave }))
+              .then(({ entities }) => {
+                if (entities.intent && entities.intent.length > 0) {
+                  // TODO: understand better about how it works
+                  const intent = entities.intent[0]
+                  const message = speech.messages[intent.value]
+                  return replyWithSave(message, intent.value)
+                }
+                throw new Error('bugged_out')
+              })
               .catch(err => {
                 console.error('helpers.ts :: receive :: BotAI ->', err)
                 replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
