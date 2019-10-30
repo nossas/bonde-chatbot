@@ -72,7 +72,7 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
   } else saveAndReply(normalize(message))
 }
 
-export const receive = (bot, speech, botData, witServerAccessToken) => (payload, reply, action) => {
+export const receive = (bot, speech, botData, extraConfigs) => (payload, reply, action) => {
   bot.getProfile(payload.sender.id, async (err, profile) => {
     if (err) console.error(`${JSON.stringify(err)}`.red)
     //
@@ -97,6 +97,8 @@ export const receive = (bot, speech, botData, witServerAccessToken) => (payload,
     if (message) {
       replyWithSave(message, action)
     } else {
+      const { witServerAccessToken, defaultErrorMessage } = extraConfigs()
+
       actions
         .ensure()
         .then(dispatched => {
@@ -115,15 +117,15 @@ export const receive = (bot, speech, botData, witServerAccessToken) => (payload,
               })
               .catch(err => {
                 console.error('helpers.ts :: receive :: BotAI ->', err)
-                replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+                replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
               })
           } else if (!dispatched) {
-            replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+            replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
           }
         })
         .catch(err => {
           console.error('helpers.ts :: receive :: ensure ->', err)
-          replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+          replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
         })
     }
   })

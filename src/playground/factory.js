@@ -87,6 +87,9 @@ class Factory {
       },
       wit: {
         serverAccessToken: settings.wit_server_access_token
+      },
+      default: {
+        errorMessage: settings.default_error_message
       }
     }
   }
@@ -174,7 +177,14 @@ class Factory {
           }
         },
         botData,
-        chatbot.settings.wit.serverAccessToken
+        () => {
+          const chatbotUpdated = this.globalState[chatbotId]
+
+          return {
+            witServerAccessToken: chatbotUpdated.settings.wit.serverAccessToken,
+            defaultErrorMessage: chatbotUpdated.settings.default.errorMessage
+          }
+        }
       ]
       bot.on('error', (err) => {
         console.error(`Bot[${chatbot.id}] bot interface error: `.red, err)
