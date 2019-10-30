@@ -72,7 +72,7 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
   } else saveAndReply(normalize(message))
 }
 
-export const receive = (bot, speech, botData) => (payload, reply, action) => {
+export const receive = (bot, speech, botData, witServerAccessToken) => (payload, reply, action) => {
   bot.getProfile(payload.sender.id, async (err, profile) => {
     if (err) console.error(`${JSON.stringify(err)}`.red)
     //
@@ -100,9 +100,9 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
       actions
         .ensure()
         .then(dispatched => {
-          if (!dispatched && payload.message && payload.message.text) {
+          if (!dispatched && payload.message && payload.message.text && witServerAccessToken) {
             botAI
-              .client()
+              .client(witServerAccessToken)
               .message(payload.message.text, {})
               .then(({ entities }) => {
                 if (entities.intent && entities.intent.length > 0) {
