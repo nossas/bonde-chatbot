@@ -9,7 +9,7 @@ export const message = (bot, getSpeech, botData, witServerAccessToken) => (paylo
   const { message } = payload
 
   // Set the sender action: When the bot receives the message show the "typing on" sign to the user
-  bot.sendSenderAction(payload.sender.id, 'typing_on')
+  /* bot.sendSenderAction(payload.sender.id, 'typing_on') */
 
   //
   // Validate payload

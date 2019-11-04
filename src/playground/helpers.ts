@@ -52,16 +52,17 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
     //
     const replySequentially = index => {
       if (index < message.length) {
+        if (index > 0) {
+          /* console.log('helpers.ts :: handleReplyWithSave :: 58 :: typing_on') */
+          bot.sendSenderAction(payload.sender.id, 'typing_on')
+        }
         saveAndReply(normalize(message[index]), err => {
           if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
-
-          bot.sendSenderAction(payload.sender.id, 'typing_on')
-          if (index === message.length - 1) {
-            bot.sendSenderAction(payload.sender.id, 'typing_off')
-          }
-
-          setTimeout(() => replySequentially(index + 1), 5000)
+          setTimeout(() => replySequentially(index + 1), 2000)
         })
+      } else {
+        console.log('helpers.ts :: handleReplyWithSave :: 65 :: typing_off')
+        bot.sendSenderAction(payload.sender.id, 'typing_off')
       }
     }
 
@@ -73,7 +74,13 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
 }
 
 export const receive = (bot, speech, botData, extraConfigs) => (payload, reply, action) => {
+  console.log('helpers.ts :: receive :: 76 :: mark_seen')
+  bot.sendSenderAction(payload.sender.id, 'mark_seen')
+
   bot.getProfile(payload.sender.id, async (err, profile) => {
+    /* console.log('helpers.ts :: receive :: 80 :: typing_on') */
+    bot.sendSenderAction(payload.sender.id, 'typing_on')
+
     if (err) console.error(`${JSON.stringify(err)}`.red)
     //
     // Wraps the original reply function with the behaviour
@@ -98,7 +105,6 @@ export const receive = (bot, speech, botData, extraConfigs) => (payload, reply, 
       replyWithSave(message, action)
     } else {
       const { witServerAccessToken, defaultErrorMessage } = extraConfigs()
-
       actions
         .ensure()
         .then(dispatched => {
@@ -121,6 +127,9 @@ export const receive = (bot, speech, botData, extraConfigs) => (payload, reply, 
               })
           } else if (!dispatched) {
             replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+          } else {
+            /* console.log('helpers.ts :: receive :: 129 :: typing_off') */
+            bot.sendSenderAction(payload.sender.id, 'typing_off')
           }
         })
         .catch(err => {
