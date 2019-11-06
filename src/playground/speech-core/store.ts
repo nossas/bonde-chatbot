@@ -5,14 +5,16 @@
 export class Storage {
   static instance
 
-  actions: any[]
+  private actions: any[]
 
   constructor () {
-    if (Storage.instance) {
-      return Storage.instance
+    if (!Storage.instance) {
+      Storage.instance = this
     }
 
     this.actions = []
+
+    return Storage.instance
   }
 
   register (message) {
@@ -23,5 +25,9 @@ export class Storage {
     const actions = this.actions
     this.actions = []
     return actions
+  }
+
+  getActions () {
+    return this.actions
   }
 }

@@ -16,7 +16,7 @@ export interface Port extends Point {
   alignment?: string
   parentNode?: string
   // TODO: remove this and mount ActionPort
-  success?: bool
+  success?: boolean
 }
 
 export interface Link extends Model {
@@ -38,7 +38,7 @@ export interface Node extends Point {
 export interface Campaign {
   nodes: Node[]
   links: Link[]
-  started?: bool
+  started?: boolean
 }
 
 export interface Reply {

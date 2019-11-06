@@ -24,7 +24,6 @@ function * middleware (node: Node, campaign: Campaign) {
       const failureTarget = campaign.links.filter((l: Link) => l.id === failure)[0].target
       const action = { [node.id]: { node, successfullyTarget, failureTarget } }
       store.register(action)
-
       yield node.text
     }
   } else {

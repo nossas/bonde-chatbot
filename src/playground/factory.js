@@ -1,6 +1,7 @@
 import Bot from 'messenger-bot'
 import { subscribeChatbots } from './actions'
-import { writeSpeech } from './speech'
+// import { writeSpeech } from './speech'
+import { sequence } from './speech-core'
 import * as botEvents from './events'
 import * as botConfig from '../bot/config'
 import * as botMiddlewares from '../beta/middlewares'
@@ -95,14 +96,17 @@ class Factory {
   }
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
-    const speechs = chatbotCampaigns.map(writeSpeech)
+    const speechs = chatbotCampaigns.map((campaign) => sequence({
+      started: campaign.get_started,
+      nodes: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-nodes')[0].models),
+      links: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-links')[0].models)
+    }))
     // Merge all messages
     const messages = speechs.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
     const actions = speechs.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
     const speech = speechs.filter(s => !!s.started)[0]
 
     const started = this._getStarted(speech, chatbotCampaigns)
-
     return {
       actions: actions.actions,
       messages: messages.messages,
