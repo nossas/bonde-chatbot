@@ -55,8 +55,8 @@ export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise
           context_recipient_id: { _eq: $recipientId },
           chatbot_id: { _eq: $chatbotId }
         },
-        limit: 1,
-        offset: 1,
+        limit: 2,
+        offset: 0,
         order_by: { created_at: desc }
       ) {
         context_recipient_id
@@ -71,7 +71,8 @@ export const lastInteraction = async (opts: ChatbotLastInteractionOpts): Promise
   return GraphQLAPI
     .query({
       query: chatbotInteractionsQuery,
-      variables: { chatbotId, recipientId }
+      variables: { chatbotId, recipientId },
+      fetchPolicy: 'network-only'
     })
     .then(({ data }) => {
       return Promise.resolve(data.chatbot_interactions)

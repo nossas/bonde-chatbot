@@ -1,6 +1,7 @@
 import Bot from 'messenger-bot'
 import { subscribeChatbots } from './actions'
-import { writeSpeech } from './speech'
+// import { writeSpeech } from './speech'
+import { sequence } from './speech-core'
 import * as botEvents from './events'
 import * as botConfig from '../bot/config'
 import * as botMiddlewares from '../beta/middlewares'
@@ -22,7 +23,7 @@ class Factory {
   }
 
   next ({ data }) {
-    console.info('--- receiving notification of subscription!'.blue)
+    console.info('Receiving notification of GraphQL API on update chatbots'.blue)
     const chatbotsStoreKeys = Object.keys(this.globalState)
 
     let updateRouting = false
@@ -48,12 +49,12 @@ class Factory {
           updatedAt: chatbot.updated_at
         }
       } else {
-        console.error(`--- ${chatbot.name} has no settings or campaigns!`.red)
+        console.error(`Bot[${chatbot.id}] has no settings or campaigns`.red)
       }
     })
 
     if (updateRouting) {
-      console.info('--- change routing on app server.'.blue)
+      console.info('Upgrading express routing to new chatbots'.blue)
       this.fabricate()
         .then((bots) => {
           bots.forEach((data) => {
@@ -73,28 +74,39 @@ class Factory {
   }
 
   error (err) {
-    console.error('--- receiving error of subscription: ', err)
+    console.error('Receiving error on subscription GraphQL API: ', err)
   }
 
   handleNextSettings ({ name, chatbot_settings: chatbotSettings }) {
     // so far only expected to set up Facebook
     const { settings } = chatbotSettings[0]
     return {
-      app_secret: settings.messenger_app_secret,
-      token: settings.messenger_page_access_token,
-      verify: settings.messenger_validation_token
+      fb: {
+        app_secret: settings.messenger_app_secret,
+        token: settings.messenger_page_access_token,
+        verify: settings.messenger_validation_token
+      },
+      wit: {
+        serverAccessToken: settings.wit_server_access_token
+      },
+      default: {
+        errorMessage: settings.default_error_message
+      }
     }
   }
 
   handleNextSpeech ({ name, chatbot_campaigns: chatbotCampaigns }) {
-    const speechs = chatbotCampaigns.map(writeSpeech)
+    const speechs = chatbotCampaigns.map((campaign) => sequence({
+      started: campaign.get_started,
+      nodes: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-nodes')[0].models),
+      links: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-links')[0].models)
+    }))
     // Merge all messages
     const messages = speechs.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
     const actions = speechs.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
     const speech = speechs.filter(s => !!s.started)[0]
 
     const started = this._getStarted(speech, chatbotCampaigns)
-
     return {
       actions: actions.actions,
       messages: messages.messages,
@@ -122,14 +134,10 @@ class Factory {
     return Promise.all(chatbots.map(chatbotId => {
       const chatbot = this.globalState[chatbotId]
       // Validate and settings messenger-bot
-      const settings = botConfig.validate(chatbot.settings)
+      const settings = botConfig.validate(chatbot.settings.fb)
       const bot = new Bot(settings)
       // TODO: configure facebook settings data
       const data = {
-        pressure: {
-          slug: 'abortemesseabsurdo',
-          widget_id: 21044
-        },
         image_url: 'https://s3.amazonaws.com/chatbox-beta/pec29/share-pec29.jpg',
         name: 'BETA',
         m_me: 'https://m.me/beta.feminista'
@@ -165,17 +173,25 @@ class Factory {
       const eventArgs = [
         bot,
         () => {
-          const chatbot = this.globalState[chatbotId]
+          const chatbotUpdated = this.globalState[chatbotId]
           return {
             version: 'v2',
-            messages: chatbot.speech.messages,
-            actions: chatbot.speech.actions
+            messages: chatbotUpdated.speech.messages,
+            actions: chatbotUpdated.speech.actions
           }
         },
-        botData
+        botData,
+        () => {
+          const chatbotUpdated = this.globalState[chatbotId]
+
+          return {
+            witServerAccessToken: chatbotUpdated.settings.wit.serverAccessToken,
+            defaultErrorMessage: chatbotUpdated.settings.default.errorMessage
+          }
+        }
       ]
       bot.on('error', (err) => {
-        console.error(`--- ${chatbot.name} bot error: `.red, err)
+        console.error(`Bot[${chatbot.id}] bot interface error: `.red, err)
       })
       bot.on('message', botEvents.message(...eventArgs))
       bot.on('postback', botEvents.postback(...eventArgs))

@@ -24,17 +24,20 @@ const handleEnsure = (opts: EnsureOpts) => () => {
   return UserInteractions
     .lastInteraction({ chatbotId: botData.id, recipientId: payload.recipient.id })
     .then((interactions) => {
-      const last = interactions[0]
-
-      if (last && last.interaction) {
-        const interaction = last.interaction
-
-        if (interaction.is_bot && interaction.action !== undefined) {
+      // Carrega as últimas duas interações. Sempre que uma mensagem é enviado ao BOT
+      // o fluxo primeiro:
+      // 1. Insere as informações na tabela de interações
+      // 2. Chama o reply da mensagem que nesse caso é processado pelo handleEnsure após alguns encapsulamentos
+      if (interactions && interactions.length > 0) {
+        // É necessário levar em consideração para análise do contexto ao menos as 2 últimas
+        // interações, a última provavelmente será um input do usuário enquanto a penúltima será
+        // uma ação solicitada pelo BOT.
+        if (!interactions[0].interaction.is_bot && interactions[1].interaction.action !== undefined) {
+          // Procedimento para executar uma pressão
+          const interaction = interactions[1].interaction
           const action = speech.actions[interaction.action]
           if (action) {
             if (!isemail.validate(payload.message.text)) {
-              console.log('payload', payload)
-              console.log('Failure Target', action.failureTarget)
               // Reply failure message with payload for action input
               reply(speech.messages[action.failureTarget], action.node.id)
               return Promise.resolve(true)
@@ -58,8 +61,6 @@ const handleEnsure = (opts: EnsureOpts) => () => {
                 })
             }
           }
-        } else {
-          console.log('last interaction not bot', interaction)
         }
       }
       return Promise.resolve(false)

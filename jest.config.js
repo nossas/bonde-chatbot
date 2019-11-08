@@ -1,4 +1,6 @@
 module.exports = {
-  preset: 'ts-jest/presets/js-with-ts',
-  testEnvironment: 'node'
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+  testPathIgnorePatterns: ['<rootDir>/dist']
 }

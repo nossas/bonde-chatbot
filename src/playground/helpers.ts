@@ -52,16 +52,17 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
     //
     const replySequentially = index => {
       if (index < message.length) {
+        if (index > 0) {
+          /* console.log('helpers.ts :: handleReplyWithSave :: 58 :: typing_on') */
+          bot.sendSenderAction(payload.sender.id, 'typing_on')
+        }
         saveAndReply(normalize(message[index]), err => {
           if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
-
-          bot.sendSenderAction(payload.sender.id, 'typing_on')
-          if (index === message.length - 1) {
-            bot.sendSenderAction(payload.sender.id, 'typing_off')
-          }
-
-          setTimeout(() => replySequentially(index + 1), 5000)
+          setTimeout(() => replySequentially(index + 1), 2000)
         })
+      } else {
+        console.log('helpers.ts :: handleReplyWithSave :: 65 :: typing_off')
+        bot.sendSenderAction(payload.sender.id, 'typing_off')
       }
     }
 
@@ -72,8 +73,14 @@ export const handleReplyWithSave = ({ bot, botData, payload, reply, profile }) =
   } else saveAndReply(normalize(message))
 }
 
-export const receive = (bot, speech, botData) => (payload, reply, action) => {
+export const receive = (bot, speech, botData, extraConfigs) => (payload, reply, action) => {
+  console.log('helpers.ts :: receive :: 76 :: mark_seen')
+  bot.sendSenderAction(payload.sender.id, 'mark_seen')
+
   bot.getProfile(payload.sender.id, async (err, profile) => {
+    /* console.log('helpers.ts :: receive :: 80 :: typing_on') */
+    bot.sendSenderAction(payload.sender.id, 'typing_on')
+
     if (err) console.error(`${JSON.stringify(err)}`.red)
     //
     // Wraps the original reply function with the behaviour
@@ -97,25 +104,37 @@ export const receive = (bot, speech, botData) => (payload, reply, action) => {
     if (message) {
       replyWithSave(message, action)
     } else {
+      const { witServerAccessToken, defaultErrorMessage } = extraConfigs()
       actions
         .ensure()
         .then(dispatched => {
-          if (!dispatched && payload.message && payload.message.text) {
+          if (!dispatched && payload.message && payload.message.text && witServerAccessToken) {
             botAI
-              .client()
+              .client(witServerAccessToken)
               .message(payload.message.text, {})
-              .then(botAI.resolvers.speechAction({ speech, reply: replyWithSave }))
+              .then(({ entities }) => {
+                if (entities.intent && entities.intent.length > 0) {
+                  // TODO: understand better about how it works
+                  const intent = entities.intent[0]
+                  const message = speech.messages[intent.value]
+                  return replyWithSave(message, intent.value)
+                }
+                throw new Error('bugged_out')
+              })
               .catch(err => {
                 console.error('helpers.ts :: receive :: BotAI ->', err)
-                replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+                replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
               })
           } else if (!dispatched) {
-            replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+            replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+          } else {
+            /* console.log('helpers.ts :: receive :: 129 :: typing_off') */
+            bot.sendSenderAction(payload.sender.id, 'typing_off')
           }
         })
         .catch(err => {
           console.error('helpers.ts :: receive :: ensure ->', err)
-          replyWithSave(botSpeeches.messages.BUGGED_OUT, 'bugged_out')
+          replyWithSave(defaultErrorMessage || botSpeeches.messages.BUGGED_OUT, 'bugged_out')
         })
     }
   })

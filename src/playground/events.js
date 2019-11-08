@@ -4,12 +4,12 @@ import * as ChatbotInteractions from './interactions'
 
 // const payloadValidator = payload => {}
 
-export const message = (bot, getSpeech, botData) => (payload, reply) => {
+export const message = (bot, getSpeech, botData, witServerAccessToken) => (payload, reply) => {
   const speech = getSpeech()
   const { message } = payload
 
   // Set the sender action: When the bot receives the message show the "typing on" sign to the user
-  bot.sendSenderAction(payload.sender.id, 'typing_on')
+  /* bot.sendSenderAction(payload.sender.id, 'typing_on') */
 
   //
   // Validate payload
@@ -50,7 +50,7 @@ export const message = (bot, getSpeech, botData) => (payload, reply) => {
     ChatbotInteractions.insert(opts)
       .then(result => {
         // Only receive message when save on database
-        ChatbotHelpers.receive(bot, speech, botData)(payload, reply, action)
+        ChatbotHelpers.receive(bot, speech, botData, witServerAccessToken)(payload, reply, action)
         return result
       })
       .catch(err => {
@@ -60,9 +60,9 @@ export const message = (bot, getSpeech, botData) => (payload, reply) => {
   })
 }
 
-export const postback = (bot, getSpeech, botData) => (payload, reply) => {
+export const postback = (bot, getSpeech, botData, witServerAccessToken) => (payload, reply) => {
   const speech = getSpeech()
-  ChatbotHelpers.receive(bot, speech, botData)(
+  ChatbotHelpers.receive(bot, speech, botData, witServerAccessToken)(
     payload,
     reply,
     payload.postback.payload
