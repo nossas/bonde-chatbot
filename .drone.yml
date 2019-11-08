@@ -6,6 +6,7 @@ pipeline:
       - yarn
       - yarn lint
       - yarn test
+      - yarn build
     when:
       event: [push]
 
@@ -24,7 +25,7 @@ pipeline:
   staging-webserver-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
-    service: webservers/beta
+    service: webservers/chatbot
     group: deploying
     docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
     timeout: 360
@@ -72,7 +73,7 @@ pipeline:
   production-webservers-deploy:
     image: peloton/drone-rancher
     url: http://cluster.bonde.org
-    service: webservers/beta
+    service: webservers/chatbot
     docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
     timeout: 360
     confirm: true

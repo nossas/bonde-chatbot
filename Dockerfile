@@ -5,6 +5,9 @@ RUN mkdir /code
 WORKDIR /code
 
 COPY . .
-RUN yarn
+
+RUN yarn install
+
+RUN yarn run build
 
 CMD ["yarn", "start"]
