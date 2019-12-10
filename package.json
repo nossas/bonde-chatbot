@@ -12,6 +12,7 @@
     "dev": "ts-watch --onSuccess \"node ./dist/index.js\"",
     "start": "node ./dist/index.js",
     "start:worker": "node ./dist/workers/process-bot-mass-message-queue.js",
+    "clear:queue": "NODE_ENV=production node ./dist/workers/reset-bot-mass-message-queue.builded.js",
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "postcoverage": "open-cli coverage/lcov-report/index.html",
