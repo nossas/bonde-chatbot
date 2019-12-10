@@ -1,4 +1,8 @@
+.DS_Store
+coverage
+dist
 node_modules
-.env
 *.log
+.env
 *.builded.js
+*.tsbuildinfo

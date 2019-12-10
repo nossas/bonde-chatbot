@@ -6,6 +6,7 @@ pipeline:
       - yarn
       - yarn lint
       - yarn test
+      - yarn build
     when:
       event: [push]
 
@@ -19,7 +20,7 @@ pipeline:
       - ${DRONE_BRANCH/\//-}
     when:
       status: success
-      branch: [hotfix/*, release/*, feature/*, develop]
+      branch: [hotfix/*, feature/*, develop]
 
   staging-webserver-deploy:
     image: peloton/drone-rancher
@@ -32,7 +33,7 @@ pipeline:
     secrets: [ rancher_access_key, rancher_secret_key ]
     when:
       status: success
-      branch: [hotfix/*, release/*, feature/*, develop]
+      branch: [hotfix/*, feature/*, develop]
 
   staging-worker-deploy:
     image: peloton/drone-rancher
@@ -45,7 +46,7 @@ pipeline:
     secrets: [ rancher_access_key, rancher_secret_key ]
     when:
       status: success
-      branch: [hotfix/*, release/*, feature/*, develop]
+      branch: [hotfix/*, feature/*, develop]
 
   production-build:
     image: node:latest
@@ -54,6 +55,7 @@ pipeline:
       - yarn
       - yarn lint
       - yarn test
+      - yarn build
     when:
       event: tag
 
@@ -103,9 +105,9 @@ pipeline:
 
   notify:
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
     channel: bonde_bots
     username: CI - ${DRONE_REPO_NAME}
+    secrets: [ slack_webhook ]
     when:
       event: [ push, tag, build, publish, deployment, pull_request ]
       status: [ success, failure ]
