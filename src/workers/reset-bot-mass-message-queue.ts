@@ -23,7 +23,7 @@ const getKeysByPattern = (key) => {
       count: 1000
     })
 
-    var keys = []
+    const keys: any[] = []
     stream.on('data', function (resultKeys) {
       console.log('reading', resultKeys.length)
       // `resultKeys` is an array of strings representing key names
