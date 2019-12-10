@@ -141,8 +141,8 @@ export default {
   BETA_WHAT_NOISE: 'Nossa primeira campanha - e primeira vitória! -  foi contra a PEC 181, proposta que pode acabar com o aborto legal no Brasil, mesmo em casos de estupro. 😱😤⚠️',
   BETA_WHAT_NOISE_1: 'Enviamos 35 mil emails para cada deputado e eles não seguraram a pressão: adiaram as votações 7 vezes! O futuro da PEC ainda tá que nem o futuro do bitcoin - incerto!  Te falo mais sobre ela no meu radar!  🕵️‍♀️',
 
-  THERE_IS_MORE: 'Junto da Anis e da Think Olga, lancei a campanha "Um Emprego Para Rebeca". Ela foi a primeira mulher a pedir ao STF o direito a um aborto seguro e, ao contar sua história, sofreu muita discriminação, especialmente na busca por um emprego.',
-  THERE_IS_MORE_1: 'Agora, Rebeca está desempregada e é hora de lutarmos com ela. 💖 Você pode saber mais e ajudar Rebeca aqui: www.pelavidaderebeca.org 💪🏽',
+  THERE_IS_MORE: 'Na maior campanha  que  fizemos até agora, "Parem a PEC 29", conseguimos MAIS DE 100 MIL PRESSÕES! Os senadores queriam passar essa proposta horrorosa que obrigaria mulheres que sofreram um estupro a levar a gravidez adiante, retrocedendo no direito (conquistado a duras penas!) ao aborto legal.',
+  THERE_IS_MORE_1: 'Conseguimos fazer com que a PEC 29 fosse tirada da pauta duas vezes! 💪 Eu tô aqui de olhos bem abertos, pronta pra botar meus poderes cibernéticos pra jogo caso eles tentem voltar com esse absurdo. 👀',
 
   CAMPAIGN: 'AMO! Pra propor uma campanha, mande um email pra as mulheres por trás de mim em beta@nossas.org. Elas não são robô, mas respondem rapidinho!',
 
@@ -164,11 +164,11 @@ export default {
   //
   // Radar da Beta - PEC 181
   //
-  RADAR_PEC: 'A PEC 181 foi criada para aumentar a licença maternidade de mães de prematuros, mas teve seu texto alterado e agora pode acabar com o aborto legal no Brasil, mesmo em caso de estupro. 😱😱 Eu não ia ficar parada, né?',
+  RADAR_PEC: 'A PEC 181/2015 foi criada para aumentar a licença maternidade de mães de prematuros, mas teve seu texto alterado e agora pode acabar com o aborto legal no Brasil, mesmo em caso de estupro. 😱😱 Eu não ia ficar parada, né?',
 
-  BETA_DID: 'Muito barulho! Convoquei todo mundo que já falou comigo pra enviar emails pros deputados da Comissão Especial. Foram 35.000 mensagens pra cada político! E eles não seguraram a pressão: adiaram as votações 7 vezes. As definições de arraso foram atualizadas! 💪💪💪 Mas essa foi só a 1a temporada.',
+  BETA_DID: 'Muito barulho! Convoquei todo mundo que já falou comigo pra enviar emails pros deputados da Comissão Especial. Foram 35 mil mensagens pra cada político! E eles não seguraram a pressão: adiaram as votações 7 vezes. As definições de arraso foram atualizadas! 💪💪💪 Mas essa foi só a 1a temporada.',
 
-  PEC: 'Em 2018, com a Intervenção Federal no RJ, alterações na Constituição (PECs) ficaram suspensas. Mas 2019 mal apontou no horizonte e os deputados trataram de desengavetar esse show de horrores. ',
+  PEC: 'Em 2018, com a Intervenção Federal no RJ, alterações na Constituição (PECs) ficaram suspensas. Mas 2019 mal apontou no horizonte e os deputados trataram de desengavetar esse show de horrores.',
   PEC_1: 'Agora, a tramitação da proposta depende da criação de uma Comissão Especial para proferir parecer à PEC 181/2015. O último status é de abril desse ano 🙄, ou seja, continuo atenta! 🚨',
 
   PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
