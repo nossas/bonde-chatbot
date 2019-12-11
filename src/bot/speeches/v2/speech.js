@@ -237,20 +237,31 @@ export default botData => ({
       locale: 'default',
       composer_input_disabled: false,
       call_to_actions: [
+        // {
+        //   title: 'Mais Armas Mais Feminicídio',
+        //   type: 'postback',
+        //   payload: V2_QUICK_REPLY_O_1
+        // },
+        // {
+        //   title: 'Outras Ações',
+        //   type: 'postback',
+        //   payload: V2_QUICK_REPLY_ACT
+        // },
+
         {
-          title: 'Mais Armas Mais Feminicídio',
+          title: 'Radar',
           type: 'postback',
-          payload: V2_QUICK_REPLY_O_1
-        },
-        {
-          title: 'Outras Ações',
-          type: 'postback',
-          payload: V2_QUICK_REPLY_ACT
+          payload: V2_QUICK_REPLY_RADAR
         },
         {
           title: 'Mais sobre a Beta',
           type: 'postback',
           payload: V2_QUICK_REPLY_MAIS
+        },
+        {
+          title: 'Compartilhe',
+          type: 'postback',
+          payload: V2_QUICK_REPLY_FRIENDS
         }
       ]
     },
@@ -274,17 +285,17 @@ export default botData => ({
     [V2_QUICK_REPLY_B]: [
       botSpeeches.messages.LIST,
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ACT,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ACT,
-              payload: V2_QUICK_REPLY_ACT
-            })
-          ]
-        ),
+        // elements(
+        //   botSpeeches.carouselTexts.TITLE_ACT,
+        //   botSpeeches.carouselTexts.SUBTITLE,
+        //   botSpeeches.carouselTexts.IMAGE_ACT,
+        //   [
+        //     buttonTemplate.postback({
+        //       title: botSpeeches.carouselTexts.BUTTON_ACT,
+        //       payload: V2_QUICK_REPLY_ACT
+        //     })
+        //   ]
+        // ),
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -323,17 +334,17 @@ export default botData => ({
 
     [V2_QUICK_REPLY_CA]: [
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ACT,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ACT,
-              payload: V2_QUICK_REPLY_ACT
-            })
-          ]
-        ),
+        // elements(
+        //   botSpeeches.carouselTexts.TITLE_ACT,
+        //   botSpeeches.carouselTexts.SUBTITLE,
+        //   botSpeeches.carouselTexts.IMAGE_ACT,
+        //   [
+        //     buttonTemplate.postback({
+        //       title: botSpeeches.carouselTexts.BUTTON_ACT,
+        //       payload: V2_QUICK_REPLY_ACT
+        //     })
+        //   ]
+        // ),
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -557,17 +568,17 @@ export default botData => ({
     [V2_QUICK_REPLY_J_1]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_THE_WEBSITE,
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ACT,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT, // TODO
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ACT,
-              payload: V2_QUICK_REPLY_ACT
-            })
-          ]
-        ),
+        // elements(
+        //   botSpeeches.carouselTexts.TITLE_ACT,
+        //   botSpeeches.carouselTexts.SUBTITLE,
+        //   botSpeeches.carouselTexts.IMAGE_ACT, // TODO
+        //   [
+        //     buttonTemplate.postback({
+        //       title: botSpeeches.carouselTexts.BUTTON_ACT,
+        //       payload: V2_QUICK_REPLY_ACT
+        //     })
+        //   ]
+        // ),
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
@@ -738,12 +749,23 @@ export default botData => ({
     [V2_QUICK_REPLY_A_2]: [
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.ADPF,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ADPF442_2,
+          botSpeeches.carouselTexts.TITLE_RADAR_PEC_29,
+          botSpeeches.carouselTexts.SUBTITLE_RADAR_PEC_29,
+          botSpeeches.carouselTexts.IMAGE_RADAR_PEC_29, // TODO
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.ADPF_BUTTON,
+              title: botSpeeches.carouselTexts.BUTTON_RADAR_PEC_29,
+              payload: V2_QUICK_REPLY_PEC
+            })
+          ]
+        ),
+        elements(
+          botSpeeches.carouselTexts.TITLE_RADAR_RES_2232,
+          botSpeeches.carouselTexts.SUBTITLE_RADAR_RES_2232,
+          botSpeeches.carouselTexts.IMAGE_RADAR_RES_2232,
+          [
+            buttonTemplate.postback({
+              title: botSpeeches.carouselTexts.BUTTON_RADAR_RES_2232,
               payload: V2_QUICK_REPLY_WHATS_ADPF442
             })
           ]
@@ -760,13 +782,13 @@ export default botData => ({
           ]
         ),
         elements(
-          botSpeeches.carouselTexts.STATUTE,
+          botSpeeches.carouselTexts.ADPF,
           botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_STATUTE,
+          botSpeeches.carouselTexts.IMAGE_ADPF442_2,
           [
             buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.STATUTE,
-              payload: V2_QUICK_REPLY_STATUTE
+              title: botSpeeches.carouselTexts.ADPF_BUTTON,
+              payload: V2_QUICK_REPLY_WHATS_ADPF442
             })
           ]
         )
@@ -984,17 +1006,17 @@ export default botData => ({
     [V2_QUICK_REPLY_E_10]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE,
       carouselTemplate(
-        elements(
-          botSpeeches.carouselTexts.TITLE_ACT,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_ACT, // TODO
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_ACT,
-              payload: V2_QUICK_REPLY_ACT
-            })
-          ]
-        ),
+        // elements(
+        //   botSpeeches.carouselTexts.TITLE_ACT,
+        //   botSpeeches.carouselTexts.SUBTITLE,
+        //   botSpeeches.carouselTexts.IMAGE_ACT, // TODO
+        //   [
+        //     buttonTemplate.postback({
+        //       title: botSpeeches.carouselTexts.BUTTON_ACT,
+        //       payload: V2_QUICK_REPLY_ACT
+        //     })
+        //   ]
+        // ),
         elements(
           botSpeeches.carouselTexts.TITLE_RADAR,
           botSpeeches.carouselTexts.SUBTITLE,
