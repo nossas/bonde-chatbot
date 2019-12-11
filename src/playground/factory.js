@@ -101,17 +101,19 @@ class Factory {
       nodes: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-nodes')[0].models),
       links: Object.values(campaign.diagram.layers.filter(m => m.type === 'diagram-links')[0].models)
     }))
-    // Merge all messages
-    const messages = speechs.reduce((r, c) => Object.assign(r.messages, c.messages, {}))
-    const actions = speechs.reduce((r, c) => Object.assign(r.actions, c.actions, {}))
-    const speech = speechs.filter(s => !!s.started)[0]
 
+    // merge all messages and actions on speech structure
+    let messages = {}
+    let actions = {}
+    speechs.forEach(speech => {
+      messages = { ...messages, ...speech.messages }
+      actions = { ...actions, ...speech.actions }
+    })
+
+    const speech = speechs.filter(s => !!s.started)[0]
     const started = this._getStarted(speech, chatbotCampaigns)
-    return {
-      actions: actions.actions,
-      messages: messages.messages,
-      started
-    }
+
+    return { actions, messages, started }
   }
 
   _getStarted (speech, campaigns) {
