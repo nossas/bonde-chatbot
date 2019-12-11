@@ -1059,14 +1059,16 @@ export default botData => ({
 
     [V2_QUICK_REPLY_FRIENDS]: [
       botSpeeches.messages.YOU_ROCK_1,
-      genericTemplate({
-        title: 'A maior aliada feminista nas redes',
-        subtitle: 'Chama a Beta no inbox',
-        imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
-        buttons: [
-          buttonTemplate.elementShare()
-        ]
-      })
+      carouselTemplate(
+        elements(
+          'A maior aliada feminista nas redes',
+          'Chama a Beta no inbox',
+          'https://chatbox-beta.s3.amazonaws.com/carousel-fb/%5Bbeta%5Dshare.png',
+          [
+            buttonTemplate.elementShare()
+          ]
+        )
+      )
     ],
 
     //
