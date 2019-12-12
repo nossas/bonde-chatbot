@@ -44,7 +44,7 @@ const V2_QUICK_REPLY_A_2 = 'V2_QUICK_REPLY_A_2'
 const V2_QUICK_REPLY_PEC = 'V2_QUICK_REPLY_PEC'
 const V2_QUICK_REPLY_STATUTE = 'V2_QUICK_REPLY_STATUTE'
 // const V2_QUICK_REPLY_SUG = 'V2_QUICK_REPLY_SUG'
-// const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
+const V2_QUICK_REPLY_ADPF = 'V2_QUICK_REPLY_ADPF'
 
 const V2_QUICK_REPLY_A_3 = 'V2_QUICK_REPLY_A_3'
 const V2_QUICK_REPLY_C_3 = 'V2_QUICK_REPLY_C_3'
@@ -53,7 +53,7 @@ const V2_QUICK_REPLY_F_3 = 'V2_QUICK_REPLY_F_3'
 
 const V2_QUICK_REPLY_A_4 = 'V2_QUICK_REPLY_A_4'
 // const V2_QUICK_REPLY_A_5 = 'V2_QUICK_REPLY_A_5'
-// const V2_QUICK_REPLY_A_6 = 'V2_QUICK_REPLY_A_6'
+const V2_QUICK_REPLY_A_6 = 'V2_QUICK_REPLY_A_6'
 // const V2_QUICK_REPLY_A_8 = 'V2_QUICK_REPLY_A_8'
 // const V2_QUICK_REPLY_A_9 = 'V2_QUICK_REPLY_A_9'
 
@@ -168,6 +168,8 @@ const V2_QUICK_REPLY_O_3 = 'V2_QUICK_REPLY_O_3'
 const V2_QUICK_REPLY_O_4 = 'V2_QUICK_REPLY_O_4'
 const V2_QUICK_REPLY_O_5 = 'V2_QUICK_REPLY_O_5'
 
+const V2_QUICK_REPLY_RES_2232 = 'V2_QUICK_REPLY_RES_2232'
+const V2_QUICK_REPLY_PEC_29 = 'V2_QUICK_REPLY_PEC_29'
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -193,6 +195,7 @@ export default botData => ({
     [V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG]: V2_QUICK_REPLY_M6_EMAIL_ADDRESS_WRONG,
     [V2_QUICK_REPLY_M7]: V2_QUICK_REPLY_M7,
     // ADPF442 - Usando formulário de envio
+    [V2_QUICK_REPLY_ADPF]: V2_QUICK_REPLY_ADPF,
     [V2_QUICK_REPLY_ADPF442]: V2_QUICK_REPLY_ADPF442,
     [V2_QUICK_REPLY_PETITION_NAME]: V2_QUICK_REPLY_PETITION_NAME,
     [V2_QUICK_REPLY_PETITION_SURNAME]: V2_QUICK_REPLY_PETITION_SURNAME,
@@ -217,6 +220,9 @@ export default botData => ({
     [NASCITURO_QUICK_REPLY_NOW]: NASCITURO_QUICK_REPLY_NOW,
     [NASCITURO_QUICK_REPLY_READ]: NASCITURO_QUICK_REPLY_READ,
 
+    // adpf
+    [V2_QUICK_REPLY_A_6]: V2_QUICK_REPLY_A_6,
+
     // ACTIONS COTAS
     [V2_QUICK_REPLY_N_1]: V2_QUICK_REPLY_N_1,
     [V2_QUICK_REPLY_N_2]: V2_QUICK_REPLY_N_2,
@@ -229,7 +235,9 @@ export default botData => ({
     [V2_QUICK_REPLY_O_2]: V2_QUICK_REPLY_O_2,
     [V2_QUICK_REPLY_O_3]: V2_QUICK_REPLY_O_3,
     [V2_QUICK_REPLY_O_4]: V2_QUICK_REPLY_O_4,
-    [V2_QUICK_REPLY_O_5]: V2_QUICK_REPLY_O_5
+    [V2_QUICK_REPLY_O_5]: V2_QUICK_REPLY_O_5,
+    [V2_QUICK_REPLY_RES_2232]: V2_QUICK_REPLY_RES_2232,
+    [V2_QUICK_REPLY_PEC_29]: V2_QUICK_REPLY_PEC_29
   },
   messages: {
 
@@ -755,7 +763,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR_PEC_29,
-              payload: V2_QUICK_REPLY_PEC
+              payload: V2_QUICK_REPLY_PEC_29
             })
           ]
         ),
@@ -766,7 +774,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR_RES_2232,
-              payload: V2_QUICK_REPLY_WHATS_ADPF442
+              payload: V2_QUICK_REPLY_RES_2232
             })
           ]
         ),
@@ -788,12 +796,38 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.ADPF_BUTTON,
-              payload: V2_QUICK_REPLY_WHATS_ADPF442
+              payload: V2_QUICK_REPLY_ADPF
             })
           ]
         )
       )
     ],
+
+    [V2_QUICK_REPLY_PEC_29]: [
+      botSpeeches.messages.PEC_29_RADAR_1
+    ],
+
+    [V2_QUICK_REPLY_RES_2232]: [
+      botSpeeches.messages.RES_2232_RADAR
+    ],
+
+    //
+    [V2_QUICK_REPLY_ADPF]: [
+      botSpeeches.messages.ADPF,
+      botSpeeches.messages.ADPF_1,
+      messageWithQuickReply(
+        botSpeeches.messages.ADPF_2,
+        quickReply(V2_QUICK_REPLY_A_6, botSpeeches.buttonTexts.I_WANT),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
+      )
+    ],
+    [V2_QUICK_REPLY_A_6]: {
+      text: botSpeeches.messages.ADPF_3,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
+      ]
+    },
 
     // Radar da BETA - ADPF 442
     [V2_QUICK_REPLY_WHATS_ADPF442]: [
