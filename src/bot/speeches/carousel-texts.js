@@ -88,5 +88,17 @@ export default {
   TITLE_PL_3723: 'Mais Armas Mais Feminicídio',
   SUBTITLE_PL_3723: 'Pressionar deputadas(os)',
   IMAGE_PL_3723: 'https://chatbox-beta.s3.amazonaws.com/campaigns/carrossel-pl-3723.png',
-  BUTTON_PL_3723: 'Clique aqui'
+  BUTTON_PL_3723: 'Clique aqui',
+
+  TITLE_RADAR_PEC_29: 'Fim do aborto legal',
+  SUBTITLE_RADAR_PEC_29: '',
+  IMAGE_RADAR_PEC_29: 'https://chatbox-beta.s3.amazonaws.com/campaigns/radar-retrocesso-pec-29.png',
+  BUTTON_RADAR_PEC_29: 'Saiba mais',
+
+  TITLE_RADAR_RES_2232: 'Violência Obstétrica',
+  SUBTITLE_RADAR_RES_2232: '',
+  IMAGE_RADAR_RES_2232: 'https://chatbox-beta.s3.amazonaws.com/campaigns/radar-retrocesso-resolucao-2232.png',
+  BUTTON_RADAR_RES_2232: 'Me conta',
+
+  TITLE_RADAR_PEC_181: 'Vida desde a concepção'
 }

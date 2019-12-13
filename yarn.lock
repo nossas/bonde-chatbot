@@ -6239,9 +6239,10 @@ merge2@^1.2.3:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.4.tgz#c9269589e6885a60cf80605d9522d4b67ca646e3"
   integrity sha512-FYE8xI+6pjFOhokZu0We3S5NKCirLbCzSh2Usf3qEyr4X8U+0jNg9P8RZ4qz+V2UoECLVwSyzU3LxXBaLGtD3A==
 
-messenger-bot@nossas/messenger-bot#master:
-  version "2.4.0"
-  resolved "https://codeload.github.com/nossas/messenger-bot/tar.gz/ec75c7e9a6f9b7b00e93f4f6255587ce600e9ea8"
+messenger-bot@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/messenger-bot/-/messenger-bot-2.5.0.tgz#09f104851008d322ad41764d736f9be9ecabfaab"
+  integrity sha512-0FeHGJ2Qg/dogJfKIaNP06Tq7TMw93QA+3upgGPlnIM1Fe2CL+6F8442KiAWST1jo2GKoOPX+3SVOpC2IfM1bA==
   dependencies:
     request "^2.71.0"
     request-promise "^4.1.1"

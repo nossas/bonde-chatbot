@@ -230,23 +230,7 @@
 //
 // Radar da Beta - ADPF 442
 //
-/* [V2_QUICK_REPLY_ADPF]: [
-      botSpeeches.messages.ADPF,
-      botSpeeches.messages.ADPF_1,
-      messageWithQuickReply(
-        botSpeeches.messages.ADPF_2,
-        quickReply(V2_QUICK_REPLY_A_6, botSpeeches.buttonTexts.I_WANT),
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER)
-      )
-    ],
-    [V2_QUICK_REPLY_A_6]: {
-      text: botSpeeches.messages.ADPF_3,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE),
-      ],
-    },
-
+/*
       // text: botSpeeches.messages.MORE_ABOUT_BETA,
       // quick_replies: [
       //   quickReply(V2_QUICK_REPLY_A_1, botSpeeches.buttonTexts.I_WANT_1),
