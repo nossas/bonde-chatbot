@@ -862,7 +862,7 @@ export default botData => ({
       ]
     },
     [V2_QUICK_REPLY_RES_2232_3]: {
-      text: botSpeeches.messages.PEC_29_RADAR_3,
+      text: botSpeeches.messages.RES_2232_RADAR_3,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
         quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
