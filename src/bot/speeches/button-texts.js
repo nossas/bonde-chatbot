@@ -84,7 +84,7 @@ export default {
   OF_COURSE: 'Mas é claro!',
   SEND: 'Enviar',
   SUPER: 'Super!',
-  TELL_ME: 'Conta!',
+  TELL_ME: 'Me Conta',
   COUNT_ON_ME: 'Conta comigo!',
   SEND_NOW: 'Enviar já!',
   SEND_NOW_1: 'Enviar agora',
