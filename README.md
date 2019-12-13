@@ -84,3 +84,10 @@ More details are available at the [reference docs](https://developers.facebook.c
 ## License
 
 See the LICENSE file in the root directory of this source tree. Feel free to useand modify the code.
+
+## TOsDO
+
+1. Completar as mensagens dos novos itens do radar
+2. instalar apm
+3. migrar para pnpm
+4. fazer release

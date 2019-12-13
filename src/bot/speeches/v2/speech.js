@@ -787,7 +787,7 @@ export default botData => ({
           ]
         ),
         elements(
-          botSpeeches.carouselTexts.PEC,
+          botSpeeches.carouselTexts.TITLE_RADAR_PEC_181,
           botSpeeches.carouselTexts.SUBTITLE,
           botSpeeches.carouselTexts.IMAGE_PEC,
           [
