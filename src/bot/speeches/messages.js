@@ -174,7 +174,7 @@ export default {
   PEC_HISTORY: 'Vou te falar que a história da PEC 181 podia virar novela! Mas enquanto não chega uma roteirista por aqui, confere só esse registro que eu fiz da história da proposta - e da nossa pressão!',
   PEC_HISTORY_1: '➡️ www.paremocavalodetroia.org/',
 
-  YOU_ROCK_1: 'Arrasou! <3 Sua missão é compartilhar o meu chat com 5 amigues. Quanto mais gente me chamar por inbox, mais pessoas vão entrar em ação pelos direitos das mulheres 💪 #ChamaBetaNoInbox',
+  YOU_ROCK_1: 'Compartilhe o meu link com suas amigas - e amigos! Quanto mais pessoas falarem comigo agora, mais pessoas vou conseguir mobilizar para entrar em ação! Vamos nessa? Basta clicar no ícone “encaminhar”, que vai aparecer do ladinho da imagem e mandar #ChamaBetaNoInbox pra todo mundo! 😍',
 
   //
   // Radar da Beta - STATUTE
