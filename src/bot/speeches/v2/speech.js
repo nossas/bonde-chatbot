@@ -170,6 +170,9 @@ const V2_QUICK_REPLY_O_5 = 'V2_QUICK_REPLY_O_5'
 
 const V2_QUICK_REPLY_RES_2232 = 'V2_QUICK_REPLY_RES_2232'
 const V2_QUICK_REPLY_PEC_29 = 'V2_QUICK_REPLY_PEC_29'
+const V2_QUICK_REPLY_PEC_29_2 = 'V2_QUICK_REPLY_PEC_29_2'
+const V2_QUICK_REPLY_PEC_29_3 = 'V2_QUICK_REPLY_PEC_29_3'
+const V2_QUICK_REPLY_PEC_29_4 = 'V2_QUICK_REPLY_PEC_29_4'
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -811,12 +814,38 @@ export default botData => ({
       )
     ],
 
-    [V2_QUICK_REPLY_PEC_29]: [
-      botSpeeches.messages.PEC_29_RADAR_1
+    [V2_QUICK_REPLY_PEC_29]: {
+      text: botSpeeches.messages.PEC_29_RADAR_1,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_PEC_29_2, botSpeeches.buttonTexts.WHAT_YOU_DID),
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
+      ]
+    },
+    [V2_QUICK_REPLY_PEC_29_2]: {
+      text: botSpeeches.messages.PEC_29_RADAR_2,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_PEC_29_3, botSpeeches.buttonTexts.WHAT_NOW),
+        quickReply(V2_QUICK_REPLY_PEC_29_4, botSpeeches.buttonTexts.PEC)
+      ]
+    },
+    [V2_QUICK_REPLY_PEC_29_3]: {
+      text: botSpeeches.messages.PEC_29_RADAR_3,
+      quick_replies: [
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
+      ]
+    },
+    [V2_QUICK_REPLY_PEC_29_4]: [
+      botSpeeches.messages.PEC_29_RADAR_4,
+      messageWithQuickReply(
+        botSpeeches.messages.PEC_29_RADAR_5,
+        quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
+        quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
+      )
     ],
 
     [V2_QUICK_REPLY_RES_2232]: [
-      botSpeeches.messages.RES_2232_RADAR
+      botSpeeches.messages.RES_2232_RADAR_1
     ],
 
     //
