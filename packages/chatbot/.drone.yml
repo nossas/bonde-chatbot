@@ -1,0 +1,127 @@
+pipeline:
+  staging-build:
+    image: node:latest
+    commands:
+      - export GRAPHQL_URL=https://api-v2.staging.bonde.org/graphql
+      - yarn
+      - yarn lint
+      - yarn test
+      - yarn build
+    when:
+      event: [push]
+
+  staging-publish:
+    image: plugins/docker
+    repo: nossas/bonde-bot
+    secrets: [ docker_username, docker_password ]
+    username: lpirola
+    password: ${DOCKER_PASSWORD}
+    tags:
+      - ${DRONE_BRANCH/\//-}
+    when:
+      status: success
+      branch: [hotfix/*, release/*, feature/*, develop]
+
+  staging-webserver-deploy:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: webservers/chatbot
+    group: deploying
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    when:
+      status: success
+      branch: [hotfix/*, release/*, feature/*, develop]
+
+  staging-worker-deploy:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: workers/bot-worker
+    group: deploying
+    docker_image: nossas/bonde-bot:${DRONE_BRANCH/\//-}
+    timeout: 360
+    confirm: true
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    when:
+      status: success
+      branch: [hotfix/*, release/*, feature/*, develop]
+
+  production-build:
+    image: node:latest
+    commands:
+      - export GRAPHQL_URL=https://api-v2.bonde.org/graphql
+      - yarn
+      - yarn lint
+      - yarn test
+    when:
+      event: tag
+
+  production-publish:
+    image: plugins/docker
+    repo: nossas/bonde-bot
+    secrets: [ docker_username, docker_password ]
+    username: lpirola
+    password: ${DOCKER_PASSWORD}
+    tags:
+      - ${DRONE_TAG##v}
+    when:
+      status: success
+      event: tag
+
+  production-webservers-deploy:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: webservers/chatbot
+    docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
+    timeout: 360
+    confirm: true
+    secrets:
+      - source: rancher_access_key_prod
+        target: rancher_access_key
+      - source: rancher_secret_key_prod
+        target: rancher_secret_key
+    when:
+      status: success
+      event: tag
+
+  production-deploy-worker:
+    image: peloton/drone-rancher
+    url: http://cluster.bonde.org
+    service: workers/bot-worker
+    docker_image: "nossas/bonde-bot:${DRONE_TAG##v}"
+    timeout: 360
+    confirm: true
+    secrets:
+      - source: rancher_access_key_prod
+        target: rancher_access_key
+      - source: rancher_secret_key_prod
+        target: rancher_secret_key
+    when:
+      status: success
+      event: tag
+
+  notify:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: bonde_bots
+    username: CI - ${DRONE_REPO_NAME}
+    when:
+      event: [ push, tag, build, publish, deployment, pull_request ]
+      status: [ success, failure ]
+
+services:
+  database:
+    image: postgres:9.6
+    # commands:
+      # - psql -c 'create database bonde; create schema postgraphql;' -hpostgres -Upostgres
+
+  api-v2:
+    image: nossas/bonde-graphql
+    commands:
+      - export SCHEMA_NAME=postgraphql
+      - export DATABASE_URL=postgres://postgres@database/postgres
+      - export JWT_SECRET=create_new_token
+      - export JWT_TYPE=postgraphql.jwt_token
+      - export PG_DEFAULT_ROLE=postgres
