@@ -1,0 +1,286 @@
+extends ../layout/index.pug
+
+block append stylesheets
+  link(rel='stylesheet' href='/mass-message/index.css')
+
+block content
+  section.hero.is-fullheight.is-dark
+    .hero-head
+      .container
+        nav#nav.nav
+          .container
+            .nav-left
+              a.nav-item.branding(href='/')
+                img(src='https://goo.gl/mMLgtz' alt='Beta logo')
+                .brand-name BETA
+            span.nav-toggle(v-on:click='onToggleMenu')
+              span
+              span
+              span
+            .nav-right.nav-menu(v-bind:class="{ 'is-active': isActive }")
+              a.nav-item(href='/mass-message') Mensagem em massa
+    .hero-body
+      .container
+        form#form(v-on:submit='onSubmit($event)')
+          .columns
+            .column.is-12
+              h1.title.is-2.is-spaced
+                | Envio de mensagem em massa
+              h2.subtitle.is-5
+                | Você pode enviar uma mensagem em massa para todas as pessoas que interagiram
+                | com a BETA pelo Messenger do Facebook.
+
+          .columns
+            .column.is-6
+              .field
+                label.label Páginas
+                .notification.is-warning(v-if='!bots.length')
+                  b Nenhum usuário interagiu com a BETA até o momento.
+                  |  Infelizmente não é possível enviar mensagem em massa.
+                .users-container(v-else)
+                  table.table.is-striped.is-medium
+                    thead
+                      tr
+                        th(style='width: 1px')
+                          label.checkbox
+                            input(type='checkbox' v-model='selectAllBots')
+                        th(style='width: 1px') #
+                        th Nome
+                        th Criado em
+                    tbody
+                      tr(v-for='bot in bots')
+                        th
+                          label.checkbox
+                            input(
+                              type='checkbox'
+                              v-bind:name="'selected_bots[' + bot.id + '][]'"
+                              v-bind:value='bot.id'
+                              v-model='selectedBots'
+                              v-on:change='onChangeSelectedBots'
+                            )
+                        td {{ bot.id }}
+                        td {{ bot.data.name }}
+                        td {{ bot.createdAt }}
+              .field
+                label.label Mensagem
+                p.control
+                  textarea.textarea(
+                    autofocus
+                    v-model='message'
+                    v-bind:class="{ 'is-danger': !message && messageDirty, 'is-success': message }"
+                    v-on:keydown='onMessageKeydown'
+                    name='message'
+                    placeholder='Exemplo:\n\nE aí, mana, tudo bem? Meu nome é Betânia, mas pode me chamar de Beta. Sou uma robô que veio ao mundo para ajudar a viralizar as lutas feministas pelas redes - e já tem uma oportunidade no forno. Vamos lá?'
+                    style='min-height: 220px'
+                  )
+                span.help.is-danger(v-if='!message && messageDirty') * Campo obrigatório
+
+              button.button.is-outlined.is-large.is-primary.is-inverted.is-fullwidth(
+                type='submit'
+              )
+                span.icon
+                  i.fa.fa-envelope
+                | Enviar
+
+            .column.is-6
+              .field
+                label.label
+                  .columns.is-marginless.is-mobile
+                    .column.is-6.is-paddingless
+                      | Usuários ({{ selectedRecipients.length }})
+
+                    .column.is-6.is-paddingless(style='margin-bottom: -3px;')
+                      .field.is-pulled-right(v-bind:class="{ 'has-addons': isActiveSearch }")
+                        p.control
+                          a.button.is-outlined.is-default.is-small(
+                            v-on:click='onToggleSearch'
+                          )
+                            span.icon.is-small.is-marginless
+                              i.fa.fa-search(style='position: relative; top: -1px;')
+                        p.control(v-bind:class="{ 'is-hidden': !isActiveSearch }")
+                          input.input.is-small.is-default(
+                            type='text'
+                            placeholder='Nome de usuário'
+                            style='width: 200px;'
+                            ref='searchInput'
+                            v-model='search'
+                          )
+
+                .notification.is-warning.is-marginless(v-if='!allRecipients.length')
+                  b Nenhum usuário interagiu com a BETA até o momento.
+                  |  Infelizmente não é possível enviar mensagem em massa.
+                .notification.is-warning.is-marginless(v-if='!recipients.length && allRecipients.length')
+                  b Nenhuma página foi selecionada.
+                  |  Pra poder enviar mensagem para os usuários, você precisa
+                  |  selecionar uma ou mais páginas para que seja possível a listagem
+                  |  dos usuários.
+                .users-container(v-if='recipients.length')
+                  table.table.is-striped.is-marginless
+                    thead
+                      tr
+                        th(style='width: 1px')
+                          label.checkbox
+                            input(type='checkbox' v-model='selectAllRecipients')
+                        th Nome
+                        th Página
+                        th Última Interação
+                    tfoot
+                      tr
+                        th(style='width: 1px')
+                          label.checkbox
+                            input(type='checkbox' v-model='selectAllRecipients')
+                        th Nome
+                        th Página
+                        th Última Interação
+                    tbody
+                      tr(v-for='recipient in visibleRecipients')
+                        th
+                          label.checkbox
+                            input(
+                              type='checkbox'
+                              v-bind:name="'selected_recipients[' + recipient.facebookBotConfigurationId + '][]'"
+                              v-bind:value='recipient'
+                              v-model='selectedRecipients'
+                              v-on:change='onRecipientChange'
+                              checked
+                            )
+                        td {{ recipient.profile.first_name }} {{ recipient.profile.last_name }}
+                        td {{ recipient.bot.name }}
+                        td {{ recipient.createdAt }}
+                span.help.is-danger(v-if='(!recipients.length || !selectedRecipients.length) && recipientDirty')
+                  | * Campo obrigatório
+
+  script(type='text/javascript').
+    new Vue({
+      el: '#nav',
+      data: {
+        isActive: false
+      },
+      methods: {
+        onToggleMenu () {
+          this.isActive = !this.isActive
+        }
+      }
+    })
+
+    var appDomain = '#{appDomain}'
+
+    new Vue({
+      el: '#form',
+      beforeMount () {
+        this.recipients = this.visibleRecipients = this.allRecipients.filter(
+          r => this.selectedBots.includes(r.facebookBotConfigurationId)
+        )
+      },
+      data: {
+        bots: !{JSON.stringify(bots)},
+        allRecipients: !{JSON.stringify(recipients)},
+        recipients: [],
+        visibleRecipients: [],
+        message: undefined,
+        messageDirty: false,
+        recipientDirty: false,
+        selectedBots: !{JSON.stringify(bots)}.map(b => b.id),
+        selectedRecipients: !{JSON.stringify(recipients)},
+        isActiveSearch: false,
+        search: '',
+      },
+      watch: {
+        selectedBots (val, old) {
+          this.recipients = this.visibleRecipients = this.allRecipients
+            .filter(r => val.includes(r.facebookBotConfigurationId))
+
+          this.visibleRecipients = !this.search
+            ? this.recipients
+            : this.recipients.filter(({
+                profile: {
+                  first_name: firstName,
+                  last_name: lastName
+                }
+              }) => {
+                const name = `${firstName} ${lastName}`
+                const regex = new RegExp(String(this.search).trim(), 'gi')
+                return name.match(regex)
+              }
+            )
+        },
+        search (val, old) {
+          this.visibleRecipients = !val
+            ? this.recipients
+            : this.recipients.filter(({
+                profile: {
+                  first_name: firstName,
+                  last_name: lastName
+                }
+              }) => {
+                const name = `${firstName} ${lastName}`
+                const regex = new RegExp(String(this.search).trim(), 'gi')
+                return name.match(regex)
+              }
+            )
+        },
+      },
+      computed: {
+        selectAllBots: {
+          get () {
+            return this.bots
+              ? this.selectedBots.length == this.bots.length
+              : false
+          },
+          set (value) {
+            var selected = []
+            if (value) this.bots.forEach(bot => selected.push(bot.id))
+            this.selectedBots = selected
+          }
+        },
+        selectAllRecipients: {
+          get () {
+            return this.recipients
+              ? this.selectedRecipients.length == this.recipients.length
+              : false
+          },
+          set (value) {
+            var selected = []
+            if (value) this.recipients.forEach(recipient => { selected.push(recipient) })
+            this.selectedRecipients = selected
+          }
+        }
+      },
+      methods: {
+        onMessageKeydown () { this.messageDirty = true },
+        onRecipientChange () { this.recipientDirty = true },
+        onSubmit (event) {
+          event.preventDefault()
+          var validation = this.message && this.selectedRecipients.length
+          var message = 'Dá uma olhada pra ver se tá tudo certo na mensagem pois,'
+                      + 'depois de enviada, não tem que voltar atrás... Posso prosseguir?'
+
+          if (!validation) {
+            this.messageDirty = true
+            this.recipientDirty = true
+            return
+          }
+          if (confirm(message)) {
+            var endpoint = appDomain + '/mass-message/send'
+            var payload = {
+              selectedRecipients: this.selectedRecipients,
+              message: this.message
+            }
+
+            this.$http.post(endpoint, payload)
+              .then(data => data)
+              .catch(err => console.error(err))
+          }
+        },
+        onChangeSelectedBots () {
+          this.selectedRecipients = this.allRecipients
+            .filter(r => this.selectedBots.includes(r.facebookBotConfigurationId))
+        },
+        onToggleSearch (event) {
+          const self = this
+          event.preventDefault()
+          this.isActiveSearch = !this.isActiveSearch
+          if (this.isActiveSearch) setTimeout(() => self.$refs.searchInput.focus(), 1)
+        }
+      }
+    })

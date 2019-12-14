@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://s3.amazonaws.com/hub-central/uploads/1502480053_betatela2.png');
+  font-family: 'Droid Sans', sans-serif;
+}
+
+section.hero {
+  background: url('https://s3.amazonaws.com/hub-central/uploads/1502226972_betacapa1.png');
+  background-position: 0 -150px;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.hero .logo {
+  margin-top: 50px;
+}
+
+section.header {
+  padding: 5rem;
+  border-bottom: 1px dotted #333;
+  color: white;
+  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+section.content {
+  background-color: #efefef;
+  color: #333;
+  padding: 5rem 10%;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 7rem !important;
+}
+
+section.footer {
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  line-height: 1.6rem;
+  color: #fff;
+  padding: 7rem;
+  margin-bottom: 7rem;
+  border-top: 1px dotted #333;
+  border-bottom: 1px dotted #333;
+  text-align: center;
+}
+
+.big {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.beta {
+  font-weight: 300;
+}
+
+
+@media screen and (max-width: 768px), print {
+  .big {
+    text-align: left;
+    font-size: 1.9rem;
+  }
+
+  section.hero {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  section.header {
+    font-size: 9vw;
+    font-weight: 300;
+  }
+
+  section.content {
+    font-size: 1.2rem;
+  }
+}

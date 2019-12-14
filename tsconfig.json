@@ -17,10 +17,5 @@
     "rootDir": "src",
     "outDir": "dist",
     "allowSyntheticDefaultImports": true
-  },
-  "exclude": [
-    "node_modules",
-    "jest.config.js",
-    "dist"
-  ]
+  }
 }

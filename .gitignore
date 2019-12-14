@@ -1,7 +1,4 @@
-.DS_Store
-coverage
-dist
+packages/chatbot/node_modules
+packages/beta/node_modules
 node_modules
-*.log
-.env
-*.builded.js
+pnpm*
