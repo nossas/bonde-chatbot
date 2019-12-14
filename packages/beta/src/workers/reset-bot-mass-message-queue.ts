@@ -1,5 +1,6 @@
-require('dotenv').config()
+import dotenv from 'dotenv'
 const Redis = require('ioredis')
+dotenv.config()
 
 const myArgs = process.argv.slice(2)
 const redisKey = typeof myArgs[0] !== 'undefined' ? myArgs[0].split('=') : ''
