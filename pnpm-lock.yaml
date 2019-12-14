@@ -1,8 +1,8 @@
 importers:
   .:
     devDependencies:
-      '@typescript-eslint/eslint-plugin': 2.11.0_941bfbd66607e40eaf4ff1b6e0744479
-      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2
+      '@typescript-eslint/eslint-plugin': 2.11.0_0dbb6242a97c931a7408d4e8d8053f71
+      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2+typescript@3.7.3
       babel-eslint: 10.0.3_eslint@6.7.2
       eslint: 6.7.2
       eslint-config-standard: 14.1.0_c5f5325156488ebfaa3881ed2ea4c765
@@ -10,6 +10,10 @@ importers:
       eslint-plugin-node: 10.0.0_eslint@6.7.2
       eslint-plugin-promise: 4.2.1
       eslint-plugin-standard: 4.0.1_eslint@6.7.2
+      jest: 24.9.0
+      ts-jest: 24.1.0_jest@24.9.0
+      tsc-watch: 4.0.0_typescript@3.7.3
+      typescript: 3.7.3
     specifiers:
       '@typescript-eslint/eslint-plugin': ^2.8.0
       '@typescript-eslint/parser': ^2.8.0
@@ -20,13 +24,16 @@ importers:
       eslint-plugin-node: ^10.0.0
       eslint-plugin-promise: ^4.2.1
       eslint-plugin-standard: ^4.0.1
+      jest: 24.9.0
+      ts-jest: 24.1.0
+      tsc-watch: ^4.0.0
+      typescript: ^3.7.2
   packages/beta:
     dependencies:
       apollo-cache-inmemory: 1.6.3_graphql@14.5.8
       apollo-client: 2.6.4_graphql@14.5.8
       apollo-link: 1.2.13_graphql@14.5.8
       apollo-link-http: 1.5.16_graphql@14.5.8
-      apollo-utilities: 1.3.2_graphql@14.5.8
       axios: 0.19.0
       body-parser: 1.19.0
       bull: 3.12.1
@@ -63,18 +70,12 @@ importers:
       '@types/node': 12.7.8
       '@types/node-wit': 4.2.2
       '@types/underscore': 1.9.3
-      '@typescript-eslint/eslint-plugin': 1.13.0_0c3938c537808e00ec50e3d77976341c
-      '@typescript-eslint/parser': 1.13.0
       documentation: 12.1.2
       husky: 3.0.7
-      jest: 24.9.0
       lint-staged: 9.4.1
       open-cli: 5.0.0
       rimraf: 2.6.3
       standard-version: 7.0.0
-      ts-jest: 24.1.0_jest@24.9.0
-      tsc-watch: 4.0.0_typescript@3.7.3
-      typescript: 3.7.3
     specifiers:
       '@types/bull': 3.10.3
       '@types/cors': 2.8.6
@@ -88,13 +89,10 @@ importers:
       '@types/node': 12.7.8
       '@types/node-wit': 4.2.2
       '@types/underscore': 1.9.3
-      '@typescript-eslint/eslint-plugin': 1.13.0
-      '@typescript-eslint/parser': 1.13.0
       apollo-cache-inmemory: 1.6.3
       apollo-client: 2.6.4
       apollo-link: 1.2.13
       apollo-link-http: 1.5.16
-      apollo-utilities: 1.3.2
       axios: 0.19.0
       body-parser: 1.19.0
       bull: 3.12.1
@@ -112,7 +110,6 @@ importers:
       husky: 3.0.7
       ioredis: 4.14.1
       isomorphic-fetch: 2.2.1
-      jest: 24.9.0
       jwt-decode: 2.2.0
       lint-staged: 9.4.1
       messenger-bot: 'nossas/messenger-bot#master'
@@ -124,9 +121,6 @@ importers:
       querystring: 0.2.0
       rimraf: 2.6.3
       standard-version: 7.0.0
-      ts-jest: 24.1.0
-      tsc-watch: ^4.0.0
-      typescript: ^3.7.2
       underscore: 1.9.1
   packages/chatbot:
     dependencies:
@@ -175,14 +169,10 @@ importers:
       '@types/underscore': 1.9.3
       documentation: 12.1.1
       husky: 3.0.2
-      jest: 24.9.0
       lint-staged: 9.2.1
       open-cli: 5.0.0
       rimraf: 2.6.3
       standard-version: 7.0.0
-      ts-jest: 24.1.0_jest@24.9.0
-      tsc-watch: 4.0.0_typescript@3.7.3
-      typescript: 3.7.3
     specifiers:
       '@types/bull': 3.10.3
       '@types/cors': 2.8.6
@@ -218,7 +208,6 @@ importers:
       graphql-tag: 2.10.1
       husky: 3.0.2
       isomorphic-fetch: 2.2.1
-      jest: 24.9.0
       jwt-decode: ^2.2.0
       lint-staged: 9.2.1
       messenger-bot: 'nossas/messenger-bot#master'
@@ -231,9 +220,6 @@ importers:
       rimraf: 2.6.3
       standard-version: 7.0.0
       subscriptions-transport-ws: 0.9.16
-      ts-jest: 24.1.0
-      tsc-watch: ^4.0.0
-      typescript: ^3.7.2
       underscore: ^1.9.1
       ws: 7.1.2
 lockfileVersion: 5.1
@@ -1374,7 +1360,7 @@ packages:
       micromatch: 3.1.10
       p-each-series: 1.0.0
       realpath-native: 1.1.0
-      rimraf: 2.6.3
+      rimraf: 2.7.1
       slash: 2.0.0
       strip-ansi: 5.2.0
     dev: true
@@ -1745,32 +1731,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-te5lMAWii1uEJ4FwLjzdlbw3+n0FZNOvFXHxQDKeT0dilh7HOzdMzV2TrJVUzq8ep7J4Na8OUYPRLSQkJHAlrg==
-  /@typescript-eslint/eslint-plugin/1.13.0_0c3938c537808e00ec50e3d77976341c:
+  /@typescript-eslint/eslint-plugin/2.11.0_0dbb6242a97c931a7408d4e8d8053f71:
     dependencies:
-      '@typescript-eslint/experimental-utils': 1.13.0
-      '@typescript-eslint/parser': 1.13.0
-      eslint-utils: 1.4.3
-      functional-red-black-tree: 1.0.1
-      regexpp: 2.0.1
-      tsutils: 3.17.1_typescript@3.7.3
-    dev: true
-    engines:
-      node: ^6.14.0 || ^8.10.0 || >=9.10.0
-    peerDependencies:
-      '@typescript-eslint/parser': ^1.9.0
-      eslint: ^5.0.0
-      typescript: '*'
-    resolution:
-      integrity: sha512-WQHCozMnuNADiqMtsNzp96FNox5sOVpU8Xt4meaT4em8lOG1SrOv92/mUbEHQVh90sldKSfcOc/I0FOb/14G1g==
-  /@typescript-eslint/eslint-plugin/2.11.0_941bfbd66607e40eaf4ff1b6e0744479:
-    dependencies:
-      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2
-      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2
+      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2+typescript@3.7.3
       eslint: 6.7.2
       eslint-utils: 1.4.3
       functional-red-black-tree: 1.0.1
       regexpp: 3.0.0
-      tsutils: 3.17.1
+      tsutils: 3.17.1_typescript@3.7.3
+      typescript: 3.7.3
     dev: true
     engines:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
@@ -1783,22 +1753,10 @@ packages:
         optional: true
     resolution:
       integrity: sha512-G2HHA1vpMN0EEbUuWubiCCfd0R3a30BB+UdvnFkxwZIxYEGOrWEXDv8tBFO9f44CWc47Xv9lLM3VSn4ORLI2bA==
-  /@typescript-eslint/experimental-utils/1.13.0:
+  /@typescript-eslint/experimental-utils/2.11.0_eslint@6.7.2+typescript@3.7.3:
     dependencies:
       '@types/json-schema': 7.0.3
-      '@typescript-eslint/typescript-estree': 1.13.0
-      eslint-scope: 4.0.3
-    dev: true
-    engines:
-      node: ^6.14.0 || ^8.10.0 || >=9.10.0
-    peerDependencies:
-      eslint: '*'
-    resolution:
-      integrity: sha512-zmpS6SyqG4ZF64ffaJ6uah6tWWWgZ8m+c54XXgwFtUv0jNz8aJAVx8chMCvnk7yl6xwn8d+d96+tWp7fXzTuDg==
-  /@typescript-eslint/experimental-utils/2.11.0_eslint@6.7.2:
-    dependencies:
-      '@types/json-schema': 7.0.3
-      '@typescript-eslint/typescript-estree': 2.11.0
+      '@typescript-eslint/typescript-estree': 2.11.0_typescript@3.7.3
       eslint: 6.7.2
       eslint-scope: 5.0.0
     dev: true
@@ -1806,26 +1764,14 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     peerDependencies:
       eslint: '*'
+      typescript: '*'
     resolution:
       integrity: sha512-YxcA/y0ZJaCc/fB/MClhcDxHI0nOBB7v2/WxBju2cOTanX7jO9ttQq6Fy4yW9UaY5bPd9xL3cun3lDVqk67sPQ==
-  /@typescript-eslint/parser/1.13.0:
+  /@typescript-eslint/parser/2.11.0_eslint@6.7.2+typescript@3.7.3:
     dependencies:
       '@types/eslint-visitor-keys': 1.0.0
-      '@typescript-eslint/experimental-utils': 1.13.0
-      '@typescript-eslint/typescript-estree': 1.13.0
-      eslint-visitor-keys: 1.1.0
-    dev: true
-    engines:
-      node: ^6.14.0 || ^8.10.0 || >=9.10.0
-    peerDependencies:
-      eslint: ^5.0.0
-    resolution:
-      integrity: sha512-ITMBs52PCPgLb2nGPoeT4iU3HdQZHcPaZVw+7CsFagRJHUhyeTgorEwHXhFf3e7Evzi8oujKNpHc8TONth8AdQ==
-  /@typescript-eslint/parser/2.11.0_eslint@6.7.2:
-    dependencies:
-      '@types/eslint-visitor-keys': 1.0.0
-      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2
-      '@typescript-eslint/typescript-estree': 2.11.0
+      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/typescript-estree': 2.11.0_typescript@3.7.3
       eslint: 6.7.2
       eslint-visitor-keys: 1.1.0
     dev: true
@@ -1833,18 +1779,10 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0
+      typescript: '*'
     resolution:
       integrity: sha512-DyGXeqhb3moMioEFZIHIp7oXBBh7dEfPTzGrlyP0Mi9ScCra4SWEGs3kPd18mG7Sy9Wy8z88zmrw5tSGL6r/6A==
-  /@typescript-eslint/typescript-estree/1.13.0:
-    dependencies:
-      lodash.unescape: 4.0.1
-      semver: 5.5.0
-    dev: true
-    engines:
-      node: '>=6.14.0'
-    resolution:
-      integrity: sha512-b5rCmd2e6DCC6tCTN9GSUAuxdYwCM/k/2wdjHGrIRGPSJotWMCe/dGpi66u42bhuh8q3QBzqM4TMA1GUUCJvdw==
-  /@typescript-eslint/typescript-estree/2.11.0:
+  /@typescript-eslint/typescript-estree/2.11.0_typescript@3.7.3:
     dependencies:
       debug: 4.1.1
       eslint-visitor-keys: 1.1.0
@@ -1852,7 +1790,8 @@ packages:
       is-glob: 4.0.1
       lodash.unescape: 4.0.1
       semver: 6.3.0
-      tsutils: 3.17.1
+      tsutils: 3.17.1_typescript@3.7.3
+      typescript: 3.7.3
     dev: true
     engines:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
@@ -2060,8 +1999,8 @@ packages:
       integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==
   /apollo-cache-inmemory/1.6.3_graphql@14.5.8:
     dependencies:
-      apollo-cache: 1.3.2_graphql@14.5.8
-      apollo-utilities: 1.3.2_graphql@14.5.8
+      apollo-cache: 1.3.4_graphql@14.5.8
+      apollo-utilities: 1.3.3_graphql@14.5.8
       graphql: 14.5.8
       optimism: 0.10.3
       ts-invariant: 0.4.4
@@ -2080,6 +2019,16 @@ packages:
       graphql: '*'
     resolution:
       integrity: sha512-+KA685AV5ETEJfjZuviRTEImGA11uNBp/MJGnaCvkgr+BYRrGLruVKBv6WvyFod27WEB2sp7SsG8cNBKANhGLg==
+  /apollo-cache/1.3.4_graphql@14.5.8:
+    dependencies:
+      apollo-utilities: 1.3.3_graphql@14.5.8
+      graphql: 14.5.8
+      tslib: 1.10.0
+    dev: false
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
+    resolution:
+      integrity: sha512-7X5aGbqaOWYG+SSkCzJNHTz2ZKDcyRwtmvW4mGVLRqdQs+HxfXS4dUS2CcwrAj449se6tZ6NLUMnjko4KMt3KA==
   /apollo-client/2.6.4_graphql@14.5.8:
     dependencies:
       '@types/zen-observable': 0.8.0
@@ -2142,7 +2091,7 @@ packages:
       integrity: sha512-nrWh9m7k1FQw1AK1GB1VTJS0o01cpsP2RYmTAh2j+P4lL2/72WgsblhbuF+yA1/jsgVrzg6xa+TNw3UwgGp3+g==
   /apollo-link/1.2.13_graphql@14.5.8:
     dependencies:
-      apollo-utilities: 1.3.2_graphql@14.5.8
+      apollo-utilities: 1.3.3_graphql@14.5.8
       graphql: 14.5.8
       ts-invariant: 0.4.4
       tslib: 1.10.0
@@ -2164,6 +2113,18 @@ packages:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
       integrity: sha512-JWNHj8XChz7S4OZghV6yc9FNnzEXj285QYp/nLNh943iObycI5GTDO3NGR9Dth12LRrSFMeDOConPfPln+WGfg==
+  /apollo-utilities/1.3.3_graphql@14.5.8:
+    dependencies:
+      '@wry/equality': 0.1.9
+      fast-json-stable-stringify: 2.0.0
+      graphql: 14.5.8
+      ts-invariant: 0.4.4
+      tslib: 1.10.0
+    dev: false
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
+    resolution:
+      integrity: sha512-F14aX2R/fKNYMvhuP2t9GD9fggID7zp5I96MF5QeKYWDWTrkRdHRp4+SVfXUVN+cXOaB/IebfvRtzPf25CM0zw==
   /append-buffer/1.0.2:
     dependencies:
       buffer-equal: 1.0.0
@@ -2452,6 +2413,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-Un7MIEDdUC5gNpcGDV97op1Ywk748MpHcFTHoYs6qnj1Z3j7I53VG3nwZhKzoBZmbdRNnb6WRdFlwl7tSDuZGw==
+  /bindings/1.5.0:
+    dependencies:
+      file-uri-to-path: 1.0.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
   /bluebird/3.7.2:
     dev: false
     resolution:
@@ -2770,7 +2738,7 @@ packages:
       upath: 1.2.0
     dev: true
     optionalDependencies:
-      fsevents: 1.2.10
+      fsevents: 1.2.11
     resolution:
       integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==
   /ci-info/2.0.0:
@@ -3982,15 +3950,6 @@ packages:
       eslint: '>=5.0.0'
     resolution:
       integrity: sha512-v/KBnfyaOMPmZc/dmc6ozOdWqekGp7bBGq4jLAecEfPGmfKiWS4sA8sC0LqiV9w5qmXAtXVn4M3p1jSyhY85SQ==
-  /eslint-scope/4.0.3:
-    dependencies:
-      esrecurse: 4.2.1
-      estraverse: 4.3.0
-    dev: true
-    engines:
-      node: '>=4.0.0'
-    resolution:
-      integrity: sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==
   /eslint-scope/5.0.0:
     dependencies:
       esrecurse: 4.2.1
@@ -4390,6 +4349,11 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-rM0UO7Qm9K7TWTtA6AShI/t7H5BPjDeGVDaNyg9BjHAj3PysKy7+8C8D137R88jnR3rFJZQB/tFgydl5sN5m7g==
+  /file-uri-to-path/1.0.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
   /fill-range/4.0.0:
     dependencies:
       extend-shallow: 2.0.1
@@ -4549,10 +4513,11 @@ packages:
     dev: true
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
-  /fsevents/1.2.10:
+  /fsevents/1.2.11:
     bundledDependencies:
       - node-pre-gyp
     dependencies:
+      bindings: 1.5.0
       nan: 2.14.0
     dev: true
     engines:
@@ -4560,7 +4525,7 @@ packages:
     optional: true
     requiresBuild: true
     resolution:
-      integrity: sha512-Dw5DScF/8AWhWzWRbnQrFJfeR/TOJZjRr9Du9kfmd8t234ICcVeDBlauFl/jVcE5ZewhlPoCFvIqp0SE3kAVxA==
+      integrity: sha512-+ux3lx6peh0BpvY0JebGyZoiR4D+oYzdPZMKJwkZ+sFkNJzpL7tXc/wehS49gUAxg3tmMHPHZkA8JU2rhhgDHw==
   /function-bind/1.1.1:
     resolution:
       integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
@@ -5621,7 +5586,7 @@ packages:
       debug: 4.1.1
       istanbul-lib-coverage: 2.0.5
       make-dir: 2.1.0
-      rimraf: 2.6.3
+      rimraf: 2.7.1
       source-map: 0.6.1
     dev: true
     engines:
@@ -5774,7 +5739,7 @@ packages:
     engines:
       node: '>= 6'
     optionalDependencies:
-      fsevents: 1.2.10
+      fsevents: 1.2.11
     resolution:
       integrity: sha512-kfVFmsuWui2Sj1Rp1AJ4D9HqJwE4uwTlS/vO+eRUaMmd54BFpli2XhMQnPC2k4cHFVbB2Q2C+jtI1AGLgEnCjQ==
   /jest-jasmine2/24.9.0:
@@ -8468,6 +8433,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
+  /rimraf/2.7.1:
+    dependencies:
+      glob: 7.1.6
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
   /rimraf/3.0.0:
     dependencies:
       glob: 7.1.6
@@ -8552,11 +8524,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
-  /semver/5.5.0:
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
   /semver/5.7.1:
     dev: true
     hasBin: true
@@ -9447,16 +9414,6 @@ packages:
   /tslib/1.10.0:
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-  /tsutils/3.17.1:
-    dependencies:
-      tslib: 1.10.0
-    dev: true
-    engines:
-      node: '>= 6'
-    peerDependencies:
-      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
-    resolution:
-      integrity: sha512-kzeQ5B8H3w60nFY2g8cJIuH7JDpsALXySGtwGJ0p2LSjLgay3NdIpqq5SoOBe46bKDW2iq25irHCr8wjomUS2g==
   /tsutils/3.17.1_typescript@3.7.3:
     dependencies:
       tslib: 1.10.0
@@ -10161,6 +10118,5 @@ packages:
     dev: false
     name: messenger-bot
     resolution:
-      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/nossas/messenger-bot/tar.gz/4da339caca53b04c52a29bbd23e99c6a95548078'
     version: 2.5.0
