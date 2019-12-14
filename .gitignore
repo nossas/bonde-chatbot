@@ -1,3 +1,4 @@
 packages/chatbot/node_modules
 packages/beta/node_modules
 node_modules
+pnpm*

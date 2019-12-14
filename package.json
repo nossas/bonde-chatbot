@@ -1,0 +1,22 @@
+{
+  "name": "bonde-bot",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.7.2",
+    "ts-jest": "24.1.0",
+    "jest": "24.9.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "rm -rf node_modules"
+  }
+}

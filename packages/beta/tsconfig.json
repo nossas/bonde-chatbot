@@ -1,22 +1,8 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "lib": [
-      "esnext"
-    ],
-    "target": "es5",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "downlevelIteration": true,
     "rootDir": "src",
-    "outDir": "dist",
-    "allowSyntheticDefaultImports": true
+    "outDir": "dist"
   },
   "exclude": [
     "./jest.config.js"

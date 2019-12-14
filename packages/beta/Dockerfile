@@ -1,9 +1,13 @@
-FROM node:latest
-MAINTAINER Nossas <tech@nossas.org>
+FROM node:12-alpine
 
-RUN mkdir /code
-WORKDIR /code
+RUN yarn global add pnpm
 
-COPY . /code
+WORKDIR /usr/src/app
 
-CMD ["yarn", "start"]
+COPY ./ .
+
+RUN pnpm i
+
+RUN pnpm m run build --filter beta
+
+CMD pnpm m start --filter beta

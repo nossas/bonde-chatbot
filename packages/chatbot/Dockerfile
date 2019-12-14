@@ -1,13 +1,13 @@
-FROM node:latest
-MAINTAINER Nossas <tech@nossas.org>
+FROM node:12-alpine
 
-RUN mkdir /code
-WORKDIR /code
+RUN yarn global add pnpm
 
-COPY . .
+WORKDIR /usr/src/app
 
-RUN yarn install
+COPY ./ .
 
-RUN yarn run build
+RUN pnpm i
 
-CMD ["yarn", "start"]
+RUN pnpm m run build --filter chatbot
+
+CMD pnpm m start --filter chatbot
