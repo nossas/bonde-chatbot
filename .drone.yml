@@ -5,7 +5,7 @@ pipeline:
       - export GRAPHQL_URL=https://api-v2.staging.bonde.org/graphql
       - yarn global add pnpm
       - pnpm i
-      # - pnpm run lint
+      - pnpm run lint
       - pnpm m run test
       - pnpm m run build
     when:
@@ -84,7 +84,7 @@ pipeline:
       - export GRAPHQL_URL=https://api-v2.bonde.org/graphql
       - yarn global add pnpm
       - pnpm i
-      # - pnpm run lint
+      - pnpm run lint
       - pnpm m run test
       - pnpm m run build
     when:

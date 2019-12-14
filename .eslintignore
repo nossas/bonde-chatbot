@@ -1,3 +1,4 @@
-node_modules
-packages/beta/node_modules
-packages/chatbot/node_modules
+**/node_modules
+**/dist
+# packages/beta/node_modules
+# packages/chatbot/node_modules

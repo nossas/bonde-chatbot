@@ -154,14 +154,14 @@ class Factory {
 
       if (chatbot.persistentMenu) {
         // Menu configured on admin-canary
-        persistentMenu['call_to_actions'] = chatbot.persistentMenu.map(({ title, payload }) => ({
+        persistentMenu.call_to_actions = chatbot.persistentMenu.map(({ title, payload }) => ({
           title,
           payload,
           type: 'postback'
         }))
       } else {
         // Menu default with started message
-        persistentMenu['call_to_actions'] = [
+        persistentMenu.call_to_actions = [
           {
             title: 'Reiniciar conversa',
             type: 'postback',
