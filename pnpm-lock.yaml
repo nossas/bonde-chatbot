@@ -51,7 +51,7 @@ importers:
       ioredis: 4.14.1
       isomorphic-fetch: 2.2.1
       jwt-decode: 2.2.0
-      messenger-bot: github.com/nossas/messenger-bot/4da339caca53b04c52a29bbd23e99c6a95548078
+      messenger-bot: github.com/nossas/messenger-bot/d2764a5cab0039e8e47a1d8a3c636de2414cf0f3
       morgan: 1.9.1
       node-fetch: 2.6.0
       node-wit: 5.0.0
@@ -148,7 +148,7 @@ importers:
       graphql-tag: 2.10.1_graphql@14.5.8
       isomorphic-fetch: 2.2.1
       jwt-decode: 2.2.0
-      messenger-bot: github.com/nossas/messenger-bot/4da339caca53b04c52a29bbd23e99c6a95548078
+      messenger-bot: github.com/nossas/messenger-bot/d2764a5cab0039e8e47a1d8a3c636de2414cf0f3
       morgan: 1.9.1
       node-fetch: 2.6.0
       node-wit: 5.0.0
@@ -10372,13 +10372,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
-  github.com/nossas/messenger-bot/4da339caca53b04c52a29bbd23e99c6a95548078:
+  github.com/nossas/messenger-bot/d2764a5cab0039e8e47a1d8a3c636de2414cf0f3:
     dependencies:
       request: 2.88.0
       request-promise: 4.2.5_request@2.88.0
     dev: false
     name: messenger-bot
     resolution:
-      registry: 'https://registry.npmjs.org/'
-      tarball: 'https://codeload.github.com/nossas/messenger-bot/tar.gz/4da339caca53b04c52a29bbd23e99c6a95548078'
+      tarball: 'https://codeload.github.com/nossas/messenger-bot/tar.gz/d2764a5cab0039e8e47a1d8a3c636de2414cf0f3'
     version: 2.5.0
