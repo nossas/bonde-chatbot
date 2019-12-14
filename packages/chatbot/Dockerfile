@@ -10,4 +10,4 @@ RUN pnpm i
 
 RUN pnpm m run build --filter chatbot
 
-CMD pnpm m start --filter chatbot
+CMD pnpm m run start --filter chatbot

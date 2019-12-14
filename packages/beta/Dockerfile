@@ -10,4 +10,4 @@ RUN pnpm i
 
 RUN pnpm m run build --filter beta
 
-CMD pnpm m start --filter beta
+CMD pnpm m run start --filter beta
