@@ -1,4 +1,6 @@
-import Http from 'http'
+import * as apm from 'elastic-apm-node'
+apm.start({ active: process.env.NODE_ENV === 'production' })
+// import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import morgan from 'morgan'
