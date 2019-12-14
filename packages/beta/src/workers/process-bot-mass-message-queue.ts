@@ -1,5 +1,5 @@
-import * as apm from 'elastic-apm-node'
-apm.start({ active: process.env.NODE_ENV === 'production' })
+import agent from 'elastic-apm-node'
+agent.start({ active: process.env.NODE_ENV === 'production' })
 
 import 'colors'
 import Queue from 'bull'

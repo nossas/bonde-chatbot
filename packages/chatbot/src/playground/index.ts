@@ -1,12 +1,13 @@
-import * as apm from 'elastic-apm-node'
-apm.start({ active: process.env.NODE_ENV === 'production' })
+import agent from 'elastic-apm-node'
+require('dotenv').config()
+agent.start({ active: process.env.NODE_ENV === 'production' })
 // import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
 import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
-import Queue from 'bull'
+// import Queue from 'bull'
 import BotFactory from './factory'
 
 require('isomorphic-fetch')
