@@ -10074,6 +10074,5 @@ packages:
     dev: false
     name: messenger-bot
     resolution:
-      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/nossas/messenger-bot/tar.gz/4da339caca53b04c52a29bbd23e99c6a95548078'
     version: 2.5.0
