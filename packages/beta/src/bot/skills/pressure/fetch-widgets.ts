@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import 'colors'
 import axios from 'axios'
 import querystring from 'querystring'
@@ -18,8 +19,8 @@ export default ({ botData }) => {
         if (widgets.constructor === Array) {
           const widget = widgets[widgets.findIndex(w => w.id === widgetId)]
           global.widgets[widgetId] = widget
-        } else console.error('The API result is not an array'.red)
+        } else apm.captureError('The API result is not an array'.red)
       })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
-  } else console.error('No pressure object defined on bot config data'.red)
+      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
+  } else apm.captureError('No pressure object defined on bot config data'.red)
 }

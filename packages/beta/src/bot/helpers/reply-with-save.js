@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import * as botInteractions from '../interactions'
 
 //
@@ -19,7 +20,7 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
 
     botInteractions.save({ botData, payload, interaction })
       .then(data => { originalReply(msg, callback); return data })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
+      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
   }
 
   const normalize = msg => {
@@ -40,7 +41,7 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
     const replySequentially = index => {
       if (index < message.length) {
         saveAndReply(normalize(message[index]), err => {
-          if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
+          if (err) apm.captureError('Error sending multiple messages: (%s)', JSON.stringify(err))
 
           bot.sendSenderAction(payload.sender.id, 'typing_on')
           if (index === message.length - 1) {

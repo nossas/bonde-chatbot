@@ -26,7 +26,7 @@ router.post('/authenticate', (req, res) => {
   //     }
   //   })
   //   .catch(error => {
-  //     console.error(error)
+  //     apm.captureError(error)
   //     req.session.login = { email, password }
   //     res.redirect('/login')
   //   })

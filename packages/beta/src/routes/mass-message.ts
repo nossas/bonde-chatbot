@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import express from 'express'
 import axios from 'axios'
 import _ from 'underscore'
@@ -47,7 +48,7 @@ router.get('/', isAuthenticated, (req, res) => {
 
       res.render('./mass-message/index', { bots, recipients, dateformat, appDomain })
     })
-    .catch(err => console.error(`${JSON.stringify(err)}`.red))
+    .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
 })
 
 router.post('/send', (req, res) => {
@@ -66,7 +67,7 @@ router.post('/send', (req, res) => {
 
   Promise.all(promises)
     .then(() => { res.end(JSON.stringify({ status: 'ok' })) })
-    .catch(err => console.error(`${JSON.stringify(err)}`.red))
+    .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
 })
 
 export default router

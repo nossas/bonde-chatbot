@@ -1,5 +1,5 @@
-import agent from 'elastic-apm-node'
-agent.start({ active: process.env.NODE_ENV === 'production' })
+import apm from 'elastic-apm-node/start'
+// apm.start({ active: process.env.NODE_ENV === 'production' })
 
 import 'colors'
 import Queue from 'bull'
@@ -16,13 +16,13 @@ const saveLog = ({ facebookBotCampaignActivistId, received, log }) => (
   graphqlClient.mutate({
     mutation: graphqlMutations.updateFacebookBotCampaignActivists,
     variables: { facebookBotCampaignActivistId, received, log: JSON.stringify(log) }
-  }).catch(e => console.error(`${JSON.stringify(e)}`.red))
+  }).catch(e => apm.captureError(`${JSON.stringify(e)}`.red))
 )
 
 //
 // Queue Events
 //
-queue.on('error', (error) => console.error(`event:error ${JSON.stringify(error)}`.red))
+queue.on('error', (error) => apm.captureError(`event:error ${JSON.stringify(error)}`.red))
 
 queue.on('completed', (job, result) => {
   console.info(`bull:bot-mass-message:${job.id} ~> status [completed]`.green)
@@ -82,4 +82,4 @@ new BotFactory(speech)
       })
     })
   })
-  .catch(e => { console.error(e) })
+  .catch(e => { apm.captureError(e) })

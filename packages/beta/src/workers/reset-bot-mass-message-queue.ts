@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
-import agent from 'elastic-apm-node'
+import apm from 'elastic-apm-node'
 
 const Redis = require('ioredis')
 require('dotenv').config()
-agent.start({ active: process.env.NODE_ENV === 'production' })
+// agent.start({ active: process.env.NODE_ENV === 'production' })
 
 const myArgs = process.argv.slice(2)
 const redisKey = typeof myArgs[0] !== 'undefined' ? myArgs[0].split('=') : ''

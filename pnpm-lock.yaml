@@ -1,8 +1,8 @@
 importers:
   .:
     devDependencies:
-      '@typescript-eslint/eslint-plugin': 2.11.0_0dbb6242a97c931a7408d4e8d8053f71
-      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/eslint-plugin': 2.12.0_cc380ae44c1cd3e6d71c63c499323542
+      '@typescript-eslint/parser': 2.12.0_eslint@6.7.2+typescript@3.7.3
       babel-eslint: 10.0.3_eslint@6.7.2
       eslint: 6.7.2
       eslint-config-standard: 14.1.0_c5f5325156488ebfaa3881ed2ea4c765
@@ -1732,10 +1732,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-te5lMAWii1uEJ4FwLjzdlbw3+n0FZNOvFXHxQDKeT0dilh7HOzdMzV2TrJVUzq8ep7J4Na8OUYPRLSQkJHAlrg==
-  /@typescript-eslint/eslint-plugin/2.11.0_0dbb6242a97c931a7408d4e8d8053f71:
+  /@typescript-eslint/eslint-plugin/2.12.0_cc380ae44c1cd3e6d71c63c499323542:
     dependencies:
-      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2+typescript@3.7.3
-      '@typescript-eslint/parser': 2.11.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/experimental-utils': 2.12.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/parser': 2.12.0_eslint@6.7.2+typescript@3.7.3
       eslint: 6.7.2
       eslint-utils: 1.4.3
       functional-red-black-tree: 1.0.1
@@ -1753,11 +1753,11 @@ packages:
       typescript:
         optional: true
     resolution:
-      integrity: sha512-G2HHA1vpMN0EEbUuWubiCCfd0R3a30BB+UdvnFkxwZIxYEGOrWEXDv8tBFO9f44CWc47Xv9lLM3VSn4ORLI2bA==
-  /@typescript-eslint/experimental-utils/2.11.0_eslint@6.7.2+typescript@3.7.3:
+      integrity: sha512-1t4r9rpLuEwl3hgt90jY18wJHSyb0E3orVL3DaqwmpiSDHmHiSspVsvsFF78BJ/3NNG3qmeso836jpuBWYziAA==
+  /@typescript-eslint/experimental-utils/2.12.0_eslint@6.7.2+typescript@3.7.3:
     dependencies:
       '@types/json-schema': 7.0.3
-      '@typescript-eslint/typescript-estree': 2.11.0_typescript@3.7.3
+      '@typescript-eslint/typescript-estree': 2.12.0_typescript@3.7.3
       eslint: 6.7.2
       eslint-scope: 5.0.0
     dev: true
@@ -1767,23 +1767,27 @@ packages:
       eslint: '*'
       typescript: '*'
     resolution:
-      integrity: sha512-YxcA/y0ZJaCc/fB/MClhcDxHI0nOBB7v2/WxBju2cOTanX7jO9ttQq6Fy4yW9UaY5bPd9xL3cun3lDVqk67sPQ==
-  /@typescript-eslint/parser/2.11.0_eslint@6.7.2+typescript@3.7.3:
+      integrity: sha512-jv4gYpw5N5BrWF3ntROvCuLe1IjRenLy5+U57J24NbPGwZFAjhnM45qpq0nDH1y/AZMb3Br25YiNVwyPbz6RkA==
+  /@typescript-eslint/parser/2.12.0_eslint@6.7.2+typescript@3.7.3:
     dependencies:
       '@types/eslint-visitor-keys': 1.0.0
-      '@typescript-eslint/experimental-utils': 2.11.0_eslint@6.7.2+typescript@3.7.3
-      '@typescript-eslint/typescript-estree': 2.11.0_typescript@3.7.3
+      '@typescript-eslint/experimental-utils': 2.12.0_eslint@6.7.2+typescript@3.7.3
+      '@typescript-eslint/typescript-estree': 2.12.0_typescript@3.7.3
       eslint: 6.7.2
       eslint-visitor-keys: 1.1.0
+      typescript: 3.7.3
     dev: true
     engines:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
-      integrity: sha512-DyGXeqhb3moMioEFZIHIp7oXBBh7dEfPTzGrlyP0Mi9ScCra4SWEGs3kPd18mG7Sy9Wy8z88zmrw5tSGL6r/6A==
-  /@typescript-eslint/typescript-estree/2.11.0_typescript@3.7.3:
+      integrity: sha512-lPdkwpdzxEfjI8TyTzZqPatkrswLSVu4bqUgnB03fHSOwpC7KSerPgJRgIAf11UGNf7HKjJV6oaPZI4AghLU6g==
+  /@typescript-eslint/typescript-estree/2.12.0_typescript@3.7.3:
     dependencies:
       debug: 4.1.1
       eslint-visitor-keys: 1.1.0
@@ -1802,7 +1806,7 @@ packages:
       typescript:
         optional: true
     resolution:
-      integrity: sha512-HGY4+d4MagO6cKMcKfIKaTMxcAv7dEVnji2Zi+vi5VV8uWAM631KjAB5GxFcexMYrwKT0EekRiiGK1/Sd7VFGA==
+      integrity: sha512-rGehVfjHEn8Frh9UW02ZZIfJs6SIIxIu/K1bbci8rFfDE/1lQ8krIJy5OXOV3DVnNdDPtoiPOdEANkLMrwXbiQ==
   /@wry/context/0.4.4:
     dependencies:
       '@types/node': 12.7.8
@@ -2267,7 +2271,7 @@ packages:
       '@babel/types': 7.7.4
       eslint: 6.7.2
       eslint-visitor-keys: 1.1.0
-      resolve: 1.13.1
+      resolve: 1.14.0
     dev: true
     engines:
       node: '>=6'
@@ -2712,7 +2716,7 @@ packages:
       integrity: sha512-yB4oYSAa9yLcGyTbB4ItFwHw43QHdH129IJ5R+WvxOkWlyFnR5FAaBNnUq4mcxsTVZGh28bHoeTHMKXH1wZf3w==
   /character-parser/2.2.0:
     dependencies:
-      is-regex: 1.0.4
+      is-regex: 1.0.5
     dev: false
     resolution:
       integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=
@@ -3871,7 +3875,7 @@ packages:
       has: 1.0.3
       has-symbols: 1.0.1
       is-callable: 1.1.4
-      is-regex: 1.0.4
+      is-regex: 1.0.5
       object-inspect: 1.7.0
       object-keys: 1.1.1
       object.assign: 4.1.0
@@ -3932,7 +3936,7 @@ packages:
   /eslint-import-resolver-node/0.3.2:
     dependencies:
       debug: 2.6.9
-      resolve: 1.13.1
+      resolve: 1.14.0
     dev: true
     resolution:
       integrity: sha512-sfmTqJfPSizWu4aymbPr4Iidp5yKm8yDkHp+Ir3YiTHiiDfxh69mOUsmiqW6RZ9zRXFaF64GtYmN7e+8GHBv6Q==
@@ -3971,7 +3975,7 @@ packages:
       minimatch: 3.0.4
       object.values: 1.1.1
       read-pkg-up: 2.0.0
-      resolve: 1.13.1
+      resolve: 1.14.0
     dev: true
     engines:
       node: '>=4'
@@ -3986,7 +3990,7 @@ packages:
       eslint-utils: 1.4.3
       ignore: 5.1.4
       minimatch: 3.0.4
-      resolve: 1.13.1
+      resolve: 1.14.0
       semver: 6.3.0
     dev: true
     engines:
@@ -4053,7 +4057,7 @@ packages:
       ignore: 4.0.6
       import-fresh: 3.2.1
       imurmurhash: 0.1.4
-      inquirer: 7.0.0
+      inquirer: 7.0.1
       is-glob: 4.0.1
       js-yaml: 3.13.1
       json-stable-stringify-without-jsonify: 1.0.1
@@ -5182,7 +5186,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
-  /inquirer/7.0.0:
+  /inquirer/7.0.1:
     dependencies:
       ansi-escapes: 4.3.0
       chalk: 2.4.2
@@ -5201,7 +5205,7 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-rSdC7zelHdRQFkWnhsMu2+2SO41mpv2oF2zy4tMhmiLWkcKbOAs87fWAJhVXttKVwhdZvymvnuM95EyEXg2/tQ==
+      integrity: sha512-V1FFQ3TIO15det8PijPLFR9M9baSlnRs9nL7zWu1MNVA2T9YVl9ZbrHJhYs7e9X8jeMZ3lr2JH/rdHFgNCBdYw==
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
@@ -5528,13 +5532,13 @@ packages:
   /is-promise/2.1.0:
     resolution:
       integrity: sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
-  /is-regex/1.0.4:
+  /is-regex/1.0.5:
     dependencies:
       has: 1.0.3
     engines:
       node: '>= 0.4'
     resolution:
-      integrity: sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
+      integrity: sha512-vlKW17SNq44owv5AQR3Cq0bQPEb8+kF3UKZ2fiZNOWtztYE5i0CzCZxFDwO58qAOWtxdBRVO/V5Qin1wjCqFYQ==
   /is-regexp/1.0.0:
     dev: true
     engines:
@@ -7097,7 +7101,7 @@ packages:
   /normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: 2.8.5
-      resolve: 1.13.1
+      resolve: 1.14.0
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     resolution:
@@ -7900,7 +7904,7 @@ packages:
       jstransformer: 1.0.0
       pug-error: 1.3.3
       pug-walk: 1.1.8
-      resolve: 1.13.1
+      resolve: 1.14.0
       uglify-js: 2.8.29
     dev: false
     resolution:
@@ -8592,6 +8596,11 @@ packages:
       path-parse: 1.0.6
     resolution:
       integrity: sha512-CxqObCX8K8YtAhOBRg+lrcdn+LK+WYOS8tSjqSFbjtrI5PnS63QPhZl4+yKfrU9tdsbMu9Anr/amegT87M9Z6w==
+  /resolve/1.14.0:
+    dependencies:
+      path-parse: 1.0.6
+    resolution:
+      integrity: sha512-uviWSi5N67j3t3UKFxej1loCH0VZn5XuqdNxoLShPcYPw6cUZn74K1VRj+9myynRX03bxIBEkwlkob/ujLsJVw==
   /restore-cursor/2.0.0:
     dependencies:
       onetime: 2.0.1
@@ -9632,7 +9641,7 @@ packages:
       lodash.memoize: 4.1.2
       make-error: 1.3.5
       mkdirp: 0.5.1
-      resolve: 1.13.1
+      resolve: 1.14.0
       semver: 5.7.1
       yargs-parser: 10.1.0
     dev: true
@@ -10379,5 +10388,6 @@ packages:
     dev: false
     name: messenger-bot
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/nossas/messenger-bot/tar.gz/d2764a5cab0039e8e47a1d8a3c636de2414cf0f3'
     version: 2.5.0

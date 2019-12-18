@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import 'colors'
 import Bot from 'messenger-bot'
 import { client as graphqlClient } from '../graphql'
@@ -66,6 +67,6 @@ export default class BotFactory {
         return { id, bot, endpoint, botData }
       })
     })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
+      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
   }
 }
