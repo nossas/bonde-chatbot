@@ -1,6 +1,6 @@
-import agent from 'elastic-apm-node'
 require('dotenv').config()
-agent.start({ active: process.env.NODE_ENV === 'production' })
+import apm from 'elastic-apm-node/start'
+// agent.start({ active: process.env.NODE_ENV === 'production' })
 // import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'

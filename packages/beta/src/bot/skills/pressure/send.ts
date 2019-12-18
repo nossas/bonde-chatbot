@@ -1,6 +1,7 @@
 import 'colors'
 import axios from 'axios'
 
+import apm from 'elastic-apm-node/start'
 export default ({ profile, botData, senderEmail }) => {
   if (botData.data.pressure) {
     const { widget_id: widgetId } = botData.data.pressure
@@ -25,7 +26,7 @@ export default ({ profile, botData, senderEmail }) => {
         const url = `${process.env.API_URL}/widgets/${widgetId}/fill`
         const payload = { fill: { activist, mail } }
         axios.post(url, payload)
-      } else console.error('The widget_id specified on bot config do not match'.red)
-    } else console.error('The widget_id was not specified'.red)
-  } else console.error('No pressure object defined on bot config data'.red)
+      } else apm.captureError('The widget_id specified on bot config do not match'.red)
+    } else apm.captureError('The widget_id was not specified'.red)
+  } else apm.captureError('No pressure object defined on bot config data'.red)
 }

@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import 'colors'
 import * as botHelpers from '../helpers'
 import * as botInteractions from '../interactions'
@@ -15,7 +16,7 @@ export default (bot, speech, botData) => (payload, reply) => {
   // Validate payload
   //
   if (!message) {
-    console.error(`Webhook received unknown payload: ${payload}`.red)
+    apm.captureError(`Webhook received unknown payload: ${payload}`.red)
     return
   } else if (message.is_echo) {
     console.info(
@@ -38,7 +39,7 @@ export default (bot, speech, botData) => (payload, reply) => {
   // Save user interaction
   //
   bot.getProfile(payload.sender.id, (err, profile) => {
-    if (err) return console.error(`${JSON.stringify(err)}`.red)
+    if (err) return apm.captureError(`${JSON.stringify(err)}`.red)
 
     const interaction = { profile, payload }
 
@@ -47,6 +48,6 @@ export default (bot, speech, botData) => (payload, reply) => {
         botHelpers.receive(bot, speech, botData)(payload, reply, action)
         return result
       })
-      .catch(err => console.error(`${JSON.stringify(err)}`.red))
+      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
   })
 }

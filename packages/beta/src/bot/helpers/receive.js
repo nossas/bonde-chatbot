@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import 'colors'
 import * as botAI from '../ai'
 import * as botHelpers from '../helpers'
@@ -5,7 +6,7 @@ import * as botSpeeches from '../speeches'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, async (err, profile) => {
-    if (err) console.error(`${JSON.stringify(err)}`.red)
+    if (err) apm.captureError(`${JSON.stringify(err)}`.red)
 
     //
     // Wraps the original reply function with the behaviour
@@ -36,10 +37,10 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
               reply(botSpeeches.messages.BUGGED_OUT)
-              console.error(`${JSON.stringify(err)}`.red)
+              apm.captureError(`${JSON.stringify(err)}`.red)
             })
         })
-        .catch(err => console.error(`${JSON.stringify(err)}`.red))
+        .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
     }
   })
 }

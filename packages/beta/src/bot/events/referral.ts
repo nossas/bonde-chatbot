@@ -1,3 +1,5 @@
+import apm from 'elastic-apm-node/start'
+
 export default (bot, speech, botData) => (payload, reply) => {
   var ref = payload.referral.ref
   var message = ''
@@ -81,7 +83,7 @@ export default (bot, speech, botData) => (payload, reply) => {
     const replySequentially = index => {
       if (index < message.length) {
         reply(normalize(message[index]), err => {
-          if (err) console.error('Error sending multiple messages: (%s)', JSON.stringify(err))
+          if (err) apm.captureError(`Error sending multiple messages: ${JSON.stringify(err)}`)
 
           bot.sendSenderAction(payload.sender.id, 'typing_on')
           if (index === message.length - 1) {

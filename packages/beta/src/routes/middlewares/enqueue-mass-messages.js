@@ -1,3 +1,4 @@
+import apm from 'elastic-apm-node/start'
 import { client as graphqlClient } from '../../graphql'
 import * as graphqlQueries from '../../graphql/queries'
 import * as graphqlMutations from '../../graphql/mutations'
@@ -61,9 +62,9 @@ export default queue => (req, res) => {
               })
             })
           })
-          .catch(err => console.error(err))
+          .catch(err => apm.captureError(err))
       })
-      .catch(err => console.error(err))
+      .catch(err => apm.captureError(err))
 
     res.end(JSON.stringify({ status: 'ok' }))
   } else {

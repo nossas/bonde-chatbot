@@ -1,5 +1,5 @@
-import agent from 'elastic-apm-node'
-agent.start({ active: process.env.NODE_ENV === 'production' })
+import dotenv from 'dotenv'
+import apm from 'elastic-apm-node/start'
 import Http from 'http'
 import Express from 'express'
 import ExpressSession from 'express-session'
@@ -8,6 +8,10 @@ import BodyParser from 'body-parser'
 import cors from 'cors'
 import Queue from 'bull'
 import path from 'path'
+
+dotenv.config({ path: './../.env' })
+// apm.start({ active: process.env.NODE_ENV === 'production' })
+
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
 import * as botSkills from './bot/skills'
@@ -16,6 +20,7 @@ import * as routesMiddlewares from './routes/middlewares'
 
 require('isomorphic-fetch')
 require('colors')
+
 
 //
 // Emvironment Variables Polyfill
