@@ -7,6 +7,7 @@ import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
 import Queue from 'bull'
+import path from 'path'
 import { BotFactory } from './bot'
 import * as botMiddlewares from './bot/middlewares'
 import * as botSkills from './bot/skills'
@@ -32,9 +33,10 @@ const envs = {
 // Setup Express server
 //
 const app = Express()
-
-app.use(morgan('combined'))
+app.engine('pug', require('pug').__express)
+app.set('views', path.join(__dirname, '../src/views'));
 app.set('view engine', 'pug')
+app.use(morgan('combined'))
 app.use(Express.static('public'))
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({ extended: true }))
