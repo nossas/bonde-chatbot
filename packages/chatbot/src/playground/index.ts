@@ -8,9 +8,9 @@ import morgan from 'morgan'
 import BodyParser from 'body-parser'
 import cors from 'cors'
 import path from 'path'
-// import Queue from 'bull'
+import Queue from 'bull'
 import BotFactory from './factory'
-import * as routes from '../routes'
+import * as routesMiddlewares from '../routes/middlewares'
 
 require('isomorphic-fetch')
 
@@ -38,8 +38,8 @@ app.get('/', (req, res) => {
   res.send('Chatbot Server is running!!')
 })
 
-app.use('/login', routes.login)
-app.use('/mass-message', routes.massMessage)
+const queue = new Queue('bot-mass-message', process.env.REDIS_URL)
+app.post('/enqueue-mass-messages', routesMiddlewares.enqueueMassMessages(queue))
 
 app.listen(5000, () => {
   console.log('Chatbot Server listening on port 5000!')
