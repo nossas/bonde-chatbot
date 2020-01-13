@@ -21,7 +21,6 @@ import * as routesMiddlewares from './routes/middlewares'
 require('isomorphic-fetch')
 require('colors')
 
-
 //
 // Emvironment Variables Polyfill
 //
@@ -61,6 +60,7 @@ const fabricated = new BotFactory(speech)
   .fabricate()
   .then((bots: any) => {
     bots.forEach((data: any) => {
+      // console.log('botConfigs', data)
       const { id, bot, endpoint, botData } = data
       //
       // Set up express endpoints for each bot

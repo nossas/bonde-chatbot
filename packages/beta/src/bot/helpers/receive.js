@@ -37,10 +37,14 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
             .then(botAI.resolvers.speechAction({ speech, reply }))
             .catch(err => {
               reply(botSpeeches.messages.BUGGED_OUT)
+              console.log('receive.js#40', err)
               apm.captureError(`${JSON.stringify(err)}`.red)
             })
         })
-        .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
+        .catch(err => {
+          console.log('receive.js#45', err)
+          apm.captureError(`${JSON.stringify(err)}`.red)
+        })
     }
   })
 }
