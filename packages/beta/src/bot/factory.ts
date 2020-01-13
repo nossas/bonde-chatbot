@@ -31,8 +31,8 @@ export default class BotFactory {
   // @return {Promise} The promise's result is an array of data of fabricated bots
   //
   fabricate () {
-    return this.botConfigs().then(({ data: { configs: { bots } } }: any) => {
-      return bots.map(item => {
+    return this.botConfigs().then(({ data: { configs } }) => {
+      return configs.bots.map(item => {
         const {
           id,
           messengerAppSecret,
@@ -67,6 +67,9 @@ export default class BotFactory {
         return { id, bot, endpoint, botData }
       })
     })
-      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
+    .catch((err) => {
+      console.error('factory.ts#71', err)
+      apm.captureError(`${JSON.stringify(err)}`.red)
+    })
   }
 }

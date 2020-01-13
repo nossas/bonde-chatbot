@@ -83,7 +83,10 @@ export default (bot, speech, botData) => (payload, reply) => {
     const replySequentially = index => {
       if (index < message.length) {
         reply(normalize(message[index]), err => {
-          if (err) apm.captureError(`Error sending multiple messages: ${JSON.stringify(err)}`)
+          if (err) {
+            console.log('referral.ts#87', err)
+            apm.captureError(`Error sending multiple messages: ${err}`)
+          }
 
           bot.sendSenderAction(payload.sender.id, 'typing_on')
           if (index === message.length - 1) {

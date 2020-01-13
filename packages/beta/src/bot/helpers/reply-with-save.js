@@ -20,7 +20,10 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
 
     botInteractions.save({ botData, payload, interaction })
       .then(data => { originalReply(msg, callback); return data })
-      .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
+      .catch(err => {
+        console.log('reply-with-save.js#24', err)
+        apm.captureError(`${err}`.red)
+      })
   }
 
   const normalize = msg => {
@@ -41,7 +44,10 @@ export default ({ bot, botData, payload, originalReply, profile }) => (message, 
     const replySequentially = index => {
       if (index < message.length) {
         saveAndReply(normalize(message[index]), err => {
-          if (err) apm.captureError('Error sending multiple messages: (%s)', JSON.stringify(err))
+          if (err) {
+            console.log('receive.js#48', err)
+            apm.captureError(`Error sending multiple messages: (${err})`)
+          }
 
           bot.sendSenderAction(payload.sender.id, 'typing_on')
           if (index === message.length - 1) {

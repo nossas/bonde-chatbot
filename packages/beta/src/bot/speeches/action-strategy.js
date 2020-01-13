@@ -35,12 +35,17 @@ export default async ({ speech, action, payload, profile, botData, reply }) => {
     //
     // @return {Boolean} Tells if any action was dispatched
     //
-    ensure: () => {
-      let result = Promise.resolve(false)
-      if (actions && actions.userInteraction) {
-        result = actions.userInteraction({ speech, payload, profile, botData, reply })
+    ensure: async () => {
+      try {
+        let result = false
+        if (actions && actions.userInteraction) {
+          result = await actions.userInteraction({ speech, payload, profile, botData, reply })
+        }
+        return result
+      } catch (err) {
+        console.log(`Problemas no userInteraction ${err}`)
+        return false
       }
-      return result
     }
   }
 }

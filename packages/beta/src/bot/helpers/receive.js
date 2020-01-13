@@ -6,7 +6,7 @@ import * as botSpeeches from '../speeches'
 
 export default (bot, speech, botData) => (payload, originalReply, action) => {
   bot.getProfile(payload.sender.id, async (err, profile) => {
-    if (err) apm.captureError(`${JSON.stringify(err)}`.red)
+    if (err) apm.captureError(`${err}`.red)
 
     //
     // Wraps the original reply function with the behaviour
@@ -29,18 +29,21 @@ export default (bot, speech, botData) => (payload, originalReply, action) => {
 
     if (message) reply(message, action)
     else {
-      actions.ensure()
-        .then(dispatched => {
-          const { text } = payload.message
+      try {
+        const dispatched = await actions.ensure()
+        const { text } = payload.message
 
-          !dispatched && botAI.client().message(text, {})
-            .then(botAI.resolvers.speechAction({ speech, reply }))
-            .catch(err => {
-              reply(botSpeeches.messages.BUGGED_OUT)
-              apm.captureError(`${JSON.stringify(err)}`.red)
-            })
-        })
-        .catch(err => apm.captureError(`${JSON.stringify(err)}`.red))
+        !dispatched && botAI.client().message(text, {})
+          .then(botAI.resolvers.speechAction({ speech, reply }))
+          .catch(err => {
+            reply(botSpeeches.messages.BUGGED_OUT)
+            console.log('receive.js#40', err)
+            apm.captureError(`${err}`.red)
+          })
+      } catch (err) {
+        console.log('receive.js#44', err)
+        apm.captureError(`${err}`.red)
+      }
     }
   })
 }
