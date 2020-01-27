@@ -16,7 +16,7 @@ Enable activist to pressure through facebook
 
 -   Generate `messenger_page_access_token` from facebook developer page before create webhook
 
--   Before create webhook, you must check if database have tables configurations and facebook_bot_configurations and they have at leat one record, if not you must create.
+-   Before create webhook, you must check if database have tables configurations and facebook_bot_configurations and they have at least one record, if not you must create.
 
 ```sql
 insert into facebook_bot_configurations (
