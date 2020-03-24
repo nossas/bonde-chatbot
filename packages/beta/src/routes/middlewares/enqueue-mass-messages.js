@@ -5,9 +5,9 @@ import * as graphqlMutations from '../../graphql/mutations'
 
 export default queue => (req, res) => {
   const payload = req.body
-
+  console.log({queue})
   console.log('entrando na fila')
-
+  console.log({env: process.env})
   if (payload) {
     const {
       text,
@@ -34,7 +34,7 @@ export default queue => (req, res) => {
     })
 
     console.log({payload})
-
+    // deixar essas chamadas para o graphql mais separadas, usando async/await
     graphqlClient.mutate({
       mutation: graphqlMutations.createFacebookBotCampaign,
       variables: {
@@ -57,7 +57,6 @@ export default queue => (req, res) => {
               facebookBotActivistId,
               fbContextRecipientId
             }) => {
-              console.log('activists forEach ok')
               queue.add({
                 campaign,
                 facebookBotCampaignActivistId,

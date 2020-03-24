@@ -1,6 +1,6 @@
 import 'colors'
 import { ApolloClient } from 'apollo-client'
-import { ApolloLink, concat } from 'apollo-link'
+import { ApolloLink } from 'apollo-link'
 import { onError } from "apollo-link-error";
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -40,6 +40,6 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 const cache = new InMemoryCache()
 
 export const client = new ApolloClient({
-  link: errorLink.concat(concat(httpLink, authMiddleware)),
+  link: errorLink.concat(authMiddleware.concat(httpLink)),
   cache,
 })
