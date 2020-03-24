@@ -1,6 +1,7 @@
 import 'colors'
 import { ApolloClient } from 'apollo-client'
 import { ApolloLink, concat } from 'apollo-link'
+import { onError } from "apollo-link-error";
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import fetch from 'node-fetch'
@@ -23,9 +24,22 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   return forward(operation)
 })
 
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors)
+    graphQLErrors.map(({ message, extensions }) => {
+      console.log(
+        `[GraphQL error]: Message: ${message}, Location: ${extensions.code}`
+      );
+      throw new Error(message)
+    });
+  if (networkError) {
+    console.log(`[Network error]: ${networkError}`);
+  }
+});
+
 const cache = new InMemoryCache()
 
 export const client = new ApolloClient({
-  link: concat(authMiddleware, httpLink),
-  cache
+  link: errorLink.concat(concat(httpLink, authMiddleware)),
+  cache,
 })

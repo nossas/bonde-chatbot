@@ -6,6 +6,8 @@ import * as graphqlMutations from '../../graphql/mutations'
 export default queue => (req, res) => {
   const payload = req.body
 
+  console.log('entrando na fila')
+
   if (payload) {
     const {
       text,
@@ -31,6 +33,8 @@ export default queue => (req, res) => {
       campaignInclusionIds
     })
 
+    console.log({payload})
+
     graphqlClient.mutate({
       mutation: graphqlMutations.createFacebookBotCampaign,
       variables: {
@@ -41,16 +45,19 @@ export default queue => (req, res) => {
       }
     })
       .then(({ data: { query: { campaign } } }) => {
+        console.log('mutate ok')
         graphqlClient.query({
           query: graphqlQueries.fetchFacebookBotCampaignActivistsByCampaignId(),
           variables: { campaignId: campaign.id }
         })
           .then(({ loading, data: { query: { activists } } }) => {
+            console.log('query ok')
             activists.forEach(({
               id: facebookBotCampaignActivistId,
               facebookBotActivistId,
               fbContextRecipientId
             }) => {
+              console.log('activists forEach ok')
               queue.add({
                 campaign,
                 facebookBotCampaignActivistId,
