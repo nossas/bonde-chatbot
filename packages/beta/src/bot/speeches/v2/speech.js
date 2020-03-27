@@ -176,6 +176,12 @@ const V2_QUICK_REPLY_PEC_29 = 'V2_QUICK_REPLY_PEC_29'
 const V2_QUICK_REPLY_PEC_29_2 = 'V2_QUICK_REPLY_PEC_29_2'
 const V2_QUICK_REPLY_PEC_29_3 = 'V2_QUICK_REPLY_PEC_29_3'
 const V2_QUICK_REPLY_PEC_29_4 = 'V2_QUICK_REPLY_PEC_29_4'
+
+const V2_QUICK_REPLY_P_1 = 'V2_QUICK_REPLY_P_1'
+const V2_QUICK_REPLY_P_2 = 'V2_QUICK_REPLY_P_2'
+const V2_QUICK_REPLY_P_3 = 'V2_QUICK_REPLY_P_3'
+const V2_QUICK_REPLY_P_4 = 'V2_QUICK_REPLY_P_4'
+
 //
 // The bot speech, based on quick replies.
 // @param {Object} The bot configuration stored in database.
@@ -243,7 +249,12 @@ export default botData => ({
     [V2_QUICK_REPLY_O_4]: V2_QUICK_REPLY_O_4,
     [V2_QUICK_REPLY_O_5]: V2_QUICK_REPLY_O_5,
     [V2_QUICK_REPLY_RES_2232]: V2_QUICK_REPLY_RES_2232,
-    [V2_QUICK_REPLY_PEC_29]: V2_QUICK_REPLY_PEC_29
+    [V2_QUICK_REPLY_PEC_29]: V2_QUICK_REPLY_PEC_29,
+
+    [V2_QUICK_REPLY_P_1]: V2_QUICK_REPLY_P_1,
+    [V2_QUICK_REPLY_P_2]: V2_QUICK_REPLY_P_2,
+    [V2_QUICK_REPLY_P_3]: V2_QUICK_REPLY_P_3,
+    [V2_QUICK_REPLY_P_4]: V2_QUICK_REPLY_P_4,
   },
   messages: {
 
@@ -414,7 +425,7 @@ export default botData => ({
           [
             buttonTemplate.postback({
               title: botSpeeches.carouselTexts.BUTTON_RADAR_PEROLA,
-              payload: V2_QUICK_REPLY_PEC_29
+              payload: V2_QUICK_REPLY_P_1
             })
           ]
         ),
@@ -804,29 +815,29 @@ export default botData => ({
     //
     // CAMPANHA AÇÃO ATIVA
     //
-    [V2_QUICK_REPLY_O_1]: [
+    [V2_QUICK_REPLY_P_1]: [
       messageWithQuickReply(
-        botSpeeches.messages.PL_3723,
-        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_ACT_NOW),
-        quickReply(V2_QUICK_REPLY_O_2, botSpeeches.buttonTexts.IF_APPROVED)
+        botSpeeches.messages.REABERTURA_PEROLA_1,
+        quickReply(V2_QUICK_REPLY_P_3, botSpeeches.buttonTexts.PEC_29_ACT_NOW),
+        quickReply(V2_QUICK_REPLY_P_2, botSpeeches.buttonTexts.TELL_ME_MORE)
       )
     ],
-    [V2_QUICK_REPLY_O_2]: [
-      botSpeeches.messages.PL_3723_1,
+    [V2_QUICK_REPLY_P_2]: [
+      botSpeeches.messages.REABERTURA_PEROLA_2,
       messageWithQuickReply(
-        botSpeeches.messages.PL_3723_1_1,
-        quickReply(V2_QUICK_REPLY_O_3, botSpeeches.buttonTexts.PEC_29_GO)
+        botSpeeches.messages.REABERTURA_PEROLA_3,
+        quickReply(V2_QUICK_REPLY_P_3, botSpeeches.buttonTexts.PEC_29_GO)
       )
     ],
-    [V2_QUICK_REPLY_O_3]: {
-      text: botSpeeches.messages.PL_3723_2,
+    [V2_QUICK_REPLY_P_3]: {
+      text: botSpeeches.messages.REABERTURA_PEROLA_4,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
-        quickReply(V2_QUICK_REPLY_O_4, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ)
+        quickReply(V2_QUICK_REPLY_P_4, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ)
       ]
     },
-    [V2_QUICK_REPLY_O_4]: {
-      text: botSpeeches.messages.PL_3723_3,
+    [V2_QUICK_REPLY_P_4]: {
+      text: botSpeeches.messages.REABERTURA_PEROLA_5,
       quick_replies: [
         quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.PEC_29_WANT)
       ]
@@ -855,12 +866,12 @@ export default botData => ({
             elements: [
               {
                 media_type: 'image',
-                url: 'https://business.facebook.com/beta.staging/photos/476918122955863',
+                url: 'https://www.facebook.com/photo/?fbid=546146816032993&set=a.131527380828274',
                 buttons: [
                   {
                     type: 'web_url',
-                    url: 'https://m.me/beta.feminista?ref=pl_3723',
-                    title: 'Pressionar deputadas(os)'
+                    url: 'https://m.me/beta.feminista?ref=reabertura_perola',
+                    title: 'Pressionar'
                   }
                 ]
               }
@@ -873,340 +884,6 @@ export default botData => ({
     [V2_QUICK_REPLY_E_10]: [
       botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE
     ],
-
-    /* [V2_QUICK_REPLY_H_10]: [
-      genericTemplate({
-        title: 'Clique aqui para impedir mais um retrocesso na educação',
-        subtitle: 'Um futuro com mais direitos e menos violência começa na escola!',
-        imageURL: botData.data.image_url || 'https://goo.gl/v6iX5m',
-        buttons: [
-          buttonTemplate.webURL({
-            url: facebookFeedShare('https://m.me/beta.staging?ref=escola-sem-partido'),
-            title: 'Compartilhar',
-          }),
-          buttonTemplate.postback({
-            title: botSpeeches.buttonTexts.BACK,
-            payload: V2_QUICK_REPLY_CA
-          })
-        ],
-      }),
-    ], */
-
-    // [V2_QUICK_REPLY_J_1]: [
-    //   botSpeeches.messages.NO_PROBLEM_CHECK_THE_WEBSITE,
-    //   carouselTemplate(
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_ACT,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_ACT, // TODO
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_ACT,
-    //           payload: V2_QUICK_REPLY_ACT
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_RADAR,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_RADAR,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_RADAR,
-    //           payload: V2_QUICK_REPLY_RADAR
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_MORE,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_MORE,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_MORE,
-    //           payload: V2_QUICK_REPLY_MAIS
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_SHARE,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_SHARE,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_SHARE,
-    //           payload: V2_QUICK_REPLY_FRIENDS
-    //         })
-    //       ]
-    //     )
-    //   )
-    // ],
-
-    // [V2_QUICK_REPLY_I_1]: [
-    //   botSpeeches.messages.YOU_ROCK,
-    //   // TODO: Add gif
-    //   genericTemplate({
-    //     title: 'A maior aliada feminista nas redes',
-    //     subtitle: 'Chama a Beta no inbox',
-    //     imageURL: botData.data.image_url || 'https://goo.gl/hzZfHA',
-    //     buttons: [
-    //       buttonTemplate.elementShare()
-    //     ]
-    //   })
-    // ],
-
-    //
-    // CAMPANHA NASCITURO RJ
-    //
-    // [NASCITURO_QUICK_REPLY_A]: {
-    //   text: botSpeeches.messages.NASCITURO_MESSAGE_A,
-    //   quick_replies: [
-    //     quickReply(NASCITURO_QUICK_REPLY_YES, botSpeeches.buttonTexts.YES)
-    //   ]
-    // },
-    // [NASCITURO_QUICK_REPLY_YES]: {
-    //   text: botSpeeches.messages.NASCITURO_QUICK_REPLY_YES,
-    //   quick_replies: [
-    //     quickReply(NASCITURO_QUICK_REPLY_BORA, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_BORA),
-    //     quickReply(NASCITURO_QUICK_REPLY_SAIBA_MAIS, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_SAIBA_MAIS)
-    //   ]
-    // },
-    // [NASCITURO_QUICK_REPLY_BORA]: {
-    //   text: botSpeeches.messages.NASCITURO_QUICK_REPLY_BORA,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW),
-    //     quickReply(NASCITURO_QUICK_REPLY_READ, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_READ)
-    //   ]
-    // },
-    // [NASCITURO_QUICK_REPLY_SAIBA_MAIS]: [
-    //   botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_1,
-    //   botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_2,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.NASCITURO_QUICK_REPLY_SAIBA_MAIS_3,
-    //     quickReply(NASCITURO_QUICK_REPLY_BORA, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_GO)
-    //   )
-    // ],
-    // [NASCITURO_QUICK_REPLY_READ]: {
-    //   text: botSpeeches.messages.NASCITURO_QUICK_REPLY_READ,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.NASCITURO_QUICK_REPLY_NOW_2)
-    //   ]
-    // },
-
-    //
-    // CAMPANHA COTAS
-    //
-    // [V2_QUICK_REPLY_N_1]: [
-    //   botSpeeches.messages.COTAS_A_1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.COTAS_A_2,
-    //     quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_SURE),
-    //     quickReply(V2_QUICK_REPLY_N_3, botSpeeches.buttonTexts.COTAS_KNOW_MORE)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_N_3]: [
-    //   botSpeeches.messages.COTAS_B_1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.COTAS_B_2,
-    //     quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_GOGO),
-    //     quickReply(V2_QUICK_REPLY_N_4, botSpeeches.buttonTexts.COTAS_WHAT_THEY_SAY)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_N_4]: [
-    //   botSpeeches.messages.COTAS_C_1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.COTAS_C_2,
-    //     quickReply(V2_QUICK_REPLY_N_2, botSpeeches.buttonTexts.COTAS_GOGO)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_N_2]: {
-    //   text: botSpeeches.messages.COTAS_D,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.COTAS_NOW),
-    //     quickReply(V2_QUICK_REPLY_N_5, botSpeeches.buttonTexts.COTAS_READ)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_N_5]: {
-    //   text: botSpeeches.messages.COTAS_E,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_G_10, botSpeeches.buttonTexts.COTAS_NOW)
-    //   ]
-    // },
-
-    // Radar da BETA - ADPF 442
-    // [V2_QUICK_REPLY_WHATS_ADPF442]: [
-    //   botSpeeches.messages.WHATS_ADPF442,
-    //   botSpeeches.messages.WHATS_ADPF442_1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.WHATS_ADPF442_2,
-    //     quickReply(V2_QUICK_REPLY_WHATS_ADPF442_A, botSpeeches.buttonTexts.HOWS_NOW),
-    //     quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_WHATS_ADPF442_A]: [
-    //   botSpeeches.messages.WHATS_ADPF442_A,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.WHATS_ADPF442_A1,
-    //     quickReply(V2_QUICK_REPLY_WHATS_ADPF442_C, botSpeeches.buttonTexts.I_WANT_A)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_WHATS_ADPF442_C]: {
-    //   text: botSpeeches.messages.WHATS_ADPF442_C,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR)
-    //   ]
-    // },
-    //
-    // ADPF 442 - Mais sobre aborto
-    //
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION]: {
-    //   text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A, botSpeeches.buttonTexts.I_WANT_B)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_A]: [
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A,
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_A2,
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B, botSpeeches.buttonTexts.STEP2),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_B]: [
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_B1,
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D, botSpeeches.buttonTexts.STEP3),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_D]: [
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D,
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D1,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_D2,
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E, botSpeeches.buttonTexts.STEP4),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_E]: [
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_E1,
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F, botSpeeches.buttonTexts.SEND_MORE),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_F]: {
-    //   text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_F,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G, botSpeeches.buttonTexts.ONE_MORE),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_G]: {
-    //   text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_G,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H, botSpeeches.buttonTexts.I_WANT_MORE),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_H]: {
-    //   text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_H,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I, botSpeeches.buttonTexts.NEXT_ROUND),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_I]: {
-    //   text: botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_I,
-    //   quick_replies: [
-    //     quickReply(V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J, botSpeeches.buttonTexts.JUST_ONE_MORE),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   ]
-    // },
-    // [V2_QUICK_REPLY_MORE_ABOUT_ABORTION_J]: [
-    //   botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.ADPF_MORE_ABOUT_ABORTION_J1,
-    //     quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.RADAR),
-    //     quickReply(V2_QUICK_REPLY_CA, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-
-    //
-    // Radar da Beta - STATUTE
-    //
-    // [V2_QUICK_REPLY_STATUTE]: [
-    //   botSpeeches.messages.STATUTE,
-    //   messageWithQuickReply(
-    //     botSpeeches.messages.STATUTE_1,
-    //     quickReply(V2_QUICK_REPLY_A_4, botSpeeches.buttonTexts.STOPED),
-    //     quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.BACK_1)
-    //   )
-    // ],
-    // [V2_QUICK_REPLY_A_4]: [
-    //   botSpeeches.messages.STATUTE_2,
-    //   botSpeeches.messages.STATUTE_3,
-    //   messageWithGif(
-    //     botSpeeches.messages.STATUTE_4,
-    //     quickReply(V2_QUICK_REPLY_A_2, botSpeeches.buttonTexts.OTHER),
-    //     quickReply(V2_QUICK_REPLY_FRIENDS, botSpeeches.buttonTexts.SHARE)
-    //   )
-    // ],
-
-    // Not now: facebook page + carousel
-    // [V2_QUICK_REPLY_E_10]: [
-    //   botSpeeches.messages.NO_PROBLEM_CHECK_MY_FACEBOOK_PAGE,
-    //   carouselTemplate(
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_ACT,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_ACT, // TODO
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_ACT,
-    //           payload: V2_QUICK_REPLY_ACT
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_RADAR,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_RADAR,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_RADAR,
-    //           payload: V2_QUICK_REPLY_RADAR
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_MORE,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_MORE,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_MORE,
-    //           payload: V2_QUICK_REPLY_MAIS
-    //         })
-    //       ]
-    //     ),
-    //     elements(
-    //       botSpeeches.carouselTexts.TITLE_SHARE,
-    //       botSpeeches.carouselTexts.SUBTITLE,
-    //       botSpeeches.carouselTexts.IMAGE_SHARE,
-    //       [
-    //         buttonTemplate.postback({
-    //           title: botSpeeches.carouselTexts.BUTTON_SHARE,
-    //           payload: V2_QUICK_REPLY_FRIENDS
-    //         })
-    //       ]
-    //     )
-    //   )
-    // ],
 
     //
     // Usuário abre conversa com a Beta via Mensagem em Massa
