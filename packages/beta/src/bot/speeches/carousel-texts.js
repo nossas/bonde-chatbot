@@ -100,5 +100,10 @@ export default {
   IMAGE_RADAR_RES_2232: 'https://chatbox-beta.s3.amazonaws.com/campaigns/radar-retrocesso-resolucao-2232.png',
   BUTTON_RADAR_RES_2232: 'Me conta',
 
-  TITLE_RADAR_PEC_181: 'Vida desde a concepção'
+  TITLE_RADAR_PEC_181: 'Vida desde a concepção',
+
+  TITLE_RADAR_PEROLA: 'Pela reabertura do Pérola Byington',
+  SUBTITLE_RADAR_PEROLA: '',
+  IMAGE_RADAR_PEROLA: 'https://chatbox-beta.s3.amazonaws.com/campaigns/%5Bbeta%5Dcards_beta6-perola-byington.png',
+  BUTTON_RADAR_PEROLA: 'Agir Agora!'
 }
