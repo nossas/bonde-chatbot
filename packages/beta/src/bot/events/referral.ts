@@ -5,6 +5,12 @@ export default (bot, speech, botData) => (payload, reply) => {
   var message = ''
   console.log(payload.referral)
   switch (ref) {
+    case 'reabertura_perola':
+      message = speech.messages.V2_QUICK_REPLY_P_1
+      break
+    case 'reabertura_perola_action':
+      message = speech.messages.V2_QUICK_REPLY_P_4
+      break
     case 'pl_3723':
       message = speech.messages.V2_QUICK_REPLY_O_1
       break
