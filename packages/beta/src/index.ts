@@ -32,7 +32,7 @@ const envs = {
 //
 // Globals
 //
-// global.widgets = {}
+global.widgets = {}
 
 //
 // Setup Express server
