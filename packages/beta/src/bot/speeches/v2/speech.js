@@ -419,17 +419,6 @@ export default botData => ({
     [V2_QUICK_REPLY_A_2]: [
       carouselTemplate(
         elements(
-          botSpeeches.carouselTexts.TITLE_RADAR_PEROLA,
-          botSpeeches.carouselTexts.SUBTITLE_RADAR_PEROLA,
-          botSpeeches.carouselTexts.IMAGE_RADAR_PEROLA,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_RADAR_PEROLA,
-              payload: V2_QUICK_REPLY_P_1
-            })
-          ]
-        ),
-        elements(
           botSpeeches.carouselTexts.TITLE_RADAR_PEC_29,
           botSpeeches.carouselTexts.SUBTITLE_RADAR_PEC_29,
           botSpeeches.carouselTexts.IMAGE_RADAR_PEC_29,
