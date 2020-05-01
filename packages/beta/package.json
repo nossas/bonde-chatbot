@@ -23,7 +23,9 @@
     "build": "tsc",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
-    "postpublish": "git push origin master --follow-tags"
+    "postpublish": "git push origin master --follow-tags",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -73,7 +75,8 @@
     "node-wit": "5.0.0",
     "pug": "2.0.4",
     "querystring": "0.2.0",
-    "underscore": "1.9.1"
+    "underscore": "1.9.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/bull": "3.10.3",
@@ -94,5 +97,6 @@
     "open-cli": "5.0.0",
     "rimraf": "3.0.0",
     "standard-version": "7.0.0"
-  }
+  },
+  "snyk": true
 }
