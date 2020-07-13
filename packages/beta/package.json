@@ -93,6 +93,6 @@
     "lint-staged": "9.4.1",
     "open-cli": "5.0.0",
     "rimraf": "3.0.0",
-    "standard-version": "7.0.0"
+    "standard-version": "8.0.1"
   }
 }
