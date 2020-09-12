@@ -69,7 +69,7 @@
     "jwt-decode": "2.2.0",
     "messenger-bot": "nossas/messenger-bot#master",
     "morgan": "1.9.1",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "node-wit": "5.0.0",
     "pug": "2.0.4",
     "querystring": "0.2.0",
