@@ -73,7 +73,7 @@
     "node-wit": "5.0.0",
     "pug": "2.0.4",
     "querystring": "0.2.0",
-    "underscore": "1.9.1"
+    "underscore": "1.12.1"
   },
   "devDependencies": {
     "@types/bull": "3.10.3",
