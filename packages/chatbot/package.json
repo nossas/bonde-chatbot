@@ -73,7 +73,7 @@
     "morgan": "^1.9.1",
     "node-fetch": "2.6.0",
     "node-wit": "5.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.0",
     "querystring": "0.2.0",
     "subscriptions-transport-ws": "0.9.16",
     "underscore": "^1.9.1",
