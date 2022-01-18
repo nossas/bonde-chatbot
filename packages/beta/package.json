@@ -65,7 +65,7 @@
     "graphql": "14.5.8",
     "graphql-tag": "2.10.1",
     "ioredis": "4.14.1",
-    "isomorphic-fetch": "2.2.1",
+    "isomorphic-fetch": "3.0.0",
     "jwt-decode": "2.2.0",
     "messenger-bot": "nossas/messenger-bot#master",
     "morgan": "1.9.1",
